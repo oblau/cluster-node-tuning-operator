@@ -1,0 +1,14 @@
+2025-11-17T09:40:29.357681853Z level=info ts=2025-11-17T09:40:29.357580943Z caller=sidecar.go:123 msg="no supported bucket was configured, uploads will be disabled"
+2025-11-17T09:40:29.357785717Z level=info ts=2025-11-17T09:40:29.357699725Z caller=options.go:30 protocol=gRPC msg="enabling server side TLS"
+2025-11-17T09:40:29.357852620Z level=info ts=2025-11-17T09:40:29.357831053Z caller=options.go:60 protocol=gRPC msg="server TLS client verification enabled"
+2025-11-17T09:40:29.358339859Z level=info ts=2025-11-17T09:40:29.358311693Z caller=sidecar.go:362 msg="starting sidecar"
+2025-11-17T09:40:29.358462482Z level=info ts=2025-11-17T09:40:29.358423007Z caller=intrumentation.go:75 msg="changing probe status" status=healthy
+2025-11-17T09:40:29.358517230Z level=info ts=2025-11-17T09:40:29.358427169Z caller=reloader.go:199 component=reloader msg="nothing to be watched"
+2025-11-17T09:40:29.358517230Z level=info ts=2025-11-17T09:40:29.358461668Z caller=http.go:73 service=http/server component=sidecar msg="listening for requests and metrics" address=127.0.0.1:10902
+2025-11-17T09:40:29.358630995Z level=info ts=2025-11-17T09:40:29.358584689Z caller=intrumentation.go:56 msg="changing probe status" status=ready
+2025-11-17T09:40:29.358740890Z level=info ts=2025-11-17T09:40:29.358686445Z caller=tls_config.go:232 service=http/server component=sidecar msg="Listening on" address=127.0.0.1:10902
+2025-11-17T09:40:29.358740890Z level=info ts=2025-11-17T09:40:29.358693407Z caller=grpc.go:131 service=gRPC/server component=sidecar msg="listening for serving gRPC" address=0.0.0.0:10901
+2025-11-17T09:40:29.358757759Z level=info ts=2025-11-17T09:40:29.358726874Z caller=tls_config.go:235 service=http/server component=sidecar msg="TLS is disabled." http2=false address=127.0.0.1:10902
+2025-11-17T09:40:29.359695110Z level=warn ts=2025-11-17T09:40:29.359668151Z caller=sidecar.go:172 msg="failed to fetch prometheus version. Is Prometheus running? Retrying" err="expected 2xx response, got 503. Body: Service Unavailable"
+2025-11-17T09:40:31.360868318Z level=info ts=2025-11-17T09:40:31.360690264Z caller=sidecar.go:179 msg="successfully loaded prometheus version"
+2025-11-17T09:40:31.411076274Z level=info ts=2025-11-17T09:40:31.410994245Z caller=sidecar.go:201 msg="successfully loaded prometheus external labels" external_labels="{prometheus=\"openshift-monitoring/k8s\", prometheus_replica=\"prometheus-k8s-0\"}"

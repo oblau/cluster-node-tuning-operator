@@ -1,0 +1,11 @@
+2025-11-17T09:42:08.880023436Z + timeout 3m /bin/bash -exuo pipefail -c 'while [ -n "$(ss -Htanop \( sport = 11443 \))" ]; do sleep 1; done'
+2025-11-17T09:42:08.884277943Z ++ ss -Htanop '(' sport = 11443 ')'
+2025-11-17T09:42:08.889841227Z + '[' -n '' ']'
+2025-11-17T09:42:08.890367741Z + exec cluster-kube-scheduler-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig --namespace=openshift-kube-scheduler --listen=0.0.0.0:11443 -v=2
+2025-11-17T09:42:08.941551224Z W1117 09:42:08.941435       1 cmd.go:237] Using insecure, self-signed certificates
+2025-11-17T09:42:08.941697890Z I1117 09:42:08.941679       1 crypto.go:601] Generating new CA for cert-recovery-controller-signer@1763372528 cert, and key in /tmp/serving-cert-1561337108/serving-signer.crt, /tmp/serving-cert-1561337108/serving-signer.key
+2025-11-17T09:42:09.313591700Z I1117 09:42:09.313434       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:42:09.314507744Z I1117 09:42:09.314450       1 observer_polling.go:159] Starting file observer
+2025-11-17T09:42:09.338417757Z I1117 09:42:09.338279       1 builder.go:271] cert-recovery-controller version v0.0.0-XXXXXX+$Format:%H$-$Format:%H$
+2025-11-17T09:42:09.342303732Z I1117 09:42:09.342267       1 leaderelection.go:245] attempting to acquire leader lease openshift-kube-scheduler/cert-recovery-controller-lock...
+2025-11-17T09:43:47.381988126Z E1117 09:43:47.381807       1 leaderelection.go:327] error retrieving resource lock openshift-kube-scheduler/cert-recovery-controller-lock: Get "https://localhost:6443/apis/coordination.k8s.io/v1/namespaces/openshift-kube-scheduler/leases/cert-recovery-controller-lock?timeout=1m47s": dial tcp [::1]:6443: connect: connection refused

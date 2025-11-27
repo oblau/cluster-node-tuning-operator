@@ -1,0 +1,1002 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/scc: privileged
+  creationTimestamp: "2025-11-17T09:22:10Z"
+  generateName: metal3-75b58cb4f8-
+  labels:
+    baremetal.openshift.io/cluster-baremetal-operator: metal3-state
+    k8s-app: metal3
+    pod-template-hash: 75b58cb4f8
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:baremetal.openshift.io/cluster-baremetal-operator: {}
+          f:k8s-app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"008c61ae-4ba3-4fc8-9dcb-b1aa39574fa7"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"metal3-httpd"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"HTTP_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"INSPECTOR_HTPASSWD"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:secretKeyRef: {}
+              k:{"name":"INSPECTOR_REVERSE_PROXY_SETUP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_HTPASSWD"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:secretKeyRef: {}
+              k:{"name":"IRONIC_INSPECTOR_LISTEN_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_INSPECTOR_PRIVATE_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_LISTEN_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_PRIVATE_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_RAMDISK_SSH_KEY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_REVERSE_PROXY_SETUP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PROVISIONING_INTERFACE"}:
+                .: {}
+                f:name: {}
+              k:{"name":"PROVISIONING_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"PROVISIONING_MACS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"VMEDIA_TLS_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":5051,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":6180,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":6183,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":6388,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/auth/ironic"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/auth/ironic-inspector"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/certs/ironic"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/certs/ironic-inspector"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/certs/vmedia"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/shared"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/shared/html/images"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"metal3-ironic"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"HTTP_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_EXTERNAL_IP"}:
+                .: {}
+                f:name: {}
+              k:{"name":"IRONIC_INSECURE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_INSPECTOR_INSECURE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_KERNEL_PARAMS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_PRIVATE_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_RAMDISK_SSH_KEY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_REVERSE_PROXY_SETUP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PROVISIONING_INTERFACE"}:
+                .: {}
+                f:name: {}
+              k:{"name":"PROVISIONING_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"PROVISIONING_MACS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"VMEDIA_TLS_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/auth/ironic-inspector"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/certs/ironic"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/certs/ironic-inspector"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/certs/vmedia"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/shared"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/shared/html/images"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"metal3-ironic-inspector"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"INSPECTOR_REVERSE_PROXY_SETUP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_INSECURE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_INSPECTOR_PRIVATE_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_KERNEL_PARAMS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PROVISIONING_INTERFACE"}:
+                .: {}
+                f:name: {}
+              k:{"name":"PROVISIONING_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"PROVISIONING_MACS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/auth/ironic"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/certs/ironic"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/certs/ironic-inspector"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/shared"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"metal3-ramdisk-logs"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/shared"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"machine-os-images"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"IP_OPTIONS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/shared/html/images"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"metal3-inspector-basic-auth"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+          k:{"name":"metal3-inspector-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"metal3-ironic-basic-auth"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+          k:{"name":"metal3-ironic-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"metal3-shared"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"metal3-shared-image-cache"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"metal3-vmedia-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"trusted-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-11-17T09:22:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"XXXXXXXXXXX"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"2620:52:0:2e1a::21"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:23:15Z"
+  name: metal3-75b58cb4f8-h9clh
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: metal3-75b58cb4f8
+    uid: 008c61ae-4ba3-4fc8-9dcb-b1aa39574fa7
+  resourceVersion: "12484"
+  uid: 414863cb-bfe6-433c-a724-f05f63913b77
+spec:
+  containers:
+  - command:
+    - /bin/runhttpd
+    env:
+    - name: HTTP_PORT
+      value: "6180"
+    - name: PROVISIONING_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.hostIP
+    - name: PROVISIONING_INTERFACE
+    - name: IRONIC_RAMDISK_SSH_KEY
+      value: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    - name: PROVISIONING_MACS
+      value: XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX
+    - name: VMEDIA_TLS_PORT
+      value: "6183"
+    - name: IRONIC_HTPASSWD
+      valueFrom:
+        secretKeyRef:
+          key: htpasswd
+          name: metal3-ironic-password
+    - name: INSPECTOR_HTPASSWD
+      valueFrom:
+        secretKeyRef:
+          key: htpasswd
+          name: metal3-ironic-inspector-password
+    - name: IRONIC_REVERSE_PROXY_SETUP
+      value: "true"
+    - name: INSPECTOR_REVERSE_PROXY_SETUP
+      value: "true"
+    - name: IRONIC_PRIVATE_PORT
+      value: unix
+    - name: IRONIC_INSPECTOR_PRIVATE_PORT
+      value: unix
+    - name: IRONIC_LISTEN_PORT
+      value: "6388"
+    - name: IRONIC_INSPECTOR_LISTEN_PORT
+      value: "5051"
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    imagePullPolicy: IfNotPresent
+    name: metal3-httpd
+    ports:
+    - containerPort: 6388
+      hostPort: 6388
+      name: ironic
+      protocol: TCP
+    - containerPort: 5051
+      hostPort: 5051
+      name: inspector
+      protocol: TCP
+    - containerPort: 6180
+      hostPort: 6180
+      name: http
+      protocol: TCP
+    - containerPort: 6183
+      hostPort: 6183
+      name: vmedia-https
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 5m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /shared
+      name: metal3-shared
+    - mountPath: /auth/ironic
+      name: metal3-ironic-basic-auth
+      readOnly: true
+    - mountPath: /auth/ironic-inspector
+      name: metal3-inspector-basic-auth
+      readOnly: true
+    - mountPath: /shared/html/images
+      name: metal3-shared-image-cache
+    - mountPath: /certs/ironic
+      name: metal3-ironic-tls
+      readOnly: true
+    - mountPath: /certs/ironic-inspector
+      name: metal3-inspector-tls
+      readOnly: true
+    - mountPath: /certs/vmedia
+      name: metal3-vmedia-tls
+      readOnly: true
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: trusted-ca
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nkmcd
+      readOnly: true
+  - command:
+    - /bin/runironic
+    env:
+    - name: IRONIC_INSECURE
+      value: "true"
+    - name: IRONIC_INSPECTOR_INSECURE
+      value: "true"
+    - name: IRONIC_KERNEL_PARAMS
+      value: rd.net.timeout.carrier=30 ip=dhcp,dhcp6
+    - name: IRONIC_REVERSE_PROXY_SETUP
+      value: "true"
+    - name: IRONIC_PRIVATE_PORT
+      value: unix
+    - name: HTTP_PORT
+      value: "6180"
+    - name: PROVISIONING_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.hostIP
+    - name: PROVISIONING_INTERFACE
+    - name: IRONIC_RAMDISK_SSH_KEY
+      value: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    - name: IRONIC_EXTERNAL_IP
+    - name: PROVISIONING_MACS
+      value: XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX
+    - name: VMEDIA_TLS_PORT
+      value: "6183"
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    imagePullPolicy: IfNotPresent
+    name: metal3-ironic
+    resources:
+      requests:
+        cpu: 50m
+        memory: 500Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /shared
+      name: metal3-shared
+    - mountPath: /shared/html/images
+      name: metal3-shared-image-cache
+    - mountPath: /auth/ironic-inspector
+      name: metal3-inspector-basic-auth
+      readOnly: true
+    - mountPath: /certs/ironic
+      name: metal3-ironic-tls
+      readOnly: true
+    - mountPath: /certs/ironic-inspector
+      name: metal3-inspector-tls
+      readOnly: true
+    - mountPath: /certs/vmedia
+      name: metal3-vmedia-tls
+      readOnly: true
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: trusted-ca
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nkmcd
+      readOnly: true
+  - command:
+    - /bin/runlogwatch.sh
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    imagePullPolicy: IfNotPresent
+    name: metal3-ramdisk-logs
+    resources:
+      requests:
+        cpu: 10m
+        memory: 5Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /shared
+      name: metal3-shared
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: trusted-ca
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nkmcd
+      readOnly: true
+  - command:
+    - /bin/runironic-inspector
+    env:
+    - name: IRONIC_INSECURE
+      value: "true"
+    - name: IRONIC_KERNEL_PARAMS
+      value: rd.net.timeout.carrier=30 ip=dhcp,dhcp6
+    - name: INSPECTOR_REVERSE_PROXY_SETUP
+      value: "true"
+    - name: IRONIC_INSPECTOR_PRIVATE_PORT
+      value: unix
+    - name: PROVISIONING_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.hostIP
+    - name: PROVISIONING_INTERFACE
+    - name: PROVISIONING_MACS
+      value: XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    imagePullPolicy: IfNotPresent
+    name: metal3-ironic-inspector
+    resources:
+      requests:
+        cpu: 40m
+        memory: 100Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /shared
+      name: metal3-shared
+    - mountPath: /auth/ironic
+      name: metal3-ironic-basic-auth
+      readOnly: true
+    - mountPath: /certs/ironic
+      name: metal3-ironic-tls
+      readOnly: true
+    - mountPath: /certs/ironic-inspector
+      name: metal3-inspector-tls
+      readOnly: true
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: trusted-ca
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nkmcd
+      readOnly: true
+  dnsPolicy: ClusterFirstWithHostNet
+  enableServiceLinks: true
+  hostNetwork: true
+  initContainers:
+  - command:
+    - /bin/copy-metal
+    - --all
+    - /shared/html/images
+    env:
+    - name: IP_OPTIONS
+      value: ip=dhcp,dhcp6
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:babc973b7e2f5f2b215a5dfada59cecf1b3829601e999f8e81f89b3f2f4fcb53
+    imagePullPolicy: IfNotPresent
+    name: machine-os-images
+    resources:
+      requests:
+        cpu: 5m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /shared/html/images
+      name: metal3-shared-image-cache
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: trusted-ca
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nkmcd
+      readOnly: true
+  nodeName: XXXXXX1
+  nodeSelector:
+    node-role.kubernetes.io/XXXXXX: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    runAsNonRoot: false
+  serviceAccount: cluster-baremetal-operator
+  serviceAccountName: cluster-baremetal-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/XXXXXX
+    operator: Exists
+  - key: CriticalAddonsOnly
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - emptyDir: {}
+    name: metal3-shared
+  - hostPath:
+      path: /var/lib/metal3/images
+      type: DirectoryOrCreate
+    name: metal3-shared-image-cache
+  - name: metal3-ironic-basic-auth
+    secret:
+      defaultMode: 420
+      items:
+      - key: username
+        path: username
+      - key: password
+        path: password
+      - key: auth-config
+        path: auth-config
+      secretName: metal3-ironic-password
+  - name: cert
+    secret:
+      defaultMode: 420
+      secretName: baremetal-operator-webhook-server-cert
+  - name: metal3-inspector-basic-auth
+    secret:
+      defaultMode: 420
+      items:
+      - key: username
+        path: username
+      - key: password
+        path: password
+      - key: auth-config
+        path: auth-config
+      secretName: metal3-ironic-inspector-password
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: cbo-trusted-ca
+      optional: true
+    name: trusted-ca
+  - name: metal3-ironic-tls
+    secret:
+      defaultMode: 420
+      secretName: metal3-ironic-tls
+  - name: metal3-inspector-tls
+    secret:
+      defaultMode: 420
+      secretName: metal3-ironic-tls
+  - name: metal3-vmedia-tls
+    secret:
+      defaultMode: 420
+      secretName: metal3-ironic-tls
+  - name: kube-api-access-nkmcd
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:23:13Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:23:15Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:23:15Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:22:10Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://77fac0ccbce090c9735add3aa700c37c433b45fa53304e6d1b1d7c8855d1d398
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    lastState: {}
+    name: metal3-httpd
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:23:13Z"
+  - containerID: cri-o://29252f59f6ca3d94ad1e85ef65b9806965298917b61609c77ed68c7d9690b050
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    lastState: {}
+    name: metal3-ironic
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:23:14Z"
+  - containerID: cri-o://567231e32de02c96504a9b7ceb4d4be0a3469b71611031c93919c3717ec513e7
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    lastState: {}
+    name: metal3-ironic-inspector
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:23:14Z"
+  - containerID: cri-o://5db6b0b9d4434d4c01526f1ee333b961514212b5f98864b676dc027f24150e89
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    lastState: {}
+    name: metal3-ramdisk-logs
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:23:14Z"
+  hostIP: XXXXXXXXXXX
+  initContainerStatuses:
+  - containerID: cri-o://1a0d27471dee3afef869f20cf719142406f3a3342c2b0b4270138adb12ac0d1b
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:babc973b7e2f5f2b215a5dfada59cecf1b3829601e999f8e81f89b3f2f4fcb53
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:babc973b7e2f5f2b215a5dfada59cecf1b3829601e999f8e81f89b3f2f4fcb53
+    lastState: {}
+    name: machine-os-images
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://1a0d27471dee3afef869f20cf719142406f3a3342c2b0b4270138adb12ac0d1b
+        exitCode: 0
+        finishedAt: "2025-11-17T09:23:12Z"
+        reason: Completed
+        startedAt: "2025-11-17T09:23:10Z"
+  phase: Running
+  podIP: XXXXXXXXXXX
+  podIPs:
+  - ip: XXXXXXXXXXX
+  - ip: 2620:52:0:2e1a::21
+  qosClass: Burstable
+  startTime: "2025-11-17T09:22:10Z"

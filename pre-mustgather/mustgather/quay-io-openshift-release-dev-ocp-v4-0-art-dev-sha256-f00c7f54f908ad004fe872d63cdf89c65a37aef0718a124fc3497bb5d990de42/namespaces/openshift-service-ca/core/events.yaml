@@ -1,0 +1,591 @@
+---
+apiVersion: v1
+items:
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:20:21.836471Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: service-ca-74bb895ccf-fdjwl
+    namespace: openshift-service-ca
+    resourceVersion: "6488"
+    uid: 0409fc08-59a7-43b6-a888-a37c0ea43f3a
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-service-ca/service-ca-74bb895ccf-fdjwl
+    to XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:21Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:20:21Z"
+    name: service-ca-74bb895ccf-fdjwl.1878c0c894b5cdc7
+    namespace: openshift-service-ca
+    resourceVersion: "6495"
+    uid: eead2174-37c0-4603-9a0b-8e5e739ca353
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:23Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: service-ca-74bb895ccf-fdjwl
+    namespace: openshift-service-ca
+    resourceVersion: "6498"
+    uid: 0409fc08-59a7-43b6-a888-a37c0ea43f3a
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:23Z"
+  message: Add eth0 [10.128.0.7/23 fd02:0:0:1::7/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:20:23Z"
+    name: service-ca-74bb895ccf-fdjwl.1878c0c90cc781a6
+    namespace: openshift-service-ca
+    resourceVersion: "6643"
+    uid: 31406d77-0299-4ffc-9f34-1da6417cc370
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-74bb895ccf-fdjwl
+    namespace: openshift-service-ca
+    resourceVersion: "6491"
+    uid: 0409fc08-59a7-43b6-a888-a37c0ea43f3a
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:23Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:414f00ab948017c5c4177359116b335ee790107434b897315de7ae2bf8c9f365"
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:20:23Z"
+    name: service-ca-74bb895ccf-fdjwl.1878c0c90db4ffa2
+    namespace: openshift-service-ca
+    resourceVersion: "6645"
+    uid: 61db9b55-e82e-4501-9afe-69c66f295e96
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-74bb895ccf-fdjwl
+    namespace: openshift-service-ca
+    resourceVersion: "6491"
+    uid: 0409fc08-59a7-43b6-a888-a37c0ea43f3a
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:29Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:414f00ab948017c5c4177359116b335ee790107434b897315de7ae2bf8c9f365"
+    in 5.682494509s (5.682505968s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:20:29Z"
+    name: service-ca-74bb895ccf-fdjwl.1878c0ca60695b4c
+    namespace: openshift-service-ca
+    resourceVersion: "7071"
+    uid: 099672e8-6547-4e6f-a55d-986a7d601bc9
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-74bb895ccf-fdjwl
+    namespace: openshift-service-ca
+    resourceVersion: "6491"
+    uid: 0409fc08-59a7-43b6-a888-a37c0ea43f3a
+  kind: Event
+  lastTimestamp: "2025-11-17T09:33:15Z"
+  message: Created container service-ca-controller
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:15Z"
+    name: service-ca-74bb895ccf-fdjwl.1878c0ca65cefc14
+    namespace: openshift-service-ca
+    resourceVersion: "19604"
+    uid: c0964cf7-2994-40f2-9579-19fbb19acea7
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-74bb895ccf-fdjwl
+    namespace: openshift-service-ca
+    resourceVersion: "6491"
+    uid: 0409fc08-59a7-43b6-a888-a37c0ea43f3a
+  kind: Event
+  lastTimestamp: "2025-11-17T09:33:15Z"
+  message: Started container service-ca-controller
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:15Z"
+    name: service-ca-74bb895ccf-fdjwl.1878c0ca66a6ece6
+    namespace: openshift-service-ca
+    resourceVersion: "19608"
+    uid: fb01dcf7-2ecf-4b7e-8ebd-4b39a6152c58
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:27:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-74bb895ccf-fdjwl
+    namespace: openshift-service-ca
+    resourceVersion: "6491"
+    uid: 0409fc08-59a7-43b6-a888-a37c0ea43f3a
+  kind: Event
+  lastTimestamp: "2025-11-17T09:33:14Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:414f00ab948017c5c4177359116b335ee790107434b897315de7ae2bf8c9f365"
+    already present on machine
+  metadata:
+    creationTimestamp: "2025-11-17T09:27:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:14Z"
+    name: service-ca-74bb895ccf-fdjwl.1878c12818d7966d
+    namespace: openshift-service-ca
+    resourceVersion: "19602"
+    uid: 9fb9ac5c-4f43-49e0-b378-86c5c7a321b1
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:33:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-74bb895ccf-fdjwl
+    namespace: openshift-service-ca
+    resourceVersion: "6491"
+    uid: 0409fc08-59a7-43b6-a888-a37c0ea43f3a
+  kind: Event
+  lastTimestamp: "2025-11-17T09:33:00Z"
+  message: Back-off restarting failed container service-ca-controller in pod service-ca-74bb895ccf-fdjwl_openshift-service-ca(0409fc08-59a7-43b6-a888-a37c0ea43f3a)
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:05Z"
+    name: service-ca-74bb895ccf-fdjwl.1878c179443e7f5e
+    namespace: openshift-service-ca
+    resourceVersion: "19426"
+    uid: 0a6d926e-97fe-4918-a45d-0f851f7768b1
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:21Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: service-ca-74bb895ccf
+    namespace: openshift-service-ca
+    resourceVersion: "6483"
+    uid: cd7cfc29-6459-432d-bc93-8a2694bec235
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:21Z"
+  message: 'Created pod: service-ca-74bb895ccf-fdjwl'
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:20:21Z"
+    name: service-ca-74bb895ccf.1878c0c8947ef244
+    namespace: openshift-service-ca
+    resourceVersion: "6489"
+    uid: 800bfac2-abdd-4d20-a4ad-f64560b0719d
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:31Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: service-ca-controller-lock
+    namespace: openshift-service-ca
+    resourceVersion: "7204"
+    uid: dd20c15b-b308-4b7d-869b-9db52c392df5
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:31Z"
+  message: service-ca-74bb895ccf-fdjwl_7250bb9d-41da-4ec1-ad1b-878301ef1df4 became
+    leader
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2025-11-17T09:20:31Z"
+    name: service-ca-controller-lock.1878c0cab8662c85
+    namespace: openshift-service-ca
+    resourceVersion: "7205"
+    uid: e6d9d79f-1a56-42ce-bd23-ba7a2a3af859
+  reason: LeaderElection
+  reportingComponent: service-ca-controller
+  reportingInstance: ""
+  source:
+    component: service-ca-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:05Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: service-ca-controller-lock
+    namespace: openshift-service-ca
+    resourceVersion: "15698"
+    uid: dd20c15b-b308-4b7d-869b-9db52c392df5
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:05Z"
+  message: service-ca-74bb895ccf-fdjwl_d017680d-859e-4d0a-b944-e55a84ad3304 became
+    leader
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2025-11-17T09:30:05Z"
+    name: service-ca-controller-lock.1878c150680f9843
+    namespace: openshift-service-ca
+    resourceVersion: "15699"
+    uid: dbc41a75-0a5f-47dd-865d-0ba285a13a39
+  reason: LeaderElection
+  reportingComponent: service-ca-controller
+  reportingInstance: ""
+  source:
+    component: service-ca-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:33:15Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: service-ca-controller-lock
+    namespace: openshift-service-ca
+    resourceVersion: "19617"
+    uid: dd20c15b-b308-4b7d-869b-9db52c392df5
+  kind: Event
+  lastTimestamp: "2025-11-17T09:33:15Z"
+  message: service-ca-74bb895ccf-fdjwl_f3b7815c-92a4-4479-bad9-4bacad2f2eb3 became
+    leader
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2025-11-17T09:33:15Z"
+    name: service-ca-controller-lock.1878c17cd43474b3
+    namespace: openshift-service-ca
+    resourceVersion: "19618"
+    uid: b3415c03-3223-4658-a0ff-8246153c71ee
+  reason: LeaderElection
+  reportingComponent: service-ca-controller
+  reportingInstance: ""
+  source:
+    component: service-ca-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:21Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca
+    namespace: openshift-service-ca
+    resourceVersion: "6482"
+    uid: 812049b1-8a63-40c0-93b4-545f1b4cfdff
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:21Z"
+  message: Scaled up replica set service-ca-74bb895ccf to 1
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:20:21Z"
+    name: service-ca.1878c0c89430e3c8
+    namespace: openshift-service-ca
+    resourceVersion: "6485"
+    uid: 9b1f70d0-949a-4e9d-a94c-c247c0a5b51a
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "32607"

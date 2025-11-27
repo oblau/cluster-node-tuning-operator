@@ -1,0 +1,3602 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      capability.openshift.io/name: MachineAPI
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+      exclude.release.openshift.io/internal-openshift-hosted: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2025-11-17T09:06:20Z"
+    generation: 1
+    labels:
+      k8s-app: cluster-autoscaler-operator
+      pod-template-hash: 577bc44bdf
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:exclude.release.openshift.io/internal-openshift-hosted: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"4d4bee6f-391d-42ed-b254-aa961f849d9b"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:kubectl.kubernetes.io/default-container: {}
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                .: {}
+                f:k8s-app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"cluster-autoscaler-operator"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"CLUSTER_AUTOSCALER_IMAGE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"CLUSTER_AUTOSCALER_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"LEADER_ELECTION_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"METRICS_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"RELEASE_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"WATCH_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"WEBHOOKS_CERT_DIR"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"WEBHOOKS_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8443,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/cluster-autoscaler-operator/tls"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                k:{"name":"kube-rbac-proxy"}:
+                  .: {}
+                  f:args: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":9192,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/tls/private"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+              f:dnsPolicy: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+              f:volumes:
+                .: {}
+                k:{"name":"auth-proxy-config"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+                k:{"name":"cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:secretName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:06:20Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:21:49Z"
+    name: cluster-autoscaler-operator-577bc44bdf
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: cluster-autoscaler-operator
+      uid: 4d4bee6f-391d-42ed-b254-aa961f849d9b
+    resourceVersion: "10047"
+    uid: e5d9129c-ea20-48e0-ba60-d576df05d87c
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        k8s-app: cluster-autoscaler-operator
+        pod-template-hash: 577bc44bdf
+    template:
+      metadata:
+        annotations:
+          kubectl.kubernetes.io/default-container: cluster-autoscaler-operator
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          k8s-app: cluster-autoscaler-operator
+          pod-template-hash: 577bc44bdf
+      spec:
+        containers:
+        - args:
+          - --secure-listen-address=0.0.0.0:9192
+          - --upstream=http://127.0.0.1:9191/
+          - --tls-cert-file=/etc/tls/private/tls.crt
+          - --tls-private-key-file=/etc/tls/private/tls.key
+          - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+          - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+          - --logtostderr=true
+          - --v=3
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+          imagePullPolicy: IfNotPresent
+          name: kube-rbac-proxy
+          ports:
+          - containerPort: 9192
+            name: metrics
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/kube-rbac-proxy
+            name: auth-proxy-config
+            readOnly: true
+          - mountPath: /etc/tls/private
+            name: cert
+            readOnly: true
+        - args:
+          - -alsologtostderr
+          command:
+          - cluster-autoscaler-operator
+          env:
+          - name: RELEASE_VERSION
+            value: 4.14.59
+          - name: WATCH_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CLUSTER_AUTOSCALER_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: LEADER_ELECTION_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CLUSTER_AUTOSCALER_IMAGE
+            value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c2dada3dfe7331d785da035ffe66b73a3bb1ce7eec3bba9eb29fe93e7496250e
+          - name: WEBHOOKS_CERT_DIR
+            value: /etc/cluster-autoscaler-operator/tls
+          - name: WEBHOOKS_PORT
+            value: "8443"
+          - name: METRICS_PORT
+            value: "9191"
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d408b5a24e328873cb0faefbc8173996e14d5dbf561bf3851cc2c827f137bbd0
+          imagePullPolicy: IfNotPresent
+          name: cluster-autoscaler-operator
+          ports:
+          - containerPort: 8443
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 20m
+              memory: 50Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: FallbackToLogsOnError
+          volumeMounts:
+          - mountPath: /etc/cluster-autoscaler-operator/tls
+            name: cert
+            readOnly: true
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          node-role.kubernetes.io/XXXXXX: ""
+        priorityClassName: system-node-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: cluster-autoscaler-operator
+        serviceAccountName: cluster-autoscaler-operator
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/XXXXXX
+          operator: Exists
+        volumes:
+        - name: cert
+          secret:
+            defaultMode: 420
+            items:
+            - key: tls.crt
+              path: tls.crt
+            - key: tls.key
+              path: tls.key
+            secretName: cluster-autoscaler-operator-cert
+        - configMap:
+            defaultMode: 420
+            name: kube-rbac-proxy-cluster-autoscaler-operator
+          name: auth-proxy-config
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      capability.openshift.io/name: baremetal
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+      exclude.release.openshift.io/internal-openshift-hosted: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2025-11-17T09:06:20Z"
+    generation: 1
+    labels:
+      k8s-app: cluster-baremetal-operator
+      pod-template-hash: 67db5c984b
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:exclude.release.openshift.io/internal-openshift-hosted: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"fff1c483-577d-469c-8e84-48dad6e747d1"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:capability.openshift.io/name: {}
+                f:include.release.openshift.io/self-managed-high-availability: {}
+                f:include.release.openshift.io/single-node-developer: {}
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                .: {}
+                f:k8s-app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"baremetal-kube-rbac-proxy"}:
+                  .: {}
+                  f:args: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8443,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/baremetal-kube-rbac-proxy"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/etc/tls/private"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                k:{"name":"cluster-baremetal-operator"}:
+                  .: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"COMPONENT_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"METRICS_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"RELEASE_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":9443,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/cluster-baremetal-operator/images"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/cluster-baremetal-operator/tls"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+              f:dnsPolicy: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext:
+                .: {}
+                f:runAsNonRoot: {}
+                f:runAsUser: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+              f:volumes:
+                .: {}
+                k:{"name":"cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"cluster-baremetal-operator-tls"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"config"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+                k:{"name":"images"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:06:20Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:21:46Z"
+    name: cluster-baremetal-operator-67db5c984b
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: cluster-baremetal-operator
+      uid: fff1c483-577d-469c-8e84-48dad6e747d1
+    resourceVersion: "9755"
+    uid: 17325ba9-ec35-4464-a261-9c5bc62f8ff8
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        k8s-app: cluster-baremetal-operator
+        pod-template-hash: 67db5c984b
+    template:
+      metadata:
+        annotations:
+          capability.openshift.io/name: baremetal
+          include.release.openshift.io/self-managed-high-availability: "true"
+          include.release.openshift.io/single-node-developer: "true"
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          k8s-app: cluster-baremetal-operator
+          pod-template-hash: 67db5c984b
+      spec:
+        containers:
+        - command:
+          - /usr/bin/cluster-baremetal-operator
+          env:
+          - name: RELEASE_VERSION
+            value: 4.14.59
+          - name: COMPONENT_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: METRICS_PORT
+            value: "8080"
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e5d6cb0faaed138203b65e4c4033a18a855db82f2a05f95289904d1d5601b4a6
+          imagePullPolicy: IfNotPresent
+          name: cluster-baremetal-operator
+          ports:
+          - containerPort: 9443
+            name: webhook-server
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 10m
+              memory: 50Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/cluster-baremetal-operator/tls
+            name: cert
+            readOnly: true
+          - mountPath: /etc/cluster-baremetal-operator/images
+            name: images
+            readOnly: true
+        - args:
+          - --secure-listen-address=0.0.0.0:8443
+          - --upstream=http://localhost:8080/
+          - --tls-cert-file=/etc/tls/private/tls.crt
+          - --tls-private-key-file=/etc/tls/private/tls.key
+          - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+          - --config-file=/etc/baremetal-kube-rbac-proxy/config-file.yaml
+          - --logtostderr=true
+          - --v=10
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+          imagePullPolicy: IfNotPresent
+          name: baremetal-kube-rbac-proxy
+          ports:
+          - containerPort: 8443
+            name: https
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/baremetal-kube-rbac-proxy
+            name: config
+          - mountPath: /etc/tls/private
+            name: cluster-baremetal-operator-tls
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          node-role.kubernetes.io/XXXXXX: ""
+        priorityClassName: system-node-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 65534
+        serviceAccount: cluster-baremetal-operator
+        serviceAccountName: cluster-baremetal-operator
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/XXXXXX
+          operator: Exists
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+          tolerationSeconds: 120
+        - effect: NoExecute
+          key: node.kubernetes.io/not-ready
+          operator: Exists
+          tolerationSeconds: 120
+        volumes:
+        - name: cert
+          secret:
+            defaultMode: 420
+            secretName: cluster-baremetal-webhook-server-cert
+        - configMap:
+            defaultMode: 420
+            name: baremetal-kube-rbac-proxy
+          name: config
+        - name: cluster-baremetal-operator-tls
+          secret:
+            defaultMode: 420
+            secretName: cluster-baremetal-operator-tls
+        - configMap:
+            defaultMode: 420
+            name: cluster-baremetal-operator-images
+          name: images
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      capability.openshift.io/name: MachineAPI
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+      exclude.release.openshift.io/internal-openshift-hosted: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+    creationTimestamp: "2025-11-17T09:06:14Z"
+    generation: 1
+    labels:
+      k8s-app: control-plane-machine-set-operator
+      pod-template-hash: 54989cfc99
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:exclude.release.openshift.io/internal-openshift-hosted: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"2f83155e-08d4-4eae-8d51-db7c5267fd33"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                .: {}
+                f:k8s-app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"control-plane-machine-set-operator"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"COMPONENT_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"RELEASE_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":9443,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+              f:volumes:
+                .: {}
+                k:{"name":"control-plane-machine-set-operator-tls"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:06:14Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:21:45Z"
+    name: control-plane-machine-set-operator-54989cfc99
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: control-plane-machine-set-operator
+      uid: 2f83155e-08d4-4eae-8d51-db7c5267fd33
+    resourceVersion: "9690"
+    uid: 99e9143e-bb7f-40ba-991b-619d09539ac1
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        k8s-app: control-plane-machine-set-operator
+        pod-template-hash: 54989cfc99
+    template:
+      metadata:
+        annotations:
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          k8s-app: control-plane-machine-set-operator
+          pod-template-hash: 54989cfc99
+      spec:
+        containers:
+        - args:
+          - -v=2
+          - --leader-elect=true
+          - --leader-elect-lease-duration=137s
+          - --leader-elect-renew-deadline=107s
+          - --leader-elect-retry-period=26s
+          - --leader-elect-resource-namespace=openshift-machine-api
+          command:
+          - /manager
+          env:
+          - name: RELEASE_VERSION
+            value: 4.14.59
+          - name: COMPONENT_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3ba453dc2bd460133b5666aec4b82b6cb331cfaea611cb9fa244729f9519d9d8
+          imagePullPolicy: IfNotPresent
+          name: control-plane-machine-set-operator
+          ports:
+          - containerPort: 9443
+            name: https
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 10m
+              memory: 50Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /tmp/k8s-webhook-server/serving-certs
+            name: control-plane-machine-set-operator-tls
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          node-role.kubernetes.io/XXXXXX: ""
+        priorityClassName: system-cluster-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: control-plane-machine-set-operator
+        serviceAccountName: control-plane-machine-set-operator
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/XXXXXX
+          operator: Exists
+        volumes:
+        - name: control-plane-machine-set-operator-tls
+          secret:
+            defaultMode: 420
+            secretName: control-plane-machine-set-operator-tls
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+      machine.openshift.io/owned: ""
+      operator.openshift.io/dep-openshift-machine-api.mao-trusted-ca.configmap: b3aTLg==
+      operator.openshift.io/spec-hash: ce86852630d243e0ecf14e7be592996756668107d905bd61bcd7197ec05f73e8
+    creationTimestamp: "2025-11-17T09:22:11Z"
+    generation: 1
+    labels:
+      api: clusterapi
+      k8s-app: controller
+      pod-template-hash: 57fbbf9557
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:machine.openshift.io/owned: {}
+            f:operator.openshift.io/dep-openshift-machine-api.mao-trusted-ca.configmap: {}
+            f:operator.openshift.io/spec-hash: {}
+          f:labels:
+            .: {}
+            f:api: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a958fa18-d6db-4f60-aac1-bedb450a7834"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:operator.openshift.io/dep-openshift-machine-api.mao-trusted-ca.configmap: {}
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                .: {}
+                f:api: {}
+                f:k8s-app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"kube-rbac-proxy-machine-mtrc"}:
+                  .: {}
+                  f:args: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8441,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/etc/tls/private"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                k:{"name":"kube-rbac-proxy-machineset-mtrc"}:
+                  .: {}
+                  f:args: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8442,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/etc/tls/private"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                k:{"name":"kube-rbac-proxy-mhc-mtrc"}:
+                  .: {}
+                  f:args: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8444,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/etc/tls/private"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                k:{"name":"machine-controller"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"NODE_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"RELEASE_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:livenessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8440,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":9440,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/machine-api-operator/tls"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/var/run/secrets/openshift/serviceaccount"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                k:{"name":"machine-healthcheck-controller"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:livenessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":9442,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                k:{"name":"machineset-controller"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:livenessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8443,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":9441,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/machine-api-operator/tls"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                k:{"name":"nodelink-controller"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+              f:volumes:
+                .: {}
+                k:{"name":"bound-sa-token"}:
+                  .: {}
+                  f:name: {}
+                  f:projected:
+                    .: {}
+                    f:defaultMode: {}
+                    f:sources: {}
+                k:{"name":"config"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+                k:{"name":"machine-api-controllers-tls"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"machine-webhook-cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:secretName: {}
+                k:{"name":"machineset-webhook-cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:secretName: {}
+                k:{"name":"trusted-ca"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:name: {}
+                    f:optional: {}
+                  f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:22:11Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:27:18Z"
+    name: machine-api-controllers-57fbbf9557
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: machine-api-controllers
+      uid: a958fa18-d6db-4f60-aac1-bedb450a7834
+    resourceVersion: "14573"
+    uid: 123f5e50-517b-4a48-89ca-7fbb52ff1000
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        api: clusterapi
+        k8s-app: controller
+        pod-template-hash: 57fbbf9557
+    template:
+      metadata:
+        annotations:
+          operator.openshift.io/dep-openshift-machine-api.mao-trusted-ca.configmap: b3aTLg==
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          api: clusterapi
+          k8s-app: controller
+          pod-template-hash: 57fbbf9557
+      spec:
+        containers:
+        - args:
+          - --logtostderr=true
+          - --v=3
+          - --leader-elect=true
+          - --leader-elect-lease-duration=120s
+          - --namespace=openshift-machine-api
+          command:
+          - /machineset-controller
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4a667bb9783fa4cdbc32e147ace044bdc78c958b120038934cd66e15b6e96035
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /readyz
+              port: healthz
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: machineset-controller
+          ports:
+          - containerPort: 8443
+            name: webhook-server
+            protocol: TCP
+          - containerPort: 9441
+            name: healthz
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /healthz
+              port: healthz
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/machine-api-operator/tls
+            name: machineset-webhook-cert
+            readOnly: true
+        - args:
+          - --logtostderr=true
+          - --v=3
+          - --leader-elect=true
+          - --leader-elect-lease-duration=120s
+          - --namespace=openshift-machine-api
+          command:
+          - /machine-controller-manager
+          env:
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.nodeName
+          - name: RELEASE_VERSION
+            value: 4.14.59
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:787a5613f0ceb353e229b86bb6e54a612313662da30da0c5bc6463ecfb247e90
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /readyz
+              port: healthz
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: machine-controller
+          ports:
+          - containerPort: 8440
+            name: machine-webhook
+            protocol: TCP
+          - containerPort: 9440
+            name: healthz
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /healthz
+              port: healthz
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/pki/ca-trust/extracted/pem
+            name: trusted-ca
+            readOnly: true
+          - mountPath: /var/run/secrets/openshift/serviceaccount
+            name: bound-sa-token
+            readOnly: true
+          - mountPath: /etc/machine-api-operator/tls
+            name: machine-webhook-cert
+            readOnly: true
+        - args:
+          - --logtostderr=true
+          - --v=3
+          - --leader-elect=true
+          - --leader-elect-lease-duration=120s
+          - --namespace=openshift-machine-api
+          command:
+          - /nodelink-controller
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4a667bb9783fa4cdbc32e147ace044bdc78c958b120038934cd66e15b6e96035
+          imagePullPolicy: IfNotPresent
+          name: nodelink-controller
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        - args:
+          - --logtostderr=true
+          - --v=3
+          - --leader-elect=true
+          - --leader-elect-lease-duration=120s
+          - --namespace=openshift-machine-api
+          command:
+          - /machine-healthcheck
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4a667bb9783fa4cdbc32e147ace044bdc78c958b120038934cd66e15b6e96035
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /readyz
+              port: healthz
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: machine-healthcheck-controller
+          ports:
+          - containerPort: 9442
+            name: healthz
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /healthz
+              port: healthz
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        - args:
+          - --secure-listen-address=0.0.0.0:8442
+          - --upstream=http://localhost:8082
+          - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+          - --tls-cert-file=/etc/tls/private/tls.crt
+          - --tls-private-key-file=/etc/tls/private/tls.key
+          - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+          - --logtostderr=true
+          - --v=3
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+          imagePullPolicy: IfNotPresent
+          name: kube-rbac-proxy-machineset-mtrc
+          ports:
+          - containerPort: 8442
+            name: machineset-mtrc
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/kube-rbac-proxy
+            name: config
+          - mountPath: /etc/tls/private
+            name: machine-api-controllers-tls
+        - args:
+          - --secure-listen-address=0.0.0.0:8441
+          - --upstream=http://localhost:8081
+          - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+          - --tls-cert-file=/etc/tls/private/tls.crt
+          - --tls-private-key-file=/etc/tls/private/tls.key
+          - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+          - --logtostderr=true
+          - --v=3
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+          imagePullPolicy: IfNotPresent
+          name: kube-rbac-proxy-machine-mtrc
+          ports:
+          - containerPort: 8441
+            name: machine-mtrc
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/kube-rbac-proxy
+            name: config
+          - mountPath: /etc/tls/private
+            name: machine-api-controllers-tls
+        - args:
+          - --secure-listen-address=0.0.0.0:8444
+          - --upstream=http://localhost:8083
+          - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+          - --tls-cert-file=/etc/tls/private/tls.crt
+          - --tls-private-key-file=/etc/tls/private/tls.key
+          - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+          - --logtostderr=true
+          - --v=3
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+          imagePullPolicy: IfNotPresent
+          name: kube-rbac-proxy-mhc-mtrc
+          ports:
+          - containerPort: 8444
+            name: mhc-mtrc
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/kube-rbac-proxy
+            name: config
+          - mountPath: /etc/tls/private
+            name: machine-api-controllers-tls
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          node-role.kubernetes.io/XXXXXX: ""
+        priorityClassName: system-node-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: machine-api-controllers
+        serviceAccountName: machine-api-controllers
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/XXXXXX
+        - key: CriticalAddonsOnly
+          operator: Exists
+        - effect: NoExecute
+          key: node.kubernetes.io/not-ready
+          operator: Exists
+          tolerationSeconds: 120
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+          tolerationSeconds: 120
+        volumes:
+        - name: machineset-webhook-cert
+          secret:
+            defaultMode: 420
+            items:
+            - key: tls.crt
+              path: tls.crt
+            - key: tls.key
+              path: tls.key
+            secretName: machine-api-operator-webhook-cert
+        - name: machine-webhook-cert
+          secret:
+            defaultMode: 420
+            items:
+            - key: tls.crt
+              path: tls.crt
+            - key: tls.key
+              path: tls.key
+            secretName: machine-api-operator-machine-webhook-cert
+        - name: bound-sa-token
+          projected:
+            defaultMode: 420
+            sources:
+            - serviceAccountToken:
+                audience: openshift
+                expirationSeconds: 3600
+                path: token
+        - configMap:
+            defaultMode: 420
+            name: kube-rbac-proxy
+          name: config
+        - name: machine-api-controllers-tls
+          secret:
+            defaultMode: 420
+            secretName: machine-api-controllers-tls
+        - configMap:
+            defaultMode: 420
+            items:
+            - key: ca-bundle.crt
+              path: tls-ca-bundle.pem
+            name: mao-trusted-ca
+            optional: true
+          name: trusted-ca
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      capability.openshift.io/name: MachineAPI
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+      exclude.release.openshift.io/internal-openshift-hosted: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2025-11-17T09:05:55Z"
+    generation: 1
+    labels:
+      k8s-app: machine-api-operator
+      pod-template-hash: 5fb84845c4
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:exclude.release.openshift.io/internal-openshift-hosted: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"9f477e56-3b19-46a8-b75d-14731d99af34"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:capability.openshift.io/name: {}
+                f:kubectl.kubernetes.io/default-container: {}
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                .: {}
+                f:k8s-app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"kube-rbac-proxy"}:
+                  .: {}
+                  f:args: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8443,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/etc/tls/private"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                k:{"name":"machine-api-operator"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"COMPONENT_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"METRICS_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"POD_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"RELEASE_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/machine-api-operator-config/images"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+              f:volumes:
+                .: {}
+                k:{"name":"config"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+                k:{"name":"images"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+                k:{"name":"machine-api-operator-tls"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:05:55Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:22:12Z"
+    name: machine-api-operator-5fb84845c4
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: machine-api-operator
+      uid: 9f477e56-3b19-46a8-b75d-14731d99af34
+    resourceVersion: "10861"
+    uid: 94af1452-2d41-44d2-b6ab-d85f9eda9c3a
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        k8s-app: machine-api-operator
+        pod-template-hash: 5fb84845c4
+    template:
+      metadata:
+        annotations:
+          capability.openshift.io/name: MachineAPI
+          kubectl.kubernetes.io/default-container: machine-api-operator
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          k8s-app: machine-api-operator
+          pod-template-hash: 5fb84845c4
+      spec:
+        containers:
+        - args:
+          - --secure-listen-address=0.0.0.0:8443
+          - --upstream=http://localhost:8080/
+          - --tls-cert-file=/etc/tls/private/tls.crt
+          - --tls-private-key-file=/etc/tls/private/tls.key
+          - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+          - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+          - --logtostderr=true
+          - --v=3
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+          imagePullPolicy: IfNotPresent
+          name: kube-rbac-proxy
+          ports:
+          - containerPort: 8443
+            name: https
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/kube-rbac-proxy
+            name: config
+          - mountPath: /etc/tls/private
+            name: machine-api-operator-tls
+        - args:
+          - start
+          - --images-json=/etc/machine-api-operator-config/images/images.json
+          - --alsologtostderr
+          - --v=3
+          command:
+          - /machine-api-operator
+          env:
+          - name: RELEASE_VERSION
+            value: 4.14.59
+          - name: COMPONENT_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: METRICS_PORT
+            value: "8080"
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4a667bb9783fa4cdbc32e147ace044bdc78c958b120038934cd66e15b6e96035
+          imagePullPolicy: IfNotPresent
+          name: machine-api-operator
+          resources:
+            requests:
+              cpu: 10m
+              memory: 50Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/machine-api-operator-config/images
+            name: images
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          node-role.kubernetes.io/XXXXXX: ""
+        priorityClassName: system-node-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: machine-api-operator
+        serviceAccountName: machine-api-operator
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/XXXXXX
+          operator: Exists
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+          tolerationSeconds: 120
+        - effect: NoExecute
+          key: node.kubernetes.io/not-ready
+          operator: Exists
+          tolerationSeconds: 120
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: kube-rbac-proxy
+          name: config
+        - configMap:
+            defaultMode: 420
+            name: machine-api-operator-images
+          name: images
+        - name: machine-api-operator-tls
+          secret:
+            defaultMode: 420
+            secretName: machine-api-operator-tls
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      baremetal.openshift.io/owned: ""
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "1"
+      deployment.kubernetes.io/revision: "1"
+      operator.openshift.io/spec-hash: f9723ae4fc0f0ae4f90eaa5cc9e24e2999dd070cf97f2c332db2727ace50cb01
+    creationTimestamp: "2025-11-17T09:22:10Z"
+    generation: 1
+    labels:
+      baremetal.openshift.io/cluster-baremetal-operator: metal3-state
+      k8s-app: metal3
+      pod-template-hash: 75b58cb4f8
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:baremetal.openshift.io/owned: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:operator.openshift.io/spec-hash: {}
+          f:labels:
+            .: {}
+            f:baremetal.openshift.io/cluster-baremetal-operator: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f18c671f-a756-4a45-8eff-fdc737953f5f"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                .: {}
+                f:baremetal.openshift.io/cluster-baremetal-operator: {}
+                f:k8s-app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"metal3-httpd"}:
+                  .: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"HTTP_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"INSPECTOR_HTPASSWD"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:secretKeyRef: {}
+                    k:{"name":"INSPECTOR_REVERSE_PROXY_SETUP"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_HTPASSWD"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:secretKeyRef: {}
+                    k:{"name":"IRONIC_INSPECTOR_LISTEN_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_INSPECTOR_PRIVATE_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_LISTEN_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_PRIVATE_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_RAMDISK_SSH_KEY"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_REVERSE_PROXY_SETUP"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PROVISIONING_INTERFACE"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"PROVISIONING_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"PROVISIONING_MACS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"VMEDIA_TLS_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":5051,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:hostPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":6180,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:hostPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":6183,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:hostPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":6388,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:hostPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:privileged: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/auth/ironic"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/auth/ironic-inspector"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/certs/ironic"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/certs/ironic-inspector"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/certs/vmedia"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/shared"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/shared/html/images"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                k:{"name":"metal3-ironic"}:
+                  .: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"HTTP_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_EXTERNAL_IP"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"IRONIC_INSECURE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_INSPECTOR_INSECURE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_KERNEL_PARAMS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_PRIVATE_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_RAMDISK_SSH_KEY"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_REVERSE_PROXY_SETUP"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PROVISIONING_INTERFACE"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"PROVISIONING_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"PROVISIONING_MACS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"VMEDIA_TLS_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:privileged: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/auth/ironic-inspector"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/certs/ironic"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/certs/ironic-inspector"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/certs/vmedia"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/shared"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/shared/html/images"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                k:{"name":"metal3-ironic-inspector"}:
+                  .: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"INSPECTOR_REVERSE_PROXY_SETUP"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_INSECURE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_INSPECTOR_PRIVATE_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_KERNEL_PARAMS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PROVISIONING_INTERFACE"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"PROVISIONING_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"PROVISIONING_MACS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:privileged: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/auth/ironic"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/certs/ironic"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/certs/ironic-inspector"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/shared"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                k:{"name":"metal3-ramdisk-logs"}:
+                  .: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:privileged: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/shared"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:hostNetwork: {}
+              f:initContainers:
+                .: {}
+                k:{"name":"machine-os-images"}:
+                  .: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"IP_OPTIONS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:privileged: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/shared/html/images"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext:
+                .: {}
+                f:runAsNonRoot: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+              f:volumes:
+                .: {}
+                k:{"name":"cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"metal3-inspector-basic-auth"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:secretName: {}
+                k:{"name":"metal3-inspector-tls"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"metal3-ironic-basic-auth"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:secretName: {}
+                k:{"name":"metal3-ironic-tls"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"metal3-shared"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+                k:{"name":"metal3-shared-image-cache"}:
+                  .: {}
+                  f:hostPath:
+                    .: {}
+                    f:path: {}
+                    f:type: {}
+                  f:name: {}
+                k:{"name":"metal3-vmedia-tls"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"trusted-ca"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:name: {}
+                    f:optional: {}
+                  f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:22:10Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:23:15Z"
+    name: metal3-75b58cb4f8
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: metal3
+      uid: f18c671f-a756-4a45-8eff-fdc737953f5f
+    resourceVersion: "12487"
+    uid: 008c61ae-4ba3-4fc8-9dcb-b1aa39574fa7
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        baremetal.openshift.io/cluster-baremetal-operator: metal3-state
+        k8s-app: metal3
+        pod-template-hash: 75b58cb4f8
+    template:
+      metadata:
+        annotations:
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          baremetal.openshift.io/cluster-baremetal-operator: metal3-state
+          k8s-app: metal3
+          pod-template-hash: 75b58cb4f8
+      spec:
+        containers:
+        - command:
+          - /bin/runhttpd
+          env:
+          - name: HTTP_PORT
+            value: "6180"
+          - name: PROVISIONING_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: PROVISIONING_INTERFACE
+          - name: IRONIC_RAMDISK_SSH_KEY
+            value: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+          - name: PROVISIONING_MACS
+            value: XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX
+          - name: VMEDIA_TLS_PORT
+            value: "6183"
+          - name: IRONIC_HTPASSWD
+            valueFrom:
+              secretKeyRef:
+                key: htpasswd
+                name: metal3-ironic-password
+          - name: INSPECTOR_HTPASSWD
+            valueFrom:
+              secretKeyRef:
+                key: htpasswd
+                name: metal3-ironic-inspector-password
+          - name: IRONIC_REVERSE_PROXY_SETUP
+            value: "true"
+          - name: INSPECTOR_REVERSE_PROXY_SETUP
+            value: "true"
+          - name: IRONIC_PRIVATE_PORT
+            value: unix
+          - name: IRONIC_INSPECTOR_PRIVATE_PORT
+            value: unix
+          - name: IRONIC_LISTEN_PORT
+            value: "6388"
+          - name: IRONIC_INSPECTOR_LISTEN_PORT
+            value: "5051"
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+          imagePullPolicy: IfNotPresent
+          name: metal3-httpd
+          ports:
+          - containerPort: 6388
+            hostPort: 6388
+            name: ironic
+            protocol: TCP
+          - containerPort: 5051
+            hostPort: 5051
+            name: inspector
+            protocol: TCP
+          - containerPort: 6180
+            hostPort: 6180
+            name: http
+            protocol: TCP
+          - containerPort: 6183
+            hostPort: 6183
+            name: vmedia-https
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 5m
+              memory: 50Mi
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /shared
+            name: metal3-shared
+          - mountPath: /auth/ironic
+            name: metal3-ironic-basic-auth
+            readOnly: true
+          - mountPath: /auth/ironic-inspector
+            name: metal3-inspector-basic-auth
+            readOnly: true
+          - mountPath: /shared/html/images
+            name: metal3-shared-image-cache
+          - mountPath: /certs/ironic
+            name: metal3-ironic-tls
+            readOnly: true
+          - mountPath: /certs/ironic-inspector
+            name: metal3-inspector-tls
+            readOnly: true
+          - mountPath: /certs/vmedia
+            name: metal3-vmedia-tls
+            readOnly: true
+          - mountPath: /etc/pki/ca-trust/extracted/pem
+            name: trusted-ca
+            readOnly: true
+        - command:
+          - /bin/runironic
+          env:
+          - name: IRONIC_INSECURE
+            value: "true"
+          - name: IRONIC_INSPECTOR_INSECURE
+            value: "true"
+          - name: IRONIC_KERNEL_PARAMS
+            value: rd.net.timeout.carrier=30 ip=dhcp,dhcp6
+          - name: IRONIC_REVERSE_PROXY_SETUP
+            value: "true"
+          - name: IRONIC_PRIVATE_PORT
+            value: unix
+          - name: HTTP_PORT
+            value: "6180"
+          - name: PROVISIONING_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: PROVISIONING_INTERFACE
+          - name: IRONIC_RAMDISK_SSH_KEY
+            value: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+          - name: IRONIC_EXTERNAL_IP
+          - name: PROVISIONING_MACS
+            value: XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX
+          - name: VMEDIA_TLS_PORT
+            value: "6183"
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+          imagePullPolicy: IfNotPresent
+          name: metal3-ironic
+          resources:
+            requests:
+              cpu: 50m
+              memory: 500Mi
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /shared
+            name: metal3-shared
+          - mountPath: /shared/html/images
+            name: metal3-shared-image-cache
+          - mountPath: /auth/ironic-inspector
+            name: metal3-inspector-basic-auth
+            readOnly: true
+          - mountPath: /certs/ironic
+            name: metal3-ironic-tls
+            readOnly: true
+          - mountPath: /certs/ironic-inspector
+            name: metal3-inspector-tls
+            readOnly: true
+          - mountPath: /certs/vmedia
+            name: metal3-vmedia-tls
+            readOnly: true
+          - mountPath: /etc/pki/ca-trust/extracted/pem
+            name: trusted-ca
+            readOnly: true
+        - command:
+          - /bin/runlogwatch.sh
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+          imagePullPolicy: IfNotPresent
+          name: metal3-ramdisk-logs
+          resources:
+            requests:
+              cpu: 10m
+              memory: 5Mi
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /shared
+            name: metal3-shared
+          - mountPath: /etc/pki/ca-trust/extracted/pem
+            name: trusted-ca
+            readOnly: true
+        - command:
+          - /bin/runironic-inspector
+          env:
+          - name: IRONIC_INSECURE
+            value: "true"
+          - name: IRONIC_KERNEL_PARAMS
+            value: rd.net.timeout.carrier=30 ip=dhcp,dhcp6
+          - name: INSPECTOR_REVERSE_PROXY_SETUP
+            value: "true"
+          - name: IRONIC_INSPECTOR_PRIVATE_PORT
+            value: unix
+          - name: PROVISIONING_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: PROVISIONING_INTERFACE
+          - name: PROVISIONING_MACS
+            value: XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXX
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+          imagePullPolicy: IfNotPresent
+          name: metal3-ironic-inspector
+          resources:
+            requests:
+              cpu: 40m
+              memory: 100Mi
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /shared
+            name: metal3-shared
+          - mountPath: /auth/ironic
+            name: metal3-ironic-basic-auth
+            readOnly: true
+          - mountPath: /certs/ironic
+            name: metal3-ironic-tls
+            readOnly: true
+          - mountPath: /certs/ironic-inspector
+            name: metal3-inspector-tls
+            readOnly: true
+          - mountPath: /etc/pki/ca-trust/extracted/pem
+            name: trusted-ca
+            readOnly: true
+        dnsPolicy: ClusterFirstWithHostNet
+        hostNetwork: true
+        initContainers:
+        - command:
+          - /bin/copy-metal
+          - --all
+          - /shared/html/images
+          env:
+          - name: IP_OPTIONS
+            value: ip=dhcp,dhcp6
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:babc973b7e2f5f2b215a5dfada59cecf1b3829601e999f8e81f89b3f2f4fcb53
+          imagePullPolicy: IfNotPresent
+          name: machine-os-images
+          resources:
+            requests:
+              cpu: 5m
+              memory: 50Mi
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /shared/html/images
+            name: metal3-shared-image-cache
+          - mountPath: /etc/pki/ca-trust/extracted/pem
+            name: trusted-ca
+            readOnly: true
+        nodeSelector:
+          node-role.kubernetes.io/XXXXXX: ""
+        priorityClassName: system-node-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext:
+          runAsNonRoot: false
+        serviceAccount: cluster-baremetal-operator
+        serviceAccountName: cluster-baremetal-operator
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/XXXXXX
+          operator: Exists
+        - key: CriticalAddonsOnly
+          operator: Exists
+        - effect: NoExecute
+          key: node.kubernetes.io/not-ready
+          operator: Exists
+          tolerationSeconds: 120
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+          tolerationSeconds: 120
+        volumes:
+        - emptyDir: {}
+          name: metal3-shared
+        - hostPath:
+            path: /var/lib/metal3/images
+            type: DirectoryOrCreate
+          name: metal3-shared-image-cache
+        - name: metal3-ironic-basic-auth
+          secret:
+            defaultMode: 420
+            items:
+            - key: username
+              path: username
+            - key: password
+              path: password
+            - key: auth-config
+              path: auth-config
+            secretName: metal3-ironic-password
+        - name: cert
+          secret:
+            defaultMode: 420
+            secretName: baremetal-operator-webhook-server-cert
+        - name: metal3-inspector-basic-auth
+          secret:
+            defaultMode: 420
+            items:
+            - key: username
+              path: username
+            - key: password
+              path: password
+            - key: auth-config
+              path: auth-config
+            secretName: metal3-ironic-inspector-password
+        - configMap:
+            defaultMode: 420
+            items:
+            - key: ca-bundle.crt
+              path: tls-ca-bundle.pem
+            name: cbo-trusted-ca
+            optional: true
+          name: trusted-ca
+        - name: metal3-ironic-tls
+          secret:
+            defaultMode: 420
+            secretName: metal3-ironic-tls
+        - name: metal3-inspector-tls
+          secret:
+            defaultMode: 420
+            secretName: metal3-ironic-tls
+        - name: metal3-vmedia-tls
+          secret:
+            defaultMode: 420
+            secretName: metal3-ironic-tls
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      baremetal.openshift.io/owned: ""
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "1"
+      deployment.kubernetes.io/revision: "1"
+      operator.openshift.io/spec-hash: 239cbdf3db9cd4f024fb0e5da929ba238e0e9061dc88cc71e1dcdba76d5af8f1
+    creationTimestamp: "2025-11-17T09:22:11Z"
+    generation: 1
+    labels:
+      baremetal.openshift.io/cluster-baremetal-operator: metal3-baremetal-operator
+      baremetal.openshift.io/metal3-validating-webhook: metal3-validating-webhook
+      k8s-app: metal3
+      pod-template-hash: 6f455c9bb
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:baremetal.openshift.io/owned: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:operator.openshift.io/spec-hash: {}
+          f:labels:
+            .: {}
+            f:baremetal.openshift.io/cluster-baremetal-operator: {}
+            f:baremetal.openshift.io/metal3-validating-webhook: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"7c3cc276-1570-45ee-9019-f5c4f0c2eb94"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                .: {}
+                f:baremetal.openshift.io/cluster-baremetal-operator: {}
+                f:baremetal.openshift.io/metal3-validating-webhook: {}
+                f:k8s-app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"metal3-baremetal-operator"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"DEPLOY_KERNEL_URL"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_CACERT_FILE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_ENDPOINT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_EXTERNAL_IP"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"IRONIC_EXTERNAL_URL_V6"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_INSECURE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_INSPECTOR_ENDPOINT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"LIVE_ISO_FORCE_PERSISTENT_BOOT_DEVICE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"METAL3_AUTH_ROOT_DIR"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"OPERATOR_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"POD_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"POD_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"WATCH_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":9447,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:hostPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/auth/ironic"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/auth/ironic-inspector"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/certs/ironic"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+              f:dnsPolicy: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+              f:volumes:
+                .: {}
+                k:{"name":"cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"metal3-inspector-basic-auth"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:secretName: {}
+                k:{"name":"metal3-inspector-tls"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"metal3-ironic-basic-auth"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:secretName: {}
+                k:{"name":"metal3-ironic-tls"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"trusted-ca"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:name: {}
+                    f:optional: {}
+                  f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:22:11Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:22:50Z"
+    name: metal3-baremetal-operator-6f455c9bb
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: metal3-baremetal-operator
+      uid: 7c3cc276-1570-45ee-9019-f5c4f0c2eb94
+    resourceVersion: "12124"
+    uid: 6ae24c46-0b74-4f2d-99d5-fdcafb537b70
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        baremetal.openshift.io/cluster-baremetal-operator: metal3-baremetal-operator
+        baremetal.openshift.io/metal3-validating-webhook: metal3-validating-webhook
+        k8s-app: metal3
+        pod-template-hash: 6f455c9bb
+    template:
+      metadata:
+        annotations:
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          baremetal.openshift.io/cluster-baremetal-operator: metal3-baremetal-operator
+          baremetal.openshift.io/metal3-validating-webhook: metal3-validating-webhook
+          k8s-app: metal3
+          pod-template-hash: 6f455c9bb
+      spec:
+        containers:
+        - args:
+          - --health-addr
+          - :9446
+          - -build-preprov-image
+          - --webhook-port
+          - "9447"
+          command:
+          - /baremetal-operator
+          env:
+          - name: WATCH_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: OPERATOR_NAME
+            value: baremetal-operator
+          - name: IRONIC_CACERT_FILE
+            value: /certs/ironic/tls.crt
+          - name: IRONIC_INSECURE
+            value: "true"
+          - name: DEPLOY_KERNEL_URL
+            value: file:///shared/html/images/ironic-python-agent.kernel
+          - name: IRONIC_ENDPOINT
+            value: https://metal3-state.openshift-machine-api.svc.cluster.local:6388/v1/
+          - name: IRONIC_INSPECTOR_ENDPOINT
+            value: https://metal3-state.openshift-machine-api.svc.cluster.local:5051/v1/
+          - name: LIVE_ISO_FORCE_PERSISTENT_BOOT_DEVICE
+            value: Never
+          - name: METAL3_AUTH_ROOT_DIR
+            value: /auth
+          - name: IRONIC_EXTERNAL_IP
+          - name: IRONIC_EXTERNAL_URL_V6
+            value: https://[2620:52:0:2e1a::21]:6183
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:47f0484734ad2f554dbca4d9b5b2e40ec796513bcb8a4569ab3e7b30a4c3dd14
+          imagePullPolicy: IfNotPresent
+          name: metal3-baremetal-operator
+          ports:
+          - containerPort: 9447
+            hostPort: 9447
+            name: webhook-server
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 20m
+              memory: 50Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /auth/ironic
+            name: metal3-ironic-basic-auth
+            readOnly: true
+          - mountPath: /auth/ironic-inspector
+            name: metal3-inspector-basic-auth
+            readOnly: true
+          - mountPath: /certs/ironic
+            name: metal3-ironic-tls
+            readOnly: true
+          - mountPath: /tmp/k8s-webhook-server/serving-certs
+            name: cert
+            readOnly: true
+          - mountPath: /etc/pki/ca-trust/extracted/pem
+            name: trusted-ca
+            readOnly: true
+        dnsPolicy: ClusterFirstWithHostNet
+        nodeSelector:
+          node-role.kubernetes.io/XXXXXX: ""
+        priorityClassName: system-node-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: cluster-baremetal-operator
+        serviceAccountName: cluster-baremetal-operator
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/XXXXXX
+          operator: Exists
+        - key: CriticalAddonsOnly
+          operator: Exists
+        - effect: NoExecute
+          key: node.kubernetes.io/not-ready
+          operator: Exists
+          tolerationSeconds: 120
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+          tolerationSeconds: 120
+        volumes:
+        - configMap:
+            defaultMode: 420
+            items:
+            - key: ca-bundle.crt
+              path: tls-ca-bundle.pem
+            name: cbo-trusted-ca
+            optional: true
+          name: trusted-ca
+        - name: cert
+          secret:
+            defaultMode: 420
+            secretName: baremetal-operator-webhook-server-cert
+        - name: metal3-ironic-basic-auth
+          secret:
+            defaultMode: 420
+            items:
+            - key: username
+              path: username
+            - key: password
+              path: password
+            - key: auth-config
+              path: auth-config
+            secretName: metal3-ironic-password
+        - name: metal3-inspector-basic-auth
+          secret:
+            defaultMode: 420
+            items:
+            - key: username
+              path: username
+            - key: password
+              path: password
+            - key: auth-config
+              path: auth-config
+            secretName: metal3-ironic-inspector-password
+        - name: metal3-ironic-tls
+          secret:
+            defaultMode: 420
+            secretName: metal3-ironic-tls
+        - name: metal3-inspector-tls
+          secret:
+            defaultMode: 420
+            secretName: metal3-ironic-tls
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+      operator.openshift.io/spec-hash: f83aaa251e26ab33d5a6853354b866c7b54a0e64934f18161ecb9361aefff39d
+    creationTimestamp: "2025-11-17T09:22:14Z"
+    generation: 1
+    labels:
+      baremetal.openshift.io/cluster-baremetal-operator: metal3-image-customization-service
+      k8s-app: metal3
+      pod-template-hash: 56448bddc9
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:operator.openshift.io/spec-hash: {}
+          f:labels:
+            .: {}
+            f:baremetal.openshift.io/cluster-baremetal-operator: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"e357d85b-f284-411b-ae0a-bd13767d326e"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                .: {}
+                f:baremetal.openshift.io/cluster-baremetal-operator: {}
+                f:k8s-app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"machine-image-customization-controller"}:
+                  .: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"DEPLOY_INITRD"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"DEPLOY_ISO"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IP_OPTIONS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_AGENT_IMAGE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_AGENT_PULL_SECRET"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:secretKeyRef: {}
+                    k:{"name":"IRONIC_BASE_URL"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_INSPECTOR_BASE_URL"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_RAMDISK_SSH_KEY"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"NO_PROXY"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REGISTRIES_CONF_PATH"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8084,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:privileged: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/containers/registries.conf"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/shared/html/images"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:initContainers:
+                .: {}
+                k:{"name":"machine-os-images"}:
+                  .: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"IP_OPTIONS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:privileged: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/shared/html/images"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+              f:volumes:
+                .: {}
+                k:{"name":"metal3-image-customization-volume"}:
+                  .: {}
+                  f:hostPath:
+                    .: {}
+                    f:path: {}
+                    f:type: {}
+                  f:name: {}
+                k:{"name":"metal3-shared-image-cache"}:
+                  .: {}
+                  f:hostPath:
+                    .: {}
+                    f:path: {}
+                    f:type: {}
+                  f:name: {}
+                k:{"name":"trusted-ca"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:name: {}
+                    f:optional: {}
+                  f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:22:14Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:23:23Z"
+    name: metal3-image-customization-56448bddc9
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: metal3-image-customization
+      uid: e357d85b-f284-411b-ae0a-bd13767d326e
+    resourceVersion: "12546"
+    uid: 4933a630-2253-499b-a33e-7a57442c44c1
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        baremetal.openshift.io/cluster-baremetal-operator: metal3-image-customization-service
+        k8s-app: metal3
+        pod-template-hash: 56448bddc9
+    template:
+      metadata:
+        annotations:
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          baremetal.openshift.io/cluster-baremetal-operator: metal3-image-customization-service
+          k8s-app: metal3
+          pod-template-hash: 56448bddc9
+      spec:
+        containers:
+        - command:
+          - /machine-image-customization-controller
+          - -images-bind-addr
+          - :8084
+          - -images-publish-addr
+          - http://metal3-image-customization-service.openshift-machine-api.svc.cluster.local/
+          env:
+          - name: NO_PROXY
+            value: ',XXXXXXXXXX0,XXXXXXXXXX0'
+          - name: DEPLOY_ISO
+            value: /shared/html/images/ironic-python-XXXXXXXXX
+          - name: DEPLOY_INITRD
+            value: /shared/html/images/ironic-python-agent.initramfs
+          - name: IRONIC_BASE_URL
+            value: https://XXXXXXXXXX0
+          - name: IRONIC_INSPECTOR_BASE_URL
+            value: https://XXXXXXXXXX0
+          - name: IRONIC_AGENT_IMAGE
+            value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:237eeddd5a62765212896bcd63ba992f12ce36c4b6395c9101b74cce0a71809b
+          - name: REGISTRIES_CONF_PATH
+            value: /etc/containers/registries.conf
+          - name: IP_OPTIONS
+            value: ip=dhcp,dhcp6
+          - name: IRONIC_RAMDISK_SSH_KEY
+            value: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+          - name: IRONIC_AGENT_PULL_SECRET
+            valueFrom:
+              secretKeyRef:
+                key: .dockerconfigjson
+                name: pull-secret
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8887fd04eb9e75cd24d508f73d43efaf23b1948240c4947643bb70982b1465e3
+          imagePullPolicy: IfNotPresent
+          name: machine-image-customization-controller
+          ports:
+          - containerPort: 8084
+            name: http
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 5m
+              memory: 50Mi
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/containers/registries.conf
+            name: metal3-image-customization-volume
+          - mountPath: /shared/html/images
+            name: metal3-shared-image-cache
+        dnsPolicy: ClusterFirstWithHostNet
+        initContainers:
+        - command:
+          - /bin/copy-metal
+          - --all
+          - /shared/html/images
+          env:
+          - name: IP_OPTIONS
+            value: ip=dhcp,dhcp6
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:babc973b7e2f5f2b215a5dfada59cecf1b3829601e999f8e81f89b3f2f4fcb53
+          imagePullPolicy: IfNotPresent
+          name: machine-os-images
+          resources:
+            requests:
+              cpu: 5m
+              memory: 50Mi
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /shared/html/images
+            name: metal3-shared-image-cache
+          - mountPath: /etc/pki/ca-trust/extracted/pem
+            name: trusted-ca
+            readOnly: true
+        nodeSelector:
+          node-role.kubernetes.io/XXXXXX: ""
+        priorityClassName: system-node-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: cluster-baremetal-operator
+        serviceAccountName: cluster-baremetal-operator
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/XXXXXX
+          operator: Exists
+        - key: CriticalAddonsOnly
+          operator: Exists
+        - effect: NoExecute
+          key: node.kubernetes.io/not-ready
+          operator: Exists
+          tolerationSeconds: 120
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+          tolerationSeconds: 120
+        volumes:
+        - hostPath:
+            path: /etc/containers/registries.conf
+            type: FileOrCreate
+          name: metal3-image-customization-volume
+        - hostPath:
+            path: /var/lib/metal3/images
+            type: DirectoryOrCreate
+          name: metal3-shared-image-cache
+        - configMap:
+            defaultMode: 420
+            items:
+            - key: ca-bundle.crt
+              path: tls-ca-bundle.pem
+            name: cbo-trusted-ca
+            optional: true
+          name: trusted-ca
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+kind: ReplicaSetList
+metadata:
+  resourceVersion: "32392"

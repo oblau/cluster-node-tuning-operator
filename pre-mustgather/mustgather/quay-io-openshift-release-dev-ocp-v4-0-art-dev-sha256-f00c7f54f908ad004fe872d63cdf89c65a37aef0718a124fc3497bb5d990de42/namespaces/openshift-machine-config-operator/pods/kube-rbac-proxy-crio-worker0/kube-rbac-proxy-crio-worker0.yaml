@@ -1,0 +1,329 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubernetes.io/config.hash: f5c1655007c866b8c46f2cb85bc01b80
+    kubernetes.io/config.mirror: f5c1655007c866b8c46f2cb85bc01b80
+    kubernetes.io/config.seen: "2025-11-17T09:32:19.875276928Z"
+    kubernetes.io/config.source: file
+    openshift.io/scc: privileged
+    target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+  creationTimestamp: "2025-11-17T09:33:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/config.hash: {}
+          f:kubernetes.io/config.mirror: {}
+          f:kubernetes.io/config.seen: {}
+          f:kubernetes.io/config.source: {}
+          f:target.workload.openshift.io/management: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"be542f6b-71a2-46af-9c87-f2120b48ad2f"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"kube-rbac-proxy-crio"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9637,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"setup"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"etc-kube"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"var-lib-kubelet"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kubelet
+    operation: Update
+    time: "2025-11-17T09:33:53Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"XXXXXXXXXX"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"2620:52:0:2e1a::2"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:36:59Z"
+  name: kube-rbac-proxy-crio-XXXXXX0
+  namespace: openshift-machine-config-operator
+  ownerReferences:
+  - apiVersion: v1
+    controller: true
+    kind: Node
+    name: XXXXXX0
+    uid: be542f6b-71a2-46af-9c87-f2120b48ad2f
+  resourceVersion: "22240"
+  uid: d76f951c-4203-4279-a9d3-02bfa0090264
+spec:
+  containers:
+  - args:
+    - --secure-listen-address=:9637
+    - --config-file=/etc/kubernetes/crio-metrics-proxy.cfg
+    - --client-ca-file=/etc/kubernetes/kubelet-ca.crt
+    - --logtostderr=true
+    - --kubeconfig=/var/lib/kubelet/kubeconfig
+    - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+    - --upstream=http://127.0.0.1:9537
+    - --tls-cert-file=/var/lib/kubelet/pki/kubelet-server-current.pem
+    - --tls-private-key-file=/var/lib/kubelet/pki/kubelet-server-current.pem
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy-crio
+    ports:
+    - containerPort: 9637
+      hostPort: 9637
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 20m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/kubernetes
+      mountPropagation: HostToContainer
+      name: etc-kube
+    - mountPath: /var/lib/kubelet
+      mountPropagation: HostToContainer
+      name: var-lib-kubelet
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  initContainers:
+  - args:
+    - |
+      echo -n "Waiting for kubelet key and certificate to be available"
+      while [ -n "$(test -e /var/lib/kubelet/pki/kubelet-server-current.pem)" ] ; do
+        echo -n "."
+        sleep 1
+        (( tries += 1 ))
+        if [[ "${tries}" -gt 10 ]]; then
+          echo "Timed out waiting for kubelet key and cert."
+          exit 1
+        fi
+      done
+    command:
+    - /bin/bash
+    - -ec
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+    imagePullPolicy: IfNotPresent
+    name: setup
+    resources:
+      requests:
+        cpu: 5m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var
+      mountPropagation: HostToContainer
+      name: var-lib-kubelet
+  nodeName: XXXXXX0
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes
+      type: ""
+    name: etc-kube
+  - hostPath:
+      path: /var/lib/kubelet
+      type: ""
+    name: var-lib-kubelet
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:32:28Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:34:07Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:34:07Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:32:20Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://76cb4ef7084e073c6f8a1ed58329f63979d6aafd8b25a0d4f1bd639c9450b2b4
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+    lastState:
+      terminated:
+        containerID: cri-o://2c54a8a1944e80dba185f11a3946090abaebf6e139a153f3554b02cb6a61cac1
+        exitCode: 1
+        finishedAt: "2025-11-17T09:33:14Z"
+        reason: Error
+        startedAt: "2025-11-17T09:33:14Z"
+    name: kube-rbac-proxy-crio
+    ready: true
+    restartCount: 4
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:34:07Z"
+  hostIP: XXXXXXXXXX
+  initContainerStatuses:
+  - containerID: cri-o://099171f329f28a3a21113a83e234261f9fffaf0b86b24ee10547386193e633bc
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+    lastState: {}
+    name: setup
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://099171f329f28a3a21113a83e234261f9fffaf0b86b24ee10547386193e633bc
+        exitCode: 0
+        finishedAt: "2025-11-17T09:32:28Z"
+        reason: Completed
+        startedAt: "2025-11-17T09:32:28Z"
+  phase: Running
+  podIP: XXXXXXXXXX
+  podIPs:
+  - ip: XXXXXXXXXX
+  - ip: 2620:52:0:2e1a::2
+  qosClass: Burstable
+  startTime: "2025-11-17T09:32:20Z"

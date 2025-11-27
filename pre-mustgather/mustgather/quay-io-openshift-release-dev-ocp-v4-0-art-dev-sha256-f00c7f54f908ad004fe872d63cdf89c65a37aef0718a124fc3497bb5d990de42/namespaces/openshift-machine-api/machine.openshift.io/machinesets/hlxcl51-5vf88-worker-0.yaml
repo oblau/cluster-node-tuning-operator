@@ -1,0 +1,122 @@
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  creationTimestamp: "2025-11-17T09:06:01Z"
+  generation: 1
+  labels:
+    machine.openshift.io/cluster-api-cluster: hlxcl51-5vf88
+    machine.openshift.io/cluster-api-machine-role: XXXXXX
+    machine.openshift.io/cluster-api-machine-type: XXXXXX
+  managedFields:
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+          f:machine.openshift.io/cluster-api-machine-role: {}
+          f:machine.openshift.io/cluster-api-machine-type: {}
+      f:spec:
+        .: {}
+        f:replicas: {}
+        f:selector: {}
+        f:template:
+          .: {}
+          f:metadata:
+            .: {}
+            f:labels:
+              .: {}
+              f:machine.openshift.io/cluster-api-cluster: {}
+              f:machine.openshift.io/cluster-api-machine-role: {}
+              f:machine.openshift.io/cluster-api-machine-type: {}
+              f:machine.openshift.io/cluster-api-machineset: {}
+          f:spec:
+            .: {}
+            f:lifecycleHooks: {}
+            f:metadata: {}
+            f:providerSpec:
+              .: {}
+              f:value:
+                .: {}
+                f:apiVersion: {}
+                f:customDeploy:
+                  .: {}
+                  f:method: {}
+                f:hostSelector: {}
+                f:image:
+                  .: {}
+                  f:checksum: {}
+                  f:url: {}
+                f:kind: {}
+                f:metadata:
+                  .: {}
+                  f:creationTimestamp: {}
+                f:userData:
+                  .: {}
+                  f:name: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2025-11-17T09:06:01Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:06:01Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:availableReplicas: {}
+        f:fullyLabeledReplicas: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+    manager: Go-http-client
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:23Z"
+  name: hlxcl51-5vf88-XXXXXX-0
+  namespace: openshift-machine-api
+  resourceVersion: "23588"
+  uid: 37af4e8d-097f-43c7-860f-e5d6ce530300
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: hlxcl51-5vf88
+      machine.openshift.io/cluster-api-machineset: hlxcl51-5vf88-XXXXXX-0
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: hlxcl51-5vf88
+        machine.openshift.io/cluster-api-machine-role: XXXXXX
+        machine.openshift.io/cluster-api-machine-type: XXXXXX
+        machine.openshift.io/cluster-api-machineset: hlxcl51-5vf88-XXXXXX-0
+    spec:
+      lifecycleHooks: {}
+      metadata: {}
+      providerSpec:
+        value:
+          apiVersion: baremetal.cluster.k8s.io/v1alpha1
+          customDeploy:
+            method: install_coreos
+          hostSelector: {}
+          image:
+            checksum: ""
+            url: ""
+          kind: BareMetalMachineProviderSpec
+          metadata:
+            creationTimestamp: null
+          userData:
+            name: XXXXXX-user-data-managed
+status:
+  availableReplicas: 2
+  fullyLabeledReplicas: 2
+  observedGeneration: 1
+  readyReplicas: 2
+  replicas: 2

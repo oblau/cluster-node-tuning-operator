@@ -1,0 +1,130 @@
+---
+apiVersion: imageregistry.operator.openshift.io/v1
+kind: Config
+metadata:
+  creationTimestamp: "2025-11-17T09:29:59Z"
+  finalizers:
+  - imageregistry.operator.openshift.io/finalizer
+  generation: 1
+  managedFields:
+  - apiVersion: imageregistry.operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"imageregistry.operator.openshift.io/finalizer": {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:observedConfig: {}
+        f:operatorLogLevel: {}
+        f:proxy: {}
+        f:replicas: {}
+        f:requests:
+          .: {}
+          f:read:
+            .: {}
+            f:maxWaitInQueue: {}
+          f:write:
+            .: {}
+            f:maxWaitInQueue: {}
+        f:rolloutStrategy: {}
+        f:storage: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    time: "2025-11-17T09:29:59Z"
+  - apiVersion: imageregistry.operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:generations: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:storage: {}
+        f:storageManaged: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:51:37Z"
+  name: cluster
+  resourceVersion: "32300"
+  uid: 2d287ca1-6da3-40ad-b30a-655bd1061f17
+spec:
+  logLevel: Normal
+  managementState: Removed
+  observedConfig: null
+  operatorLogLevel: Normal
+  proxy: {}
+  replicas: 1
+  requests:
+    read:
+      maxWaitInQueue: 0s
+    write:
+      maxWaitInQueue: 0s
+  rolloutStrategy: RollingUpdate
+  storage: {}
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:30:00Z"
+    reason: AsExpected
+    status: "False"
+    type: ImageConfigControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:30:27Z"
+    message: The daemon set node-ca has available replicas
+    reason: AsExpected
+    status: "True"
+    type: NodeCADaemonAvailable
+  - lastTransitionTime: "2025-11-17T09:37:24Z"
+    message: The daemon set node-ca is deployed
+    reason: AsExpected
+    status: "False"
+    type: NodeCADaemonProgressing
+  - lastTransitionTime: "2025-11-17T09:30:00Z"
+    reason: AsExpected
+    status: "False"
+    type: NodeCADaemonControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:30:00Z"
+    reason: AsExpected
+    status: "False"
+    type: AzureStackCloudControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:30:01Z"
+    reason: AsExpected
+    status: "False"
+    type: ImageRegistryCertificatesControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:51:37Z"
+    message: All registry resources are removed
+    reason: Removed
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2025-11-17T09:30:02Z"
+    message: The registry is removed
+    reason: Removed
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2025-11-17T09:30:02Z"
+    message: The registry is removed
+    reason: Removed
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2025-11-17T09:30:02Z"
+    message: The registry is removed
+    reason: Removed
+    status: "True"
+    type: Removed
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: node-ca
+    namespace: openshift-image-registry
+    resource: daemonsets
+  observedGeneration: 1
+  readyReplicas: 0
+  storage: {}
+  storageManaged: false

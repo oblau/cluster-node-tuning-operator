@@ -1,0 +1,78 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2025-11-17T09:24:03Z"
+    labels:
+      ingress.openshift.io/canary: canary_controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:ingress.openshift.io/canary: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"2bf7fac5-c2d5-409f-9823-b4a1c3478c3c"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8080,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":8888,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2025-11-17T09:24:03Z"
+    name: ingress-canary
+    namespace: openshift-ingress-canary
+    ownerReferences:
+    - apiVersion: apps/v1
+      controller: true
+      kind: daemonset
+      name: ingress-canary
+      uid: 2bf7fac5-c2d5-409f-9823-b4a1c3478c3c
+    resourceVersion: "13331"
+    uid: d99bde10-6c08-4862-934c-954518ef66d8
+  spec:
+    clusterIP: 172.30.152.96
+    clusterIPs:
+    - 172.30.152.96
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    - name: 8888-tcp
+      port: 8888
+      protocol: TCP
+      targetPort: 8888
+    selector:
+      ingresscanary.operator.openshift.io/daemonset-ingresscanary: canary_controller
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "32449"

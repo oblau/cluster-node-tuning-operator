@@ -1,0 +1,51 @@
+---
+apiVersion: v1
+imagePullSecrets:
+- name: operator-dockercfg-69qqz
+kind: ServiceAccount
+metadata:
+  annotations:
+    capability.openshift.io/name: Insights
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2025-11-17T09:05:52Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:52Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:imagePullSecrets: {}
+      f:secrets:
+        .: {}
+        k:{"name":"operator-dockercfg-69qqz"}: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2025-11-17T09:30:32Z"
+  name: operator
+  namespace: openshift-insights
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "17398"
+  uid: 73fe6cf8-9df5-41c5-bfe9-d1c0ce78fdd7
+secrets:
+- name: operator-dockercfg-69qqz

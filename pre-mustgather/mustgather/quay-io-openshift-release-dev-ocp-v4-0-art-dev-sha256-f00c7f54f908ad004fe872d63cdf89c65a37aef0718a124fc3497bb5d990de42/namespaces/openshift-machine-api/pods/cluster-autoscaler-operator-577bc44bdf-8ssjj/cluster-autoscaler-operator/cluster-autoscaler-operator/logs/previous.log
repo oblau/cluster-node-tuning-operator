@@ -1,0 +1,570 @@
+2025-11-17T09:21:48.730995146Z I1117 09:21:48.730837       1 main.go:15] Go Version: go1.20.12 X:strictfipsruntime
+2025-11-17T09:21:48.730995146Z I1117 09:21:48.730915       1 main.go:16] Go OS/Arch: linux/amd64
+2025-11-17T09:21:48.730995146Z I1117 09:21:48.730919       1 main.go:17] Version: cluster-autoscaler-operator v4.14.0-202511060117.p2.g32854ba.assembly.stream.el8+ose-cluster-autoscaler-operator
+2025-11-17T09:21:48.731130446Z I1117 09:21:48.731101       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:21:48.744408759Z I1117 09:21:48.744362       1 listener.go:44] controller-runtime/metrics "msg"="Metrics server is starting to listen" "addr"="127.0.0.1:9191"
+2025-11-17T09:21:48.746420078Z I1117 09:21:48.746344       1 server.go:187] controller-runtime/webhook "msg"="Registering webhook" "path"="/validate-clusterautoscalers"
+2025-11-17T09:21:48.746420078Z I1117 09:21:48.746388       1 server.go:187] controller-runtime/webhook "msg"="Registering webhook" "path"="/validate-machineautoscalers"
+2025-11-17T09:21:48.746530111Z I1117 09:21:48.746512       1 main.go:41] Starting cluster-autoscaler-operator
+2025-11-17T09:21:48.746744490Z I1117 09:21:48.746714       1 server.go:216] controller-runtime/webhook/webhooks "msg"="Starting webhook server" 
+2025-11-17T09:21:48.747272038Z I1117 09:21:48.747248       1 certwatcher.go:161] controller-runtime/certwatcher "msg"="Updated current TLS certificate" 
+2025-11-17T09:21:48.747334942Z I1117 09:21:48.747276       1 server.go:50]  "msg"="starting server" "addr"={"IP":"127.0.0.1","Port":9191,"Zone":""} "kind"="metrics" "path"="/metrics"
+2025-11-17T09:21:48.747543473Z I1117 09:21:48.747494       1 server.go:273] controller-runtime/webhook "msg"="Serving webhook server" "host"="" "port"=8443
+2025-11-17T09:21:48.747552400Z I1117 09:21:48.747525       1 leaderelection.go:245] attempting to acquire leader lease openshift-machine-api/cluster-autoscaler-operator-leader...
+2025-11-17T09:21:48.747598811Z I1117 09:21:48.747581       1 certwatcher.go:115] controller-runtime/certwatcher "msg"="Starting certificate watcher" 
+2025-11-17T09:21:48.755998042Z I1117 09:21:48.755941       1 leaderelection.go:255] successfully acquired lease openshift-machine-api/cluster-autoscaler-operator-leader
+2025-11-17T09:21:48.756364430Z I1117 09:21:48.756336       1 controller.go:177]  "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.ClusterAutoscaler"
+2025-11-17T09:21:48.756364430Z I1117 09:21:48.756358       1 controller.go:177]  "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.Deployment"
+2025-11-17T09:21:48.756385984Z I1117 09:21:48.756368       1 controller.go:177]  "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.Service"
+2025-11-17T09:21:48.756385984Z I1117 09:21:48.756377       1 controller.go:177]  "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.ServiceMonitor"
+2025-11-17T09:21:48.756460397Z I1117 09:21:48.756440       1 controller.go:177]  "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.PrometheusRule"
+2025-11-17T09:21:48.756460397Z I1117 09:21:48.756453       1 controller.go:185]  "msg"="Starting Controller" "controller"="cluster_autoscaler_controller"
+2025-11-17T09:21:48.756467231Z I1117 09:21:48.756459       1 status.go:341] Starting status reporter: cluster operator informers
+2025-11-17T09:21:48.756506311Z I1117 09:21:48.756489       1 controller.go:177]  "msg"="Starting EventSource" "controller"="machine_autoscaler_controller" "source"="kind source: *v1beta1.MachineAutoscaler"
+2025-11-17T09:21:48.756541079Z I1117 09:21:48.756524       1 controller.go:177]  "msg"="Starting EventSource" "controller"="machine_autoscaler_controller" "source"="kind source: *unstructured.Unstructured"
+2025-11-17T09:21:48.756563195Z I1117 09:21:48.756548       1 controller.go:185]  "msg"="Starting Controller" "controller"="machine_autoscaler_controller"
+2025-11-17T09:21:48.857908944Z I1117 09:21:48.857844       1 status.go:352] Starting status reporter: XXXXXX
+2025-11-17T09:21:48.860560455Z I1117 09:21:48.860442       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:48.860560455Z W1117 09:21:48.860458       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:48.865260182Z I1117 09:21:48.865222       1 webhookconfig.go:72] Webhook configuration status: created
+2025-11-17T09:21:48.865492040Z I1117 09:21:48.865470       1 controller.go:219]  "msg"="Starting XXXXXXs" "controller"="machine_autoscaler_controller" "XXXXXX count"=1
+2025-11-17T09:21:48.871353640Z I1117 09:21:48.871279       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:48.871394693Z W1117 09:21:48.871386       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:48.875524559Z I1117 09:21:48.875499       1 controller.go:219]  "msg"="Starting XXXXXXs" "controller"="cluster_autoscaler_controller" "XXXXXX count"=1
+2025-11-17T09:21:48.875579136Z I1117 09:21:48.875563       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:48.875579136Z W1117 09:21:48.875573       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.041499982Z I1117 09:21:49.041458       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.041552219Z W1117 09:21:49.041543       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.062998943Z I1117 09:21:49.062954       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.062998943Z W1117 09:21:49.062972       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.116661354Z I1117 09:21:49.116618       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.116661354Z W1117 09:21:49.116636       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.245970636Z I1117 09:21:49.245932       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.246017031Z W1117 09:21:49.246009       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.403948689Z I1117 09:21:49.403665       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.403948689Z W1117 09:21:49.403926       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.609338420Z I1117 09:21:49.601726       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.609338420Z W1117 09:21:49.601742       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.722257525Z I1117 09:21:49.722214       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.722330213Z W1117 09:21:49.722321       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.726696641Z I1117 09:21:49.726650       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.726696641Z W1117 09:21:49.726665       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.765655267Z I1117 09:21:49.765615       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.765712272Z W1117 09:21:49.765703       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.815873522Z I1117 09:21:49.815830       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.815873522Z W1117 09:21:49.815846       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.842821707Z I1117 09:21:49.841112       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.842821707Z W1117 09:21:49.841129       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.887720599Z I1117 09:21:49.887665       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.887720599Z W1117 09:21:49.887683       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.972089490Z I1117 09:21:49.972046       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.972089490Z W1117 09:21:49.972064       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:49.993415595Z I1117 09:21:49.993376       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:49.993463699Z W1117 09:21:49.993455       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:50.673162585Z I1117 09:21:50.673115       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:50.673218072Z W1117 09:21:50.673209       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:50.845433002Z I1117 09:21:50.843398       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:50.845433002Z W1117 09:21:50.843414       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:51.447677999Z I1117 09:21:51.447629       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:51.447677999Z W1117 09:21:51.447647       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:51.454493166Z I1117 09:21:51.454454       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:51.454541382Z W1117 09:21:51.454533       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:51.464423692Z I1117 09:21:51.464382       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:51.464479135Z W1117 09:21:51.464471       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:51.630470872Z I1117 09:21:51.630425       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:51.630470872Z W1117 09:21:51.630452       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:51.644621754Z I1117 09:21:51.644566       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:51.644621754Z W1117 09:21:51.644587       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:51.892446839Z I1117 09:21:51.892399       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:51.892446839Z W1117 09:21:51.892418       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:52.044916270Z I1117 09:21:52.044867       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:52.044916270Z W1117 09:21:52.044884       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:55.495928616Z I1117 09:21:55.495387       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:55.495928616Z W1117 09:21:55.495910       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:57.125871849Z I1117 09:21:57.125831       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:57.125918343Z W1117 09:21:57.125909       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:57.135230679Z I1117 09:21:57.135194       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:57.135274599Z W1117 09:21:57.135266       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:57.571563644Z I1117 09:21:57.571266       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:57.571563644Z W1117 09:21:57.571535       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:57.688083402Z I1117 09:21:57.688030       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:57.688083402Z W1117 09:21:57.688052       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:58.242677491Z I1117 09:21:58.242401       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:58.242894634Z W1117 09:21:58.242848       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:58.906237639Z I1117 09:21:58.906185       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:58.906237639Z W1117 09:21:58.906205       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:59.558513037Z I1117 09:21:59.558467       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:59.558561999Z W1117 09:21:59.558553       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:59.903736664Z I1117 09:21:59.903688       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:59.903736664Z W1117 09:21:59.903705       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:21:59.910627956Z I1117 09:21:59.910591       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:21:59.910677587Z W1117 09:21:59.910669       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:00.716499258Z I1117 09:22:00.716455       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:00.716549905Z W1117 09:22:00.716540       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:00.729404393Z I1117 09:22:00.729346       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:00.729404393Z W1117 09:22:00.729362       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:00.903795799Z I1117 09:22:00.903752       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:00.903849531Z W1117 09:22:00.903840       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:00.911150587Z I1117 09:22:00.911098       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:00.911150587Z W1117 09:22:00.911117       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:01.903524309Z I1117 09:22:01.903476       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:01.903524309Z W1117 09:22:01.903495       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:01.911890754Z I1117 09:22:01.911843       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:01.911890754Z W1117 09:22:01.911861       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:02.903674257Z I1117 09:22:02.903615       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:02.903674257Z W1117 09:22:02.903635       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:02.913457959Z I1117 09:22:02.912375       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:02.913457959Z W1117 09:22:02.912395       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:03.711937627Z I1117 09:22:03.711889       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:03.711937627Z W1117 09:22:03.711912       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:03.719973496Z I1117 09:22:03.719923       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:03.719973496Z W1117 09:22:03.719941       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:03.860860711Z I1117 09:22:03.860784       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:03.860860711Z W1117 09:22:03.860803       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:03.904792616Z I1117 09:22:03.904737       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:03.904792616Z W1117 09:22:03.904759       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:03.911271554Z I1117 09:22:03.911229       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:03.911271554Z W1117 09:22:03.911247       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:04.289497376Z I1117 09:22:04.289450       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:04.289497376Z W1117 09:22:04.289467       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:04.906158702Z I1117 09:22:04.906109       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:04.906158702Z W1117 09:22:04.906129       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:04.916257792Z I1117 09:22:04.916080       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:04.916257792Z W1117 09:22:04.916095       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:05.911013621Z I1117 09:22:05.906930       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:05.911013621Z W1117 09:22:05.906953       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:05.918828239Z I1117 09:22:05.918771       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:05.918828239Z W1117 09:22:05.918792       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:06.906355179Z I1117 09:22:06.905666       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:06.906355179Z W1117 09:22:06.905685       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:06.921550019Z I1117 09:22:06.921493       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:06.921550019Z W1117 09:22:06.921513       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:07.902574816Z I1117 09:22:07.902487       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:07.902574816Z W1117 09:22:07.902508       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:07.912315324Z I1117 09:22:07.912245       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:07.912315324Z W1117 09:22:07.912267       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:08.448772331Z I1117 09:22:08.445176       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:08.448772331Z W1117 09:22:08.445194       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:08.469663277Z I1117 09:22:08.469624       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:08.471364062Z W1117 09:22:08.471314       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:08.480464396Z I1117 09:22:08.480429       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:08.480464396Z W1117 09:22:08.480448       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:08.909109802Z I1117 09:22:08.909072       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:08.909109802Z W1117 09:22:08.909086       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:08.919617831Z I1117 09:22:08.919570       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:08.919617831Z W1117 09:22:08.919587       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:09.907772013Z I1117 09:22:09.907722       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:09.907772013Z W1117 09:22:09.907740       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:09.916999329Z I1117 09:22:09.916886       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:09.916999329Z W1117 09:22:09.916905       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:10.173664803Z I1117 09:22:10.173620       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:10.173664803Z W1117 09:22:10.173636       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:10.907960734Z I1117 09:22:10.907861       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:10.907960734Z W1117 09:22:10.907881       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:10.921456619Z I1117 09:22:10.921416       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:10.921456619Z W1117 09:22:10.921433       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:11.643411728Z I1117 09:22:11.643371       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:11.643411728Z W1117 09:22:11.643388       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:11.649155060Z I1117 09:22:11.649122       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:11.649155060Z W1117 09:22:11.649138       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:11.659431197Z I1117 09:22:11.659388       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:11.659431197Z W1117 09:22:11.659405       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:11.907507560Z I1117 09:22:11.906569       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:11.907507560Z W1117 09:22:11.906586       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:11.917328607Z I1117 09:22:11.917270       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:11.917405753Z W1117 09:22:11.917392       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:12.286221730Z I1117 09:22:12.286139       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:12.286221730Z W1117 09:22:12.286173       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:12.907552816Z I1117 09:22:12.907380       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:12.907552816Z W1117 09:22:12.907399       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:12.916311444Z I1117 09:22:12.916244       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:12.916311444Z W1117 09:22:12.916262       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:13.278667966Z I1117 09:22:13.278609       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:13.278667966Z W1117 09:22:13.278635       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:13.289475414Z I1117 09:22:13.289416       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:13.289475414Z W1117 09:22:13.289440       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:13.907758895Z I1117 09:22:13.906825       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:13.907758895Z W1117 09:22:13.906846       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:13.920629724Z I1117 09:22:13.920583       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:13.920629724Z W1117 09:22:13.920599       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:14.701689446Z I1117 09:22:14.701636       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:14.701689446Z W1117 09:22:14.701658       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:14.906786435Z I1117 09:22:14.906732       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:14.906786435Z W1117 09:22:14.906750       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:14.915593229Z I1117 09:22:14.915545       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:14.915593229Z W1117 09:22:14.915564       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:15.101897465Z I1117 09:22:15.101276       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:15.101897465Z W1117 09:22:15.101311       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:15.905271770Z I1117 09:22:15.905149       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:15.905271770Z W1117 09:22:15.905165       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:15.914618911Z I1117 09:22:15.914583       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:15.914618911Z W1117 09:22:15.914598       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:16.908784617Z I1117 09:22:16.908508       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:16.908784617Z W1117 09:22:16.908525       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:16.919232187Z I1117 09:22:16.918206       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:16.919232187Z W1117 09:22:16.918227       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:17.104879024Z I1117 09:22:17.104823       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:17.104879024Z W1117 09:22:17.104842       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:17.180489231Z I1117 09:22:17.180192       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:17.180489231Z W1117 09:22:17.180209       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:18.191075750Z I1117 09:22:18.191015       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:18.191075750Z W1117 09:22:18.191033       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:18.287638639Z I1117 09:22:18.287324       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:18.287638639Z W1117 09:22:18.287362       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:18.297011295Z I1117 09:22:18.296960       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:18.297081643Z W1117 09:22:18.297071       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:18.307367543Z I1117 09:22:18.307298       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:18.307367543Z W1117 09:22:18.307321       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:18.861683291Z I1117 09:22:18.861631       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:18.861683291Z W1117 09:22:18.861648       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:18.938517076Z I1117 09:22:18.938469       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:18.938517076Z W1117 09:22:18.938485       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:19.062958054Z I1117 09:22:19.062897       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:19.062958054Z W1117 09:22:19.062917       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:19.142033747Z I1117 09:22:19.141982       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:19.142033747Z W1117 09:22:19.141999       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:20.337413574Z I1117 09:22:20.336874       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:20.337413574Z W1117 09:22:20.336893       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:20.355571175Z I1117 09:22:20.355527       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:20.355571175Z W1117 09:22:20.355548       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:20.526783964Z I1117 09:22:20.526734       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:20.526783964Z W1117 09:22:20.526751       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:21.022591626Z I1117 09:22:21.022547       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:21.022591626Z W1117 09:22:21.022564       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:21.163046627Z I1117 09:22:21.162999       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:21.163105323Z W1117 09:22:21.163095       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:21.908751320Z I1117 09:22:21.908698       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:21.908751320Z W1117 09:22:21.908720       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:21.918373934Z I1117 09:22:21.918334       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:21.918373934Z W1117 09:22:21.918348       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:22.887160199Z I1117 09:22:22.887025       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:22.887160199Z W1117 09:22:22.887044       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:22.908752010Z I1117 09:22:22.907793       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:22.908752010Z W1117 09:22:22.907822       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:22.919049815Z I1117 09:22:22.919013       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:22.919049815Z W1117 09:22:22.919028       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:23.907215965Z I1117 09:22:23.907086       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:23.907215965Z W1117 09:22:23.907106       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:23.921153338Z I1117 09:22:23.921125       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:23.921153338Z W1117 09:22:23.921140       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:24.055253389Z I1117 09:22:24.055213       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:24.055253389Z W1117 09:22:24.055229       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:24.065481605Z I1117 09:22:24.065447       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:24.065481605Z W1117 09:22:24.065462       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:24.911487095Z I1117 09:22:24.911310       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:24.911487095Z W1117 09:22:24.911329       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:24.924498707Z I1117 09:22:24.924454       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:24.924498707Z W1117 09:22:24.924470       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:25.896744771Z I1117 09:22:25.896691       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:25.896744771Z W1117 09:22:25.896708       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:25.907637486Z I1117 09:22:25.907587       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:25.907637486Z W1117 09:22:25.907603       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:25.915824694Z I1117 09:22:25.915777       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:25.915824694Z W1117 09:22:25.915792       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:26.906531343Z I1117 09:22:26.906481       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:26.906531343Z W1117 09:22:26.906498       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:26.919323916Z I1117 09:22:26.919272       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:26.919323916Z W1117 09:22:26.919300       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:27.394994966Z I1117 09:22:27.394849       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:27.394994966Z W1117 09:22:27.394865       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:27.906402724Z I1117 09:22:27.906347       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:27.906402724Z W1117 09:22:27.906362       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:27.914598399Z I1117 09:22:27.914540       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:27.914598399Z W1117 09:22:27.914561       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:28.256634016Z I1117 09:22:28.256574       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:28.256634016Z W1117 09:22:28.256591       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:28.400865505Z I1117 09:22:28.400817       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:28.400916769Z W1117 09:22:28.400908       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:28.890280974Z I1117 09:22:28.890236       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:28.890343343Z W1117 09:22:28.890334       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:28.903916345Z I1117 09:22:28.903872       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:28.903916345Z W1117 09:22:28.903888       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:28.918801834Z I1117 09:22:28.916771       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:28.918801834Z W1117 09:22:28.916786       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:29.305629052Z I1117 09:22:29.305573       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:29.305629052Z W1117 09:22:29.305592       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:29.705932164Z I1117 09:22:29.705806       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:29.705932164Z W1117 09:22:29.705824       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:30.313084263Z I1117 09:22:30.313012       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:30.313084263Z W1117 09:22:30.313030       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:30.408640950Z I1117 09:22:30.408583       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:30.408640950Z W1117 09:22:30.408610       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:30.778869252Z I1117 09:22:30.778816       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:30.778869252Z W1117 09:22:30.778859       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:31.855626740Z I1117 09:22:31.855575       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:31.855626740Z W1117 09:22:31.855591       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:32.706907311Z I1117 09:22:32.706847       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:32.706907311Z W1117 09:22:32.706867       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:33.718395670Z I1117 09:22:33.718354       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:33.718443884Z W1117 09:22:33.718434       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:33.874480782Z I1117 09:22:33.874430       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:33.874551773Z W1117 09:22:33.874540       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:34.369931339Z I1117 09:22:34.369884       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:34.369931339Z W1117 09:22:34.369901       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:36.258352649Z I1117 09:22:36.254716       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:36.258352649Z W1117 09:22:36.254737       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:36.276733840Z I1117 09:22:36.273748       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:36.276733840Z W1117 09:22:36.273787       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:36.288718849Z I1117 09:22:36.288663       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:36.288718849Z W1117 09:22:36.288681       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:37.254533519Z I1117 09:22:37.254463       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:37.254533519Z W1117 09:22:37.254480       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:37.316166073Z I1117 09:22:37.316102       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:37.316166073Z W1117 09:22:37.316123       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:37.853731683Z I1117 09:22:37.853671       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:37.853731683Z W1117 09:22:37.853695       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:38.188361867Z I1117 09:22:38.188297       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:38.188361867Z W1117 09:22:38.188314       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:38.259817758Z I1117 09:22:38.259764       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:38.259817758Z W1117 09:22:38.259781       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:38.478231714Z I1117 09:22:38.478178       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:38.478231714Z W1117 09:22:38.478199       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:38.486924972Z I1117 09:22:38.486778       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:38.486924972Z W1117 09:22:38.486797       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:39.265689180Z I1117 09:22:39.265625       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:39.265689180Z W1117 09:22:39.265643       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:42.696700160Z I1117 09:22:42.696655       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:42.696763775Z W1117 09:22:42.696751       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:42.707020427Z I1117 09:22:42.706966       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:42.707020427Z W1117 09:22:42.706987       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:42.714710228Z I1117 09:22:42.714383       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:42.714710228Z W1117 09:22:42.714397       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:43.883115460Z I1117 09:22:43.883071       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:43.883183037Z W1117 09:22:43.883173       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:43.891212786Z I1117 09:22:43.891176       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:43.891265338Z W1117 09:22:43.891256       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:43.903984276Z I1117 09:22:43.903935       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:43.904040849Z W1117 09:22:43.904028       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:44.034303523Z I1117 09:22:44.034240       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:44.034303523Z W1117 09:22:44.034261       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:44.676866980Z I1117 09:22:44.676768       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:44.676866980Z W1117 09:22:44.676787       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:44.698105136Z I1117 09:22:44.698059       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:44.698164721Z W1117 09:22:44.698155       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:45.730436745Z I1117 09:22:45.730369       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:45.730530006Z W1117 09:22:45.730517       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:45.835015630Z I1117 09:22:45.834976       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:45.835086830Z W1117 09:22:45.835078       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:46.116059432Z I1117 09:22:46.116015       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:46.116121869Z W1117 09:22:46.116113       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:46.471469511Z I1117 09:22:46.471399       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:46.471469511Z W1117 09:22:46.471421       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:47.637582608Z I1117 09:22:47.637540       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:47.637646256Z W1117 09:22:47.637636       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:48.462170284Z I1117 09:22:48.462125       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:48.462170284Z W1117 09:22:48.462143       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:48.863852023Z I1117 09:22:48.863794       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:48.863852023Z W1117 09:22:48.863812       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:50.913460224Z I1117 09:22:50.913403       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:50.913460224Z W1117 09:22:50.913420       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:51.970022225Z I1117 09:22:51.969981       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:51.970022225Z W1117 09:22:51.969997       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:52.720422072Z I1117 09:22:52.720381       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:52.720477336Z W1117 09:22:52.720467       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:53.034175012Z I1117 09:22:53.034132       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:53.034229337Z W1117 09:22:53.034216       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:53.318925760Z I1117 09:22:53.318887       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:53.318967766Z W1117 09:22:53.318959       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:54.387849042Z I1117 09:22:54.387807       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:54.387894766Z W1117 09:22:54.387886       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:54.912315306Z I1117 09:22:54.912253       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:54.912374185Z W1117 09:22:54.912363       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:56.416880538Z I1117 09:22:56.416801       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:56.416880538Z W1117 09:22:56.416826       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:56.423042167Z I1117 09:22:56.422999       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:56.423101724Z W1117 09:22:56.423092       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:57.139241139Z I1117 09:22:57.139197       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:57.139302081Z W1117 09:22:57.139280       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:57.354515897Z I1117 09:22:57.354467       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:57.354579378Z W1117 09:22:57.354570       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:58.470635412Z I1117 09:22:58.470586       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:58.470686625Z W1117 09:22:58.470675       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:22:59.972718173Z I1117 09:22:59.972672       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:22:59.972783666Z W1117 09:22:59.972775       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:00.040083472Z I1117 09:23:00.040043       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:00.040144125Z W1117 09:23:00.040136       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:01.482840863Z I1117 09:23:01.482784       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:01.482896230Z W1117 09:23:01.482886       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:01.492379470Z I1117 09:23:01.492342       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:01.492421768Z W1117 09:23:01.492413       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:03.716199447Z I1117 09:23:03.716153       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:03.716259910Z W1117 09:23:03.716252       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:03.724423240Z I1117 09:23:03.724372       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:03.724474718Z W1117 09:23:03.724465       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:03.860992341Z I1117 09:23:03.860937       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:03.861066560Z W1117 09:23:03.861055       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:04.881489257Z I1117 09:23:04.881432       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:04.881489257Z W1117 09:23:04.881450       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:08.480961619Z I1117 09:23:08.480919       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:08.481011448Z W1117 09:23:08.481002       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:10.279220579Z I1117 09:23:10.279175       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:10.279269948Z W1117 09:23:10.279261       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:12.188358608Z I1117 09:23:12.188311       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:12.188416055Z W1117 09:23:12.188405       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:12.391939995Z I1117 09:23:12.391843       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:12.391939995Z W1117 09:23:12.391862       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:13.795906470Z I1117 09:23:13.795862       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:13.795955962Z W1117 09:23:13.795946       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:15.647869148Z I1117 09:23:15.647823       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:15.647928720Z W1117 09:23:15.647920       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:15.679894259Z I1117 09:23:15.679849       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:15.679941368Z W1117 09:23:15.679933       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:17.476027986Z I1117 09:23:17.475981       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:17.476027986Z W1117 09:23:17.475998       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:18.919909969Z I1117 09:23:18.919857       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:18.919971230Z W1117 09:23:18.919961       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:19.710768872Z I1117 09:23:19.710701       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:19.710833352Z W1117 09:23:19.710823       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:19.761805502Z I1117 09:23:19.761753       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:19.761866309Z W1117 09:23:19.761855       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:21.450449649Z I1117 09:23:21.450393       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:21.450449649Z W1117 09:23:21.450412       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:22.881823505Z I1117 09:23:22.881780       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:22.881868447Z W1117 09:23:22.881859       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:24.678813981Z I1117 09:23:24.678772       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:24.678859241Z W1117 09:23:24.678851       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:26.766461329Z I1117 09:23:26.766409       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:26.766461329Z W1117 09:23:26.766427       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:30.104963221Z I1117 09:23:30.104904       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:30.105044108Z W1117 09:23:30.105030       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:31.848174580Z I1117 09:23:31.846768       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:31.848174580Z W1117 09:23:31.846791       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:31.865383921Z I1117 09:23:31.864705       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:31.865383921Z W1117 09:23:31.864738       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:31.898771312Z I1117 09:23:31.898708       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:31.898771312Z W1117 09:23:31.898739       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:32.760956090Z I1117 09:23:32.760910       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:32.761016508Z W1117 09:23:32.761008       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:33.676932333Z I1117 09:23:33.676884       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:33.676932333Z W1117 09:23:33.676901       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:33.860990484Z I1117 09:23:33.860942       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:33.860990484Z W1117 09:23:33.860964       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:35.040539383Z I1117 09:23:35.040485       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:35.040539383Z W1117 09:23:35.040508       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:35.483336912Z I1117 09:23:35.483274       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:35.483336912Z W1117 09:23:35.483307       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:35.643861409Z I1117 09:23:35.643818       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:35.643918127Z W1117 09:23:35.643908       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:39.553417046Z I1117 09:23:39.551649       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:39.553417046Z W1117 09:23:39.551670       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:40.240537711Z I1117 09:23:40.240489       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:40.240537711Z W1117 09:23:40.240507       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:40.841978255Z I1117 09:23:40.841925       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:40.841978255Z W1117 09:23:40.841944       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:40.876680880Z I1117 09:23:40.876634       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:40.876680880Z W1117 09:23:40.876653       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:41.929905412Z I1117 09:23:41.929849       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:41.929905412Z W1117 09:23:41.929872       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:41.963968034Z I1117 09:23:41.963839       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:41.963968034Z W1117 09:23:41.963865       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:42.706972453Z I1117 09:23:42.706920       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:42.706972453Z W1117 09:23:42.706938       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:43.967376220Z I1117 09:23:43.966625       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:43.967376220Z W1117 09:23:43.966643       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:44.478843663Z I1117 09:23:44.478800       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:44.478890704Z W1117 09:23:44.478882       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:44.644178624Z I1117 09:23:44.644134       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:44.644178624Z W1117 09:23:44.644151       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:45.284168122Z I1117 09:23:45.284115       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:45.284231781Z W1117 09:23:45.284222       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:45.728966404Z I1117 09:23:45.728924       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:45.729015657Z W1117 09:23:45.729005       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:46.155200349Z I1117 09:23:46.155155       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:46.155251826Z W1117 09:23:46.155242       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:46.280674460Z I1117 09:23:46.280579       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:46.280674460Z W1117 09:23:46.280598       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:46.952422761Z I1117 09:23:46.952374       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:46.952422761Z W1117 09:23:46.952390       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:47.705168522Z I1117 09:23:47.705093       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:47.705168522Z W1117 09:23:47.705118       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:48.861309004Z I1117 09:23:48.861221       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:48.861309004Z W1117 09:23:48.861244       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:49.905799723Z I1117 09:23:49.905650       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:49.905799723Z W1117 09:23:49.905668       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:49.969865601Z I1117 09:23:49.969500       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:49.969865601Z W1117 09:23:49.969518       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:50.697021099Z I1117 09:23:50.696968       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:50.697021099Z W1117 09:23:50.696988       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:52.738144175Z I1117 09:23:52.738098       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:52.738144175Z W1117 09:23:52.738115       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:54.148972250Z I1117 09:23:54.148916       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:54.148972250Z W1117 09:23:54.148933       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:54.497134995Z I1117 09:23:54.497078       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:54.497134995Z W1117 09:23:54.497097       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:54.520345503Z I1117 09:23:54.520274       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:54.520381506Z W1117 09:23:54.520350       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:54.842014721Z I1117 09:23:54.841963       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:54.842014721Z W1117 09:23:54.841981       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:55.305336505Z I1117 09:23:55.305275       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:55.305336505Z W1117 09:23:55.305306       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:55.892312874Z I1117 09:23:55.892258       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:55.892312874Z W1117 09:23:55.892275       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:55.976073659Z I1117 09:23:55.976019       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:55.976073659Z W1117 09:23:55.976040       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:55.986722985Z I1117 09:23:55.986669       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:55.986722985Z W1117 09:23:55.986689       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:56.743655789Z I1117 09:23:56.743596       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:56.743655789Z W1117 09:23:56.743612       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:57.753536623Z I1117 09:23:57.753219       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:57.753536623Z W1117 09:23:57.753238       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:23:59.370654650Z I1117 09:23:59.370605       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:23:59.370654650Z W1117 09:23:59.370623       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:00.696058279Z I1117 09:24:00.696008       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:00.696058279Z W1117 09:24:00.696027       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:03.353372579Z I1117 09:24:03.353281       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:03.353372579Z W1117 09:24:03.353339       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:03.360281517Z I1117 09:24:03.360243       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:03.360281517Z W1117 09:24:03.360259       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:03.861686907Z I1117 09:24:03.861611       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:03.861686907Z W1117 09:24:03.861628       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:05.136373581Z I1117 09:24:05.136322       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:05.136373581Z W1117 09:24:05.136340       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:09.755656198Z I1117 09:24:09.755555       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:09.755656198Z W1117 09:24:09.755573       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:18.540448162Z I1117 09:24:18.539776       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:18.540448162Z W1117 09:24:18.539794       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:18.549519148Z I1117 09:24:18.549478       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:18.549519148Z W1117 09:24:18.549497       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:18.862784978Z I1117 09:24:18.862743       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:18.862784978Z W1117 09:24:18.862763       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:18.866966890Z I1117 09:24:18.866940       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:18.866966890Z W1117 09:24:18.866957       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:28.101877310Z I1117 09:24:28.101820       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:28.101877310Z W1117 09:24:28.101839       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:32.435686871Z I1117 09:24:32.435632       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:32.435686871Z W1117 09:24:32.435660       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:33.862124241Z I1117 09:24:33.861926       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:33.862124241Z W1117 09:24:33.861944       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:34.487880344Z I1117 09:24:34.487824       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:34.487880344Z W1117 09:24:34.487842       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:35.080256900Z I1117 09:24:35.080202       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:35.080256900Z W1117 09:24:35.080221       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:42.883885353Z I1117 09:24:42.883830       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:42.883885353Z W1117 09:24:42.883849       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:45.020945437Z I1117 09:24:45.020871       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:45.020945437Z W1117 09:24:45.020893       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:45.110275584Z I1117 09:24:45.110183       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:45.110275584Z W1117 09:24:45.110203       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:45.910684621Z I1117 09:24:45.910528       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:45.910684621Z W1117 09:24:45.910545       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:46.001649839Z I1117 09:24:46.001590       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:46.001649839Z W1117 09:24:46.001608       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:48.861886595Z I1117 09:24:48.861746       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:48.861886595Z W1117 09:24:48.861765       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:49.081175628Z I1117 09:24:49.081127       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:49.081175628Z W1117 09:24:49.081144       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:24:50.086650342Z I1117 09:24:50.086601       1 status.go:437] machine-api-operator not ready yet
+2025-11-17T09:24:50.086650342Z W1117 09:24:50.086620       1 status.go:271] Operator status degraded: machine-api not ready
+2025-11-17T09:26:03.862350261Z E1117 09:26:03.862275       1 status.go:426] failed to get dependency machine-api status: the server was unable to return a response in the time allotted, but may still be processing the request (get clusteroperators.config.openshift.io machine-api)
+2025-11-17T09:26:03.862350261Z W1117 09:26:03.862324       1 status.go:271] Operator status degraded: error checking machine-api status: the server was unable to return a response in the time allotted, but may still be processing the request (get clusteroperators.config.openshift.io machine-api)
+2025-11-17T09:26:16.820630382Z E1117 09:26:16.820516       1 leaderelection.go:327] error retrieving resource lock openshift-machine-api/cluster-autoscaler-operator-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": stream error: stream ID 1153; INTERNAL_ERROR; received from peer
+2025-11-17T09:27:03.816780783Z E1117 09:27:03.816596       1 leaderelection.go:327] error retrieving resource lock openshift-machine-api/cluster-autoscaler-operator-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": context deadline exceeded
+2025-11-17T09:27:03.816780783Z I1117 09:27:03.816712       1 leaderelection.go:280] failed to renew lease openshift-machine-api/cluster-autoscaler-operator-leader: timed out waiting for the condition
+2025-11-17T09:27:08.872884800Z E1117 09:27:08.872841       1 status.go:311] status reporting failed: the server was unable to return a response in the time allotted, but may still be processing the request (get clusteroperators.config.openshift.io cluster-autoscaler)
+2025-11-17T09:27:10.821835738Z E1117 09:27:10.821714       1 leaderelection.go:303] Failed to release lock: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2025-11-17T09:27:10.821835738Z F1117 09:27:10.821814       1 main.go:43] Failed to start operator: leader election lost
+2025-11-17T09:27:10.824225777Z I1117 09:27:10.823127       1 internal.go:581]  "msg"="Stopping and waiting for non leader election runnables" 
+2025-11-17T09:27:10.824241874Z I1117 09:27:10.824228       1 internal.go:585]  "msg"="Stopping and waiting for leader election runnables" 
+2025-11-17T09:27:10.824246747Z I1117 09:27:10.824242       1 internal.go:591]  "msg"="Stopping and waiting for caches" 
+2025-11-17T09:27:10.824262850Z I1117 09:27:10.824255       1 internal.go:595]  "msg"="Stopping and waiting for webhooks" 
+2025-11-17T09:27:10.824267423Z I1117 09:27:10.824264       1 internal.go:599]  "msg"="Wait completed, proceeding to shutdown the manager" 

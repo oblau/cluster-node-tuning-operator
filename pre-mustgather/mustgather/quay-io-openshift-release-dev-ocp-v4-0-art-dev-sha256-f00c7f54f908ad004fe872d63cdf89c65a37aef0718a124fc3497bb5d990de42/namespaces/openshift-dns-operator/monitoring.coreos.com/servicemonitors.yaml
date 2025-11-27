@@ -1,0 +1,60 @@
+---
+apiVersion: monitoring.coreos.com/v1
+items:
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2025-11-17T09:05:39Z"
+    generation: 1
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:jobLabel: {}
+          f:selector: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2025-11-17T09:05:39Z"
+    name: dns-operator
+    namespace: openshift-dns-operator
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      controller: true
+      kind: ClusterVersion
+      name: version
+      uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+    resourceVersion: "1497"
+    uid: 472dbbac-c90b-4eac-bca7-a72e6934591d
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      interval: 30s
+      port: metrics
+      scheme: https
+      tlsConfig:
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        serverName: metrics.openshift-dns-operator.svc
+    jobLabel: component
+    selector:
+      matchLabels:
+        name: dns-operator
+kind: ServiceMonitorList
+metadata:
+  continue: ""
+  resourceVersion: "32430"

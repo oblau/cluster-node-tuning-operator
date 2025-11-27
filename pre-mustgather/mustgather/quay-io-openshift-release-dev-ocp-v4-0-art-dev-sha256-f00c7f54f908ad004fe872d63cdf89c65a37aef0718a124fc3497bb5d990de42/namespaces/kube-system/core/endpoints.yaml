@@ -1,0 +1,69 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:49Z"
+    labels:
+      app.kubernetes.io/managed-by: prometheus-operator
+      app.kubernetes.io/name: kubelet
+      k8s-app: kubelet
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:k8s-app: {}
+        f:subsets: {}
+      manager: PrometheusOperator
+      operation: Update
+      time: "2025-11-17T09:38:49Z"
+    name: kubelet
+    namespace: kube-system
+    resourceVersion: "24449"
+    uid: 8d11998f-3236-43e7-8033-f5c0485b8ea3
+  subsets:
+  - addresses:
+    - ip: XXXXXXXXXXX
+      targetRef:
+        kind: Node
+        name: XXXXXX0
+        uid: bc15ced4-edf1-4c10-8cd9-fecd74736a61
+    - ip: XXXXXXXXXXX
+      targetRef:
+        kind: Node
+        name: XXXXXX1
+        uid: 08d8653a-e1d4-4358-b485-d849df97cbd8
+    - ip: XXXXXXXXXXX
+      targetRef:
+        kind: Node
+        name: XXXXXX2
+        uid: 9bbf3978-9a24-4194-97bd-19975c5a4042
+    - ip: XXXXXXXXXX
+      targetRef:
+        kind: Node
+        name: XXXXXX0
+        uid: be542f6b-71a2-46af-9c87-f2120b48ad2f
+    - ip: XXXXXXXXXX
+      targetRef:
+        kind: Node
+        name: XXXXXX1
+        uid: 82931ca4-5958-4718-ae08-c14b5ced3530
+    ports:
+    - name: https-metrics
+      port: 10250
+      protocol: TCP
+    - name: http-metrics
+      port: 10255
+      protocol: TCP
+    - name: cadvisor
+      port: 4194
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "32515"

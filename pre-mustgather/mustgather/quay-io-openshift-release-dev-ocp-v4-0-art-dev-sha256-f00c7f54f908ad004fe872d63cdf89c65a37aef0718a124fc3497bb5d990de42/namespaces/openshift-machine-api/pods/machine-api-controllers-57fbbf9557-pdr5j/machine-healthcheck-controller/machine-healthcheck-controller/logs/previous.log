@@ -1,0 +1,36 @@
+2025-11-17T09:26:57.240226141Z I1117 09:26:57.240088       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:26:57.240417122Z I1117 09:26:57.240404       1 main.go:29] Go Version: go1.20.12 X:strictfipsruntime
+2025-11-17T09:26:57.240437024Z I1117 09:26:57.240431       1 main.go:30] Go OS/Arch: linux/amd64
+2025-11-17T09:26:57.240451285Z I1117 09:26:57.240445       1 main.go:31] operator-sdk Version: v0.5.0+git
+2025-11-17T09:26:57.240588548Z I1117 09:26:57.240578       1 leaderelection.go:122] The leader election gives 4 retries and allows for 13s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m26s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:26:57.240620417Z I1117 09:26:57.240613       1 main.go:109] Watching machine-api objects only in namespace "openshift-machine-api" for reconciliation.
+2025-11-17T09:26:57.241019944Z I1117 09:26:57.240999       1 listener.go:44] "controller-runtime/metrics: Metrics server is starting to listen" addr=":8083"
+2025-11-17T09:26:57.241261176Z I1117 09:26:57.241250       1 main.go:117] Registering Components.
+2025-11-17T09:26:57.248613275Z I1117 09:26:57.248556       1 main.go:140] Starting the Cmd.
+2025-11-17T09:26:57.248960303Z I1117 09:26:57.248923       1 internal.go:360] "Starting server" kind="health probe" addr="[::]:9442"
+2025-11-17T09:26:57.249075744Z I1117 09:26:57.249046       1 reflector.go:287] Starting reflector *v1beta1.Machine (9h37m59.126742016s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:26:57.249075744Z I1117 09:26:57.249065       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:27:12.989705143Z I1117 09:27:12.988201       1 trace.go:236] Trace[649670942]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233 (17-Nov-2025 09:26:57.249) (total time: 15739ms):
+2025-11-17T09:27:12.989705143Z Trace[649670942]: ---"Objects listed" error:<nil> 15739ms (09:27:12.988)
+2025-11-17T09:27:12.989705143Z Trace[649670942]: [15.73905471s] [15.73905471s] END
+2025-11-17T09:27:13.057968553Z I1117 09:27:13.052958       1 server.go:50] "starting server" path="/metrics" kind="metrics" addr="[::]:8083"
+2025-11-17T09:27:13.057968553Z I1117 09:27:13.053049       1 leaderelection.go:245] attempting to acquire leader lease openshift-machine-api/cluster-api-provider-healthcheck-leader...
+2025-11-17T09:27:18.453200307Z I1117 09:27:18.449662       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:29:47.985897908Z I1117 09:29:47.985818       1 leaderelection.go:255] successfully acquired lease openshift-machine-api/cluster-api-provider-healthcheck-leader
+2025-11-17T09:29:47.986053151Z I1117 09:29:47.986023       1 recorder.go:104] "events: machine-api-controllers-57fbbf9557-pdr5j_8d8b4f43-0f66-41c6-8700-716257317b7c became leader" type="Normal" object={"kind":"Lease","namespace":"openshift-machine-api","name":"cluster-api-provider-healthcheck-leader","uid":"c5bb4b86-f11b-47c5-a378-8afce49acc60","apiVersion":"coordination.k8s.io/v1","resourceVersion":"15508"} reason="LeaderElection"
+2025-11-17T09:29:47.986418128Z I1117 09:29:47.986389       1 controller.go:177] "Starting EventSource" controller="machinehealthcheck-controller" source="kind source: *v1beta1.MachineHealthCheck"
+2025-11-17T09:29:47.986424467Z I1117 09:29:47.986416       1 controller.go:177] "Starting EventSource" controller="machinehealthcheck-controller" source="kind source: *v1beta1.Machine"
+2025-11-17T09:29:47.986443885Z I1117 09:29:47.986428       1 controller.go:177] "Starting EventSource" controller="machinehealthcheck-controller" source="kind source: *v1.Node"
+2025-11-17T09:29:47.986443885Z I1117 09:29:47.986433       1 controller.go:185] "Starting Controller" controller="machinehealthcheck-controller"
+2025-11-17T09:29:47.988287985Z I1117 09:29:47.988255       1 reflector.go:287] Starting reflector *v1.Node (9h22m11.429267898s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:29:47.988287985Z I1117 09:29:47.988265       1 reflector.go:323] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:29:47.988446532Z I1117 09:29:47.988418       1 reflector.go:287] Starting reflector *v1beta1.MachineHealthCheck (9h38m8.326400359s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:29:47.988446532Z I1117 09:29:47.988436       1 reflector.go:323] Listing and watching *v1beta1.MachineHealthCheck from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:29:48.088674748Z I1117 09:29:48.088527       1 controller.go:219] "Starting XXXXXXs" controller="machinehealthcheck-controller" XXXXXX count=1
+2025-11-17T09:32:06.025897994Z E1117 09:32:06.025661       1 leaderelection.go:327] error retrieving resource lock openshift-machine-api/cluster-api-provider-healthcheck-leader: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io cluster-api-provider-healthcheck-leader)
+2025-11-17T09:32:51.048907678Z I1117 09:32:51.048826       1 reflector.go:323] Listing and watching *v1beta1.MachineHealthCheck from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:32:51.641277734Z I1117 09:32:51.638566       1 reflector.go:323] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:32:52.013990232Z I1117 09:32:52.013931       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:32:54.472844322Z E1117 09:32:54.472798       1 leaderelection.go:364] Failed to update lock: client rate limiter Wait returned an error: context deadline exceeded
+2025-11-17T09:32:54.472913317Z I1117 09:32:54.472900       1 leaderelection.go:280] failed to renew lease openshift-machine-api/cluster-api-provider-healthcheck-leader: timed out waiting for the condition
+2025-11-17T09:32:54.472999157Z F1117 09:32:54.472990       1 main.go:144] leader election lost

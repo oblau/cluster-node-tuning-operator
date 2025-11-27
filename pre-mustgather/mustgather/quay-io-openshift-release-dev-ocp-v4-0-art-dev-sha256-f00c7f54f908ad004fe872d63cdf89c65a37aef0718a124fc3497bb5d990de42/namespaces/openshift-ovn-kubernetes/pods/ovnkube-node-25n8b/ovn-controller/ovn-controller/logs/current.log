@@ -1,0 +1,471 @@
+2025-11-17T09:19:55.417036212Z ++ K8S_NODE=XXXXXX1
+2025-11-17T09:19:55.417150605Z ++ [[ -n XXXXXX1 ]]
+2025-11-17T09:19:55.417170262Z ++ [[ -f /env/XXXXXX1 ]]
+2025-11-17T09:19:55.417200468Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2025-11-17T09:19:55.417217465Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2025-11-17T09:19:55.417237381Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2025-11-17T09:19:55.417252896Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2025-11-17T09:19:55.417267745Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2025-11-17T09:19:55.417282456Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2025-11-17T09:19:55.417296921Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2025-11-17T09:19:55.417311635Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2025-11-17T09:19:55.417326316Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2025-11-17T09:19:55.417340776Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2025-11-17T09:19:55.418281585Z + start-ovn-controller info
+2025-11-17T09:19:55.418312433Z + local log_level=info
+2025-11-17T09:19:55.418334968Z + [[ 1 -ne 1 ]]
+2025-11-17T09:19:55.420197108Z ++ date -Iseconds
+2025-11-17T09:19:55.420374467Z + echo '2025-11-17T09:19:55+00:00 - starting ovn-controller'
+2025-11-17T09:19:55.420428985Z 2025-11-17T09:19:55+00:00 - starting ovn-controller
+2025-11-17T09:19:55.420484251Z + exec ovn-controller unix:/var/run/openvswitch/db.sock -vfile:off --no-chdir --pidfile=/var/run/ovn/ovn-controller.pid --syslog-method=null --log-file=/var/log/ovn/acl-audit-log.log -vFACILITY:local0 -vconsole:info -vconsole:acl_log:off '-vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' -vsyslog:acl_log:info -vfile:acl_log:info
+2025-11-17T09:19:55.423538886Z 2025-11-17T09:19:55Z|00001|vlog|INFO|opened log file /var/log/ovn/acl-audit-log.log
+2025-11-17T09:19:55.424303018Z 2025-11-17T09:19:55.424Z|00002|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connecting...
+2025-11-17T09:19:55.424303018Z 2025-11-17T09:19:55.424Z|00003|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connected
+2025-11-17T09:19:55.427411273Z 2025-11-17T09:19:55.427Z|00004|main|INFO|OVN internal version is : [24.03.6-20.33.0-75.6]
+2025-11-17T09:19:55.427411273Z 2025-11-17T09:19:55.427Z|00005|main|INFO|OVS IDL reconnected, force recompute.
+2025-11-17T09:19:55.427450857Z 2025-11-17T09:19:55.427Z|00006|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2025-11-17T09:19:55.427450857Z 2025-11-17T09:19:55.427Z|00007|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connection attempt failed (No such file or directory)
+2025-11-17T09:19:55.427456359Z 2025-11-17T09:19:55.427Z|00008|main|INFO|OVNSB IDL reconnected, force recompute.
+2025-11-17T09:19:56.429254525Z 2025-11-17T09:19:56.428Z|00009|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2025-11-17T09:19:56.429254525Z 2025-11-17T09:19:56.429Z|00010|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connection attempt failed (No such file or directory)
+2025-11-17T09:19:56.429254525Z 2025-11-17T09:19:56.429Z|00011|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: waiting 2 seconds before reconnect
+2025-11-17T09:19:58.431678518Z 2025-11-17T09:19:58.431Z|00012|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2025-11-17T09:19:58.431678518Z 2025-11-17T09:19:58.431Z|00013|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connected
+2025-11-17T09:19:58.446043817Z 2025-11-17T09:19:58.445Z|00014|features|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2025-11-17T09:19:58.446043817Z 2025-11-17T09:19:58.445Z|00015|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2025-11-17T09:19:58.446622081Z 2025-11-17T09:19:58.446Z|00016|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2025-11-17T09:19:58.446622081Z 2025-11-17T09:19:58.446Z|00017|features|INFO|OVS Feature: ct_zero_snat, state: supported
+2025-11-17T09:19:58.446640337Z 2025-11-17T09:19:58.446Z|00018|features|INFO|OVS Feature: ct_flush, state: supported
+2025-11-17T09:19:58.446640337Z 2025-11-17T09:19:58.446Z|00019|features|INFO|OVS Feature: dp_hash_l4_sym_support, state: supported
+2025-11-17T09:19:58.446666509Z 2025-11-17T09:19:58.446Z|00020|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connecting...
+2025-11-17T09:19:58.446666509Z 2025-11-17T09:19:58.446Z|00021|main|INFO|OVS feature set changed, force recompute.
+2025-11-17T09:19:58.446666509Z 2025-11-17T09:19:58.446Z|00022|ofctrl|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2025-11-17T09:19:58.446666509Z 2025-11-17T09:19:58.446Z|00023|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2025-11-17T09:19:58.446841556Z 2025-11-17T09:19:58.446Z|00024|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2025-11-17T09:19:58.446868701Z 2025-11-17T09:19:58.446Z|00025|main|INFO|OVS OpenFlow connection reconnected,force recompute.
+2025-11-17T09:19:58.447191691Z 2025-11-17T09:19:58.447Z|00026|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connected
+2025-11-17T09:19:58.447191691Z 2025-11-17T09:19:58.447Z|00027|main|INFO|OVS feature set changed, force recompute.
+2025-11-17T09:19:58.464765411Z 2025-11-17T09:19:58.464Z|00001|pinctrl(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2025-11-17T09:19:58.464765411Z 2025-11-17T09:19:58.464Z|00002|rconn(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2025-11-17T09:19:58.464765411Z 2025-11-17T09:19:58.464Z|00001|statctrl(ovn_statctrl2)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting to switch
+2025-11-17T09:19:58.464765411Z 2025-11-17T09:19:58.464Z|00002|rconn(ovn_statctrl2)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2025-11-17T09:19:58.464898117Z 2025-11-17T09:19:58.464Z|00003|rconn(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2025-11-17T09:19:58.465206153Z 2025-11-17T09:19:58.465Z|00003|rconn(ovn_statctrl2)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2025-11-17T09:19:58.468036342Z 2025-11-17T09:19:58.467Z|00028|features|INFO|OVS DB schema supports 4 flow table prefixes, our IDL supports: 4
+2025-11-17T09:20:07.018135564Z 2025-11-17T09:20:07.018Z|00029|memory|INFO|17008 kB peak resident set size after 11.6 seconds
+2025-11-17T09:20:07.018135564Z 2025-11-17T09:20:07.018Z|00030|memory|INFO|idl-cells-OVN_Southbound:8873 idl-cells-Open_vSwitch:471 lflow-cache-entries-cache-expr:184 lflow-cache-entries-cache-matches:451 lflow-cache-size-KB:913 local_datapath_usage-KB:1 ofctrl_desired_flow_usage-KB:372 ofctrl_installed_flow_usage-KB:278 ofctrl_sb_flow_ref_usage-KB:150
+2025-11-17T09:20:07.019408712Z 2025-11-17T09:20:07.019Z|00031|binding|INFO|Claiming lport openshift-network-diagnostics_network-check-target-9vrwt for this chassis.
+2025-11-17T09:20:07.019408712Z 2025-11-17T09:20:07.019Z|00032|binding|INFO|openshift-network-diagnostics_network-check-target-9vrwt: Claiming 0a:58:0a:80:00:04 10.128.0.4 fd02:0:0:1::4
+2025-11-17T09:20:07.026138740Z 2025-11-17T09:20:07.026Z|00033|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-9vrwt up in Southbound
+2025-11-17T09:20:07.026262300Z 2025-11-17T09:20:07.026Z|00034|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-9vrwt ovn-installed in OVS
+2025-11-17T09:20:21.294486821Z 2025-11-17T09:20:21.294Z|00035|binding|INFO|Claiming lport openshift-cluster-storage-operator_csi-snapshot-controller-6ff5fc4db6-2sb5x for this chassis.
+2025-11-17T09:20:21.294486821Z 2025-11-17T09:20:21.294Z|00036|binding|INFO|openshift-cluster-storage-operator_csi-snapshot-controller-6ff5fc4db6-2sb5x: Claiming 0a:58:0a:80:00:05 10.128.0.5 fd02:0:0:1::5
+2025-11-17T09:20:21.301222580Z 2025-11-17T09:20:21.301Z|00037|binding|INFO|Setting lport openshift-cluster-storage-operator_csi-snapshot-controller-6ff5fc4db6-2sb5x ovn-installed in OVS
+2025-11-17T09:20:21.301222580Z 2025-11-17T09:20:21.301Z|00038|binding|INFO|Setting lport openshift-cluster-storage-operator_csi-snapshot-controller-6ff5fc4db6-2sb5x up in Southbound
+2025-11-17T09:20:22.209977385Z 2025-11-17T09:20:22.209Z|00039|binding|INFO|Claiming lport openshift-service-ca_service-ca-74bb895ccf-fdjwl for this chassis.
+2025-11-17T09:20:22.209977385Z 2025-11-17T09:20:22.209Z|00040|binding|INFO|openshift-service-ca_service-ca-74bb895ccf-fdjwl: Claiming 0a:58:0a:80:00:07 10.128.0.7 fd02:0:0:1::7
+2025-11-17T09:20:22.218101340Z 2025-11-17T09:20:22.218Z|00041|binding|INFO|Setting lport openshift-service-ca_service-ca-74bb895ccf-fdjwl ovn-installed in OVS
+2025-11-17T09:20:22.218101340Z 2025-11-17T09:20:22.218Z|00042|binding|INFO|Setting lport openshift-service-ca_service-ca-74bb895ccf-fdjwl up in Southbound
+2025-11-17T09:20:30.506376032Z 2025-11-17T09:20:30.506Z|00043|binding|INFO|Claiming lport openshift-kube-storage-version-migrator_migrator-7fc59d687-kfxq5 for this chassis.
+2025-11-17T09:20:30.506376032Z 2025-11-17T09:20:30.506Z|00044|binding|INFO|openshift-kube-storage-version-migrator_migrator-7fc59d687-kfxq5: Claiming 0a:58:0a:80:00:08 10.128.0.8 fd02:0:0:1::8
+2025-11-17T09:20:30.513736370Z 2025-11-17T09:20:30.513Z|00045|binding|INFO|Setting lport openshift-kube-storage-version-migrator_migrator-7fc59d687-kfxq5 ovn-installed in OVS
+2025-11-17T09:20:30.513736370Z 2025-11-17T09:20:30.513Z|00046|binding|INFO|Setting lport openshift-kube-storage-version-migrator_migrator-7fc59d687-kfxq5 up in Southbound
+2025-11-17T09:20:36.900959360Z 2025-11-17T09:20:36.900Z|00047|binding|INFO|Claiming lport openshift-cluster-storage-operator_csi-snapshot-webhook-7794c69d67-5zvkj for this chassis.
+2025-11-17T09:20:36.900959360Z 2025-11-17T09:20:36.900Z|00048|binding|INFO|openshift-cluster-storage-operator_csi-snapshot-webhook-7794c69d67-5zvkj: Claiming 0a:58:0a:80:00:06 10.128.0.6 fd02:0:0:1::6
+2025-11-17T09:20:36.908383697Z 2025-11-17T09:20:36.908Z|00049|binding|INFO|Setting lport openshift-cluster-storage-operator_csi-snapshot-webhook-7794c69d67-5zvkj ovn-installed in OVS
+2025-11-17T09:20:36.908383697Z 2025-11-17T09:20:36.908Z|00050|binding|INFO|Setting lport openshift-cluster-storage-operator_csi-snapshot-webhook-7794c69d67-5zvkj up in Southbound
+2025-11-17T09:21:04.552274550Z 2025-11-17T09:21:04.552Z|00051|binding|INFO|Claiming lport openshift-kube-scheduler_installer-5-XXXXXX1 for this chassis.
+2025-11-17T09:21:04.552316914Z 2025-11-17T09:21:04.552Z|00052|binding|INFO|openshift-kube-scheduler_installer-5-XXXXXX1: Claiming 0a:58:0a:80:00:0b 10.128.0.11 fd02:0:0:1::b
+2025-11-17T09:21:04.561681133Z 2025-11-17T09:21:04.561Z|00053|binding|INFO|Setting lport openshift-kube-scheduler_installer-5-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:21:04.561729479Z 2025-11-17T09:21:04.561Z|00054|binding|INFO|Setting lport openshift-kube-scheduler_installer-5-XXXXXX1 up in Southbound
+2025-11-17T09:21:37.339444832Z 2025-11-17T09:21:37.339Z|00055|binding|INFO|Claiming lport openshift-operator-lifecycle-manager_packageserver-878fff4dd-bvsjl for this chassis.
+2025-11-17T09:21:37.339444832Z 2025-11-17T09:21:37.339Z|00056|binding|INFO|openshift-operator-lifecycle-manager_packageserver-878fff4dd-bvsjl: Claiming 0a:58:0a:80:00:0c 10.128.0.12 fd02:0:0:1::c
+2025-11-17T09:21:37.347683456Z 2025-11-17T09:21:37.347Z|00057|binding|INFO|Setting lport openshift-operator-lifecycle-manager_packageserver-878fff4dd-bvsjl ovn-installed in OVS
+2025-11-17T09:21:37.347683456Z 2025-11-17T09:21:37.347Z|00058|binding|INFO|Setting lport openshift-operator-lifecycle-manager_packageserver-878fff4dd-bvsjl up in Southbound
+2025-11-17T09:21:42.985276785Z 2025-11-17T09:21:42.984Z|00059|binding|INFO|Claiming lport openshift-machine-config-operator_machine-config-controller-684d449d8c-fjkjv for this chassis.
+2025-11-17T09:21:42.985276785Z 2025-11-17T09:21:42.985Z|00060|binding|INFO|openshift-machine-config-operator_machine-config-controller-684d449d8c-fjkjv: Claiming 0a:58:0a:80:00:0d 10.128.0.13 fd02:0:0:1::d
+2025-11-17T09:21:42.994471652Z 2025-11-17T09:21:42.994Z|00061|binding|INFO|Setting lport openshift-machine-config-operator_machine-config-controller-684d449d8c-fjkjv ovn-installed in OVS
+2025-11-17T09:21:42.994471652Z 2025-11-17T09:21:42.994Z|00062|binding|INFO|Setting lport openshift-machine-config-operator_machine-config-controller-684d449d8c-fjkjv up in Southbound
+2025-11-17T09:21:44.645791599Z 2025-11-17T09:21:44.645Z|00063|binding|INFO|Releasing lport openshift-kube-scheduler_installer-5-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:21:44.645791599Z 2025-11-17T09:21:44.645Z|00064|binding|INFO|Setting lport openshift-kube-scheduler_installer-5-XXXXXX1 down in Southbound
+2025-11-17T09:21:45.148955667Z 2025-11-17T09:21:45.148Z|00065|binding|INFO|Claiming lport openshift-dns_dns-default-2c5n5 for this chassis.
+2025-11-17T09:21:45.148955667Z 2025-11-17T09:21:45.148Z|00066|binding|INFO|openshift-dns_dns-default-2c5n5: Claiming 0a:58:0a:80:00:0e 10.128.0.14 fd02:0:0:1::e
+2025-11-17T09:21:45.157102615Z 2025-11-17T09:21:45.157Z|00067|binding|INFO|Setting lport openshift-dns_dns-default-2c5n5 ovn-installed in OVS
+2025-11-17T09:21:45.157102615Z 2025-11-17T09:21:45.157Z|00068|binding|INFO|Setting lport openshift-dns_dns-default-2c5n5 up in Southbound
+2025-11-17T09:21:46.794329019Z 2025-11-17T09:21:46.794Z|00069|binding|INFO|Claiming lport openshift-marketplace_community-operators-5gd2z for this chassis.
+2025-11-17T09:21:46.794329019Z 2025-11-17T09:21:46.794Z|00070|binding|INFO|openshift-marketplace_community-operators-5gd2z: Claiming 0a:58:0a:80:00:0f 10.128.0.15 fd02:0:0:1::f
+2025-11-17T09:21:46.804816926Z 2025-11-17T09:21:46.804Z|00071|binding|INFO|Setting lport openshift-marketplace_community-operators-5gd2z ovn-installed in OVS
+2025-11-17T09:21:46.804816926Z 2025-11-17T09:21:46.804Z|00072|binding|INFO|Setting lport openshift-marketplace_community-operators-5gd2z up in Southbound
+2025-11-17T09:21:46.808646998Z 2025-11-17T09:21:46.808Z|00073|binding|INFO|Claiming lport openshift-marketplace_redhat-marketplace-jsdq4 for this chassis.
+2025-11-17T09:21:46.808646998Z 2025-11-17T09:21:46.808Z|00074|binding|INFO|openshift-marketplace_redhat-marketplace-jsdq4: Claiming 0a:58:0a:80:00:10 10.128.0.16 fd02:0:0:1::10
+2025-11-17T09:21:46.816124166Z 2025-11-17T09:21:46.816Z|00075|binding|INFO|Setting lport openshift-marketplace_redhat-marketplace-jsdq4 ovn-installed in OVS
+2025-11-17T09:21:46.816124166Z 2025-11-17T09:21:46.816Z|00076|binding|INFO|Setting lport openshift-marketplace_redhat-marketplace-jsdq4 up in Southbound
+2025-11-17T09:21:47.267164530Z 2025-11-17T09:21:47.267Z|00077|binding|INFO|Claiming lport openshift-marketplace_redhat-operators-9x9d7 for this chassis.
+2025-11-17T09:21:47.267164530Z 2025-11-17T09:21:47.267Z|00078|binding|INFO|openshift-marketplace_redhat-operators-9x9d7: Claiming 0a:58:0a:80:00:11 10.128.0.17 fd02:0:0:1::11
+2025-11-17T09:21:47.275436540Z 2025-11-17T09:21:47.275Z|00079|binding|INFO|Setting lport openshift-marketplace_redhat-operators-9x9d7 ovn-installed in OVS
+2025-11-17T09:21:47.275436540Z 2025-11-17T09:21:47.275Z|00080|binding|INFO|Setting lport openshift-marketplace_redhat-operators-9x9d7 up in Southbound
+2025-11-17T09:21:47.464765635Z 2025-11-17T09:21:47.464Z|00081|binding|INFO|Claiming lport openshift-marketplace_certified-operators-nwz2m for this chassis.
+2025-11-17T09:21:47.464765635Z 2025-11-17T09:21:47.464Z|00082|binding|INFO|openshift-marketplace_certified-operators-nwz2m: Claiming 0a:58:0a:80:00:12 10.128.0.18 fd02:0:0:1::12
+2025-11-17T09:21:47.472939246Z 2025-11-17T09:21:47.472Z|00083|binding|INFO|Setting lport openshift-marketplace_certified-operators-nwz2m ovn-installed in OVS
+2025-11-17T09:21:47.472939246Z 2025-11-17T09:21:47.472Z|00084|binding|INFO|Setting lport openshift-marketplace_certified-operators-nwz2m up in Southbound
+2025-11-17T09:21:48.067133153Z 2025-11-17T09:21:48.067Z|00085|binding|INFO|Claiming lport openshift-kube-scheduler_openshift-kube-scheduler-guard-XXXXXX1 for this chassis.
+2025-11-17T09:21:48.067133153Z 2025-11-17T09:21:48.067Z|00086|binding|INFO|openshift-kube-scheduler_openshift-kube-scheduler-guard-XXXXXX1: Claiming 0a:58:0a:80:00:13 10.128.0.19 fd02:0:0:1::13
+2025-11-17T09:21:48.075408570Z 2025-11-17T09:21:48.075Z|00087|binding|INFO|Setting lport openshift-kube-scheduler_openshift-kube-scheduler-guard-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:21:48.075408570Z 2025-11-17T09:21:48.075Z|00088|binding|INFO|Setting lport openshift-kube-scheduler_openshift-kube-scheduler-guard-XXXXXX1 up in Southbound
+2025-11-17T09:22:08.042726696Z 2025-11-17T09:22:08.042Z|00089|binding|INFO|Claiming lport openshift-kube-scheduler_installer-6-XXXXXX1 for this chassis.
+2025-11-17T09:22:08.042726696Z 2025-11-17T09:22:08.042Z|00090|binding|INFO|openshift-kube-scheduler_installer-6-XXXXXX1: Claiming 0a:58:0a:80:00:15 10.128.0.21 fd02:0:0:1::15
+2025-11-17T09:22:08.052258842Z 2025-11-17T09:22:08.052Z|00091|binding|INFO|Setting lport openshift-kube-scheduler_installer-6-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:22:08.052258842Z 2025-11-17T09:22:08.052Z|00092|binding|INFO|Setting lport openshift-kube-scheduler_installer-6-XXXXXX1 up in Southbound
+2025-11-17T09:22:08.054133731Z 2025-11-17T09:22:08.054Z|00093|binding|INFO|Claiming lport openshift-kube-scheduler_revision-pruner-6-XXXXXX1 for this chassis.
+2025-11-17T09:22:08.054133731Z 2025-11-17T09:22:08.054Z|00094|binding|INFO|openshift-kube-scheduler_revision-pruner-6-XXXXXX1: Claiming 0a:58:0a:80:00:14 10.128.0.20 fd02:0:0:1::14
+2025-11-17T09:22:08.069183099Z 2025-11-17T09:22:08.069Z|00095|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-6-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:22:08.069183099Z 2025-11-17T09:22:08.069Z|00096|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-6-XXXXXX1 up in Southbound
+2025-11-17T09:22:23.311344248Z 2025-11-17T09:22:23.311Z|00097|binding|INFO|Claiming lport openshift-machine-api_machine-api-controllers-57fbbf9557-pdr5j for this chassis.
+2025-11-17T09:22:23.311344248Z 2025-11-17T09:22:23.311Z|00098|binding|INFO|openshift-machine-api_machine-api-controllers-57fbbf9557-pdr5j: Claiming 0a:58:0a:80:00:17 10.128.0.23 fd02:0:0:1::17
+2025-11-17T09:22:23.324601332Z 2025-11-17T09:22:23.324Z|00099|binding|INFO|Setting lport openshift-machine-api_machine-api-controllers-57fbbf9557-pdr5j ovn-installed in OVS
+2025-11-17T09:22:23.324646887Z 2025-11-17T09:22:23.324Z|00100|binding|INFO|Setting lport openshift-machine-api_machine-api-controllers-57fbbf9557-pdr5j up in Southbound
+2025-11-17T09:22:36.404405592Z 2025-11-17T09:22:36.404Z|00101|binding|INFO|Claiming lport openshift-machine-api_metal3-baremetal-operator-6f455c9bb-lh5hn for this chassis.
+2025-11-17T09:22:36.404448229Z 2025-11-17T09:22:36.404Z|00102|binding|INFO|openshift-machine-api_metal3-baremetal-operator-6f455c9bb-lh5hn: Claiming 0a:58:0a:80:00:16 10.128.0.22 fd02:0:0:1::16
+2025-11-17T09:22:36.423409637Z 2025-11-17T09:22:36.423Z|00103|binding|INFO|Setting lport openshift-machine-api_metal3-baremetal-operator-6f455c9bb-lh5hn ovn-installed in OVS
+2025-11-17T09:22:36.424030873Z 2025-11-17T09:22:36.424Z|00104|binding|INFO|Setting lport openshift-machine-api_metal3-baremetal-operator-6f455c9bb-lh5hn up in Southbound
+2025-11-17T09:22:36.454169902Z 2025-11-17T09:22:36.454Z|00105|binding|INFO|Claiming lport openshift-oauth-apiserver_apiserver-5cc44bc66f-lff6j for this chassis.
+2025-11-17T09:22:36.454906782Z 2025-11-17T09:22:36.454Z|00106|binding|INFO|openshift-oauth-apiserver_apiserver-5cc44bc66f-lff6j: Claiming 0a:58:0a:80:00:19 10.128.0.25 fd02:0:0:1::19
+2025-11-17T09:22:36.469967113Z 2025-11-17T09:22:36.469Z|00107|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-5cc44bc66f-lff6j up in Southbound
+2025-11-17T09:22:36.470271211Z 2025-11-17T09:22:36.470Z|00108|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-5cc44bc66f-lff6j ovn-installed in OVS
+2025-11-17T09:22:36.477156347Z 2025-11-17T09:22:36.477Z|00109|binding|INFO|Claiming lport openshift-apiserver_apiserver-7655665dd6-qrcvp for this chassis.
+2025-11-17T09:22:36.477188972Z 2025-11-17T09:22:36.477Z|00110|binding|INFO|openshift-apiserver_apiserver-7655665dd6-qrcvp: Claiming 0a:58:0a:80:00:1a 10.128.0.26 fd02:0:0:1::1a
+2025-11-17T09:22:36.496857670Z 2025-11-17T09:22:36.496Z|00111|binding|INFO|Setting lport openshift-apiserver_apiserver-7655665dd6-qrcvp ovn-installed in OVS
+2025-11-17T09:22:36.498817461Z 2025-11-17T09:22:36.498Z|00112|binding|INFO|Setting lport openshift-apiserver_apiserver-7655665dd6-qrcvp up in Southbound
+2025-11-17T09:22:36.499325917Z 2025-11-17T09:22:36.499Z|00113|if_status|INFO|Not updating pb chassis for openshift-multus_network-metrics-daemon-q5sjh now as sb is readonly
+2025-11-17T09:22:36.502257523Z 2025-11-17T09:22:36.502Z|00114|binding|INFO|Claiming lport openshift-multus_network-metrics-daemon-q5sjh for this chassis.
+2025-11-17T09:22:36.502257523Z 2025-11-17T09:22:36.502Z|00115|binding|INFO|openshift-multus_network-metrics-daemon-q5sjh: Claiming 0a:58:0a:80:00:03 10.128.0.3 fd02:0:0:1::3
+2025-11-17T09:22:36.511009457Z 2025-11-17T09:22:36.510Z|00116|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-q5sjh ovn-installed in OVS
+2025-11-17T09:22:36.511009457Z 2025-11-17T09:22:36.510Z|00117|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-q5sjh up in Southbound
+2025-11-17T09:22:36.519531673Z 2025-11-17T09:22:36.519Z|00118|binding|INFO|Claiming lport openshift-etcd_installer-3-XXXXXX1 for this chassis.
+2025-11-17T09:22:36.519531673Z 2025-11-17T09:22:36.519Z|00119|binding|INFO|openshift-etcd_installer-3-XXXXXX1: Claiming 0a:58:0a:80:00:1b 10.128.0.27 fd02:0:0:1::1b
+2025-11-17T09:22:36.519550880Z 2025-11-17T09:22:36.519Z|00120|binding|INFO|Claiming lport openshift-machine-api_metal3-image-customization-56448bddc9-bv6n7 for this chassis.
+2025-11-17T09:22:36.519550880Z 2025-11-17T09:22:36.519Z|00121|binding|INFO|openshift-machine-api_metal3-image-customization-56448bddc9-bv6n7: Claiming 0a:58:0a:80:00:18 10.128.0.24 fd02:0:0:1::18
+2025-11-17T09:22:36.540362932Z 2025-11-17T09:22:36.540Z|00122|binding|INFO|Setting lport openshift-etcd_installer-3-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:22:36.540362932Z 2025-11-17T09:22:36.540Z|00123|binding|INFO|Setting lport openshift-etcd_installer-3-XXXXXX1 up in Southbound
+2025-11-17T09:22:36.540362932Z 2025-11-17T09:22:36.540Z|00124|binding|INFO|Setting lport openshift-machine-api_metal3-image-customization-56448bddc9-bv6n7 ovn-installed in OVS
+2025-11-17T09:22:36.540362932Z 2025-11-17T09:22:36.540Z|00125|binding|INFO|Setting lport openshift-machine-api_metal3-image-customization-56448bddc9-bv6n7 up in Southbound
+2025-11-17T09:22:38.838595072Z 2025-11-17T09:22:38.838Z|00126|binding|INFO|Releasing lport openshift-kube-scheduler_revision-pruner-6-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:22:38.838634511Z 2025-11-17T09:22:38.838Z|00127|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-6-XXXXXX1 down in Southbound
+2025-11-17T09:22:40.190825931Z 2025-11-17T09:22:40.190Z|00128|binding|INFO|Claiming lport openshift-cluster-samples-operator_cluster-samples-operator-6669b6746-v9m6k for this chassis.
+2025-11-17T09:22:40.190860933Z 2025-11-17T09:22:40.190Z|00129|binding|INFO|openshift-cluster-samples-operator_cluster-samples-operator-6669b6746-v9m6k: Claiming 0a:58:0a:80:00:1c 10.128.0.28 fd02:0:0:1::1c
+2025-11-17T09:22:40.220836390Z 2025-11-17T09:22:40.220Z|00130|binding|INFO|Setting lport openshift-cluster-samples-operator_cluster-samples-operator-6669b6746-v9m6k ovn-installed in OVS
+2025-11-17T09:22:40.220873632Z 2025-11-17T09:22:40.220Z|00131|binding|INFO|Setting lport openshift-cluster-samples-operator_cluster-samples-operator-6669b6746-v9m6k up in Southbound
+2025-11-17T09:22:42.988335349Z 2025-11-17T09:22:42.988Z|00132|binding|INFO|Claiming lport openshift-kube-scheduler_revision-pruner-7-XXXXXX1 for this chassis.
+2025-11-17T09:22:42.988370040Z 2025-11-17T09:22:42.988Z|00133|binding|INFO|openshift-kube-scheduler_revision-pruner-7-XXXXXX1: Claiming 0a:58:0a:80:00:1e 10.128.0.30 fd02:0:0:1::1e
+2025-11-17T09:22:43.014295122Z 2025-11-17T09:22:43.014Z|00134|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-7-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:22:43.014333509Z 2025-11-17T09:22:43.014Z|00135|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-7-XXXXXX1 up in Southbound
+2025-11-17T09:22:43.052503870Z 2025-11-17T09:22:43.052Z|00136|binding|INFO|Claiming lport openshift-etcd_installer-4-XXXXXX1 for this chassis.
+2025-11-17T09:22:43.052535422Z 2025-11-17T09:22:43.052Z|00137|binding|INFO|openshift-etcd_installer-4-XXXXXX1: Claiming 0a:58:0a:80:00:1d 10.128.0.29 fd02:0:0:1::1d
+2025-11-17T09:22:43.076370895Z 2025-11-17T09:22:43.076Z|00138|binding|INFO|Setting lport openshift-etcd_installer-4-XXXXXX1 up in Southbound
+2025-11-17T09:22:43.078098712Z 2025-11-17T09:22:43.078Z|00139|binding|INFO|Setting lport openshift-etcd_installer-4-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:22:50.356948190Z 2025-11-17T09:22:50.356Z|00140|binding|INFO|Claiming lport openshift-kube-controller-manager_installer-5-XXXXXX1 for this chassis.
+2025-11-17T09:22:50.356990098Z 2025-11-17T09:22:50.356Z|00141|binding|INFO|openshift-kube-controller-manager_installer-5-XXXXXX1: Claiming 0a:58:0a:80:00:1f 10.128.0.31 fd02:0:0:1::1f
+2025-11-17T09:22:50.396149484Z 2025-11-17T09:22:50.396Z|00142|binding|INFO|Setting lport openshift-kube-controller-manager_installer-5-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:22:50.396196423Z 2025-11-17T09:22:50.396Z|00143|binding|INFO|Setting lport openshift-kube-controller-manager_installer-5-XXXXXX1 up in Southbound
+2025-11-17T09:22:50.408564869Z 2025-11-17T09:22:50.408Z|00144|binding|INFO|Claiming lport openshift-kube-scheduler_installer-7-XXXXXX1 for this chassis.
+2025-11-17T09:22:50.408602957Z 2025-11-17T09:22:50.408Z|00145|binding|INFO|openshift-kube-scheduler_installer-7-XXXXXX1: Claiming 0a:58:0a:80:00:22 10.128.0.34 fd02:0:0:1::22
+2025-11-17T09:22:50.443452685Z 2025-11-17T09:22:50.443Z|00146|binding|INFO|Setting lport openshift-kube-scheduler_installer-7-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:22:50.443489925Z 2025-11-17T09:22:50.443Z|00147|binding|INFO|Setting lport openshift-kube-scheduler_installer-7-XXXXXX1 up in Southbound
+2025-11-17T09:22:51.953127472Z 2025-11-17T09:22:51.953Z|00148|binding|INFO|Releasing lport openshift-etcd_installer-3-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:22:51.953174237Z 2025-11-17T09:22:51.953Z|00149|binding|INFO|Setting lport openshift-etcd_installer-3-XXXXXX1 down in Southbound
+2025-11-17T09:22:52.945246436Z 2025-11-17T09:22:52.945Z|00150|binding|INFO|Releasing lport openshift-kube-scheduler_revision-pruner-7-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:22:52.945246436Z 2025-11-17T09:22:52.945Z|00151|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-7-XXXXXX1 down in Southbound
+2025-11-17T09:23:02.073818909Z 2025-11-17T09:23:02.073Z|00152|binding|INFO|Claiming lport openshift-kube-apiserver_installer-2-XXXXXX1 for this chassis.
+2025-11-17T09:23:02.073818909Z 2025-11-17T09:23:02.073Z|00153|binding|INFO|openshift-kube-apiserver_installer-2-XXXXXX1: Claiming 0a:58:0a:80:00:23 10.128.0.35 fd02:0:0:1::23
+2025-11-17T09:23:02.104060299Z 2025-11-17T09:23:02.104Z|00154|binding|INFO|Setting lport openshift-kube-apiserver_installer-2-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:23:02.104060299Z 2025-11-17T09:23:02.104Z|00155|binding|INFO|Setting lport openshift-kube-apiserver_installer-2-XXXXXX1 up in Southbound
+2025-11-17T09:23:09.958698771Z 2025-11-17T09:23:09.958Z|00156|binding|INFO|Releasing lport openshift-kube-scheduler_installer-6-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:23:09.958698771Z 2025-11-17T09:23:09.958Z|00157|binding|INFO|Setting lport openshift-kube-scheduler_installer-6-XXXXXX1 down in Southbound
+2025-11-17T09:23:33.146544860Z 2025-11-17T09:23:33.146Z|00158|binding|INFO|Releasing lport openshift-kube-controller-manager_installer-5-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:23:33.146544860Z 2025-11-17T09:23:33.146Z|00159|binding|INFO|Setting lport openshift-kube-controller-manager_installer-5-XXXXXX1 down in Southbound
+2025-11-17T09:23:34.152221192Z 2025-11-17T09:23:34.152Z|00160|binding|INFO|Releasing lport openshift-etcd_installer-4-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:23:34.152221192Z 2025-11-17T09:23:34.152Z|00161|binding|INFO|Setting lport openshift-etcd_installer-4-XXXXXX1 down in Southbound
+2025-11-17T09:23:36.016749228Z 2025-11-17T09:23:36.016Z|00162|binding|INFO|Claiming lport openshift-kube-controller-manager_kube-controller-manager-guard-XXXXXX1 for this chassis.
+2025-11-17T09:23:36.016749228Z 2025-11-17T09:23:36.016Z|00163|binding|INFO|openshift-kube-controller-manager_kube-controller-manager-guard-XXXXXX1: Claiming 0a:58:0a:80:00:24 10.128.0.36 fd02:0:0:1::24
+2025-11-17T09:23:36.044694487Z 2025-11-17T09:23:36.044Z|00164|binding|INFO|Setting lport openshift-kube-controller-manager_kube-controller-manager-guard-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:23:36.044694487Z 2025-11-17T09:23:36.044Z|00165|binding|INFO|Setting lport openshift-kube-controller-manager_kube-controller-manager-guard-XXXXXX1 up in Southbound
+2025-11-17T09:23:37.940487837Z 2025-11-17T09:23:37.940Z|00166|binding|INFO|Claiming lport openshift-etcd_etcd-guard-XXXXXX1 for this chassis.
+2025-11-17T09:23:37.940487837Z 2025-11-17T09:23:37.940Z|00167|binding|INFO|openshift-etcd_etcd-guard-XXXXXX1: Claiming 0a:58:0a:80:00:25 10.128.0.37 fd02:0:0:1::25
+2025-11-17T09:23:37.969833287Z 2025-11-17T09:23:37.969Z|00168|binding|INFO|Setting lport openshift-etcd_etcd-guard-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:23:37.969833287Z 2025-11-17T09:23:37.969Z|00169|binding|INFO|Setting lport openshift-etcd_etcd-guard-XXXXXX1 up in Southbound
+2025-11-17T09:23:43.206466070Z 2025-11-17T09:23:43.206Z|00170|binding|INFO|Releasing lport openshift-kube-apiserver_installer-2-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:23:43.206466070Z 2025-11-17T09:23:43.206Z|00171|binding|INFO|Setting lport openshift-kube-apiserver_installer-2-XXXXXX1 down in Southbound
+2025-11-17T09:23:46.250336574Z 2025-11-17T09:23:46.250Z|00172|binding|INFO|Releasing lport openshift-kube-scheduler_installer-7-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:23:46.250336574Z 2025-11-17T09:23:46.250Z|00173|binding|INFO|Setting lport openshift-kube-scheduler_installer-7-XXXXXX1 down in Southbound
+2025-11-17T09:23:47.324765109Z 2025-11-17T09:23:47.324Z|00174|binding|INFO|Claiming lport openshift-kube-apiserver_kube-apiserver-guard-XXXXXX1 for this chassis.
+2025-11-17T09:23:47.324765109Z 2025-11-17T09:23:47.324Z|00175|binding|INFO|openshift-kube-apiserver_kube-apiserver-guard-XXXXXX1: Claiming 0a:58:0a:80:00:26 10.128.0.38 fd02:0:0:1::26
+2025-11-17T09:23:47.353681626Z 2025-11-17T09:23:47.353Z|00176|binding|INFO|Setting lport openshift-kube-apiserver_kube-apiserver-guard-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:23:47.353681626Z 2025-11-17T09:23:47.353Z|00177|binding|INFO|Setting lport openshift-kube-apiserver_kube-apiserver-guard-XXXXXX1 up in Southbound
+2025-11-17T09:23:48.896946689Z 2025-11-17T09:23:48.896Z|00178|binding|INFO|Releasing lport openshift-oauth-apiserver_apiserver-5cc44bc66f-lff6j from this chassis (sb_readonly=0)
+2025-11-17T09:23:48.896946689Z 2025-11-17T09:23:48.896Z|00179|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-5cc44bc66f-lff6j down in Southbound
+2025-11-17T09:23:49.441046354Z 2025-11-17T09:23:49.441Z|00180|binding|INFO|Claiming lport openshift-oauth-apiserver_apiserver-795447c5f-7wtt8 for this chassis.
+2025-11-17T09:23:49.441046354Z 2025-11-17T09:23:49.441Z|00181|binding|INFO|openshift-oauth-apiserver_apiserver-795447c5f-7wtt8: Claiming 0a:58:0a:80:00:27 10.128.0.39 fd02:0:0:1::27
+2025-11-17T09:23:49.468650793Z 2025-11-17T09:23:49.468Z|00182|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-795447c5f-7wtt8 up in Southbound
+2025-11-17T09:23:49.468958973Z 2025-11-17T09:23:49.468Z|00183|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-795447c5f-7wtt8 ovn-installed in OVS
+2025-11-17T09:24:06.138533280Z 2025-11-17T09:24:06.138Z|00184|binding|INFO|Releasing lport openshift-apiserver_apiserver-7655665dd6-qrcvp from this chassis (sb_readonly=0)
+2025-11-17T09:24:06.138533280Z 2025-11-17T09:24:06.138Z|00185|binding|INFO|Setting lport openshift-apiserver_apiserver-7655665dd6-qrcvp down in Southbound
+2025-11-17T09:24:06.677832687Z 2025-11-17T09:24:06.677Z|00186|binding|INFO|Claiming lport openshift-apiserver_apiserver-c96548dc-krjl7 for this chassis.
+2025-11-17T09:24:06.677832687Z 2025-11-17T09:24:06.677Z|00187|binding|INFO|openshift-apiserver_apiserver-c96548dc-krjl7: Claiming 0a:58:0a:80:00:28 10.128.0.40 fd02:0:0:1::28
+2025-11-17T09:24:06.703184938Z 2025-11-17T09:24:06.703Z|00188|binding|INFO|Setting lport openshift-apiserver_apiserver-c96548dc-krjl7 ovn-installed in OVS
+2025-11-17T09:24:06.703184938Z 2025-11-17T09:24:06.703Z|00189|binding|INFO|Setting lport openshift-apiserver_apiserver-c96548dc-krjl7 up in Southbound
+2025-11-17T09:25:19.975762787Z 2025-11-17T09:25:19.975Z|00190|memory_trim|INFO|Detected inactivity (last active 30003 ms ago): trimming memory
+2025-11-17T09:29:13.584436160Z 2025-11-17T09:29:13.584Z|00191|memory_trim|INFO|Detected inactivity (last active 30011 ms ago): trimming memory
+2025-11-17T09:29:58.661514624Z 2025-11-17T09:29:58.661Z|00192|binding|INFO|Claiming lport openshift-kube-controller-manager_installer-6-XXXXXX1 for this chassis.
+2025-11-17T09:29:58.661514624Z 2025-11-17T09:29:58.661Z|00193|binding|INFO|openshift-kube-controller-manager_installer-6-XXXXXX1: Claiming 0a:58:0a:80:00:29 10.128.0.41 fd02:0:0:1::29
+2025-11-17T09:29:58.691029984Z 2025-11-17T09:29:58.690Z|00194|binding|INFO|Setting lport openshift-kube-controller-manager_installer-6-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:29:58.691029984Z 2025-11-17T09:29:58.691Z|00195|binding|INFO|Setting lport openshift-kube-controller-manager_installer-6-XXXXXX1 up in Southbound
+2025-11-17T09:30:15.451016142Z 2025-11-17T09:30:15.450Z|00196|binding|INFO|Claiming lport openshift-controller-manager_controller-manager-57bf5f9558-6x6kr for this chassis.
+2025-11-17T09:30:15.451016142Z 2025-11-17T09:30:15.450Z|00197|binding|INFO|openshift-controller-manager_controller-manager-57bf5f9558-6x6kr: Claiming 0a:58:0a:80:00:2a 10.128.0.42 fd02:0:0:1::2a
+2025-11-17T09:30:15.479254342Z 2025-11-17T09:30:15.479Z|00198|binding|INFO|Setting lport openshift-controller-manager_controller-manager-57bf5f9558-6x6kr ovn-installed in OVS
+2025-11-17T09:30:15.479254342Z 2025-11-17T09:30:15.479Z|00199|binding|INFO|Setting lport openshift-controller-manager_controller-manager-57bf5f9558-6x6kr up in Southbound
+2025-11-17T09:30:15.481621391Z 2025-11-17T09:30:15.481Z|00200|binding|INFO|Claiming lport openshift-console-operator_console-operator-6bbf6cd699-cp4p2 for this chassis.
+2025-11-17T09:30:15.481621391Z 2025-11-17T09:30:15.481Z|00201|binding|INFO|openshift-console-operator_console-operator-6bbf6cd699-cp4p2: Claiming 0a:58:0a:80:00:2b 10.128.0.43 fd02:0:0:1::2b
+2025-11-17T09:30:15.507200854Z 2025-11-17T09:30:15.507Z|00202|binding|INFO|Setting lport openshift-console-operator_console-operator-6bbf6cd699-cp4p2 ovn-installed in OVS
+2025-11-17T09:30:15.507200854Z 2025-11-17T09:30:15.507Z|00203|binding|INFO|Setting lport openshift-console-operator_console-operator-6bbf6cd699-cp4p2 up in Southbound
+2025-11-17T09:30:17.264640359Z 2025-11-17T09:30:17.262Z|00204|binding|INFO|Claiming lport openshift-route-controller-manager_route-controller-manager-5ccb74d648-q8nd8 for this chassis.
+2025-11-17T09:30:17.264640359Z 2025-11-17T09:30:17.262Z|00205|binding|INFO|openshift-route-controller-manager_route-controller-manager-5ccb74d648-q8nd8: Claiming 0a:58:0a:80:00:2c 10.128.0.44 fd02:0:0:1::2c
+2025-11-17T09:30:17.300861680Z 2025-11-17T09:30:17.300Z|00206|binding|INFO|Setting lport openshift-route-controller-manager_route-controller-manager-5ccb74d648-q8nd8 ovn-installed in OVS
+2025-11-17T09:30:17.300861680Z 2025-11-17T09:30:17.300Z|00207|binding|INFO|Setting lport openshift-route-controller-manager_route-controller-manager-5ccb74d648-q8nd8 up in Southbound
+2025-11-17T09:30:18.587674345Z 2025-11-17T09:30:18.587Z|00208|binding|INFO|Claiming lport openshift-etcd_installer-6-XXXXXX1 for this chassis.
+2025-11-17T09:30:18.587674345Z 2025-11-17T09:30:18.587Z|00209|binding|INFO|openshift-etcd_installer-6-XXXXXX1: Claiming 0a:58:0a:80:00:2d 10.128.0.45 fd02:0:0:1::2d
+2025-11-17T09:30:18.614200133Z 2025-11-17T09:30:18.614Z|00210|binding|INFO|Setting lport openshift-etcd_installer-6-XXXXXX1 up in Southbound
+2025-11-17T09:30:18.614738199Z 2025-11-17T09:30:18.614Z|00211|binding|INFO|Setting lport openshift-etcd_installer-6-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:30:34.115886264Z 2025-11-17T09:30:34.115Z|00212|binding|INFO|Releasing lport openshift-controller-manager_controller-manager-57bf5f9558-6x6kr from this chassis (sb_readonly=0)
+2025-11-17T09:30:34.115886264Z 2025-11-17T09:30:34.115Z|00213|binding|INFO|Setting lport openshift-controller-manager_controller-manager-57bf5f9558-6x6kr down in Southbound
+2025-11-17T09:30:34.123027682Z 2025-11-17T09:30:34.122Z|00214|binding|INFO|Releasing lport openshift-route-controller-manager_route-controller-manager-5ccb74d648-q8nd8 from this chassis (sb_readonly=0)
+2025-11-17T09:30:34.123027682Z 2025-11-17T09:30:34.123Z|00215|binding|INFO|Setting lport openshift-route-controller-manager_route-controller-manager-5ccb74d648-q8nd8 down in Southbound
+2025-11-17T09:30:34.988462223Z 2025-11-17T09:30:34.988Z|00216|binding|INFO|Releasing lport openshift-kube-controller-manager_installer-6-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:30:34.988462223Z 2025-11-17T09:30:34.988Z|00217|binding|INFO|Setting lport openshift-kube-controller-manager_installer-6-XXXXXX1 down in Southbound
+2025-11-17T09:30:36.503720222Z 2025-11-17T09:30:36.503Z|00218|binding|INFO|Claiming lport openshift-controller-manager_controller-manager-89cf55877-bvsms for this chassis.
+2025-11-17T09:30:36.503720222Z 2025-11-17T09:30:36.503Z|00219|binding|INFO|openshift-controller-manager_controller-manager-89cf55877-bvsms: Claiming 0a:58:0a:80:00:2e 10.128.0.46 fd02:0:0:1::2e
+2025-11-17T09:30:36.535318727Z 2025-11-17T09:30:36.535Z|00220|binding|INFO|Setting lport openshift-controller-manager_controller-manager-89cf55877-bvsms ovn-installed in OVS
+2025-11-17T09:30:36.535318727Z 2025-11-17T09:30:36.535Z|00221|binding|INFO|Setting lport openshift-controller-manager_controller-manager-89cf55877-bvsms up in Southbound
+2025-11-17T09:30:37.711046748Z 2025-11-17T09:30:37.711Z|00222|binding|INFO|Claiming lport openshift-route-controller-manager_route-controller-manager-7678bd4c5f-trhv4 for this chassis.
+2025-11-17T09:30:37.711046748Z 2025-11-17T09:30:37.711Z|00223|binding|INFO|openshift-route-controller-manager_route-controller-manager-7678bd4c5f-trhv4: Claiming 0a:58:0a:80:00:2f 10.128.0.47 fd02:0:0:1::2f
+2025-11-17T09:30:37.738023110Z 2025-11-17T09:30:37.737Z|00224|binding|INFO|Setting lport openshift-route-controller-manager_route-controller-manager-7678bd4c5f-trhv4 ovn-installed in OVS
+2025-11-17T09:30:37.738023110Z 2025-11-17T09:30:37.737Z|00225|binding|INFO|Setting lport openshift-route-controller-manager_route-controller-manager-7678bd4c5f-trhv4 up in Southbound
+2025-11-17T09:30:39.038766358Z 2025-11-17T09:30:39.038Z|00226|binding|INFO|Claiming lport openshift-kube-apiserver_installer-3-XXXXXX1 for this chassis.
+2025-11-17T09:30:39.038766358Z 2025-11-17T09:30:39.038Z|00227|binding|INFO|openshift-kube-apiserver_installer-3-XXXXXX1: Claiming 0a:58:0a:80:00:30 10.128.0.48 fd02:0:0:1::30
+2025-11-17T09:30:39.070359149Z 2025-11-17T09:30:39.070Z|00228|binding|INFO|Setting lport openshift-kube-apiserver_installer-3-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:30:39.070359149Z 2025-11-17T09:30:39.070Z|00229|binding|INFO|Setting lport openshift-kube-apiserver_installer-3-XXXXXX1 up in Southbound
+2025-11-17T09:30:43.114741800Z 2025-11-17T09:30:43.114Z|00230|binding|INFO|Claiming lport openshift-kube-scheduler_revision-pruner-8-XXXXXX1 for this chassis.
+2025-11-17T09:30:43.114741800Z 2025-11-17T09:30:43.114Z|00231|binding|INFO|openshift-kube-scheduler_revision-pruner-8-XXXXXX1: Claiming 0a:58:0a:80:00:31 10.128.0.49 fd02:0:0:1::31
+2025-11-17T09:30:43.144773826Z 2025-11-17T09:30:43.144Z|00232|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-8-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:30:43.144773826Z 2025-11-17T09:30:43.144Z|00233|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-8-XXXXXX1 up in Southbound
+2025-11-17T09:30:47.054062433Z 2025-11-17T09:30:47.054Z|00234|binding|INFO|Releasing lport openshift-kube-scheduler_revision-pruner-8-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:30:47.054062433Z 2025-11-17T09:30:47.054Z|00235|binding|INFO|Setting lport openshift-kube-scheduler_revision-pruner-8-XXXXXX1 down in Southbound
+2025-11-17T09:30:49.978479514Z 2025-11-17T09:30:49.978Z|00236|binding|INFO|Claiming lport openshift-console_downloads-7dcf8dd5c4-tcfsl for this chassis.
+2025-11-17T09:30:49.978479514Z 2025-11-17T09:30:49.978Z|00237|binding|INFO|openshift-console_downloads-7dcf8dd5c4-tcfsl: Claiming 0a:58:0a:80:00:32 10.128.0.50 fd02:0:0:1::32
+2025-11-17T09:30:50.007193556Z 2025-11-17T09:30:50.007Z|00238|binding|INFO|Setting lport openshift-console_downloads-7dcf8dd5c4-tcfsl up in Southbound
+2025-11-17T09:30:50.007629434Z 2025-11-17T09:30:50.007Z|00239|binding|INFO|Setting lport openshift-console_downloads-7dcf8dd5c4-tcfsl ovn-installed in OVS
+2025-11-17T09:30:53.088945766Z 2025-11-17T09:30:53.088Z|00240|binding|INFO|Claiming lport openshift-kube-apiserver_installer-4-XXXXXX1 for this chassis.
+2025-11-17T09:30:53.088945766Z 2025-11-17T09:30:53.088Z|00241|binding|INFO|openshift-kube-apiserver_installer-4-XXXXXX1: Claiming 0a:58:0a:80:00:33 10.128.0.51 fd02:0:0:1::33
+2025-11-17T09:30:53.125287586Z 2025-11-17T09:30:53.125Z|00242|binding|INFO|Setting lport openshift-kube-apiserver_installer-4-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:30:53.125287586Z 2025-11-17T09:30:53.125Z|00243|binding|INFO|Setting lport openshift-kube-apiserver_installer-4-XXXXXX1 up in Southbound
+2025-11-17T09:31:23.547928029Z 2025-11-17T09:31:23.547Z|00244|memory_trim|INFO|Detected inactivity (last active 30012 ms ago): trimming memory
+2025-11-17T09:32:09.181594254Z 2025-11-17T09:32:09.181Z|00245|binding|INFO|Releasing lport openshift-etcd_installer-6-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:32:09.181594254Z 2025-11-17T09:32:09.181Z|00246|binding|INFO|Setting lport openshift-etcd_installer-6-XXXXXX1 down in Southbound
+2025-11-17T09:32:12.097373185Z 2025-11-17T09:32:12.097Z|00247|binding|INFO|Releasing lport openshift-kube-apiserver_installer-3-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:32:12.097373185Z 2025-11-17T09:32:12.097Z|00248|binding|INFO|Setting lport openshift-kube-apiserver_installer-3-XXXXXX1 down in Southbound
+2025-11-17T09:32:49.521280780Z 2025-11-17T09:32:49.520Z|00249|binding|INFO|Releasing lport openshift-kube-apiserver_installer-4-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:32:49.521280780Z 2025-11-17T09:32:49.520Z|00250|binding|INFO|Setting lport openshift-kube-apiserver_installer-4-XXXXXX1 down in Southbound
+2025-11-17T09:32:50.690425227Z 2025-11-17T09:32:50.690Z|00251|binding|INFO|Claiming lport openshift-kube-apiserver_installer-4-XXXXXX1 for this chassis.
+2025-11-17T09:32:50.690425227Z 2025-11-17T09:32:50.690Z|00252|binding|INFO|openshift-kube-apiserver_installer-4-XXXXXX1: Claiming 0a:58:0a:80:00:33 10.128.0.51 fd02:0:0:1::33
+2025-11-17T09:32:50.718570714Z 2025-11-17T09:32:50.718Z|00253|binding|INFO|Setting lport openshift-kube-apiserver_installer-4-XXXXXX1 up in Southbound
+2025-11-17T09:32:50.719146475Z 2025-11-17T09:32:50.719Z|00254|binding|INFO|Setting lport openshift-kube-apiserver_installer-4-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:33:04.127120665Z 2025-11-17T09:33:04.126Z|00255|binding|INFO|Claiming lport openshift-kube-scheduler_installer-8-XXXXXX1 for this chassis.
+2025-11-17T09:33:04.127120665Z 2025-11-17T09:33:04.126Z|00256|binding|INFO|openshift-kube-scheduler_installer-8-XXXXXX1: Claiming 0a:58:0a:80:00:34 10.128.0.52 fd02:0:0:1::34
+2025-11-17T09:33:04.178625561Z 2025-11-17T09:33:04.177Z|00257|binding|INFO|Setting lport openshift-kube-scheduler_installer-8-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:33:04.178625561Z 2025-11-17T09:33:04.177Z|00258|binding|INFO|Setting lport openshift-kube-scheduler_installer-8-XXXXXX1 up in Southbound
+2025-11-17T09:33:38.967861231Z 2025-11-17T09:33:38.967Z|00259|binding|INFO|Releasing lport openshift-kube-scheduler_installer-8-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:33:38.967861231Z 2025-11-17T09:33:38.967Z|00260|binding|INFO|Setting lport openshift-kube-scheduler_installer-8-XXXXXX1 down in Southbound
+2025-11-17T09:33:50.468699623Z 2025-11-17T09:33:50.468Z|00261|binding|INFO|Claiming lport openshift-etcd_installer-7-XXXXXX1 for this chassis.
+2025-11-17T09:33:50.468699623Z 2025-11-17T09:33:50.468Z|00262|binding|INFO|openshift-etcd_installer-7-XXXXXX1: Claiming 0a:58:0a:80:00:35 10.128.0.53 fd02:0:0:1::35
+2025-11-17T09:33:50.500957575Z 2025-11-17T09:33:50.500Z|00263|binding|INFO|Setting lport openshift-etcd_installer-7-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:33:50.500957575Z 2025-11-17T09:33:50.500Z|00264|binding|INFO|Setting lport openshift-etcd_installer-7-XXXXXX1 up in Southbound
+2025-11-17T09:33:50.999815604Z 2025-11-17T09:33:50.999Z|00265|binding|INFO|Releasing lport openshift-kube-apiserver_installer-4-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:33:50.999815604Z 2025-11-17T09:33:50.999Z|00266|binding|INFO|Setting lport openshift-kube-apiserver_installer-4-XXXXXX1 down in Southbound
+2025-11-17T09:34:03.057744690Z 2025-11-17T09:34:03.057Z|00267|binding|INFO|Claiming lport openshift-etcd_installer-8-XXXXXX1 for this chassis.
+2025-11-17T09:34:03.057744690Z 2025-11-17T09:34:03.057Z|00268|binding|INFO|openshift-etcd_installer-8-XXXXXX1: Claiming 0a:58:0a:80:00:36 10.128.0.54 fd02:0:0:1::36
+2025-11-17T09:34:03.087080842Z 2025-11-17T09:34:03.087Z|00269|binding|INFO|Setting lport openshift-etcd_installer-8-XXXXXX1 up in Southbound
+2025-11-17T09:34:03.087415034Z 2025-11-17T09:34:03.087Z|00270|binding|INFO|Setting lport openshift-etcd_installer-8-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:34:22.778793710Z 2025-11-17T09:34:22.778Z|00271|binding|INFO|Releasing lport openshift-etcd_installer-7-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:34:22.778793710Z 2025-11-17T09:34:22.778Z|00272|binding|INFO|Setting lport openshift-etcd_installer-7-XXXXXX1 down in Southbound
+2025-11-17T09:34:36.946022482Z 2025-11-17T09:34:36.945Z|00273|binding|INFO|Claiming lport openshift-kube-controller-manager_revision-pruner-6-XXXXXX1 for this chassis.
+2025-11-17T09:34:36.946057845Z 2025-11-17T09:34:36.946Z|00274|binding|INFO|openshift-kube-controller-manager_revision-pruner-6-XXXXXX1: Claiming 0a:58:0a:80:00:37 10.128.0.55 fd02:0:0:1::37
+2025-11-17T09:34:36.983694515Z 2025-11-17T09:34:36.983Z|00275|binding|INFO|Setting lport openshift-kube-controller-manager_revision-pruner-6-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:34:36.983741890Z 2025-11-17T09:34:36.983Z|00276|binding|INFO|Setting lport openshift-kube-controller-manager_revision-pruner-6-XXXXXX1 up in Southbound
+2025-11-17T09:34:40.217200959Z 2025-11-17T09:34:40.217Z|00277|binding|INFO|Releasing lport openshift-kube-controller-manager_revision-pruner-6-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:34:40.217237263Z 2025-11-17T09:34:40.217Z|00278|binding|INFO|Setting lport openshift-kube-controller-manager_revision-pruner-6-XXXXXX1 down in Southbound
+2025-11-17T09:35:12.010251050Z 2025-11-17T09:35:12.010Z|00279|memory_trim|INFO|Detected inactivity (last active 30009 ms ago): trimming memory
+2025-11-17T09:36:00.498957582Z 2025-11-17T09:36:00.498Z|00280|binding|INFO|Releasing lport openshift-etcd_installer-8-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:36:00.498957582Z 2025-11-17T09:36:00.498Z|00281|binding|INFO|Setting lport openshift-etcd_installer-8-XXXXXX1 down in Southbound
+2025-11-17T09:36:15.088903962Z 2025-11-17T09:36:15.088Z|00282|memory_trim|INFO|Detected inactivity (last active 30014 ms ago): trimming memory
+2025-11-17T09:36:23.928391229Z 2025-11-17T09:36:23.928Z|00283|binding|INFO|Claiming lport openshift-kube-controller-manager_revision-pruner-7-XXXXXX1 for this chassis.
+2025-11-17T09:36:23.928391229Z 2025-11-17T09:36:23.928Z|00284|binding|INFO|openshift-kube-controller-manager_revision-pruner-7-XXXXXX1: Claiming 0a:58:0a:80:00:38 10.128.0.56 fd02:0:0:1::38
+2025-11-17T09:36:23.972398248Z 2025-11-17T09:36:23.972Z|00285|binding|INFO|Setting lport openshift-kube-controller-manager_revision-pruner-7-XXXXXX1 up in Southbound
+2025-11-17T09:36:23.972782239Z 2025-11-17T09:36:23.972Z|00286|binding|INFO|Setting lport openshift-kube-controller-manager_revision-pruner-7-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:36:28.703172055Z 2025-11-17T09:36:28.703Z|00287|binding|INFO|Releasing lport openshift-kube-controller-manager_revision-pruner-7-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:36:28.703172055Z 2025-11-17T09:36:28.703Z|00288|binding|INFO|Setting lport openshift-kube-controller-manager_revision-pruner-7-XXXXXX1 down in Southbound
+2025-11-17T09:36:57.069729574Z 2025-11-17T09:36:57.067Z|00289|binding|INFO|Claiming lport openshift-marketplace_community-operators-46r88 for this chassis.
+2025-11-17T09:36:57.069729574Z 2025-11-17T09:36:57.067Z|00290|binding|INFO|openshift-marketplace_community-operators-46r88: Claiming 0a:58:0a:80:00:39 10.128.0.57 fd02:0:0:1::39
+2025-11-17T09:36:57.114427659Z 2025-11-17T09:36:57.114Z|00291|binding|INFO|Setting lport openshift-marketplace_community-operators-46r88 up in Southbound
+2025-11-17T09:36:57.114812167Z 2025-11-17T09:36:57.114Z|00292|binding|INFO|Setting lport openshift-marketplace_community-operators-46r88 ovn-installed in OVS
+2025-11-17T09:36:57.122416831Z 2025-11-17T09:36:57.122Z|00293|binding|INFO|Claiming lport openshift-marketplace_certified-operators-7hvs9 for this chassis.
+2025-11-17T09:36:57.122416831Z 2025-11-17T09:36:57.122Z|00294|binding|INFO|openshift-marketplace_certified-operators-7hvs9: Claiming 0a:58:0a:80:00:3b 10.128.0.59 fd02:0:0:1::3b
+2025-11-17T09:36:57.122416831Z 2025-11-17T09:36:57.122Z|00295|binding|INFO|Claiming lport openshift-marketplace_redhat-operators-4c56h for this chassis.
+2025-11-17T09:36:57.122416831Z 2025-11-17T09:36:57.122Z|00296|binding|INFO|openshift-marketplace_redhat-operators-4c56h: Claiming 0a:58:0a:80:00:3a 10.128.0.58 fd02:0:0:1::3a
+2025-11-17T09:36:57.195025573Z 2025-11-17T09:36:57.194Z|00297|binding|INFO|Setting lport openshift-marketplace_redhat-operators-4c56h ovn-installed in OVS
+2025-11-17T09:36:57.195025573Z 2025-11-17T09:36:57.194Z|00298|binding|INFO|Setting lport openshift-marketplace_redhat-operators-4c56h up in Southbound
+2025-11-17T09:36:57.195025573Z 2025-11-17T09:36:57.194Z|00299|binding|INFO|Setting lport openshift-marketplace_certified-operators-7hvs9 ovn-installed in OVS
+2025-11-17T09:36:57.195025573Z 2025-11-17T09:36:57.195Z|00300|binding|INFO|Setting lport openshift-marketplace_certified-operators-7hvs9 up in Southbound
+2025-11-17T09:36:57.220529268Z 2025-11-17T09:36:57.220Z|00301|binding|INFO|Claiming lport openshift-marketplace_redhat-marketplace-x56kr for this chassis.
+2025-11-17T09:36:57.220529268Z 2025-11-17T09:36:57.220Z|00302|binding|INFO|openshift-marketplace_redhat-marketplace-x56kr: Claiming 0a:58:0a:80:00:3d 10.128.0.61 fd02:0:0:1::3d
+2025-11-17T09:36:57.258948381Z 2025-11-17T09:36:57.258Z|00303|binding|INFO|Setting lport openshift-marketplace_redhat-marketplace-x56kr ovn-installed in OVS
+2025-11-17T09:36:57.258948381Z 2025-11-17T09:36:57.258Z|00304|binding|INFO|Setting lport openshift-marketplace_redhat-marketplace-x56kr up in Southbound
+2025-11-17T09:36:57.261871688Z 2025-11-17T09:36:57.261Z|00305|binding|INFO|Claiming lport openshift-multus_multus-admission-controller-7f5d5667bf-lw7qh for this chassis.
+2025-11-17T09:36:57.261871688Z 2025-11-17T09:36:57.261Z|00306|binding|INFO|openshift-multus_multus-admission-controller-7f5d5667bf-lw7qh: Claiming 0a:58:0a:80:00:3c 10.128.0.60 fd02:0:0:1::3c
+2025-11-17T09:36:57.307630976Z 2025-11-17T09:36:57.307Z|00307|binding|INFO|Setting lport openshift-multus_multus-admission-controller-7f5d5667bf-lw7qh ovn-installed in OVS
+2025-11-17T09:36:57.307630976Z 2025-11-17T09:36:57.307Z|00308|binding|INFO|Setting lport openshift-multus_multus-admission-controller-7f5d5667bf-lw7qh up in Southbound
+2025-11-17T09:37:10.098599919Z 2025-11-17T09:37:10.098Z|00309|binding|INFO|Releasing lport openshift-marketplace_redhat-operators-4c56h from this chassis (sb_readonly=0)
+2025-11-17T09:37:10.098599919Z 2025-11-17T09:37:10.098Z|00310|binding|INFO|Setting lport openshift-marketplace_redhat-operators-4c56h down in Southbound
+2025-11-17T09:37:10.118374345Z 2025-11-17T09:37:10.118Z|00311|binding|INFO|Releasing lport openshift-marketplace_redhat-marketplace-x56kr from this chassis (sb_readonly=0)
+2025-11-17T09:37:10.118374345Z 2025-11-17T09:37:10.118Z|00312|binding|INFO|Setting lport openshift-marketplace_redhat-marketplace-x56kr down in Southbound
+2025-11-17T09:37:10.149102434Z 2025-11-17T09:37:10.149Z|00313|binding|INFO|Releasing lport openshift-marketplace_certified-operators-7hvs9 from this chassis (sb_readonly=0)
+2025-11-17T09:37:10.149102434Z 2025-11-17T09:37:10.149Z|00314|binding|INFO|Setting lport openshift-marketplace_certified-operators-7hvs9 down in Southbound
+2025-11-17T09:37:10.153505241Z 2025-11-17T09:37:10.153Z|00315|binding|INFO|Releasing lport openshift-marketplace_community-operators-46r88 from this chassis (sb_readonly=0)
+2025-11-17T09:37:10.153505241Z 2025-11-17T09:37:10.153Z|00316|binding|INFO|Setting lport openshift-marketplace_community-operators-46r88 down in Southbound
+2025-11-17T09:37:52.238215403Z 2025-11-17T09:37:52.238Z|00317|binding|INFO|Claiming lport openshift-etcd_revision-pruner-8-XXXXXX1 for this chassis.
+2025-11-17T09:37:52.238215403Z 2025-11-17T09:37:52.238Z|00318|binding|INFO|openshift-etcd_revision-pruner-8-XXXXXX1: Claiming 0a:58:0a:80:00:3e 10.128.0.62 fd02:0:0:1::3e
+2025-11-17T09:37:52.280811055Z 2025-11-17T09:37:52.280Z|00319|binding|INFO|Setting lport openshift-etcd_revision-pruner-8-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:37:52.280811055Z 2025-11-17T09:37:52.280Z|00320|binding|INFO|Setting lport openshift-etcd_revision-pruner-8-XXXXXX1 up in Southbound
+2025-11-17T09:37:56.138918677Z 2025-11-17T09:37:56.138Z|00321|binding|INFO|Releasing lport openshift-etcd_revision-pruner-8-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:37:56.138918677Z 2025-11-17T09:37:56.138Z|00322|binding|INFO|Setting lport openshift-etcd_revision-pruner-8-XXXXXX1 down in Southbound
+2025-11-17T09:38:00.341013002Z 2025-11-17T09:38:00.340Z|00323|physical|WARN|Failed to locate tunnel to reach main chassis 490d1dd6-c444-4d86-920b-4e9e6a95d9f2 for port tstor-XXXXXX0.
+2025-11-17T09:38:34.217163675Z 2025-11-17T09:38:34.217Z|00324|binding|INFO|Claiming lport openshift-authentication_oauth-openshift-76f996bb9d-cdbwh for this chassis.
+2025-11-17T09:38:34.217163675Z 2025-11-17T09:38:34.217Z|00325|binding|INFO|openshift-authentication_oauth-openshift-76f996bb9d-cdbwh: Claiming 0a:58:0a:80:00:3f 10.128.0.63 fd02:0:0:1::3f
+2025-11-17T09:38:34.250098803Z 2025-11-17T09:38:34.250Z|00326|binding|INFO|Setting lport openshift-authentication_oauth-openshift-76f996bb9d-cdbwh ovn-installed in OVS
+2025-11-17T09:38:34.250098803Z 2025-11-17T09:38:34.250Z|00327|binding|INFO|Setting lport openshift-authentication_oauth-openshift-76f996bb9d-cdbwh up in Southbound
+2025-11-17T09:38:37.162604019Z 2025-11-17T09:38:37.162Z|00328|binding|INFO|Claiming lport openshift-console_console-7959f94788-8mbqp for this chassis.
+2025-11-17T09:38:37.162641672Z 2025-11-17T09:38:37.162Z|00329|binding|INFO|openshift-console_console-7959f94788-8mbqp: Claiming 0a:58:0a:80:00:40 10.128.0.64 fd02:0:0:1::40
+2025-11-17T09:38:37.195110584Z 2025-11-17T09:38:37.195Z|00330|binding|INFO|Setting lport openshift-console_console-7959f94788-8mbqp ovn-installed in OVS
+2025-11-17T09:38:37.195158669Z 2025-11-17T09:38:37.195Z|00331|binding|INFO|Setting lport openshift-console_console-7959f94788-8mbqp up in Southbound
+2025-11-17T09:39:20.633303201Z 2025-11-17T09:39:20.633Z|00332|binding|INFO|Releasing lport openshift-authentication_oauth-openshift-76f996bb9d-cdbwh from this chassis (sb_readonly=0)
+2025-11-17T09:39:20.633303201Z 2025-11-17T09:39:20.633Z|00333|binding|INFO|Setting lport openshift-authentication_oauth-openshift-76f996bb9d-cdbwh down in Southbound
+2025-11-17T09:39:23.165704870Z 2025-11-17T09:39:23.165Z|00334|binding|INFO|Releasing lport openshift-console_console-7959f94788-8mbqp from this chassis (sb_readonly=0)
+2025-11-17T09:39:23.165704870Z 2025-11-17T09:39:23.165Z|00335|binding|INFO|Setting lport openshift-console_console-7959f94788-8mbqp down in Southbound
+2025-11-17T09:39:26.990662257Z 2025-11-17T09:39:26.990Z|00336|binding|INFO|Claiming lport openshift-console_console-595d4b756b-xlhtg for this chassis.
+2025-11-17T09:39:26.990662257Z 2025-11-17T09:39:26.990Z|00337|binding|INFO|openshift-console_console-595d4b756b-xlhtg: Claiming 0a:58:0a:80:00:41 10.128.0.65 fd02:0:0:1::41
+2025-11-17T09:39:27.020465839Z 2025-11-17T09:39:27.020Z|00338|binding|INFO|Setting lport openshift-console_console-595d4b756b-xlhtg ovn-installed in OVS
+2025-11-17T09:39:27.020465839Z 2025-11-17T09:39:27.020Z|00339|binding|INFO|Setting lport openshift-console_console-595d4b756b-xlhtg up in Southbound
+2025-11-17T09:39:31.004083990Z 2025-11-17T09:39:31.004Z|00340|binding|INFO|Claiming lport openshift-authentication_oauth-openshift-786998b97f-5d599 for this chassis.
+2025-11-17T09:39:31.004083990Z 2025-11-17T09:39:31.004Z|00341|binding|INFO|openshift-authentication_oauth-openshift-786998b97f-5d599: Claiming 0a:58:0a:80:00:42 10.128.0.66 fd02:0:0:1::42
+2025-11-17T09:39:31.033272516Z 2025-11-17T09:39:31.033Z|00342|binding|INFO|Setting lport openshift-authentication_oauth-openshift-786998b97f-5d599 ovn-installed in OVS
+2025-11-17T09:39:31.033272516Z 2025-11-17T09:39:31.033Z|00343|binding|INFO|Setting lport openshift-authentication_oauth-openshift-786998b97f-5d599 up in Southbound
+2025-11-17T09:40:03.979868158Z 2025-11-17T09:40:03.979Z|00344|binding|INFO|Claiming lport openshift-etcd_revision-pruner-9-XXXXXX1 for this chassis.
+2025-11-17T09:40:03.979868158Z 2025-11-17T09:40:03.979Z|00345|binding|INFO|openshift-etcd_revision-pruner-9-XXXXXX1: Claiming 0a:58:0a:80:00:43 10.128.0.67 fd02:0:0:1::43
+2025-11-17T09:40:04.018914602Z 2025-11-17T09:40:04.018Z|00346|binding|INFO|Setting lport openshift-etcd_revision-pruner-9-XXXXXX1 up in Southbound
+2025-11-17T09:40:04.019401692Z 2025-11-17T09:40:04.019Z|00347|binding|INFO|Setting lport openshift-etcd_revision-pruner-9-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:40:06.162608731Z 2025-11-17T09:40:06.162Z|00348|binding|INFO|Claiming lport openshift-kube-controller-manager_installer-7-XXXXXX1 for this chassis.
+2025-11-17T09:40:06.162608731Z 2025-11-17T09:40:06.162Z|00349|binding|INFO|openshift-kube-controller-manager_installer-7-XXXXXX1: Claiming 0a:58:0a:80:00:44 10.128.0.68 fd02:0:0:1::44
+2025-11-17T09:40:06.195723647Z 2025-11-17T09:40:06.195Z|00350|binding|INFO|Setting lport openshift-kube-controller-manager_installer-7-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:40:06.195723647Z 2025-11-17T09:40:06.195Z|00351|binding|INFO|Setting lport openshift-kube-controller-manager_installer-7-XXXXXX1 up in Southbound
+2025-11-17T09:40:07.750306551Z 2025-11-17T09:40:07.750Z|00352|binding|INFO|Releasing lport openshift-etcd_revision-pruner-9-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:40:07.750306551Z 2025-11-17T09:40:07.750Z|00353|binding|INFO|Setting lport openshift-etcd_revision-pruner-9-XXXXXX1 down in Southbound
+2025-11-17T09:40:19.454610211Z 2025-11-17T09:40:19.454Z|00354|binding|INFO|Claiming lport openshift-etcd_revision-pruner-10-XXXXXX1 for this chassis.
+2025-11-17T09:40:19.454610211Z 2025-11-17T09:40:19.454Z|00355|binding|INFO|openshift-etcd_revision-pruner-10-XXXXXX1: Claiming 0a:58:0a:80:00:45 10.128.0.69 fd02:0:0:1::45
+2025-11-17T09:40:19.482069275Z 2025-11-17T09:40:19.482Z|00356|binding|INFO|Setting lport openshift-etcd_revision-pruner-10-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:40:19.482069275Z 2025-11-17T09:40:19.482Z|00357|binding|INFO|Setting lport openshift-etcd_revision-pruner-10-XXXXXX1 up in Southbound
+2025-11-17T09:40:23.825772466Z 2025-11-17T09:40:23.824Z|00358|binding|INFO|Releasing lport openshift-etcd_revision-pruner-10-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:40:23.825772466Z 2025-11-17T09:40:23.824Z|00359|binding|INFO|Setting lport openshift-etcd_revision-pruner-10-XXXXXX1 down in Southbound
+2025-11-17T09:40:28.758194402Z 2025-11-17T09:40:28.758Z|00360|binding|INFO|Releasing lport openshift-authentication_oauth-openshift-786998b97f-5d599 from this chassis (sb_readonly=0)
+2025-11-17T09:40:28.758194402Z 2025-11-17T09:40:28.758Z|00361|binding|INFO|Setting lport openshift-authentication_oauth-openshift-786998b97f-5d599 down in Southbound
+2025-11-17T09:40:31.044120503Z 2025-11-17T09:40:31.042Z|00362|binding|INFO|Claiming lport openshift-authentication_oauth-openshift-7d4fc55645-h42dm for this chassis.
+2025-11-17T09:40:31.044120503Z 2025-11-17T09:40:31.042Z|00363|binding|INFO|openshift-authentication_oauth-openshift-7d4fc55645-h42dm: Claiming 0a:58:0a:80:00:46 10.128.0.70 fd02:0:0:1::46
+2025-11-17T09:40:31.071012773Z 2025-11-17T09:40:31.070Z|00364|binding|INFO|Setting lport openshift-authentication_oauth-openshift-7d4fc55645-h42dm up in Southbound
+2025-11-17T09:40:31.071317439Z 2025-11-17T09:40:31.071Z|00365|binding|INFO|Setting lport openshift-authentication_oauth-openshift-7d4fc55645-h42dm ovn-installed in OVS
+2025-11-17T09:40:42.930937942Z 2025-11-17T09:40:42.930Z|00366|binding|INFO|Releasing lport openshift-kube-controller-manager_installer-7-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:40:42.930937942Z 2025-11-17T09:40:42.930Z|00367|binding|INFO|Setting lport openshift-kube-controller-manager_installer-7-XXXXXX1 down in Southbound
+2025-11-17T09:41:43.286202507Z 2025-11-17T09:41:43.286Z|00368|binding|INFO|Releasing lport openshift-console_console-595d4b756b-xlhtg from this chassis (sb_readonly=0)
+2025-11-17T09:41:43.286202507Z 2025-11-17T09:41:43.286Z|00369|binding|INFO|Setting lport openshift-console_console-595d4b756b-xlhtg down in Southbound
+2025-11-17T09:42:17.416525416Z 2025-11-17T09:42:17.416Z|00370|binding|INFO|Claiming lport openshift-etcd_installer-10-XXXXXX1 for this chassis.
+2025-11-17T09:42:17.416525416Z 2025-11-17T09:42:17.416Z|00371|binding|INFO|openshift-etcd_installer-10-XXXXXX1: Claiming 0a:58:0a:80:00:47 10.128.0.71 fd02:0:0:1::47
+2025-11-17T09:42:17.447342046Z 2025-11-17T09:42:17.447Z|00372|binding|INFO|Setting lport openshift-etcd_installer-10-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:42:17.447342046Z 2025-11-17T09:42:17.447Z|00373|binding|INFO|Setting lport openshift-etcd_installer-10-XXXXXX1 up in Southbound
+2025-11-17T09:42:26.248583532Z 2025-11-17T09:42:26.248Z|00374|binding|INFO|Releasing lport openshift-oauth-apiserver_apiserver-795447c5f-7wtt8 from this chassis (sb_readonly=0)
+2025-11-17T09:42:26.248583532Z 2025-11-17T09:42:26.248Z|00375|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-795447c5f-7wtt8 down in Southbound
+2025-11-17T09:42:26.843940445Z 2025-11-17T09:42:26.843Z|00376|binding|INFO|Claiming lport openshift-oauth-apiserver_apiserver-59b5566b46-czsqx for this chassis.
+2025-11-17T09:42:26.843940445Z 2025-11-17T09:42:26.843Z|00377|binding|INFO|openshift-oauth-apiserver_apiserver-59b5566b46-czsqx: Claiming 0a:58:0a:80:00:48 10.128.0.72 fd02:0:0:1::48
+2025-11-17T09:42:26.872634697Z 2025-11-17T09:42:26.872Z|00378|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-59b5566b46-czsqx ovn-installed in OVS
+2025-11-17T09:42:26.872634697Z 2025-11-17T09:42:26.872Z|00379|binding|INFO|Setting lport openshift-oauth-apiserver_apiserver-59b5566b46-czsqx up in Southbound
+2025-11-17T09:42:45.593755136Z 2025-11-17T09:42:45.593Z|00380|binding|INFO|Releasing lport openshift-apiserver_apiserver-c96548dc-krjl7 from this chassis (sb_readonly=0)
+2025-11-17T09:42:45.593755136Z 2025-11-17T09:42:45.593Z|00381|binding|INFO|Setting lport openshift-apiserver_apiserver-c96548dc-krjl7 down in Southbound
+2025-11-17T09:42:47.115766631Z 2025-11-17T09:42:47.115Z|00382|binding|INFO|Claiming lport openshift-apiserver_apiserver-844688b4f5-gcqpj for this chassis.
+2025-11-17T09:42:47.115766631Z 2025-11-17T09:42:47.115Z|00383|binding|INFO|openshift-apiserver_apiserver-844688b4f5-gcqpj: Claiming 0a:58:0a:80:00:49 10.128.0.73 fd02:0:0:1::49
+2025-11-17T09:42:47.143497117Z 2025-11-17T09:42:47.143Z|00384|binding|INFO|Setting lport openshift-apiserver_apiserver-844688b4f5-gcqpj ovn-installed in OVS
+2025-11-17T09:42:47.143497117Z 2025-11-17T09:42:47.143Z|00385|binding|INFO|Setting lport openshift-apiserver_apiserver-844688b4f5-gcqpj up in Southbound
+2025-11-17T09:42:53.545402682Z 2025-11-17T09:42:53.545Z|00386|binding|INFO|Releasing lport openshift-etcd_installer-10-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:42:53.545402682Z 2025-11-17T09:42:53.545Z|00387|binding|INFO|Setting lport openshift-etcd_installer-10-XXXXXX1 down in Southbound
+2025-11-17T09:43:31.164103975Z 2025-11-17T09:43:31.164Z|00388|memory_trim|INFO|Detected inactivity (last active 30001 ms ago): trimming memory
+2025-11-17T09:44:52.928016637Z 2025-11-17T09:44:52.927Z|00389|memory_trim|INFO|Detected inactivity (last active 30002 ms ago): trimming memory
+2025-11-17T09:45:00.629522524Z 2025-11-17T09:45:00.629Z|00390|binding|INFO|Claiming lport openshift-kube-apiserver_installer-7-XXXXXX1 for this chassis.
+2025-11-17T09:45:00.629522524Z 2025-11-17T09:45:00.629Z|00391|binding|INFO|openshift-kube-apiserver_installer-7-XXXXXX1: Claiming 0a:58:0a:80:00:4a 10.128.0.74 fd02:0:0:1::4a
+2025-11-17T09:45:00.666083034Z 2025-11-17T09:45:00.666Z|00392|binding|INFO|Setting lport openshift-kube-apiserver_installer-7-XXXXXX1 up in Southbound
+2025-11-17T09:45:00.666606347Z 2025-11-17T09:45:00.666Z|00393|binding|INFO|Setting lport openshift-kube-apiserver_installer-7-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:45:42.282908316Z 2025-11-17T09:45:42.282Z|00394|binding|INFO|Releasing lport openshift-kube-apiserver_installer-7-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:45:42.282908316Z 2025-11-17T09:45:42.282Z|00395|binding|INFO|Setting lport openshift-kube-apiserver_installer-7-XXXXXX1 down in Southbound
+2025-11-17T09:46:29.911655579Z 2025-11-17T09:46:29.911Z|00396|memory_trim|INFO|Detected inactivity (last active 30001 ms ago): trimming memory
+2025-11-17T09:46:33.251280143Z 2025-11-17T09:46:33.251Z|00397|binding|INFO|Claiming lport openshift-etcd_revision-pruner-11-XXXXXX1 for this chassis.
+2025-11-17T09:46:33.251280143Z 2025-11-17T09:46:33.251Z|00398|binding|INFO|openshift-etcd_revision-pruner-11-XXXXXX1: Claiming 0a:58:0a:80:00:4b 10.128.0.75 fd02:0:0:1::4b
+2025-11-17T09:46:33.281074498Z 2025-11-17T09:46:33.281Z|00399|binding|INFO|Setting lport openshift-etcd_revision-pruner-11-XXXXXX1 up in Southbound
+2025-11-17T09:46:33.281565154Z 2025-11-17T09:46:33.281Z|00400|binding|INFO|Setting lport openshift-etcd_revision-pruner-11-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:46:37.519573748Z 2025-11-17T09:46:37.519Z|00401|binding|INFO|Releasing lport openshift-etcd_revision-pruner-11-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:46:37.519573748Z 2025-11-17T09:46:37.519Z|00402|binding|INFO|Setting lport openshift-etcd_revision-pruner-11-XXXXXX1 down in Southbound
+2025-11-17T09:46:54.557762741Z 2025-11-17T09:46:54.556Z|00403|binding|INFO|Claiming lport openshift-marketplace_certified-operators-t86tc for this chassis.
+2025-11-17T09:46:54.557762741Z 2025-11-17T09:46:54.556Z|00404|binding|INFO|openshift-marketplace_certified-operators-t86tc: Claiming 0a:58:0a:80:00:4c 10.128.0.76 fd02:0:0:1::4c
+2025-11-17T09:46:54.622793908Z 2025-11-17T09:46:54.622Z|00405|binding|INFO|Setting lport openshift-marketplace_certified-operators-t86tc ovn-installed in OVS
+2025-11-17T09:46:54.622793908Z 2025-11-17T09:46:54.622Z|00406|binding|INFO|Setting lport openshift-marketplace_certified-operators-t86tc up in Southbound
+2025-11-17T09:46:54.656761200Z 2025-11-17T09:46:54.656Z|00407|binding|INFO|Claiming lport openshift-marketplace_redhat-marketplace-9mch7 for this chassis.
+2025-11-17T09:46:54.656761200Z 2025-11-17T09:46:54.656Z|00408|binding|INFO|openshift-marketplace_redhat-marketplace-9mch7: Claiming 0a:58:0a:80:00:4e 10.128.0.78 fd02:0:0:1::4e
+2025-11-17T09:46:54.708804504Z 2025-11-17T09:46:54.708Z|00409|binding|INFO|Setting lport openshift-marketplace_redhat-marketplace-9mch7 up in Southbound
+2025-11-17T09:46:54.710676919Z 2025-11-17T09:46:54.710Z|00410|binding|INFO|Setting lport openshift-marketplace_redhat-marketplace-9mch7 ovn-installed in OVS
+2025-11-17T09:46:54.727991013Z 2025-11-17T09:46:54.727Z|00411|binding|INFO|Claiming lport openshift-marketplace_community-operators-2qbss for this chassis.
+2025-11-17T09:46:54.727991013Z 2025-11-17T09:46:54.727Z|00412|binding|INFO|openshift-marketplace_community-operators-2qbss: Claiming 0a:58:0a:80:00:4d 10.128.0.77 fd02:0:0:1::4d
+2025-11-17T09:46:54.759254805Z 2025-11-17T09:46:54.759Z|00413|binding|INFO|Setting lport openshift-marketplace_community-operators-2qbss ovn-installed in OVS
+2025-11-17T09:46:54.759254805Z 2025-11-17T09:46:54.759Z|00414|binding|INFO|Setting lport openshift-marketplace_community-operators-2qbss up in Southbound
+2025-11-17T09:46:54.943478956Z 2025-11-17T09:46:54.943Z|00415|binding|INFO|Claiming lport openshift-marketplace_redhat-operators-9t5dt for this chassis.
+2025-11-17T09:46:54.943478956Z 2025-11-17T09:46:54.943Z|00416|binding|INFO|openshift-marketplace_redhat-operators-9t5dt: Claiming 0a:58:0a:80:00:4f 10.128.0.79 fd02:0:0:1::4f
+2025-11-17T09:46:54.981140577Z 2025-11-17T09:46:54.981Z|00417|binding|INFO|Setting lport openshift-marketplace_redhat-operators-9t5dt ovn-installed in OVS
+2025-11-17T09:46:54.981140577Z 2025-11-17T09:46:54.981Z|00418|binding|INFO|Setting lport openshift-marketplace_redhat-operators-9t5dt up in Southbound
+2025-11-17T09:47:06.913428053Z 2025-11-17T09:47:06.913Z|00419|binding|INFO|Releasing lport openshift-marketplace_certified-operators-t86tc from this chassis (sb_readonly=0)
+2025-11-17T09:47:06.913428053Z 2025-11-17T09:47:06.913Z|00420|binding|INFO|Setting lport openshift-marketplace_certified-operators-t86tc down in Southbound
+2025-11-17T09:47:06.915769315Z 2025-11-17T09:47:06.915Z|00421|binding|INFO|Releasing lport openshift-marketplace_redhat-marketplace-9mch7 from this chassis (sb_readonly=1)
+2025-11-17T09:47:06.916110430Z 2025-11-17T09:47:06.916Z|00422|if_status|INFO|Not setting lport openshift-marketplace_redhat-marketplace-9mch7 down as sb is readonly
+2025-11-17T09:47:06.919070676Z 2025-11-17T09:47:06.918Z|00423|binding|INFO|Setting lport openshift-marketplace_redhat-marketplace-9mch7 down in Southbound
+2025-11-17T09:47:06.959285770Z 2025-11-17T09:47:06.959Z|00424|binding|INFO|Releasing lport openshift-marketplace_community-operators-2qbss from this chassis (sb_readonly=0)
+2025-11-17T09:47:06.959285770Z 2025-11-17T09:47:06.959Z|00425|binding|INFO|Setting lport openshift-marketplace_community-operators-2qbss down in Southbound
+2025-11-17T09:47:07.935895256Z 2025-11-17T09:47:07.935Z|00426|binding|INFO|Releasing lport openshift-marketplace_redhat-operators-9t5dt from this chassis (sb_readonly=0)
+2025-11-17T09:47:07.935895256Z 2025-11-17T09:47:07.935Z|00427|binding|INFO|Setting lport openshift-marketplace_redhat-operators-9t5dt down in Southbound
+2025-11-17T09:47:50.026092444Z 2025-11-17T09:47:50.025Z|00428|memory_trim|INFO|Detected inactivity (last active 30003 ms ago): trimming memory
+2025-11-17T09:47:50.634981382Z 2025-11-17T09:47:50.634Z|00429|binding|INFO|Claiming lport openshift-kube-apiserver_revision-pruner-7-XXXXXX1 for this chassis.
+2025-11-17T09:47:50.634981382Z 2025-11-17T09:47:50.634Z|00430|binding|INFO|openshift-kube-apiserver_revision-pruner-7-XXXXXX1: Claiming 0a:58:0a:80:00:50 10.128.0.80 fd02:0:0:1::50
+2025-11-17T09:47:50.664194288Z 2025-11-17T09:47:50.664Z|00431|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-7-XXXXXX1 up in Southbound
+2025-11-17T09:47:50.664557553Z 2025-11-17T09:47:50.664Z|00432|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-7-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:47:54.982953203Z 2025-11-17T09:47:54.982Z|00433|binding|INFO|Releasing lport openshift-kube-apiserver_revision-pruner-7-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:47:54.982953203Z 2025-11-17T09:47:54.982Z|00434|binding|INFO|Setting lport openshift-kube-apiserver_revision-pruner-7-XXXXXX1 down in Southbound
+2025-11-17T09:48:33.132567892Z 2025-11-17T09:48:33.132Z|00435|memory_trim|INFO|Detected inactivity (last active 30004 ms ago): trimming memory
+2025-11-17T09:48:45.390014652Z 2025-11-17T09:48:45.389Z|00436|binding|INFO|Claiming lport openshift-etcd_installer-11-XXXXXX1 for this chassis.
+2025-11-17T09:48:45.390014652Z 2025-11-17T09:48:45.389Z|00437|binding|INFO|openshift-etcd_installer-11-XXXXXX1: Claiming 0a:58:0a:80:00:51 10.128.0.81 fd02:0:0:1::51
+2025-11-17T09:48:45.421837938Z 2025-11-17T09:48:45.421Z|00438|binding|INFO|Setting lport openshift-etcd_installer-11-XXXXXX1 up in Southbound
+2025-11-17T09:48:45.422275484Z 2025-11-17T09:48:45.422Z|00439|binding|INFO|Setting lport openshift-etcd_installer-11-XXXXXX1 ovn-installed in OVS
+2025-11-17T09:49:16.129352508Z 2025-11-17T09:49:16.129Z|00440|memory_trim|INFO|Detected inactivity (last active 30008 ms ago): trimming memory
+2025-11-17T09:49:21.355121927Z 2025-11-17T09:49:21.355Z|00441|binding|INFO|Releasing lport openshift-etcd_installer-11-XXXXXX1 from this chassis (sb_readonly=0)
+2025-11-17T09:49:21.355121927Z 2025-11-17T09:49:21.355Z|00442|binding|INFO|Setting lport openshift-etcd_installer-11-XXXXXX1 down in Southbound
+2025-11-17T09:49:51.529425873Z 2025-11-17T09:49:51.529Z|00443|memory_trim|INFO|Detected inactivity (last active 30019 ms ago): trimming memory
+2025-11-17T09:50:48.092451569Z 2025-11-17T09:50:48.092Z|00444|memory_trim|INFO|Detected inactivity (last active 30012 ms ago): trimming memory
+2025-11-17T09:52:14.763011143Z 2025-11-17T09:52:14.762Z|00445|memory_trim|INFO|Detected inactivity (last active 30003 ms ago): trimming memory

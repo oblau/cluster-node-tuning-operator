@@ -1,0 +1,40 @@
+---
+apiVersion: v1
+imagePullSecrets:
+- name: multus-ac-dockercfg-krddr
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2025-11-17T09:18:10Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"de0dec5f-c369-4191-91db-e20c2450d94e"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2025-11-17T09:18:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:imagePullSecrets: {}
+      f:secrets:
+        .: {}
+        k:{"name":"multus-ac-dockercfg-krddr"}: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2025-11-17T09:30:32Z"
+  name: multus-ac
+  namespace: openshift-multus
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: de0dec5f-c369-4191-91db-e20c2450d94e
+  resourceVersion: "17591"
+  uid: 8b7bddb6-057f-4509-a492-213a3b6c7b78
+secrets:
+- name: multus-ac-dockercfg-krddr

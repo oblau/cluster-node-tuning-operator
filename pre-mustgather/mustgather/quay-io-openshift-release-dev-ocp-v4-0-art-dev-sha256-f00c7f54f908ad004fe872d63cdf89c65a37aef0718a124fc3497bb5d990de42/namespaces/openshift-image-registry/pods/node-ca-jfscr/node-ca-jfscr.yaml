@@ -1,0 +1,296 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/scc: privileged
+  creationTimestamp: "2025-11-17T09:30:00Z"
+  generateName: node-ca-
+  labels:
+    controller-revision-hash: d8bfb84f
+    name: node-ca
+    pod-template-generation: "1"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:controller-revision-hash: {}
+          f:name: {}
+          f:pod-template-generation: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"3ec3945c-ee8b-4325-a039-964a262370ba"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"node-ca"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+              f:runAsGroup: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/docker/certs.d"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/tmp/serviceca"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"host"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"serviceca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-11-17T09:30:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"XXXXXXXXXXX"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"2620:52:0:2e1a::21"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:30:27Z"
+  name: node-ca-jfscr
+  namespace: openshift-image-registry
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: node-ca
+    uid: 3ec3945c-ee8b-4325-a039-964a262370ba
+  resourceVersion: "16079"
+  uid: baafd7af-d4a1-4771-83f3-bd47c78eddbe
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - XXXXXX1
+  containers:
+  - command:
+    - /bin/sh
+    - -c
+    - |
+      trap 'jobs -p | xargs -r kill; echo shutting down node-ca; exit 0' TERM
+      while [ true ];
+      do
+        for f in $(ls /tmp/serviceca); do
+            echo $f
+            ca_file_path="/tmp/serviceca/${f}"
+            f=$(echo $f | sed  -r 's/(.*)\.\./\1:/')
+            reg_dir_path="/etc/docker/certs.d/${f}"
+            if [ -e "${reg_dir_path}" ]; then
+                cp -u $ca_file_path $reg_dir_path/ca.crt
+            else
+                mkdir $reg_dir_path
+                cp $ca_file_path $reg_dir_path/ca.crt
+            fi
+        done
+        for d in $(ls /etc/docker/certs.d); do
+            echo $d
+            dp=$(echo $d | sed  -r 's/(.*):/\1\.\./')
+            reg_conf_path="/tmp/serviceca/${dp}"
+            if [ ! -e "${reg_conf_path}" ]; then
+                rm -rf /etc/docker/certs.d/$d
+            fi
+        done
+        sleep 60 & wait ${!}
+      done
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3de3b6d3f91f80c901c6bb073e939240a5a239a8333e10d4ba24a7d7e5b5990d
+    imagePullPolicy: IfNotPresent
+    name: node-ca
+    resources:
+      requests:
+        cpu: 10m
+        memory: 10Mi
+    securityContext:
+      privileged: true
+      runAsGroup: 0
+      runAsNonRoot: true
+      runAsUser: 1001
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /tmp/serviceca
+      name: serviceca
+    - mountPath: /etc/docker/certs.d
+      name: host
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-qdqhs
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: XXXXXX1
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: node-ca
+  serviceAccountName: node-ca
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/docker/certs.d
+      type: ""
+    name: host
+  - configMap:
+      defaultMode: 420
+      name: image-registry-certificates
+    name: serviceca
+  - name: kube-api-access-qdqhs
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:30:15Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:30:27Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:30:27Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:30:15Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://95bb85f9024f3cd71095c4e4ba0a9ae7a1dc9630f788d8ff5cd5999c66c9c845
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3de3b6d3f91f80c901c6bb073e939240a5a239a8333e10d4ba24a7d7e5b5990d
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3de3b6d3f91f80c901c6bb073e939240a5a239a8333e10d4ba24a7d7e5b5990d
+    lastState: {}
+    name: node-ca
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:30:27Z"
+  hostIP: XXXXXXXXXXX
+  phase: Running
+  podIP: XXXXXXXXXXX
+  podIPs:
+  - ip: XXXXXXXXXXX
+  - ip: 2620:52:0:2e1a::21
+  qosClass: Burstable
+  startTime: "2025-11-17T09:30:15Z"

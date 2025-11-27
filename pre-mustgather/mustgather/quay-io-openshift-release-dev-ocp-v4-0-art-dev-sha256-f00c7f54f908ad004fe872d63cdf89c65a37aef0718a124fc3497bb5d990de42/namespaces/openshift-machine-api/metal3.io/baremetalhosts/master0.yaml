@@ -1,0 +1,291 @@
+---
+apiVersion: metal3.io/v1alpha1
+kind: BareMetalHost
+metadata:
+  creationTimestamp: "2025-11-17T09:05:58Z"
+  finalizers:
+  - baremetalhost.metal3.io
+  generation: 2
+  managedFields:
+  - apiVersion: metal3.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:automatedCleaningMode: {}
+        f:bmc:
+          .: {}
+          f:address: {}
+          f:credentialsName: {}
+        f:bootMACAddress: {}
+        f:bootMode: {}
+        f:consumerRef: {}
+        f:customDeploy:
+          .: {}
+          f:method: {}
+        f:externallyProvisioned: {}
+        f:hardwareProfile: {}
+        f:online: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2025-11-17T09:05:58Z"
+  - apiVersion: metal3.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"baremetalhost.metal3.io": {}
+    manager: Go-http-client
+    operation: Update
+    time: "2025-11-17T09:27:52Z"
+  - apiVersion: metal3.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:errorCount: {}
+        f:errorMessage: {}
+        f:goodCredentials: {}
+        f:hardware:
+          .: {}
+          f:cpu:
+            .: {}
+            f:arch: {}
+            f:count: {}
+            f:flags: {}
+            f:model: {}
+          f:firmware:
+            .: {}
+            f:bios: {}
+          f:nics: {}
+          f:ramMebibytes: {}
+          f:storage: {}
+          f:systemVendor:
+            .: {}
+            f:manufacturer: {}
+            f:productName: {}
+        f:hardwareProfile: {}
+        f:lastUpdated: {}
+        f:operationHistory:
+          .: {}
+          f:deprovision:
+            .: {}
+            f:end: {}
+            f:start: {}
+          f:inspect:
+            .: {}
+            f:end: {}
+            f:start: {}
+          f:provision:
+            .: {}
+            f:end: {}
+            f:start: {}
+          f:register:
+            .: {}
+            f:end: {}
+            f:start: {}
+        f:operationalStatus: {}
+        f:poweredOn: {}
+        f:provisioning:
+          .: {}
+          f:ID: {}
+          f:image:
+            .: {}
+            f:url: {}
+          f:state: {}
+        f:triedCredentials: {}
+    manager: Go-http-client
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:27:52Z"
+  - apiVersion: metal3.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:userData: {}
+    manager: machine-controller-manager
+    operation: Update
+    time: "2025-11-17T09:29:44Z"
+  name: XXXXXX0
+  namespace: openshift-machine-api
+  resourceVersion: "15425"
+  uid: 95cbd55d-19ca-47db-9d26-8c5b40b04877
+spec:
+  automatedCleaningMode: metadata
+  bmc:
+    address: ""
+    credentialsName: ""
+  bootMACAddress: XXXXXXXXXXXXXXXXX
+  bootMode: UEFI
+  consumerRef:
+    apiVersion: machine.openshift.io/v1beta1
+    kind: Machine
+    name: hlxcl51-5vf88-XXXXXX-0
+    namespace: openshift-machine-api
+  customDeploy:
+    method: install_coreos
+  externallyProvisioned: true
+  hardwareProfile: unknown
+  online: true
+  userData:
+    name: XXXXXX-user-data-managed
+    namespace: openshift-machine-api
+status:
+  errorCount: 0
+  errorMessage: ""
+  goodCredentials: {}
+  hardware:
+    cpu:
+      arch: x86_64
+      count: 12
+      flags:
+      - fpu
+      - vme
+      - de
+      - pse
+      - tsc
+      - msr
+      - pae
+      - mce
+      - cx8
+      - apic
+      - sep
+      - mtrr
+      - pge
+      - mca
+      - cmov
+      - pat
+      - pse36
+      - clflush
+      - mmx
+      - fxsr
+      - sse
+      - sse2
+      - ss
+      - syscall
+      - nx
+      - pdpe1gb
+      - rdtscp
+      - lm
+      - constant_tsc
+      - arch_perfmon
+      - rep_good
+      - nopl
+      - xtopology
+      - cpuid
+      - tsc_known_freq
+      - pni
+      - pclmulqdq
+      - vmx
+      - ssse3
+      - fma
+      - cx16
+      - pdcm
+      - pcid
+      - sse4_1
+      - sse4_2
+      - x2apic
+      - movbe
+      - popcnt
+      - tsc_deadline_timer
+      - aes
+      - xsave
+      - avx
+      - f16c
+      - rdrand
+      - XXXXXXXXXX
+      - lahf_lm
+      - abm
+      - 3dnowprefetch
+      - cpuid_fault
+      - invpcid_single
+      - ssbd
+      - ibrs
+      - ibpb
+      - stibp
+      - ibrs_enhanced
+      - tpr_shadow
+      - vnmi
+      - flexpriority
+      - ept
+      - vpid
+      - ept_ad
+      - fsgsbase
+      - tsc_adjust
+      - bmi1
+      - avx2
+      - smep
+      - bmi2
+      - erms
+      - invpcid
+      - mpx
+      - avx512f
+      - avx512dq
+      - rdseed
+      - adx
+      - smap
+      - clflushopt
+      - clwb
+      - avx512cd
+      - avx512bw
+      - avx512vl
+      - xsaveopt
+      - xsavec
+      - xgetbv1
+      - xsaves
+      - arat
+      - umip
+      - pku
+      - ospke
+      - avx512_vnni
+      - md_clear
+      - flush_l1d
+      - arch_capabilities
+      model: Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz
+    firmware:
+      bios: {}
+    nics:
+    - ip: XXXXXXXXXXX
+      mac: XXXXXXXXXXXXXXXXX
+      model: "0x0001"
+      name: enp1s0
+    ramMebibytes: 32768
+    storage:
+    - hctl: "0:0:0:0"
+      model: QEMU_DVD-ROM
+      name: /dev/disk/by-path/pci-0000:00:1f.2-ata-1.0
+      serialNumber: QM00001
+      sizeBytes: 1166946304
+      vendor: QEMU
+    - name: /dev/disk/by-path/pci-0000:04:00.0
+      rotational: true
+      serialNumber: disk-main
+      sizeBytes: 322122547200
+      vendor: "0x1af4"
+    systemVendor:
+      manufacturer: Red Hat
+      productName: KVM
+  hardwareProfile: ""
+  lastUpdated: "2025-11-17T09:27:52Z"
+  operationHistory:
+    deprovision:
+      end: null
+      start: null
+    inspect:
+      end: null
+      start: null
+    provision:
+      end: null
+      start: null
+    register:
+      end: null
+      start: null
+  operationalStatus: discovered
+  poweredOn: true
+  provisioning:
+    ID: ""
+    image:
+      url: ""
+    state: unmanaged
+  triedCredentials: {}

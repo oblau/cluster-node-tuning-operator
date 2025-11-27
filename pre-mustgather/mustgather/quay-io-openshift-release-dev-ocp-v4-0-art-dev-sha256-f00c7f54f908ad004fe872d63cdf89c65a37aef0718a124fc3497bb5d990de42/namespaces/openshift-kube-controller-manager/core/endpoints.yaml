@@ -1,0 +1,60 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:42:24Z"
+    creationTimestamp: "2025-11-17T09:20:32Z"
+    labels:
+      prometheus: kube-controller-manager
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:prometheus: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:42:24Z"
+    name: kube-controller-manager
+    namespace: openshift-kube-controller-manager
+    resourceVersion: "28491"
+    uid: 801f8219-71c0-42eb-96b4-057c5ba90548
+  subsets:
+  - addresses:
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX0
+      targetRef:
+        kind: Pod
+        name: kube-controller-manager-XXXXXX0
+        namespace: openshift-kube-controller-manager
+        uid: c08587c2-774b-4049-a625-3132559fd18f
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX1
+      targetRef:
+        kind: Pod
+        name: kube-controller-manager-XXXXXX1
+        namespace: openshift-kube-controller-manager
+        uid: 5144cb2f-da3d-4c69-aa73-b55d411369a9
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX2
+      targetRef:
+        kind: Pod
+        name: kube-controller-manager-XXXXXX2
+        namespace: openshift-kube-controller-manager
+        uid: 7706cad9-3fa2-465e-8ccc-a1a25bcad9ed
+    ports:
+    - name: https
+      port: 10257
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "32506"

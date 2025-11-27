@@ -1,0 +1,35 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2025-11-17T09:18:18Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"de0dec5f-c369-4191-91db-e20c2450d94e"}: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2025-11-17T09:18:18Z"
+  name: openshift-ovn-kubernetes-node-identity-limited
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: de0dec5f-c369-4191-91db-e20c2450d94e
+  resourceVersion: "4841"
+  uid: a1d81183-0550-42af-b212-fafa76635636
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: openshift-ovn-kubernetes-node-limited
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: Group
+  name: system:ovn-nodes

@@ -1,0 +1,66 @@
+---
+apiVersion: policy/v1
+items:
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:28Z"
+    generation: 2
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:minAvailable: {}
+          f:selector: {}
+      manager: cluster-kube-apiserver-operator
+      operation: Update
+      time: "2025-11-17T09:36:53Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:47:07Z"
+    name: kube-apiserver-guard-pdb
+    namespace: openshift-kube-apiserver
+    resourceVersion: "30464"
+    uid: 296957f9-f4a6-4127-b36b-4c70944f13a8
+  spec:
+    minAvailable: 2
+    selector:
+      matchLabels:
+        app: guard
+  status:
+    conditions:
+    - lastTransitionTime: "2025-11-17T09:47:07Z"
+      message: ""
+      observedGeneration: 2
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 3
+    desiredHealthy: 2
+    disruptionsAllowed: 1
+    expectedPods: 3
+    observedGeneration: 2
+kind: PodDisruptionBudgetList
+metadata:
+  resourceVersion: "32474"

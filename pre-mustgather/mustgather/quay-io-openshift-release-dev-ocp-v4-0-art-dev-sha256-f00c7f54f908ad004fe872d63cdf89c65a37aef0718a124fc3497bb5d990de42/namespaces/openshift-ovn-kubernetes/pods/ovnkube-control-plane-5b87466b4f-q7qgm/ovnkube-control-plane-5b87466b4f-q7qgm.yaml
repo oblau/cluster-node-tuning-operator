@@ -1,0 +1,469 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    networkoperator.openshift.io/cluster-network-cidr: 10.128.0.0/14,fd02::/48
+    networkoperator.openshift.io/hybrid-overlay-status: disabled
+    networkoperator.openshift.io/ip-family-mode: dual-stack
+  creationTimestamp: "2025-11-17T09:18:30Z"
+  generateName: ovnkube-control-plane-5b87466b4f-
+  labels:
+    app: ovnkube-control-plane
+    component: network
+    kubernetes.io/os: linux
+    openshift.io/component: network
+    pod-template-hash: 5b87466b4f
+    type: infra
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:networkoperator.openshift.io/cluster-network-cidr: {}
+          f:networkoperator.openshift.io/hybrid-overlay-status: {}
+          f:networkoperator.openshift.io/ip-family-mode: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:component: {}
+          f:kubernetes.io/os: {}
+          f:openshift.io/component: {}
+          f:pod-template-hash: {}
+          f:type: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"68caf1af-0598-47fe-8995-d71a82d3541d"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"kube-rbac-proxy"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9108,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/pki/tls/metrics-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+          k:{"name":"ovnkube-cluster-manager"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"K8S_NODE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"OVN_KUBE_LOG_LEVEL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":29108,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/env"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/run/ovnkube-config/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"env-overrides"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+          k:{"name":"ovn-control-plane-metrics-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+          k:{"name":"ovnkube-config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-11-17T09:18:30Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"XXXXXXXXXXX"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"2620:52:0:2e1a::22"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:33:07Z"
+  name: ovnkube-control-plane-5b87466b4f-q7qgm
+  namespace: openshift-ovn-kubernetes
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: ovnkube-control-plane-5b87466b4f
+    uid: 68caf1af-0598-47fe-8995-d71a82d3541d
+  resourceVersion: "19505"
+  uid: 5512ce15-073b-4e53-98f0-31cea4e2c227
+spec:
+  containers:
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      #!/bin/bash
+      set -euo pipefail
+      TLS_PK=/etc/pki/tls/metrics-cert/tls.key
+      TLS_CERT=/etc/pki/tls/metrics-cert/tls.crt
+      # As the secret mount is optional we must wait for the files to be present.
+      # The service is created in monitor.yaml and this is created in sdn.yaml.
+      TS=$(date +%s)
+      WARN_TS=$(( ${TS} + $(( 20 * 60)) ))
+      HAS_LOGGED_INFO=0
+
+      log_missing_certs(){
+          CUR_TS=$(date +%s)
+          if [[ "${CUR_TS}" -gt "WARN_TS"  ]]; then
+            echo $(date -Iseconds) WARN: ovn-control-plane-metrics-cert not mounted after 20 minutes.
+          elif [[ "${HAS_LOGGED_INFO}" -eq 0 ]] ; then
+            echo $(date -Iseconds) INFO: ovn-control-plane-metrics-cert not mounted. Waiting 20 minutes.
+            HAS_LOGGED_INFO=1
+          fi
+      }
+      while [[ ! -f "${TLS_PK}" ||  ! -f "${TLS_CERT}" ]] ; do
+        log_missing_certs
+        sleep 5
+      done
+
+      echo $(date -Iseconds) INFO: ovn-control-plane-metrics-certs mounted, starting kube-rbac-proxy
+      exec /usr/bin/kube-rbac-proxy \
+        --logtostderr \
+        --secure-listen-address=:9108 \
+        --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 \
+        --upstream=http://127.0.0.1:29108/ \
+        --tls-private-key-file=${TLS_PK} \
+        --tls-cert-file=${TLS_CERT}
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy
+    ports:
+    - containerPort: 9108
+      hostPort: 9108
+      name: https
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/pki/tls/metrics-cert
+      name: ovn-control-plane-metrics-cert
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-s8glg
+      readOnly: true
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      set -xe
+      if [[ -f "/env/_XXXXXX" ]]; then
+        set -o allexport
+        source "/env/_XXXXXX"
+        set +o allexport
+      fi
+
+      ovn_v4_join_subnet_opt=
+      if [[ "" != "" ]]; then
+        ovn_v4_join_subnet_opt="--gateway-v4-join-subnet "
+      fi
+      ovn_v6_join_subnet_opt=
+      if [[ "" != "" ]]; then
+        ovn_v6_join_subnet_opt="--gateway-v6-join-subnet "
+      fi
+
+      ovn_v4_transit_switch_subnet_opt=
+      if [[ "" != "" ]]; then
+        ovn_v4_transit_switch_subnet_opt="--cluster-manager-v4-transit-switch-subnet "
+      fi
+      ovn_v6_transit_switch_subnet_opt=
+      if [[ "" != "" ]]; then
+        ovn_v6_transit_switch_subnet_opt="--cluster-manager-v6-transit-switch-subnet "
+      fi
+
+      echo "I$(date "+%m%d %H:%M:%S.%N") - ovnkube-control-plane - start ovnkube --init-cluster-manager ${K8S_NODE}"
+      exec /usr/bin/ovnkube \
+        --enable-interconnect \
+        --init-cluster-manager "${K8S_NODE}" \
+        --config-file=/run/ovnkube-config/ovnkube.conf \
+        --loglevel "${OVN_KUBE_LOG_LEVEL}" \
+        --metrics-bind-address "127.0.0.1:29108" \
+        --metrics-enable-pprof \
+        --metrics-enable-config-duration \
+        ${ovn_v4_join_subnet_opt} \
+        ${ovn_v6_join_subnet_opt} \
+        ${ovn_v4_transit_switch_subnet_opt} \
+        ${ovn_v6_transit_switch_subnet_opt}
+    env:
+    - name: OVN_KUBE_LOG_LEVEL
+      value: "4"
+    - name: K8S_NODE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a8e92e3d80cba91d101ae4133ece6c98185165da5c1fec6ae9fcb91320ed5ef4
+    imagePullPolicy: IfNotPresent
+    name: ovnkube-cluster-manager
+    ports:
+    - containerPort: 29108
+      hostPort: 29108
+      name: metrics-port
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 300Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /run/ovnkube-config/
+      name: ovnkube-config
+    - mountPath: /env
+      name: env-overrides
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-s8glg
+      readOnly: true
+  dnsPolicy: Default
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: XXXXXX2
+  nodeSelector:
+    beta.kubernetes.io/os: linux
+    node-role.kubernetes.io/XXXXXX: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: ovn-kubernetes-control-plane
+  serviceAccountName: ovn-kubernetes-control-plane
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - key: node-role.kubernetes.io/XXXXXX
+    operator: Exists
+  - key: node.kubernetes.io/not-ready
+    operator: Exists
+  - key: node.kubernetes.io/unreachable
+    operator: Exists
+  - key: node.kubernetes.io/network-unavailable
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: ovnkube-config
+    name: ovnkube-config
+  - configMap:
+      defaultMode: 420
+      name: env-overrides
+      optional: true
+    name: env-overrides
+  - name: ovn-control-plane-metrics-cert
+    secret:
+      defaultMode: 420
+      optional: true
+      secretName: ovn-control-plane-metrics-cert
+  - name: kube-api-access-s8glg
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:18:30Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:33:07Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:33:07Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:18:30Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://45b9a4f441b3e291d69993cb569803aebda8d09c4dc216b96e356d7257e12625
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff
+    lastState: {}
+    name: kube-rbac-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:18:34Z"
+  - containerID: cri-o://5530607b1b7f7047f8f2950a022f5524796a974bd02909baf641d7c12ced0783
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a8e92e3d80cba91d101ae4133ece6c98185165da5c1fec6ae9fcb91320ed5ef4
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a8e92e3d80cba91d101ae4133ece6c98185165da5c1fec6ae9fcb91320ed5ef4
+    lastState:
+      terminated:
+        containerID: cri-o://4d50879bfd02ffca916880e5ece96280027a29cacce97e5d2ed61d8494fbcd09
+        exitCode: 0
+        finishedAt: "2025-11-17T09:32:55Z"
+        reason: Completed
+        startedAt: "2025-11-17T09:27:05Z"
+    name: ovnkube-cluster-manager
+    ready: true
+    restartCount: 2
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:33:07Z"
+  hostIP: XXXXXXXXXXX
+  phase: Running
+  podIP: XXXXXXXXXXX
+  podIPs:
+  - ip: XXXXXXXXXXX
+  - ip: 2620:52:0:2e1a::22
+  qosClass: Burstable
+  startTime: "2025-11-17T09:18:30Z"

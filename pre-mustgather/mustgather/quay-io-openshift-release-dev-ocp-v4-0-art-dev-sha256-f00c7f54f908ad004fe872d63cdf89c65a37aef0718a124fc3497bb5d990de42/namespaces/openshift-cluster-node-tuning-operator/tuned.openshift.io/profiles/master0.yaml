@@ -1,0 +1,75 @@
+---
+apiVersion: tuned.openshift.io/v1
+kind: Profile
+metadata:
+  creationTimestamp: "2025-11-17T09:33:35Z"
+  generation: 2
+  managedFields:
+  - apiVersion: tuned.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"8dd5f241-060d-4fb6-b430-94b92f4ae427"}: {}
+      f:spec:
+        .: {}
+        f:config:
+          .: {}
+          f:debug: {}
+          f:providerName: {}
+          f:tunedConfig: {}
+          f:tunedProfile: {}
+        f:profile: {}
+    manager: cluster-node-tuning-operator
+    operation: Update
+    time: "2025-11-17T09:36:53Z"
+  - apiVersion: tuned.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:tunedProfile: {}
+    manager: cluster-node-tuning-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:14Z"
+  name: XXXXXX0
+  namespace: openshift-cluster-node-tuning-operator
+  ownerReferences:
+  - apiVersion: tuned.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Tuned
+    name: default
+    uid: 8dd5f241-060d-4fb6-b430-94b92f4ae427
+  resourceVersion: "23431"
+  uid: e79efe2f-7c38-4f65-b6de-9d0ce3f8b9dc
+spec:
+  config:
+    debug: false
+    providerName: baremetalhost
+    tunedConfig: {}
+    tunedProfile: openshift-control-plane
+  profile:
+  - data: |
+      [main]
+      summary=Optimize systems running OpenShift (provider specific parent profile)
+      include=-provider-${f:exec:cat:/var/lib/ocp-tuned/provider},openshift
+    name: openshift
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:38:14Z"
+    message: TuneD profile applied.
+    reason: AsExpected
+    status: "True"
+    type: Applied
+  - lastTransitionTime: "2025-11-17T09:38:14Z"
+    message: 'No error messages observed by applying the TuneD daemon profile, only
+      warning(s). TuneD stderr:  WARNING  tuned.plugins.base: instance video: no matching
+      devices available'
+    reason: TunedWarning
+    status: "False"
+    type: Degraded
+  tunedProfile: openshift-control-plane

@@ -1,0 +1,41 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:58Z"
+    creationTimestamp: "2025-11-17T09:06:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:58Z"
+    name: cco-metrics
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "10501"
+    uid: 23d7ddb9-8d19-40af-b048-098634314310
+  subsets:
+  - addresses:
+    - ip: 10.129.0.17
+      nodeName: XXXXXX2
+      targetRef:
+        kind: Pod
+        name: cloud-credential-operator-556f884-xb6p6
+        namespace: openshift-cloud-credential-operator
+        uid: baa741d0-f224-4f26-a412-27efed90d4c0
+    ports:
+    - name: metrics
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "32421"

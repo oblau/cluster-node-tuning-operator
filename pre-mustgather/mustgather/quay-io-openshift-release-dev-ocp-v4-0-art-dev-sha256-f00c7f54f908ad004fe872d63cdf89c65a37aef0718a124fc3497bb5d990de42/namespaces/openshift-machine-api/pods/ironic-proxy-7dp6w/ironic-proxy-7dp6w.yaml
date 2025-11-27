@@ -1,0 +1,397 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/scc: privileged
+  creationTimestamp: "2025-11-17T09:38:22Z"
+  generateName: ironic-proxy-
+  labels:
+    baremetal.openshift.io/cluster-baremetal-operator: ironic-proxy
+    controller-revision-hash: 68b6c766cb
+    k8s-app: metal3
+    pod-template-generation: "1"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:baremetal.openshift.io/cluster-baremetal-operator: {}
+          f:controller-revision-hash: {}
+          f:k8s-app: {}
+          f:pod-template-generation: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d3e44b77-fa4d-43fc-b668-8d13961aca6d"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"ironic-proxy"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"IRONIC_INSPECTOR_PROXY_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_INSPECTOR_UPSTREAM_IP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_INSPECTOR_UPSTREAM_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_PROXY_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_UPSTREAM_IP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_UPSTREAM_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PROVISIONING_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":5050,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":6385,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/certs/ironic"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/certs/ironic-inspector"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"metal3-inspector-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"metal3-ironic-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"trusted-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-11-17T09:38:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"XXXXXXXXXXX"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"2620:52:0:2e1a::20"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:48Z"
+  name: ironic-proxy-7dp6w
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: ironic-proxy
+    uid: d3e44b77-fa4d-43fc-b668-8d13961aca6d
+  resourceVersion: "24431"
+  uid: 555b0387-bbe0-4ecf-b6eb-27f18576471e
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - XXXXXX0
+  containers:
+  - command:
+    - /bin/runironic-proxy
+    env:
+    - name: IRONIC_PROXY_PORT
+      value: "6385"
+    - name: IRONIC_INSPECTOR_PROXY_PORT
+      value: "5050"
+    - name: IRONIC_UPSTREAM_IP
+      value: XXXXXXXXXXX
+    - name: IRONIC_UPSTREAM_PORT
+      value: "6388"
+    - name: IRONIC_INSPECTOR_UPSTREAM_IP
+      value: XXXXXXXXXXX
+    - name: IRONIC_INSPECTOR_UPSTREAM_PORT
+      value: "5051"
+    - name: PROVISIONING_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.hostIP
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    imagePullPolicy: IfNotPresent
+    name: ironic-proxy
+    ports:
+    - containerPort: 6385
+      hostPort: 6385
+      name: ironic-proxy
+      protocol: TCP
+    - containerPort: 5050
+      hostPort: 5050
+      name: inspector-proxy
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 5m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /certs/ironic
+      name: metal3-ironic-tls
+      readOnly: true
+    - mountPath: /certs/ironic-inspector
+      name: metal3-inspector-tls
+      readOnly: true
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: trusted-ca
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-cxgtg
+      readOnly: true
+  dnsPolicy: ClusterFirstWithHostNet
+  enableServiceLinks: true
+  hostNetwork: true
+  imagePullSecrets:
+  - name: cluster-baremetal-operator-dockercfg-h4qrc
+  nodeName: XXXXXX0
+  nodeSelector:
+    node-role.kubernetes.io/XXXXXX: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    runAsNonRoot: false
+  serviceAccount: cluster-baremetal-operator
+  serviceAccountName: cluster-baremetal-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/XXXXXX
+  - key: CriticalAddonsOnly
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/disk-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/pid-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/unschedulable
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/network-unavailable
+    operator: Exists
+  volumes:
+  - name: metal3-ironic-tls
+    secret:
+      defaultMode: 420
+      secretName: metal3-ironic-tls
+  - name: metal3-inspector-tls
+    secret:
+      defaultMode: 420
+      secretName: metal3-ironic-tls
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: cbo-trusted-ca
+      optional: true
+    name: trusted-ca
+  - name: kube-api-access-cxgtg
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:38:22Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:38:48Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:38:48Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:38:22Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://c1a6b56dee601fa8bf3e6f7c1ac93679521dfa3d9c524653ea4123473a2645e7
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+    lastState: {}
+    name: ironic-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:38:47Z"
+  hostIP: XXXXXXXXXXX
+  phase: Running
+  podIP: XXXXXXXXXXX
+  podIPs:
+  - ip: XXXXXXXXXXX
+  - ip: 2620:52:0:2e1a::20
+  qosClass: Burstable
+  startTime: "2025-11-17T09:38:22Z"

@@ -1,0 +1,900 @@
+2025-11-17T09:26:57.103372363Z I1117 09:26:57.103216       1 main.go:24] Go Version: go1.20.12 X:strictfipsruntime
+2025-11-17T09:26:57.103516240Z I1117 09:26:57.103504       1 main.go:25] Go OS/Arch: linux/amd64
+2025-11-17T09:26:57.103537451Z I1117 09:26:57.103530       1 main.go:26] operator-sdk Version: v0.5.0+git
+2025-11-17T09:26:57.103602540Z I1117 09:26:57.103566       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:26:57.103918327Z I1117 09:26:57.103898       1 leaderelection.go:122] The leader election gives 4 retries and allows for 13s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m26s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:26:57.103975812Z I1117 09:26:57.103964       1 main.go:95] Watching machine-api objects only in namespace "openshift-machine-api" for reconciliation.
+2025-11-17T09:26:57.104499746Z I1117 09:26:57.104475       1 main.go:103] Registering Components.
+2025-11-17T09:26:57.116927099Z I1117 09:26:57.116873       1 main.go:115] Starting the Cmd.
+2025-11-17T09:26:57.117255710Z I1117 09:26:57.117221       1 reflector.go:287] Starting reflector *v1.Node (10h12m4.685604057s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:26:57.117255710Z I1117 09:26:57.117246       1 reflector.go:323] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:26:57.117284409Z I1117 09:26:57.117220       1 reflector.go:287] Starting reflector *v1beta1.Machine (9h18m6.412169447s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:26:57.117307622Z I1117 09:26:57.117299       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:27:12.985983299Z I1117 09:27:12.981738       1 trace.go:236] Trace[52616804]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233 (17-Nov-2025 09:26:57.117) (total time: 15864ms):
+2025-11-17T09:27:12.985983299Z Trace[52616804]: ---"Objects listed" error:<nil> 15864ms (09:27:12.981)
+2025-11-17T09:27:12.985983299Z Trace[52616804]: [15.864364191s] [15.864364191s] END
+2025-11-17T09:27:12.985983299Z I1117 09:27:12.982011       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:27:12.985983299Z I1117 09:27:12.982020       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:27:12.985983299Z I1117 09:27:12.982063       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:27:12.985983299Z I1117 09:27:12.982097       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:27:12.995779986Z I1117 09:27:12.993268       1 trace.go:236] Trace[489467326]: "Reflector ListAndWatch" name:sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233 (17-Nov-2025 09:26:57.117) (total time: 15875ms):
+2025-11-17T09:27:12.995779986Z Trace[489467326]: ---"Objects listed" error:<nil> 15875ms (09:27:12.993)
+2025-11-17T09:27:12.995779986Z Trace[489467326]: [15.875873978s] [15.875873978s] END
+2025-11-17T09:27:13.018764123Z I1117 09:27:13.017858       1 leaderelection.go:245] attempting to acquire leader lease openshift-machine-api/cluster-api-provider-nodelink-leader...
+2025-11-17T09:27:15.127820938Z I1117 09:27:15.127756       1 reflector.go:323] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:27:18.875774552Z I1117 09:27:18.874797       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:27:20.140244886Z I1117 09:27:20.140187       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:27:20.140244886Z I1117 09:27:20.140205       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:27:20.140244886Z I1117 09:27:20.140211       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:27:20.140244886Z I1117 09:27:20.140214       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:27:20.140244886Z I1117 09:27:20.140227       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:27:20.140244886Z I1117 09:27:20.140231       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:27:20.140244886Z I1117 09:27:20.140238       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:27:20.140288778Z I1117 09:27:20.140242       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:27:22.209297131Z I1117 09:27:22.209245       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:27:22.209297131Z I1117 09:27:22.209266       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:27:22.209297131Z I1117 09:27:22.209271       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:27:22.209297131Z I1117 09:27:22.209275       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:29:17.333580274Z I1117 09:29:17.333222       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:29:17.333580274Z I1117 09:29:17.333245       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:29:17.333580274Z I1117 09:29:17.333251       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:29:17.333580274Z I1117 09:29:17.333255       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:29:27.091700822Z I1117 09:29:27.091592       1 leaderelection.go:255] successfully acquired lease openshift-machine-api/cluster-api-provider-nodelink-leader
+2025-11-17T09:29:27.091986548Z I1117 09:29:27.091883       1 recorder.go:104] "events: machine-api-controllers-57fbbf9557-pdr5j_4a9f2ed1-5b59-44b5-952c-92092b31b4e2 became leader" type="Normal" object={"kind":"Lease","namespace":"openshift-machine-api","name":"cluster-api-provider-nodelink-leader","uid":"233f02d7-e844-47fa-8550-1fd0ac3f1328","apiVersion":"coordination.k8s.io/v1","resourceVersion":"15359"} reason="LeaderElection"
+2025-11-17T09:29:27.092022109Z I1117 09:29:27.092003       1 controller.go:177] "Starting EventSource" controller="nodelink-controller" source="kind source: *v1.Node"
+2025-11-17T09:29:27.092041193Z I1117 09:29:27.092029       1 controller.go:177] "Starting EventSource" controller="nodelink-controller" source="kind source: *v1beta1.Machine"
+2025-11-17T09:29:27.092041193Z I1117 09:29:27.092038       1 controller.go:185] "Starting Controller" controller="nodelink-controller"
+2025-11-17T09:29:27.092136072Z I1117 09:29:27.092118       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:27.092199535Z I1117 09:29:27.092174       1 controller.go:219] "Starting XXXXXXs" controller="nodelink-controller" XXXXXX count=1
+2025-11-17T09:29:27.092199535Z I1117 09:29:27.092192       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:27.092207820Z I1117 09:29:27.092198       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:29:27.092207820Z W1117 09:29:27.092203       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-0" has no providerID
+2025-11-17T09:29:27.092214472Z I1117 09:29:27.092206       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:29:27.092220707Z W1117 09:29:27.092210       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:27.092220707Z I1117 09:29:27.092217       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:29:27.092242296Z I1117 09:29:27.092226       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:27.092242296Z I1117 09:29:27.092224       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:29:27.092249933Z I1117 09:29:27.092242       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:27.092249933Z I1117 09:29:27.092246       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:29:27.092256631Z W1117 09:29:27.092250       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-1" has no providerID
+2025-11-17T09:29:27.092256631Z I1117 09:29:27.092253       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by IP
+2025-11-17T09:29:27.092262971Z W1117 09:29:27.092256       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:27.092262971Z I1117 09:29:27.092260       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-1" not found
+2025-11-17T09:29:27.092269982Z I1117 09:29:27.092266       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:27.092351830Z I1117 09:29:27.092329       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:29:27.092351830Z I1117 09:29:27.092339       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:29:27.092351830Z W1117 09:29:27.092343       1 nodelink_controller.go:431] Node "XXXXXX1" has no providerID
+2025-11-17T09:29:27.092351830Z I1117 09:29:27.092347       1 nodelink_controller.go:452] Finding machine from node "XXXXXX1" by IP
+2025-11-17T09:29:27.092362960Z I1117 09:29:27.092351       1 nodelink_controller.go:457] Found internal IP for node "XXXXXX1": "XXXXXXXXXXX"
+2025-11-17T09:29:27.092426156Z I1117 09:29:27.092406       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:27.092426156Z I1117 09:29:27.092422       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:29:27.092434031Z W1117 09:29:27.092429       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-2" has no providerID
+2025-11-17T09:29:27.092440727Z I1117 09:29:27.092434       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by IP
+2025-11-17T09:29:27.092453279Z W1117 09:29:27.092440       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:27.092453279Z I1117 09:29:27.092447       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-2" not found
+2025-11-17T09:29:27.092471482Z I1117 09:29:27.092459       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:27.092508244Z I1117 09:29:27.092493       1 nodelink_controller.go:481] Matching machine not found for node "XXXXXX1" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:27.092515142Z W1117 09:29:27.092506       1 nodelink_controller.go:215] Machine for node "XXXXXX1" not found
+2025-11-17T09:29:27.092551994Z I1117 09:29:27.092531       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:29:27.092551994Z I1117 09:29:27.092546       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:27.092559178Z I1117 09:29:27.092552       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:29:27.092559178Z W1117 09:29:27.092557       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-0-csjwc" has no providerID
+2025-11-17T09:29:27.092565938Z I1117 09:29:27.092560       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:29:27.092565938Z I1117 09:29:27.092560       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:29:27.092565938Z I1117 09:29:27.092563       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:29:27.092578189Z W1117 09:29:27.092566       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:27.092578189Z W1117 09:29:27.092567       1 nodelink_controller.go:431] Node "XXXXXX2" has no providerID
+2025-11-17T09:29:27.092578189Z I1117 09:29:27.092570       1 nodelink_controller.go:452] Finding machine from node "XXXXXX2" by IP
+2025-11-17T09:29:27.092578189Z I1117 09:29:27.092570       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:29:27.092578189Z I1117 09:29:27.092573       1 nodelink_controller.go:457] Found internal IP for node "XXXXXX2": "XXXXXXXXXXX"
+2025-11-17T09:29:27.092588808Z I1117 09:29:27.092582       1 nodelink_controller.go:481] Matching machine not found for node "XXXXXX2" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:27.092588808Z I1117 09:29:27.092583       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:27.092595379Z W1117 09:29:27.092588       1 nodelink_controller.go:215] Machine for node "XXXXXX2" not found
+2025-11-17T09:29:27.092601790Z I1117 09:29:27.092594       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:27.092601790Z I1117 09:29:27.092598       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:29:27.092608753Z W1117 09:29:27.092602       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" has no providerID
+2025-11-17T09:29:27.092608753Z I1117 09:29:27.092605       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:29:27.092615366Z W1117 09:29:27.092609       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:27.092615366Z I1117 09:29:27.092613       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:29:44.309707553Z I1117 09:29:44.307899       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.309707553Z I1117 09:29:44.307962       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.309707553Z I1117 09:29:44.307975       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:29:44.309707553Z W1117 09:29:44.307984       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-0" has no providerID
+2025-11-17T09:29:44.309707553Z I1117 09:29:44.307990       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:29:44.309707553Z W1117 09:29:44.307997       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.309707553Z I1117 09:29:44.308004       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:29:44.309707553Z I1117 09:29:44.308009       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.309707553Z I1117 09:29:44.308023       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.309707553Z I1117 09:29:44.308029       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:29:44.309707553Z W1117 09:29:44.308036       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-0" has no providerID
+2025-11-17T09:29:44.309707553Z I1117 09:29:44.308041       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:29:44.309707553Z W1117 09:29:44.308047       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.309707553Z I1117 09:29:44.308054       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:29:44.329294183Z I1117 09:29:44.329238       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.329294183Z I1117 09:29:44.329272       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.329318998Z I1117 09:29:44.329279       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:29:44.329318998Z W1117 09:29:44.329306       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-1" has no providerID
+2025-11-17T09:29:44.329318998Z I1117 09:29:44.329309       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by IP
+2025-11-17T09:29:44.329318998Z W1117 09:29:44.329314       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.329326483Z I1117 09:29:44.329318       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-1" not found
+2025-11-17T09:29:44.329326483Z I1117 09:29:44.329321       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.329341087Z I1117 09:29:44.329331       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.329341087Z I1117 09:29:44.329337       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:29:44.329346858Z W1117 09:29:44.329341       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-1" has no providerID
+2025-11-17T09:29:44.329346858Z I1117 09:29:44.329344       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by IP
+2025-11-17T09:29:44.329360782Z W1117 09:29:44.329348       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.329360782Z I1117 09:29:44.329351       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-1" not found
+2025-11-17T09:29:44.352247102Z I1117 09:29:44.352203       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.352247102Z I1117 09:29:44.352239       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.352271809Z I1117 09:29:44.352246       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:29:44.352271809Z W1117 09:29:44.352252       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-2" has no providerID
+2025-11-17T09:29:44.352271809Z I1117 09:29:44.352255       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by IP
+2025-11-17T09:29:44.352271809Z W1117 09:29:44.352259       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.352271809Z I1117 09:29:44.352263       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-2" not found
+2025-11-17T09:29:44.352271809Z I1117 09:29:44.352266       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.352300736Z I1117 09:29:44.352290       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.352300736Z I1117 09:29:44.352296       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:29:44.352307494Z W1117 09:29:44.352300       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-2" has no providerID
+2025-11-17T09:29:44.352307494Z I1117 09:29:44.352303       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by IP
+2025-11-17T09:29:44.352312982Z W1117 09:29:44.352307       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.352312982Z I1117 09:29:44.352310       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-2" not found
+2025-11-17T09:29:44.374152178Z I1117 09:29:44.374096       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.374152178Z I1117 09:29:44.374129       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.374152178Z I1117 09:29:44.374136       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:29:44.374152178Z W1117 09:29:44.374141       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-0-csjwc" has no providerID
+2025-11-17T09:29:44.374152178Z I1117 09:29:44.374145       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:29:44.374176402Z W1117 09:29:44.374149       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.374176402Z I1117 09:29:44.374154       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:29:44.374176402Z I1117 09:29:44.374157       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.374176402Z I1117 09:29:44.374170       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.374176402Z I1117 09:29:44.374174       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:29:44.374190977Z W1117 09:29:44.374178       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-0-csjwc" has no providerID
+2025-11-17T09:29:44.374190977Z I1117 09:29:44.374181       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:29:44.374190977Z W1117 09:29:44.374184       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.374190977Z I1117 09:29:44.374187       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:29:44.396313578Z I1117 09:29:44.396261       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.396313578Z I1117 09:29:44.396303       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.396336667Z I1117 09:29:44.396310       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:29:44.396336667Z W1117 09:29:44.396316       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" has no providerID
+2025-11-17T09:29:44.396336667Z I1117 09:29:44.396320       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:29:44.396336667Z W1117 09:29:44.396324       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.396336667Z I1117 09:29:44.396329       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:29:44.396336667Z I1117 09:29:44.396332       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.396366631Z I1117 09:29:44.396343       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.396366631Z I1117 09:29:44.396354       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:29:44.396366631Z W1117 09:29:44.396359       1 nodelink_controller.go:356] Machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" has no providerID
+2025-11-17T09:29:44.396366631Z I1117 09:29:44.396362       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:29:44.396375702Z W1117 09:29:44.396365       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.396375702Z I1117 09:29:44.396369       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:29:44.404579207Z I1117 09:29:44.404526       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:29:44.404579207Z I1117 09:29:44.404559       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.404601085Z I1117 09:29:44.404578       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.404601085Z I1117 09:29:44.404582       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:29:44.404631218Z I1117 09:29:44.404620       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:29:44.404631218Z W1117 09:29:44.404627       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.404654530Z I1117 09:29:44.404633       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:29:44.404654530Z I1117 09:29:44.404638       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.404663425Z I1117 09:29:44.404653       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.404663425Z I1117 09:29:44.404657       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:29:44.404673195Z I1117 09:29:44.404667       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:29:44.404681302Z W1117 09:29:44.404673       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.404702991Z I1117 09:29:44.404679       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:29:44.422372135Z I1117 09:29:44.422310       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.422372135Z I1117 09:29:44.422356       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.422410949Z I1117 09:29:44.422381       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.422410949Z I1117 09:29:44.422387       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:29:44.422452276Z I1117 09:29:44.422432       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by IP
+2025-11-17T09:29:44.422452276Z W1117 09:29:44.422444       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.422461837Z I1117 09:29:44.422450       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-1" not found
+2025-11-17T09:29:44.422461837Z I1117 09:29:44.422454       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.422492567Z I1117 09:29:44.422476       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.422492567Z I1117 09:29:44.422485       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:29:44.422500911Z I1117 09:29:44.422496       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by IP
+2025-11-17T09:29:44.422508600Z W1117 09:29:44.422502       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.422515965Z I1117 09:29:44.422507       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-1" not found
+2025-11-17T09:29:44.439501951Z I1117 09:29:44.439426       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.439501951Z I1117 09:29:44.439466       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.439540056Z I1117 09:29:44.439506       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.439540056Z I1117 09:29:44.439512       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:29:44.439540056Z I1117 09:29:44.439534       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by IP
+2025-11-17T09:29:44.439556432Z W1117 09:29:44.439538       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.439556432Z I1117 09:29:44.439542       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-2" not found
+2025-11-17T09:29:44.439556432Z I1117 09:29:44.439545       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.439556432Z I1117 09:29:44.439553       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.439563595Z I1117 09:29:44.439555       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:29:44.439572250Z I1117 09:29:44.439562       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by IP
+2025-11-17T09:29:44.439572250Z W1117 09:29:44.439566       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.439580191Z I1117 09:29:44.439569       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-2" not found
+2025-11-17T09:29:44.454347773Z I1117 09:29:44.454303       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/16079139-861a-4231-8459-c3dca9130db3" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:29:44.454347773Z I1117 09:29:44.454341       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.454371513Z I1117 09:29:44.454365       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.454371513Z I1117 09:29:44.454369       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:29:44.454406095Z I1117 09:29:44.454393       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:29:44.454406095Z W1117 09:29:44.454401       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.454413468Z I1117 09:29:44.454406       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:29:44.454413468Z I1117 09:29:44.454409       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.454428657Z I1117 09:29:44.454417       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.454428657Z I1117 09:29:44.454425       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:29:44.454435605Z I1117 09:29:44.454431       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:29:44.454441146Z W1117 09:29:44.454435       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.454441146Z I1117 09:29:44.454439       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:29:44.463266072Z I1117 09:29:44.463218       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/16079139-861a-4231-8459-c3dca9130db3" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:29:44.463266072Z I1117 09:29:44.463235       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/16079139-861a-4231-8459-c3dca9130db3" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:29:44.463306301Z I1117 09:29:44.463263       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.463306301Z I1117 09:29:44.463294       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.463306301Z I1117 09:29:44.463298       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:29:44.463332974Z I1117 09:29:44.463318       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:29:44.463332974Z W1117 09:29:44.463325       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.463332974Z I1117 09:29:44.463330       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:29:44.463339733Z I1117 09:29:44.463333       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.463356437Z I1117 09:29:44.463345       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.463356437Z I1117 09:29:44.463349       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:29:44.463362966Z I1117 09:29:44.463355       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:29:44.463362966Z W1117 09:29:44.463359       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.463368400Z I1117 09:29:44.463364       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:29:44.472516666Z I1117 09:29:44.472474       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:29:44.472542459Z I1117 09:29:44.472531       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.472574941Z I1117 09:29:44.472561       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.472574941Z I1117 09:29:44.472569       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:29:44.472599066Z I1117 09:29:44.472589       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:29:44.472599066Z W1117 09:29:44.472596       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.472605453Z I1117 09:29:44.472601       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:29:44.472610652Z I1117 09:29:44.472604       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.472647390Z I1117 09:29:44.472635       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.472647390Z I1117 09:29:44.472643       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:29:44.472663714Z I1117 09:29:44.472653       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:29:44.472663714Z W1117 09:29:44.472659       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.472676649Z I1117 09:29:44.472663       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:29:44.480232102Z I1117 09:29:44.480187       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:29:44.480232102Z I1117 09:29:44.480199       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:29:44.480232102Z I1117 09:29:44.480220       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.480268012Z I1117 09:29:44.480233       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.480268012Z I1117 09:29:44.480238       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:29:44.480268012Z I1117 09:29:44.480249       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:29:44.480268012Z W1117 09:29:44.480252       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.480268012Z I1117 09:29:44.480256       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:29:44.480268012Z I1117 09:29:44.480258       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.480279433Z I1117 09:29:44.480266       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.480279433Z I1117 09:29:44.480269       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:29:44.480279433Z I1117 09:29:44.480276       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:29:44.480296550Z W1117 09:29:44.480279       1 nodelink_controller.go:389] not found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.480296550Z I1117 09:29:44.480292       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:29:44.487594140Z I1117 09:29:44.487563       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:29:44.487594140Z I1117 09:29:44.487580       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:29:44.487614844Z I1117 09:29:44.487590       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:29:44.487614844Z I1117 09:29:44.487611       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.487642469Z I1117 09:29:44.487632       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.487642469Z I1117 09:29:44.487639       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:29:44.487665698Z I1117 09:29:44.487657       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:29:44.487665698Z I1117 09:29:44.487663       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0": "XXXXXXXXXXX"
+2025-11-17T09:29:44.487685060Z I1117 09:29:44.487676       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.487710282Z I1117 09:29:44.487682       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:29:44.487710282Z I1117 09:29:44.487700       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.487710282Z I1117 09:29:44.487707       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.487718603Z I1117 09:29:44.487710       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:29:44.487718603Z I1117 09:29:44.487716       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:29:44.487723758Z I1117 09:29:44.487719       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0": "XXXXXXXXXXX"
+2025-11-17T09:29:44.487729875Z I1117 09:29:44.487726       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.487734852Z I1117 09:29:44.487730       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500440       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500458       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500469       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500488       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500506       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500510       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500523       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by IP
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500527       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-1": "XXXXXXXXXXX"
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500562       1 nodelink_controller.go:403] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500592       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500601       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500604       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500610       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by IP
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500613       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-1": "XXXXXXXXXXX"
+2025-11-17T09:29:44.500667885Z I1117 09:29:44.500631       1 nodelink_controller.go:403] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.500739794Z I1117 09:29:44.500713       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:29:44.500739794Z I1117 09:29:44.500735       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:29:44.500752417Z I1117 09:29:44.500739       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:29:44.500752417Z W1117 09:29:44.500743       1 nodelink_controller.go:431] Node "XXXXXX1" has no providerID
+2025-11-17T09:29:44.500791096Z I1117 09:29:44.500776       1 nodelink_controller.go:452] Finding machine from node "XXXXXX1" by IP
+2025-11-17T09:29:44.500791096Z I1117 09:29:44.500783       1 nodelink_controller.go:457] Found internal IP for node "XXXXXX1": "XXXXXXXXXXX"
+2025-11-17T09:29:44.500828852Z I1117 09:29:44.500810       1 nodelink_controller.go:477] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.511547475Z I1117 09:29:44.511513       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.511547475Z I1117 09:29:44.511530       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.511569005Z I1117 09:29:44.511546       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.511569005Z I1117 09:29:44.511553       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.511574861Z I1117 09:29:44.511571       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.511611884Z I1117 09:29:44.511599       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.511611884Z I1117 09:29:44.511607       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:29:44.511633222Z I1117 09:29:44.511625       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by IP
+2025-11-17T09:29:44.511633222Z I1117 09:29:44.511630       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-1": "XXXXXXXXXXX"
+2025-11-17T09:29:44.511703002Z I1117 09:29:44.511681       1 nodelink_controller.go:403] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.511749207Z I1117 09:29:44.511721       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.511756880Z I1117 09:29:44.511752       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.511762171Z I1117 09:29:44.511756       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:29:44.511768782Z I1117 09:29:44.511764       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by IP
+2025-11-17T09:29:44.511773960Z I1117 09:29:44.511767       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-1": "XXXXXXXXXXX"
+2025-11-17T09:29:44.511788284Z I1117 09:29:44.511783       1 nodelink_controller.go:403] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.512069621Z I1117 09:29:44.512049       1 nodelink_controller.go:288] Successfully updated nodeRef for machine "hlxcl51-5vf88-XXXXXX-1" and node "XXXXXX1"
+2025-11-17T09:29:44.512113244Z I1117 09:29:44.512101       1 nodelink_controller.go:250] Node "XXXXXX1" has changed, updating
+2025-11-17T09:29:44.513014894Z I1117 09:29:44.512983       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.513014894Z I1117 09:29:44.513003       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.513032480Z I1117 09:29:44.513012       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.513032480Z I1117 09:29:44.513025       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.513079541Z I1117 09:29:44.513063       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.513079541Z I1117 09:29:44.513070       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:29:44.513098856Z I1117 09:29:44.513088       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by IP
+2025-11-17T09:29:44.513098856Z I1117 09:29:44.513096       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-2": "XXXXXXXXXXX"
+2025-11-17T09:29:44.513134079Z I1117 09:29:44.513124       1 nodelink_controller.go:403] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.513164324Z I1117 09:29:44.513148       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.513164324Z I1117 09:29:44.513160       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.513170284Z I1117 09:29:44.513164       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:29:44.513195715Z I1117 09:29:44.513184       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by IP
+2025-11-17T09:29:44.513195715Z I1117 09:29:44.513192       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-2": "XXXXXXXXXXX"
+2025-11-17T09:29:44.513252405Z I1117 09:29:44.513239       1 nodelink_controller.go:403] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.518956148Z I1117 09:29:44.518918       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:29:44.518981701Z I1117 09:29:44.518962       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:29:44.518981701Z I1117 09:29:44.518968       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:29:44.518981701Z W1117 09:29:44.518971       1 nodelink_controller.go:431] Node "XXXXXX2" has no providerID
+2025-11-17T09:29:44.518981701Z I1117 09:29:44.518974       1 nodelink_controller.go:452] Finding machine from node "XXXXXX2" by IP
+2025-11-17T09:29:44.518981701Z I1117 09:29:44.518977       1 nodelink_controller.go:457] Found internal IP for node "XXXXXX2": "XXXXXXXXXXX"
+2025-11-17T09:29:44.519015704Z I1117 09:29:44.519000       1 nodelink_controller.go:477] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.522829483Z I1117 09:29:44.522104       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:29:44.522829483Z I1117 09:29:44.522126       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:29:44.522829483Z I1117 09:29:44.522132       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:29:44.522829483Z I1117 09:29:44.522136       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:29:44.528527973Z I1117 09:29:44.528492       1 nodelink_controller.go:288] Successfully updated nodeRef for machine "hlxcl51-5vf88-XXXXXX-2" and node "XXXXXX2"
+2025-11-17T09:29:44.528576106Z I1117 09:29:44.528561       1 nodelink_controller.go:250] Node "XXXXXX2" has changed, updating
+2025-11-17T09:29:44.529175601Z I1117 09:29:44.529144       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.529175601Z I1117 09:29:44.529167       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.529192903Z I1117 09:29:44.529178       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.529192903Z I1117 09:29:44.529183       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.529216073Z I1117 09:29:44.529206       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.529262208Z I1117 09:29:44.529250       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.529262208Z I1117 09:29:44.529258       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:29:44.529319886Z I1117 09:29:44.529304       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by IP
+2025-11-17T09:29:44.529319886Z I1117 09:29:44.529312       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-2": "XXXXXXXXXXX"
+2025-11-17T09:29:44.529365229Z I1117 09:29:44.529353       1 nodelink_controller.go:403] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.529395636Z I1117 09:29:44.529377       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.529395636Z I1117 09:29:44.529388       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.529425738Z I1117 09:29:44.529392       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:29:44.529445521Z I1117 09:29:44.529436       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by IP
+2025-11-17T09:29:44.529445521Z I1117 09:29:44.529442       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-2": "XXXXXXXXXXX"
+2025-11-17T09:29:44.529500213Z I1117 09:29:44.529488       1 nodelink_controller.go:403] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.530394778Z I1117 09:29:44.530373       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:29:44.530394778Z I1117 09:29:44.530390       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/16079139-861a-4231-8459-c3dca9130db3" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:29:44.530405646Z I1117 09:29:44.530396       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/16079139-861a-4231-8459-c3dca9130db3" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:29:44.530427318Z I1117 09:29:44.530415       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.530444028Z I1117 09:29:44.530434       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.530458206Z I1117 09:29:44.530448       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:29:44.530472741Z I1117 09:29:44.530463       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:29:44.530472741Z I1117 09:29:44.530469       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc": "XXXXXXXXXX"
+2025-11-17T09:29:44.530486841Z I1117 09:29:44.530477       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" with internal IP "XXXXXXXXXX"
+2025-11-17T09:29:44.530486841Z I1117 09:29:44.530484       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:29:44.530492822Z I1117 09:29:44.530487       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.530875723Z I1117 09:29:44.530856       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.530875723Z I1117 09:29:44.530868       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:29:44.530893302Z I1117 09:29:44.530882       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:29:44.530907912Z I1117 09:29:44.530890       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc": "XXXXXXXXXX"
+2025-11-17T09:29:44.530973617Z I1117 09:29:44.530960       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" with internal IP "XXXXXXXXXX"
+2025-11-17T09:29:44.530973617Z I1117 09:29:44.530970       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:29:44.536856429Z I1117 09:29:44.536535       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:29:44.536856429Z I1117 09:29:44.536624       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:29:44.536856429Z I1117 09:29:44.536633       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:29:44.536856429Z W1117 09:29:44.536639       1 nodelink_controller.go:431] Node "XXXXXX1" has no providerID
+2025-11-17T09:29:44.536856429Z I1117 09:29:44.536644       1 nodelink_controller.go:452] Finding machine from node "XXXXXX1" by IP
+2025-11-17T09:29:44.536856429Z I1117 09:29:44.536649       1 nodelink_controller.go:457] Found internal IP for node "XXXXXX1": "XXXXXXXXXXX"
+2025-11-17T09:29:44.536856429Z I1117 09:29:44.536660       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:29:44.536856429Z I1117 09:29:44.536671       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:29:44.536856429Z I1117 09:29:44.536676       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:29:44.536856429Z I1117 09:29:44.536679       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:29:44.536856429Z I1117 09:29:44.536704       1 nodelink_controller.go:477] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.536928199Z I1117 09:29:44.536897       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:29:44.536950013Z I1117 09:29:44.536938       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:29:44.536950013Z I1117 09:29:44.536947       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:29:44.536955798Z W1117 09:29:44.536952       1 nodelink_controller.go:431] Node "XXXXXX2" has no providerID
+2025-11-17T09:29:44.536960910Z I1117 09:29:44.536956       1 nodelink_controller.go:452] Finding machine from node "XXXXXX2" by IP
+2025-11-17T09:29:44.536965644Z I1117 09:29:44.536961       1 nodelink_controller.go:457] Found internal IP for node "XXXXXX2": "XXXXXXXXXXX"
+2025-11-17T09:29:44.537007009Z I1117 09:29:44.536985       1 nodelink_controller.go:477] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.545169595Z I1117 09:29:44.545125       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:29:44.545169595Z I1117 09:29:44.545143       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:29:44.545169595Z I1117 09:29:44.545153       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:29:44.545192509Z I1117 09:29:44.545175       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.545199389Z I1117 09:29:44.545192       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.545199389Z I1117 09:29:44.545196       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:29:44.545224095Z I1117 09:29:44.545211       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:29:44.545224095Z I1117 09:29:44.545216       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5": "XXXXXXXXXX"
+2025-11-17T09:29:44.545230531Z I1117 09:29:44.545224       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" with internal IP "XXXXXXXXXX"
+2025-11-17T09:29:44.545236155Z I1117 09:29:44.545229       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:29:44.545236155Z I1117 09:29:44.545232       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.545246251Z I1117 09:29:44.545239       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.545256529Z I1117 09:29:44.545244       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:29:44.545256529Z I1117 09:29:44.545252       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:29:44.545262569Z I1117 09:29:44.545255       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5": "XXXXXXXXXX"
+2025-11-17T09:29:44.545267944Z I1117 09:29:44.545263       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" with internal IP "XXXXXXXXXX"
+2025-11-17T09:29:44.545273220Z I1117 09:29:44.545267       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:29:44.560707239Z I1117 09:29:44.560660       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:29:44.560707239Z I1117 09:29:44.560676       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:29:44.560731151Z I1117 09:29:44.560702       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:29:44.560731151Z I1117 09:29:44.560710       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:29:44.560737923Z I1117 09:29:44.560732       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.560761873Z I1117 09:29:44.560748       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.560761873Z I1117 09:29:44.560755       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:29:44.560783048Z I1117 09:29:44.560770       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:29:44.560783048Z I1117 09:29:44.560777       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0": "XXXXXXXXXXX"
+2025-11-17T09:29:44.560801318Z I1117 09:29:44.560788       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.560801318Z I1117 09:29:44.560797       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:29:44.560807451Z I1117 09:29:44.560800       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.560814385Z I1117 09:29:44.560809       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:29:44.560826045Z I1117 09:29:44.560813       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:29:44.560826045Z I1117 09:29:44.560823       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:29:44.560831771Z I1117 09:29:44.560827       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0": "XXXXXXXXXXX"
+2025-11-17T09:29:44.560850532Z I1117 09:29:44.560835       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:29:44.560850532Z I1117 09:29:44.560843       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:29:44.565930414Z I1117 09:29:44.565889       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:29:44.565951597Z I1117 09:29:44.565926       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:29:44.565951597Z I1117 09:29:44.565934       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:29:44.565951597Z I1117 09:29:44.565941       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:29:44.565951597Z I1117 09:29:44.565947       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:29:44.566034983Z I1117 09:29:44.566015       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:29:44.566078394Z I1117 09:29:44.566062       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:29:44.566078394Z I1117 09:29:44.566074       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:29:44.566138024Z I1117 09:29:44.566113       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:29:44.578291087Z I1117 09:29:44.578250       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:29:44.578291087Z I1117 09:29:44.578273       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:29:44.578291087Z I1117 09:29:44.578278       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:29:44.578313961Z I1117 09:29:44.578293       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:29:44.578313961Z I1117 09:29:44.578297       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:29:44.578372520Z I1117 09:29:44.578355       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:29:44.578418115Z I1117 09:29:44.578397       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:29:44.578418115Z I1117 09:29:44.578403       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:29:44.578450168Z I1117 09:29:44.578438       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:29:44.592531953Z I1117 09:29:44.592489       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:29:44.592531953Z I1117 09:29:44.592506       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:29:44.592531953Z I1117 09:29:44.592514       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/16079139-861a-4231-8459-c3dca9130db3" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:29:44.592531953Z I1117 09:29:44.592521       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/16079139-861a-4231-8459-c3dca9130db3" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:29:44.592581653Z I1117 09:29:44.592568       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.592607039Z I1117 09:29:44.592591       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.592607039Z I1117 09:29:44.592598       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:29:44.592629459Z I1117 09:29:44.592616       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:29:44.592636967Z I1117 09:29:44.592632       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc": "XXXXXXXXXX"
+2025-11-17T09:29:44.592658098Z I1117 09:29:44.592643       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" with internal IP "XXXXXXXXXX"
+2025-11-17T09:29:44.592658098Z I1117 09:29:44.592651       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:29:44.592658098Z I1117 09:29:44.592654       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.592675162Z I1117 09:29:44.592664       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:29:44.592675162Z I1117 09:29:44.592668       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:29:44.592681536Z I1117 09:29:44.592675       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:29:44.592681536Z I1117 09:29:44.592678       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc": "XXXXXXXXXX"
+2025-11-17T09:29:44.592723627Z I1117 09:29:44.592708       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" with internal IP "XXXXXXXXXX"
+2025-11-17T09:29:44.592723627Z I1117 09:29:44.592716       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:29:44.600792252Z I1117 09:29:44.600747       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:29:44.600792252Z I1117 09:29:44.600774       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:29:44.600815048Z I1117 09:29:44.600789       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:29:44.600815048Z I1117 09:29:44.600798       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:29:44.600836056Z I1117 09:29:44.600823       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.600863499Z I1117 09:29:44.600852       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.600869210Z I1117 09:29:44.600861       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:29:44.600895043Z I1117 09:29:44.600884       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:29:44.600906649Z I1117 09:29:44.600893       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5": "XXXXXXXXXX"
+2025-11-17T09:29:44.600917656Z I1117 09:29:44.600906       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" with internal IP "XXXXXXXXXX"
+2025-11-17T09:29:44.600917656Z I1117 09:29:44.600914       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:29:44.600924653Z I1117 09:29:44.600920       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.600960461Z I1117 09:29:44.600946       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:29:44.600960461Z I1117 09:29:44.600956       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:29:44.600981377Z I1117 09:29:44.600969       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:29:44.600981377Z I1117 09:29:44.600978       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5": "XXXXXXXXXX"
+2025-11-17T09:29:44.601002713Z I1117 09:29:44.600990       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" with internal IP "XXXXXXXXXX"
+2025-11-17T09:29:44.601002713Z I1117 09:29:44.600999       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:29:44.613589636Z I1117 09:29:44.613553       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.613589636Z I1117 09:29:44.613569       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.613589636Z I1117 09:29:44.613578       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.613589636Z I1117 09:29:44.613583       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:29:44.613620426Z I1117 09:29:44.613600       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.613620426Z I1117 09:29:44.613615       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.613626945Z I1117 09:29:44.613618       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:29:44.613678377Z I1117 09:29:44.613662       1 nodelink_controller.go:370] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:29:44.613710755Z I1117 09:29:44.613702       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.613739396Z I1117 09:29:44.613725       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:29:44.613739396Z I1117 09:29:44.613732       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:29:44.613767435Z I1117 09:29:44.613754       1 nodelink_controller.go:370] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:29:44.613817323Z I1117 09:29:44.613802       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:29:44.613829213Z I1117 09:29:44.613823       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:29:44.613834444Z I1117 09:29:44.613826       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:29:44.613858953Z I1117 09:29:44.613844       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:29:44.622841035Z I1117 09:29:44.622800       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.622841035Z I1117 09:29:44.622824       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.622862062Z I1117 09:29:44.622837       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.622862062Z I1117 09:29:44.622847       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:29:44.622901866Z I1117 09:29:44.622875       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.622925370Z I1117 09:29:44.622914       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.622925370Z I1117 09:29:44.622922       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:29:44.622989676Z I1117 09:29:44.622977       1 nodelink_controller.go:370] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:29:44.623016368Z I1117 09:29:44.623007       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:29:44.623042644Z I1117 09:29:44.623032       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:29:44.623042644Z I1117 09:29:44.623039       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:29:44.623068833Z I1117 09:29:44.623058       1 nodelink_controller.go:370] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:29:44.623145932Z I1117 09:29:44.623121       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:29:44.623189216Z I1117 09:29:44.623177       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:29:44.623189216Z I1117 09:29:44.623186       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:29:44.623232831Z I1117 09:29:44.623222       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:02.028164767Z I1117 09:30:02.027635       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:30:02.028164767Z I1117 09:30:02.027694       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:30:02.028164767Z I1117 09:30:02.027700       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:30:02.028164767Z I1117 09:30:02.027704       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:30:02.028164767Z I1117 09:30:02.027719       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:30:02.028164767Z I1117 09:30:02.027727       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:30:02.028164767Z I1117 09:30:02.027837       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:30:02.028164767Z I1117 09:30:02.027884       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:30:02.028164767Z I1117 09:30:02.027888       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:30:02.028164767Z I1117 09:30:02.027952       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:02.028877993Z I1117 09:30:02.028570       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:02.028877993Z I1117 09:30:02.028584       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:02.028877993Z I1117 09:30:02.028590       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:02.028877993Z I1117 09:30:02.028594       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:02.028877993Z I1117 09:30:02.028598       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:02.028877993Z I1117 09:30:02.028601       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:02.028877993Z I1117 09:30:02.028644       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:02.028877993Z I1117 09:30:02.028677       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:02.028877993Z I1117 09:30:02.028680       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:02.028877993Z I1117 09:30:02.028717       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114352       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114377       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114389       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114394       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114422       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114454       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114458       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114479       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114486       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0": "XXXXXXXXXXX"
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114495       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114502       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114505       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114524       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114528       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114539       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114544       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0": "XXXXXXXXXXX"
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114556       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:30:06.117750633Z I1117 09:30:06.114560       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:30:06.125000908Z I1117 09:30:06.124927       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:30:06.125000908Z I1117 09:30:06.124973       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:30:06.125000908Z I1117 09:30:06.124991       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:30:06.125031637Z I1117 09:30:06.124998       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:30:06.125031637Z I1117 09:30:06.125026       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.125078192Z I1117 09:30:06.125057       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:30:06.125078192Z I1117 09:30:06.125067       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:30:06.125112544Z I1117 09:30:06.125092       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:30:06.125112544Z I1117 09:30:06.125101       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0": "XXXXXXXXXXX"
+2025-11-17T09:30:06.125122090Z I1117 09:30:06.125116       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:30:06.125136236Z I1117 09:30:06.125123       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:30:06.125136236Z I1117 09:30:06.125128       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.125146357Z I1117 09:30:06.125141       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:30:06.125154326Z I1117 09:30:06.125146       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:30:06.125161966Z I1117 09:30:06.125156       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:30:06.125169605Z I1117 09:30:06.125162       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0": "XXXXXXXXXXX"
+2025-11-17T09:30:06.125192938Z I1117 09:30:06.125178       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:30:06.125192938Z I1117 09:30:06.125185       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:30:06.129040563Z I1117 09:30:06.128986       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:30:06.129040563Z I1117 09:30:06.129005       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:30:06.129040563Z I1117 09:30:06.129015       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:30:06.129040563Z I1117 09:30:06.129020       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:30:06.129075574Z I1117 09:30:06.129042       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.129075574Z I1117 09:30:06.129064       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:30:06.129075574Z I1117 09:30:06.129069       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:30:06.129140261Z I1117 09:30:06.129118       1 nodelink_controller.go:370] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:06.129275814Z I1117 09:30:06.129185       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.129275814Z I1117 09:30:06.129197       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:30:06.129275814Z I1117 09:30:06.129201       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:30:06.129275814Z I1117 09:30:06.129217       1 nodelink_controller.go:370] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:06.129275814Z I1117 09:30:06.129252       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:06.129275814Z I1117 09:30:06.129267       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:06.129275814Z I1117 09:30:06.129271       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:06.129619028Z I1117 09:30:06.129299       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:06.141901283Z I1117 09:30:06.141847       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:30:06.141901283Z I1117 09:30:06.141871       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:30:06.141901283Z I1117 09:30:06.141886       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:30:06.141901283Z I1117 09:30:06.141894       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:30:06.141927060Z I1117 09:30:06.141915       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:30:06.141927060Z I1117 09:30:06.141922       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:30:06.141942202Z I1117 09:30:06.141933       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:30:06.141942202Z I1117 09:30:06.141940       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:30:06.141974473Z I1117 09:30:06.141958       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.142001057Z I1117 09:30:06.141988       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:30:06.142001057Z I1117 09:30:06.141998       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:30:06.142070035Z I1117 09:30:06.142052       1 nodelink_controller.go:370] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:06.142097941Z I1117 09:30:06.142087       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.142112452Z I1117 09:30:06.142102       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:30:06.142112452Z I1117 09:30:06.142108       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:30:06.142147315Z I1117 09:30:06.142133       1 nodelink_controller.go:370] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:06.142171505Z I1117 09:30:06.142161       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.142196110Z I1117 09:30:06.142185       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:30:06.142196110Z I1117 09:30:06.142192       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:30:06.142238682Z I1117 09:30:06.142224       1 nodelink_controller.go:370] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:06.142265912Z I1117 09:30:06.142255       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.142285913Z I1117 09:30:06.142270       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:30:06.142291399Z I1117 09:30:06.142284       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:30:06.142323304Z I1117 09:30:06.142309       1 nodelink_controller.go:370] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:06.142378626Z I1117 09:30:06.142360       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:30:06.142401403Z I1117 09:30:06.142390       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:30:06.142401403Z I1117 09:30:06.142398       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:30:06.142455775Z I1117 09:30:06.142440       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:06.142598133Z I1117 09:30:06.142582       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:06.142621977Z I1117 09:30:06.142610       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:06.142621977Z I1117 09:30:06.142618       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:06.142651543Z I1117 09:30:06.142638       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:06.153830449Z I1117 09:30:06.153779       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:30:06.153830449Z I1117 09:30:06.153798       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:30:06.153830449Z I1117 09:30:06.153809       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:30:06.153830449Z I1117 09:30:06.153813       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:30:06.153856729Z I1117 09:30:06.153833       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.153856729Z I1117 09:30:06.153852       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:30:06.153862893Z I1117 09:30:06.153856       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:30:06.153913059Z I1117 09:30:06.153896       1 nodelink_controller.go:370] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:06.153928787Z I1117 09:30:06.153919       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:30:06.153939173Z I1117 09:30:06.153929       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:30:06.153939173Z I1117 09:30:06.153932       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:30:06.153967804Z I1117 09:30:06.153955       1 nodelink_controller.go:370] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:06.154012065Z I1117 09:30:06.153995       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:30:06.154029767Z I1117 09:30:06.154019       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:30:06.154029767Z I1117 09:30:06.154025       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:30:06.154067300Z I1117 09:30:06.154053       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:14.423410180Z I1117 09:30:14.423335       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.423440905Z I1117 09:30:14.423391       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.423473563Z I1117 09:30:14.423455       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.423473563Z I1117 09:30:14.423467       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.423480125Z I1117 09:30:14.423474       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.423485030Z I1117 09:30:14.423480       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.423625252Z I1117 09:30:14.423598       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:30:14.423767621Z I1117 09:30:14.423737       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:30:14.423767621Z I1117 09:30:14.423750       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:30:14.423839233Z I1117 09:30:14.423820       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:14.424267132Z I1117 09:30:14.424239       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.424267132Z I1117 09:30:14.424258       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.424314165Z I1117 09:30:14.424267       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.424319769Z I1117 09:30:14.424312       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.427743840Z I1117 09:30:14.425796       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.427743840Z I1117 09:30:14.425817       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.427743840Z I1117 09:30:14.425891       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:14.427743840Z I1117 09:30:14.425928       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:14.427743840Z I1117 09:30:14.425933       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:14.427743840Z I1117 09:30:14.426025       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:14.473819226Z I1117 09:30:14.472731       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.473819226Z I1117 09:30:14.472759       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.473819226Z I1117 09:30:14.472767       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.473819226Z I1117 09:30:14.472774       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.473819226Z I1117 09:30:14.472788       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.473819226Z I1117 09:30:14.472797       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:14.473819226Z I1117 09:30:14.472866       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:14.473819226Z I1117 09:30:14.472914       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:14.473819226Z I1117 09:30:14.472920       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:14.473819226Z I1117 09:30:14.472973       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:14.475747559Z I1117 09:30:14.475673       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.475747559Z I1117 09:30:14.475712       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.475747559Z I1117 09:30:14.475722       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.475747559Z I1117 09:30:14.475727       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.475747559Z I1117 09:30:14.475733       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.475747559Z I1117 09:30:14.475738       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:30:14.475811182Z I1117 09:30:14.475790       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:30:14.475849565Z I1117 09:30:14.475835       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:30:14.475849565Z I1117 09:30:14.475844       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:30:14.475900178Z I1117 09:30:14.475884       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:15.621418053Z I1117 09:30:15.621375       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:15.621418053Z I1117 09:30:15.621396       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:15.621418053Z I1117 09:30:15.621404       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:15.621418053Z I1117 09:30:15.621408       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:15.621418053Z I1117 09:30:15.621412       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:15.621447483Z I1117 09:30:15.621416       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:15.621447483Z I1117 09:30:15.621433       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:30:15.621447483Z I1117 09:30:15.621436       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:30:15.621447483Z I1117 09:30:15.621440       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:30:15.621447483Z I1117 09:30:15.621443       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:30:15.621454477Z I1117 09:30:15.621448       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:30:15.621461157Z I1117 09:30:15.621456       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:30:15.621523668Z I1117 09:30:15.621511       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:15.621553493Z I1117 09:30:15.621546       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:15.621553493Z I1117 09:30:15.621550       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:15.621603785Z I1117 09:30:15.621593       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:15.621722221Z I1117 09:30:15.621711       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:30:15.621754071Z I1117 09:30:15.621743       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:30:15.621754071Z I1117 09:30:15.621750       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:30:15.621780661Z I1117 09:30:15.621768       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:24.316644778Z I1117 09:30:24.316577       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.316644778Z I1117 09:30:24.316597       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.316644778Z I1117 09:30:24.316609       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.316644778Z I1117 09:30:24.316613       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.316644778Z I1117 09:30:24.316617       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.316644778Z I1117 09:30:24.316625       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.316706822Z I1117 09:30:24.316682       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:24.316742973Z I1117 09:30:24.316728       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:24.316742973Z I1117 09:30:24.316735       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:24.318210425Z I1117 09:30:24.316766       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:24.333104368Z I1117 09:30:24.333059       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:30:24.333104368Z I1117 09:30:24.333077       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:30:24.333104368Z I1117 09:30:24.333081       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:30:24.333104368Z I1117 09:30:24.333085       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:30:24.333104368Z I1117 09:30:24.333094       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:30:24.335039946Z I1117 09:30:24.334998       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:30:24.335119385Z I1117 09:30:24.335104       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:30:24.336157523Z I1117 09:30:24.336093       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:30:24.336157523Z I1117 09:30:24.336132       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:30:24.336325049Z I1117 09:30:24.336293       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:30:24.345797005Z I1117 09:30:24.345743       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.345797005Z I1117 09:30:24.345760       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.345797005Z I1117 09:30:24.345766       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.345797005Z I1117 09:30:24.345771       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.345797005Z I1117 09:30:24.345782       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.345797005Z I1117 09:30:24.345790       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:24.345867736Z I1117 09:30:24.345846       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:24.345894517Z I1117 09:30:24.345883       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:24.345894517Z I1117 09:30:24.345892       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:24.345958504Z I1117 09:30:24.345943       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:27.976024597Z I1117 09:30:27.975956       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:27.976024597Z I1117 09:30:27.975981       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:27.976024597Z I1117 09:30:27.975989       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:27.976024597Z I1117 09:30:27.975993       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:27.976024597Z I1117 09:30:27.975998       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:27.976024597Z I1117 09:30:27.976002       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:27.976087576Z I1117 09:30:27.976060       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:27.976117627Z I1117 09:30:27.976103       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:27.976117627Z I1117 09:30:27.976112       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:27.976168451Z I1117 09:30:27.976151       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:29.340354446Z I1117 09:30:29.340302       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:29.340354446Z I1117 09:30:29.340326       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:29.340354446Z I1117 09:30:29.340333       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:29.340354446Z I1117 09:30:29.340337       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:29.340354446Z I1117 09:30:29.340347       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:29.340406601Z I1117 09:30:29.340353       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:29.340413490Z I1117 09:30:29.340405       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:29.340464294Z I1117 09:30:29.340440       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:29.340464294Z I1117 09:30:29.340460       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:29.340512831Z I1117 09:30:29.340500       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:38.380838297Z I1117 09:30:38.380777       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:38.380838297Z I1117 09:30:38.380803       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:38.380838297Z I1117 09:30:38.380813       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:38.380838297Z I1117 09:30:38.380819       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:38.380838297Z I1117 09:30:38.380825       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:38.380838297Z I1117 09:30:38.380830       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:38.380907659Z I1117 09:30:38.380893       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:38.380950038Z I1117 09:30:38.380940       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:38.380955320Z I1117 09:30:38.380948       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:38.381003877Z I1117 09:30:38.380992       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:41.192194306Z I1117 09:30:41.192139       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:41.192194306Z I1117 09:30:41.192168       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:41.192194306Z I1117 09:30:41.192178       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:41.192223082Z I1117 09:30:41.192191       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:41.192223082Z I1117 09:30:41.192200       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:41.192223082Z I1117 09:30:41.192206       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:41.192300106Z I1117 09:30:41.192270       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:41.192348284Z I1117 09:30:41.192334       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:41.192348284Z I1117 09:30:41.192342       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:41.192400655Z I1117 09:30:41.192386       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:43.399510518Z I1117 09:30:43.399466       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:43.399510518Z I1117 09:30:43.399487       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:43.399510518Z I1117 09:30:43.399495       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:43.399510518Z I1117 09:30:43.399499       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:43.399510518Z I1117 09:30:43.399503       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:43.399510518Z I1117 09:30:43.399506       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:43.399568513Z I1117 09:30:43.399555       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:43.399604241Z I1117 09:30:43.399594       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:43.399604241Z I1117 09:30:43.399601       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:43.399646246Z I1117 09:30:43.399634       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:30:51.210570312Z I1117 09:30:51.210505       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:51.210570312Z I1117 09:30:51.210528       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:30:51.210570312Z I1117 09:30:51.210537       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:51.210570312Z I1117 09:30:51.210543       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:51.210570312Z I1117 09:30:51.210548       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:30:51.210570312Z I1117 09:30:51.210552       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:30:51.210638003Z I1117 09:30:51.210618       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:30:51.210680042Z I1117 09:30:51.210665       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:30:51.210680042Z I1117 09:30:51.210673       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:30:51.211039949Z I1117 09:30:51.210991       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:32:11.128771490Z E1117 09:32:11.128549       1 leaderelection.go:327] error retrieving resource lock openshift-machine-api/cluster-api-provider-nodelink-leader: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io cluster-api-provider-nodelink-leader)
+2025-11-17T09:32:51.639830740Z I1117 09:32:51.637493       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:32:51.670193625Z I1117 09:32:51.669756       1 reflector.go:323] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:32:55.338968204Z E1117 09:32:55.338910       1 leaderelection.go:364] Failed to update lock: leases.coordination.k8s.io "cluster-api-provider-nodelink-leader" is forbidden: User "system:serviceaccount:openshift-machine-api:machine-api-controllers" cannot update resource "leases" in API group "coordination.k8s.io" in the namespace "openshift-machine-api"
+2025-11-17T09:32:56.698655304Z I1117 09:32:56.698596       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:32:56.698655304Z I1117 09:32:56.698615       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for node "XXXXXX1" to indexer
+2025-11-17T09:32:56.698655304Z I1117 09:32:56.698623       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:32:56.698655304Z I1117 09:32:56.698627       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:32:56.698655304Z I1117 09:32:56.698632       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX1" to indexer
+2025-11-17T09:32:56.698655304Z I1117 09:32:56.698636       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::21" for node "XXXXXX1" to indexer
+2025-11-17T09:32:56.698655304Z I1117 09:32:56.698648       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:32:56.698720010Z I1117 09:32:56.698653       1 nodelink_controller.go:57] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for node "XXXXXX2" to indexer
+2025-11-17T09:32:56.698720010Z I1117 09:32:56.698658       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:32:56.698720010Z I1117 09:32:56.698662       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:32:56.698720010Z I1117 09:32:56.698666       1 nodelink_controller.go:91] Adding internal IP "XXXXXXXXXXX" for node "XXXXXX2" to indexer
+2025-11-17T09:32:56.698720010Z I1117 09:32:56.698669       1 nodelink_controller.go:91] Adding internal IP "2620:52:0:2e1a::22" for node "XXXXXX2" to indexer
+2025-11-17T09:32:56.702696663Z I1117 09:32:56.698767       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:32:56.702696663Z I1117 09:32:56.698832       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:32:56.702696663Z I1117 09:32:56.698836       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:32:56.702696663Z I1117 09:32:56.698872       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:32:56.702696663Z I1117 09:32:56.698984       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:32:56.702696663Z I1117 09:32:56.699006       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:32:56.702696663Z I1117 09:32:56.699009       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:32:56.702696663Z I1117 09:32:56.699027       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:32:57.210052231Z I1117 09:32:57.210008       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:32:57.210052231Z I1117 09:32:57.210024       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:32:57.210052231Z I1117 09:32:57.210035       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:32:57.210052231Z I1117 09:32:57.210040       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0" to indexer
+2025-11-17T09:32:57.210077112Z I1117 09:32:57.210055       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:32:57.210077112Z I1117 09:32:57.210060       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:32:57.210077112Z I1117 09:32:57.210068       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:32:57.210077112Z I1117 09:32:57.210071       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-1" to indexer
+2025-11-17T09:32:57.210099153Z I1117 09:32:57.210086       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:32:57.210169893Z I1117 09:32:57.210157       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:32:57.210169893Z I1117 09:32:57.210165       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:32:57.210177164Z I1117 09:32:57.210172       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:32:57.210182314Z I1117 09:32:57.210178       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c" for machine "hlxcl51-5vf88-XXXXXX-2" to indexer
+2025-11-17T09:32:57.210196625Z I1117 09:32:57.210187       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/16079139-861a-4231-8459-c3dca9130db3" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:32:57.210201943Z I1117 09:32:57.210194       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX0/16079139-861a-4231-8459-c3dca9130db3" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:32:57.210212023Z I1117 09:32:57.210201       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:32:57.210212023Z I1117 09:32:57.210205       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" to indexer
+2025-11-17T09:32:57.210223625Z I1117 09:32:57.210214       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:32:57.210230900Z I1117 09:32:57.210226       1 nodelink_controller.go:70] Adding providerID "baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:32:57.210244329Z I1117 09:32:57.210234       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:32:57.210244329Z I1117 09:32:57.210241       1 nodelink_controller.go:109] Adding internal IP "XXXXXXXXXX" for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" to indexer
+2025-11-17T09:32:57.210271471Z I1117 09:32:57.210262       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:32:57.210271471Z I1117 09:32:57.210268       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:32:57.210296164Z I1117 09:32:57.210287       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:32:57.210296164Z I1117 09:32:57.210293       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0": "XXXXXXXXXXX"
+2025-11-17T09:32:57.210311868Z I1117 09:32:57.210302       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:32:57.210311868Z I1117 09:32:57.210309       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:32:57.210317319Z I1117 09:32:57.210312       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:32:57.210331295Z I1117 09:32:57.210323       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0"
+2025-11-17T09:32:57.210331295Z I1117 09:32:57.210328       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by providerID
+2025-11-17T09:32:57.210345282Z I1117 09:32:57.210337       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0" by IP
+2025-11-17T09:32:57.210345282Z I1117 09:32:57.210342       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0": "XXXXXXXXXXX"
+2025-11-17T09:32:57.210358421Z I1117 09:32:57.210350       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0" with internal IP "XXXXXXXXXXX"
+2025-11-17T09:32:57.210358421Z I1117 09:32:57.210356       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0" not found
+2025-11-17T09:32:57.210365137Z I1117 09:32:57.210361       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:32:57.210381255Z I1117 09:32:57.210373       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:32:57.210381255Z I1117 09:32:57.210378       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:32:57.210446299Z I1117 09:32:57.210411       1 nodelink_controller.go:370] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:32:57.210446299Z I1117 09:32:57.210435       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:32:57.210455448Z I1117 09:32:57.210444       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-1"
+2025-11-17T09:32:57.210455448Z I1117 09:32:57.210448       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-1" by providerID
+2025-11-17T09:32:57.210476485Z I1117 09:32:57.210465       1 nodelink_controller.go:370] Found node "XXXXXX1" for machine "hlxcl51-5vf88-XXXXXX-1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:32:57.210519763Z I1117 09:32:57.210505       1 nodelink_controller.go:191] Reconciling Node /XXXXXX1
+2025-11-17T09:32:57.210533396Z I1117 09:32:57.210525       1 nodelink_controller.go:412] Finding machine from node "XXXXXX1"
+2025-11-17T09:32:57.210533396Z I1117 09:32:57.210530       1 nodelink_controller.go:429] Finding machine from node "XXXXXX1" by ProviderID
+2025-11-17T09:32:57.210557519Z I1117 09:32:57.210547       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-1" for node "XXXXXX1" with providerID "baremetalhost:///openshift-machine-api/XXXXXX1/67b4db92-5e4f-4005-9cae-326adcbcaf55"
+2025-11-17T09:32:57.210655246Z I1117 09:32:57.210643       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:32:57.210669933Z I1117 09:32:57.210661       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:32:57.210669933Z I1117 09:32:57.210666       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:32:57.210712115Z I1117 09:32:57.210701       1 nodelink_controller.go:370] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:32:57.210726834Z I1117 09:32:57.210719       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:32:57.210738164Z I1117 09:32:57.210730       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-2"
+2025-11-17T09:32:57.210738164Z I1117 09:32:57.210735       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-2" by providerID
+2025-11-17T09:32:57.210764104Z I1117 09:32:57.210753       1 nodelink_controller.go:370] Found node "XXXXXX2" for machine "hlxcl51-5vf88-XXXXXX-2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:32:57.210779856Z I1117 09:32:57.210772       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:32:57.210793162Z I1117 09:32:57.210784       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:32:57.210793162Z I1117 09:32:57.210790       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:32:57.210798746Z I1117 09:32:57.210795       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:32:57.210803545Z I1117 09:32:57.210798       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc": "XXXXXXXXXX"
+2025-11-17T09:32:57.210816315Z I1117 09:32:57.210806       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" with internal IP "XXXXXXXXXX"
+2025-11-17T09:32:57.210816315Z I1117 09:32:57.210813       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:32:57.210823812Z I1117 09:32:57.210815       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:32:57.210828745Z I1117 09:32:57.210822       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc"
+2025-11-17T09:32:57.210828745Z I1117 09:32:57.210826       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by providerID
+2025-11-17T09:32:57.210835090Z I1117 09:32:57.210831       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-csjwc" by IP
+2025-11-17T09:32:57.210839921Z I1117 09:32:57.210835       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-csjwc": "XXXXXXXXXX"
+2025-11-17T09:32:57.210852838Z I1117 09:32:57.210843       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" with internal IP "XXXXXXXXXX"
+2025-11-17T09:32:57.210852838Z I1117 09:32:57.210849       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-csjwc" not found
+2025-11-17T09:32:57.210858258Z I1117 09:32:57.210854       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:32:57.210871967Z I1117 09:32:57.210863       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:32:57.210871967Z I1117 09:32:57.210864       1 nodelink_controller.go:191] Reconciling Node /XXXXXX2
+2025-11-17T09:32:57.210918282Z I1117 09:32:57.210908       1 nodelink_controller.go:412] Finding machine from node "XXXXXX2"
+2025-11-17T09:32:57.210918282Z I1117 09:32:57.210916       1 nodelink_controller.go:429] Finding machine from node "XXXXXX2" by ProviderID
+2025-11-17T09:32:57.210979735Z I1117 09:32:57.210943       1 nodelink_controller.go:445] Found machine "hlxcl51-5vf88-XXXXXX-2" for node "XXXXXX2" with providerID "baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c"
+2025-11-17T09:32:57.210995211Z I1117 09:32:57.210868       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:32:57.211001667Z I1117 09:32:57.210997       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:32:57.211006475Z I1117 09:32:57.211001       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5": "XXXXXXXXXX"
+2025-11-17T09:32:57.211012569Z I1117 09:32:57.211008       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" with internal IP "XXXXXXXXXX"
+2025-11-17T09:32:57.211017412Z I1117 09:32:57.211012       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:32:57.211017412Z I1117 09:32:57.211015       1 nodelink_controller.go:294] Watched machine event, finding node to reconcile.Request
+2025-11-17T09:32:57.211051357Z I1117 09:32:57.211023       1 nodelink_controller.go:337] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5"
+2025-11-17T09:32:57.211051357Z I1117 09:32:57.211027       1 nodelink_controller.go:354] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by providerID
+2025-11-17T09:32:57.211051357Z I1117 09:32:57.211033       1 nodelink_controller.go:378] Finding node from machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" by IP
+2025-11-17T09:32:57.211051357Z I1117 09:32:57.211036       1 nodelink_controller.go:383] Found internal IP for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5": "XXXXXXXXXX"
+2025-11-17T09:32:57.211051357Z I1117 09:32:57.211043       1 nodelink_controller.go:407] Matching node not found for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" with internal IP "XXXXXXXXXX"
+2025-11-17T09:32:57.211051357Z I1117 09:32:57.211046       1 nodelink_controller.go:331] No-op: Node for machine "hlxcl51-5vf88-XXXXXX-0-qk9w5" not found
+2025-11-17T09:32:58.125201564Z I1117 09:32:58.125023       1 leaderelection.go:280] failed to renew lease openshift-machine-api/cluster-api-provider-nodelink-leader: timed out waiting for the condition
+2025-11-17T09:32:58.125233908Z F1117 09:32:58.125205       1 main.go:119] leader election lost

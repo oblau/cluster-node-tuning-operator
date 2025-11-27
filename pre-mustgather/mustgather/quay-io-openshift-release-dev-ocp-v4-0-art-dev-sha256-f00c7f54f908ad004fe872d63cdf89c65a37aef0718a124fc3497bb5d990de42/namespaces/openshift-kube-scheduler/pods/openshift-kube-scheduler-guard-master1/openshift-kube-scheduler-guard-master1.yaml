@@ -1,0 +1,271 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.19/23","fd02:0:0:1::13/64"],"mac_address":"0a:58:0a:80:00:13","gateway_ips":["10.128.0.1","fd02:0:0:1::1"],"routes":[{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.128.0.1"},{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.128.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.0.1"},{"dest":"fd02::/48","nextHop":"fd02:0:0:1::1"},{"dest":"fd03::/112","nextHop":"fd02:0:0:1::1"},{"dest":"fd98::/64","nextHop":"fd02:0:0:1::1"}]}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.19",
+              "fd02:0:0:1::13"
+          ],
+          "mac": "0a:58:0a:80:00:13",
+          "default": true,
+          "dns": {}
+      }]
+    target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+  creationTimestamp: "2025-11-17T09:21:47Z"
+  labels:
+    app: guard
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:k8s.ovn.org/pod-networks: {}
+    manager: XXXXXX1
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:21:47Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:21:49Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:target.workload.openshift.io/management: {}
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:containers:
+          k:{"name":"guard"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:host: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostname: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2025-11-17T09:21:55Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.19"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"fd02:0:0:1::13"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:33:58Z"
+  name: openshift-kube-scheduler-guard-XXXXXX1
+  namespace: openshift-kube-scheduler
+  resourceVersion: "20525"
+  uid: 709cdfd1-f9b1-4992-8e23-a44ea4e9c0b3
+spec:
+  containers:
+  - args:
+    - -c
+    - |
+      # properly handle TERM and exit as soon as it is signaled
+      set -euo pipefail
+      trap 'jobs -p | xargs -r kill; exit 0' TERM
+      sleep infinity & wait
+    command:
+    - /bin/bash
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e8da3ec3d996ecf44f62a5d8bf98299d3847dc1da633c023117e3cbd6c5ca5ed
+    imagePullPolicy: IfNotPresent
+    name: guard
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        host: XXXXXXXXXXX
+        path: healthz
+        port: 10259
+        scheme: HTTPS
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 5
+    resources:
+      requests:
+        cpu: 10m
+        memory: 5Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-lb47v
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostname: guard-baec4f7792381be3f2a07701cc24bfb3b79048cb-end
+  nodeName: XXXXXX1
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 3
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/XXXXXX
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/etcd
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-lb47v
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:21:47Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:33:57Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:33:57Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:21:47Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://b5d0399c2a4da44e157ea58dc60d429b9af1f64d6022dde9414f7191cc548c72
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e8da3ec3d996ecf44f62a5d8bf98299d3847dc1da633c023117e3cbd6c5ca5ed
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e8da3ec3d996ecf44f62a5d8bf98299d3847dc1da633c023117e3cbd6c5ca5ed
+    lastState: {}
+    name: guard
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:21:49Z"
+  hostIP: XXXXXXXXXXX
+  phase: Running
+  podIP: 10.128.0.19
+  podIPs:
+  - ip: 10.128.0.19
+  - ip: fd02:0:0:1::13
+  qosClass: Burstable
+  startTime: "2025-11-17T09:21:47Z"

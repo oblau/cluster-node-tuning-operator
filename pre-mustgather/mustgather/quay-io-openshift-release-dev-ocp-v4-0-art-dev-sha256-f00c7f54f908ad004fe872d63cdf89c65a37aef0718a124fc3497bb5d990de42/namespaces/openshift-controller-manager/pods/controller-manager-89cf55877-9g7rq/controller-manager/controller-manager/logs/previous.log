@@ -1,0 +1,111 @@
+2025-11-17T09:30:28.815812345Z I1117 09:30:28.815738       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:30:28.817052244Z I1117 09:30:28.817002       1 controller_manager.go:39] Starting controllers on 0.0.0.0:8443 (4.14.0-202511060117.p2.g1c76570.assembly.stream.el8-1c76570)
+2025-11-17T09:30:28.819148206Z I1117 09:30:28.819108       1 controller_manager.go:50] DeploymentConfig controller using images from "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6a4220564545714f1e06006a81179d23b2e68d73a2a02a664b0a45cec12125a4"
+2025-11-17T09:30:28.819148206Z I1117 09:30:28.819130       1 controller_manager.go:56] Build controller using images from "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:450a029d524b59c22e46b0b05e072983a5e02568722e74ea82760be4abf31804"
+2025-11-17T09:30:28.819262866Z I1117 09:30:28.819248       1 leaderelection.go:245] attempting to acquire leader lease openshift-controller-manager/openshift-XXXXXX-controllers...
+2025-11-17T09:30:28.820146522Z I1117 09:30:28.820110       1 standalone_apiserver.go:104] Started health checks at 0.0.0.0:8443
+2025-11-17T09:30:28.845166434Z I1117 09:30:28.845111       1 leaderelection.go:255] successfully acquired lease openshift-controller-manager/openshift-XXXXXX-controllers
+2025-11-17T09:30:28.845416420Z I1117 09:30:28.845355       1 event.go:298] Event(v1.ObjectReference{Kind:"ConfigMap", Namespace:"openshift-controller-manager", Name:"openshift-XXXXXX-controllers", UID:"aa5fbfa3-73b3-425d-97fe-bf05ee95ab09", APIVersion:"v1", ResourceVersion:"16099", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' controller-manager-89cf55877-9g7rq became leader
+2025-11-17T09:30:28.845416420Z I1117 09:30:28.845394       1 event.go:298] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-controller-manager", Name:"openshift-XXXXXX-controllers", UID:"185592d8-8bb1-45cb-8b70-27f7dbaa489b", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"16100", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' controller-manager-89cf55877-9g7rq became leader
+2025-11-17T09:30:28.846508388Z I1117 09:30:28.846463       1 controller_manager.go:145] Starting "openshift.io/default-rolebindings"
+2025-11-17T09:30:28.863774938Z I1117 09:30:28.863677       1 controller_manager.go:155] Started "openshift.io/default-rolebindings"
+2025-11-17T09:30:28.863774938Z I1117 09:30:28.863695       1 controller_manager.go:145] Starting "openshift.io/serviceaccount-pull-secrets"
+2025-11-17T09:30:28.863822391Z I1117 09:30:28.863771       1 defaultrolebindings.go:149] Starting DefaultRoleBindingController
+2025-11-17T09:30:28.863822391Z I1117 09:30:28.863793       1 shared_informer.go:311] Waiting for caches to sync for DefaultRoleBindingController
+2025-11-17T09:30:28.876335515Z I1117 09:30:28.876277       1 deleted_dockercfg_secrets.go:68] Starting DockercfgDeletedController controller
+2025-11-17T09:30:28.876335515Z I1117 09:30:28.876281       1 deleted_token_secrets.go:63] Starting DockercfgTokenDeletedController controller
+2025-11-17T09:30:28.876418694Z I1117 09:30:28.876402       1 create_dockercfg_secrets.go:208] Starting DockercfgController controller
+2025-11-17T09:30:28.876428927Z I1117 09:30:28.876403       1 controller_manager.go:155] Started "openshift.io/serviceaccount-pull-secrets"
+2025-11-17T09:30:28.876428927Z I1117 09:30:28.876419       1 docker_registry_service.go:145] Starting DockerRegistryServiceController controller
+2025-11-17T09:30:28.876446341Z I1117 09:30:28.876430       1 controller_manager.go:145] Starting "openshift.io/unidling"
+2025-11-17T09:30:28.886365646Z I1117 09:30:28.886327       1 controller_manager.go:155] Started "openshift.io/unidling"
+2025-11-17T09:30:28.886365646Z I1117 09:30:28.886344       1 controller_manager.go:145] Starting "openshift.io/serviceaccount"
+2025-11-17T09:30:28.893528043Z I1117 09:30:28.893494       1 controller_manager.go:155] Started "openshift.io/serviceaccount"
+2025-11-17T09:30:28.893528043Z I1117 09:30:28.893512       1 controller_manager.go:145] Starting "openshift.io/build"
+2025-11-17T09:30:28.893669570Z I1117 09:30:28.893650       1 serviceaccounts_controller.go:111] "Starting service account controller"
+2025-11-17T09:30:28.893669570Z I1117 09:30:28.893664       1 shared_informer.go:311] Waiting for caches to sync for service account
+2025-11-17T09:30:28.902311722Z I1117 09:30:28.902257       1 controller_manager.go:155] Started "openshift.io/build"
+2025-11-17T09:30:28.902311722Z I1117 09:30:28.902273       1 controller_manager.go:145] Starting "openshift.io/templateinstance"
+2025-11-17T09:30:28.915656065Z I1117 09:30:28.915614       1 controller_manager.go:155] Started "openshift.io/templateinstance"
+2025-11-17T09:30:28.915656065Z I1117 09:30:28.915631       1 controller_manager.go:145] Starting "openshift.io/build-config-change"
+2025-11-17T09:30:28.925157334Z I1117 09:30:28.925123       1 controller_manager.go:155] Started "openshift.io/build-config-change"
+2025-11-17T09:30:28.925157334Z I1117 09:30:28.925142       1 controller_manager.go:145] Starting "openshift.io/deploymentconfig"
+2025-11-17T09:30:28.941177029Z I1117 09:30:28.941126       1 controller_manager.go:155] Started "openshift.io/deploymentconfig"
+2025-11-17T09:30:28.941177029Z I1117 09:30:28.941146       1 controller_manager.go:145] Starting "openshift.io/templateinstancefinalizer"
+2025-11-17T09:30:28.941323264Z I1117 09:30:28.941306       1 factory.go:78] Starting deploymentconfig controller
+2025-11-17T09:30:28.949993126Z I1117 09:30:28.949949       1 controller_manager.go:155] Started "openshift.io/templateinstancefinalizer"
+2025-11-17T09:30:28.949993126Z I1117 09:30:28.949965       1 controller_manager.go:145] Starting "openshift.io/image-signature-import"
+2025-11-17T09:30:28.950149011Z I1117 09:30:28.950086       1 templateinstance_finalizer.go:189] TemplateInstanceFinalizer controller waiting for cache sync
+2025-11-17T09:30:28.958400219Z I1117 09:30:28.958352       1 controller_manager.go:155] Started "openshift.io/image-signature-import"
+2025-11-17T09:30:28.958400219Z I1117 09:30:28.958370       1 controller_manager.go:145] Starting "openshift.io/origin-namespace"
+2025-11-17T09:30:28.964479882Z I1117 09:30:28.964444       1 controller_manager.go:155] Started "openshift.io/origin-namespace"
+2025-11-17T09:30:28.964479882Z I1117 09:30:28.964456       1 controller_manager.go:145] Starting "openshift.io/deployer"
+2025-11-17T09:30:28.971620001Z I1117 09:30:28.971405       1 controller_manager.go:155] Started "openshift.io/deployer"
+2025-11-17T09:30:28.971620001Z I1117 09:30:28.971420       1 controller_manager.go:145] Starting "openshift.io/image-trigger"
+2025-11-17T09:30:28.971620001Z I1117 09:30:28.971535       1 factory.go:73] Starting deployer controller
+2025-11-17T09:30:28.982519715Z I1117 09:30:28.982479       1 controller_manager.go:155] Started "openshift.io/image-trigger"
+2025-11-17T09:30:28.982519715Z I1117 09:30:28.982495       1 controller_manager.go:145] Starting "openshift.io/image-import"
+2025-11-17T09:30:28.982519715Z I1117 09:30:28.982510       1 image_trigger_controller.go:229] Starting trigger controller
+2025-11-17T09:30:28.984242611Z I1117 09:30:28.984209       1 imagestream_controller.go:66] Starting image stream controller
+2025-11-17T09:30:28.985666852Z I1117 09:30:28.985634       1 controller_manager.go:155] Started "openshift.io/image-import"
+2025-11-17T09:30:28.985666852Z I1117 09:30:28.985661       1 controller_manager.go:157] Started Origin Controllers
+2025-11-17T09:30:28.985697828Z I1117 09:30:28.985675       1 scheduled_image_controller.go:68] Starting scheduled import controller
+2025-11-17T09:30:29.009324735Z W1117 09:30:29.008470       1 warnings.go:70] apps.openshift.io/v1 DeploymentConfig is deprecated in v4.14+, unavailable in v4.10000+
+2025-11-17T09:30:29.016358325Z I1117 09:30:29.016005       1 templateinstance_controller.go:297] Starting TemplateInstance controller
+2025-11-17T09:30:29.020570084Z W1117 09:30:29.020516       1 warnings.go:70] apps.openshift.io/v1 DeploymentConfig is deprecated in v4.14+, unavailable in v4.10000+
+2025-11-17T09:30:29.026897682Z I1117 09:30:29.026849       1 buildconfig_controller.go:212] Starting buildconfig controller
+2025-11-17T09:30:29.048448700Z I1117 09:30:29.048329       1 factory.go:85] deploymentconfig controller caches are synced. Starting XXXXXXs.
+2025-11-17T09:30:29.055809883Z I1117 09:30:29.055763       1 templateinstance_finalizer.go:194] Starting TemplateInstanceFinalizer controller
+2025-11-17T09:30:29.065534953Z I1117 09:30:29.064836       1 shared_informer.go:318] Caches are synced for DefaultRoleBindingController
+2025-11-17T09:30:29.095336195Z I1117 09:30:29.094036       1 shared_informer.go:318] Caches are synced for service account
+2025-11-17T09:30:29.171818680Z I1117 09:30:29.171764       1 factory.go:80] Deployer controller caches are synced. Starting XXXXXXs.
+2025-11-17T09:30:29.176550218Z I1117 09:30:29.176500       1 deleted_token_secrets.go:70] caches synced
+2025-11-17T09:30:29.176550218Z I1117 09:30:29.176510       1 deleted_dockercfg_secrets.go:75] caches synced
+2025-11-17T09:30:29.176584529Z I1117 09:30:29.176551       1 docker_registry_service.go:156] caches synced
+2025-11-17T09:30:29.176584529Z I1117 09:30:29.176571       1 create_dockercfg_secrets.go:219] urls found
+2025-11-17T09:30:29.176584529Z I1117 09:30:29.176576       1 create_dockercfg_secrets.go:225] caches synced
+2025-11-17T09:30:29.204781386Z I1117 09:30:29.204709       1 build_controller.go:503] Starting build controller
+2025-11-17T09:30:29.204781386Z I1117 09:30:29.204746       1 build_controller.go:505] OpenShift image registry hostname: 
+2025-11-17T09:30:30.085333531Z I1117 09:30:30.085148       1 request.go:696] Waited for 1.000155076s due to client-side throttling, not priority and fairness, request: POST:https://172.30.0.1:443/apis/image.openshift.io/v1/namespaces/openshift/imagestreamimports?timeout=1h0m0s
+2025-11-17T09:30:31.792159668Z E1117 09:30:31.792117       1 imagestream_controller.go:136] Error syncing image stream "openshift/tools": Operation cannot be fulfilled on imagestreamimports.image.openshift.io "tools": the object has been modified; please apply your changes to the XXXXXX version and try again
+2025-11-17T09:30:57.110140044Z W1117 09:30:57.109928       1 reflector.go:456] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: watch of *v1.Event ended with: Internal error occurred: etcdserver: no leader
+2025-11-17T09:31:54.874251121Z E1117 09:31:54.874203       1 leaderelection.go:327] error retrieving resource lock openshift-controller-manager/openshift-XXXXXX-controllers: the server was unable to return a response in the time allotted, but may still be processing the request (get configmaps openshift-XXXXXX-controllers)
+2025-11-17T09:31:58.025029661Z W1117 09:31:58.024968       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.Event: Get "https://172.30.0.1:443/api/v1/events?fieldSelector=reason%3DNeedPods&limit=500&resourceVersion=16109": stream error: stream ID 3837; INTERNAL_ERROR; received from peer
+2025-11-17T09:31:58.025063283Z I1117 09:31:58.025028       1 trace.go:236] Trace[682821402]: "Reflector ListAndWatch" name:k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231 (17-Nov-2025 09:30:58.016) (total time: 60008ms):
+2025-11-17T09:31:58.025063283Z Trace[682821402]: ---"Objects listed" error:Get "https://172.30.0.1:443/api/v1/events?fieldSelector=reason%3DNeedPods&limit=500&resourceVersion=16109": stream error: stream ID 3837; INTERNAL_ERROR; received from peer 60008ms (09:31:58.024)
+2025-11-17T09:31:58.025063283Z Trace[682821402]: [1m0.00860982s] [1m0.00860982s] END
+2025-11-17T09:31:58.025063283Z E1117 09:31:58.025041       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.Event: failed to list *v1.Event: Get "https://172.30.0.1:443/api/v1/events?fieldSelector=reason%3DNeedPods&limit=500&resourceVersion=16109": stream error: stream ID 3837; INTERNAL_ERROR; received from peer
+2025-11-17T09:32:41.873022665Z E1117 09:32:41.872953       1 leaderelection.go:327] error retrieving resource lock openshift-controller-manager/openshift-XXXXXX-controllers: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-controller-manager/configmaps/openshift-XXXXXX-controllers": context deadline exceeded
+2025-11-17T09:32:41.873022665Z I1117 09:32:41.872989       1 leaderelection.go:280] failed to renew lease openshift-controller-manager/openshift-XXXXXX-controllers: timed out waiting for the condition
+2025-11-17T09:32:46.650269046Z E1117 09:32:46.650220       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.ImageStream: the server is currently unable to handle the request (get imagestreams.image.openshift.io)
+2025-11-17T09:32:46.650269046Z E1117 09:32:46.650234       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.TemplateInstance: the server is currently unable to handle the request (get templateinstances.template.openshift.io)
+2025-11-17T09:32:50.493910282Z W1117 09:32:50.493555       1 warnings.go:70] apps.openshift.io/v1 DeploymentConfig is deprecated in v4.14+, unavailable in v4.10000+
+2025-11-17T09:32:52.049038488Z I1117 09:32:52.048547       1 trace.go:236] Trace[558944871]: "Reflector ListAndWatch" name:k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231 (17-Nov-2025 09:32:00.260) (total time: 51787ms):
+2025-11-17T09:32:52.049038488Z Trace[558944871]: ---"Objects listed" error:<nil> 51787ms (09:32:52.048)
+2025-11-17T09:32:52.049038488Z Trace[558944871]: [51.787543533s] [51.787543533s] END
+2025-11-17T09:32:52.732479330Z W1117 09:32:52.732426       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.TemplateInstance: Get "https://172.30.0.1:443/apis/template.openshift.io/v1/templateinstances?resourceVersion=16024": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:52.732540378Z E1117 09:32:52.732530       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.TemplateInstance: failed to list *v1.TemplateInstance: Get "https://172.30.0.1:443/apis/template.openshift.io/v1/templateinstances?resourceVersion=16024": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:52.874945901Z W1117 09:32:52.874855       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.ImageStream: Get "https://172.30.0.1:443/apis/image.openshift.io/v1/imagestreams?resourceVersion=18464": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:52.875007350Z E1117 09:32:52.874998       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.ImageStream: failed to list *v1.ImageStream: Get "https://172.30.0.1:443/apis/image.openshift.io/v1/imagestreams?resourceVersion=18464": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:55.706317205Z W1117 09:32:55.706261       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.ImageStream: the server is currently unable to handle the request (get imagestreams.image.openshift.io)
+2025-11-17T09:32:55.706317205Z E1117 09:32:55.706299       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.ImageStream: failed to list *v1.ImageStream: the server is currently unable to handle the request (get imagestreams.image.openshift.io)
+2025-11-17T09:32:55.823897144Z W1117 09:32:55.823852       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.TemplateInstance: the server is currently unable to handle the request (get templateinstances.template.openshift.io)
+2025-11-17T09:32:55.823897144Z E1117 09:32:55.823881       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.TemplateInstance: failed to list *v1.TemplateInstance: the server is currently unable to handle the request (get templateinstances.template.openshift.io)
+2025-11-17T09:32:56.779700527Z W1117 09:32:56.779642       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.Build: the server is currently unable to handle the request (get builds.build.openshift.io)
+2025-11-17T09:32:56.779700527Z E1117 09:32:56.779680       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.Build: failed to list *v1.Build: the server is currently unable to handle the request (get builds.build.openshift.io)
+2025-11-17T09:32:57.019200610Z W1117 09:32:57.016646       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.Image: the server is currently unable to handle the request (get images.image.openshift.io)
+2025-11-17T09:32:57.019200610Z E1117 09:32:57.016680       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.Image: failed to list *v1.Image: the server is currently unable to handle the request (get images.image.openshift.io)
+2025-11-17T09:32:57.019200610Z W1117 09:32:57.016909       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.DeploymentConfig: the server is currently unable to handle the request (get deploymentconfigs.apps.openshift.io)
+2025-11-17T09:32:57.019200610Z E1117 09:32:57.016929       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.DeploymentConfig: failed to list *v1.DeploymentConfig: the server is currently unable to handle the request (get deploymentconfigs.apps.openshift.io)
+2025-11-17T09:32:57.103918779Z W1117 09:32:57.102981       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.BuildConfig: the server is currently unable to handle the request (get buildconfigs.build.openshift.io)
+2025-11-17T09:32:57.103918779Z E1117 09:32:57.103015       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.BuildConfig: failed to list *v1.BuildConfig: the server is currently unable to handle the request (get buildconfigs.build.openshift.io)
+2025-11-17T09:32:58.658536389Z W1117 09:32:58.658489       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.Image: the server is currently unable to handle the request (get images.image.openshift.io)
+2025-11-17T09:32:58.658536389Z E1117 09:32:58.658523       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.Image: failed to list *v1.Image: the server is currently unable to handle the request (get images.image.openshift.io)
+2025-11-17T09:32:58.909906672Z W1117 09:32:58.909815       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.BuildConfig: buildconfigs.build.openshift.io is forbidden: User "system:anonymous" cannot list resource "buildconfigs" in API group "build.openshift.io" at the cluster scope
+2025-11-17T09:32:58.909906672Z E1117 09:32:58.909851       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.BuildConfig: failed to list *v1.BuildConfig: buildconfigs.build.openshift.io is forbidden: User "system:anonymous" cannot list resource "buildconfigs" in API group "build.openshift.io" at the cluster scope
+2025-11-17T09:32:58.909906672Z W1117 09:32:58.909892       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.DeploymentConfig: deploymentconfigs.apps.openshift.io is forbidden: User "system:anonymous" cannot list resource "deploymentconfigs" in API group "apps.openshift.io" at the cluster scope
+2025-11-17T09:32:58.909906672Z E1117 09:32:58.909901       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.DeploymentConfig: failed to list *v1.DeploymentConfig: deploymentconfigs.apps.openshift.io is forbidden: User "system:anonymous" cannot list resource "deploymentconfigs" in API group "apps.openshift.io" at the cluster scope
+2025-11-17T09:32:59.156521733Z W1117 09:32:59.156471       1 reflector.go:533] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: failed to list *v1.Build: the server is currently unable to handle the request (get builds.build.openshift.io)
+2025-11-17T09:32:59.156521733Z E1117 09:32:59.156500       1 reflector.go:148] k8s.io/client-go@v1.5.2/tools/cache/reflector.go:231: Failed to watch *v1.Build: failed to list *v1.Build: the server is currently unable to handle the request (get builds.build.openshift.io)
+2025-11-17T09:33:00.405555682Z W1117 09:33:00.405518       1 controller_manager.go:107] Controller Manager received stop signal: leaderelection lost
+2025-11-17T09:33:00.405629379Z I1117 09:33:00.405602       1 build_controller.go:521] Shutting down build controller

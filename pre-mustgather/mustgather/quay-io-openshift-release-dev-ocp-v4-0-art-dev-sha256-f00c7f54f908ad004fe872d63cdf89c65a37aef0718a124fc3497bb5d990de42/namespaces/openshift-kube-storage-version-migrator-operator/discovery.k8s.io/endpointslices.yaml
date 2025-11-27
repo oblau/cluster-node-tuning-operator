@@ -1,0 +1,70 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.6
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: kube-storage-version-migrator-operator-68b77c69d5-frbt6
+      namespace: openshift-kube-storage-version-migrator-operator
+      uid: 8da45fbd-2f87-4723-bdef-68b7dba84bf5
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:33:30Z"
+    creationTimestamp: "2025-11-17T09:05:38Z"
+    generateName: metrics-
+    generation: 6
+    labels:
+      app: kube-storage-version-migrator-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"9c4ac8d0-3c66-4092-b61f-0edbb7021731"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:33:30Z"
+    name: metrics-qtvf6
+    namespace: openshift-kube-storage-version-migrator-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: metrics
+      uid: 9c4ac8d0-3c66-4092-b61f-0edbb7021731
+    resourceVersion: "19881"
+    uid: b9a76aff-b11b-4acc-95a7-1bd6dd6ee6ee
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32536"

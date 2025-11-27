@@ -1,0 +1,89 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2025-11-17T09:05:24Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:24Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:05:24Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:27:19Z"
+  name: operator-lifecycle-manager-packageserver
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "14593"
+  uid: 69c90e42-a8c4-4b36-895e-eaaf0f15be3b
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:21:36Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2025-11-17T09:27:19Z"
+    message: ClusterServiceVersion openshift-operator-lifecycle-manager/packageserver
+      observed in phase Succeeded
+    reason: ClusterServiceVersionSucceeded
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2025-11-17T09:27:19Z"
+    message: Deployed version 0.0.1-snapshot
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2025-11-17T09:21:36Z"
+    message: Safe to upgrade
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-operator-lifecycle-manager
+    resource: namespaces
+  - group: operators.coreos.com
+    name: packageserver
+    namespace: openshift-operator-lifecycle-manager
+    resource: clusterserviceversions
+  versions:
+  - name: operator
+    version: 4.14.59
+  - name: packageserver
+    version: 0.0.1-snapshot

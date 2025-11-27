@@ -1,0 +1,156 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.75
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: console-69dbd9bdf7-4hrtl
+      namespace: openshift-console
+      uid: 78388361-a36f-416e-b396-4bccc9cd0061
+  - addresses:
+    - 10.130.0.32
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: console-69dbd9bdf7-kbtj6
+      namespace: openshift-console
+      uid: 1ec7e699-74ab-4a3c-83a2-888f3db5c3ec
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:41:43Z"
+    creationTimestamp: "2025-11-17T09:30:49Z"
+    generateName: console-
+    generation: 20
+    labels:
+      app: console
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: console
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"89c36fde-9eec-4713-b5ec-c48c9ee11fbd"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:41:43Z"
+    name: console-gl69h
+    namespace: openshift-console
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: console
+      uid: 89c36fde-9eec-4713-b5ec-c48c9ee11fbd
+    resourceVersion: "28124"
+    uid: 7920e7d5-938a-45ad-80e5-c0556f8f5f49
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.61
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: downloads-7dcf8dd5c4-qchwz
+      namespace: openshift-console
+      uid: 51bc5d87-8d50-413d-b0ab-e8f15aa01c63
+  - addresses:
+    - 10.128.0.50
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: downloads-7dcf8dd5c4-tcfsl
+      namespace: openshift-console
+      uid: 926524e0-1bd4-41c9-ba97-e2e909d35a6e
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:30:34Z"
+    creationTimestamp: "2025-11-17T09:30:49Z"
+    generateName: downloads-
+    generation: 2
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: downloads
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"690c791d-2e79-4f99-862a-1b39b547171e"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:33:21Z"
+    name: downloads-6xrhp
+    namespace: openshift-console
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: downloads
+      uid: 690c791d-2e79-4f99-862a-1b39b547171e
+    resourceVersion: "19741"
+    uid: b1c5df94-5f98-440d-b056-51ded12d6027
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32425"

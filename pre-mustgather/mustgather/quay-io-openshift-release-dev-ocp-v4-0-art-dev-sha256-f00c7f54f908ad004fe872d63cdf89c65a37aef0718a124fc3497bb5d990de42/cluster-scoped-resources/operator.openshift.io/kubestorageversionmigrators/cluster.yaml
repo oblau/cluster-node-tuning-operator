@@ -1,0 +1,95 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: KubeStorageVersionMigrator
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2025-11-17T09:05:36Z"
+  finalizers:
+  - cluster-kube-storage-version-migrator-operator.operator.openshift.io/KubeStorageVersionMigrator
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:36Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cluster-kube-storage-version-migrator-operator.operator.openshift.io/KubeStorageVersionMigrator": {}
+    manager: cluster-kube-storage-version-migrator-operator
+    operation: Update
+    time: "2025-11-17T09:20:30Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:generations: {}
+        f:readyReplicas: {}
+    manager: cluster-kube-storage-version-migrator-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:20:46Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "8132"
+  uid: e11ade0f-ecbd-4a94-881b-cfcc80c5eb16
+spec:
+  logLevel: Normal
+  managementState: Managed
+  operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:20:30Z"
+    reason: Default
+    status: "True"
+    type: DefaultUpgradeable
+  - lastTransitionTime: "2025-11-17T09:20:30Z"
+    reason: AsExpected
+    status: "False"
+    type: KubeStorageVersionMigratorStaticResourcesDegraded
+  - lastTransitionTime: "2025-11-17T09:20:46Z"
+    status: "True"
+    type: KubeStorageVersionMigratorAvailable
+  - lastTransitionTime: "2025-11-17T09:20:46Z"
+    status: "False"
+    type: KubeStorageVersionMigratorProgressing
+  - lastTransitionTime: "2025-11-17T09:20:30Z"
+    reason: AsExpected
+    status: "False"
+    type: KubeStorageVersionMigratorDegraded
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: migrator
+    namespace: openshift-kube-storage-version-migrator
+    resource: deployments
+  readyReplicas: 0

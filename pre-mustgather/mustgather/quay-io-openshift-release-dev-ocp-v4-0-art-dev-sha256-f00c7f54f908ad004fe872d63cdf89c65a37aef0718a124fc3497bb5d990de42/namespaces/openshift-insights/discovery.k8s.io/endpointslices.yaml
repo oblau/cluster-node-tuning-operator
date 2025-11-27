@@ -1,0 +1,70 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.19
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: insights-operator-74dc4c8545-rzwbg
+      namespace: openshift-insights
+      uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:45Z"
+    creationTimestamp: "2025-11-17T09:05:55Z"
+    generateName: metrics-
+    generation: 4
+    labels:
+      app: insights-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0e7287ad-43ef-42c5-9b86-d062c2b9d791"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:45Z"
+    name: metrics-7zfdt
+    namespace: openshift-insights
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: metrics
+      uid: 0e7287ad-43ef-42c5-9b86-d062c2b9d791
+    resourceVersion: "9668"
+    uid: 23e5ee15-2952-4bb3-be29-63cf24775240
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32450"

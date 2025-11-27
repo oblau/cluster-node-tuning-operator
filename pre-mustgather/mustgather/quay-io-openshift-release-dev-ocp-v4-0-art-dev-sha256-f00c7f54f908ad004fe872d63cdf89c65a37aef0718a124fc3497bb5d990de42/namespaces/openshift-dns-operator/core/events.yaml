@@ -1,0 +1,726 @@
+---
+apiVersion: v1
+items:
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:11:05.236523Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "3369"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: null
+  message: '0/2 nodes are available: 2 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:11:05Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:11:05Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c046fcc47827
+    namespace: openshift-dns-operator
+    resourceVersion: "3371"
+    uid: 5ab2a504-ad48-415c-bd04-78a8d606ac62
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:16:29.604535Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "3373"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: null
+  message: '0/2 nodes are available: 2 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:16:29Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:16:29Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c092829b8123
+    namespace: openshift-dns-operator
+    resourceVersion: "4403"
+    uid: 69c324bd-ae1c-4e4a-a9f5-f2252eb8eb0d
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:19:25.303317Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "3373"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-dns-operator/dns-operator-747d9466bd-7pb2v
+    to XXXXXX2
+  metadata:
+    creationTimestamp: "2025-11-17T09:19:25Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:19:25Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c0bb6b1233bf
+    namespace: openshift-dns-operator
+    resourceVersion: "5544"
+    uid: a0fc0f80-1300-4ef8-8a5f-d223c57e196d
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 8
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:19:25Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "5513"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:29Z"
+  message: 'MountVolume.SetUp failed for volume "metrics-tls" : secret "metrics-tls"
+    not found'
+  metadata:
+    creationTimestamp: "2025-11-17T09:19:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:20:29Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c0bb7c1a2ea3
+    namespace: openshift-dns-operator
+    resourceVersion: "7048"
+    uid: d61a5dd0-52eb-4e6f-a779-a3b100b63d30
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "5513"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:28Z"
+  message: 'Unable to attach or mount volumes: unmounted volumes=[metrics-tls], unattached
+    volumes=[], failed to process volumes=[]: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:28Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c0d810b214f0
+    namespace: openshift-dns-operator
+    resourceVersion: "8937"
+    uid: 6352c828-2b49-4887-a407-5238c4f41c16
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:35Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "6031"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:35Z"
+  message: Add eth0 [10.129.0.23/23 fd02:0:0:2::17/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:21:35Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c0d9d190fcae
+    namespace: openshift-dns-operator
+    resourceVersion: "9090"
+    uid: 23f03822-4ee0-49c7-ada3-0d4c9b5d7d16
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-operator}
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "5513"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:35Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0c03c0edd26a33051b7899f7e6c54fe138d0e8c4e96d1e927280a1165643db32"
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:35Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c0d9d2dd5036
+    namespace: openshift-dns-operator
+    resourceVersion: "9097"
+    uid: 7fea6121-ed93-4689-a10e-a3835a04a6e0
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:43Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-operator}
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "5513"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:43Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0c03c0edd26a33051b7899f7e6c54fe138d0e8c4e96d1e927280a1165643db32"
+    in 8.029366013s (8.029383666s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:43Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c0dbb174348f
+    namespace: openshift-dns-operator
+    resourceVersion: "9475"
+    uid: 3485ee45-3fc7-46a6-aa69-6b88d684ceda
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-operator}
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "5513"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:44Z"
+  message: Created container dns-operator
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:44Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c0dbc54fd685
+    namespace: openshift-dns-operator
+    resourceVersion: "9506"
+    uid: 6efba39b-51da-4e10-aafe-8ece7261888f
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{dns-operator}
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "5513"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:44Z"
+  message: Started container dns-operator
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:44Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c0dbc6de6085
+    namespace: openshift-dns-operator
+    resourceVersion: "9507"
+    uid: 740e4096-37df-49a7-9d4d-cfb4384370f5
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "5513"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:44Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff"
+    already present on machine
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:44Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c0dbc6f456b7
+    namespace: openshift-dns-operator
+    resourceVersion: "9508"
+    uid: 116701e4-b797-48fe-9d89-3f101ae59778
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "5513"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:44Z"
+  message: Created container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:44Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c0dbd65e1951
+    namespace: openshift-dns-operator
+    resourceVersion: "9569"
+    uid: def9195c-67e3-43fb-b314-ea182c5066d6
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: dns-operator-747d9466bd-7pb2v
+    namespace: openshift-dns-operator
+    resourceVersion: "5513"
+    uid: 1ddebb7f-db82-426a-973e-30bd64732693
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:44Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:44Z"
+    name: dns-operator-747d9466bd-7pb2v.1878c0dbd778fc43
+    namespace: openshift-dns-operator
+    resourceVersion: "9570"
+    uid: a8a0022c-c8f9-460a-b2e4-8c637d3794e5
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 16
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:05:37Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: dns-operator-747d9466bd
+    namespace: openshift-dns-operator
+    resourceVersion: "1309"
+    uid: 883608dd-2675-4aa5-b50f-ca7238672ba8
+  kind: Event
+  lastTimestamp: "2025-11-17T09:08:21Z"
+  message: 'Error creating: pods "dns-operator-747d9466bd-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+    the cluster does not have any nodes'
+  metadata:
+    creationTimestamp: "2025-11-17T09:05:37Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:08:21Z"
+    name: dns-operator-747d9466bd.1878bffaaf38f680
+    namespace: openshift-dns-operator
+    resourceVersion: "2808"
+    uid: 281552ad-00e3-42a8-9ccc-60bc74387d04
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:11:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: dns-operator-747d9466bd
+    namespace: openshift-dns-operator
+    resourceVersion: "1313"
+    uid: 883608dd-2675-4aa5-b50f-ca7238672ba8
+  kind: Event
+  lastTimestamp: "2025-11-17T09:11:05Z"
+  message: 'Created pod: dns-operator-747d9466bd-7pb2v'
+  metadata:
+    creationTimestamp: "2025-11-17T09:11:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:11:05Z"
+    name: dns-operator-747d9466bd.1878c046fcbcb4e0
+    namespace: openshift-dns-operator
+    resourceVersion: "3370"
+    uid: f4e04c2b-0cef-44b0-a7eb-5e672073cae0
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:05:37Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: dns-operator
+    namespace: openshift-dns-operator
+    resourceVersion: "1308"
+    uid: 02e32a7a-ea5d-4370-923f-551fafbae277
+  kind: Event
+  lastTimestamp: "2025-11-17T09:05:37Z"
+  message: Scaled up replica set dns-operator-747d9466bd to 1
+  metadata:
+    creationTimestamp: "2025-11-17T09:05:37Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:05:37Z"
+    name: dns-operator.1878bffaaefbfbd0
+    namespace: openshift-dns-operator
+    resourceVersion: "1310"
+    uid: 2e42c38f-7232-45b8-b096-f2cde3a17eb6
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "32429"

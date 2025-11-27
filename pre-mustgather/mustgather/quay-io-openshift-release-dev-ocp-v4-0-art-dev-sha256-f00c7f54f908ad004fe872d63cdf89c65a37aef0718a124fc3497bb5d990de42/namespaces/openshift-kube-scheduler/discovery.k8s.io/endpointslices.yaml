@@ -1,0 +1,94 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: openshift-kube-scheduler-XXXXXX1
+      namespace: openshift-kube-scheduler
+      uid: b6118f4d-441a-446b-94d1-9d48218676c3
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: openshift-kube-scheduler-XXXXXX0
+      namespace: openshift-kube-scheduler
+      uid: 0b01f5bd-86db-4eeb-97b6-b24113c06754
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: openshift-kube-scheduler-XXXXXX2
+      namespace: openshift-kube-scheduler
+      uid: 3d9d7e7a-e24f-4ad9-98ee-4db01557c260
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:43:01Z"
+    creationTimestamp: "2025-11-17T09:20:24Z"
+    generateName: scheduler-
+    generation: 24
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: scheduler
+      prometheus: kube-scheduler
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:prometheus: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"290f5233-22d3-4f7f-97c3-af0317cd1feb"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:43:01Z"
+    name: scheduler-rbbn9
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: scheduler
+      uid: 290f5233-22d3-4f7f-97c3-af0317cd1feb
+    resourceVersion: "28831"
+    uid: 3a91a8e4-7aab-48ff-9e39-4f2d099d0615
+  ports:
+  - name: https
+    port: 10259
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32524"

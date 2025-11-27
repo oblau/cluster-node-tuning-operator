@@ -1,0 +1,726 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.22
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: metal3-baremetal-operator-6f455c9bb-lh5hn
+      namespace: openshift-machine-api
+      uid: 2a417a38-ce18-4cde-bb07-d33850c06073
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:22:50Z"
+    creationTimestamp: "2025-11-17T09:22:12Z"
+    generateName: baremetal-operator-webhook-service-
+    generation: 2
+    labels:
+      baremetal.openshift.io/metal3-validating-webhook: metal3-validating-webhook
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: metal3
+      kubernetes.io/service-name: baremetal-operator-webhook-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:baremetal.openshift.io/metal3-validating-webhook: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b5ab954f-3d4c-4377-af5b-1e08fef5a165"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:22:50Z"
+    name: baremetal-operator-webhook-service-bdgn6
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: baremetal-operator-webhook-service
+      uid: b5ab954f-3d4c-4377-af5b-1e08fef5a165
+    resourceVersion: "12123"
+    uid: 2c1ce7d2-6d5b-445c-82cf-67a140d6a305
+  ports:
+  - name: http
+    port: 9447
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.33
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: cluster-autoscaler-operator-577bc44bdf-8ssjj
+      namespace: openshift-machine-api
+      uid: 41885db9-d5ba-4d3b-ae07-5c45fd4df5e5
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:49Z"
+    creationTimestamp: "2025-11-17T09:06:19Z"
+    generateName: cluster-autoscaler-operator-
+    generation: 2
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: cluster-autoscaler-operator
+      kubernetes.io/service-name: cluster-autoscaler-operator
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f8a2ff06-9342-4b4d-a9c5-cf7c08f6211a"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:49Z"
+    name: cluster-autoscaler-operator-vdfjj
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: cluster-autoscaler-operator
+      uid: f8a2ff06-9342-4b4d-a9c5-cf7c08f6211a
+    resourceVersion: "10045"
+    uid: 0b3b13b6-d951-4140-9066-47588cae3d02
+  ports:
+  - name: metrics
+    port: 9192
+    protocol: TCP
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.14
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: cluster-baremetal-operator-67db5c984b-cpbz9
+      namespace: openshift-machine-api
+      uid: 966b428f-5ad6-4346-90cb-3295c20f8fb6
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:46Z"
+    creationTimestamp: "2025-11-17T09:06:14Z"
+    generateName: cluster-baremetal-operator-service-
+    generation: 2
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: cluster-baremetal-operator
+      kubernetes.io/service-name: cluster-baremetal-operator-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"ba01d4d5-299c-4ba5-b187-0c0f2e102eb5"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:46Z"
+    name: cluster-baremetal-operator-service-j8w4n
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: cluster-baremetal-operator-service
+      uid: ba01d4d5-299c-4ba5-b187-0c0f2e102eb5
+    resourceVersion: "9759"
+    uid: 80fdc613-5479-47ea-978e-8a5b1d4d9e6e
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.14
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: cluster-baremetal-operator-67db5c984b-cpbz9
+      namespace: openshift-machine-api
+      uid: 966b428f-5ad6-4346-90cb-3295c20f8fb6
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:46Z"
+    creationTimestamp: "2025-11-17T09:06:15Z"
+    generateName: cluster-baremetal-webhook-service-
+    generation: 2
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: cluster-baremetal-operator
+      kubernetes.io/service-name: cluster-baremetal-webhook-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"e28962a7-be23-4e59-b5e0-fe103a444032"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:46Z"
+    name: cluster-baremetal-webhook-service-n4cxf
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: cluster-baremetal-webhook-service
+      uid: e28962a7-be23-4e59-b5e0-fe103a444032
+    resourceVersion: "9758"
+    uid: 596a777f-4bc5-4bf3-8fea-2d55699313e8
+  ports:
+  - name: ""
+    port: 9443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.18
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: control-plane-machine-set-operator-54989cfc99-766pz
+      namespace: openshift-machine-api
+      uid: 68dfd3d8-7edd-4bd8-9eab-84b54e987371
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:45Z"
+    creationTimestamp: "2025-11-17T09:06:13Z"
+    generateName: control-plane-machine-set-operator-
+    generation: 2
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: control-plane-machine-set-operator
+      kubernetes.io/service-name: control-plane-machine-set-operator
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"59ff4f4e-c7b4-4e9b-ab86-82e5aa147341"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:45Z"
+    name: control-plane-machine-set-operator-vt9wl
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: control-plane-machine-set-operator
+      uid: 59ff4f4e-c7b4-4e9b-ab86-82e5aa147341
+    resourceVersion: "9689"
+    uid: fc25e1fb-ce6f-44c9-ac1b-4decd67c54ff
+  ports:
+  - name: https
+    port: 9443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.23
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: machine-api-controllers-57fbbf9557-pdr5j
+      namespace: openshift-machine-api
+      uid: 00207c9c-6a4e-4e9e-8ff8-79f65792ea83
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:27:14Z"
+    creationTimestamp: "2025-11-17T09:05:55Z"
+    generateName: machine-api-controllers-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: controller
+      kubernetes.io/service-name: machine-api-controllers
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"be3ef3ca-f73d-49e4-adc7-bd74cc91ccdf"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:27:18Z"
+    name: machine-api-controllers-655qk
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: machine-api-controllers
+      uid: be3ef3ca-f73d-49e4-adc7-bd74cc91ccdf
+    resourceVersion: "14567"
+    uid: 6eac3f76-279a-4934-9dc2-74d31682abfc
+  ports:
+  - name: machine-mtrc
+    port: 8441
+    protocol: TCP
+  - name: mhc-mtrc
+    port: 8444
+    protocol: TCP
+  - name: machineset-mtrc
+    port: 8442
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.5
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: machine-api-operator-5fb84845c4-2h8bz
+      namespace: openshift-machine-api
+      uid: 329e0c32-0006-400b-9387-3b27b9148288
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:22:12Z"
+    creationTimestamp: "2025-11-17T09:05:55Z"
+    generateName: machine-api-operator-
+    generation: 2
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: machine-api-operator
+      kubernetes.io/service-name: machine-api-operator
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b7b56304-3576-417c-9abb-64dd3c11fd0c"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:22:12Z"
+    name: machine-api-operator-4gmk7
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: machine-api-operator
+      uid: b7b56304-3576-417c-9abb-64dd3c11fd0c
+    resourceVersion: "10859"
+    uid: d9773016-c48d-496c-b212-51213effd6a4
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.23
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: machine-api-controllers-57fbbf9557-pdr5j
+      namespace: openshift-machine-api
+      uid: 00207c9c-6a4e-4e9e-8ff8-79f65792ea83
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:27:14Z"
+    creationTimestamp: "2025-11-17T09:05:51Z"
+    generateName: machine-api-operator-machine-webhook-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: machine-api-operator-machine-webhook
+      kubernetes.io/service-name: machine-api-operator-machine-webhook
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"d8c21e9c-fcfc-4cca-ba16-cff75c962eb9"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:27:18Z"
+    name: machine-api-operator-machine-webhook-rk2wd
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: machine-api-operator-machine-webhook
+      uid: d8c21e9c-fcfc-4cca-ba16-cff75c962eb9
+    resourceVersion: "14572"
+    uid: 3c4244db-5d2c-41be-a512-9a6d9e89dea2
+  ports:
+  - name: https
+    port: 8440
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.23
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: machine-api-controllers-57fbbf9557-pdr5j
+      namespace: openshift-machine-api
+      uid: 00207c9c-6a4e-4e9e-8ff8-79f65792ea83
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:27:14Z"
+    creationTimestamp: "2025-11-17T09:05:51Z"
+    generateName: machine-api-operator-webhook-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: machine-api-operator-webhook
+      kubernetes.io/service-name: machine-api-operator-webhook
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"e3763295-11f0-4327-889e-e06238f762a1"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:27:18Z"
+    name: machine-api-operator-webhook-5rch5
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: machine-api-operator-webhook
+      uid: e3763295-11f0-4327-889e-e06238f762a1
+    resourceVersion: "14570"
+    uid: 4db49280-7241-4387-864b-863845d75ea2
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.24
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: metal3-image-customization-56448bddc9-bv6n7
+      namespace: openshift-machine-api
+      uid: b6fcb081-787b-4c10-91bc-ee6360e6e61a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:23:23Z"
+    creationTimestamp: "2025-11-17T09:22:13Z"
+    generateName: metal3-image-customization-service-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: metal3-image-customization-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"c4ba5281-0f6f-4b2b-b5a5-e1c5e3d79203"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:23:23Z"
+    name: metal3-image-customization-service-p6hd7
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: metal3-image-customization-service
+      uid: c4ba5281-0f6f-4b2b-b5a5-e1c5e3d79203
+    resourceVersion: "12544"
+    uid: 0bf6ae9a-f462-44cf-997f-2887936e3730
+  ports:
+  - name: http
+    port: 8084
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: metal3-75b58cb4f8-h9clh
+      namespace: openshift-machine-api
+      uid: 414863cb-bfe6-433c-a724-f05f63913b77
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:23:15Z"
+    creationTimestamp: "2025-11-17T09:22:11Z"
+    generateName: metal3-state-
+    generation: 2
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: metal3-state
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"31be5e50-bc28-4e08-bfed-d6e4057f4000"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:23:15Z"
+    name: metal3-state-5xms9
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: metal3-state
+      uid: 31be5e50-bc28-4e08-bfed-d6e4057f4000
+    resourceVersion: "12486"
+    uid: 34b8c46e-c14c-482f-9df2-1393f1d64f73
+  ports:
+  - name: vmedia-https
+    port: 6183
+    protocol: TCP
+  - name: ironic
+    port: 6388
+    protocol: TCP
+  - name: http
+    port: 6180
+    protocol: TCP
+  - name: inspector
+    port: 5051
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32400"

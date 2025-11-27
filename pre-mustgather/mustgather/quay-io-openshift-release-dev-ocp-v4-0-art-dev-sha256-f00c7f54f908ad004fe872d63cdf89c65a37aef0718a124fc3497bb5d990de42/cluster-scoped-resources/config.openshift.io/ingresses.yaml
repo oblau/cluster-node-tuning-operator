@@ -1,0 +1,103 @@
+---
+apiVersion: config.openshift.io/v1
+items:
+- apiVersion: config.openshift.io/v1
+  kind: Ingress
+  metadata:
+    creationTimestamp: "2025-11-17T09:05:14Z"
+    generation: 1
+    managedFields:
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:componentRoutes:
+            k:{"name":"oauth-openshift","namespace":"openshift-authentication"}:
+              .: {}
+              f:conditions:
+                k:{"type":"Degraded"}:
+                  .: {}
+                  f:lastTransitionTime: {}
+                  f:message: {}
+                  f:reason: {}
+                  f:status: {}
+                  f:type: {}
+                k:{"type":"Progressing"}:
+                  .: {}
+                  f:lastTransitionTime: {}
+                  f:message: {}
+                  f:reason: {}
+                  f:status: {}
+                  f:type: {}
+              f:consumingUsers: {}
+              f:currentHostnames: {}
+              f:defaultHostname: {}
+              f:name: {}
+              f:namespace: {}
+              f:relatedObjects: {}
+      manager: AuthenticationCustomRouteController
+      operation: Apply
+      subresource: status
+      time: "2025-11-17T09:40:02Z"
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          .: {}
+          f:domain: {}
+          f:loadBalancer:
+            .: {}
+            f:platform:
+              .: {}
+              f:type: {}
+      manager: cluster-bootstrap
+      operation: Update
+      time: "2025-11-17T09:05:14Z"
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:defaultPlacement: {}
+      manager: cluster-bootstrap
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:05:14Z"
+    name: cluster
+    resourceVersion: "26597"
+    uid: 2c943b86-9b12-4783-8c34-f226b5db3721
+  spec:
+    domain: apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+    loadBalancer:
+      platform:
+        type: ""
+  status:
+    componentRoutes:
+    - conditions:
+      - lastTransitionTime: "2025-11-17T09:40:02Z"
+        message: All is well
+        reason: AsExpected
+        status: "False"
+        type: Progressing
+      - lastTransitionTime: "2025-11-17T09:29:46Z"
+        message: All is well
+        reason: AsExpected
+        status: "False"
+        type: Degraded
+      consumingUsers:
+      - system:serviceaccount:oauth-openshift:authentication-operator
+      currentHostnames:
+      - oauth-openshift.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      defaultHostname: oauth-openshift.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      name: oauth-openshift
+      namespace: openshift-authentication
+      relatedObjects:
+      - group: route.openshift.io
+        name: oauth-openshift
+        namespace: openshift-authentication
+        resource: routes
+    defaultPlacement: Workers
+kind: IngressList
+metadata:
+  continue: ""
+  resourceVersion: "32363"

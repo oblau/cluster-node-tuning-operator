@@ -1,0 +1,137 @@
+---
+apiVersion: route.openshift.io/v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      haproxy.router.openshift.io/timeout: 5m
+    creationTimestamp: "2025-11-17T09:30:33Z"
+    labels:
+      app: console
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:haproxy.router.openshift.io/timeout: {}
+          f:labels:
+            .: {}
+            f:app: {}
+        f:spec:
+          f:host: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: console
+      operation: Update
+      time: "2025-11-17T09:30:33Z"
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:ingress: {}
+      manager: openshift-router
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:38:28Z"
+    name: console
+    namespace: openshift-console
+    resourceVersion: "23767"
+    uid: b568e283-c587-4573-aa62-8fe95aa84896
+  spec:
+    host: console-openshift-console.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+    port:
+      targetPort: https
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: console
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2025-11-17T09:38:28Z"
+        status: "True"
+        type: Admitted
+      host: console-openshift-console.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerCanonicalHostname: router-default.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:34Z"
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:host: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: console
+      operation: Update
+      time: "2025-11-17T09:30:34Z"
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:ingress: {}
+      manager: openshift-router
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:38:28Z"
+    name: downloads
+    namespace: openshift-console
+    resourceVersion: "23768"
+    uid: 632acd59-0b1b-45f2-b3ee-0d2ee189951e
+  spec:
+    host: downloads-openshift-console.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+    port:
+      targetPort: http
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: edge
+    to:
+      kind: Service
+      name: downloads
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2025-11-17T09:38:28Z"
+        status: "True"
+        type: Admitted
+      host: downloads-openshift-console.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerCanonicalHostname: router-default.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerName: default
+      wildcardPolicy: None
+kind: RouteList
+metadata:
+  resourceVersion: "32425"

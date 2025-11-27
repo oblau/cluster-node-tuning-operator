@@ -1,0 +1,734 @@
+---
+apiVersion: v1
+items:
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:11:23.063961Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "3596"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: null
+  message: '0/2 nodes are available: 2 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:11:23Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:11:23Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c04b235d9809
+    namespace: openshift-insights
+    resourceVersion: "3598"
+    uid: e01bfd35-b760-4c69-aca0-6e1afdff4da4
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:16:29.607479Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "3600"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: null
+  message: '0/2 nodes are available: 2 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:16:29Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:16:29Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c09282c87408
+    namespace: openshift-insights
+    resourceVersion: "4423"
+    uid: 21c7e2eb-ee3e-4163-ac24-c1709099290e
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:19:25.327999Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "3600"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-insights/insights-operator-74dc4c8545-rzwbg
+    to XXXXXX2
+  metadata:
+    creationTimestamp: "2025-11-17T09:19:25Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:19:25Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c0bb6c8adb34
+    namespace: openshift-insights
+    resourceVersion: "5589"
+    uid: e1b762c3-ad72-4319-a2f4-c21dd4d61688
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:19:25Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "5539"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:19:25Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_insights-operator-74dc4c8545-rzwbg_openshift-insights_5c70cc7c-1e49-4b0f-9533-c328f7bfed8b_0(0829edb4a0bd03d4d645671fa9f4e029444727aaa63381f6ff2891d22b5eaa75):
+    No CNI configuration file in /etc/kubernetes/cni/net.d/. Has your network provider
+    started?'
+  metadata:
+    creationTimestamp: "2025-11-17T09:19:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:19:25Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c0bb89ec3a9c
+    namespace: openshift-insights
+    resourceVersion: "5617"
+    uid: abe35ae1-4030-4016-8ebb-f3333e6fa16a
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:19:26Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "5539"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:19:26Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_insights-operator-74dc4c8545-rzwbg_openshift-insights_5c70cc7c-1e49-4b0f-9533-c328f7bfed8b_0(b7c279060935fea4d9c5142a2d543003e4cb692279f4d8e63865cc5f03521f62):
+    No CNI configuration file in /etc/kubernetes/cni/net.d/. Has your network provider
+    started?'
+  metadata:
+    creationTimestamp: "2025-11-17T09:19:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:19:26Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c0bbaffff649
+    namespace: openshift-insights
+    resourceVersion: "5658"
+    uid: cd1d555c-1aaa-42b0-b7ea-10cb22b706dd
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:19:41Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "5539"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:19:41Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_insights-operator-74dc4c8545-rzwbg_openshift-insights_5c70cc7c-1e49-4b0f-9533-c328f7bfed8b_0(aaf8a64709435666543fc915cadc100127669ef4a5ef6d10e63ba7890b88108e):
+    No CNI configuration file in /etc/kubernetes/cni/net.d/. Has your network provider
+    started?'
+  metadata:
+    creationTimestamp: "2025-11-17T09:19:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:19:41Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c0bf18d260e2
+    namespace: openshift-insights
+    resourceVersion: "5830"
+    uid: b2c73c88-1b77-4023-a476-2bf2c958a12b
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:19:54Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "5539"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:19:54Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_insights-operator-74dc4c8545-rzwbg_openshift-insights_5c70cc7c-1e49-4b0f-9533-c328f7bfed8b_0(2f619edef226a0846bae5a1037b4744f5da0148795efca8e227f082018637f15):
+    No CNI configuration file in /etc/kubernetes/cni/net.d/. Has your network provider
+    started?'
+  metadata:
+    creationTimestamp: "2025-11-17T09:19:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:19:54Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c0c21fa36d85
+    namespace: openshift-insights
+    resourceVersion: "5904"
+    uid: 79b2bde7-6e19-4a19-ac0b-7706c4825481
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:09Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "5706"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:09Z"
+  message: Add eth0 [10.129.0.19/23 fd02:0:0:2::13/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:20:09Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c0c5afeb8659
+    namespace: openshift-insights
+    resourceVersion: "6100"
+    uid: 5ce1c294-c449-4c90-b3d8-86a257048ac3
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{insights-operator}
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "5539"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:09Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:635d55b81c965996bf4c9b5fc8ac3b894062789a609279db6b185a6d0a42093b"
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:20:09Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c0c5b107e2bc
+    namespace: openshift-insights
+    resourceVersion: "6102"
+    uid: 0bc1aea5-b31e-4902-bf01-7015aba4b9f9
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{insights-operator}
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "5539"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:23Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:635d55b81c965996bf4c9b5fc8ac3b894062789a609279db6b185a6d0a42093b"
+    in 13.643048999s (13.643061575s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:20:23Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c0c8de38bce3
+    namespace: openshift-insights
+    resourceVersion: "6594"
+    uid: 0b42c623-f652-4634-a54e-e04f10897aba
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{insights-operator}
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "5539"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:44Z"
+  message: Created container insights-operator
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:44Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c0c8e5074325
+    namespace: openshift-insights
+    resourceVersion: "9497"
+    uid: 7af81cf6-b4ad-4afc-b77f-38f9c31cc917
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{insights-operator}
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "5539"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:44Z"
+  message: Started container insights-operator
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:44Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c0c8e5fed8f7
+    namespace: openshift-insights
+    resourceVersion: "9502"
+    uid: 70477270-d80b-4617-bea8-d1ae9ab237be
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:43Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{insights-operator}
+    kind: Pod
+    name: insights-operator-74dc4c8545-rzwbg
+    namespace: openshift-insights
+    resourceVersion: "5539"
+    uid: 5c70cc7c-1e49-4b0f-9533-c328f7bfed8b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:43Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:635d55b81c965996bf4c9b5fc8ac3b894062789a609279db6b185a6d0a42093b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:43Z"
+    name: insights-operator-74dc4c8545-rzwbg.1878c0dbb4c77c07
+    namespace: openshift-insights
+    resourceVersion: "9480"
+    uid: a1d8a223-80a2-42f6-bbe5-ac4e919cb60d
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 16
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:05:55Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: insights-operator-74dc4c8545
+    namespace: openshift-insights
+    resourceVersion: "2177"
+    uid: c5b67b7a-301a-4983-bd18-5194d6917df7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:08:39Z"
+  message: 'Error creating: pods "insights-operator-74dc4c8545-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+    the cluster does not have any nodes'
+  metadata:
+    creationTimestamp: "2025-11-17T09:05:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:08:39Z"
+    name: insights-operator-74dc4c8545.1878bffed5ea2928
+    namespace: openshift-insights
+    resourceVersion: "2851"
+    uid: 2d224deb-a7f1-46db-a6ca-8c6f00aaaa38
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:11:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: insights-operator-74dc4c8545
+    namespace: openshift-insights
+    resourceVersion: "2181"
+    uid: c5b67b7a-301a-4983-bd18-5194d6917df7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:11:23Z"
+  message: 'Created pod: insights-operator-74dc4c8545-rzwbg'
+  metadata:
+    creationTimestamp: "2025-11-17T09:11:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:11:23Z"
+    name: insights-operator-74dc4c8545.1878c04b23574ead
+    namespace: openshift-insights
+    resourceVersion: "3597"
+    uid: 98166c73-d124-4209-8312-dac28079638e
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:05:55Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: insights-operator
+    namespace: openshift-insights
+    resourceVersion: "2176"
+    uid: 4d3df9cd-7a9a-446f-8c0d-be35b46d9649
+  kind: Event
+  lastTimestamp: "2025-11-17T09:05:55Z"
+  message: Scaled up replica set insights-operator-74dc4c8545 to 1
+  metadata:
+    creationTimestamp: "2025-11-17T09:05:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:05:55Z"
+    name: insights-operator.1878bffed5b96fd3
+    namespace: openshift-insights
+    resourceVersion: "2178"
+    uid: b8b05b19-756e-46a8-986a-41dd02e5f4ef
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "32450"

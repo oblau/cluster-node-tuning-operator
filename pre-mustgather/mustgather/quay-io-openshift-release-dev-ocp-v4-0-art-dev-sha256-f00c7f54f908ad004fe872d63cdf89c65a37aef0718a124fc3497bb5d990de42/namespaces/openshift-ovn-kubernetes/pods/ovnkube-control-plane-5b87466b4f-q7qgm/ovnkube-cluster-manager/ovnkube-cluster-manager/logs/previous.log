@@ -1,0 +1,216 @@
+2025-11-17T09:27:05.817663623Z + [[ -f /env/_XXXXXX ]]
+2025-11-17T09:27:05.819334083Z + ovn_v4_join_subnet_opt=
+2025-11-17T09:27:05.819334083Z + [[ '' != '' ]]
+2025-11-17T09:27:05.819334083Z + ovn_v6_join_subnet_opt=
+2025-11-17T09:27:05.819334083Z + [[ '' != '' ]]
+2025-11-17T09:27:05.819334083Z + ovn_v4_transit_switch_subnet_opt=
+2025-11-17T09:27:05.819334083Z + [[ '' != '' ]]
+2025-11-17T09:27:05.819334083Z + ovn_v6_transit_switch_subnet_opt=
+2025-11-17T09:27:05.819334083Z + [[ '' != '' ]]
+2025-11-17T09:27:05.819434151Z ++ date '+%m%d %H:%M:%S.%N'
+2025-11-17T09:27:05.825461466Z I1117 09:27:05.820558845 - ovnkube-control-plane - start ovnkube --init-cluster-manager XXXXXX2
+2025-11-17T09:27:05.825483571Z + echo 'I1117 09:27:05.820558845 - ovnkube-control-plane - start ovnkube --init-cluster-manager XXXXXX2'
+2025-11-17T09:27:05.825483571Z + exec /usr/bin/ovnkube --enable-interconnect --init-cluster-manager XXXXXX2 --config-file=/run/ovnkube-config/ovnkube.conf --loglevel 4 --metrics-bind-address 127.0.0.1:29108 --metrics-enable-pprof --metrics-enable-config-duration
+2025-11-17T09:27:05.848572080Z I1117 09:27:05.848492       1 config.go:2164] Parsed config file /run/ovnkube-config/ovnkube.conf
+2025-11-17T09:27:05.848649117Z I1117 09:27:05.848549       1 config.go:2165] Parsed config: {Default:{MTU:1400 RoutableMTU:0 ConntrackZone:64000 HostMasqConntrackZone:0 OVNMasqConntrackZone:0 HostNodePortConntrackZone:0 ReassemblyConntrackZone:0 EncapType:geneve EncapIP: EncapPort:6081 InactivityProbe:100000 OpenFlowProbe:180 OfctrlWaitBeforeClear:0 MonitorAll:true OVSDBTxnTimeout:1m40s LFlowCacheEnable:true LFlowCacheLimit:0 LFlowCacheLimitKb:1048576 RawClusterSubnets:10.128.0.0/14/23,fd02::/48/64 ClusterSubnets:[] EnableUDPAggregation:true Zone:global} Logging:{File: CNIFile: LibovsdbFile:/var/log/ovnkube/libovsdb.log Level:4 LogFileMaxSize:100 LogFileMaxBackups:5 LogFileMaxAge:0 ACLLoggingRateLimit:20} Monitoring:{RawNetFlowTargets: RawSFlowTargets: RawIPFIXTargets: NetFlowTargets:[] SFlowTargets:[] IPFIXTargets:[]} IPFIX:{Sampling:400 CacheActiveTimeout:60 CacheMaxFlows:0} CNI:{ConfDir:/etc/cni/net.d Plugin:ovn-k8s-cni-overlay} OVNKubernetesFeature:{EnableAdminNetworkPolicy:false EnableEgressIP:true EgressIPReachabiltyTotalTimeout:1 EnableEgressFirewall:true EnableEgressQoS:true EnableEgressService:true EgressIPNodeHealthCheckPort:9107 EnableMultiNetwork:true EnableMultiNetworkPolicy:false EnableStatelessNetPol:false EnableInterconnect:false EnableMultiExternalGateway:false} Kubernetes:{BootstrapKubeconfig: CertDir: CertDuration:10m0s Kubeconfig: CACert: CAData:[] APIServer:https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 Token: TokenFile: CompatServiceCIDR: RawServiceCIDRs:172.30.0.0/16,fd03::/112 ServiceCIDRs:[] OVNConfigNamespace:openshift-ovn-kubernetes OVNEmptyLbEvents:false PodIP: RawNoHostSubnetNodes: NoHostSubnetNodes:nil HostNetworkNamespace:openshift-host-network PlatformType:BareMetal HealthzBindAddress:0.0.0.0:10256 CompatMetricsBindAddress: CompatOVNMetricsBindAddress: CompatMetricsEnablePprof:false DNSServiceNamespace:openshift-dns DNSServiceName:dns-default} Metrics:{BindAddress: OVNMetricsBindAddress: ExportOVSMetrics:false EnablePprof:false NodeServerPrivKey: NodeServerCert: EnableConfigDuration:false EnableScaleMetrics:false} OvnNorth:{Address: PrivKey: Cert: CACert: CertCommonName: Scheme: ElectionTimer:0 northbound:false exec:<nil>} OvnSouth:{Address: PrivKey: Cert: CACert: CertCommonName: Scheme: ElectionTimer:0 northbound:false exec:<nil>} Gateway:{Mode:shared Interface: EgressGWInterface: NextHop: VLANID:0 NodeportEnable:true DisableSNATMultipleGWs:false V4JoinSubnet:100.64.0.0/16 V6JoinSubnet:fd98::/64 V4MasqueradeSubnet:169.254.169.0/29 V6MasqueradeSubnet:fd69::/125 MasqueradeIPs:{V4OVNMasqueradeIP:169.254.169.1 V6OVNMasqueradeIP:fd69::1 V4HostMasqueradeIP:169.254.169.2 V6HostMasqueradeIP:fd69::2 V4HostETPLocalMasqueradeIP:169.254.169.3 V6HostETPLocalMasqueradeIP:fd69::3 V4DummyNextHopMasqueradeIP:169.254.169.4 V6DummyNextHopMasqueradeIP:fd69::4 V4OVNServiceHairpinMasqueradeIP:169.254.169.5 V6OVNServiceHairpinMasqueradeIP:fd69::5} DisablePacketMTUCheck:false RouterSubnet: SingleNode:false DisableForwarding:false AllowNoUplink:false} MasterHA:{ElectionLeaseDuration:137 ElectionRenewDeadline:107 ElectionRetryPeriod:26} ClusterMgrHA:{ElectionLeaseDuration:0 ElectionRenewDeadline:0 ElectionRetryPeriod:0} HybridOverlay:{Enabled:false RawClusterSubnets: ClusterSubnets:[] VXLANPort:4789} OvnKubeNode:{Mode:full DPResourceDeviceIdsMap:map[] MgmtPortNetdev: MgmtPortDPResourceName:} ClusterManager:{V4TransitSwitchSubnet:100.88.0.0/16 V6TransitSwitchSubnet:fd97::/64}}
+2025-11-17T09:27:05.850270079Z I1117 09:27:05.850246       1 metrics.go:487] Starting metrics server to serve at address "127.0.0.1:29108"
+2025-11-17T09:27:05.850279992Z I1117 09:27:05.850270       1 leaderelection.go:245] attempting to acquire leader lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX...
+2025-11-17T09:27:05.853291423Z E1117 09:27:05.853227       1 leaderelection.go:327] error retrieving resource lock openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX: Get "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX": dial tcp [2620:52:0:2e1a::10]:6443: connect: connection refused
+2025-11-17T09:27:05.853291423Z I1117 09:27:05.853265       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:27:35.290934919Z I1117 09:27:35.290887       1 leaderelection.go:255] successfully acquired lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:27:35.291027911Z I1117 09:27:35.290948       1 event.go:298] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-ovn-kubernetes", Name:"ovn-kubernetes-XXXXXX", UID:"3da58acc-4514-4be6-9dea-d25d9c82ef5a", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"14966", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' ovnkube-control-plane-5b87466b4f-q7qgm became leader
+2025-11-17T09:27:35.291192115Z I1117 09:27:35.291164       1 ovnkube.go:386] Won leader election; in active mode
+2025-11-17T09:27:35.292033645Z I1117 09:27:35.292012       1 secondary_network_cluster_manager.go:38] Creating secondary network cluster manager
+2025-11-17T09:27:35.292235556Z I1117 09:27:35.292224       1 egressservice_cluster.go:97] Setting up event handlers for Egress Services
+2025-11-17T09:27:35.292592095Z I1117 09:27:35.292579       1 clustermanager.go:116] Starting the cluster manager
+2025-11-17T09:27:35.292633370Z I1117 09:27:35.292626       1 factory.go:362] Starting watch factory
+2025-11-17T09:27:35.292826428Z I1117 09:27:35.292772       1 reflector.go:287] Starting reflector *v1.Node (0s) from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:27:35.292826428Z I1117 09:27:35.292788       1 reflector.go:323] Listing and watching *v1.Node from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:27:35.292907199Z I1117 09:27:35.292889       1 reflector.go:287] Starting reflector *v1.Pod (0s) from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:27:35.292942642Z I1117 09:27:35.292930       1 reflector.go:323] Listing and watching *v1.Pod from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:27:35.292991626Z I1117 09:27:35.292927       1 reflector.go:287] Starting reflector *v1.Service (0s) from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:27:35.293014393Z I1117 09:27:35.292993       1 reflector.go:287] Starting reflector *v1.EndpointSlice (0s) from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:27:35.293019889Z I1117 09:27:35.293012       1 reflector.go:323] Listing and watching *v1.EndpointSlice from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:27:35.293078056Z I1117 09:27:35.293012       1 reflector.go:323] Listing and watching *v1.Service from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:27:35.393047052Z I1117 09:27:35.392992       1 shared_informer.go:341] caches populated
+2025-11-17T09:27:35.393116893Z I1117 09:27:35.393109       1 shared_informer.go:341] caches populated
+2025-11-17T09:27:35.393133123Z I1117 09:27:35.393127       1 shared_informer.go:341] caches populated
+2025-11-17T09:27:35.393146883Z I1117 09:27:35.393142       1 shared_informer.go:341] caches populated
+2025-11-17T09:27:35.393272518Z I1117 09:27:35.393259       1 reflector.go:287] Starting reflector *v1.EgressIP (0s) from github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressip/v1/apis/informers/externalversions/factory.go:131
+2025-11-17T09:27:35.393304444Z I1117 09:27:35.393298       1 reflector.go:323] Listing and watching *v1.EgressIP from github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressip/v1/apis/informers/externalversions/factory.go:131
+2025-11-17T09:27:35.493682702Z I1117 09:27:35.493631       1 shared_informer.go:341] caches populated
+2025-11-17T09:27:35.493919731Z I1117 09:27:35.493899       1 reflector.go:287] Starting reflector *v1.EgressService (0s) from github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressservice/v1/apis/informers/externalversions/factory.go:131
+2025-11-17T09:27:35.493944792Z I1117 09:27:35.493937       1 reflector.go:323] Listing and watching *v1.EgressService from github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressservice/v1/apis/informers/externalversions/factory.go:131
+2025-11-17T09:27:35.594171141Z I1117 09:27:35.594122       1 shared_informer.go:341] caches populated
+2025-11-17T09:27:35.594449470Z I1117 09:27:35.594407       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX1, found 2: [10.128.0.0/23 fd02:0:0:1::/64]
+2025-11-17T09:27:35.594478954Z I1117 09:27:35.594472       1 node_allocator.go:384] Valid subnet 10.128.0.0/23 allocated on node XXXXXX1
+2025-11-17T09:27:35.594496067Z I1117 09:27:35.594490       1 node_allocator.go:384] Valid subnet fd02:0:0:1::/64 allocated on node XXXXXX1
+2025-11-17T09:27:35.594514340Z I1117 09:27:35.594508       1 node_allocator.go:406] Allowed existing subnets [10.128.0.0/23 fd02:0:0:1::/64] on node XXXXXX1
+2025-11-17T09:27:35.594543859Z I1117 09:27:35.594536       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX2, found 2: [10.129.0.0/23 fd02:0:0:2::/64]
+2025-11-17T09:27:35.594559436Z I1117 09:27:35.594554       1 node_allocator.go:384] Valid subnet 10.129.0.0/23 allocated on node XXXXXX2
+2025-11-17T09:27:35.594574476Z I1117 09:27:35.594569       1 node_allocator.go:384] Valid subnet fd02:0:0:2::/64 allocated on node XXXXXX2
+2025-11-17T09:27:35.594590990Z I1117 09:27:35.594585       1 node_allocator.go:406] Allowed existing subnets [10.129.0.0/23 fd02:0:0:2::/64] on node XXXXXX2
+2025-11-17T09:27:35.594623231Z I1117 09:27:35.594617       1 zone_cluster_controller.go:240] Node XXXXXX1 has the id 3 set
+2025-11-17T09:27:35.594640194Z I1117 09:27:35.594635       1 zone_cluster_controller.go:240] Node XXXXXX2 has the id 2 set
+2025-11-17T09:27:35.594711311Z I1117 09:27:35.594696       1 kube.go:121] Setting annotations map[k8s.ovn.org/node-gateway-router-lrp-ifaddr:{"ipv4":"100.64.0.3/16","ipv6":"fd98::3/64"} k8s.ovn.org/node-id:3 k8s.ovn.org/node-transit-switch-port-ifaddr:{"ipv4":"100.88.0.3/16","ipv6":"fd97::3/64"}] on node XXXXXX1
+2025-11-17T09:27:35.602558515Z I1117 09:27:35.602505       1 kube.go:121] Setting annotations map[k8s.ovn.org/node-gateway-router-lrp-ifaddr:{"ipv4":"100.64.0.2/16","ipv6":"fd98::2/64"} k8s.ovn.org/node-id:2 k8s.ovn.org/node-transit-switch-port-ifaddr:{"ipv4":"100.88.0.2/16","ipv6":"fd97::2/64"}] on node XXXXXX2
+2025-11-17T09:27:35.610771810Z I1117 09:27:35.610738       1 secondary_network_cluster_manager.go:65] Starting secondary network cluster manager
+2025-11-17T09:27:35.610801501Z I1117 09:27:35.610790       1 network_attach_def_controller.go:134] Starting cluster-manager NAD controller
+2025-11-17T09:27:35.610825908Z I1117 09:27:35.610817       1 shared_informer.go:311] Waiting for caches to sync for cluster-manager
+2025-11-17T09:27:35.610998029Z I1117 09:27:35.610987       1 reflector.go:287] Starting reflector *v1.NetworkAttachmentDefinition (0s) from github.com/k8snetworkplumbingwg/network-attachment-definition-client/pkg/client/informers/externalversions/factory.go:117
+2025-11-17T09:27:35.610998029Z I1117 09:27:35.610995       1 reflector.go:323] Listing and watching *v1.NetworkAttachmentDefinition from github.com/k8snetworkplumbingwg/network-attachment-definition-client/pkg/client/informers/externalversions/factory.go:117
+2025-11-17T09:27:35.711481772Z I1117 09:27:35.711418       1 shared_informer.go:341] caches populated
+2025-11-17T09:27:35.711481772Z I1117 09:27:35.711442       1 shared_informer.go:318] Caches are synced for cluster-manager
+2025-11-17T09:27:35.711481772Z I1117 09:27:35.711450       1 network_attach_def_controller.go:182] Starting repairing loop for cluster-manager
+2025-11-17T09:27:35.711595789Z I1117 09:27:35.711580       1 network_attach_def_controller.go:184] Finished repairing loop for cluster-manager: 112.955µs err: <nil>
+2025-11-17T09:27:35.711595789Z I1117 09:27:35.711591       1 network_attach_def_controller.go:153] Starting XXXXXXs for cluster-manager NAD controller
+2025-11-17T09:27:35.711699316Z W1117 09:27:35.711685       1 egressip_healthcheck.go:165] Health checking using insecure connection
+2025-11-17T09:27:35.714066282Z I1117 09:27:35.714051       1 egressip_healthcheck.go:188] Connected to XXXXXX1 (10.128.0.2:9107)
+2025-11-17T09:27:35.714134372Z W1117 09:27:35.714095       1 egressip_healthcheck.go:165] Health checking using insecure connection
+2025-11-17T09:27:35.714777495Z I1117 09:27:35.714763       1 egressip_healthcheck.go:188] Connected to XXXXXX2 (10.129.0.2:9107)
+2025-11-17T09:27:35.714833105Z I1117 09:27:35.714824       1 egressip_controller.go:453] EgressIP node reachability enabled and using gRPC port 9107
+2025-11-17T09:27:35.714852094Z I1117 09:27:35.714846       1 egressservice_cluster.go:170] Starting Egress Services Controller
+2025-11-17T09:27:35.714888228Z I1117 09:27:35.714881       1 shared_informer.go:311] Waiting for caches to sync for egressservices
+2025-11-17T09:27:35.714906970Z I1117 09:27:35.714901       1 shared_informer.go:341] caches populated
+2025-11-17T09:27:35.714922057Z I1117 09:27:35.714916       1 shared_informer.go:318] Caches are synced for egressservices
+2025-11-17T09:27:35.714938581Z I1117 09:27:35.714932       1 shared_informer.go:311] Waiting for caches to sync for egressservices_services
+2025-11-17T09:27:35.714962884Z I1117 09:27:35.714957       1 shared_informer.go:341] caches populated
+2025-11-17T09:27:35.714986479Z I1117 09:27:35.714972       1 shared_informer.go:318] Caches are synced for egressservices_services
+2025-11-17T09:27:35.715009984Z I1117 09:27:35.715004       1 shared_informer.go:311] Waiting for caches to sync for egressservices_endpointslices
+2025-11-17T09:27:35.715035594Z I1117 09:27:35.715030       1 shared_informer.go:341] caches populated
+2025-11-17T09:27:35.715050563Z I1117 09:27:35.715045       1 shared_informer.go:318] Caches are synced for egressservices_endpointslices
+2025-11-17T09:27:35.715069197Z I1117 09:27:35.715063       1 shared_informer.go:311] Waiting for caches to sync for egressservices_nodes
+2025-11-17T09:27:35.715099456Z I1117 09:27:35.715089       1 shared_informer.go:341] caches populated
+2025-11-17T09:27:35.715118793Z I1117 09:27:35.715113       1 shared_informer.go:318] Caches are synced for egressservices_nodes
+2025-11-17T09:27:35.715133161Z I1117 09:27:35.715127       1 egressservice_cluster.go:187] Repairing Egress Services
+2025-11-17T09:27:35.715237375Z I1117 09:27:35.715227       1 kube.go:260] Setting labels map[] on node XXXXXX1
+2025-11-17T09:27:35.719907870Z I1117 09:27:35.719869       1 kube.go:260] Setting labels map[] on node XXXXXX2
+2025-11-17T09:27:35.724128218Z I1117 09:27:35.724106       1 egressservice_cluster_node.go:167] Processing sync for Egress Service node XXXXXX1
+2025-11-17T09:27:35.724189081Z I1117 09:27:35.724170       1 egressservice_cluster_node.go:170] Finished syncing Egress Service node XXXXXX1: 58.677µs
+2025-11-17T09:27:35.724211186Z I1117 09:27:35.724205       1 egressservice_cluster_node.go:167] Processing sync for Egress Service node XXXXXX2
+2025-11-17T09:27:35.724228490Z I1117 09:27:35.724222       1 egressservice_cluster_node.go:170] Finished syncing Egress Service node XXXXXX2: 17.56µs
+2025-11-17T09:27:40.712083203Z I1117 09:27:40.712011       1 egressip_healthcheck.go:197] Closing connection with XXXXXX1 (10.128.0.2:9107)
+2025-11-17T09:27:40.712257485Z I1117 09:27:40.712232       1 egressip_healthcheck.go:197] Closing connection with XXXXXX2 (10.129.0.2:9107)
+2025-11-17T09:29:44.524393607Z I1117 09:29:44.524263       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX1, found 2: [10.128.0.0/23 fd02:0:0:1::/64]
+2025-11-17T09:29:44.524393607Z I1117 09:29:44.524333       1 node_allocator.go:384] Valid subnet 10.128.0.0/23 allocated on node XXXXXX1
+2025-11-17T09:29:44.524393607Z I1117 09:29:44.524345       1 node_allocator.go:384] Valid subnet fd02:0:0:1::/64 allocated on node XXXXXX1
+2025-11-17T09:29:44.524393607Z I1117 09:29:44.524357       1 node_allocator.go:406] Allowed existing subnets [10.128.0.0/23 fd02:0:0:1::/64] on node XXXXXX1
+2025-11-17T09:29:44.540153584Z I1117 09:29:44.538416       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX2, found 2: [10.129.0.0/23 fd02:0:0:2::/64]
+2025-11-17T09:29:44.540153584Z I1117 09:29:44.538445       1 node_allocator.go:384] Valid subnet 10.129.0.0/23 allocated on node XXXXXX2
+2025-11-17T09:29:44.540153584Z I1117 09:29:44.538454       1 node_allocator.go:384] Valid subnet fd02:0:0:2::/64 allocated on node XXXXXX2
+2025-11-17T09:29:44.540153584Z I1117 09:29:44.538462       1 node_allocator.go:406] Allowed existing subnets [10.129.0.0/23 fd02:0:0:2::/64] on node XXXXXX2
+2025-11-17T09:30:02.030852982Z I1117 09:30:02.030774       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX2, found 2: [10.129.0.0/23 fd02:0:0:2::/64]
+2025-11-17T09:30:02.030852982Z I1117 09:30:02.030809       1 node_allocator.go:384] Valid subnet 10.129.0.0/23 allocated on node XXXXXX2
+2025-11-17T09:30:02.030852982Z I1117 09:30:02.030821       1 node_allocator.go:384] Valid subnet fd02:0:0:2::/64 allocated on node XXXXXX2
+2025-11-17T09:30:02.030896694Z I1117 09:30:02.030847       1 node_allocator.go:406] Allowed existing subnets [10.129.0.0/23 fd02:0:0:2::/64] on node XXXXXX2
+2025-11-17T09:30:02.031040456Z I1117 09:30:02.031023       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX1, found 2: [10.128.0.0/23 fd02:0:0:1::/64]
+2025-11-17T09:30:02.031046655Z I1117 09:30:02.031040       1 node_allocator.go:384] Valid subnet 10.128.0.0/23 allocated on node XXXXXX1
+2025-11-17T09:30:02.031072647Z I1117 09:30:02.031049       1 node_allocator.go:384] Valid subnet fd02:0:0:1::/64 allocated on node XXXXXX1
+2025-11-17T09:30:02.031094134Z I1117 09:30:02.031079       1 node_allocator.go:406] Allowed existing subnets [10.128.0.0/23 fd02:0:0:1::/64] on node XXXXXX1
+2025-11-17T09:30:14.427747918Z I1117 09:30:14.424966       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX2, found 2: [10.129.0.0/23 fd02:0:0:2::/64]
+2025-11-17T09:30:14.427747918Z I1117 09:30:14.425006       1 node_allocator.go:384] Valid subnet 10.129.0.0/23 allocated on node XXXXXX2
+2025-11-17T09:30:14.427747918Z I1117 09:30:14.425015       1 node_allocator.go:384] Valid subnet fd02:0:0:2::/64 allocated on node XXXXXX2
+2025-11-17T09:30:14.427747918Z I1117 09:30:14.425024       1 node_allocator.go:406] Allowed existing subnets [10.129.0.0/23 fd02:0:0:2::/64] on node XXXXXX2
+2025-11-17T09:30:14.427747918Z I1117 09:30:14.425129       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX1, found 2: [10.128.0.0/23 fd02:0:0:1::/64]
+2025-11-17T09:30:14.427747918Z I1117 09:30:14.425138       1 node_allocator.go:384] Valid subnet 10.128.0.0/23 allocated on node XXXXXX1
+2025-11-17T09:30:14.427747918Z I1117 09:30:14.425154       1 node_allocator.go:384] Valid subnet fd02:0:0:1::/64 allocated on node XXXXXX1
+2025-11-17T09:30:14.427747918Z I1117 09:30:14.425162       1 node_allocator.go:406] Allowed existing subnets [10.128.0.0/23 fd02:0:0:1::/64] on node XXXXXX1
+2025-11-17T09:30:14.476330719Z I1117 09:30:14.473056       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX1, found 2: [10.128.0.0/23 fd02:0:0:1::/64]
+2025-11-17T09:30:14.476330719Z I1117 09:30:14.473166       1 node_allocator.go:384] Valid subnet 10.128.0.0/23 allocated on node XXXXXX1
+2025-11-17T09:30:14.476330719Z I1117 09:30:14.473176       1 node_allocator.go:384] Valid subnet fd02:0:0:1::/64 allocated on node XXXXXX1
+2025-11-17T09:30:14.476330719Z I1117 09:30:14.473185       1 node_allocator.go:406] Allowed existing subnets [10.128.0.0/23 fd02:0:0:1::/64] on node XXXXXX1
+2025-11-17T09:30:14.479274670Z I1117 09:30:14.478544       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX2, found 2: [10.129.0.0/23 fd02:0:0:2::/64]
+2025-11-17T09:30:14.479274670Z I1117 09:30:14.478959       1 node_allocator.go:384] Valid subnet 10.129.0.0/23 allocated on node XXXXXX2
+2025-11-17T09:30:14.479274670Z I1117 09:30:14.478982       1 node_allocator.go:384] Valid subnet fd02:0:0:2::/64 allocated on node XXXXXX2
+2025-11-17T09:30:14.479274670Z I1117 09:30:14.478992       1 node_allocator.go:406] Allowed existing subnets [10.129.0.0/23 fd02:0:0:2::/64] on node XXXXXX2
+2025-11-17T09:30:15.623906811Z I1117 09:30:15.623337       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX1, found 2: [10.128.0.0/23 fd02:0:0:1::/64]
+2025-11-17T09:30:15.623906811Z I1117 09:30:15.623376       1 node_allocator.go:384] Valid subnet 10.128.0.0/23 allocated on node XXXXXX1
+2025-11-17T09:30:15.623906811Z I1117 09:30:15.623389       1 node_allocator.go:384] Valid subnet fd02:0:0:1::/64 allocated on node XXXXXX1
+2025-11-17T09:30:15.623906811Z I1117 09:30:15.623401       1 node_allocator.go:406] Allowed existing subnets [10.128.0.0/23 fd02:0:0:1::/64] on node XXXXXX1
+2025-11-17T09:30:15.623906811Z I1117 09:30:15.623512       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX2, found 2: [10.129.0.0/23 fd02:0:0:2::/64]
+2025-11-17T09:30:15.623906811Z I1117 09:30:15.623524       1 node_allocator.go:384] Valid subnet 10.129.0.0/23 allocated on node XXXXXX2
+2025-11-17T09:30:15.623906811Z I1117 09:30:15.623534       1 node_allocator.go:384] Valid subnet fd02:0:0:2::/64 allocated on node XXXXXX2
+2025-11-17T09:30:15.623906811Z I1117 09:30:15.623547       1 node_allocator.go:406] Allowed existing subnets [10.129.0.0/23 fd02:0:0:2::/64] on node XXXXXX2
+2025-11-17T09:30:24.348862740Z I1117 09:30:24.348498       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX1, found 2: [10.128.0.0/23 fd02:0:0:1::/64]
+2025-11-17T09:30:24.348862740Z I1117 09:30:24.348530       1 node_allocator.go:384] Valid subnet 10.128.0.0/23 allocated on node XXXXXX1
+2025-11-17T09:30:24.348862740Z I1117 09:30:24.348538       1 node_allocator.go:384] Valid subnet fd02:0:0:1::/64 allocated on node XXXXXX1
+2025-11-17T09:30:24.348862740Z I1117 09:30:24.348546       1 node_allocator.go:406] Allowed existing subnets [10.128.0.0/23 fd02:0:0:1::/64] on node XXXXXX1
+2025-11-17T09:30:27.976483163Z I1117 09:30:27.976433       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX1, found 2: [10.128.0.0/23 fd02:0:0:1::/64]
+2025-11-17T09:30:27.976535432Z I1117 09:30:27.976527       1 node_allocator.go:384] Valid subnet 10.128.0.0/23 allocated on node XXXXXX1
+2025-11-17T09:30:27.976556860Z I1117 09:30:27.976550       1 node_allocator.go:384] Valid subnet fd02:0:0:1::/64 allocated on node XXXXXX1
+2025-11-17T09:30:27.976593311Z I1117 09:30:27.976585       1 node_allocator.go:406] Allowed existing subnets [10.128.0.0/23 fd02:0:0:1::/64] on node XXXXXX1
+2025-11-17T09:30:41.196709604Z I1117 09:30:41.196656       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX1, found 2: [10.128.0.0/23 fd02:0:0:1::/64]
+2025-11-17T09:30:41.196709604Z I1117 09:30:41.196688       1 node_allocator.go:384] Valid subnet 10.128.0.0/23 allocated on node XXXXXX1
+2025-11-17T09:30:41.196709604Z I1117 09:30:41.196697       1 node_allocator.go:384] Valid subnet fd02:0:0:1::/64 allocated on node XXXXXX1
+2025-11-17T09:30:41.196709604Z I1117 09:30:41.196705       1 node_allocator.go:406] Allowed existing subnets [10.128.0.0/23 fd02:0:0:1::/64] on node XXXXXX1
+2025-11-17T09:30:43.401975449Z I1117 09:30:43.401918       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX1, found 2: [10.128.0.0/23 fd02:0:0:1::/64]
+2025-11-17T09:30:43.401975449Z I1117 09:30:43.401944       1 node_allocator.go:384] Valid subnet 10.128.0.0/23 allocated on node XXXXXX1
+2025-11-17T09:30:43.401975449Z I1117 09:30:43.401952       1 node_allocator.go:384] Valid subnet fd02:0:0:1::/64 allocated on node XXXXXX1
+2025-11-17T09:30:43.401975449Z I1117 09:30:43.401959       1 node_allocator.go:406] Allowed existing subnets [10.128.0.0/23 fd02:0:0:1::/64] on node XXXXXX1
+2025-11-17T09:30:51.215678301Z I1117 09:30:51.214002       1 node_allocator.go:370] Expected 2 subnets on node XXXXXX1, found 2: [10.128.0.0/23 fd02:0:0:1::/64]
+2025-11-17T09:30:51.215678301Z I1117 09:30:51.214032       1 node_allocator.go:384] Valid subnet 10.128.0.0/23 allocated on node XXXXXX1
+2025-11-17T09:30:51.215678301Z I1117 09:30:51.214040       1 node_allocator.go:384] Valid subnet fd02:0:0:1::/64 allocated on node XXXXXX1
+2025-11-17T09:30:51.215678301Z I1117 09:30:51.214049       1 node_allocator.go:406] Allowed existing subnets [10.128.0.0/23 fd02:0:0:1::/64] on node XXXXXX1
+2025-11-17T09:31:28.120682839Z I1117 09:31:28.120615       1 reflector.go:788] github.com/k8snetworkplumbingwg/network-attachment-definition-client/pkg/client/informers/externalversions/factory.go:117: Watch close - *v1.NetworkAttachmentDefinition total 3 items received
+2025-11-17T09:31:28.121727315Z I1117 09:31:28.120870       1 reflector.go:788] github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressservice/v1/apis/informers/externalversions/factory.go:131: Watch close - *v1.EgressService total 3 items received
+2025-11-17T09:31:28.146765177Z I1117 09:31:28.146194       1 reflector.go:788] k8s.io/client-go/informers/factory.go:159: Watch close - *v1.Node total 25 items received
+2025-11-17T09:31:28.153270859Z I1117 09:31:28.151413       1 reflector.go:788] k8s.io/client-go/informers/factory.go:159: Watch close - *v1.Pod total 160 items received
+2025-11-17T09:31:28.153270859Z I1117 09:31:28.151609       1 reflector.go:788] k8s.io/client-go/informers/factory.go:159: Watch close - *v1.Service total 10 items received
+2025-11-17T09:31:28.153270859Z I1117 09:31:28.151723       1 reflector.go:788] k8s.io/client-go/informers/factory.go:159: Watch close - *v1.EndpointSlice total 26 items received
+2025-11-17T09:31:28.164554780Z I1117 09:31:28.161809       1 reflector.go:788] github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressip/v1/apis/informers/externalversions/factory.go:131: Watch close - *v1.EgressIP total 3 items received
+2025-11-17T09:32:03.371628913Z E1117 09:32:03.371565       1 leaderelection.go:327] error retrieving resource lock openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io ovn-kubernetes-XXXXXX)
+2025-11-17T09:32:49.518317373Z I1117 09:32:49.518037       1 reflector.go:443] github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressservice/v1/apis/informers/externalversions/factory.go:131: watch of *v1.EgressService closed with: too old resource version: 17635 (18978)
+2025-11-17T09:32:49.522358716Z I1117 09:32:49.521224       1 reflector.go:443] github.com/k8snetworkplumbingwg/network-attachment-definition-client/pkg/client/informers/externalversions/factory.go:117: watch of *v1.NetworkAttachmentDefinition closed with: too old resource version: 17410 (18978)
+2025-11-17T09:32:50.342128554Z I1117 09:32:50.342028       1 reflector.go:323] Listing and watching *v1.EgressService from github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressservice/v1/apis/informers/externalversions/factory.go:131
+2025-11-17T09:32:50.528541859Z I1117 09:32:50.525505       1 reflector.go:443] k8s.io/client-go/informers/factory.go:159: watch of *v1.Node closed with: too old resource version: 18934 (19024)
+2025-11-17T09:32:50.531236122Z I1117 09:32:50.531191       1 reflector.go:443] github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressip/v1/apis/informers/externalversions/factory.go:131: watch of *v1.EgressIP closed with: too old resource version: 17993 (19024)
+2025-11-17T09:32:50.531236122Z I1117 09:32:50.531194       1 reflector.go:443] k8s.io/client-go/informers/factory.go:159: watch of *v1.Service closed with: too old resource version: 17969 (19024)
+2025-11-17T09:32:50.532925935Z I1117 09:32:50.532890       1 reflector.go:443] k8s.io/client-go/informers/factory.go:159: watch of *v1.EndpointSlice closed with: too old resource version: 18786 (19024)
+2025-11-17T09:32:50.559883119Z I1117 09:32:50.559839       1 reflector.go:443] k8s.io/client-go/informers/factory.go:159: watch of *v1.Pod closed with: too old resource version: 18960 (19024)
+2025-11-17T09:32:50.906933137Z I1117 09:32:50.906878       1 reflector.go:323] Listing and watching *v1.NetworkAttachmentDefinition from github.com/k8snetworkplumbingwg/network-attachment-definition-client/pkg/client/informers/externalversions/factory.go:117
+2025-11-17T09:32:51.343725579Z I1117 09:32:51.343655       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/k8s.ovn.org/v1/egressservices?resourceVersion=17635
+2025-11-17T09:32:51.490693367Z I1117 09:32:51.490621       1 reflector.go:323] Listing and watching *v1.Node from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:32:51.908708866Z I1117 09:32:51.908654       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/k8s.cni.cncf.io/v1/network-attachment-definitions?resourceVersion=17410
+2025-11-17T09:32:51.997584040Z I1117 09:32:51.997337       1 reflector.go:323] Listing and watching *v1.Pod from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:32:52.043432100Z I1117 09:32:52.043373       1 reflector.go:323] Listing and watching *v1.EgressIP from github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressip/v1/apis/informers/externalversions/factory.go:131
+2025-11-17T09:32:52.073528239Z I1117 09:32:52.073482       1 reflector.go:323] Listing and watching *v1.Service from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:32:52.085642389Z I1117 09:32:52.085589       1 reflector.go:323] Listing and watching *v1.EndpointSlice from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:32:52.345333379Z I1117 09:32:52.345277       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/k8s.ovn.org/v1/egressservices?resourceVersion=17635
+2025-11-17T09:32:52.494723644Z I1117 09:32:52.494686       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/nodes?resourceVersion=18934
+2025-11-17T09:32:52.910535920Z I1117 09:32:52.910501       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/k8s.cni.cncf.io/v1/network-attachment-definitions?resourceVersion=17410
+2025-11-17T09:32:53.005610089Z I1117 09:32:53.005543       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/pods?resourceVersion=18960
+2025-11-17T09:32:53.046532199Z I1117 09:32:53.046505       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/k8s.ovn.org/v1/egressips?resourceVersion=17993
+2025-11-17T09:32:53.075491190Z I1117 09:32:53.075470       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/services?labelSelector=%21service.kubernetes.io%2Fservice-proxy-name&resourceVersion=17969
+2025-11-17T09:32:53.087536046Z I1117 09:32:53.087518       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/discovery.k8s.io/v1/endpointslices?labelSelector=kubernetes.io%2Fservice-name%2Ckubernetes.io%2Fservice-name%21%3D%2C%21service.kubernetes.io%2Fheadless&resourceVersion=18786
+2025-11-17T09:32:53.347113267Z I1117 09:32:53.346709       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/k8s.ovn.org/v1/egressservices?resourceVersion=17635
+2025-11-17T09:32:53.496108413Z I1117 09:32:53.496049       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/nodes?resourceVersion=18934
+2025-11-17T09:32:53.911995640Z I1117 09:32:53.911905       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/k8s.cni.cncf.io/v1/network-attachment-definitions?resourceVersion=17410
+2025-11-17T09:32:54.008365495Z I1117 09:32:54.007325       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/pods?resourceVersion=18960
+2025-11-17T09:32:54.047589514Z I1117 09:32:54.047562       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/k8s.ovn.org/v1/egressips?resourceVersion=17993
+2025-11-17T09:32:54.076695223Z I1117 09:32:54.076671       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/services?labelSelector=%21service.kubernetes.io%2Fservice-proxy-name&resourceVersion=17969
+2025-11-17T09:32:54.088868927Z I1117 09:32:54.088845       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/discovery.k8s.io/v1/endpointslices?labelSelector=kubernetes.io%2Fservice-name%2Ckubernetes.io%2Fservice-name%21%3D%2C%21service.kubernetes.io%2Fheadless&resourceVersion=18786
+2025-11-17T09:32:54.349992911Z I1117 09:32:54.349412       1 with_retry.go:234] Got a Retry-After 1s response for attempt 4 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/k8s.ovn.org/v1/egressservices?resourceVersion=17635
+2025-11-17T09:32:54.497566771Z I1117 09:32:54.497528       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/nodes?resourceVersion=18934
+2025-11-17T09:32:54.913484260Z I1117 09:32:54.913438       1 with_retry.go:234] Got a Retry-After 1s response for attempt 4 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/k8s.cni.cncf.io/v1/network-attachment-definitions?resourceVersion=17410
+2025-11-17T09:32:55.008422142Z I1117 09:32:55.008374       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/pods?resourceVersion=18960
+2025-11-17T09:32:55.049400262Z I1117 09:32:55.049346       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/k8s.ovn.org/v1/egressips?resourceVersion=17993
+2025-11-17T09:32:55.082679450Z I1117 09:32:55.081384       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/services?labelSelector=%21service.kubernetes.io%2Fservice-proxy-name&resourceVersion=17969
+2025-11-17T09:32:55.090748954Z I1117 09:32:55.090355       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/discovery.k8s.io/v1/endpointslices?labelSelector=kubernetes.io%2Fservice-name%2Ckubernetes.io%2Fservice-name%21%3D%2C%21service.kubernetes.io%2Fheadless&resourceVersion=18786
+2025-11-17T09:32:55.109593982Z E1117 09:32:55.109562       1 leaderelection.go:364] Failed to update lock: client rate limiter Wait returned an error: context deadline exceeded
+2025-11-17T09:32:55.109654568Z I1117 09:32:55.109646       1 leaderelection.go:280] failed to renew lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX: timed out waiting for the condition
+2025-11-17T09:32:55.111324309Z E1117 09:32:55.111299       1 leaderelection.go:303] Failed to release lock: Put "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX": EOF
+2025-11-17T09:32:55.111405218Z I1117 09:32:55.111397       1 ovnkube.go:395] No longer leader; exiting
+2025-11-17T09:32:55.111443582Z I1117 09:32:55.111437       1 clustermanager.go:153] Stopping the cluster manager
+2025-11-17T09:32:55.111481039Z I1117 09:32:55.111475       1 secondary_network_cluster_manager.go:100] Stopping secondary network cluster manager
+2025-11-17T09:32:55.111498529Z I1117 09:32:55.111493       1 network_attach_def_controller.go:166] Shutting down cluster-manager NAD controller
+2025-11-17T09:32:55.111535438Z I1117 09:32:55.111527       1 metrics.go:506] Stopping metrics server 127.0.0.1:29108
+2025-11-17T09:32:55.111587050Z I1117 09:32:55.111580       1 metrics.go:502] Metrics server has stopped serving at address "127.0.0.1:29108"
+2025-11-17T09:32:55.111635259Z I1117 09:32:55.111628       1 reflector.go:293] Stopping reflector *v1.NetworkAttachmentDefinition (0s) from github.com/k8snetworkplumbingwg/network-attachment-definition-client/pkg/client/informers/externalversions/factory.go:117
+2025-11-17T09:32:55.111664549Z I1117 09:32:55.111630       1 event.go:298] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-ovn-kubernetes", Name:"ovn-kubernetes-XXXXXX", UID:"3da58acc-4514-4be6-9dea-d25d9c82ef5a", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"18258", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' ovnkube-control-plane-5b87466b4f-q7qgm stopped leading
+2025-11-17T09:32:55.111721918Z I1117 09:32:55.111712       1 egressservice_cluster.go:218] Shutting down Egress Services controller
+2025-11-17T09:32:55.111843732Z I1117 09:32:55.111827       1 reflector.go:293] Stopping reflector *v1.Service (0s) from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:32:55.111891431Z I1117 09:32:55.111881       1 reflector.go:293] Stopping reflector *v1.Node (0s) from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:32:55.111949569Z I1117 09:32:55.111911       1 reflector.go:293] Stopping reflector *v1.Pod (0s) from k8s.io/client-go/informers/factory.go:159
+2025-11-17T09:32:55.111994438Z I1117 09:32:55.111959       1 reflector.go:293] Stopping reflector *v1.EgressService (0s) from github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressservice/v1/apis/informers/externalversions/factory.go:131
+2025-11-17T09:32:55.111994438Z I1117 09:32:55.111976       1 reflector.go:293] Stopping reflector *v1.EgressIP (0s) from github.com/openshift/ovn-kubernetes/go-controller/pkg/crd/egressip/v1/apis/informers/externalversions/factory.go:131
+2025-11-17T09:32:55.112000767Z I1117 09:32:55.111895       1 reflector.go:293] Stopping reflector *v1.EndpointSlice (0s) from k8s.io/client-go/informers/factory.go:159

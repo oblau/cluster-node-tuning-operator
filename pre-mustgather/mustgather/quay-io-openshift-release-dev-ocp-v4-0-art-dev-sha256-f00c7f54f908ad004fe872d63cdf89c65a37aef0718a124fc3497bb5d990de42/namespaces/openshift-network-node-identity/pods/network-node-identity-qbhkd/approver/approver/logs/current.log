@@ -1,0 +1,65 @@
+2025-11-17T09:36:03.551395315Z + [[ -f /env/_XXXXXX ]]
+2025-11-17T09:36:03.553848415Z ++ date '+%m%d %H:%M:%S.%N'
+2025-11-17T09:36:03.572075280Z I1117 09:36:03.554453699 - network-node-identity - start approver
+2025-11-17T09:36:03.572106735Z + echo 'I1117 09:36:03.554453699 - network-node-identity - start approver'
+2025-11-17T09:36:03.572106735Z + exec /usr/bin/ovnkube-identity --k8s-apiserver=https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 --disable-webhook --csr-acceptance-conditions=/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json --loglevel=4
+2025-11-17T09:36:03.638761036Z I1117 09:36:03.633054       1 ovnkubeidentity.go:131] Config: {kubeconfig: apiServer:https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 logLevel:4 port:9443 host:localhost certDir: metricsAddress:0 leaseNamespace: enableInterconnect:false enableHybridOverlay:false disableWebhook:true disableApprover:false waitForKAPIDuration:0 localKAPIPort:6443 extraAllowedUsers:{slice:[] hasBeenSet:false} csrAcceptanceConditionFile:/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json csrAcceptanceConditions:[] podAdmissionConditionFile: podAdmissionConditions:[]}
+2025-11-17T09:36:03.638761036Z W1117 09:36:03.635038       1 client_config.go:618] Neither --kubeconfig nor --XXXXXX was specified.  Using the inClusterConfig.  This might not work.
+2025-11-17T09:36:03.651834194Z I1117 09:36:03.651776       1 ovnkubeidentity.go:468] Starting certificate signing request approver
+2025-11-17T09:36:03.651868008Z I1117 09:36:03.651856       1 shared_informer.go:341] caches populated
+2025-11-17T09:36:03.652128937Z I1117 09:36:03.651925       1 leaderelection.go:245] attempting to acquire leader lease openshift-network-node-identity/ovnkube-identity...
+2025-11-17T09:36:04.660502277Z I1117 09:36:04.660438       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:05.662514449Z I1117 09:36:05.662448       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:06.664502678Z I1117 09:36:06.664443       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:07.665702111Z I1117 09:36:07.665635       1 with_retry.go:234] Got a Retry-After 1s response for attempt 4 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:08.668048958Z I1117 09:36:08.667989       1 with_retry.go:234] Got a Retry-After 1s response for attempt 5 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:09.669657296Z I1117 09:36:09.669585       1 with_retry.go:234] Got a Retry-After 1s response for attempt 6 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:10.671525873Z I1117 09:36:10.671459       1 with_retry.go:234] Got a Retry-After 1s response for attempt 7 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:11.673493352Z I1117 09:36:11.673446       1 with_retry.go:234] Got a Retry-After 1s response for attempt 8 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:12.675507851Z I1117 09:36:12.675463       1 with_retry.go:234] Got a Retry-After 1s response for attempt 9 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:13.676610790Z I1117 09:36:13.676552       1 with_retry.go:234] Got a Retry-After 1s response for attempt 10 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:13.677494197Z E1117 09:36:13.677474       1 leaderelection.go:327] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": EOF
+2025-11-17T09:36:13.677505662Z I1117 09:36:13.677493       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:36:47.144471761Z I1117 09:36:47.144417       1 leaderelection.go:349] lock is held by XXXXXX2_e18b296c-e194-4404-856d-9c31178857df and has not yet expired
+2025-11-17T09:36:47.144530435Z I1117 09:36:47.144521       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:37:20.395074857Z I1117 09:37:20.395005       1 leaderelection.go:349] lock is held by XXXXXX2_e18b296c-e194-4404-856d-9c31178857df and has not yet expired
+2025-11-17T09:37:20.395074857Z I1117 09:37:20.395037       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:37:51.916347510Z I1117 09:37:51.916277       1 leaderelection.go:255] successfully acquired lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:37:51.916770166Z I1117 09:37:51.916737       1 controller.go:177] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.CertificateSigningRequest"
+2025-11-17T09:37:51.916784656Z I1117 09:37:51.916746       1 recorder.go:104] "events: XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 became leader" type="Normal" object={"kind":"Lease","namespace":"openshift-network-node-identity","name":"ovnkube-identity","uid":"4659b2c6-ade4-4d67-b4a9-67def0d42dec","apiVersion":"coordination.k8s.io/v1","resourceVersion":"22992"} reason="LeaderElection"
+2025-11-17T09:37:51.916784656Z I1117 09:37:51.916771       1 controller.go:185] "Starting Controller" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest"
+2025-11-17T09:37:51.918774810Z I1117 09:37:51.918740       1 reflector.go:287] Starting reflector *v1.CertificateSigningRequest (10h49m21.533150885s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:37:51.918795155Z I1117 09:37:51.918769       1 reflector.go:323] Listing and watching *v1.CertificateSigningRequest from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:37:52.018819084Z I1117 09:37:52.018744       1 shared_informer.go:341] caches populated
+2025-11-17T09:37:52.018860305Z I1117 09:37:52.018848       1 shared_informer.go:341] caches populated
+2025-11-17T09:37:52.019010600Z I1117 09:37:52.018889       1 controller.go:219] "Starting XXXXXXs" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" XXXXXX count=1
+2025-11-17T09:37:52.019485189Z I1117 09:37:52.019463       1 approver.go:230] Finished syncing CSR csr-947tr for unknown node in 23.813µs
+2025-11-17T09:37:52.019510193Z I1117 09:37:52.019501       1 approver.go:230] Finished syncing CSR csr-lpstt for unknown node in 17.097µs
+2025-11-17T09:37:52.019681339Z I1117 09:37:52.019665       1 approver.go:230] Finished syncing CSR csr-wmwzn for unknown node in 26.859µs
+2025-11-17T09:37:52.019824963Z I1117 09:37:52.019810       1 approver.go:230] Finished syncing CSR csr-wlsld for unknown node in 16.464µs
+2025-11-17T09:37:58.524078429Z I1117 09:37:58.523998       1 recorder.go:104] "events: CSR \"csr-f5vgn\" has been approved" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-f5vgn"} reason="CSRApproved"
+2025-11-17T09:37:58.530369007Z I1117 09:37:58.530122       1 approver.go:230] Finished syncing CSR csr-f5vgn for XXXXXX0 node in 6.533467ms
+2025-11-17T09:37:58.530369007Z I1117 09:37:58.530270       1 approver.go:230] Finished syncing CSR csr-f5vgn for unknown node in 82.144µs
+2025-11-17T09:37:58.572745317Z I1117 09:37:58.572691       1 approver.go:230] Finished syncing CSR csr-f5vgn for unknown node in 76.002µs
+2025-11-17T09:38:03.337237070Z I1117 09:38:03.337184       1 recorder.go:104] "events: CSR \"csr-xqknx\" has been approved" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-xqknx"} reason="CSRApproved"
+2025-11-17T09:38:03.346918539Z I1117 09:38:03.345619       1 approver.go:230] Finished syncing CSR csr-xqknx for XXXXXX1 node in 8.676251ms
+2025-11-17T09:38:03.346918539Z I1117 09:38:03.345718       1 approver.go:230] Finished syncing CSR csr-xqknx for unknown node in 52.995µs
+2025-11-17T09:38:03.353590415Z I1117 09:38:03.353294       1 approver.go:230] Finished syncing CSR csr-xqknx for unknown node in 64.693µs
+2025-11-17T09:38:05.586598478Z I1117 09:38:05.586546       1 recorder.go:104] "events: CSR \"csr-v7vt8\" has been approved" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-v7vt8"} reason="CSRApproved"
+2025-11-17T09:38:05.592783714Z I1117 09:38:05.592550       1 approver.go:230] Finished syncing CSR csr-v7vt8 for XXXXXX0 node in 6.246029ms
+2025-11-17T09:38:05.592783714Z I1117 09:38:05.592657       1 approver.go:230] Finished syncing CSR csr-v7vt8 for unknown node in 60.735µs
+2025-11-17T09:38:05.601526741Z I1117 09:38:05.601475       1 approver.go:230] Finished syncing CSR csr-v7vt8 for unknown node in 62.507µs
+2025-11-17T09:38:09.186406781Z I1117 09:38:09.186358       1 recorder.go:104] "events: CSR \"csr-lsx8z\" has been approved" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-lsx8z"} reason="CSRApproved"
+2025-11-17T09:38:09.191797745Z I1117 09:38:09.191745       1 approver.go:230] Finished syncing CSR csr-lsx8z for XXXXXX1 node in 5.628928ms
+2025-11-17T09:38:09.191909950Z I1117 09:38:09.191870       1 approver.go:230] Finished syncing CSR csr-lsx8z for unknown node in 63.281µs
+2025-11-17T09:38:09.203687619Z I1117 09:38:09.203637       1 approver.go:230] Finished syncing CSR csr-lsx8z for unknown node in 74.707µs
+2025-11-17T09:38:09.837563568Z I1117 09:38:09.837502       1 recorder.go:104] "events: CSR \"csr-x7tgd\" has been approved" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-x7tgd"} reason="CSRApproved"
+2025-11-17T09:38:09.843062189Z I1117 09:38:09.843021       1 approver.go:230] Finished syncing CSR csr-x7tgd for XXXXXX0 node in 5.886835ms
+2025-11-17T09:38:09.843211490Z I1117 09:38:09.843199       1 approver.go:230] Finished syncing CSR csr-x7tgd for unknown node in 56.689µs
+2025-11-17T09:38:09.850471691Z I1117 09:38:09.850424       1 approver.go:230] Finished syncing CSR csr-x7tgd for unknown node in 63.356µs
+2025-11-17T09:38:10.875839768Z I1117 09:38:10.875788       1 recorder.go:104] "events: CSR \"csr-bt9hn\" has been approved" type="Normal" object={"kind":"CertificateSigningRequest","name":"csr-bt9hn"} reason="CSRApproved"
+2025-11-17T09:38:10.881728796Z I1117 09:38:10.881682       1 approver.go:230] Finished syncing CSR csr-bt9hn for XXXXXX0 node in 6.247114ms
+2025-11-17T09:38:10.881823434Z I1117 09:38:10.881808       1 approver.go:230] Finished syncing CSR csr-bt9hn for unknown node in 79.948µs
+2025-11-17T09:38:10.891033143Z I1117 09:38:10.889589       1 approver.go:230] Finished syncing CSR csr-bt9hn for unknown node in 37.428µs
+2025-11-17T09:45:09.925627494Z I1117 09:45:09.925495       1 reflector.go:788] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233: Watch close - *v1.CertificateSigningRequest total 27 items received
+2025-11-17T09:46:52.763444640Z I1117 09:46:52.762070       1 reflector.go:788] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233: Watch close - *v1.CertificateSigningRequest total 1 items received

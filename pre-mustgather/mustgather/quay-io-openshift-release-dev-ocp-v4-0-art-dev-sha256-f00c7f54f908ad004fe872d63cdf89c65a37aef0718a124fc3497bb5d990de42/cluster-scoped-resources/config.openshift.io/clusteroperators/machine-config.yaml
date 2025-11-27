@@ -1,0 +1,123 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2025-11-17T09:05:22Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:22Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:05:23Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:extension:
+          .: {}
+          f:XXXXXX: {}
+          f:XXXXXX: {}
+          f:XXXXXX-cnf: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: machine-config-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:51:42Z"
+  name: machine-config
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "32354"
+  uid: 51d02c6c-2e9a-465d-8e12-72f7230c4fc5
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:22:30Z"
+    message: Cluster version is 4.14.59
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2025-11-17T09:22:28Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2025-11-17T09:21:51Z"
+    message: Cluster has deployed [{operator 4.14.59}]
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2025-11-17T09:51:42Z"
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  extension:
+    XXXXXX: all 3 nodes are at XXXXXX configuration rendered-XXXXXX-a9414c15fcdc6591f547a2fc5642702a
+    XXXXXX: all 1 nodes are at XXXXXX configuration rendered-XXXXXX-2b4f835c8a8caa15601b193d2c418325
+    XXXXXX-cnf: all 1 nodes are at XXXXXX configuration rendered-XXXXXX-cnf-2b4f835c8a8caa15601b193d2c418325
+  relatedObjects:
+  - group: ""
+    name: openshift-machine-config-operator
+    resource: namespaces
+  - group: machineconfiguration.openshift.io
+    name: ""
+    resource: machineconfigpools
+  - group: machineconfiguration.openshift.io
+    name: ""
+    resource: controllerconfigs
+  - group: machineconfiguration.openshift.io
+    name: ""
+    resource: kubeletconfigs
+  - group: machineconfiguration.openshift.io
+    name: ""
+    resource: containerruntimeconfigs
+  - group: machineconfiguration.openshift.io
+    name: ""
+    resource: machineconfigs
+  - group: ""
+    name: ""
+    resource: nodes
+  - group: ""
+    name: openshift-kni-infra
+    resource: namespaces
+  - group: ""
+    name: openshift-openstack-infra
+    resource: namespaces
+  - group: ""
+    name: openshift-ovirt-infra
+    resource: namespaces
+  - group: ""
+    name: openshift-vsphere-infra
+    resource: namespaces
+  - group: ""
+    name: openshift-nutanix-infra
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.14.59

@@ -1,0 +1,128 @@
+2025-11-17T09:34:22.421077356Z time="2025-11-17T09:34:22Z" level=info msg="Go Version: go1.20.12 X:strictfipsruntime"
+2025-11-17T09:34:22.421077356Z time="2025-11-17T09:34:22Z" level=info msg="Go OS/Arch: linux/amd64"
+2025-11-17T09:34:22.421077356Z time="2025-11-17T09:34:22Z" level=info msg="[metrics] Registering marketplace metrics"
+2025-11-17T09:34:22.421077356Z time="2025-11-17T09:34:22Z" level=info msg="[metrics] Serving marketplace metrics"
+2025-11-17T09:34:22.421077356Z time="2025-11-17T09:34:22Z" level=info msg="TLS keys set, using https for metrics"
+2025-11-17T09:34:22.486198375Z time="2025-11-17T09:34:22Z" level=info msg="Config API is available"
+2025-11-17T09:34:22.486198375Z time="2025-11-17T09:34:22Z" level=info msg="setting up scheme"
+2025-11-17T09:34:22.495309800Z time="2025-11-17T09:34:22Z" level=info msg="setting up health checks"
+2025-11-17T09:34:22.507749484Z I1117 09:34:22.507700       1 leaderelection.go:245] attempting to acquire leader lease openshift-marketplace/marketplace-operator-lock...
+2025-11-17T09:34:22.564855274Z I1117 09:34:22.564800       1 leaderelection.go:255] successfully acquired lease openshift-marketplace/marketplace-operator-lock
+2025-11-17T09:34:22.565079560Z time="2025-11-17T09:34:22Z" level=info msg="became leader: marketplace-operator-69f959b844-8hlkw"
+2025-11-17T09:34:22.565079560Z time="2025-11-17T09:34:22Z" level=info msg="registering components"
+2025-11-17T09:34:22.565079560Z time="2025-11-17T09:34:22Z" level=info msg="setting up the marketplace clusteroperator status reporter"
+2025-11-17T09:34:22.587101986Z time="2025-11-17T09:34:22Z" level=info msg="setting up controllers"
+2025-11-17T09:34:22.587101986Z time="2025-11-17T09:34:22Z" level=info msg="starting the marketplace clusteroperator status reporter"
+2025-11-17T09:34:22.587101986Z time="2025-11-17T09:34:22Z" level=info msg="starting manager"
+2025-11-17T09:34:22.716793181Z time="2025-11-17T09:34:22Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:34:22.717102207Z time="2025-11-17T09:34:22Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:34:22.717192057Z time="2025-11-17T09:34:22Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:34:22.717268225Z time="2025-11-17T09:34:22Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:34:22.717512357Z time="2025-11-17T09:34:22Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:34:22.738690083Z time="2025-11-17T09:34:22Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:34:22.743135190Z time="2025-11-17T09:34:22Z" level=info msg="Reconciling ConfigMap openshift-marketplace/marketplace-trusted-ca"
+2025-11-17T09:34:22.743246888Z time="2025-11-17T09:34:22Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:34:22.743293643Z time="2025-11-17T09:34:22Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:34:22.743426447Z time="2025-11-17T09:34:22Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:34:22.743458311Z time="2025-11-17T09:34:22Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:34:22.748067096Z time="2025-11-17T09:34:22Z" level=info msg="[ca] Certificate Authorization ConfigMap openshift-marketplace/marketplace-trusted-ca is in sync with disk." name=marketplace-trusted-ca type=ConfigMap
+2025-11-17T09:36:02.723405920Z [controller-runtime] log.SetLogger(...) was never called, logs will not be displayed:
+2025-11-17T09:36:02.723405920Z goroutine 183 [running]:
+2025-11-17T09:36:02.723405920Z runtime/debug.Stack()
+2025-11-17T09:36:02.723405920Z 	/usr/lib/golang/src/runtime/debug/stack.go:24 +0x65
+2025-11-17T09:36:02.723405920Z sigs.k8s.io/controller-runtime/pkg/log.eventuallyFulfillRoot()
+2025-11-17T09:36:02.723405920Z 	/go/src/github.com/operator-framework/operator-marketplace/vendor/sigs.k8s.io/controller-runtime/pkg/log/log.go:59 +0xbd
+2025-11-17T09:36:02.723405920Z sigs.k8s.io/controller-runtime/pkg/log.(*delegatingLogSink).WithValues(0xc00013dd40, {0xc0004f0ae0, 0x6, 0x6})
+2025-11-17T09:36:02.723405920Z 	/go/src/github.com/operator-framework/operator-marketplace/vendor/sigs.k8s.io/controller-runtime/pkg/log/deleg.go:168 +0x54
+2025-11-17T09:36:02.723405920Z github.com/go-logr/logr.Logger.WithValues(...)
+2025-11-17T09:36:02.723405920Z 	/go/src/github.com/operator-framework/operator-marketplace/vendor/github.com/go-logr/logr/logr.go:323
+2025-11-17T09:36:02.723405920Z sigs.k8s.io/controller-runtime/pkg/controller.NewUnmanaged.func1(0xc00007a800)
+2025-11-17T09:36:02.723405920Z 	/go/src/github.com/operator-framework/operator-marketplace/vendor/sigs.k8s.io/controller-runtime/pkg/controller/controller.go:121 +0x1f6
+2025-11-17T09:36:02.723405920Z sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler(0xc0000b99a0, {0x1ea4168, 0xc000510e60}, {0x1a3ff60?, 0xc00023f180?})
+2025-11-17T09:36:02.723405920Z 	/go/src/github.com/operator-framework/operator-marketplace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:305 +0x18b
+2025-11-17T09:36:02.723405920Z sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem(0xc0000b99a0, {0x1ea4168, 0xc000510e60})
+2025-11-17T09:36:02.723405920Z 	/go/src/github.com/operator-framework/operator-marketplace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:265 +0x1d9
+2025-11-17T09:36:02.723405920Z sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2()
+2025-11-17T09:36:02.723405920Z 	/go/src/github.com/operator-framework/operator-marketplace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:226 +0x85
+2025-11-17T09:36:02.723405920Z created by sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2
+2025-11-17T09:36:02.723405920Z 	/go/src/github.com/operator-framework/operator-marketplace/vendor/sigs.k8s.io/controller-runtime/pkg/internal/controller/controller.go:222 +0x587
+2025-11-17T09:36:02.723405920Z time="2025-11-17T09:36:02Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:02.723405920Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:02.723405920Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:02.723405920Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:02.723405920Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:02.788604905Z time="2025-11-17T09:36:02Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:02.803690816Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:02.803690816Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:02.803690816Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:02.841873800Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:02.860266572Z time="2025-11-17T09:36:02Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:02.860266572Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:02.860266572Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:02.860266572Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:02.860266572Z time="2025-11-17T09:36:02Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.061643767Z time="2025-11-17T09:36:03Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:03.061643767Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.061643767Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.061643767Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.089234535Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.173542138Z time="2025-11-17T09:36:03Z" level=info msg="Reconciling ConfigMap openshift-marketplace/marketplace-trusted-ca"
+2025-11-17T09:36:03.237127138Z time="2025-11-17T09:36:03Z" level=info msg="[ca] Certificate Authorization ConfigMap openshift-marketplace/marketplace-trusted-ca is in sync with disk." name=marketplace-trusted-ca type=ConfigMap
+2025-11-17T09:36:03.266638699Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.284003548Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.284003548Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.284003548Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.287973030Z time="2025-11-17T09:36:03Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:03.312312805Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.312433315Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.316337597Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.316337597Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.357731673Z time="2025-11-17T09:36:03Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:03.393900802Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.393900802Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.393900802Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:03.393900802Z time="2025-11-17T09:36:03Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:45.345021510Z time="2025-11-17T09:36:45Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:45.345829127Z time="2025-11-17T09:36:45Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:45.345905716Z time="2025-11-17T09:36:45Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:45.345975728Z time="2025-11-17T09:36:45Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:45.574917500Z time="2025-11-17T09:36:45Z" level=info msg="Reconciling ConfigMap openshift-marketplace/marketplace-trusted-ca"
+2025-11-17T09:36:45.620364559Z time="2025-11-17T09:36:45Z" level=info msg="[ca] Certificate Authorization ConfigMap openshift-marketplace/marketplace-trusted-ca is in sync with disk." name=marketplace-trusted-ca type=ConfigMap
+2025-11-17T09:36:46.368626482Z time="2025-11-17T09:36:46Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:46.368863366Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.368984299Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.369217589Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.369260194Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.402913462Z time="2025-11-17T09:36:46Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:46.402913462Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.402913462Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.402913462Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.402913462Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.429332047Z time="2025-11-17T09:36:46Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:46.429332047Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.429332047Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.429332047Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.429332047Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.455312693Z time="2025-11-17T09:36:46Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:46.459296176Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.459296176Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.459296176Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.459296176Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.466318614Z time="2025-11-17T09:36:46Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:46.468346613Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.468346613Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.468346613Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.468346613Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.475732395Z time="2025-11-17T09:36:46Z" level=info msg="Reconciling OperatorHub cluster"
+2025-11-17T09:36:46.475793640Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.475829131Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.475934364Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:36:46.475934364Z time="2025-11-17T09:36:46Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:46:54.139854393Z time="2025-11-17T09:46:54Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:46:54.149184778Z time="2025-11-17T09:46:54Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:46:54.170793059Z time="2025-11-17T09:46:54Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:46:54.212409633Z time="2025-11-17T09:46:54Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:51:47.700206819Z time="2025-11-17T09:51:47Z" level=info msg="[defaults] CatalogSource community-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:51:47.900247968Z time="2025-11-17T09:51:47Z" level=info msg="[defaults] CatalogSource redhat-marketplace is annotated and its spec is the same as the default spec"
+2025-11-17T09:51:48.495879954Z time="2025-11-17T09:51:48Z" level=info msg="[defaults] CatalogSource redhat-operators is annotated and its spec is the same as the default spec"
+2025-11-17T09:51:48.704547077Z time="2025-11-17T09:51:48Z" level=info msg="[defaults] CatalogSource certified-operators is annotated and its spec is the same as the default spec"

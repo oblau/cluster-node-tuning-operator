@@ -1,0 +1,187 @@
+2025-11-17T09:22:36.639154113Z I1117 09:22:36.638407   25993 controller.go:1275] starting in-cluster openshift-tuned e8eb979aa
+2025-11-17T09:22:36.639154113Z I1117 09:22:36.639032   25993 controller.go:520] writing /var/lib/ocp-tuned/image.env
+2025-11-17T09:22:36.650746635Z I1117 09:22:36.650706   25993 controller.go:297] disabling system tuned...
+2025-11-17T09:22:36.742321220Z I1117 09:22:36.742200   25993 controller.go:1161] started events processors
+2025-11-17T09:22:36.742346547Z I1117 09:22:36.742336   25993 controller.go:1178] started controller
+2025-11-17T09:22:36.742579827Z I1117 09:22:36.742549   25993 controller.go:431] extracting cloud provider name to /var/lib/ocp-tuned/provider
+2025-11-17T09:22:36.742921398Z I1117 09:22:36.742892   25993 controller.go:544] written "/etc/tuned/recommend.d/50-openshift.conf" to set TuneD profile openshift-control-plane
+2025-11-17T09:22:36.742930887Z I1117 09:22:36.742919   25993 controller.go:795] recommended TuneD profile changed from () to (openshift-control-plane)
+2025-11-17T09:22:36.742936905Z I1117 09:22:36.742932   25993 controller.go:327] profilesExtract(): extracting TuneD profiles
+2025-11-17T09:22:36.801415836Z I1117 09:22:36.801380   25993 controller.go:359] recommended TuneD profile openshift-control-plane content changed [openshift]
+2025-11-17T09:22:36.801539525Z I1117 09:22:36.801528   25993 controller.go:649] tunedReload()
+2025-11-17T09:22:36.801606478Z I1117 09:22:36.801600   25993 controller.go:579] starting tuned...
+2025-11-17T09:22:36.801626788Z I1117 09:22:36.801621   25993 run.go:103] running cmd...
+2025-11-17T09:22:36.924449127Z 2025-11-17 09:22:36,924 INFO     tuned.daemon.application: TuneD: 2.25.1, kernel: 5.14.0-284.147.1.el9_2.x86_64
+2025-11-17T09:22:36.924449127Z 2025-11-17 09:22:36,924 INFO     tuned.daemon.application: dynamic tuning is globally disabled
+2025-11-17T09:22:36.929468696Z 2025-11-17 09:22:36,928 INFO     tuned.daemon.daemon: using sleep interval of 1 second(s)
+2025-11-17T09:22:36.929468696Z 2025-11-17 09:22:36,928 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2025-11-17T09:22:36.929468696Z 2025-11-17 09:22:36,929 INFO     tuned.daemon.daemon: Using 'openshift-control-plane' profile
+2025-11-17T09:22:36.932788778Z 2025-11-17 09:22:36,930 INFO     tuned.profiles.loader: loading profile: openshift-control-plane
+2025-11-17T09:22:36.986172329Z 2025-11-17 09:22:36,985 INFO     tuned.daemon.controller: starting controller
+2025-11-17T09:22:36.986172329Z 2025-11-17 09:22:36,986 INFO     tuned.daemon.controller: waiting for udev to settle
+2025-11-17T09:22:37.991126334Z 2025-11-17 09:22:37,990 INFO     tuned.daemon.controller: udev settled
+2025-11-17T09:22:37.991219084Z 2025-11-17 09:22:37,991 INFO     tuned.daemon.daemon: starting tuning
+2025-11-17T09:22:38.003918851Z 2025-11-17 09:22:38,003 INFO     tuned.plugins.base: instance cpu: assigning devices cpu6, cpu5, cpu2, cpu11, cpu1, cpu4, cpu7, cpu9, cpu10, cpu8, cpu3, cpu0
+2025-11-17T09:22:38.004837347Z 2025-11-17 09:22:38,004 INFO     tuned.plugins.plugin_cpu: We are running on an x86 GenuineIntel platform
+2025-11-17T09:22:38.008773343Z 2025-11-17 09:22:38,008 WARNING  tuned.plugins.plugin_cpu: your CPU doesn't support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias
+2025-11-17T09:22:38.010749352Z 2025-11-17 09:22:38,010 INFO     tuned.plugins.base: instance disk: assigning devices vda
+2025-11-17T09:22:38.011129575Z 2025-11-17 09:22:38,011 WARNING  tuned.plugins.base: instance video: no matching devices available
+2025-11-17T09:22:38.014195931Z 2025-11-17 09:22:38,014 INFO     tuned.plugins.base: instance net: assigning devices enp1s0
+2025-11-17T09:22:38.018131097Z 2025-11-17 09:22:38,017 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '30'.
+2025-11-17T09:22:38.018131097Z 2025-11-17 09:22:38,017 INFO     tuned.plugins.plugin_vm: Not setting option 'dirty_background_ratio' to '10', already set.
+2025-11-17T09:22:38.019475922Z 2025-11-17 09:22:38,019 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2025-11-17T09:22:38.156220799Z 2025-11-17 09:22:38,155 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-control-plane' applied
+2025-11-17T09:22:38.173714950Z I1117 09:22:38.173613   25993 controller.go:800] recommended profile (openshift-control-plane) matches current configuration
+2025-11-17T09:22:38.176170787Z I1117 09:22:38.176058   25993 controller.go:327] profilesExtract(): extracting TuneD profiles
+2025-11-17T09:22:38.223481358Z I1117 09:22:38.223446   25993 controller.go:359] recommended TuneD profile openshift-control-plane content unchanged [openshift]
+2025-11-17T09:29:49.599520273Z E1117 09:29:49.599393   25993 controller.go:239] unable to sync(profile/XXXXXX1) requeued (0): failed to get Profile XXXXXX1: profile.tuned.openshift.io "XXXXXX1" not found
+2025-11-17T09:29:49.619467811Z I1117 09:29:49.619426   25993 controller.go:297] disabling system tuned...
+2025-11-17T09:29:49.628864054Z I1117 09:29:49.628817   25993 controller.go:800] recommended profile (openshift-control-plane) matches current configuration
+2025-11-17T09:29:49.649731757Z E1117 09:29:49.649681   25993 controller.go:804] failed to update Profile XXXXXX1 status: Operation cannot be fulfilled on profiles.tuned.openshift.io "XXXXXX1": the object has been modified; please apply your changes to the XXXXXX version and try again
+2025-11-17T09:29:49.649796768Z E1117 09:29:49.649778   25993 controller.go:924] unable to sync(daemon/{profile:true profileStatus:false debug:false provider: reapplySysctl:true recommendedProfile:openshift-control-plane}) requeued (0)
+2025-11-17T09:29:49.649878843Z I1117 09:29:49.649867   25993 controller.go:431] extracting cloud provider name to /var/lib/ocp-tuned/provider
+2025-11-17T09:29:49.649977567Z I1117 09:29:49.649962   25993 controller.go:800] recommended profile (openshift-control-plane) matches current configuration
+2025-11-17T09:29:49.661106736Z I1117 09:29:49.661033   25993 controller.go:327] profilesExtract(): extracting TuneD profiles
+2025-11-17T09:29:49.709652943Z I1117 09:29:49.709597   25993 controller.go:359] recommended TuneD profile openshift-control-plane content unchanged [openshift]
+2025-11-17T09:29:49.709858359Z I1117 09:29:49.709833   25993 controller.go:649] tunedReload()
+2025-11-17T09:29:49.709858359Z I1117 09:29:49.709842   25993 controller.go:667] reloading tuned...
+2025-11-17T09:29:49.709858359Z I1117 09:29:49.709846   25993 controller.go:670] sending HUP to PID 26351
+2025-11-17T09:29:49.710566149Z 2025-11-17 09:29:49,710 INFO     tuned.daemon.daemon: stopping tuning
+2025-11-17T09:29:49.776467765Z 2025-11-17 09:29:49,776 INFO     tuned.plugins.plugin_vm: Not restoring 'dirty_background_bytes', previous value is the same or unknown.
+2025-11-17T09:29:49.776467765Z 2025-11-17 09:29:49,776 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '20'
+2025-11-17T09:29:49.777830107Z 2025-11-17 09:29:49,777 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2025-11-17T09:29:49.778398966Z 2025-11-17 09:29:49,778 INFO     tuned.daemon.daemon: Using 'openshift-control-plane' profile
+2025-11-17T09:29:49.778911698Z 2025-11-17 09:29:49,778 INFO     tuned.profiles.loader: loading profile: openshift-control-plane
+2025-11-17T09:29:49.833002526Z 2025-11-17 09:29:49,832 INFO     tuned.daemon.daemon: starting tuning
+2025-11-17T09:29:49.841189227Z 2025-11-17 09:29:49,840 INFO     tuned.plugins.base: instance cpu: assigning devices cpu6, cpu5, cpu2, cpu11, cpu1, cpu4, cpu7, cpu9, cpu10, cpu8, cpu3, cpu0
+2025-11-17T09:29:49.842243708Z 2025-11-17 09:29:49,842 INFO     tuned.plugins.plugin_cpu: We are running on an x86 GenuineIntel platform
+2025-11-17T09:29:49.847216369Z 2025-11-17 09:29:49,847 WARNING  tuned.plugins.plugin_cpu: your CPU doesn't support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias
+2025-11-17T09:29:49.849447070Z 2025-11-17 09:29:49,849 INFO     tuned.plugins.base: instance disk: assigning devices vda
+2025-11-17T09:29:49.849644254Z 2025-11-17 09:29:49,849 WARNING  tuned.plugins.base: instance video: no matching devices available
+2025-11-17T09:29:49.852583413Z 2025-11-17 09:29:49,852 INFO     tuned.plugins.base: instance net: assigning devices enp1s0
+2025-11-17T09:29:49.855950918Z 2025-11-17 09:29:49,855 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '30'.
+2025-11-17T09:29:49.856067429Z 2025-11-17 09:29:49,856 INFO     tuned.plugins.plugin_vm: Not setting option 'dirty_background_ratio' to '10', already set.
+2025-11-17T09:29:49.857242723Z 2025-11-17 09:29:49,857 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2025-11-17T09:29:49.910634892Z 2025-11-17 09:29:49,910 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-control-plane' applied
+2025-11-17T09:29:49.951045548Z I1117 09:29:49.950989   25993 controller.go:431] extracting cloud provider name to /var/lib/ocp-tuned/provider
+2025-11-17T09:29:49.951475529Z I1117 09:29:49.951456   25993 controller.go:800] recommended profile (openshift-control-plane) matches current configuration
+2025-11-17T09:29:49.955070777Z I1117 09:29:49.955028   25993 controller.go:327] profilesExtract(): extracting TuneD profiles
+2025-11-17T09:29:50.002014554Z I1117 09:29:50.001975   25993 controller.go:359] recommended TuneD profile openshift-control-plane content unchanged [openshift]
+2025-11-17T09:29:50.002131414Z I1117 09:29:50.002100   25993 controller.go:649] tunedReload()
+2025-11-17T09:29:50.002137800Z I1117 09:29:50.002130   25993 controller.go:667] reloading tuned...
+2025-11-17T09:29:50.002137800Z I1117 09:29:50.002134   25993 controller.go:670] sending HUP to PID 26351
+2025-11-17T09:29:50.002473761Z 2025-11-17 09:29:50,002 INFO     tuned.daemon.daemon: stopping tuning
+2025-11-17T09:29:50.060196292Z 2025-11-17 09:29:50,060 INFO     tuned.plugins.plugin_vm: Not restoring 'dirty_background_bytes', previous value is the same or unknown.
+2025-11-17T09:29:50.060196292Z 2025-11-17 09:29:50,060 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '20'
+2025-11-17T09:29:50.060905175Z 2025-11-17 09:29:50,060 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2025-11-17T09:29:50.061327912Z 2025-11-17 09:29:50,061 INFO     tuned.daemon.daemon: Using 'openshift-control-plane' profile
+2025-11-17T09:29:50.061758739Z 2025-11-17 09:29:50,061 INFO     tuned.profiles.loader: loading profile: openshift-control-plane
+2025-11-17T09:29:50.111217033Z 2025-11-17 09:29:50,111 INFO     tuned.daemon.daemon: starting tuning
+2025-11-17T09:29:50.116879592Z 2025-11-17 09:29:50,116 INFO     tuned.plugins.base: instance cpu: assigning devices cpu6, cpu5, cpu2, cpu11, cpu1, cpu4, cpu7, cpu9, cpu10, cpu8, cpu3, cpu0
+2025-11-17T09:29:50.117920436Z 2025-11-17 09:29:50,117 INFO     tuned.plugins.plugin_cpu: We are running on an x86 GenuineIntel platform
+2025-11-17T09:29:50.124985311Z 2025-11-17 09:29:50,123 WARNING  tuned.plugins.plugin_cpu: your CPU doesn't support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias
+2025-11-17T09:29:50.125826246Z 2025-11-17 09:29:50,125 INFO     tuned.plugins.base: instance disk: assigning devices vda
+2025-11-17T09:29:50.127628904Z 2025-11-17 09:29:50,126 WARNING  tuned.plugins.base: instance video: no matching devices available
+2025-11-17T09:29:50.129744755Z 2025-11-17 09:29:50,129 INFO     tuned.plugins.base: instance net: assigning devices enp1s0
+2025-11-17T09:29:50.133461228Z 2025-11-17 09:29:50,133 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '30'.
+2025-11-17T09:29:50.133554425Z 2025-11-17 09:29:50,133 INFO     tuned.plugins.plugin_vm: Not setting option 'dirty_background_ratio' to '10', already set.
+2025-11-17T09:29:50.134888163Z 2025-11-17 09:29:50,134 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2025-11-17T09:29:50.206188662Z 2025-11-17 09:29:50,205 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-control-plane' applied
+2025-11-17T09:29:50.410924347Z I1117 09:29:50.410846   25993 controller.go:431] extracting cloud provider name to /var/lib/ocp-tuned/provider
+2025-11-17T09:29:50.410924347Z I1117 09:29:50.410917   25993 controller.go:800] recommended profile (openshift-control-plane) matches current configuration
+2025-11-17T09:29:50.415032173Z I1117 09:29:50.414996   25993 controller.go:327] profilesExtract(): extracting TuneD profiles
+2025-11-17T09:29:50.459945367Z I1117 09:29:50.459911   25993 controller.go:359] recommended TuneD profile openshift-control-plane content unchanged [openshift]
+2025-11-17T09:29:50.460050964Z I1117 09:29:50.460038   25993 controller.go:649] tunedReload()
+2025-11-17T09:29:50.460050964Z I1117 09:29:50.460045   25993 controller.go:667] reloading tuned...
+2025-11-17T09:29:50.460057236Z I1117 09:29:50.460049   25993 controller.go:670] sending HUP to PID 26351
+2025-11-17T09:29:50.460354244Z 2025-11-17 09:29:50,460 INFO     tuned.daemon.daemon: stopping tuning
+2025-11-17T09:29:50.523003680Z 2025-11-17 09:29:50,522 INFO     tuned.plugins.plugin_vm: Not restoring 'dirty_background_bytes', previous value is the same or unknown.
+2025-11-17T09:29:50.523055203Z 2025-11-17 09:29:50,522 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '20'
+2025-11-17T09:29:50.523735350Z 2025-11-17 09:29:50,523 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2025-11-17T09:29:50.524147841Z 2025-11-17 09:29:50,524 INFO     tuned.daemon.daemon: Using 'openshift-control-plane' profile
+2025-11-17T09:29:50.524603236Z 2025-11-17 09:29:50,524 INFO     tuned.profiles.loader: loading profile: openshift-control-plane
+2025-11-17T09:29:50.581583623Z 2025-11-17 09:29:50,581 INFO     tuned.daemon.daemon: starting tuning
+2025-11-17T09:29:50.587316145Z 2025-11-17 09:29:50,587 INFO     tuned.plugins.base: instance cpu: assigning devices cpu6, cpu5, cpu2, cpu11, cpu1, cpu4, cpu7, cpu9, cpu10, cpu8, cpu3, cpu0
+2025-11-17T09:29:50.588361926Z 2025-11-17 09:29:50,588 INFO     tuned.plugins.plugin_cpu: We are running on an x86 GenuineIntel platform
+2025-11-17T09:29:50.592622262Z 2025-11-17 09:29:50,592 WARNING  tuned.plugins.plugin_cpu: your CPU doesn't support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias
+2025-11-17T09:29:50.594459712Z 2025-11-17 09:29:50,594 INFO     tuned.plugins.base: instance disk: assigning devices vda
+2025-11-17T09:29:50.594932125Z 2025-11-17 09:29:50,594 WARNING  tuned.plugins.base: instance video: no matching devices available
+2025-11-17T09:29:50.597993336Z 2025-11-17 09:29:50,597 INFO     tuned.plugins.base: instance net: assigning devices enp1s0
+2025-11-17T09:29:50.601286630Z 2025-11-17 09:29:50,601 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '30'.
+2025-11-17T09:29:50.601332311Z 2025-11-17 09:29:50,601 INFO     tuned.plugins.plugin_vm: Not setting option 'dirty_background_ratio' to '10', already set.
+2025-11-17T09:29:50.602441796Z 2025-11-17 09:29:50,602 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2025-11-17T09:29:50.660754820Z 2025-11-17 09:29:50,660 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-control-plane' applied
+2025-11-17T09:33:13.407109265Z E1117 09:33:13.406930   25993 controller.go:239] unable to sync(profile/XXXXXX1) requeued (0): failed to get Profile XXXXXX1: profile.tuned.openshift.io "XXXXXX1" not found
+2025-11-17T09:33:13.429828817Z I1117 09:33:13.429762   25993 controller.go:297] disabling system tuned...
+2025-11-17T09:33:13.439735431Z I1117 09:33:13.439679   25993 controller.go:431] extracting cloud provider name to /var/lib/ocp-tuned/provider
+2025-11-17T09:33:13.439858594Z I1117 09:33:13.439832   25993 controller.go:800] recommended profile (openshift-control-plane) matches current configuration
+2025-11-17T09:33:13.458058474Z I1117 09:33:13.458008   25993 controller.go:327] profilesExtract(): extracting TuneD profiles
+2025-11-17T09:33:13.508350573Z I1117 09:33:13.508300   25993 controller.go:359] recommended TuneD profile openshift-control-plane content unchanged [openshift]
+2025-11-17T09:33:13.508500950Z I1117 09:33:13.508483   25993 controller.go:649] tunedReload()
+2025-11-17T09:33:13.508500950Z I1117 09:33:13.508494   25993 controller.go:667] reloading tuned...
+2025-11-17T09:33:13.508508985Z I1117 09:33:13.508499   25993 controller.go:670] sending HUP to PID 26351
+2025-11-17T09:33:13.509360274Z 2025-11-17 09:33:13,509 INFO     tuned.daemon.daemon: stopping tuning
+2025-11-17T09:33:13.593597946Z 2025-11-17 09:33:13,593 INFO     tuned.plugins.plugin_vm: Not restoring 'dirty_background_bytes', previous value is the same or unknown.
+2025-11-17T09:33:13.593661907Z 2025-11-17 09:33:13,593 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '20'
+2025-11-17T09:33:13.596238157Z 2025-11-17 09:33:13,596 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2025-11-17T09:33:13.596873403Z 2025-11-17 09:33:13,596 INFO     tuned.daemon.daemon: Using 'openshift-control-plane' profile
+2025-11-17T09:33:13.597453394Z 2025-11-17 09:33:13,597 INFO     tuned.profiles.loader: loading profile: openshift-control-plane
+2025-11-17T09:33:13.679900367Z 2025-11-17 09:33:13,677 INFO     tuned.daemon.daemon: starting tuning
+2025-11-17T09:33:13.686778202Z 2025-11-17 09:33:13,683 INFO     tuned.plugins.base: instance cpu: assigning devices cpu6, cpu5, cpu2, cpu11, cpu1, cpu4, cpu7, cpu9, cpu10, cpu8, cpu3, cpu0
+2025-11-17T09:33:13.686778202Z 2025-11-17 09:33:13,684 INFO     tuned.plugins.plugin_cpu: We are running on an x86 GenuineIntel platform
+2025-11-17T09:33:13.690798357Z 2025-11-17 09:33:13,688 WARNING  tuned.plugins.plugin_cpu: your CPU doesn't support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias
+2025-11-17T09:33:13.690798357Z 2025-11-17 09:33:13,690 INFO     tuned.plugins.base: instance disk: assigning devices vda
+2025-11-17T09:33:13.694991616Z 2025-11-17 09:33:13,691 WARNING  tuned.plugins.base: instance video: no matching devices available
+2025-11-17T09:33:13.695873012Z 2025-11-17 09:33:13,694 INFO     tuned.plugins.base: instance net: assigning devices enp1s0
+2025-11-17T09:33:13.700771471Z 2025-11-17 09:33:13,698 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '30'.
+2025-11-17T09:33:13.700771471Z 2025-11-17 09:33:13,698 INFO     tuned.plugins.plugin_vm: Not setting option 'dirty_background_ratio' to '10', already set.
+2025-11-17T09:33:13.700771471Z 2025-11-17 09:33:13,699 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2025-11-17T09:33:13.774200019Z 2025-11-17 09:33:13,772 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-control-plane' applied
+2025-11-17T09:33:13.814731892Z I1117 09:33:13.813993   25993 controller.go:431] extracting cloud provider name to /var/lib/ocp-tuned/provider
+2025-11-17T09:33:13.814731892Z I1117 09:33:13.814068   25993 controller.go:800] recommended profile (openshift-control-plane) matches current configuration
+2025-11-17T09:33:13.819512423Z I1117 09:33:13.819464   25993 controller.go:327] profilesExtract(): extracting TuneD profiles
+2025-11-17T09:33:13.880940067Z I1117 09:33:13.880867   25993 controller.go:359] recommended TuneD profile openshift-control-plane content unchanged [openshift]
+2025-11-17T09:33:13.881175518Z I1117 09:33:13.881157   25993 controller.go:649] tunedReload()
+2025-11-17T09:33:13.881207594Z I1117 09:33:13.881198   25993 controller.go:667] reloading tuned...
+2025-11-17T09:33:13.881240018Z I1117 09:33:13.881229   25993 controller.go:670] sending HUP to PID 26351
+2025-11-17T09:33:13.884191602Z 2025-11-17 09:33:13,883 INFO     tuned.daemon.daemon: stopping tuning
+2025-11-17T09:33:13.970903651Z 2025-11-17 09:33:13,970 INFO     tuned.plugins.plugin_vm: Not restoring 'dirty_background_bytes', previous value is the same or unknown.
+2025-11-17T09:33:13.970936620Z 2025-11-17 09:33:13,970 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '20'
+2025-11-17T09:33:13.971773076Z 2025-11-17 09:33:13,971 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2025-11-17T09:33:13.972335241Z 2025-11-17 09:33:13,972 INFO     tuned.daemon.daemon: Using 'openshift-control-plane' profile
+2025-11-17T09:33:13.975184045Z 2025-11-17 09:33:13,972 INFO     tuned.profiles.loader: loading profile: openshift-control-plane
+2025-11-17T09:33:14.096135150Z 2025-11-17 09:33:14,094 INFO     tuned.daemon.daemon: starting tuning
+2025-11-17T09:33:14.105729720Z 2025-11-17 09:33:14,102 INFO     tuned.plugins.base: instance cpu: assigning devices cpu6, cpu5, cpu2, cpu11, cpu1, cpu4, cpu7, cpu9, cpu10, cpu8, cpu3, cpu0
+2025-11-17T09:33:14.108819980Z 2025-11-17 09:33:14,107 INFO     tuned.plugins.plugin_cpu: We are running on an x86 GenuineIntel platform
+2025-11-17T09:33:14.112754642Z 2025-11-17 09:33:14,112 WARNING  tuned.plugins.plugin_cpu: your CPU doesn't support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias
+2025-11-17T09:33:14.118519450Z 2025-11-17 09:33:14,115 INFO     tuned.plugins.base: instance disk: assigning devices vda
+2025-11-17T09:33:14.118519450Z 2025-11-17 09:33:14,115 WARNING  tuned.plugins.base: instance video: no matching devices available
+2025-11-17T09:33:14.120817189Z 2025-11-17 09:33:14,119 INFO     tuned.plugins.base: instance net: assigning devices enp1s0
+2025-11-17T09:33:14.124981205Z 2025-11-17 09:33:14,123 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '30'.
+2025-11-17T09:33:14.124981205Z 2025-11-17 09:33:14,124 INFO     tuned.plugins.plugin_vm: Not setting option 'dirty_background_ratio' to '10', already set.
+2025-11-17T09:33:14.126322594Z 2025-11-17 09:33:14,125 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2025-11-17T09:33:14.204441405Z 2025-11-17 09:33:14,203 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-control-plane' applied
+2025-11-17T09:33:14.281835181Z I1117 09:33:14.281785   25993 controller.go:431] extracting cloud provider name to /var/lib/ocp-tuned/provider
+2025-11-17T09:33:14.282165659Z I1117 09:33:14.282149   25993 controller.go:800] recommended profile (openshift-control-plane) matches current configuration
+2025-11-17T09:33:14.289556747Z I1117 09:33:14.289508   25993 controller.go:327] profilesExtract(): extracting TuneD profiles
+2025-11-17T09:33:14.354229984Z I1117 09:33:14.353939   25993 controller.go:359] recommended TuneD profile openshift-control-plane content unchanged [openshift]
+2025-11-17T09:33:14.354229984Z I1117 09:33:14.354089   25993 controller.go:649] tunedReload()
+2025-11-17T09:33:14.354229984Z I1117 09:33:14.354093   25993 controller.go:667] reloading tuned...
+2025-11-17T09:33:14.354229984Z I1117 09:33:14.354097   25993 controller.go:670] sending HUP to PID 26351
+2025-11-17T09:33:14.359781062Z 2025-11-17 09:33:14,356 INFO     tuned.daemon.daemon: stopping tuning
+2025-11-17T09:33:14.447296687Z 2025-11-17 09:33:14,446 INFO     tuned.plugins.plugin_vm: Not restoring 'dirty_background_bytes', previous value is the same or unknown.
+2025-11-17T09:33:14.447296687Z 2025-11-17 09:33:14,446 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '20'
+2025-11-17T09:33:14.447439077Z 2025-11-17 09:33:14,447 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2025-11-17T09:33:14.448321207Z 2025-11-17 09:33:14,447 INFO     tuned.daemon.daemon: Using 'openshift-control-plane' profile
+2025-11-17T09:33:14.449401333Z 2025-11-17 09:33:14,448 INFO     tuned.profiles.loader: loading profile: openshift-control-plane
+2025-11-17T09:33:14.502799620Z 2025-11-17 09:33:14,501 INFO     tuned.daemon.daemon: starting tuning
+2025-11-17T09:33:14.508179136Z 2025-11-17 09:33:14,507 INFO     tuned.plugins.base: instance cpu: assigning devices cpu6, cpu5, cpu2, cpu11, cpu1, cpu4, cpu7, cpu9, cpu10, cpu8, cpu3, cpu0
+2025-11-17T09:33:14.509315117Z 2025-11-17 09:33:14,508 INFO     tuned.plugins.plugin_cpu: We are running on an x86 GenuineIntel platform
+2025-11-17T09:33:14.517047684Z 2025-11-17 09:33:14,515 WARNING  tuned.plugins.plugin_cpu: your CPU doesn't support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias
+2025-11-17T09:33:14.521001665Z 2025-11-17 09:33:14,517 INFO     tuned.plugins.base: instance disk: assigning devices vda
+2025-11-17T09:33:14.521001665Z 2025-11-17 09:33:14,518 WARNING  tuned.plugins.base: instance video: no matching devices available
+2025-11-17T09:33:14.524741931Z 2025-11-17 09:33:14,521 INFO     tuned.plugins.base: instance net: assigning devices enp1s0
+2025-11-17T09:33:14.533603123Z 2025-11-17 09:33:14,530 INFO     tuned.plugins.plugin_vm: Setting option 'dirty_ratio' to '30'.
+2025-11-17T09:33:14.533603123Z 2025-11-17 09:33:14,531 INFO     tuned.plugins.plugin_vm: Not setting option 'dirty_background_ratio' to '10', already set.
+2025-11-17T09:33:14.533603123Z 2025-11-17 09:33:14,532 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2025-11-17T09:33:14.616871251Z 2025-11-17 09:33:14,615 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-control-plane' applied

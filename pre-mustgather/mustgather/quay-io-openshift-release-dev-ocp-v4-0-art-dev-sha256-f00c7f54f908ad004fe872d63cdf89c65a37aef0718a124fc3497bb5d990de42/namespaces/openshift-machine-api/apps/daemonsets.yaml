@@ -1,0 +1,318 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: DaemonSet
+  metadata:
+    annotations:
+      deprecated.daemonset.template.generation: "1"
+      operator.openshift.io/spec-hash: 3fd2bb139ef21631078f219dca8ce4b42b085e67ade9e5fd78965335a36822dd
+    creationTimestamp: "2025-11-17T09:22:15Z"
+    generation: 1
+    labels:
+      k8s-app: metal3
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deprecated.daemonset.template.generation: {}
+            f:operator.openshift.io/spec-hash: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a8ca0356-f879-4a17-9b5b-d90847d2a49f"}: {}
+        f:spec:
+          f:revisionHistoryLimit: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                .: {}
+                f:baremetal.openshift.io/cluster-baremetal-operator: {}
+                f:k8s-app: {}
+            f:spec:
+              f:containers:
+                k:{"name":"ironic-proxy"}:
+                  .: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"IRONIC_INSPECTOR_PROXY_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_INSPECTOR_UPSTREAM_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_INSPECTOR_UPSTREAM_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_PROXY_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_UPSTREAM_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IRONIC_UPSTREAM_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PROVISIONING_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":5050,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:hostPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":6385,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:hostPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:privileged: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/certs/ironic"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/certs/ironic-inspector"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+              f:dnsPolicy: {}
+              f:hostNetwork: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext:
+                .: {}
+                f:runAsNonRoot: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+              f:volumes:
+                .: {}
+                k:{"name":"metal3-inspector-tls"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"metal3-ironic-tls"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"trusted-ca"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:name: {}
+                    f:optional: {}
+                  f:name: {}
+          f:updateStrategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxSurge: {}
+              f:maxUnavailable: {}
+            f:type: {}
+      manager: cluster-baremetal-operator
+      operation: Update
+      time: "2025-11-17T09:22:15Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:currentNumberScheduled: {}
+          f:desiredNumberScheduled: {}
+          f:numberAvailable: {}
+          f:numberReady: {}
+          f:observedGeneration: {}
+          f:updatedNumberScheduled: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:38:48Z"
+    name: ironic-proxy
+    namespace: openshift-machine-api
+    ownerReferences:
+    - apiVersion: metal3.io/v1alpha1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Provisioning
+      name: provisioning-configuration
+      uid: a8ca0356-f879-4a17-9b5b-d90847d2a49f
+    resourceVersion: "24432"
+    uid: d3e44b77-fa4d-43fc-b668-8d13961aca6d
+  spec:
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        baremetal.openshift.io/cluster-baremetal-operator: ironic-proxy
+        k8s-app: metal3
+    template:
+      metadata:
+        annotations:
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          baremetal.openshift.io/cluster-baremetal-operator: ironic-proxy
+          k8s-app: metal3
+      spec:
+        containers:
+        - command:
+          - /bin/runironic-proxy
+          env:
+          - name: IRONIC_PROXY_PORT
+            value: "6385"
+          - name: IRONIC_INSPECTOR_PROXY_PORT
+            value: "5050"
+          - name: IRONIC_UPSTREAM_IP
+            value: XXXXXXXXXXX
+          - name: IRONIC_UPSTREAM_PORT
+            value: "6388"
+          - name: IRONIC_INSPECTOR_UPSTREAM_IP
+            value: XXXXXXXXXXX
+          - name: IRONIC_INSPECTOR_UPSTREAM_PORT
+            value: "5051"
+          - name: PROVISIONING_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e88df5c8f365decc59f848649d23f02e678451d1a698af928b4a80340b998d73
+          imagePullPolicy: IfNotPresent
+          name: ironic-proxy
+          ports:
+          - containerPort: 6385
+            hostPort: 6385
+            name: ironic-proxy
+            protocol: TCP
+          - containerPort: 5050
+            hostPort: 5050
+            name: inspector-proxy
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 5m
+              memory: 50Mi
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /certs/ironic
+            name: metal3-ironic-tls
+            readOnly: true
+          - mountPath: /certs/ironic-inspector
+            name: metal3-inspector-tls
+            readOnly: true
+          - mountPath: /etc/pki/ca-trust/extracted/pem
+            name: trusted-ca
+            readOnly: true
+        dnsPolicy: ClusterFirstWithHostNet
+        hostNetwork: true
+        nodeSelector:
+          node-role.kubernetes.io/XXXXXX: ""
+        priorityClassName: system-node-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext:
+          runAsNonRoot: false
+        serviceAccount: cluster-baremetal-operator
+        serviceAccountName: cluster-baremetal-operator
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/XXXXXX
+        - key: CriticalAddonsOnly
+          operator: Exists
+        - effect: NoExecute
+          key: node.kubernetes.io/not-ready
+          operator: Exists
+          tolerationSeconds: 120
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+          tolerationSeconds: 120
+        volumes:
+        - name: metal3-ironic-tls
+          secret:
+            defaultMode: 420
+            secretName: metal3-ironic-tls
+        - name: metal3-inspector-tls
+          secret:
+            defaultMode: 420
+            secretName: metal3-ironic-tls
+        - configMap:
+            defaultMode: 420
+            items:
+            - key: ca-bundle.crt
+              path: tls-ca-bundle.pem
+            name: cbo-trusted-ca
+            optional: true
+          name: trusted-ca
+    updateStrategy:
+      rollingUpdate:
+        maxSurge: 0
+        maxUnavailable: 100%
+      type: RollingUpdate
+  status:
+    currentNumberScheduled: 3
+    desiredNumberScheduled: 3
+    numberAvailable: 3
+    numberMisscheduled: 0
+    numberReady: 3
+    observedGeneration: 1
+    updatedNumberScheduled: 3
+kind: DaemonSetList
+metadata:
+  resourceVersion: "32392"

@@ -1,0 +1,75 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    openshift.io/image.dockerRepositoryCheck: "2025-11-17T09:30:30Z"
+  creationTimestamp: "2025-11-17T09:28:14Z"
+  generation: 2
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"XXXXXX"}:
+            .: {}
+            f:annotations: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+              f:scheduled: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:28:14Z"
+  name: must-gather
+  namespace: openshift
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "17044"
+  uid: ef7688d0-7917-4624-be24-dd5807a9e4aa
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f00c7f54f908ad004fe872d63cdf89c65a37aef0718a124fc3497bb5d990de42
+    generation: 2
+    importPolicy:
+      importMode: PreserveOriginal
+      scheduled: true
+    name: XXXXXX
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: ""
+  tags:
+  - items:
+    - created: "2025-11-17T09:30:30Z"
+      dockerImageReference: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f00c7f54f908ad004fe872d63cdf89c65a37aef0718a124fc3497bb5d990de42
+      generation: 2
+      image: sha256:f00c7f54f908ad004fe872d63cdf89c65a37aef0718a124fc3497bb5d990de42
+    tag: XXXXXX

@@ -1,0 +1,655 @@
+2025-11-17T09:21:44.230366330Z W1117 09:21:44.229490       1 client_config.go:618] Neither --kubeconfig nor --XXXXXX was specified.  Using the inClusterConfig.  This might not work.
+2025-11-17T09:21:44.252767175Z I1117 09:21:44.252720       1 dynamic_serving_content.go:113] "Loaded a new cert/key pair" name="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key"
+2025-11-17T09:21:44.258359430Z I1117 09:21:44.258280       1 operator.go:563] Triggering an update due to a change in ClusterOperator.config.openshift.io - ingress
+2025-11-17T09:21:44.259613558Z I1117 09:21:44.259575       1 operator.go:563] Triggering an update due to a change in *v1.APIServer - cluster
+2025-11-17T09:21:44.261760886Z I1117 09:21:44.261730       1 operator.go:563] Triggering an update due to a change in *v1.Infrastructure - cluster
+2025-11-17T09:21:44.262678530Z I1117 09:21:44.262653       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:21:44.353637812Z I1117 09:21:44.353401       1 operator.go:514] ConfigMap to configure stack does not exist. Reconciling with default config every 5m0s.
+2025-11-17T09:21:44.353878174Z I1117 09:21:44.353859       1 base_controller.go:67] Waiting for caches to sync for OpenShiftMonitoringTelemeterClientCertRequester
+2025-11-17T09:21:44.353878174Z I1117 09:21:44.353873       1 base_controller.go:73] Caches are synced for OpenShiftMonitoringTelemeterClientCertRequester 
+2025-11-17T09:21:44.353891585Z I1117 09:21:44.353879       1 base_controller.go:110] Starting #1 XXXXXX of OpenShiftMonitoringTelemeterClientCertRequester controller ...
+2025-11-17T09:21:44.353919249Z I1117 09:21:44.353904       1 base_controller.go:67] Waiting for caches to sync for OpenShiftMonitoringClientCertRequester
+2025-11-17T09:21:44.353919249Z I1117 09:21:44.353911       1 base_controller.go:73] Caches are synced for OpenShiftMonitoringClientCertRequester 
+2025-11-17T09:21:44.353927971Z I1117 09:21:44.353914       1 base_controller.go:110] Starting #1 XXXXXX of OpenShiftMonitoringClientCertRequester controller ...
+2025-11-17T09:21:44.353950266Z I1117 09:21:44.353938       1 rule_controller.go:115] Starting alerting rules controller
+2025-11-17T09:21:44.353958303Z I1117 09:21:44.353950       1 shared_informer.go:311] Waiting for caches to sync for AlertingRule controller
+2025-11-17T09:21:44.353967939Z I1117 09:21:44.353962       1 relabel_controller.go:118] Starting alert relabel config controller
+2025-11-17T09:21:44.353978955Z I1117 09:21:44.353970       1 shared_informer.go:311] Waiting for caches to sync for AlertRelabelConfig controller
+2025-11-17T09:21:44.356523543Z W1117 09:21:44.356435       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:21:44.356985355Z I1117 09:21:44.356932       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'NoValidCertificateFound' No valid client certificate for OpenShiftMonitoringTelemeterClientCertRequester is found: unable to parse certificate: data does not contain any valid RSA or ECDSA certificates
+2025-11-17T09:21:44.357209208Z I1117 09:21:44.357180       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'NoValidCertificateFound' No valid client certificate for OpenShiftMonitoringClientCertRequester is found: unable to parse certificate: data does not contain any valid RSA or ECDSA certificates
+2025-11-17T09:21:44.360824676Z I1117 09:21:44.360483       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'CSRCreated' A csr "system:openshift:openshift-monitoring-ctcbx" is created for OpenShiftMonitoringTelemeterClientCertRequester
+2025-11-17T09:21:44.360887619Z I1117 09:21:44.360844       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'CSRCreated' A csr "system:openshift:openshift-monitoring-sf9wr" is created for OpenShiftMonitoringClientCertRequester
+2025-11-17T09:21:44.373155573Z I1117 09:21:44.373107       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:21:44.380667018Z I1117 09:21:44.380625       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:21:44.380739320Z I1117 09:21:44.380728       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:21:44.381548411Z I1117 09:21:44.381508       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:21:44.389314869Z I1117 09:21:44.389228       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/prometheus-operator -n openshift-monitoring because it was missing
+2025-11-17T09:21:44.393028564Z I1117 09:21:44.392983       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:21:44.396663597Z I1117 09:21:44.396600       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClientCertificateCreated' A new client certificate for OpenShiftMonitoringTelemeterClientCertRequester is available
+2025-11-17T09:21:44.397207521Z I1117 09:21:44.397177       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/federate-client-certs
+2025-11-17T09:21:44.397207521Z I1117 09:21:44.397195       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-client-certs
+2025-11-17T09:21:44.397386786Z I1117 09:21:44.397350       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ClientCertificateCreated' A new client certificate for OpenShiftMonitoringClientCertRequester is available
+2025-11-17T09:21:44.421157557Z I1117 09:21:44.421108       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/prometheus-operator-admission-webhook -n openshift-monitoring because it was missing
+2025-11-17T09:21:44.454514288Z I1117 09:21:44.454309       1 shared_informer.go:318] Caches are synced for AlertRelabelConfig controller
+2025-11-17T09:21:44.454726494Z I1117 09:21:44.454404       1 shared_informer.go:318] Caches are synced for AlertingRule controller
+2025-11-17T09:21:44.476334526Z I1117 09:21:44.476265       1 requestheader_controller.go:244] Loaded a new request header values for RequestHeaderAuthRequestController
+2025-11-17T09:21:44.476614503Z I1117 09:21:44.476591       1 maxinflight.go:140] "Initialized nonMutatingChan" len=400
+2025-11-17T09:21:44.476614503Z I1117 09:21:44.476606       1 maxinflight.go:146] "Initialized mutatingChan" len=200
+2025-11-17T09:21:44.476628416Z I1117 09:21:44.476623       1 maxinflight.go:117] "Set denominator for readonly requests" limit=400
+2025-11-17T09:21:44.476634228Z I1117 09:21:44.476628       1 maxinflight.go:121] "Set denominator for mutating requests" limit=200
+2025-11-17T09:21:44.478547123Z I1117 09:21:44.478513       1 secure_serving.go:57] Forcing use of http/1.1 only
+2025-11-17T09:21:44.478547123Z W1117 09:21:44.478530       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' detected.
+2025-11-17T09:21:44.478547123Z W1117 09:21:44.478536       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' detected.
+2025-11-17T09:21:44.478547123Z I1117 09:21:44.478538       1 genericapiserver.go:524] MuxAndDiscoveryComplete has all endpoints registered and discovery information is complete
+2025-11-17T09:21:44.482342971Z I1117 09:21:44.482314       1 requestheader_controller.go:169] Starting RequestHeaderAuthRequestController
+2025-11-17T09:21:44.482342971Z I1117 09:21:44.482323       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2025-11-17T09:21:44.482342971Z I1117 09:21:44.482332       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+2025-11-17T09:21:44.482362418Z I1117 09:21:44.482346       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2025-11-17T09:21:44.482362418Z I1117 09:21:44.482335       1 shared_informer.go:311] Waiting for caches to sync for RequestHeaderAuthRequestController
+2025-11-17T09:21:44.482438868Z I1117 09:21:44.482418       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key"
+2025-11-17T09:21:44.482630704Z I1117 09:21:44.482337       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2025-11-17T09:21:44.483030952Z I1117 09:21:44.483009       1 tlsconfig.go:200] "Loaded serving cert" certName="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key" certDetail="\"*.cluster-monitoring-operator.openshift-monitoring.svc\" [serving] validServingFor=[*.cluster-monitoring-operator.openshift-monitoring.svc,*.cluster-monitoring-operator.openshift-monitoring.svc.cluster.local,cluster-monitoring-operator.openshift-monitoring.svc,cluster-monitoring-operator.openshift-monitoring.svc.cluster.local] issuer=\"openshift-service-serving-signer@1763371220\" (2025-11-17 09:20:42 +0000 UTC to 2027-11-17 09:20:43 +0000 UTC (now=2025-11-17 09:21:44.482962416 +0000 UTC))"
+2025-11-17T09:21:44.483539407Z I1117 09:21:44.483520       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1763371304\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1763371304\" (2025-11-17 08:21:44 +0000 UTC to 2026-11-17 08:21:44 +0000 UTC (now=2025-11-17 09:21:44.483494766 +0000 UTC))"
+2025-11-17T09:21:44.483560688Z I1117 09:21:44.483549       1 secure_serving.go:210] Serving securely on [::]:8443
+2025-11-17T09:21:44.483591297Z I1117 09:21:44.483582       1 genericapiserver.go:672] [graceful-termination] waiting for shutdown to be initiated
+2025-11-17T09:21:44.483606850Z I1117 09:21:44.483599       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+2025-11-17T09:21:44.582672115Z I1117 09:21:44.582609       1 shared_informer.go:318] Caches are synced for RequestHeaderAuthRequestController
+2025-11-17T09:21:44.582672115Z I1117 09:21:44.582648       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2025-11-17T09:21:44.582768951Z I1117 09:21:44.582738       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2025-11-17T09:21:44.582959787Z I1117 09:21:44.582931       1 tlsconfig.go:178] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"aggregator-signer\" [] issuer=\"<self>\" (2025-11-17 09:01:28 +0000 UTC to 2025-11-18 09:01:28 +0000 UTC (now=2025-11-17 09:21:44.582894534 +0000 UTC))"
+2025-11-17T09:21:44.583434960Z I1117 09:21:44.583413       1 tlsconfig.go:200] "Loaded serving cert" certName="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key" certDetail="\"*.cluster-monitoring-operator.openshift-monitoring.svc\" [serving] validServingFor=[*.cluster-monitoring-operator.openshift-monitoring.svc,*.cluster-monitoring-operator.openshift-monitoring.svc.cluster.local,cluster-monitoring-operator.openshift-monitoring.svc,cluster-monitoring-operator.openshift-monitoring.svc.cluster.local] issuer=\"openshift-service-serving-signer@1763371220\" (2025-11-17 09:20:42 +0000 UTC to 2027-11-17 09:20:43 +0000 UTC (now=2025-11-17 09:21:44.583380561 +0000 UTC))"
+2025-11-17T09:21:44.583895263Z I1117 09:21:44.583871       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1763371304\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1763371304\" (2025-11-17 08:21:44 +0000 UTC to 2026-11-17 08:21:44 +0000 UTC (now=2025-11-17 09:21:44.583835043 +0000 UTC))"
+2025-11-17T09:21:44.584186757Z I1117 09:21:44.584157       1 tlsconfig.go:178] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"admin-kubeconfig-signer\" [] issuer=\"<self>\" (2025-11-17 08:23:44 +0000 UTC to 2035-11-15 08:23:44 +0000 UTC (now=2025-11-17 09:21:44.58409969 +0000 UTC))"
+2025-11-17T09:21:44.584244898Z I1117 09:21:44.584225       1 tlsconfig.go:178] "Loaded client CA" index=1 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubelet-signer\" [] issuer=\"<self>\" (2025-11-17 09:01:29 +0000 UTC to 2025-11-18 09:01:29 +0000 UTC (now=2025-11-17 09:21:44.584194948 +0000 UTC))"
+2025-11-17T09:21:44.584302375Z I1117 09:21:44.584275       1 tlsconfig.go:178] "Loaded client CA" index=2 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-control-plane-signer\" [] issuer=\"<self>\" (2025-11-17 09:01:29 +0000 UTC to 2026-11-17 09:01:29 +0000 UTC (now=2025-11-17 09:21:44.584247317 +0000 UTC))"
+2025-11-17T09:21:44.584384197Z I1117 09:21:44.584362       1 tlsconfig.go:178] "Loaded client CA" index=3 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-apiserver-to-kubelet-signer\" [] issuer=\"<self>\" (2025-11-17 09:01:29 +0000 UTC to 2026-11-17 09:01:29 +0000 UTC (now=2025-11-17 09:21:44.584331993 +0000 UTC))"
+2025-11-17T09:21:44.584430303Z I1117 09:21:44.584415       1 tlsconfig.go:178] "Loaded client CA" index=4 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubelet-bootstrap-kubeconfig-signer\" [] issuer=\"<self>\" (2025-11-17 09:01:27 +0000 UTC to 2035-11-15 09:01:27 +0000 UTC (now=2025-11-17 09:21:44.584385062 +0000 UTC))"
+2025-11-17T09:21:44.584486414Z I1117 09:21:44.584471       1 tlsconfig.go:178] "Loaded client CA" index=5 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"aggregator-signer\" [] issuer=\"<self>\" (2025-11-17 09:01:28 +0000 UTC to 2025-11-18 09:01:28 +0000 UTC (now=2025-11-17 09:21:44.58443471 +0000 UTC))"
+2025-11-17T09:21:44.585065213Z I1117 09:21:44.585044       1 tlsconfig.go:200] "Loaded serving cert" certName="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key" certDetail="\"*.cluster-monitoring-operator.openshift-monitoring.svc\" [serving] validServingFor=[*.cluster-monitoring-operator.openshift-monitoring.svc,*.cluster-monitoring-operator.openshift-monitoring.svc.cluster.local,cluster-monitoring-operator.openshift-monitoring.svc,cluster-monitoring-operator.openshift-monitoring.svc.cluster.local] issuer=\"openshift-service-serving-signer@1763371220\" (2025-11-17 09:20:42 +0000 UTC to 2027-11-17 09:20:43 +0000 UTC (now=2025-11-17 09:21:44.585023568 +0000 UTC))"
+2025-11-17T09:21:44.585455158Z I1117 09:21:44.585437       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1763371304\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1763371304\" (2025-11-17 08:21:44 +0000 UTC to 2026-11-17 08:21:44 +0000 UTC (now=2025-11-17 09:21:44.585420272 +0000 UTC))"
+2025-11-17T09:21:52.985279849Z I1117 09:21:52.983967       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:22:07.986514183Z I1117 09:22:07.985811       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:22:07.999295035Z I1117 09:22:07.999232       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:22:22.988368794Z I1117 09:22:22.985661       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:22:37.986620537Z I1117 09:22:37.984963       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:22:52.986708564Z I1117 09:22:52.986638       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:23:45.248395496Z I1117 09:23:45.247006       1 operator.go:593] Triggering an update due to ConfigMap or Secret: kube-system/extension-apiserver-authentication
+2025-11-17T09:23:45.248395496Z I1117 09:23:45.248104       1 tlsconfig.go:178] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"admin-kubeconfig-signer\" [] issuer=\"<self>\" (2025-11-17 08:23:44 +0000 UTC to 2035-11-15 08:23:44 +0000 UTC (now=2025-11-17 09:23:45.248052206 +0000 UTC))"
+2025-11-17T09:23:45.248395496Z I1117 09:23:45.248142       1 tlsconfig.go:178] "Loaded client CA" index=1 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubelet-signer\" [] issuer=\"<self>\" (2025-11-17 09:01:29 +0000 UTC to 2025-11-18 09:01:29 +0000 UTC (now=2025-11-17 09:23:45.248120634 +0000 UTC))"
+2025-11-17T09:23:45.248395496Z I1117 09:23:45.248165       1 tlsconfig.go:178] "Loaded client CA" index=2 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-control-plane-signer\" [] issuer=\"<self>\" (2025-11-17 09:01:29 +0000 UTC to 2026-11-17 09:01:29 +0000 UTC (now=2025-11-17 09:23:45.248151509 +0000 UTC))"
+2025-11-17T09:23:45.248395496Z I1117 09:23:45.248183       1 tlsconfig.go:178] "Loaded client CA" index=3 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-apiserver-to-kubelet-signer\" [] issuer=\"<self>\" (2025-11-17 09:01:29 +0000 UTC to 2026-11-17 09:01:29 +0000 UTC (now=2025-11-17 09:23:45.248172059 +0000 UTC))"
+2025-11-17T09:23:45.248395496Z I1117 09:23:45.248201       1 tlsconfig.go:178] "Loaded client CA" index=4 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubelet-bootstrap-kubeconfig-signer\" [] issuer=\"<self>\" (2025-11-17 09:01:27 +0000 UTC to 2035-11-15 09:01:27 +0000 UTC (now=2025-11-17 09:23:45.248189522 +0000 UTC))"
+2025-11-17T09:23:45.248395496Z I1117 09:23:45.248218       1 tlsconfig.go:178] "Loaded client CA" index=5 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-csr-signer_@1763371225\" [] issuer=\"kubelet-signer\" (2025-11-17 09:20:25 +0000 UTC to 2025-11-18 09:01:29 +0000 UTC (now=2025-11-17 09:23:45.248207152 +0000 UTC))"
+2025-11-17T09:23:45.248395496Z I1117 09:23:45.248236       1 tlsconfig.go:178] "Loaded client CA" index=6 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"openshift-kube-apiserver-operator_node-system-admin-signer@1763371229\" [] issuer=\"<self>\" (2025-11-17 09:20:28 +0000 UTC to 2026-11-17 09:20:29 +0000 UTC (now=2025-11-17 09:23:45.248223755 +0000 UTC))"
+2025-11-17T09:23:45.248395496Z I1117 09:23:45.248254       1 tlsconfig.go:178] "Loaded client CA" index=7 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"aggregator-signer\" [] issuer=\"<self>\" (2025-11-17 09:01:28 +0000 UTC to 2025-11-18 09:01:28 +0000 UTC (now=2025-11-17 09:23:45.24824335 +0000 UTC))"
+2025-11-17T09:23:45.248825604Z I1117 09:23:45.248785       1 tlsconfig.go:200] "Loaded serving cert" certName="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key" certDetail="\"*.cluster-monitoring-operator.openshift-monitoring.svc\" [serving] validServingFor=[*.cluster-monitoring-operator.openshift-monitoring.svc,*.cluster-monitoring-operator.openshift-monitoring.svc.cluster.local,cluster-monitoring-operator.openshift-monitoring.svc,cluster-monitoring-operator.openshift-monitoring.svc.cluster.local] issuer=\"openshift-service-serving-signer@1763371220\" (2025-11-17 09:20:42 +0000 UTC to 2027-11-17 09:20:43 +0000 UTC (now=2025-11-17 09:23:45.24876265 +0000 UTC))"
+2025-11-17T09:23:45.249218154Z I1117 09:23:45.249200       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1763371304\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1763371304\" (2025-11-17 08:21:44 +0000 UTC to 2026-11-17 08:21:44 +0000 UTC (now=2025-11-17 09:23:45.249181048 +0000 UTC))"
+2025-11-17T09:24:22.988367123Z I1117 09:24:22.986661       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:24:22.995045084Z I1117 09:24:22.994991       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:24:50.365322793Z I1117 09:24:50.365244       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:26:44.354620548Z I1117 09:26:44.354561       1 operator.go:525] ConfigMap to configure stack does not exist. Reconciling with default config every 5m0s.
+2025-11-17T09:26:44.455348377Z W1117 09:26:44.455279       1 tasks.go:72] task 2 of 2: Updating Prometheus Operator failed: reconciling Prometheus Operator Admission Webhook Deployment failed: creating Deployment object failed: waiting for DeploymentRollout of openshift-monitoring/prometheus-operator-admission-webhook: context deadline exceeded
+2025-11-17T09:26:44.455464916Z I1117 09:26:44.455454       1 operator.go:768] 1 reconciliation(s) failed, 2 more attempt(s) will be made before reporting failures.
+2025-11-17T09:26:44.455481796Z E1117 09:26:44.455471       1 operator.go:621] Syncing "openshift-monitoring/cluster-monitoring-config" failed
+2025-11-17T09:26:44.455505148Z E1117 09:26:44.455494       1 operator.go:622] sync "openshift-monitoring/cluster-monitoring-config" failed: cluster monitoring update failed (reason: UpdatingPrometheusOperatorFailed)
+2025-11-17T09:27:12.983371982Z W1117 09:27:12.979884       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:27:13.158505228Z I1117 09:27:13.155868       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:27:13.172059030Z I1117 09:27:13.170414       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:27:13.172059030Z I1117 09:27:13.170447       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:27:13.172059030Z I1117 09:27:13.170939       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:27:13.203616354Z I1117 09:27:13.203505       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:27:13.976439260Z I1117 09:27:13.976330       1 operator.go:563] Triggering an update due to a change in *v1.Infrastructure - cluster
+2025-11-17T09:27:13.991561837Z I1117 09:27:13.990985       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:27:14.000349883Z I1117 09:27:13.999703       1 operator.go:563] Triggering an update due to a change in *v1.APIServer - cluster
+2025-11-17T09:27:15.212779091Z I1117 09:27:15.212709       1 operator.go:593] Triggering an update due to ConfigMap or Secret: kube-system/extension-apiserver-authentication
+2025-11-17T09:27:15.370102650Z I1117 09:27:15.369500       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/federate-client-certs
+2025-11-17T09:27:15.370102650Z I1117 09:27:15.369524       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-client-certs
+2025-11-17T09:27:15.486696593Z I1117 09:27:15.486480       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-config-managed/kubelet-serving-ca
+2025-11-17T09:27:17.612866177Z I1117 09:27:17.612688       1 operator.go:563] Triggering an update due to a change in *v1.Infrastructure - cluster
+2025-11-17T09:27:17.613231764Z I1117 09:27:17.613212       1 operator.go:563] Triggering an update due to a change in *v1.APIServer - cluster
+2025-11-17T09:27:17.616017980Z I1117 09:27:17.615895       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:27:19.438707432Z I1117 09:27:19.438627       1 operator.go:563] Triggering an update due to a change in Console.config.openshift.io - cluster
+2025-11-17T09:27:56.669661924Z I1117 09:27:56.669069       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:27:56.681840123Z I1117 09:27:56.681797       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:27:56.696968711Z I1117 09:27:56.696896       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:27:56.716279535Z I1117 09:27:56.716240       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:27:56.729965956Z I1117 09:27:56.729937       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:27:56.915998040Z I1117 09:27:56.915945       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:27:56.924123769Z I1117 09:27:56.924101       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:28:11.668760111Z I1117 09:28:11.668696       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:28:11.676163953Z I1117 09:28:11.676098       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:28:26.670799166Z I1117 09:28:26.670734       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:30:11.669766765Z I1117 09:30:11.669655       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:30:43.410734443Z I1117 09:30:43.410254       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:31:44.354278170Z I1117 09:31:44.354219       1 operator.go:525] ConfigMap to configure stack does not exist. Reconciling with default config every 5m0s.
+2025-11-17T09:32:13.282396159Z W1117 09:32:13.282204       1 tasks.go:72] task 2 of 2: Updating Prometheus Operator failed: reconciling Prometheus Operator Admission Webhook Deployment failed: updating Deployment object failed: waiting for DeploymentRollout of openshift-monitoring/prometheus-operator-admission-webhook: context deadline exceeded
+2025-11-17T09:32:13.282442145Z I1117 09:32:13.282428       1 operator.go:768] 2 reconciliation(s) failed, 1 more attempt(s) will be made before reporting failures.
+2025-11-17T09:32:13.282464376Z E1117 09:32:13.282447       1 operator.go:621] Syncing "openshift-monitoring/cluster-monitoring-config" failed
+2025-11-17T09:32:13.282475853Z E1117 09:32:13.282464       1 operator.go:622] sync "openshift-monitoring/cluster-monitoring-config" failed: cluster monitoring update failed (reason: UpdatingPrometheusOperatorFailed)
+2025-11-17T09:32:44.358464062Z E1117 09:32:44.358389       1 base_controller.go:272] OpenShiftMonitoringClientCertRequester reconciliation failed: unable to get secret "openshift-monitoring/metrics-client-certs": the server was unable to return a response in the time allotted, but may still be processing the request (get secrets metrics-client-certs)
+2025-11-17T09:32:44.358464062Z E1117 09:32:44.358435       1 base_controller.go:272] OpenShiftMonitoringTelemeterClientCertRequester reconciliation failed: unable to get secret "openshift-monitoring/federate-client-certs": the server was unable to return a response in the time allotted, but may still be processing the request (get secrets federate-client-certs)
+2025-11-17T09:32:50.486338200Z I1117 09:32:50.486226       1 operator.go:563] Triggering an update due to a change in *v1.APIServer - cluster
+2025-11-17T09:32:50.486338200Z I1117 09:32:50.486259       1 operator.go:563] Triggering an update due to a change in *v1.Infrastructure - cluster
+2025-11-17T09:32:50.489816014Z I1117 09:32:50.486623       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:32:50.720030323Z W1117 09:32:50.719975       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:32:52.081341389Z W1117 09:32:52.079908       1 reflector.go:533] github.com/openshift/cluster-monitoring-operator/pkg/alert/relabel_controller.go:123: failed to list *v1.Secret: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-monitoring/secrets?fieldSelector=metadata.name%3Dalert-relabel-configs&resourceVersion=18921": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:52.081341389Z E1117 09:32:52.079971       1 reflector.go:148] github.com/openshift/cluster-monitoring-operator/pkg/alert/relabel_controller.go:123: Failed to watch *v1.Secret: failed to list *v1.Secret: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-monitoring/secrets?fieldSelector=metadata.name%3Dalert-relabel-configs&resourceVersion=18921": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:52.086676810Z W1117 09:32:52.086485       1 reflector.go:533] github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:482: failed to list *v1.ConfigMap: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-monitoring/configmaps?resourceVersion=18961": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:52.086676810Z E1117 09:32:52.086528       1 reflector.go:148] github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:482: Failed to watch *v1.ConfigMap: failed to list *v1.ConfigMap: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-monitoring/configmaps?resourceVersion=18961": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:52.166447194Z W1117 09:32:52.166238       1 reflector.go:533] github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:485: failed to list *v1.ConfigMap: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-config/configmaps?resourceVersion=18961": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:52.166447194Z E1117 09:32:52.166283       1 reflector.go:148] github.com/openshift/cluster-monitoring-operator/pkg/operator/operator.go:485: Failed to watch *v1.ConfigMap: failed to list *v1.ConfigMap: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-config/configmaps?resourceVersion=18961": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:52.205599552Z W1117 09:32:52.204781       1 reflector.go:533] k8s.io/apiserver/pkg/server/dynamiccertificates/configmap_cafile_content.go:206: failed to list *v1.ConfigMap: Get "https://172.30.0.1:443/api/v1/namespaces/kube-system/configmaps?fieldSelector=metadata.name%3Dextension-apiserver-authentication&resourceVersion=18961": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:52.205599552Z E1117 09:32:52.204825       1 reflector.go:148] k8s.io/apiserver/pkg/server/dynamiccertificates/configmap_cafile_content.go:206: Failed to watch *v1.ConfigMap: failed to list *v1.ConfigMap: Get "https://172.30.0.1:443/api/v1/namespaces/kube-system/configmaps?fieldSelector=metadata.name%3Dextension-apiserver-authentication&resourceVersion=18961": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:53.880234588Z W1117 09:32:53.880100       1 reflector.go:533] github.com/openshift/cluster-monitoring-operator/pkg/alert/relabel_controller.go:123: failed to list *v1.Secret: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-monitoring/secrets?fieldSelector=metadata.name%3Dalert-relabel-configs&resourceVersion=18921": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:53.880234588Z E1117 09:32:53.880207       1 reflector.go:148] github.com/openshift/cluster-monitoring-operator/pkg/alert/relabel_controller.go:123: Failed to watch *v1.Secret: failed to list *v1.Secret: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-monitoring/secrets?fieldSelector=metadata.name%3Dalert-relabel-configs&resourceVersion=18921": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:56.273742233Z I1117 09:32:56.273676       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:32:56.282855759Z I1117 09:32:56.282803       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:32:56.282855759Z I1117 09:32:56.282831       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:32:56.282926031Z I1117 09:32:56.282897       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:32:56.836106497Z I1117 09:32:56.833952       1 operator.go:563] Triggering an update due to a change in Console.config.openshift.io - cluster
+2025-11-17T09:32:56.839805906Z I1117 09:32:56.839777       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/federate-client-certs
+2025-11-17T09:32:56.839845039Z I1117 09:32:56.839838       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-client-certs
+2025-11-17T09:32:57.068353655Z I1117 09:32:57.066592       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-config-managed/kubelet-serving-ca
+2025-11-17T09:32:57.086093969Z I1117 09:32:57.086050       1 operator.go:593] Triggering an update due to ConfigMap or Secret: kube-system/extension-apiserver-authentication
+2025-11-17T09:33:00.464742643Z I1117 09:33:00.464570       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:33:00.487225259Z I1117 09:33:00.487178       1 trace.go:236] Trace[1739555384]: "Reflector ListAndWatch" name:github.com/openshift/cluster-monitoring-operator/pkg/alert/rule_controller.go:119 (17-Nov-2025 09:32:50.364) (total time: 10122ms):
+2025-11-17T09:33:00.487225259Z Trace[1739555384]: ---"Objects listed" error:<nil> 10122ms (09:33:00.487)
+2025-11-17T09:33:00.487225259Z Trace[1739555384]: [10.122898742s] [10.122898742s] END
+2025-11-17T09:33:00.494684749Z I1117 09:33:00.493568       1 operator.go:563] Triggering an update due to a change in *v1.Infrastructure - cluster
+2025-11-17T09:33:00.494684749Z I1117 09:33:00.493614       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:33:00.494754034Z I1117 09:33:00.494735       1 operator.go:563] Triggering an update due to a change in *v1.APIServer - cluster
+2025-11-17T09:36:01.634118607Z I1117 09:36:01.633678       1 operator.go:563] Triggering an update due to a change in *v1.Infrastructure - cluster
+2025-11-17T09:36:01.682349703Z I1117 09:36:01.682281       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:36:01.688478632Z I1117 09:36:01.686794       1 operator.go:563] Triggering an update due to a change in *v1.APIServer - cluster
+2025-11-17T09:36:02.609759351Z I1117 09:36:02.608002       1 operator.go:563] Triggering an update due to a change in Console.config.openshift.io - cluster
+2025-11-17T09:36:02.959198632Z I1117 09:36:02.955802       1 operator.go:593] Triggering an update due to ConfigMap or Secret: kube-system/extension-apiserver-authentication
+2025-11-17T09:36:03.328346982Z I1117 09:36:03.322381       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/federate-client-certs
+2025-11-17T09:36:03.328346982Z I1117 09:36:03.322433       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-client-certs
+2025-11-17T09:36:03.542399175Z I1117 09:36:03.538896       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-config-managed/kubelet-serving-ca
+2025-11-17T09:36:42.786131867Z I1117 09:36:42.785608       1 operator.go:563] Triggering an update due to a change in *v1.Infrastructure - cluster
+2025-11-17T09:36:42.809157205Z I1117 09:36:42.807191       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:36:42.968046471Z I1117 09:36:42.967994       1 operator.go:563] Triggering an update due to a change in *v1.APIServer - cluster
+2025-11-17T09:36:44.260308408Z I1117 09:36:44.260243       1 operator.go:563] Triggering an update due to a change in *v1.Infrastructure - cluster
+2025-11-17T09:36:44.261475431Z I1117 09:36:44.261409       1 operator.go:563] Triggering an update due to a change in *v1.APIServer - cluster
+2025-11-17T09:36:44.262428794Z I1117 09:36:44.262404       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:36:44.354496791Z I1117 09:36:44.354436       1 operator.go:525] ConfigMap to configure stack does not exist. Reconciling with default config every 5m0s.
+2025-11-17T09:36:44.437729328Z I1117 09:36:44.436411       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-config-managed/kubelet-serving-ca
+2025-11-17T09:36:44.660358409Z I1117 09:36:44.660222       1 operator.go:563] Triggering an update due to a change in Console.config.openshift.io - cluster
+2025-11-17T09:36:45.269837654Z I1117 09:36:45.267599       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/federate-client-certs
+2025-11-17T09:36:45.269837654Z I1117 09:36:45.267618       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-client-certs
+2025-11-17T09:36:45.824250969Z I1117 09:36:45.824202       1 operator.go:593] Triggering an update due to ConfigMap or Secret: kube-system/extension-apiserver-authentication
+2025-11-17T09:38:00.532045081Z I1117 09:38:00.531101       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:38:00.575158609Z I1117 09:38:00.575088       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:38:00.589079037Z I1117 09:38:00.588616       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:38:00.611880542Z I1117 09:38:00.610244       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:38:00.620718282Z I1117 09:38:00.620664       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:38:00.625487160Z W1117 09:38:00.625429       1 tasks.go:72] task 2 of 2: Updating Prometheus Operator failed: reconciling Prometheus Operator Admission Webhook Deployment failed: updating Deployment object failed: waiting for DeploymentRollout of openshift-monitoring/prometheus-operator-admission-webhook: context deadline exceeded
+2025-11-17T09:38:00.625638562Z I1117 09:38:00.625620       1 operator.go:771] 3 reconciliations failed in a row, the threshold of 3 attempts has been reached, failures will be reported.
+2025-11-17T09:38:00.643933388Z E1117 09:38:00.643553       1 operator.go:621] Syncing "openshift-monitoring/cluster-monitoring-config" failed
+2025-11-17T09:38:00.643933388Z E1117 09:38:00.643593       1 operator.go:622] sync "openshift-monitoring/cluster-monitoring-config" failed: cluster monitoring update failed (reason: UpdatingPrometheusOperatorFailed)
+2025-11-17T09:38:00.651476480Z W1117 09:38:00.651428       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:38:00.674761102Z I1117 09:38:00.673495       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:38:00.674761102Z I1117 09:38:00.673729       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:38:00.677759326Z I1117 09:38:00.677723       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:38:00.677759326Z I1117 09:38:00.677752       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:38:00.677814760Z I1117 09:38:00.677791       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:38:00.687193794Z I1117 09:38:00.686260       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:38:00.695985062Z I1117 09:38:00.695934       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:38:15.522142999Z I1117 09:38:15.521860       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:38:15.533209047Z I1117 09:38:15.533155       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:38:30.523002654Z I1117 09:38:30.522170       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:38:36.764406427Z I1117 09:38:36.764316       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ValidatingWebhookConfigurationCreated' Created ValidatingWebhookConfiguration.admissionregistration.k8s.io/prometheusrules.openshift.io because it was missing
+2025-11-17T09:38:36.772937016Z I1117 09:38:36.772868       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ValidatingWebhookConfigurationCreated' Created ValidatingWebhookConfiguration.admissionregistration.k8s.io/alertmanagerconfigs.openshift.io because it was missing
+2025-11-17T09:38:37.600754071Z I1117 09:38:37.600705       1 operator.go:563] Triggering an update due to a change in *v1.Console - cluster
+2025-11-17T09:38:50.871581587Z I1117 09:38:50.871518       1 tasks.go:75] ran task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:38:50.871581587Z I1117 09:38:50.871549       1 tasks.go:48] processing task group 2 of 3
+2025-11-17T09:38:50.871622735Z I1117 09:38:50.871576       1 tasks.go:69] running task 15 of 15: Updating Console Plugin components
+2025-11-17T09:38:50.871622735Z I1117 09:38:50.871602       1 tasks.go:69] running task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:38:50.871631170Z I1117 09:38:50.871618       1 tasks.go:69] running task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:38:50.871666300Z I1117 09:38:50.871645       1 tasks.go:69] running task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:38:50.871666300Z I1117 09:38:50.871645       1 tasks.go:69] running task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:38:50.871675158Z I1117 09:38:50.871664       1 tasks.go:69] running task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:38:50.871675158Z I1117 09:38:50.871665       1 tasks.go:69] running task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:38:50.871682248Z I1117 09:38:50.871674       1 tasks.go:69] running task 5 of 15: Updating Alertmanager
+2025-11-17T09:38:50.871697867Z I1117 09:38:50.871681       1 tasks.go:69] running task 7 of 15: Updating node-exporter
+2025-11-17T09:38:50.871697867Z I1117 09:38:50.871691       1 tasks.go:69] running task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:38:50.871705625Z I1117 09:38:50.871700       1 tasks.go:69] running task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:38:50.871714577Z I1117 09:38:50.871710       1 tasks.go:69] running task 12 of 15: Updating Thanos Querier
+2025-11-17T09:38:50.871788451Z I1117 09:38:50.871757       1 tasks.go:69] running task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:38:50.871788451Z I1117 09:38:50.871776       1 tasks.go:69] running task 14 of 15: Updating Control Plane components
+2025-11-17T09:38:50.871788451Z I1117 09:38:50.871785       1 tasks.go:69] running task 11 of 15: Updating Telemeter client
+2025-11-17T09:38:50.882934447Z I1117 09:38:50.882861       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/kube-state-metrics -n openshift-monitoring because it was missing
+2025-11-17T09:38:50.885104871Z I1117 09:38:50.884911       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/openshift-state-metrics -n openshift-monitoring because it was missing
+2025-11-17T09:38:50.903340145Z I1117 09:38:50.902465       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/telemeter-client -n openshift-monitoring because it was missing
+2025-11-17T09:38:50.912453959Z I1117 09:38:50.912388       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/node-exporter -n openshift-monitoring because it was missing
+2025-11-17T09:38:50.982591556Z I1117 09:38:50.982543       1 tasks.go:75] ran task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:38:50.990438790Z I1117 09:38:50.990384       1 tasks.go:75] ran task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:38:51.000978066Z I1117 09:38:51.000916       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/monitoring-plugin -n openshift-monitoring because it was missing
+2025-11-17T09:38:51.006999697Z I1117 09:38:51.006956       1 tasks.go:75] ran task 14 of 15: Updating Control Plane components
+2025-11-17T09:38:51.374760834Z I1117 09:38:51.374701       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/telemeter-trusted-ca-bundle
+2025-11-17T09:38:51.608335833Z I1117 09:38:51.607744       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/prometheus-adapter -n openshift-monitoring because it was missing
+2025-11-17T09:38:51.962708557Z I1117 09:38:51.962642       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/prometheus-adapter-tls
+2025-11-17T09:38:52.037090947Z I1117 09:38:52.037022       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/thanos-querier -n openshift-monitoring because it was missing
+2025-11-17T09:38:52.042443416Z I1117 09:38:52.042389       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/alertmanager-main -n openshift-monitoring because it was missing
+2025-11-17T09:38:52.088516271Z I1117 09:38:52.088250       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/alertmanager-trusted-ca-bundle
+2025-11-17T09:38:52.136901186Z I1117 09:38:52.136100       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/telemeter-trusted-ca-bundle
+2025-11-17T09:38:52.181362566Z I1117 09:38:52.181276       1 tasks.go:75] ran task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:38:52.181511843Z I1117 09:38:52.181488       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/grpc-tls
+2025-11-17T09:38:53.032163529Z I1117 09:38:53.032095       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/alertmanager-trusted-ca-bundle
+2025-11-17T09:38:53.184856518Z I1117 09:38:53.184793       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ServiceAccountCreated' Created ServiceAccount/prometheus-k8s -n openshift-monitoring because it was missing
+2025-11-17T09:38:53.184980609Z I1117 09:38:53.184960       1 tasks.go:75] ran task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:38:53.655710694Z I1117 09:38:53.655224       1 tasks.go:75] ran task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:38:59.228791604Z I1117 09:38:59.228733       1 tasks.go:75] ran task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:39:01.075088739Z I1117 09:39:01.075029       1 tasks.go:75] ran task 15 of 15: Updating Console Plugin components
+2025-11-17T09:39:01.256009255Z I1117 09:39:01.255938       1 tasks.go:75] ran task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:39:02.274001765Z I1117 09:39:02.273940       1 tasks.go:75] ran task 7 of 15: Updating node-exporter
+2025-11-17T09:39:15.542172983Z I1117 09:39:15.542101       1 tasks.go:75] ran task 11 of 15: Updating Telemeter client
+2025-11-17T09:39:15.808302452Z I1117 09:39:15.808225       1 tasks.go:75] ran task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:39:30.522068434Z I1117 09:39:30.522010       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:39:42.510140125Z I1117 09:39:42.510009       1 tasks.go:75] ran task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:39:43.769308890Z I1117 09:39:43.769228       1 tasks.go:75] ran task 12 of 15: Updating Thanos Querier
+2025-11-17T09:39:57.213870427Z I1117 09:39:57.213811       1 tasks.go:75] ran task 5 of 15: Updating Alertmanager
+2025-11-17T09:39:57.213870427Z I1117 09:39:57.213844       1 tasks.go:48] processing task group 3 of 3
+2025-11-17T09:39:57.213870427Z I1117 09:39:57.213859       1 tasks.go:69] running task 1 of 1: Updating configuration sharing
+2025-11-17T09:39:57.248623798Z I1117 09:39:57.248472       1 tasks.go:75] ran task 1 of 1: Updating configuration sharing
+2025-11-17T09:39:57.254164702Z I1117 09:39:57.253314       1 operator.go:744] Updating ClusterOperator status to done.
+2025-11-17T09:39:57.295693509Z W1117 09:39:57.295632       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:39:57.340400656Z I1117 09:39:57.340266       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:39:57.344090629Z I1117 09:39:57.344039       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:39:57.344090629Z I1117 09:39:57.344068       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:39:57.344822791Z I1117 09:39:57.344381       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:39:57.380206582Z I1117 09:39:57.379379       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:39:58.455329467Z I1117 09:39:58.453678       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ValidatingWebhookConfigurationUpdated' Updated ValidatingWebhookConfiguration.admissionregistration.k8s.io/prometheusrules.openshift.io because it changed
+2025-11-17T09:39:58.461875080Z I1117 09:39:58.461817       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-monitoring", Name:"cluster-monitoring-operator", UID:"711772c8-e216-43ca-aff9-477e243afa96", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'ValidatingWebhookConfigurationUpdated' Updated ValidatingWebhookConfiguration.admissionregistration.k8s.io/alertmanagerconfigs.openshift.io because it changed
+2025-11-17T09:40:00.528804816Z I1117 09:40:00.528753       1 tasks.go:75] ran task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:40:00.528804816Z I1117 09:40:00.528778       1 tasks.go:48] processing task group 2 of 3
+2025-11-17T09:40:00.528804816Z I1117 09:40:00.528800       1 tasks.go:69] running task 15 of 15: Updating Console Plugin components
+2025-11-17T09:40:00.528830403Z I1117 09:40:00.528809       1 tasks.go:69] running task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:40:00.528861994Z I1117 09:40:00.528844       1 tasks.go:69] running task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:40:00.528861994Z I1117 09:40:00.528855       1 tasks.go:69] running task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:40:00.528869336Z I1117 09:40:00.528848       1 tasks.go:69] running task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:40:00.528874685Z I1117 09:40:00.528869       1 tasks.go:69] running task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:40:00.528879859Z I1117 09:40:00.528860       1 tasks.go:69] running task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:40:00.528885211Z I1117 09:40:00.528865       1 tasks.go:69] running task 5 of 15: Updating Alertmanager
+2025-11-17T09:40:00.528890012Z I1117 09:40:00.528877       1 tasks.go:69] running task 11 of 15: Updating Telemeter client
+2025-11-17T09:40:00.528895465Z I1117 09:40:00.528891       1 tasks.go:69] running task 12 of 15: Updating Thanos Querier
+2025-11-17T09:40:00.528895465Z I1117 09:40:00.528875       1 tasks.go:69] running task 7 of 15: Updating node-exporter
+2025-11-17T09:40:00.528910429Z I1117 09:40:00.528896       1 tasks.go:69] running task 14 of 15: Updating Control Plane components
+2025-11-17T09:40:00.528910429Z I1117 09:40:00.528892       1 tasks.go:69] running task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:40:00.528910429Z I1117 09:40:00.528881       1 tasks.go:69] running task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:40:00.528999058Z I1117 09:40:00.528886       1 tasks.go:69] running task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:40:00.554729546Z I1117 09:40:00.554690       1 tasks.go:75] ran task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:40:00.579869672Z I1117 09:40:00.579825       1 tasks.go:75] ran task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:40:00.609044429Z I1117 09:40:00.609002       1 tasks.go:75] ran task 14 of 15: Updating Control Plane components
+2025-11-17T09:40:00.889124879Z I1117 09:40:00.889082       1 tasks.go:75] ran task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:40:01.678084768Z I1117 09:40:01.678021       1 tasks.go:75] ran task 15 of 15: Updating Console Plugin components
+2025-11-17T09:40:01.680368641Z I1117 09:40:01.680335       1 tasks.go:75] ran task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:40:01.811988804Z I1117 09:40:01.811929       1 tasks.go:75] ran task 7 of 15: Updating node-exporter
+2025-11-17T09:40:01.812196194Z I1117 09:40:01.812167       1 tasks.go:75] ran task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:40:01.815681539Z I1117 09:40:01.815627       1 tasks.go:75] ran task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:40:01.832562483Z I1117 09:40:01.832510       1 tasks.go:75] ran task 11 of 15: Updating Telemeter client
+2025-11-17T09:40:01.988234771Z I1117 09:40:01.988169       1 tasks.go:75] ran task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:40:03.821446509Z I1117 09:40:03.821380       1 tasks.go:75] ran task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:40:04.121454474Z I1117 09:40:04.121375       1 tasks.go:75] ran task 12 of 15: Updating Thanos Querier
+2025-11-17T09:40:06.509608842Z E1117 09:40:06.508616       1 wrap.go:54] timeout or abort while handling: method=GET URI="/metrics" audit-ID="37878b10-9f0f-44d5-b694-e638cf09bfa0"
+2025-11-17T09:40:06.513957445Z E1117 09:40:06.513894       1 timeout.go:142] post-timeout activity - time-elapsed: 5.188093ms, GET "/metrics" result: <nil>
+2025-11-17T09:40:30.521124270Z I1117 09:40:30.521075       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:40:30.530030115Z I1117 09:40:30.529981       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:40:56.251438651Z I1117 09:40:56.251079       1 tasks.go:75] ran task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:41:12.216437911Z I1117 09:41:12.216340       1 tasks.go:75] ran task 5 of 15: Updating Alertmanager
+2025-11-17T09:41:12.216437911Z I1117 09:41:12.216369       1 tasks.go:48] processing task group 3 of 3
+2025-11-17T09:41:12.216437911Z I1117 09:41:12.216377       1 tasks.go:69] running task 1 of 1: Updating configuration sharing
+2025-11-17T09:41:12.248038219Z I1117 09:41:12.247993       1 tasks.go:75] ran task 1 of 1: Updating configuration sharing
+2025-11-17T09:41:12.252593499Z I1117 09:41:12.252552       1 operator.go:744] Updating ClusterOperator status to done.
+2025-11-17T09:41:12.262155954Z W1117 09:41:12.262105       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:41:12.280915432Z I1117 09:41:12.280881       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:41:12.283861642Z I1117 09:41:12.283837       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:41:12.283923111Z I1117 09:41:12.283915       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:41:12.283959575Z I1117 09:41:12.283943       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:41:12.293448617Z I1117 09:41:12.293420       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:41:15.409891526Z I1117 09:41:15.409819       1 tasks.go:75] ran task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:41:15.409891526Z I1117 09:41:15.409848       1 tasks.go:48] processing task group 2 of 3
+2025-11-17T09:41:15.409891526Z I1117 09:41:15.409883       1 tasks.go:69] running task 15 of 15: Updating Console Plugin components
+2025-11-17T09:41:15.409937021Z I1117 09:41:15.409890       1 tasks.go:69] running task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:41:15.409937021Z I1117 09:41:15.409904       1 tasks.go:69] running task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:41:15.409946072Z I1117 09:41:15.409930       1 tasks.go:69] running task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:41:15.410005649Z I1117 09:41:15.409972       1 tasks.go:69] running task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:41:15.410005649Z I1117 09:41:15.410000       1 tasks.go:69] running task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:41:15.410012377Z I1117 09:41:15.409999       1 tasks.go:69] running task 12 of 15: Updating Thanos Querier
+2025-11-17T09:41:15.410049088Z I1117 09:41:15.410028       1 tasks.go:69] running task 7 of 15: Updating node-exporter
+2025-11-17T09:41:15.410077960Z I1117 09:41:15.410052       1 tasks.go:69] running task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:41:15.410130501Z I1117 09:41:15.410106       1 tasks.go:69] running task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:41:15.410165109Z I1117 09:41:15.410121       1 tasks.go:69] running task 11 of 15: Updating Telemeter client
+2025-11-17T09:41:15.410171147Z I1117 09:41:15.410155       1 tasks.go:69] running task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:41:15.410299963Z I1117 09:41:15.409982       1 tasks.go:69] running task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:41:15.410311777Z I1117 09:41:15.410298       1 tasks.go:69] running task 14 of 15: Updating Control Plane components
+2025-11-17T09:41:15.410444372Z I1117 09:41:15.409993       1 tasks.go:69] running task 5 of 15: Updating Alertmanager
+2025-11-17T09:41:15.445334836Z I1117 09:41:15.441892       1 tasks.go:75] ran task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:41:15.452761378Z I1117 09:41:15.452300       1 tasks.go:75] ran task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:41:15.519458860Z I1117 09:41:15.518244       1 tasks.go:75] ran task 14 of 15: Updating Control Plane components
+2025-11-17T09:41:15.716784214Z I1117 09:41:15.716621       1 tasks.go:75] ran task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:41:16.465906183Z I1117 09:41:16.465850       1 tasks.go:75] ran task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:41:16.476163811Z I1117 09:41:16.476121       1 tasks.go:75] ran task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:41:16.484428169Z I1117 09:41:16.484393       1 tasks.go:75] ran task 15 of 15: Updating Console Plugin components
+2025-11-17T09:41:16.503813558Z I1117 09:41:16.503757       1 tasks.go:75] ran task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:41:16.508192466Z I1117 09:41:16.508156       1 tasks.go:75] ran task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:41:16.532392915Z I1117 09:41:16.532245       1 tasks.go:75] ran task 7 of 15: Updating node-exporter
+2025-11-17T09:41:16.606559291Z I1117 09:41:16.606500       1 tasks.go:75] ran task 11 of 15: Updating Telemeter client
+2025-11-17T09:41:18.610198335Z I1117 09:41:18.610130       1 tasks.go:75] ran task 12 of 15: Updating Thanos Querier
+2025-11-17T09:41:18.626819481Z I1117 09:41:18.626777       1 tasks.go:75] ran task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:41:26.595189367Z I1117 09:41:26.595107       1 tasks.go:75] ran task 5 of 15: Updating Alertmanager
+2025-11-17T09:41:30.523341896Z I1117 09:41:30.523253       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:41:30.942047791Z I1117 09:41:30.941981       1 tasks.go:75] ran task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:41:30.942047791Z I1117 09:41:30.942037       1 tasks.go:48] processing task group 3 of 3
+2025-11-17T09:41:30.942084268Z I1117 09:41:30.942051       1 tasks.go:69] running task 1 of 1: Updating configuration sharing
+2025-11-17T09:41:30.966195340Z I1117 09:41:30.966132       1 tasks.go:75] ran task 1 of 1: Updating configuration sharing
+2025-11-17T09:41:30.968658936Z I1117 09:41:30.968554       1 operator.go:744] Updating ClusterOperator status to done.
+2025-11-17T09:41:30.974997779Z W1117 09:41:30.974891       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:41:30.987046706Z I1117 09:41:30.986904       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:41:30.989205431Z I1117 09:41:30.989177       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:41:30.989205431Z I1117 09:41:30.989199       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:41:30.989294384Z I1117 09:41:30.989262       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:41:30.998825363Z I1117 09:41:30.998782       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:41:34.104322198Z I1117 09:41:34.104061       1 tasks.go:75] ran task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:41:34.104322198Z I1117 09:41:34.104095       1 tasks.go:48] processing task group 2 of 3
+2025-11-17T09:41:34.104322198Z I1117 09:41:34.104120       1 tasks.go:69] running task 15 of 15: Updating Console Plugin components
+2025-11-17T09:41:34.104322198Z I1117 09:41:34.104202       1 tasks.go:69] running task 7 of 15: Updating node-exporter
+2025-11-17T09:41:34.104367376Z I1117 09:41:34.104278       1 tasks.go:69] running task 12 of 15: Updating Thanos Querier
+2025-11-17T09:41:34.104367376Z I1117 09:41:34.104328       1 tasks.go:69] running task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:41:34.104386572Z I1117 09:41:34.104364       1 tasks.go:69] running task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:41:34.104432138Z I1117 09:41:34.104407       1 tasks.go:69] running task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:41:34.104476489Z I1117 09:41:34.104438       1 tasks.go:69] running task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:41:34.104482445Z I1117 09:41:34.104459       1 tasks.go:69] running task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:41:34.104607148Z I1117 09:41:34.104590       1 tasks.go:69] running task 14 of 15: Updating Control Plane components
+2025-11-17T09:41:34.104681987Z I1117 09:41:34.104662       1 tasks.go:69] running task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:41:34.104742789Z I1117 09:41:34.104726       1 tasks.go:69] running task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:41:34.104761713Z I1117 09:41:34.104280       1 tasks.go:69] running task 11 of 15: Updating Telemeter client
+2025-11-17T09:41:34.104839149Z I1117 09:41:34.104823       1 tasks.go:69] running task 5 of 15: Updating Alertmanager
+2025-11-17T09:41:34.104931722Z I1117 09:41:34.104917       1 tasks.go:69] running task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:41:34.104953268Z I1117 09:41:34.104323       1 tasks.go:69] running task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:41:34.134060816Z I1117 09:41:34.133997       1 tasks.go:75] ran task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:41:34.144506414Z I1117 09:41:34.144378       1 tasks.go:75] ran task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:41:34.175741132Z I1117 09:41:34.175699       1 tasks.go:75] ran task 14 of 15: Updating Control Plane components
+2025-11-17T09:41:34.356254003Z I1117 09:41:34.356185       1 tasks.go:75] ran task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:41:35.157562515Z I1117 09:41:35.157522       1 tasks.go:75] ran task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:41:35.160537716Z I1117 09:41:35.160499       1 tasks.go:75] ran task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:41:35.168158119Z I1117 09:41:35.168126       1 tasks.go:75] ran task 15 of 15: Updating Console Plugin components
+2025-11-17T09:41:35.186543432Z I1117 09:41:35.186511       1 tasks.go:75] ran task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:41:35.190368295Z I1117 09:41:35.190337       1 tasks.go:75] ran task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:41:35.216312372Z I1117 09:41:35.216261       1 tasks.go:75] ran task 7 of 15: Updating node-exporter
+2025-11-17T09:41:35.278578218Z I1117 09:41:35.278524       1 tasks.go:75] ran task 11 of 15: Updating Telemeter client
+2025-11-17T09:41:37.285501212Z I1117 09:41:37.285438       1 tasks.go:75] ran task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:41:37.298277536Z I1117 09:41:37.298236       1 tasks.go:75] ran task 12 of 15: Updating Thanos Querier
+2025-11-17T09:41:44.354131156Z I1117 09:41:44.354023       1 operator.go:525] ConfigMap to configure stack does not exist. Reconciling with default config every 5m0s.
+2025-11-17T09:41:45.300065830Z I1117 09:41:45.299892       1 tasks.go:75] ran task 5 of 15: Updating Alertmanager
+2025-11-17T09:41:49.556989870Z I1117 09:41:49.556912       1 tasks.go:75] ran task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:41:49.556989870Z I1117 09:41:49.556946       1 tasks.go:48] processing task group 3 of 3
+2025-11-17T09:41:49.556989870Z I1117 09:41:49.556969       1 tasks.go:69] running task 1 of 1: Updating configuration sharing
+2025-11-17T09:41:49.589436968Z I1117 09:41:49.589373       1 tasks.go:75] ran task 1 of 1: Updating configuration sharing
+2025-11-17T09:41:49.591702986Z I1117 09:41:49.591671       1 operator.go:744] Updating ClusterOperator status to done.
+2025-11-17T09:41:49.599461639Z W1117 09:41:49.599433       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:41:49.611330280Z I1117 09:41:49.611301       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:41:49.613951462Z I1117 09:41:49.613551       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:41:49.613951462Z I1117 09:41:49.613571       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:41:49.613951462Z I1117 09:41:49.613798       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:41:49.627271134Z I1117 09:41:49.627169       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:41:52.739346481Z I1117 09:41:52.739266       1 tasks.go:75] ran task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:41:52.739346481Z I1117 09:41:52.739303       1 tasks.go:48] processing task group 2 of 3
+2025-11-17T09:41:52.739346481Z I1117 09:41:52.739330       1 tasks.go:69] running task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:41:52.739413814Z I1117 09:41:52.739343       1 tasks.go:69] running task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:41:52.739413814Z I1117 09:41:52.739352       1 tasks.go:69] running task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:41:52.739413814Z I1117 09:41:52.739357       1 tasks.go:69] running task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:41:52.739423226Z I1117 09:41:52.739396       1 tasks.go:69] running task 5 of 15: Updating Alertmanager
+2025-11-17T09:41:52.739423226Z I1117 09:41:52.739409       1 tasks.go:69] running task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:41:52.739477119Z I1117 09:41:52.739449       1 tasks.go:69] running task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:41:52.739477119Z I1117 09:41:52.739465       1 tasks.go:69] running task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:41:52.739477119Z I1117 09:41:52.739463       1 tasks.go:69] running task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:41:52.739592449Z I1117 09:41:52.739335       1 tasks.go:69] running task 15 of 15: Updating Console Plugin components
+2025-11-17T09:41:52.739592449Z I1117 09:41:52.739581       1 tasks.go:69] running task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:41:52.739652114Z I1117 09:41:52.739627       1 tasks.go:69] running task 14 of 15: Updating Control Plane components
+2025-11-17T09:41:52.739817461Z I1117 09:41:52.739447       1 tasks.go:69] running task 11 of 15: Updating Telemeter client
+2025-11-17T09:41:52.739881029Z I1117 09:41:52.739574       1 tasks.go:69] running task 7 of 15: Updating node-exporter
+2025-11-17T09:41:52.744034610Z I1117 09:41:52.743996       1 tasks.go:69] running task 12 of 15: Updating Thanos Querier
+2025-11-17T09:41:52.769483185Z I1117 09:41:52.769425       1 tasks.go:75] ran task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:41:52.777418179Z I1117 09:41:52.777330       1 tasks.go:75] ran task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:41:52.810765297Z I1117 09:41:52.810704       1 tasks.go:75] ran task 14 of 15: Updating Control Plane components
+2025-11-17T09:41:52.961639172Z I1117 09:41:52.961589       1 tasks.go:75] ran task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:41:53.792362599Z I1117 09:41:53.792297       1 tasks.go:75] ran task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:41:53.795279947Z I1117 09:41:53.795252       1 tasks.go:75] ran task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:41:53.797799641Z I1117 09:41:53.797774       1 tasks.go:75] ran task 15 of 15: Updating Console Plugin components
+2025-11-17T09:41:53.814749846Z I1117 09:41:53.814727       1 tasks.go:75] ran task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:41:53.826115640Z I1117 09:41:53.826084       1 tasks.go:75] ran task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:41:53.848082930Z I1117 09:41:53.848052       1 tasks.go:75] ran task 7 of 15: Updating node-exporter
+2025-11-17T09:41:53.896030723Z I1117 09:41:53.895933       1 tasks.go:75] ran task 11 of 15: Updating Telemeter client
+2025-11-17T09:41:55.909301376Z I1117 09:41:55.909233       1 tasks.go:75] ran task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:41:55.929861812Z I1117 09:41:55.929827       1 tasks.go:75] ran task 12 of 15: Updating Thanos Querier
+2025-11-17T09:42:03.908743867Z I1117 09:42:03.908591       1 tasks.go:75] ran task 5 of 15: Updating Alertmanager
+2025-11-17T09:42:08.166933073Z I1117 09:42:08.166852       1 tasks.go:75] ran task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:42:08.166933073Z I1117 09:42:08.166893       1 tasks.go:48] processing task group 3 of 3
+2025-11-17T09:42:08.166933073Z I1117 09:42:08.166910       1 tasks.go:69] running task 1 of 1: Updating configuration sharing
+2025-11-17T09:42:08.192503301Z I1117 09:42:08.192446       1 tasks.go:75] ran task 1 of 1: Updating configuration sharing
+2025-11-17T09:42:08.194819387Z I1117 09:42:08.194790       1 operator.go:744] Updating ClusterOperator status to done.
+2025-11-17T09:46:44.354135106Z I1117 09:46:44.354024       1 operator.go:525] ConfigMap to configure stack does not exist. Reconciling with default config every 5m0s.
+2025-11-17T09:46:44.360377214Z W1117 09:46:44.360347       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:46:44.374937049Z I1117 09:46:44.374910       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:46:44.377452114Z I1117 09:46:44.377417       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:46:44.377452114Z I1117 09:46:44.377442       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:46:44.377487844Z I1117 09:46:44.377465       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:46:44.389472553Z I1117 09:46:44.389430       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:46:47.513237614Z I1117 09:46:47.513175       1 tasks.go:75] ran task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:46:47.513237614Z I1117 09:46:47.513209       1 tasks.go:48] processing task group 2 of 3
+2025-11-17T09:46:47.513273911Z I1117 09:46:47.513243       1 tasks.go:69] running task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:46:47.513376609Z I1117 09:46:47.513346       1 tasks.go:69] running task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:46:47.513418139Z I1117 09:46:47.513389       1 tasks.go:69] running task 15 of 15: Updating Console Plugin components
+2025-11-17T09:46:47.513618168Z I1117 09:46:47.513597       1 tasks.go:69] running task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:46:47.513694893Z I1117 09:46:47.513669       1 tasks.go:69] running task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:46:47.513882232Z I1117 09:46:47.513863       1 tasks.go:69] running task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:46:47.513964287Z I1117 09:46:47.513944       1 tasks.go:69] running task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:46:47.514202887Z I1117 09:46:47.514184       1 tasks.go:69] running task 5 of 15: Updating Alertmanager
+2025-11-17T09:46:47.514202887Z I1117 09:46:47.514187       1 tasks.go:69] running task 12 of 15: Updating Thanos Querier
+2025-11-17T09:46:47.514234072Z I1117 09:46:47.514216       1 tasks.go:69] running task 7 of 15: Updating node-exporter
+2025-11-17T09:46:47.514295050Z I1117 09:46:47.514256       1 tasks.go:69] running task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:46:47.514340589Z I1117 09:46:47.514325       1 tasks.go:69] running task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:46:47.514364978Z I1117 09:46:47.514351       1 tasks.go:69] running task 11 of 15: Updating Telemeter client
+2025-11-17T09:46:47.514419494Z I1117 09:46:47.514389       1 tasks.go:69] running task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:46:47.514434345Z I1117 09:46:47.514407       1 tasks.go:69] running task 14 of 15: Updating Control Plane components
+2025-11-17T09:46:47.541786729Z I1117 09:46:47.541738       1 tasks.go:75] ran task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:46:47.552003658Z I1117 09:46:47.551958       1 tasks.go:75] ran task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:46:47.592652430Z I1117 09:46:47.592594       1 tasks.go:75] ran task 14 of 15: Updating Control Plane components
+2025-11-17T09:46:47.789889901Z I1117 09:46:47.789736       1 tasks.go:75] ran task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:46:48.571487049Z I1117 09:46:48.571262       1 tasks.go:75] ran task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:46:48.571784022Z I1117 09:46:48.571760       1 tasks.go:75] ran task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:46:48.573565068Z I1117 09:46:48.573544       1 tasks.go:75] ran task 15 of 15: Updating Console Plugin components
+2025-11-17T09:46:48.599099726Z I1117 09:46:48.599030       1 tasks.go:75] ran task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:46:48.608079896Z I1117 09:46:48.608036       1 tasks.go:75] ran task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:46:48.632816120Z I1117 09:46:48.632768       1 tasks.go:75] ran task 7 of 15: Updating node-exporter
+2025-11-17T09:46:48.698105301Z I1117 09:46:48.698054       1 tasks.go:75] ran task 11 of 15: Updating Telemeter client
+2025-11-17T09:46:50.718243069Z I1117 09:46:50.718186       1 tasks.go:75] ran task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:46:50.752665305Z I1117 09:46:50.752617       1 tasks.go:75] ran task 12 of 15: Updating Thanos Querier
+2025-11-17T09:46:52.904272998Z I1117 09:46:52.904149       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:46:52.919727125Z I1117 09:46:52.918603       1 operator.go:563] Triggering an update due to a change in *v1.APIServer - cluster
+2025-11-17T09:46:52.919727125Z I1117 09:46:52.919298       1 operator.go:563] Triggering an update due to a change in *v1.Infrastructure - cluster
+2025-11-17T09:46:58.717767719Z I1117 09:46:58.717667       1 tasks.go:75] ran task 5 of 15: Updating Alertmanager
+2025-11-17T09:47:03.148787125Z I1117 09:47:03.148731       1 tasks.go:75] ran task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:47:03.148867336Z I1117 09:47:03.148858       1 tasks.go:48] processing task group 3 of 3
+2025-11-17T09:47:03.148900572Z I1117 09:47:03.148893       1 tasks.go:69] running task 1 of 1: Updating configuration sharing
+2025-11-17T09:47:03.177265514Z I1117 09:47:03.176975       1 tasks.go:75] ran task 1 of 1: Updating configuration sharing
+2025-11-17T09:47:03.179731911Z I1117 09:47:03.179693       1 operator.go:744] Updating ClusterOperator status to done.
+2025-11-17T09:47:03.189033711Z W1117 09:47:03.188988       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:47:03.207262062Z I1117 09:47:03.207214       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:47:03.210279482Z I1117 09:47:03.210240       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:47:03.210313931Z I1117 09:47:03.210296       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:47:03.210425630Z I1117 09:47:03.210399       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:47:03.226050314Z I1117 09:47:03.225996       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:47:06.350925431Z I1117 09:47:06.350859       1 tasks.go:75] ran task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:47:06.350925431Z I1117 09:47:06.350884       1 tasks.go:48] processing task group 2 of 3
+2025-11-17T09:47:06.350925431Z I1117 09:47:06.350918       1 tasks.go:69] running task 15 of 15: Updating Console Plugin components
+2025-11-17T09:47:06.351069696Z I1117 09:47:06.351047       1 tasks.go:69] running task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:47:06.352014527Z I1117 09:47:06.351978       1 tasks.go:69] running task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:47:06.352049589Z I1117 09:47:06.352011       1 tasks.go:69] running task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:47:06.352082870Z I1117 09:47:06.352052       1 tasks.go:69] running task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:47:06.352135726Z I1117 09:47:06.352117       1 tasks.go:69] running task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:47:06.352135726Z I1117 09:47:06.352122       1 tasks.go:69] running task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:47:06.352156901Z I1117 09:47:06.352116       1 tasks.go:69] running task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:47:06.352200446Z I1117 09:47:06.352182       1 tasks.go:69] running task 5 of 15: Updating Alertmanager
+2025-11-17T09:47:06.352200446Z I1117 09:47:06.352190       1 tasks.go:69] running task 7 of 15: Updating node-exporter
+2025-11-17T09:47:06.352377977Z I1117 09:47:06.352358       1 tasks.go:69] running task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:47:06.352412081Z I1117 09:47:06.352389       1 tasks.go:69] running task 12 of 15: Updating Thanos Querier
+2025-11-17T09:47:06.352418385Z I1117 09:47:06.352409       1 tasks.go:69] running task 11 of 15: Updating Telemeter client
+2025-11-17T09:47:06.352455483Z I1117 09:47:06.352428       1 tasks.go:69] running task 14 of 15: Updating Control Plane components
+2025-11-17T09:47:06.352513520Z I1117 09:47:06.352396       1 tasks.go:69] running task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:47:06.384570441Z I1117 09:47:06.384499       1 tasks.go:75] ran task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:47:06.385053250Z I1117 09:47:06.385022       1 tasks.go:75] ran task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:47:06.443107277Z I1117 09:47:06.443055       1 tasks.go:75] ran task 14 of 15: Updating Control Plane components
+2025-11-17T09:47:06.641919235Z I1117 09:47:06.641860       1 tasks.go:75] ran task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:47:07.411208742Z I1117 09:47:07.411070       1 tasks.go:75] ran task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:47:07.416320553Z I1117 09:47:07.416264       1 tasks.go:75] ran task 15 of 15: Updating Console Plugin components
+2025-11-17T09:47:07.418003416Z I1117 09:47:07.417980       1 tasks.go:75] ran task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:47:07.433380930Z I1117 09:47:07.433337       1 tasks.go:75] ran task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:47:07.442644958Z I1117 09:47:07.442600       1 tasks.go:75] ran task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:47:07.477313563Z I1117 09:47:07.477246       1 tasks.go:75] ran task 7 of 15: Updating node-exporter
+2025-11-17T09:47:07.532012771Z I1117 09:47:07.531939       1 tasks.go:75] ran task 11 of 15: Updating Telemeter client
+2025-11-17T09:47:09.559485396Z I1117 09:47:09.559415       1 tasks.go:75] ran task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:47:09.574742777Z I1117 09:47:09.574680       1 tasks.go:75] ran task 12 of 15: Updating Thanos Querier
+2025-11-17T09:47:17.552797402Z I1117 09:47:17.552744       1 tasks.go:75] ran task 5 of 15: Updating Alertmanager
+2025-11-17T09:47:21.920047094Z I1117 09:47:21.919979       1 tasks.go:75] ran task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:47:21.920047094Z I1117 09:47:21.920009       1 tasks.go:48] processing task group 3 of 3
+2025-11-17T09:47:21.920047094Z I1117 09:47:21.920021       1 tasks.go:69] running task 1 of 1: Updating configuration sharing
+2025-11-17T09:47:21.943581945Z I1117 09:47:21.943524       1 tasks.go:75] ran task 1 of 1: Updating configuration sharing
+2025-11-17T09:47:21.945949743Z I1117 09:47:21.945921       1 operator.go:744] Updating ClusterOperator status to done.
+2025-11-17T09:47:29.138682233Z I1117 09:47:29.137661       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:47:29.143929716Z W1117 09:47:29.143864       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:47:29.174187463Z I1117 09:47:29.173761       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:47:29.182136714Z I1117 09:47:29.181025       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:47:29.182136714Z I1117 09:47:29.181068       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:47:29.182136714Z I1117 09:47:29.182079       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:47:29.195184230Z I1117 09:47:29.195120       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:47:32.323339266Z I1117 09:47:32.323262       1 tasks.go:75] ran task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:47:32.323339266Z I1117 09:47:32.323318       1 tasks.go:48] processing task group 2 of 3
+2025-11-17T09:47:32.323392297Z I1117 09:47:32.323348       1 tasks.go:69] running task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:47:32.323392297Z I1117 09:47:32.323363       1 tasks.go:69] running task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:47:32.323482966Z I1117 09:47:32.323450       1 tasks.go:69] running task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:47:32.323534249Z I1117 09:47:32.323512       1 tasks.go:69] running task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:47:32.323631024Z I1117 09:47:32.323356       1 tasks.go:69] running task 15 of 15: Updating Console Plugin components
+2025-11-17T09:47:32.323708078Z I1117 09:47:32.323693       1 tasks.go:69] running task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:47:32.323752837Z I1117 09:47:32.323738       1 tasks.go:69] running task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:47:32.323908548Z I1117 09:47:32.323891       1 tasks.go:69] running task 5 of 15: Updating Alertmanager
+2025-11-17T09:47:32.323959495Z I1117 09:47:32.323949       1 tasks.go:69] running task 12 of 15: Updating Thanos Querier
+2025-11-17T09:47:32.324002170Z I1117 09:47:32.323971       1 tasks.go:69] running task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:47:32.324073148Z I1117 09:47:32.324057       1 tasks.go:69] running task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:47:32.324216974Z I1117 09:47:32.324201       1 tasks.go:69] running task 11 of 15: Updating Telemeter client
+2025-11-17T09:47:32.324535260Z I1117 09:47:32.324415       1 tasks.go:69] running task 14 of 15: Updating Control Plane components
+2025-11-17T09:47:32.324551834Z I1117 09:47:32.323953       1 tasks.go:69] running task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:47:32.324629102Z I1117 09:47:32.323961       1 tasks.go:69] running task 7 of 15: Updating node-exporter
+2025-11-17T09:47:32.354404613Z I1117 09:47:32.354339       1 tasks.go:75] ran task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:47:32.369151278Z I1117 09:47:32.369087       1 tasks.go:75] ran task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:47:32.406405845Z I1117 09:47:32.406358       1 tasks.go:75] ran task 14 of 15: Updating Control Plane components
+2025-11-17T09:47:32.616044571Z I1117 09:47:32.615972       1 tasks.go:75] ran task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:47:33.395043410Z I1117 09:47:33.394984       1 tasks.go:75] ran task 15 of 15: Updating Console Plugin components
+2025-11-17T09:47:33.398146206Z I1117 09:47:33.398094       1 tasks.go:75] ran task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:47:33.401843427Z I1117 09:47:33.401815       1 tasks.go:75] ran task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:47:33.408752450Z I1117 09:47:33.408725       1 tasks.go:75] ran task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:47:33.428049205Z I1117 09:47:33.427993       1 tasks.go:75] ran task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:47:33.448490482Z I1117 09:47:33.448445       1 tasks.go:75] ran task 7 of 15: Updating node-exporter
+2025-11-17T09:47:33.511884114Z I1117 09:47:33.511837       1 tasks.go:75] ran task 11 of 15: Updating Telemeter client
+2025-11-17T09:47:35.531186056Z I1117 09:47:35.531130       1 tasks.go:75] ran task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:47:35.547279952Z I1117 09:47:35.547231       1 tasks.go:75] ran task 12 of 15: Updating Thanos Querier
+2025-11-17T09:47:43.536412213Z I1117 09:47:43.536344       1 tasks.go:75] ran task 5 of 15: Updating Alertmanager
+2025-11-17T09:47:47.821845536Z I1117 09:47:47.821794       1 tasks.go:75] ran task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:47:47.821845536Z I1117 09:47:47.821823       1 tasks.go:48] processing task group 3 of 3
+2025-11-17T09:47:47.821845536Z I1117 09:47:47.821831       1 tasks.go:69] running task 1 of 1: Updating configuration sharing
+2025-11-17T09:47:47.850273559Z I1117 09:47:47.850197       1 tasks.go:75] ran task 1 of 1: Updating configuration sharing
+2025-11-17T09:47:47.852887464Z I1117 09:47:47.852864       1 operator.go:744] Updating ClusterOperator status to done.
+2025-11-17T09:50:50.693248914Z I1117 09:50:50.693114       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:50:50.700524612Z W1117 09:50:50.700467       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:50:50.717384202Z I1117 09:50:50.717337       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:50:50.719922180Z I1117 09:50:50.719899       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:50:50.719932872Z I1117 09:50:50.719925       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:50:50.719980326Z I1117 09:50:50.719944       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:50:50.729443277Z I1117 09:50:50.729401       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:50:53.851641458Z I1117 09:50:53.851524       1 tasks.go:75] ran task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:50:53.851641458Z I1117 09:50:53.851549       1 tasks.go:48] processing task group 2 of 3
+2025-11-17T09:50:53.851641458Z I1117 09:50:53.851576       1 tasks.go:69] running task 15 of 15: Updating Console Plugin components
+2025-11-17T09:50:53.851748245Z I1117 09:50:53.851698       1 tasks.go:69] running task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:50:53.851870821Z I1117 09:50:53.851851       1 tasks.go:69] running task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:50:53.851920677Z I1117 09:50:53.851881       1 tasks.go:69] running task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:50:53.851920677Z I1117 09:50:53.851891       1 tasks.go:69] running task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:50:53.851935120Z I1117 09:50:53.851921       1 tasks.go:69] running task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:50:53.851950072Z I1117 09:50:53.851940       1 tasks.go:69] running task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:50:53.851961466Z I1117 09:50:53.851954       1 tasks.go:69] running task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:50:53.851974462Z I1117 09:50:53.851966       1 tasks.go:69] running task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:50:53.851979529Z I1117 09:50:53.851956       1 tasks.go:69] running task 14 of 15: Updating Control Plane components
+2025-11-17T09:50:53.852154930Z I1117 09:50:53.851866       1 tasks.go:69] running task 11 of 15: Updating Telemeter client
+2025-11-17T09:50:53.852154930Z I1117 09:50:53.852134       1 tasks.go:69] running task 7 of 15: Updating node-exporter
+2025-11-17T09:50:53.852232047Z I1117 09:50:53.852211       1 tasks.go:69] running task 12 of 15: Updating Thanos Querier
+2025-11-17T09:50:53.852445116Z I1117 09:50:53.852401       1 tasks.go:69] running task 5 of 15: Updating Alertmanager
+2025-11-17T09:50:53.852465934Z I1117 09:50:53.851877       1 tasks.go:69] running task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:50:53.881597240Z I1117 09:50:53.881513       1 tasks.go:75] ran task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:50:53.897912853Z I1117 09:50:53.897779       1 tasks.go:75] ran task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:50:53.938151210Z I1117 09:50:53.938097       1 tasks.go:75] ran task 14 of 15: Updating Control Plane components
+2025-11-17T09:50:54.195368400Z I1117 09:50:54.195300       1 tasks.go:75] ran task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:50:54.915883189Z I1117 09:50:54.915827       1 tasks.go:75] ran task 15 of 15: Updating Console Plugin components
+2025-11-17T09:50:54.916709791Z I1117 09:50:54.916657       1 tasks.go:75] ran task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:50:54.926107896Z I1117 09:50:54.926058       1 tasks.go:75] ran task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:50:54.929390593Z I1117 09:50:54.929350       1 tasks.go:75] ran task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:50:54.952256927Z I1117 09:50:54.952194       1 tasks.go:75] ran task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:50:54.964990086Z I1117 09:50:54.964941       1 tasks.go:75] ran task 7 of 15: Updating node-exporter
+2025-11-17T09:50:55.075543212Z I1117 09:50:55.075487       1 tasks.go:75] ran task 11 of 15: Updating Telemeter client
+2025-11-17T09:50:57.042364404Z I1117 09:50:57.042272       1 tasks.go:75] ran task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:50:57.066382022Z I1117 09:50:57.066322       1 tasks.go:75] ran task 12 of 15: Updating Thanos Querier
+2025-11-17T09:51:05.054091497Z I1117 09:51:05.054033       1 tasks.go:75] ran task 5 of 15: Updating Alertmanager
+2025-11-17T09:51:09.367057183Z I1117 09:51:09.366903       1 tasks.go:75] ran task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:51:09.367057183Z I1117 09:51:09.366945       1 tasks.go:48] processing task group 3 of 3
+2025-11-17T09:51:09.367057183Z I1117 09:51:09.366956       1 tasks.go:69] running task 1 of 1: Updating configuration sharing
+2025-11-17T09:51:09.407892470Z I1117 09:51:09.407799       1 tasks.go:75] ran task 1 of 1: Updating configuration sharing
+2025-11-17T09:51:09.410544044Z I1117 09:51:09.410430       1 operator.go:744] Updating ClusterOperator status to done.
+2025-11-17T09:51:44.260642232Z I1117 09:51:44.260566       1 operator.go:563] Triggering an update due to a change in *v1.Infrastructure - cluster
+2025-11-17T09:51:44.261718692Z I1117 09:51:44.261624       1 operator.go:563] Triggering an update due to a change in *v1.APIServer - cluster
+2025-11-17T09:51:44.262884853Z I1117 09:51:44.262864       1 operator.go:563] Triggering an update due to a change in *v1.ClusterVersion - version
+2025-11-17T09:51:44.266487900Z W1117 09:51:44.266454       1 operator.go:879] No Cluster Monitoring ConfigMap was found. Using defaults.
+2025-11-17T09:51:44.281606917Z I1117 09:51:44.281575       1 operator.go:723] Updating ClusterOperator status to in progress.
+2025-11-17T09:51:44.284925929Z I1117 09:51:44.284802       1 tasks.go:48] processing task group 1 of 3
+2025-11-17T09:51:44.284925929Z I1117 09:51:44.284842       1 tasks.go:69] running task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:51:44.285039877Z I1117 09:51:44.284844       1 tasks.go:69] running task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:51:44.296560219Z I1117 09:51:44.296526       1 tasks.go:75] ran task 1 of 2: Updating metrics scraping client CA
+2025-11-17T09:51:44.353996030Z I1117 09:51:44.353913       1 operator.go:525] ConfigMap to configure stack does not exist. Reconciling with default config every 5m0s.
+2025-11-17T09:51:44.437023986Z I1117 09:51:44.436963       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-config-managed/kubelet-serving-ca
+2025-11-17T09:51:44.660889914Z I1117 09:51:44.660833       1 operator.go:563] Triggering an update due to a change in *v1.Console - cluster
+2025-11-17T09:51:45.189274717Z I1117 09:51:45.189211       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/telemeter-trusted-ca-bundle
+2025-11-17T09:51:45.189274717Z I1117 09:51:45.189260       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/alertmanager-trusted-ca-bundle
+2025-11-17T09:51:45.269179076Z I1117 09:51:45.268814       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/grpc-tls
+2025-11-17T09:51:45.269179076Z I1117 09:51:45.269014       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/metrics-client-certs
+2025-11-17T09:51:45.269179076Z I1117 09:51:45.269147       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/prometheus-adapter-tls
+2025-11-17T09:51:45.269323383Z I1117 09:51:45.269250       1 operator.go:593] Triggering an update due to ConfigMap or Secret: openshift-monitoring/federate-client-certs
+2025-11-17T09:51:45.824936116Z I1117 09:51:45.824800       1 operator.go:593] Triggering an update due to ConfigMap or Secret: kube-system/extension-apiserver-authentication
+2025-11-17T09:51:47.490637788Z I1117 09:51:47.490580       1 tasks.go:75] ran task 2 of 2: Updating Prometheus Operator
+2025-11-17T09:51:47.490637788Z I1117 09:51:47.490619       1 tasks.go:48] processing task group 2 of 3
+2025-11-17T09:51:47.490685023Z I1117 09:51:47.490670       1 tasks.go:69] running task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:51:47.490685023Z I1117 09:51:47.490662       1 tasks.go:69] running task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:51:47.490722839Z I1117 09:51:47.490697       1 tasks.go:69] running task 3 of 15: Updating Prometheus-k8s
+2025-11-17T09:51:47.490772219Z I1117 09:51:47.490742       1 tasks.go:69] running task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:51:47.490772219Z I1117 09:51:47.490756       1 tasks.go:69] running task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:51:47.490824397Z I1117 09:51:47.490794       1 tasks.go:69] running task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:51:47.490953019Z I1117 09:51:47.490925       1 tasks.go:69] running task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:51:47.490990641Z I1117 09:51:47.490808       1 tasks.go:69] running task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:51:47.491074529Z I1117 09:51:47.490829       1 tasks.go:69] running task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:51:47.491090612Z I1117 09:51:47.491069       1 tasks.go:69] running task 14 of 15: Updating Control Plane components
+2025-11-17T09:51:47.491181103Z I1117 09:51:47.490834       1 tasks.go:69] running task 5 of 15: Updating Alertmanager
+2025-11-17T09:51:47.491299418Z I1117 09:51:47.490846       1 tasks.go:69] running task 7 of 15: Updating node-exporter
+2025-11-17T09:51:47.491383041Z I1117 09:51:47.490847       1 tasks.go:69] running task 12 of 15: Updating Thanos Querier
+2025-11-17T09:51:47.491474957Z I1117 09:51:47.490845       1 tasks.go:69] running task 11 of 15: Updating Telemeter client
+2025-11-17T09:51:47.492180975Z I1117 09:51:47.491064       1 tasks.go:69] running task 15 of 15: Updating Console Plugin components
+2025-11-17T09:51:47.518886078Z I1117 09:51:47.518842       1 tasks.go:75] ran task 1 of 15: Updating user workload Prometheus Operator
+2025-11-17T09:51:47.527095597Z I1117 09:51:47.527046       1 tasks.go:75] ran task 6 of 15: Updating Alertmanager-user-workload
+2025-11-17T09:51:47.573421898Z I1117 09:51:47.573367       1 tasks.go:75] ran task 14 of 15: Updating Control Plane components
+2025-11-17T09:51:47.786867209Z I1117 09:51:47.786818       1 tasks.go:75] ran task 2 of 15: Updating Cluster Monitoring Operator
+2025-11-17T09:51:48.552659100Z I1117 09:51:48.552610       1 tasks.go:75] ran task 13 of 15: Updating User Workload Thanos Ruler
+2025-11-17T09:51:48.554185193Z I1117 09:51:48.554068       1 tasks.go:75] ran task 15 of 15: Updating Console Plugin components
+2025-11-17T09:51:48.574459467Z I1117 09:51:48.574401       1 tasks.go:75] ran task 4 of 15: Updating Prometheus-user-workload
+2025-11-17T09:51:48.574641388Z I1117 09:51:48.574624       1 tasks.go:75] ran task 9 of 15: Updating openshift-state-metrics
+2025-11-17T09:51:48.589813394Z I1117 09:51:48.589765       1 tasks.go:75] ran task 8 of 15: Updating kube-state-metrics
+2025-11-17T09:51:48.615234038Z I1117 09:51:48.615178       1 tasks.go:75] ran task 7 of 15: Updating node-exporter
+2025-11-17T09:51:48.677597722Z I1117 09:51:48.677539       1 tasks.go:75] ran task 11 of 15: Updating Telemeter client
+2025-11-17T09:51:50.710933933Z I1117 09:51:50.710876       1 tasks.go:75] ran task 10 of 15: Updating prometheus-adapter
+2025-11-17T09:51:50.732257365Z I1117 09:51:50.732200       1 tasks.go:75] ran task 12 of 15: Updating Thanos Querier

@@ -1,0 +1,99 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2025-11-17T09:05:22Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:22Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:05:23Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: Go-http-client
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:36Z"
+  name: dns
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "24114"
+  uid: e63f04d8-ad68-4c33-815c-6d5b265593b4
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:21:57Z"
+    message: DNS "default" is available.
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2025-11-17T09:38:36Z"
+    message: Desired and current number of DNSes are equal
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2025-11-17T09:38:36Z"
+    reason: DNSNotDegraded
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2025-11-17T09:21:44Z"
+    message: 'DNS default is upgradeable: DNS Operator can be upgraded'
+    reason: DNSUpgradeable
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-dns-operator
+    resource: namespaces
+  - group: operator.openshift.io
+    name: default
+    resource: dnses
+  - group: ""
+    name: openshift-dns
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.14.59
+  - name: coredns
+    version: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dc628de8b8f6899659a0da11b21ba81d4cb9f73684f3f502bee47e06c5dbe36
+  - name: openshift-cli
+    version: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:35e01911b75e094419e463401828596ba93ab641cb11521d2a54c523d8917303
+  - name: kube-rbac-proxy
+    version: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff

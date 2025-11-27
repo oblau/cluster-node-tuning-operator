@@ -1,0 +1,95 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: Config
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2025-11-17T09:05:48Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:48Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:readyReplicas: {}
+    manager: cluster-config-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:21:24Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "8885"
+  uid: 90021c25-678a-4788-8654-2057c752f250
+spec:
+  logLevel: Normal
+  managementState: Managed
+  operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:20:24Z"
+    reason: AsExpected
+    status: "True"
+    type: OperatorAvailable
+  - lastTransitionTime: "2025-11-17T09:20:24Z"
+    reason: AsExpected
+    status: "False"
+    type: OperatorProgressing
+  - lastTransitionTime: "2025-11-17T09:20:24Z"
+    reason: AsExpected
+    status: "True"
+    type: OperatorUpgradeable
+  - lastTransitionTime: "2025-11-17T09:20:24Z"
+    reason: AsExpected
+    status: "False"
+    type: AWSPlatformServiceLocationControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:20:24Z"
+    reason: AsExpected
+    status: "False"
+    type: MigrationPlatformStatusControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:20:24Z"
+    reason: AllowedFeatureGates_
+    status: "True"
+    type: FeatureGatesUpgradeable
+  - lastTransitionTime: "2025-11-17T09:20:24Z"
+    reason: AsExpected
+    status: "False"
+    type: FeatureGateControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:20:25Z"
+    reason: AsExpected
+    status: "False"
+    type: KubeCloudConfigControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:21:24Z"
+    reason: AsExpected
+    status: "False"
+    type: LatencySensitiveRemovalControllerDegraded
+  readyReplicas: 0

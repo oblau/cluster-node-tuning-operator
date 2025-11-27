@@ -1,0 +1,61 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c25,c0
+    openshift.io/sa.scc.supplemental-groups: 1000600000/10000
+    openshift.io/sa.scc.uid-range: 1000600000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2025-11-17T09:20:32Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-route-controller-manager
+    olm.operatorgroup.uid/b2637a98-e91c-4934-979a-9b4b19b95496: ""
+    openshift.io/cluster-monitoring: "true"
+    openshift.io/run-level: ""
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+          f:openshift.io/run-level: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2025-11-17T09:20:32Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2025-11-17T09:20:32Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/b2637a98-e91c-4934-979a-9b4b19b95496: {}
+    manager: olm
+    operation: Update
+    time: "2025-11-17T09:21:38Z"
+  name: openshift-route-controller-manager
+  resourceVersion: "9288"
+  uid: 9f66b6e8-47c6-49ee-9956-ee71728cbe3f
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

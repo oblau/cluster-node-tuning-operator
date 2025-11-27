@@ -1,0 +1,71 @@
+---
+apiVersion: config.openshift.io/v1
+items:
+- apiVersion: config.openshift.io/v1
+  kind: Network
+  metadata:
+    creationTimestamp: "2025-11-17T09:05:14Z"
+    generation: 2
+    managedFields:
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:clusterNetwork: {}
+          f:externalIP:
+            f:policy: {}
+          f:networkType: {}
+          f:serviceNetwork: {}
+        f:status:
+          f:clusterNetwork: {}
+          f:clusterNetworkMTU: {}
+          f:networkType: {}
+          f:serviceNetwork: {}
+      manager: cluster-network-operator/operconfig
+      operation: Apply
+      time: "2025-11-17T09:18:41Z"
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          .: {}
+          f:clusterNetwork: {}
+          f:externalIP:
+            .: {}
+            f:policy: {}
+          f:networkType: {}
+          f:serviceNetwork: {}
+        f:status: {}
+      manager: cluster-bootstrap
+      operation: Update
+      time: "2025-11-17T09:05:14Z"
+    name: cluster
+    resourceVersion: "5156"
+    uid: c3fad7b8-64a9-4201-9760-8b22c3221f8b
+  spec:
+    clusterNetwork:
+    - cidr: 10.128.0.0/14
+      hostPrefix: 23
+    - cidr: fd02::/48
+      hostPrefix: 64
+    externalIP:
+      policy: {}
+    networkType: OVNKubernetes
+    serviceNetwork:
+    - 172.30.0.0/16
+    - fd03::/112
+  status:
+    clusterNetwork:
+    - cidr: 10.128.0.0/14
+      hostPrefix: 23
+    - cidr: fd02::/48
+      hostPrefix: 64
+    clusterNetworkMTU: 1400
+    networkType: OVNKubernetes
+    serviceNetwork:
+    - 172.30.0.0/16
+    - fd03::/112
+kind: NetworkList
+metadata:
+  continue: ""
+  resourceVersion: "32363"

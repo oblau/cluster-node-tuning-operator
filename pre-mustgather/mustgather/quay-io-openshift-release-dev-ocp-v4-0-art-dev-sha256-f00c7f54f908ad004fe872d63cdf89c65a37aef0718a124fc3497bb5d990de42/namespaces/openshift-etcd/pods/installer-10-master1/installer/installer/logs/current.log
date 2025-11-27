@@ -1,0 +1,750 @@
+2025-11-17T09:42:20.063954220Z I1117 09:42:20.063739       1 cmd.go:92] &{<nil> true {false} installer true map[cert-configmaps:0xc000676500 cert-dir:0xc0006766e0 cert-secrets:0xc000676460 configmaps:0xc000676000 namespace:0xc000629e00 pod:0xc000629ea0 pod-manifest-dir:0xc000676280 resource-dir:0xc0006761e0 revision:0xc000629d60 secrets:0xc000629f40 v:0xc000629040] [0xc000629040 0xc000629d60 0xc000629e00 0xc000629ea0 0xc0006761e0 0xc000676280 0xc000676000 0xc000629f40 0xc0006766e0 0xc000676500 0xc000676460] [] map[cert-configmaps:0xc000676500 cert-dir:0xc0006766e0 cert-secrets:0xc000676460 configmaps:0xc000676000 help:0xc000aa1ae0 kubeconfig:0xc000629cc0 log-flush-frequency:0xc000628fa0 namespace:0xc000629e00 optional-cert-configmaps:0xc000676640 optional-cert-secrets:0xc0006765a0 optional-configmaps:0xc000676140 optional-secrets:0xc0006760a0 pod:0xc000629ea0 pod-manifest-dir:0xc000676280 pod-manifests-lock-file:0xc0006763c0 resource-dir:0xc0006761e0 revision:0xc000629d60 secrets:0xc000629f40 timeout-duration:0xc000676320 v:0xc000629040 vmodule:0xc0006290e0] [0xc000629cc0 0xc000629d60 0xc000629e00 0xc000629ea0 0xc000629f40 0xc000676000 0xc0006760a0 0xc000676140 0xc0006761e0 0xc000676280 0xc000676320 0xc0006763c0 0xc000676460 0xc000676500 0xc0006765a0 0xc000676640 0xc0006766e0 0xc000628fa0 0xc000629040 0xc0006290e0 0xc000aa1ae0] [0xc000676500 0xc0006766e0 0xc000676460 0xc000676000 0xc000aa1ae0 0xc000629cc0 0xc000628fa0 0xc000629e00 0xc000676640 0xc0006765a0 0xc000676140 0xc0006760a0 0xc000629ea0 0xc000676280 0xc0006763c0 0xc0006761e0 0xc000629d60 0xc000629f40 0xc000676320 0xc000629040 0xc0006290e0] map[104:0xc000aa1ae0 118:0xc000629040] [] -1 0 0xc0006399b0 true <nil> []}
+2025-11-17T09:42:20.064073936Z I1117 09:42:20.063998       1 cmd.go:93] (*installerpod.InstallOptions)(0xc0004c09c0)({
+2025-11-17T09:42:20.064073936Z  KubeConfig: (string) "",
+2025-11-17T09:42:20.064073936Z  KubeClient: (kubernetes.Interface) <nil>,
+2025-11-17T09:42:20.064073936Z  Revision: (string) (len=2) "10",
+2025-11-17T09:42:20.064073936Z  NodeName: (string) "",
+2025-11-17T09:42:20.064073936Z  Namespace: (string) (len=14) "openshift-etcd",
+2025-11-17T09:42:20.064073936Z  PodConfigMapNamePrefix: (string) (len=8) "etcd-pod",
+2025-11-17T09:42:20.064073936Z  SecretNamePrefixes: ([]string) (len=1 cap=1) {
+2025-11-17T09:42:20.064073936Z   (string) (len=14) "etcd-all-certs"
+2025-11-17T09:42:20.064073936Z  },
+2025-11-17T09:42:20.064073936Z  OptionalSecretNamePrefixes: ([]string) <nil>,
+2025-11-17T09:42:20.064073936Z  ConfigMapNamePrefixes: ([]string) (len=6 cap=8) {
+2025-11-17T09:42:20.064073936Z   (string) (len=8) "etcd-pod",
+2025-11-17T09:42:20.064073936Z   (string) (len=15) "etcd-serving-ca",
+2025-11-17T09:42:20.064073936Z   (string) (len=19) "etcd-peer-client-ca",
+2025-11-17T09:42:20.064073936Z   (string) (len=29) "etcd-metrics-proxy-serving-ca",
+2025-11-17T09:42:20.064073936Z   (string) (len=28) "etcd-metrics-proxy-client-ca",
+2025-11-17T09:42:20.064073936Z   (string) (len=14) "etcd-endpoints"
+2025-11-17T09:42:20.064073936Z  },
+2025-11-17T09:42:20.064073936Z  OptionalConfigMapNamePrefixes: ([]string) <nil>,
+2025-11-17T09:42:20.064073936Z  CertSecretNames: ([]string) (len=1 cap=1) {
+2025-11-17T09:42:20.064073936Z   (string) (len=14) "etcd-all-certs"
+2025-11-17T09:42:20.064073936Z  },
+2025-11-17T09:42:20.064073936Z  OptionalCertSecretNamePrefixes: ([]string) <nil>,
+2025-11-17T09:42:20.064073936Z  CertConfigMapNamePrefixes: ([]string) (len=6 cap=8) {
+2025-11-17T09:42:20.064073936Z   (string) (len=16) "restore-etcd-pod",
+2025-11-17T09:42:20.064073936Z   (string) (len=12) "etcd-scripts",
+2025-11-17T09:42:20.064073936Z   (string) (len=15) "etcd-serving-ca",
+2025-11-17T09:42:20.064073936Z   (string) (len=19) "etcd-peer-client-ca",
+2025-11-17T09:42:20.064073936Z   (string) (len=29) "etcd-metrics-proxy-serving-ca",
+2025-11-17T09:42:20.064073936Z   (string) (len=28) "etcd-metrics-proxy-client-ca"
+2025-11-17T09:42:20.064073936Z  },
+2025-11-17T09:42:20.064073936Z  OptionalCertConfigMapNamePrefixes: ([]string) <nil>,
+2025-11-17T09:42:20.064073936Z  CertDir: (string) (len=47) "/etc/kubernetes/static-pod-resources/etcd-certs",
+2025-11-17T09:42:20.064073936Z  ResourceDir: (string) (len=36) "/etc/kubernetes/static-pod-resources",
+2025-11-17T09:42:20.064073936Z  PodManifestDir: (string) (len=25) "/etc/kubernetes/manifests",
+2025-11-17T09:42:20.064073936Z  Timeout: (time.Duration) 2m0s,
+2025-11-17T09:42:20.064073936Z  StaticPodManifestsLockFile: (string) "",
+2025-11-17T09:42:20.064073936Z  PodMutationFns: ([]installerpod.PodMutationFunc) <nil>,
+2025-11-17T09:42:20.064073936Z  KubeletVersion: (string) ""
+2025-11-17T09:42:20.064073936Z })
+2025-11-17T09:42:20.064987719Z I1117 09:42:20.064966       1 cmd.go:410] Getting controller reference for node XXXXXX1
+2025-11-17T09:42:20.078681181Z I1117 09:42:20.078649       1 cmd.go:423] Waiting for installer revisions to settle for node XXXXXX1
+2025-11-17T09:42:20.084104181Z I1117 09:42:20.084073       1 cmd.go:515] Waiting additional period after revisions have settled for node XXXXXX1
+2025-11-17T09:42:50.084230581Z I1117 09:42:50.084184       1 cmd.go:521] Getting installer pods for node XXXXXX1
+2025-11-17T09:42:50.092299954Z I1117 09:42:50.092263       1 cmd.go:539] Latest installer revision for node XXXXXX1 is: 10
+2025-11-17T09:42:50.092352855Z I1117 09:42:50.092344       1 cmd.go:428] Querying kubelet version for node XXXXXX1
+2025-11-17T09:42:50.095074587Z I1117 09:42:50.095042       1 cmd.go:441] Got kubelet version 1.27.16+03a907c on target node XXXXXX1
+2025-11-17T09:42:50.095074587Z I1117 09:42:50.095067       1 cmd.go:290] Creating target resource directory "/etc/kubernetes/static-pod-resources/etcd-pod-10" ...
+2025-11-17T09:42:50.095188307Z I1117 09:42:50.095176       1 cmd.go:218] Creating target resource directory "/etc/kubernetes/static-pod-resources/etcd-pod-10" ...
+2025-11-17T09:42:50.095188307Z I1117 09:42:50.095186       1 cmd.go:226] Getting secrets ...
+2025-11-17T09:42:50.098860136Z I1117 09:42:50.098833       1 copy.go:32] Got secret openshift-etcd/etcd-all-certs-10
+2025-11-17T09:42:50.098985618Z I1117 09:42:50.098975       1 cmd.go:239] Getting config maps ...
+2025-11-17T09:42:50.101258167Z I1117 09:42:50.101229       1 copy.go:60] Got configMap openshift-etcd/etcd-endpoints-10
+2025-11-17T09:42:50.103290277Z I1117 09:42:50.103256       1 copy.go:60] Got configMap openshift-etcd/etcd-metrics-proxy-client-ca-10
+2025-11-17T09:42:50.105723583Z I1117 09:42:50.105704       1 copy.go:60] Got configMap openshift-etcd/etcd-metrics-proxy-serving-ca-10
+2025-11-17T09:42:50.107625194Z I1117 09:42:50.107600       1 copy.go:60] Got configMap openshift-etcd/etcd-peer-client-ca-10
+2025-11-17T09:42:50.109750410Z I1117 09:42:50.109725       1 copy.go:60] Got configMap openshift-etcd/etcd-pod-10
+2025-11-17T09:42:50.112746491Z I1117 09:42:50.112724       1 copy.go:60] Got configMap openshift-etcd/etcd-serving-ca-10
+2025-11-17T09:42:50.112790454Z I1117 09:42:50.112778       1 cmd.go:258] Creating directory "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs" ...
+2025-11-17T09:42:50.112922776Z I1117 09:42:50.112911       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-XXXXXX1.key" ...
+2025-11-17T09:42:50.113040157Z I1117 09:42:50.113028       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-peer-XXXXXX2.key" ...
+2025-11-17T09:42:50.113123275Z I1117 09:42:50.113112       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-XXXXXX1.crt" ...
+2025-11-17T09:42:50.113197434Z I1117 09:42:50.113183       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX2.crt" ...
+2025-11-17T09:42:50.113339971Z I1117 09:42:50.113325       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX0.crt" ...
+2025-11-17T09:42:50.113443797Z I1117 09:42:50.113431       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-XXXXXX2.crt" ...
+2025-11-17T09:42:50.113533229Z I1117 09:42:50.113521       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key" ...
+2025-11-17T09:42:50.113618327Z I1117 09:42:50.113607       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt" ...
+2025-11-17T09:42:50.113710244Z I1117 09:42:50.113698       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-peer-XXXXXX2.crt" ...
+2025-11-17T09:42:50.113787711Z I1117 09:42:50.113777       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX0.key" ...
+2025-11-17T09:42:50.113875547Z I1117 09:42:50.113847       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX1.key" ...
+2025-11-17T09:42:50.113958697Z I1117 09:42:50.113948       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-XXXXXX0.crt" ...
+2025-11-17T09:42:50.114029529Z I1117 09:42:50.114019       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-XXXXXX0.key" ...
+2025-11-17T09:42:50.114119373Z I1117 09:42:50.114108       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-peer-XXXXXX0.key" ...
+2025-11-17T09:42:50.114196197Z I1117 09:42:50.114182       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-XXXXXX2.key" ...
+2025-11-17T09:42:50.114279029Z I1117 09:42:50.114268       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX2.key" ...
+2025-11-17T09:42:50.114366345Z I1117 09:42:50.114355       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-peer-XXXXXX0.crt" ...
+2025-11-17T09:42:50.114441308Z I1117 09:42:50.114431       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX1.crt" ...
+2025-11-17T09:42:50.114517080Z I1117 09:42:50.114506       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-endpoints" ...
+2025-11-17T09:42:50.114603237Z I1117 09:42:50.114592       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-endpoints/a9468b9230510600" ...
+2025-11-17T09:42:50.114670935Z I1117 09:42:50.114661       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-endpoints/d2dd98de6e8ab051" ...
+2025-11-17T09:42:50.114755184Z I1117 09:42:50.114744       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-endpoints/d85a978ed2572588" ...
+2025-11-17T09:42:50.114826991Z I1117 09:42:50.114817       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-metrics-proxy-client-ca" ...
+2025-11-17T09:42:50.114884038Z I1117 09:42:50.114874       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-metrics-proxy-client-ca/ca-bundle.crt" ...
+2025-11-17T09:42:50.114960650Z I1117 09:42:50.114951       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-metrics-proxy-serving-ca" ...
+2025-11-17T09:42:50.115012260Z I1117 09:42:50.115003       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-metrics-proxy-serving-ca/ca-bundle.crt" ...
+2025-11-17T09:42:50.115081006Z I1117 09:42:50.115071       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-peer-client-ca" ...
+2025-11-17T09:42:50.115127371Z I1117 09:42:50.115118       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-peer-client-ca/ca-bundle.crt" ...
+2025-11-17T09:42:50.115200917Z I1117 09:42:50.115187       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-pod" ...
+2025-11-17T09:42:50.115258182Z I1117 09:42:50.115248       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-pod/forceRedeploymentReason" ...
+2025-11-17T09:42:50.115338314Z I1117 09:42:50.115328       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-pod/pod.yaml" ...
+2025-11-17T09:42:50.115430253Z I1117 09:42:50.115420       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-pod/version" ...
+2025-11-17T09:42:50.115499906Z I1117 09:42:50.115490       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-serving-ca" ...
+2025-11-17T09:42:50.115546510Z I1117 09:42:50.115537       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-pod-10/configmaps/etcd-serving-ca/ca-bundle.crt" ...
+2025-11-17T09:42:50.115789405Z I1117 09:42:50.115772       1 cmd.go:218] Creating target resource directory "/etc/kubernetes/static-pod-resources/etcd-certs" ...
+2025-11-17T09:42:50.115816387Z I1117 09:42:50.115810       1 cmd.go:226] Getting secrets ...
+2025-11-17T09:42:50.118195401Z I1117 09:42:50.118171       1 copy.go:32] Got secret openshift-etcd/etcd-all-certs
+2025-11-17T09:42:50.118276125Z I1117 09:42:50.118265       1 cmd.go:239] Getting config maps ...
+2025-11-17T09:42:50.296037124Z I1117 09:42:50.295904       1 copy.go:60] Got configMap openshift-etcd/etcd-metrics-proxy-client-ca
+2025-11-17T09:42:50.490678520Z I1117 09:42:50.490623       1 copy.go:60] Got configMap openshift-etcd/etcd-metrics-proxy-serving-ca
+2025-11-17T09:42:50.688855860Z I1117 09:42:50.688808       1 copy.go:60] Got configMap openshift-etcd/etcd-peer-client-ca
+2025-11-17T09:42:50.888644932Z I1117 09:42:50.888596       1 copy.go:60] Got configMap openshift-etcd/etcd-scripts
+2025-11-17T09:42:51.088905915Z I1117 09:42:51.088853       1 copy.go:60] Got configMap openshift-etcd/etcd-serving-ca
+2025-11-17T09:42:51.288175873Z I1117 09:42:51.288132       1 copy.go:60] Got configMap openshift-etcd/restore-etcd-pod
+2025-11-17T09:42:51.288204755Z I1117 09:42:51.288172       1 cmd.go:258] Creating directory "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs" ...
+2025-11-17T09:42:51.288204755Z I1117 09:42:51.288198       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX2.crt" ...
+2025-11-17T09:42:51.288396498Z I1117 09:42:51.288373       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX0.crt" ...
+2025-11-17T09:42:51.288450822Z I1117 09:42:51.288440       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX1.crt" ...
+2025-11-17T09:42:51.288509896Z I1117 09:42:51.288499       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key" ...
+2025-11-17T09:42:51.288562705Z I1117 09:42:51.288552       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX0.crt" ...
+2025-11-17T09:42:51.288613258Z I1117 09:42:51.288602       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX2.key" ...
+2025-11-17T09:42:51.288665252Z I1117 09:42:51.288654       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX0.key" ...
+2025-11-17T09:42:51.288734611Z I1117 09:42:51.288719       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX2.key" ...
+2025-11-17T09:42:51.288803670Z I1117 09:42:51.288791       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX1.crt" ...
+2025-11-17T09:42:51.288878306Z I1117 09:42:51.288867       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX2.crt" ...
+2025-11-17T09:42:51.288930643Z I1117 09:42:51.288920       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX2.crt" ...
+2025-11-17T09:42:51.288995278Z I1117 09:42:51.288984       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX0.key" ...
+2025-11-17T09:42:51.289051138Z I1117 09:42:51.289040       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX0.crt" ...
+2025-11-17T09:42:51.289102474Z I1117 09:42:51.289091       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX2.key" ...
+2025-11-17T09:42:51.289163948Z I1117 09:42:51.289152       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX0.key" ...
+2025-11-17T09:42:51.289219471Z I1117 09:42:51.289208       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX1.key" ...
+2025-11-17T09:42:51.289269312Z I1117 09:42:51.289258       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX1.key" ...
+2025-11-17T09:42:51.289328730Z I1117 09:42:51.289307       1 cmd.go:636] Writing secret manifest "/etc/kubernetes/static-pod-resources/etcd-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt" ...
+2025-11-17T09:42:51.289380588Z I1117 09:42:51.289369       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-metrics-proxy-client-ca" ...
+2025-11-17T09:42:51.289389873Z I1117 09:42:51.289383       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-metrics-proxy-client-ca/ca-bundle.crt" ...
+2025-11-17T09:42:51.289468204Z I1117 09:42:51.289454       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-metrics-proxy-serving-ca" ...
+2025-11-17T09:42:51.289472920Z I1117 09:42:51.289465       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-metrics-proxy-serving-ca/ca-bundle.crt" ...
+2025-11-17T09:42:51.289541094Z I1117 09:42:51.289528       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-peer-client-ca" ...
+2025-11-17T09:42:51.289548603Z I1117 09:42:51.289539       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-peer-client-ca/ca-bundle.crt" ...
+2025-11-17T09:42:51.289633112Z I1117 09:42:51.289613       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-scripts" ...
+2025-11-17T09:42:51.289650259Z I1117 09:42:51.289636       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-scripts/cluster-restore.sh" ...
+2025-11-17T09:42:51.289733696Z I1117 09:42:51.289721       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-scripts/etcd-common-tools" ...
+2025-11-17T09:42:51.289787090Z I1117 09:42:51.289776       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-scripts/etcd.env" ...
+2025-11-17T09:42:51.289834302Z I1117 09:42:51.289823       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-scripts/cluster-backup.sh" ...
+2025-11-17T09:42:51.289890493Z I1117 09:42:51.289878       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-serving-ca" ...
+2025-11-17T09:42:51.289895298Z I1117 09:42:51.289890       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/etcd-serving-ca/ca-bundle.crt" ...
+2025-11-17T09:42:51.289969445Z I1117 09:42:51.289958       1 cmd.go:274] Creating directory "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/restore-etcd-pod" ...
+2025-11-17T09:42:51.289974208Z I1117 09:42:51.289968       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/restore-etcd-pod/forceRedeploymentReason" ...
+2025-11-17T09:42:51.290025774Z I1117 09:42:51.290016       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/restore-etcd-pod/pod.yaml" ...
+2025-11-17T09:42:51.290081365Z I1117 09:42:51.290069       1 cmd.go:626] Writing config file "/etc/kubernetes/static-pod-resources/etcd-certs/configmaps/restore-etcd-pod/version" ...
+2025-11-17T09:42:51.290144742Z I1117 09:42:51.290133       1 cmd.go:332] Getting pod configmaps/etcd-pod-10 -n openshift-etcd
+2025-11-17T09:42:51.489033605Z I1117 09:42:51.488922       1 cmd.go:348] Creating directory for static pod manifest "/etc/kubernetes/manifests" ...
+2025-11-17T09:42:51.489033605Z I1117 09:42:51.488977       1 cmd.go:376] Writing a pod under "etcd-pod.yaml" key 
+2025-11-17T09:42:51.489033605Z apiVersion: v1
+2025-11-17T09:42:51.489033605Z kind: Pod
+2025-11-17T09:42:51.489033605Z metadata:
+2025-11-17T09:42:51.489033605Z   name: etcd
+2025-11-17T09:42:51.489033605Z   namespace: openshift-etcd
+2025-11-17T09:42:51.489033605Z   annotations:
+2025-11-17T09:42:51.489033605Z     kubectl.kubernetes.io/default-container: etcd
+2025-11-17T09:42:51.489033605Z     target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+2025-11-17T09:42:51.489033605Z   labels:
+2025-11-17T09:42:51.489033605Z     app: etcd
+2025-11-17T09:42:51.489033605Z     k8s-app: etcd
+2025-11-17T09:42:51.489033605Z     etcd: "true"
+2025-11-17T09:42:51.489033605Z     revision: "10"
+2025-11-17T09:42:51.489033605Z spec:
+2025-11-17T09:42:51.489033605Z   initContainers:
+2025-11-17T09:42:51.489033605Z     - name: setup
+2025-11-17T09:42:51.489033605Z       image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626
+2025-11-17T09:42:51.489033605Z       imagePullPolicy: IfNotPresent
+2025-11-17T09:42:51.489033605Z       terminationMessagePolicy: FallbackToLogsOnError
+2025-11-17T09:42:51.489033605Z       command:
+2025-11-17T09:42:51.489033605Z         - /bin/sh
+2025-11-17T09:42:51.489033605Z         - -c
+2025-11-17T09:42:51.489033605Z         - |
+2025-11-17T09:42:51.489033605Z           #!/bin/sh
+2025-11-17T09:42:51.489033605Z           echo -n "Fixing etcd log permissions."
+2025-11-17T09:42:51.489033605Z           mkdir -p /var/log/etcd && chmod 0700 /var/log/etcd
+2025-11-17T09:42:51.489033605Z       securityContext:
+2025-11-17T09:42:51.489033605Z         privileged: true
+2025-11-17T09:42:51.489033605Z       resources:
+2025-11-17T09:42:51.489033605Z         requests:
+2025-11-17T09:42:51.489033605Z           memory: 50Mi
+2025-11-17T09:42:51.489033605Z           cpu: 5m
+2025-11-17T09:42:51.489033605Z       volumeMounts:
+2025-11-17T09:42:51.489033605Z         - mountPath: /var/log/etcd
+2025-11-17T09:42:51.489033605Z           name: log-dir
+2025-11-17T09:42:51.489033605Z     - name: etcd-ensure-env-vars
+2025-11-17T09:42:51.489033605Z       image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626
+2025-11-17T09:42:51.489033605Z       imagePullPolicy: IfNotPresent
+2025-11-17T09:42:51.489033605Z       terminationMessagePolicy: FallbackToLogsOnError
+2025-11-17T09:42:51.489033605Z       command:
+2025-11-17T09:42:51.489033605Z         - /bin/sh
+2025-11-17T09:42:51.489033605Z         - -c
+2025-11-17T09:42:51.489033605Z         - |
+2025-11-17T09:42:51.489033605Z           #!/bin/sh
+2025-11-17T09:42:51.489033605Z           set -euo pipefail
+2025-11-17T09:42:51.489033605Z 
+2025-11-17T09:42:51.489033605Z           : "${NODE_XXXXXX1_ETCD_URL_HOST?not set}"
+2025-11-17T09:42:51.489033605Z           : "${NODE_XXXXXX1_ETCD_NAME?not set}"
+2025-11-17T09:42:51.489033605Z           : "${NODE_XXXXXX1_IP?not set}"
+2025-11-17T09:42:51.489033605Z 
+2025-11-17T09:42:51.489033605Z           # check for ipv4 addresses as well as ipv6 addresses with extra square brackets
+2025-11-17T09:42:51.489033605Z           if [[ "${NODE_XXXXXX1_IP}" != "${NODE_IP}" && "${NODE_XXXXXX1_IP}" != "[${NODE_IP}]" ]]; then
+2025-11-17T09:42:51.489033605Z             # echo the error message to stderr
+2025-11-17T09:42:51.489033605Z             echo "Expected node IP to be ${NODE_IP} got ${NODE_XXXXXX1_IP}" >&2
+2025-11-17T09:42:51.489033605Z             exit 1
+2025-11-17T09:42:51.489033605Z           fi
+2025-11-17T09:42:51.489033605Z 
+2025-11-17T09:42:51.489033605Z           # check for ipv4 addresses as well as ipv6 addresses with extra square brackets
+2025-11-17T09:42:51.489033605Z           if [[ "${NODE_XXXXXX1_ETCD_URL_HOST}" != "${NODE_IP}" && "${NODE_XXXXXX1_ETCD_URL_HOST}" != "[${NODE_IP}]" ]]; then
+2025-11-17T09:42:51.489033605Z             # echo the error message to stderr
+2025-11-17T09:42:51.489033605Z             echo "Expected etcd url host to be ${NODE_IP} got ${NODE_XXXXXX1_ETCD_URL_HOST}" >&2
+2025-11-17T09:42:51.489033605Z             exit 1
+2025-11-17T09:42:51.489033605Z           fi
+2025-11-17T09:42:51.489033605Z 
+2025-11-17T09:42:51.489033605Z       resources:
+2025-11-17T09:42:51.489033605Z         requests:
+2025-11-17T09:42:51.489033605Z           memory: 60Mi
+2025-11-17T09:42:51.489033605Z           cpu: 10m
+2025-11-17T09:42:51.489033605Z       securityContext:
+2025-11-17T09:42:51.489033605Z         privileged: true
+2025-11-17T09:42:51.489033605Z       env:
+2025-11-17T09:42:51.489033605Z       - name: "ALL_ETCD_ENDPOINTS"
+2025-11-17T09:42:51.489033605Z         value: "https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"
+2025-11-17T09:42:51.489033605Z       - name: "ETCDCTL_API"
+2025-11-17T09:42:51.489033605Z         value: "3"
+2025-11-17T09:42:51.489033605Z       - name: "ETCDCTL_CACERT"
+2025-11-17T09:42:51.489033605Z         value: "/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt"
+2025-11-17T09:42:51.489033605Z       - name: "ETCDCTL_CERT"
+2025-11-17T09:42:51.489033605Z         value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt"
+2025-11-17T09:42:51.489033605Z       - name: "ETCDCTL_ENDPOINTS"
+2025-11-17T09:42:51.489033605Z         value: "https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"
+2025-11-17T09:42:51.489033605Z       - name: "ETCDCTL_KEY"
+2025-11-17T09:42:51.489033605Z         value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_CIPHER_SUITES"
+2025-11-17T09:42:51.489033605Z         value: "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_DATA_DIR"
+2025-11-17T09:42:51.489033605Z         value: "/var/lib/etcd"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_ELECTION_TIMEOUT"
+2025-11-17T09:42:51.489033605Z         value: "1000"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_ENABLE_PPROF"
+2025-11-17T09:42:51.489033605Z         value: "true"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_EXPERIMENTAL_MAX_LEARNERS"
+2025-11-17T09:42:51.489033605Z         value: "3"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION"
+2025-11-17T09:42:51.489033605Z         value: "200ms"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL"
+2025-11-17T09:42:51.489033605Z         value: "5s"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_HEARTBEAT_INTERVAL"
+2025-11-17T09:42:51.489033605Z         value: "100"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_IMAGE"
+2025-11-17T09:42:51.489033605Z         value: "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_INITIAL_CLUSTER_STATE"
+2025-11-17T09:42:51.489033605Z         value: "existing"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_QUOTA_BACKEND_BYTES"
+2025-11-17T09:42:51.489033605Z         value: "8589934592"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_SOCKET_REUSE_ADDRESS"
+2025-11-17T09:42:51.489033605Z         value: "true"
+2025-11-17T09:42:51.489033605Z       - name: "NODE_XXXXXX0_ETCD_NAME"
+2025-11-17T09:42:51.489033605Z         value: "XXXXXX0"
+2025-11-17T09:42:51.489033605Z       - name: "NODE_XXXXXX0_ETCD_URL_HOST"
+2025-11-17T09:42:51.489033605Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489033605Z       - name: "NODE_XXXXXX0_IP"
+2025-11-17T09:42:51.489033605Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489033605Z       - name: "NODE_XXXXXX1_ETCD_NAME"
+2025-11-17T09:42:51.489033605Z         value: "XXXXXX1"
+2025-11-17T09:42:51.489033605Z       - name: "NODE_XXXXXX1_ETCD_URL_HOST"
+2025-11-17T09:42:51.489033605Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489033605Z       - name: "NODE_XXXXXX1_IP"
+2025-11-17T09:42:51.489033605Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489033605Z       - name: "NODE_XXXXXX2_ETCD_NAME"
+2025-11-17T09:42:51.489033605Z         value: "XXXXXX2"
+2025-11-17T09:42:51.489033605Z       - name: "NODE_XXXXXX2_ETCD_URL_HOST"
+2025-11-17T09:42:51.489033605Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489033605Z       - name: "NODE_XXXXXX2_IP"
+2025-11-17T09:42:51.489033605Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489033605Z       - name: NODE_IP
+2025-11-17T09:42:51.489033605Z         valueFrom:
+2025-11-17T09:42:51.489033605Z           fieldRef:
+2025-11-17T09:42:51.489033605Z             fieldPath: status.podIP
+2025-11-17T09:42:51.489033605Z     - name: etcd-resources-copy
+2025-11-17T09:42:51.489033605Z       image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626
+2025-11-17T09:42:51.489033605Z       imagePullPolicy: IfNotPresent
+2025-11-17T09:42:51.489033605Z       terminationMessagePolicy: FallbackToLogsOnError
+2025-11-17T09:42:51.489033605Z       command:
+2025-11-17T09:42:51.489033605Z         - /bin/sh
+2025-11-17T09:42:51.489033605Z         - -c
+2025-11-17T09:42:51.489033605Z         - |
+2025-11-17T09:42:51.489033605Z           #!/bin/sh
+2025-11-17T09:42:51.489033605Z           set -euo pipefail
+2025-11-17T09:42:51.489033605Z 
+2025-11-17T09:42:51.489033605Z           rm -f $(grep -l '^### Created by cluster-etcd-operator' /usr/local/bin/*)
+2025-11-17T09:42:51.489033605Z           cp -p /etc/kubernetes/static-pod-certs/configmaps/etcd-scripts/*.sh /usr/local/bin
+2025-11-17T09:42:51.489033605Z 
+2025-11-17T09:42:51.489033605Z       resources:
+2025-11-17T09:42:51.489033605Z         requests:
+2025-11-17T09:42:51.489033605Z           memory: 60Mi
+2025-11-17T09:42:51.489033605Z           cpu: 10m
+2025-11-17T09:42:51.489033605Z       securityContext:
+2025-11-17T09:42:51.489033605Z         privileged: true
+2025-11-17T09:42:51.489033605Z       volumeMounts:
+2025-11-17T09:42:51.489033605Z         - mountPath: /etc/kubernetes/static-pod-resources
+2025-11-17T09:42:51.489033605Z           name: resource-dir
+2025-11-17T09:42:51.489033605Z         - mountPath: /etc/kubernetes/static-pod-certs
+2025-11-17T09:42:51.489033605Z           name: cert-dir
+2025-11-17T09:42:51.489033605Z         - mountPath: /usr/local/bin
+2025-11-17T09:42:51.489033605Z           name: usr-local-bin
+2025-11-17T09:42:51.489033605Z   containers:
+2025-11-17T09:42:51.489033605Z   # The etcdctl container should always be first. It is intended to be used
+2025-11-17T09:42:51.489033605Z   # to open a remote shell via `oc rsh` that is ready to run `etcdctl`.
+2025-11-17T09:42:51.489033605Z   - name: etcdctl
+2025-11-17T09:42:51.489033605Z     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626
+2025-11-17T09:42:51.489033605Z     imagePullPolicy: IfNotPresent
+2025-11-17T09:42:51.489033605Z     terminationMessagePolicy: FallbackToLogsOnError
+2025-11-17T09:42:51.489033605Z     command:
+2025-11-17T09:42:51.489033605Z       - "/bin/bash"
+2025-11-17T09:42:51.489033605Z       - "-c"
+2025-11-17T09:42:51.489033605Z       - "trap TERM INT; sleep infinity & wait"
+2025-11-17T09:42:51.489033605Z     resources:
+2025-11-17T09:42:51.489033605Z       requests:
+2025-11-17T09:42:51.489033605Z         memory: 60Mi
+2025-11-17T09:42:51.489033605Z         cpu: 10m
+2025-11-17T09:42:51.489033605Z     volumeMounts:
+2025-11-17T09:42:51.489033605Z       - mountPath: /etc/kubernetes/manifests
+2025-11-17T09:42:51.489033605Z         name: static-pod-dir
+2025-11-17T09:42:51.489033605Z       - mountPath: /etc/kubernetes/static-pod-resources
+2025-11-17T09:42:51.489033605Z         name: resource-dir
+2025-11-17T09:42:51.489033605Z       - mountPath: /etc/kubernetes/static-pod-certs
+2025-11-17T09:42:51.489033605Z         name: cert-dir
+2025-11-17T09:42:51.489033605Z       - mountPath: /var/lib/etcd/
+2025-11-17T09:42:51.489033605Z         name: data-dir
+2025-11-17T09:42:51.489033605Z     env:
+2025-11-17T09:42:51.489033605Z       - name: "ALL_ETCD_ENDPOINTS"
+2025-11-17T09:42:51.489033605Z         value: "https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"
+2025-11-17T09:42:51.489033605Z       - name: "ETCDCTL_API"
+2025-11-17T09:42:51.489033605Z         value: "3"
+2025-11-17T09:42:51.489033605Z       - name: "ETCDCTL_CACERT"
+2025-11-17T09:42:51.489033605Z         value: "/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt"
+2025-11-17T09:42:51.489033605Z       - name: "ETCDCTL_CERT"
+2025-11-17T09:42:51.489033605Z         value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt"
+2025-11-17T09:42:51.489033605Z       - name: "ETCDCTL_ENDPOINTS"
+2025-11-17T09:42:51.489033605Z         value: "https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"
+2025-11-17T09:42:51.489033605Z       - name: "ETCDCTL_KEY"
+2025-11-17T09:42:51.489033605Z         value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_CIPHER_SUITES"
+2025-11-17T09:42:51.489033605Z         value: "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_DATA_DIR"
+2025-11-17T09:42:51.489033605Z         value: "/var/lib/etcd"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_ELECTION_TIMEOUT"
+2025-11-17T09:42:51.489033605Z         value: "1000"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_ENABLE_PPROF"
+2025-11-17T09:42:51.489033605Z         value: "true"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_EXPERIMENTAL_MAX_LEARNERS"
+2025-11-17T09:42:51.489033605Z         value: "3"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION"
+2025-11-17T09:42:51.489033605Z         value: "200ms"
+2025-11-17T09:42:51.489033605Z       - name: "ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL"
+2025-11-17T09:42:51.489265806Z         value: "5s"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_HEARTBEAT_INTERVAL"
+2025-11-17T09:42:51.489265806Z         value: "100"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_IMAGE"
+2025-11-17T09:42:51.489265806Z         value: "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_INITIAL_CLUSTER_STATE"
+2025-11-17T09:42:51.489265806Z         value: "existing"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_QUOTA_BACKEND_BYTES"
+2025-11-17T09:42:51.489265806Z         value: "8589934592"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_SOCKET_REUSE_ADDRESS"
+2025-11-17T09:42:51.489265806Z         value: "true"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX0_ETCD_NAME"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXX0"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX0_ETCD_URL_HOST"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX0_IP"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX1_ETCD_NAME"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXX1"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX1_ETCD_URL_HOST"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX1_IP"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX2_ETCD_NAME"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXX2"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX2_ETCD_URL_HOST"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX2_IP"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_STATIC_POD_VERSION"
+2025-11-17T09:42:51.489265806Z         value: "10"
+2025-11-17T09:42:51.489265806Z   - name: etcd
+2025-11-17T09:42:51.489265806Z     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626
+2025-11-17T09:42:51.489265806Z     imagePullPolicy: IfNotPresent
+2025-11-17T09:42:51.489265806Z     terminationMessagePolicy: FallbackToLogsOnError
+2025-11-17T09:42:51.489265806Z     command:
+2025-11-17T09:42:51.489265806Z       - /bin/sh
+2025-11-17T09:42:51.489265806Z       - -c
+2025-11-17T09:42:51.489265806Z       - |
+2025-11-17T09:42:51.489265806Z         #!/bin/sh
+2025-11-17T09:42:51.489265806Z         set -euo pipefail
+2025-11-17T09:42:51.489265806Z 
+2025-11-17T09:42:51.489265806Z         etcdctl member list || true
+2025-11-17T09:42:51.489265806Z 
+2025-11-17T09:42:51.489265806Z         # this has a non-zero return code if the command is non-zero.  If you use an export first, it doesn't and you
+2025-11-17T09:42:51.489265806Z         # will succeed when you should fail.
+2025-11-17T09:42:51.489265806Z         ETCD_INITIAL_CLUSTER=$(discover-etcd-initial-cluster \
+2025-11-17T09:42:51.489265806Z           --cacert=/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt \
+2025-11-17T09:42:51.489265806Z           --cert=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt \
+2025-11-17T09:42:51.489265806Z           --key=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key \
+2025-11-17T09:42:51.489265806Z           --endpoints=${ALL_ETCD_ENDPOINTS} \
+2025-11-17T09:42:51.489265806Z           --data-dir=/var/lib/etcd \
+2025-11-17T09:42:51.489265806Z           --target-peer-url-host=${NODE_XXXXXX1_ETCD_URL_HOST} \
+2025-11-17T09:42:51.489265806Z           --target-name=XXXXXX1)
+2025-11-17T09:42:51.489265806Z         export ETCD_INITIAL_CLUSTER
+2025-11-17T09:42:51.489265806Z 
+2025-11-17T09:42:51.489265806Z         # we cannot use the "normal" port conflict initcontainer because when we upgrade, the existing static pod will never yield,
+2025-11-17T09:42:51.489265806Z         # so we do the detection in etcd container itself.
+2025-11-17T09:42:51.489265806Z         echo -n "Waiting for ports 2379, 2380 and 9978 to be released."
+2025-11-17T09:42:51.489265806Z         time while [ -n "$(ss -Htan '( sport = 2379 or sport = 2380 or sport = 9978 )')" ]; do
+2025-11-17T09:42:51.489265806Z           echo -n "."
+2025-11-17T09:42:51.489265806Z           sleep 1
+2025-11-17T09:42:51.489265806Z         done
+2025-11-17T09:42:51.489265806Z 
+2025-11-17T09:42:51.489265806Z         export ETCD_NAME=${NODE_XXXXXX1_ETCD_NAME}
+2025-11-17T09:42:51.489265806Z         env | grep ETCD | grep -v NODE
+2025-11-17T09:42:51.489265806Z 
+2025-11-17T09:42:51.489265806Z         set -x
+2025-11-17T09:42:51.489265806Z         # See https://etcd.io/docs/v3.4.0/tuning/ for why we use ionice
+2025-11-17T09:42:51.489265806Z         exec nice -n -19 ionice -c2 -n0 etcd \
+2025-11-17T09:42:51.489265806Z           --logger=zap \
+2025-11-17T09:42:51.489265806Z           --log-level=info \
+2025-11-17T09:42:51.489265806Z           --experimental-initial-corrupt-check=true \
+2025-11-17T09:42:51.489265806Z           --snapshot-count=10000 \
+2025-11-17T09:42:51.489265806Z           --initial-advertise-peer-urls=https://${NODE_XXXXXX1_IP}:2380 \
+2025-11-17T09:42:51.489265806Z           --cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX1.crt \
+2025-11-17T09:42:51.489265806Z           --key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX1.key \
+2025-11-17T09:42:51.489265806Z           --trusted-ca-file=/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt \
+2025-11-17T09:42:51.489265806Z           --client-cert-auth=true \
+2025-11-17T09:42:51.489265806Z           --peer-cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt \
+2025-11-17T09:42:51.489265806Z           --peer-key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key \
+2025-11-17T09:42:51.489265806Z           --peer-trusted-ca-file=/etc/kubernetes/static-pod-certs/configmaps/etcd-peer-client-ca/ca-bundle.crt \
+2025-11-17T09:42:51.489265806Z           --peer-client-cert-auth=true \
+2025-11-17T09:42:51.489265806Z           --advertise-client-urls=https://${NODE_XXXXXX1_IP}:2379 \
+2025-11-17T09:42:51.489265806Z           --listen-client-urls=https://0.0.0.0:2379,unixs://${NODE_XXXXXX1_IP}:0 \
+2025-11-17T09:42:51.489265806Z           --listen-peer-urls=https://0.0.0.0:2380 \
+2025-11-17T09:42:51.489265806Z           --metrics=extensive \
+2025-11-17T09:42:51.489265806Z           --listen-metrics-urls=https://0.0.0.0:9978 ||  mv /etc/kubernetes/etcd-backup-dir/etcd-member.yaml /etc/kubernetes/manifests
+2025-11-17T09:42:51.489265806Z     env:
+2025-11-17T09:42:51.489265806Z       - name: "ALL_ETCD_ENDPOINTS"
+2025-11-17T09:42:51.489265806Z         value: "https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"
+2025-11-17T09:42:51.489265806Z       - name: "ETCDCTL_API"
+2025-11-17T09:42:51.489265806Z         value: "3"
+2025-11-17T09:42:51.489265806Z       - name: "ETCDCTL_CACERT"
+2025-11-17T09:42:51.489265806Z         value: "/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt"
+2025-11-17T09:42:51.489265806Z       - name: "ETCDCTL_CERT"
+2025-11-17T09:42:51.489265806Z         value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt"
+2025-11-17T09:42:51.489265806Z       - name: "ETCDCTL_ENDPOINTS"
+2025-11-17T09:42:51.489265806Z         value: "https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"
+2025-11-17T09:42:51.489265806Z       - name: "ETCDCTL_KEY"
+2025-11-17T09:42:51.489265806Z         value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_CIPHER_SUITES"
+2025-11-17T09:42:51.489265806Z         value: "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_DATA_DIR"
+2025-11-17T09:42:51.489265806Z         value: "/var/lib/etcd"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_ELECTION_TIMEOUT"
+2025-11-17T09:42:51.489265806Z         value: "1000"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_ENABLE_PPROF"
+2025-11-17T09:42:51.489265806Z         value: "true"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_EXPERIMENTAL_MAX_LEARNERS"
+2025-11-17T09:42:51.489265806Z         value: "3"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION"
+2025-11-17T09:42:51.489265806Z         value: "200ms"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL"
+2025-11-17T09:42:51.489265806Z         value: "5s"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_HEARTBEAT_INTERVAL"
+2025-11-17T09:42:51.489265806Z         value: "100"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_IMAGE"
+2025-11-17T09:42:51.489265806Z         value: "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_INITIAL_CLUSTER_STATE"
+2025-11-17T09:42:51.489265806Z         value: "existing"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_QUOTA_BACKEND_BYTES"
+2025-11-17T09:42:51.489265806Z         value: "8589934592"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_SOCKET_REUSE_ADDRESS"
+2025-11-17T09:42:51.489265806Z         value: "true"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX0_ETCD_NAME"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXX0"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX0_ETCD_URL_HOST"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX0_IP"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX1_ETCD_NAME"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXX1"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX1_ETCD_URL_HOST"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX1_IP"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX2_ETCD_NAME"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXX2"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX2_ETCD_URL_HOST"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "NODE_XXXXXX2_IP"
+2025-11-17T09:42:51.489265806Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489265806Z       - name: "ETCD_STATIC_POD_VERSION"
+2025-11-17T09:42:51.489265806Z         value: "10"
+2025-11-17T09:42:51.489265806Z     resources:
+2025-11-17T09:42:51.489265806Z       requests:
+2025-11-17T09:42:51.489265806Z         memory: 600Mi
+2025-11-17T09:42:51.489265806Z         cpu: 300m
+2025-11-17T09:42:51.489265806Z     readinessProbe:
+2025-11-17T09:42:51.489265806Z       httpGet:
+2025-11-17T09:42:51.489265806Z         port: 9980
+2025-11-17T09:42:51.489265806Z         path: readyz
+2025-11-17T09:42:51.489265806Z         scheme: HTTPS
+2025-11-17T09:42:51.489265806Z       timeoutSeconds: 30
+2025-11-17T09:42:51.489265806Z       failureThreshold: 5
+2025-11-17T09:42:51.489265806Z       periodSeconds: 5
+2025-11-17T09:42:51.489265806Z       successThreshold: 1
+2025-11-17T09:42:51.489265806Z     livenessProbe:
+2025-11-17T09:42:51.489265806Z       httpGet:
+2025-11-17T09:42:51.489265806Z         path: healthz
+2025-11-17T09:42:51.489265806Z         port: 9980
+2025-11-17T09:42:51.489265806Z         scheme: HTTPS
+2025-11-17T09:42:51.489265806Z       timeoutSeconds: 30
+2025-11-17T09:42:51.489265806Z       periodSeconds: 5
+2025-11-17T09:42:51.489265806Z       successThreshold: 1
+2025-11-17T09:42:51.489265806Z       failureThreshold: 5
+2025-11-17T09:42:51.489265806Z     startupProbe:
+2025-11-17T09:42:51.489265806Z       httpGet:
+2025-11-17T09:42:51.489265806Z         port: 9980
+2025-11-17T09:42:51.489265806Z         path: readyz
+2025-11-17T09:42:51.489265806Z         scheme: HTTPS
+2025-11-17T09:42:51.489265806Z       initialDelaySeconds: 10
+2025-11-17T09:42:51.489265806Z       timeoutSeconds: 1
+2025-11-17T09:42:51.489265806Z       periodSeconds: 10
+2025-11-17T09:42:51.489265806Z       successThreshold: 1
+2025-11-17T09:42:51.489265806Z       failureThreshold: 18
+2025-11-17T09:42:51.489265806Z     securityContext:
+2025-11-17T09:42:51.489265806Z       privileged: true
+2025-11-17T09:42:51.489265806Z     volumeMounts:
+2025-11-17T09:42:51.489265806Z       - mountPath: /etc/kubernetes/manifests
+2025-11-17T09:42:51.489265806Z         name: static-pod-dir
+2025-11-17T09:42:51.489265806Z       - mountPath: /etc/kubernetes/static-pod-resources
+2025-11-17T09:42:51.489265806Z         name: resource-dir
+2025-11-17T09:42:51.489265806Z       - mountPath: /etc/kubernetes/static-pod-certs
+2025-11-17T09:42:51.489265806Z         name: cert-dir
+2025-11-17T09:42:51.489265806Z       - mountPath: /var/lib/etcd/
+2025-11-17T09:42:51.489265806Z         name: data-dir
+2025-11-17T09:42:51.489265806Z   - name: etcd-metrics
+2025-11-17T09:42:51.489265806Z     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626
+2025-11-17T09:42:51.489265806Z     imagePullPolicy: IfNotPresent
+2025-11-17T09:42:51.489265806Z     terminationMessagePolicy: FallbackToLogsOnError
+2025-11-17T09:42:51.489265806Z     command:
+2025-11-17T09:42:51.489265806Z       - /bin/sh
+2025-11-17T09:42:51.489265806Z       - -c
+2025-11-17T09:42:51.489265806Z       - |
+2025-11-17T09:42:51.489265806Z         #!/bin/sh
+2025-11-17T09:42:51.489265806Z         set -euo pipefail
+2025-11-17T09:42:51.489265806Z 
+2025-11-17T09:42:51.489265806Z         export ETCD_NAME=${NODE_XXXXXX1_ETCD_NAME}
+2025-11-17T09:42:51.489265806Z 
+2025-11-17T09:42:51.489265806Z         exec nice -n -18 etcd grpc-proxy start \
+2025-11-17T09:42:51.489265806Z           --endpoints https://${NODE_XXXXXX1_ETCD_URL_HOST}:9978 \
+2025-11-17T09:42:51.489334100Z           --metrics-addr https://0.0.0.0:9979 \
+2025-11-17T09:42:51.489334100Z           --listen-addr 127.0.0.1:9977 \
+2025-11-17T09:42:51.489334100Z           --advertise-client-url ""  \
+2025-11-17T09:42:51.489334100Z           --key /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key \
+2025-11-17T09:42:51.489334100Z           --key-file /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX1.key \
+2025-11-17T09:42:51.489334100Z           --cert /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt \
+2025-11-17T09:42:51.489334100Z           --cert-file /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX1.crt \
+2025-11-17T09:42:51.489334100Z           --cacert /etc/kubernetes/static-pod-certs/configmaps/etcd-peer-client-ca/ca-bundle.crt \
+2025-11-17T09:42:51.489334100Z           --trusted-ca-file /etc/kubernetes/static-pod-certs/configmaps/etcd-metrics-proxy-serving-ca/ca-bundle.crt \
+2025-11-17T09:42:51.489334100Z           --listen-cipher-suites TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256
+2025-11-17T09:42:51.489334100Z     env:
+2025-11-17T09:42:51.489334100Z       - name: "ALL_ETCD_ENDPOINTS"
+2025-11-17T09:42:51.489334100Z         value: "https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"
+2025-11-17T09:42:51.489334100Z       - name: "ETCDCTL_API"
+2025-11-17T09:42:51.489334100Z         value: "3"
+2025-11-17T09:42:51.489334100Z       - name: "ETCDCTL_CACERT"
+2025-11-17T09:42:51.489334100Z         value: "/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt"
+2025-11-17T09:42:51.489334100Z       - name: "ETCDCTL_CERT"
+2025-11-17T09:42:51.489334100Z         value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt"
+2025-11-17T09:42:51.489334100Z       - name: "ETCDCTL_ENDPOINTS"
+2025-11-17T09:42:51.489334100Z         value: "https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"
+2025-11-17T09:42:51.489334100Z       - name: "ETCDCTL_KEY"
+2025-11-17T09:42:51.489334100Z         value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_CIPHER_SUITES"
+2025-11-17T09:42:51.489334100Z         value: "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_DATA_DIR"
+2025-11-17T09:42:51.489334100Z         value: "/var/lib/etcd"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_ELECTION_TIMEOUT"
+2025-11-17T09:42:51.489334100Z         value: "1000"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_ENABLE_PPROF"
+2025-11-17T09:42:51.489334100Z         value: "true"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_EXPERIMENTAL_MAX_LEARNERS"
+2025-11-17T09:42:51.489334100Z         value: "3"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION"
+2025-11-17T09:42:51.489334100Z         value: "200ms"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL"
+2025-11-17T09:42:51.489334100Z         value: "5s"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_HEARTBEAT_INTERVAL"
+2025-11-17T09:42:51.489334100Z         value: "100"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_IMAGE"
+2025-11-17T09:42:51.489334100Z         value: "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_INITIAL_CLUSTER_STATE"
+2025-11-17T09:42:51.489334100Z         value: "existing"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_QUOTA_BACKEND_BYTES"
+2025-11-17T09:42:51.489334100Z         value: "8589934592"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_SOCKET_REUSE_ADDRESS"
+2025-11-17T09:42:51.489334100Z         value: "true"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX0_ETCD_NAME"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXX0"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX0_ETCD_URL_HOST"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX0_IP"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX1_ETCD_NAME"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXX1"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX1_ETCD_URL_HOST"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX1_IP"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX2_ETCD_NAME"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXX2"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX2_ETCD_URL_HOST"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX2_IP"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_STATIC_POD_VERSION"
+2025-11-17T09:42:51.489334100Z         value: "10"
+2025-11-17T09:42:51.489334100Z     resources:
+2025-11-17T09:42:51.489334100Z       requests:
+2025-11-17T09:42:51.489334100Z         memory: 200Mi
+2025-11-17T09:42:51.489334100Z         cpu: 40m
+2025-11-17T09:42:51.489334100Z     securityContext:
+2025-11-17T09:42:51.489334100Z       privileged: true
+2025-11-17T09:42:51.489334100Z     volumeMounts:
+2025-11-17T09:42:51.489334100Z       - mountPath: /etc/kubernetes/static-pod-resources
+2025-11-17T09:42:51.489334100Z         name: resource-dir
+2025-11-17T09:42:51.489334100Z       - mountPath: /etc/kubernetes/static-pod-certs
+2025-11-17T09:42:51.489334100Z         name: cert-dir
+2025-11-17T09:42:51.489334100Z       - mountPath: /var/lib/etcd/
+2025-11-17T09:42:51.489334100Z         name: data-dir
+2025-11-17T09:42:51.489334100Z   - name: etcd-readyz
+2025-11-17T09:42:51.489334100Z     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08246544079b9d97090ecfe34b29b2770b9c31ce7b3eb2ff330f37c3428cbd2a
+2025-11-17T09:42:51.489334100Z     imagePullPolicy: IfNotPresent
+2025-11-17T09:42:51.489334100Z     terminationMessagePolicy: FallbackToLogsOnError
+2025-11-17T09:42:51.489334100Z     command:
+2025-11-17T09:42:51.489334100Z       - /bin/sh
+2025-11-17T09:42:51.489334100Z       - -c
+2025-11-17T09:42:51.489334100Z       - |
+2025-11-17T09:42:51.489334100Z         #!/bin/sh
+2025-11-17T09:42:51.489334100Z         set -euo pipefail
+2025-11-17T09:42:51.489334100Z         
+2025-11-17T09:42:51.489334100Z         exec nice -n -18 cluster-etcd-operator readyz \
+2025-11-17T09:42:51.489334100Z           --target=https://localhost:2379 \
+2025-11-17T09:42:51.489334100Z           --listen-port=9980 \
+2025-11-17T09:42:51.489334100Z           --serving-cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX1.crt \
+2025-11-17T09:42:51.489334100Z           --serving-key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX1.key \
+2025-11-17T09:42:51.489334100Z           --client-cert-file=$(ETCDCTL_CERT) \
+2025-11-17T09:42:51.489334100Z           --client-key-file=$(ETCDCTL_KEY) \
+2025-11-17T09:42:51.489334100Z           --client-cacert-file=$(ETCDCTL_CACERT)
+2025-11-17T09:42:51.489334100Z     securityContext:
+2025-11-17T09:42:51.489334100Z       privileged: true
+2025-11-17T09:42:51.489334100Z     ports:
+2025-11-17T09:42:51.489334100Z     - containerPort: 9980
+2025-11-17T09:42:51.489334100Z       name: readyz
+2025-11-17T09:42:51.489334100Z       protocol: TCP
+2025-11-17T09:42:51.489334100Z     resources:
+2025-11-17T09:42:51.489334100Z       requests:
+2025-11-17T09:42:51.489334100Z         memory: 50Mi
+2025-11-17T09:42:51.489334100Z         cpu: 10m
+2025-11-17T09:42:51.489334100Z     env:
+2025-11-17T09:42:51.489334100Z       - name: "ALL_ETCD_ENDPOINTS"
+2025-11-17T09:42:51.489334100Z         value: "https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"
+2025-11-17T09:42:51.489334100Z       - name: "ETCDCTL_API"
+2025-11-17T09:42:51.489334100Z         value: "3"
+2025-11-17T09:42:51.489334100Z       - name: "ETCDCTL_CACERT"
+2025-11-17T09:42:51.489334100Z         value: "/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt"
+2025-11-17T09:42:51.489334100Z       - name: "ETCDCTL_CERT"
+2025-11-17T09:42:51.489334100Z         value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt"
+2025-11-17T09:42:51.489334100Z       - name: "ETCDCTL_ENDPOINTS"
+2025-11-17T09:42:51.489334100Z         value: "https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"
+2025-11-17T09:42:51.489334100Z       - name: "ETCDCTL_KEY"
+2025-11-17T09:42:51.489334100Z         value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_CIPHER_SUITES"
+2025-11-17T09:42:51.489334100Z         value: "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_DATA_DIR"
+2025-11-17T09:42:51.489334100Z         value: "/var/lib/etcd"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_ELECTION_TIMEOUT"
+2025-11-17T09:42:51.489334100Z         value: "1000"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_ENABLE_PPROF"
+2025-11-17T09:42:51.489334100Z         value: "true"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_EXPERIMENTAL_MAX_LEARNERS"
+2025-11-17T09:42:51.489334100Z         value: "3"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION"
+2025-11-17T09:42:51.489334100Z         value: "200ms"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL"
+2025-11-17T09:42:51.489334100Z         value: "5s"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_HEARTBEAT_INTERVAL"
+2025-11-17T09:42:51.489334100Z         value: "100"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_IMAGE"
+2025-11-17T09:42:51.489334100Z         value: "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_INITIAL_CLUSTER_STATE"
+2025-11-17T09:42:51.489334100Z         value: "existing"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_QUOTA_BACKEND_BYTES"
+2025-11-17T09:42:51.489334100Z         value: "8589934592"
+2025-11-17T09:42:51.489334100Z       - name: "ETCD_SOCKET_REUSE_ADDRESS"
+2025-11-17T09:42:51.489334100Z         value: "true"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX0_ETCD_NAME"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXX0"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX0_ETCD_URL_HOST"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX0_IP"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX1_ETCD_NAME"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXX1"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX1_ETCD_URL_HOST"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX1_IP"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX2_ETCD_NAME"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXX2"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX2_ETCD_URL_HOST"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z       - name: "NODE_XXXXXX2_IP"
+2025-11-17T09:42:51.489334100Z         value: "XXXXXXXXXXX"
+2025-11-17T09:42:51.489334100Z     volumeMounts:
+2025-11-17T09:42:51.489334100Z       - mountPath: /var/log/etcd/
+2025-11-17T09:42:51.489334100Z         name: log-dir
+2025-11-17T09:42:51.489334100Z       - mountPath: /etc/kubernetes/static-pod-certs
+2025-11-17T09:42:51.489334100Z         name: cert-dir
+2025-11-17T09:42:51.489334100Z   hostNetwork: true
+2025-11-17T09:42:51.489334100Z   priorityClassName: system-node-critical
+2025-11-17T09:42:51.489334100Z   tolerations:
+2025-11-17T09:42:51.489334100Z   - operator: "Exists"
+2025-11-17T09:42:51.489334100Z   volumes:
+2025-11-17T09:42:51.489334100Z     - hostPath:
+2025-11-17T09:42:51.489334100Z         path: /etc/kubernetes/manifests
+2025-11-17T09:42:51.489334100Z       name: static-pod-dir
+2025-11-17T09:42:51.489334100Z     - hostPath:
+2025-11-17T09:42:51.489334100Z         path: /etc/kubernetes/static-pod-resources/etcd-pod-10
+2025-11-17T09:42:51.489334100Z       name: resource-dir
+2025-11-17T09:42:51.489334100Z     - hostPath:
+2025-11-17T09:42:51.489334100Z         path: /etc/kubernetes/static-pod-resources/etcd-certs
+2025-11-17T09:42:51.489334100Z       name: cert-dir
+2025-11-17T09:42:51.489334100Z     - hostPath:
+2025-11-17T09:42:51.489334100Z         path: /var/lib/etcd
+2025-11-17T09:42:51.489334100Z         type: ""
+2025-11-17T09:42:51.489334100Z       name: data-dir
+2025-11-17T09:42:51.489334100Z     - hostPath:
+2025-11-17T09:42:51.489334100Z         path: /usr/local/bin
+2025-11-17T09:42:51.489334100Z       name: usr-local-bin
+2025-11-17T09:42:51.489334100Z     - hostPath:
+2025-11-17T09:42:51.489334100Z         path: /var/log/etcd
+2025-11-17T09:42:51.489334100Z       name: log-dir
+2025-11-17T09:42:51.565182336Z I1117 09:42:51.565092       1 cmd.go:607] Writing pod manifest "/etc/kubernetes/static-pod-resources/etcd-pod-10/etcd-pod.yaml" ...
+2025-11-17T09:42:51.565313411Z I1117 09:42:51.565295       1 cmd.go:614] Removed existing static pod manifest "/etc/kubernetes/manifests/etcd-pod.yaml" ...
+2025-11-17T09:42:51.565359215Z I1117 09:42:51.565305       1 cmd.go:618] Writing static pod manifest "/etc/kubernetes/manifests/etcd-pod.yaml" ...
+2025-11-17T09:42:51.565359215Z {"kind":"Pod","apiVersion":"v1","metadata":{"name":"etcd","namespace":"openshift-etcd","creationTimestamp":null,"labels":{"app":"etcd","etcd":"true","k8s-app":"etcd","revision":"10"},"annotations":{"kubectl.kubernetes.io/default-container":"etcd","target.workload.openshift.io/management":"{\"effect\": \"PreferredDuringScheduling\"}"}},"spec":{"volumes":[{"name":"static-pod-dir","hostPath":{"path":"/etc/kubernetes/manifests"}},{"name":"resource-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/etcd-pod-10"}},{"name":"cert-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/etcd-certs"}},{"name":"data-dir","hostPath":{"path":"/var/lib/etcd","type":""}},{"name":"usr-local-bin","hostPath":{"path":"/usr/local/bin"}},{"name":"log-dir","hostPath":{"path":"/var/log/etcd"}}],"initContainers":[{"name":"setup","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626","command":["/bin/sh","-c","#!/bin/sh\necho -n \"Fixing etcd log permissions.\"\nmkdir -p /var/log/etcd \u0026\u0026 chmod 0700 /var/log/etcd\n"],"resources":{"requests":{"cpu":"5m","memory":"50Mi"}},"volumeMounts":[{"name":"log-dir","mountPath":"/var/log/etcd"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent","securityContext":{"privileged":true}},{"name":"etcd-ensure-env-vars","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626","command":["/bin/sh","-c","#!/bin/sh\nset -euo pipefail\n\n: \"${NODE_XXXXXX1_ETCD_URL_HOST?not set}\"\n: \"${NODE_XXXXXX1_ETCD_NAME?not set}\"\n: \"${NODE_XXXXXX1_IP?not set}\"\n\n# check for ipv4 addresses as well as ipv6 addresses with extra square brackets\nif [[ \"${NODE_XXXXXX1_IP}\" != \"${NODE_IP}\" \u0026\u0026 \"${NODE_XXXXXX1_IP}\" != \"[${NODE_IP}]\" ]]; then\n  # echo the error message to stderr\n  echo \"Expected node IP to be ${NODE_IP} got ${NODE_XXXXXX1_IP}\" \u003e\u00262\n  exit 1\nfi\n\n# check for ipv4 addresses as well as ipv6 addresses with extra square brackets\nif [[ \"${NODE_XXXXXX1_ETCD_URL_HOST}\" != \"${NODE_IP}\" \u0026\u0026 \"${NODE_XXXXXX1_ETCD_URL_HOST}\" != \"[${NODE_IP}]\" ]]; then\n  # echo the error message to stderr\n  echo \"Expected etcd url host to be ${NODE_IP} got ${NODE_XXXXXX1_ETCD_URL_HOST}\" \u003e\u00262\n  exit 1\nfi\n"],"env":[{"name":"ALL_ETCD_ENDPOINTS","value":"https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"},{"name":"ETCDCTL_API","value":"3"},{"name":"ETCDCTL_CACERT","value":"/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt"},{"name":"ETCDCTL_CERT","value":"/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt"},{"name":"ETCDCTL_ENDPOINTS","value":"https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"},{"name":"ETCDCTL_KEY","value":"/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key"},{"name":"ETCD_CIPHER_SUITES","value":"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"},{"name":"ETCD_DATA_DIR","value":"/var/lib/etcd"},{"name":"ETCD_ELECTION_TIMEOUT","value":"1000"},{"name":"ETCD_ENABLE_PPROF","value":"true"},{"name":"ETCD_EXPERIMENTAL_MAX_LEARNERS","value":"3"},{"name":"ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION","value":"200ms"},{"name":"ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL","value":"5s"},{"name":"ETCD_HEARTBEAT_INTERVAL","value":"100"},{"name":"ETCD_IMAGE","value":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626"},{"name":"ETCD_INITIAL_CLUSTER_STATE","value":"existing"},{"name":"ETCD_QUOTA_BACKEND_BYTES","value":"8589934592"},{"name":"ETCD_SOCKET_REUSE_ADDRESS","value":"true"},{"name":"NODE_XXXXXX0_ETCD_NAME","value":"XXXXXX0"},{"name":"NODE_XXXXXX0_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX0_IP","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX1_ETCD_NAME","value":"XXXXXX1"},{"name":"NODE_XXXXXX1_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX1_IP","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX2_ETCD_NAME","value":"XXXXXX2"},{"name":"NODE_XXXXXX2_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX2_IP","value":"XXXXXXXXXXX"},{"name":"NODE_IP","valueFrom":{"fieldRef":{"fieldPath":"status.podIP"}}}],"resources":{"requests":{"cpu":"10m","memory":"60Mi"}},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent","securityContext":{"privileged":true}},{"name":"etcd-resources-copy","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626","command":["/bin/sh","-c","#!/bin/sh\nset -euo pipefail\n\nrm -f $(grep -l '^### Created by cluster-etcd-operator' /usr/local/bin/*)\ncp -p /etc/kubernetes/static-pod-certs/configmaps/etcd-scripts/*.sh /usr/local/bin\n"],"resources":{"requests":{"cpu":"10m","memory":"60Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"},{"name":"usr-local-bin","mountPath":"/usr/local/bin"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent","securityContext":{"privileged":true}}],"containers":[{"name":"etcdctl","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626","command":["/bin/bash","-c","trap TERM INT; sleep infinity \u0026 wait"],"env":[{"name":"ALL_ETCD_ENDPOINTS","value":"https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"},{"name":"ETCDCTL_API","value":"3"},{"name":"ETCDCTL_CACERT","value":"/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt"},{"name":"ETCDCTL_CERT","value":"/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt"},{"name":"ETCDCTL_ENDPOINTS","value":"https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"},{"name":"ETCDCTL_KEY","value":"/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key"},{"name":"ETCD_CIPHER_SUITES","value":"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"},{"name":"ETCD_DATA_DIR","value":"/var/lib/etcd"},{"name":"ETCD_ELECTION_TIMEOUT","value":"1000"},{"name":"ETCD_ENABLE_PPROF","value":"true"},{"name":"ETCD_EXPERIMENTAL_MAX_LEARNERS","value":"3"},{"name":"ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION","value":"200ms"},{"name":"ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL","value":"5s"},{"name":"ETCD_HEARTBEAT_INTERVAL","value":"100"},{"name":"ETCD_IMAGE","value":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626"},{"name":"ETCD_INITIAL_CLUSTER_STATE","value":"existing"},{"name":"ETCD_QUOTA_BACKEND_BYTES","value":"8589934592"},{"name":"ETCD_SOCKET_REUSE_ADDRESS","value":"true"},{"name":"NODE_XXXXXX0_ETCD_NAME","value":"XXXXXX0"},{"name":"NODE_XXXXXX0_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX0_IP","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX1_ETCD_NAME","value":"XXXXXX1"},{"name":"NODE_XXXXXX1_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX1_IP","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX2_ETCD_NAME","value":"XXXXXX2"},{"name":"NODE_XXXXXX2_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX2_IP","value":"XXXXXXXXXXX"},{"name":"ETCD_STATIC_POD_VERSION","value":"10"}],"resources":{"requests":{"cpu":"10m","memory":"60Mi"}},"volumeMounts":[{"name":"static-pod-dir","mountPath":"/etc/kubernetes/manifests"},{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"},{"name":"data-dir","mountPath":"/var/lib/etcd/"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"},{"name":"etcd","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626","command":["/bin/sh","-c","#!/bin/sh\nset -euo pipefail\n\netcdctl member list || true\n\n# this has a non-zero return code if the command is non-zero.  If you use an export first, it doesn't and you\n# will succeed when you should fail.\nETCD_INITIAL_CLUSTER=$(discover-etcd-initial-cluster \\\n  --cacert=/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt \\\n  --cert=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt \\\n  --key=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key \\\n  --endpoints=${ALL_ETCD_ENDPOINTS} \\\n  --data-dir=/var/lib/etcd \\\n  --target-peer-url-host=${NODE_XXXXXX1_ETCD_URL_HOST} \\\n  --target-name=XXXXXX1)\nexport ETCD_INITIAL_CLUSTER\n\n# we cannot use the \"normal\" port conflict initcontainer because when we upgrade, the existing static pod will never yield,\n# so we do the detection in etcd container itself.\necho -n \"Waiting for ports 2379, 2380 and 9978 to be released.\"\ntime while [ -n \"$(ss -Htan '( sport = 2379 or sport = 2380 or sport = 9978 )')\" ]; do\n  echo -n \".\"\n  sleep 1\ndone\n\nexport ETCD_NAME=${NODE_XXXXXX1_ETCD_NAME}\nenv | grep ETCD | grep -v NODE\n\nset -x\n# See https://etcd.io/docs/v3.4.0/tuning/ for why we use ionice\nexec nice -n -19 ionice -c2 -n0 etcd \\\n  --logger=zap \\\n  --log-level=info \\\n  --experimental-initial-corrupt-check=true \\\n  --snapshot-count=10000 \\\n  --initial-advertise-peer-urls=https://${NODE_XXXXXX1_IP}:2380 \\\n  --cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX1.crt \\\n  --key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX1.key \\\n  --trusted-ca-file=/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt \\\n  --client-cert-auth=true \\\n  --peer-cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt \\\n  --peer-key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key \\\n  --peer-trusted-ca-file=/etc/kubernetes/static-pod-certs/configmaps/etcd-peer-client-ca/ca-bundle.crt \\\n  --peer-client-cert-auth=true \\\n  --advertise-client-urls=https://${NODE_XXXXXX1_IP}:2379 \\\n  --listen-client-urls=https://0.0.0.0:2379,unixs://${NODE_XXXXXX1_IP}:0 \\\n  --listen-peer-urls=https://0.0.0.0:2380 \\\n  --metrics=extensive \\\n  --listen-metrics-urls=https://0.0.0.0:9978 ||  mv /etc/kubernetes/etcd-backup-dir/etcd-member.yaml /etc/kubernetes/manifests\n"],"env":[{"name":"ALL_ETCD_ENDPOINTS","value":"https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"},{"name":"ETCDCTL_API","value":"3"},{"name":"ETCDCTL_CACERT","value":"/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt"},{"name":"ETCDCTL_CERT","value":"/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt"},{"name":"ETCDCTL_ENDPOINTS","value":"https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"},{"name":"ETCDCTL_KEY","value":"/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key"},{"name":"ETCD_CIPHER_SUITES","value":"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"},{"name":"ETCD_DATA_DIR","value":"/var/lib/etcd"},{"name":"ETCD_ELECTION_TIMEOUT","value":"1000"},{"name":"ETCD_ENABLE_PPROF","value":"true"},{"name":"ETCD_EXPERIMENTAL_MAX_LEARNERS","value":"3"},{"name":"ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION","value":"200ms"},{"name":"ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL","value":"5s"},{"name":"ETCD_HEARTBEAT_INTERVAL","value":"100"},{"name":"ETCD_IMAGE","value":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626"},{"name":"ETCD_INITIAL_CLUSTER_STATE","value":"existing"},{"name":"ETCD_QUOTA_BACKEND_BYTES","value":"8589934592"},{"name":"ETCD_SOCKET_REUSE_ADDRESS","value":"true"},{"name":"NODE_XXXXXX0_ETCD_NAME","value":"XXXXXX0"},{"name":"NODE_XXXXXX0_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX0_IP","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX1_ETCD_NAME","value":"XXXXXX1"},{"name":"NODE_XXXXXX1_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX1_IP","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX2_ETCD_NAME","value":"XXXXXX2"},{"name":"NODE_XXXXXX2_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX2_IP","value":"XXXXXXXXXXX"},{"name":"ETCD_STATIC_POD_VERSION","value":"10"}],"resources":{"requests":{"cpu":"300m","memory":"600Mi"}},"volumeMounts":[{"name":"static-pod-dir","mountPath":"/etc/kubernetes/manifests"},{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"},{"name":"data-dir","mountPath":"/var/lib/etcd/"}],"livenessProbe":{"httpGet":{"path":"healthz","port":9980,"scheme":"HTTPS"},"timeoutSeconds":30,"periodSeconds":5,"successThreshold":1,"failureThreshold":5},"readinessProbe":{"httpGet":{"path":"readyz","port":9980,"scheme":"HTTPS"},"timeoutSeconds":30,"periodSeconds":5,"successThreshold":1,"failureThreshold":5},"startupProbe":{"httpGet":{"path":"readyz","port":9980,"scheme":"HTTPS"},"initialDelaySeconds":10,"timeoutSeconds":1,"periodSeconds":10,"successThreshold":1,"failureThreshold":18},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent","securityContext":{"privileged":true}},{"name":"etcd-metrics","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626","command":["/bin/sh","-c","#!/bin/sh\nset -euo pipefail\n\nexport ETCD_NAME=${NODE_XXXXXX1_ETCD_NAME}\n\nexec nice -n -18 etcd grpc-proxy start \\\n  --endpoints https://${NODE_XXXXXX1_ETCD_URL_HOST}:9978 \\\n  --metrics-addr https://0.0.0.0:9979 \\\n  --listen-addr 127.0.0.1:9977 \\\n  --advertise-client-url \"\"  \\\n  --key /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key \\\n  --key-file /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX1.key \\\n  --cert /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt \\\n  --cert-file /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-metrics-XXXXXX1.crt \\\n  --cacert /etc/kubernetes/static-pod-certs/configmaps/etcd-peer-client-ca/ca-bundle.crt \\\n  --trusted-ca-file /etc/kubernetes/static-pod-certs/configmaps/etcd-metrics-proxy-serving-ca/ca-bundle.crt \\\n  --listen-cipher-suites TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256\n"],"env":[{"name":"ALL_ETCD_ENDPOINTS","value":"https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"},{"name":"ETCDCTL_API","value":"3"},{"name":"ETCDCTL_CACERT","value":"/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt"},{"name":"ETCDCTL_CERT","value":"/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt"},{"name":"ETCDCTL_ENDPOINTS","value":"https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"},{"name":"ETCDCTL_KEY","value":"/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key"},{"name":"ETCD_CIPHER_SUITES","value":"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"},{"name":"ETCD_DATA_DIR","value":"/var/lib/etcd"},{"name":"ETCD_ELECTION_TIMEOUT","value":"1000"},{"name":"ETCD_ENABLE_PPROF","value":"true"},{"name":"ETCD_EXPERIMENTAL_MAX_LEARNERS","value":"3"},{"name":"ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION","value":"200ms"},{"name":"ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL","value":"5s"},{"name":"ETCD_HEARTBEAT_INTERVAL","value":"100"},{"name":"ETCD_IMAGE","value":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626"},{"name":"ETCD_INITIAL_CLUSTER_STATE","value":"existing"},{"name":"ETCD_QUOTA_BACKEND_BYTES","value":"8589934592"},{"name":"ETCD_SOCKET_REUSE_ADDRESS","value":"true"},{"name":"NODE_XXXXXX0_ETCD_NAME","value":"XXXXXX0"},{"name":"NODE_XXXXXX0_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX0_IP","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX1_ETCD_NAME","value":"XXXXXX1"},{"name":"NODE_XXXXXX1_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX1_IP","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX2_ETCD_NAME","value":"XXXXXX2"},{"name":"NODE_XXXXXX2_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX2_IP","value":"XXXXXXXXXXX"},{"name":"ETCD_STATIC_POD_VERSION","value":"10"}],"resources":{"requests":{"cpu":"40m","memory":"200Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"},{"name":"data-dir","mountPath":"/var/lib/etcd/"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent","securityContext":{"privileged":true}},{"name":"etcd-readyz","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:08246544079b9d97090ecfe34b29b2770b9c31ce7b3eb2ff330f37c3428cbd2a","command":["/bin/sh","-c","#!/bin/sh\nset -euo pipefail\n\nexec nice -n -18 cluster-etcd-operator readyz \\\n  --target=https://localhost:2379 \\\n  --listen-port=9980 \\\n  --serving-cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX1.crt \\\n  --serving-key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-XXXXXX1.key \\\n  --client-cert-file=$(ETCDCTL_CERT) \\\n  --client-key-file=$(ETCDCTL_KEY) \\\n  --client-cacert-file=$(ETCDCTL_CACERT)\n"],"ports":[{"name":"readyz","containerPort":9980,"protocol":"TCP"}],"env":[{"name":"ALL_ETCD_ENDPOINTS","value":"https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"},{"name":"ETCDCTL_API","value":"3"},{"name":"ETCDCTL_CACERT","value":"/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt"},{"name":"ETCDCTL_CERT","value":"/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.crt"},{"name":"ETCDCTL_ENDPOINTS","value":"https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379,https://XXXXXXXXXXX:2379"},{"name":"ETCDCTL_KEY","value":"/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-XXXXXX1.key"},{"name":"ETCD_CIPHER_SUITES","value":"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"},{"name":"ETCD_DATA_DIR","value":"/var/lib/etcd"},{"name":"ETCD_ELECTION_TIMEOUT","value":"1000"},{"name":"ETCD_ENABLE_PPROF","value":"true"},{"name":"ETCD_EXPERIMENTAL_MAX_LEARNERS","value":"3"},{"name":"ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION","value":"200ms"},{"name":"ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL","value":"5s"},{"name":"ETCD_HEARTBEAT_INTERVAL","value":"100"},{"name":"ETCD_IMAGE","value":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a6c98395f56f5d5f33da09e7c825696d2dd66847a68a9c0c1b95c5f95ea89626"},{"name":"ETCD_INITIAL_CLUSTER_STATE","value":"existing"},{"name":"ETCD_QUOTA_BACKEND_BYTES","value":"8589934592"},{"name":"ETCD_SOCKET_REUSE_ADDRESS","value":"true"},{"name":"NODE_XXXXXX0_ETCD_NAME","value":"XXXXXX0"},{"name":"NODE_XXXXXX0_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX0_IP","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX1_ETCD_NAME","value":"XXXXXX1"},{"name":"NODE_XXXXXX1_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX1_IP","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX2_ETCD_NAME","value":"XXXXXX2"},{"name":"NODE_XXXXXX2_ETCD_URL_HOST","value":"XXXXXXXXXXX"},{"name":"NODE_XXXXXX2_IP","value":"XXXXXXXXXXX"}],"resources":{"requests":{"cpu":"10m","memory":"50Mi"}},"volumeMounts":[{"name":"log-dir","mountPath":"/var/log/etcd/"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent","securityContext":{"privileged":true}}],"hostNetwork":true,"tolerations":[{"operator":"Exists"}],"priorityClassName":"system-node-critical"},"status":{}}

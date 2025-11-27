@@ -1,0 +1,331 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2025-11-17T09:10:30Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2025-11-17T09:10:30Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:50:41Z"
+  name: provisionings.v1alpha1.metal3.io
+  resourceVersion: "31817"
+  uid: 3f571e4b-4153-4e42-9314-8c9489413842
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 1
+          verb: get
+        requestCount: 2
+        userAgent: cluster-bootstrap/v0.0.0
+        username: system:admin
+      nodeName: XXXXXXXXXXX
+      requestCount: 6
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: get
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:serviceaccount:kube-system:generic-garbage-collector
+      - byVerb:
+        - requestCount: 2
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      nodeName: XXXXXXXXXXX
+      requestCount: 17
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:kube-controller-manager
+      nodeName: XXXXXXXXXXX
+      requestCount: 3
+    requestCount: 26
+  last24h:
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 1
+          verb: get
+        requestCount: 2
+        userAgent: cluster-bootstrap/v0.0.0
+        username: system:admin
+      nodeName: XXXXXXXXXXX
+      requestCount: 6
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: get
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:serviceaccount:kube-system:generic-garbage-collector
+      - byVerb:
+        - requestCount: 2
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: cluster-baremetal-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-baremetal-operator
+      nodeName: XXXXXXXXXXX
+      requestCount: 17
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:kube-controller-manager
+      nodeName: XXXXXXXXXXX
+      requestCount: 3
+    requestCount: 26
+  - requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  requestCount: 26

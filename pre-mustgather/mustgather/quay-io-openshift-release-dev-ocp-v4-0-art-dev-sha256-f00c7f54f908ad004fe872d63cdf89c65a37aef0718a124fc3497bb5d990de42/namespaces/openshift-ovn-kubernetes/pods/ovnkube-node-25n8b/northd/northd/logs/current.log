@@ -1,0 +1,41 @@
+2025-11-17T09:19:55.700242457Z + [[ -f /env/_XXXXXX ]]
+2025-11-17T09:19:55.700340169Z + . /ovnkube-lib/ovnkube-lib.sh
+2025-11-17T09:19:55.700388375Z ++ set -x
+2025-11-17T09:19:55.700413869Z ++ K8S_NODE=
+2025-11-17T09:19:55.700445087Z ++ [[ -n '' ]]
+2025-11-17T09:19:55.700462855Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2025-11-17T09:19:55.700479340Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2025-11-17T09:19:55.700495004Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2025-11-17T09:19:55.700510575Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2025-11-17T09:19:55.700525463Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2025-11-17T09:19:55.700540542Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2025-11-17T09:19:55.700555145Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2025-11-17T09:19:55.700569902Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2025-11-17T09:19:55.700584599Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2025-11-17T09:19:55.700599365Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2025-11-17T09:19:55.701490567Z + trap quit-ovn-northd TERM INT
+2025-11-17T09:19:55.701526050Z + start-ovn-northd info
+2025-11-17T09:19:55.701546390Z + local log_level=info
+2025-11-17T09:19:55.701563844Z + [[ 1 -ne 1 ]]
+2025-11-17T09:19:55.701940009Z ++ date -Iseconds
+2025-11-17T09:19:55.703244298Z + echo '2025-11-17T09:19:55+00:00 - starting ovn-northd'
+2025-11-17T09:19:55.703276836Z 2025-11-17T09:19:55+00:00 - starting ovn-northd
+2025-11-17T09:19:55.703459753Z + wait 18126
+2025-11-17T09:19:55.703534125Z + exec ovn-northd --no-chdir -vconsole:info -vfile:off '-vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' --pidfile /var/run/ovn/ovn-northd.pid --n-threads=1
+2025-11-17T09:19:55.706477463Z 2025-11-17T09:19:55.706Z|00001|ovn_northd|INFO|OVN internal version is : [24.03.6-20.33.0-75.6]
+2025-11-17T09:19:55.706700936Z 2025-11-17T09:19:55.706Z|00002|reconnect|INFO|unix:/var/run/ovn/ovnnb_db.sock: connecting...
+2025-11-17T09:19:55.706720519Z 2025-11-17T09:19:55.706Z|00003|reconnect|INFO|unix:/var/run/ovn/ovnnb_db.sock: connection attempt failed (No such file or directory)
+2025-11-17T09:19:55.706734097Z 2025-11-17T09:19:55.706Z|00004|ovn_northd|INFO|OVN NB IDL reconnected, force recompute.
+2025-11-17T09:19:55.706754623Z 2025-11-17T09:19:55.706Z|00005|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2025-11-17T09:19:55.706760348Z 2025-11-17T09:19:55.706Z|00006|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connection attempt failed (No such file or directory)
+2025-11-17T09:19:55.706774639Z 2025-11-17T09:19:55.706Z|00007|ovn_northd|INFO|OVN SB IDL reconnected, force recompute.
+2025-11-17T09:19:56.708590653Z 2025-11-17T09:19:56.708Z|00008|reconnect|INFO|unix:/var/run/ovn/ovnnb_db.sock: connecting...
+2025-11-17T09:19:56.708590653Z 2025-11-17T09:19:56.708Z|00009|reconnect|INFO|unix:/var/run/ovn/ovnnb_db.sock: connected
+2025-11-17T09:19:56.708657156Z 2025-11-17T09:19:56.708Z|00010|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2025-11-17T09:19:56.708677917Z 2025-11-17T09:19:56.708Z|00011|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connection attempt failed (No such file or directory)
+2025-11-17T09:19:56.708773105Z 2025-11-17T09:19:56.708Z|00012|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: waiting 2 seconds before reconnect
+2025-11-17T09:19:58.710138472Z 2025-11-17T09:19:58.709Z|00013|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2025-11-17T09:19:58.711038436Z 2025-11-17T09:19:58.710Z|00014|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connected
+2025-11-17T09:19:58.711147048Z 2025-11-17T09:19:58.711Z|00015|ovn_northd|INFO|ovn-northd lock acquired. This ovn-northd instance is now active.
+2025-11-17T09:20:07.020409904Z 2025-11-17T09:20:07.020Z|00016|memory|INFO|14008 kB peak resident set size after 11.3 seconds
+2025-11-17T09:20:07.020450530Z 2025-11-17T09:20:07.020Z|00017|memory|INFO|idl-cells-OVN_Northbound:1724 idl-cells-OVN_Southbound:8873

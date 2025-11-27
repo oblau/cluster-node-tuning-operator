@@ -1,0 +1,40 @@
+2025-11-17T09:33:29.683323092Z I1117 09:33:29.682022       1 cmd.go:233] Using service-serving-cert provided certificates
+2025-11-17T09:33:29.683323092Z I1117 09:33:29.682145       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:33:29.684505018Z I1117 09:33:29.684457       1 observer_polling.go:159] Starting file observer
+2025-11-17T09:33:29.707552210Z I1117 09:33:29.707506       1 builder.go:271] openshift-kube-storage-version-migrator-operator version 4.14.0-202511060117.p2.g9cd9922.assembly.stream.el8-9cd9922-9cd9922a42a64fe058718f10e3b4123b943bb55f
+2025-11-17T09:33:30.262063217Z I1117 09:33:30.262003       1 secure_serving.go:57] Forcing use of http/1.1 only
+2025-11-17T09:33:30.262063217Z W1117 09:33:30.262027       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' detected.
+2025-11-17T09:33:30.262063217Z W1117 09:33:30.262035       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' detected.
+2025-11-17T09:33:30.264977910Z I1117 09:33:30.264898       1 requestheader_controller.go:169] Starting RequestHeaderAuthRequestController
+2025-11-17T09:33:30.265068329Z I1117 09:33:30.265054       1 shared_informer.go:311] Waiting for caches to sync for RequestHeaderAuthRequestController
+2025-11-17T09:33:30.265111103Z I1117 09:33:30.264958       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2025-11-17T09:33:30.265169157Z I1117 09:33:30.265133       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2025-11-17T09:33:30.265193693Z I1117 09:33:30.264997       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+2025-11-17T09:33:30.265215574Z I1117 09:33:30.265208       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2025-11-17T09:33:30.265845038Z I1117 09:33:30.265819       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key"
+2025-11-17T09:33:30.265905101Z I1117 09:33:30.265859       1 leaderelection.go:245] attempting to acquire leader lease openshift-kube-storage-version-migrator-operator/openshift-kube-storage-version-migrator-operator-lock...
+2025-11-17T09:33:30.266671444Z I1117 09:33:30.266645       1 secure_serving.go:210] Serving securely on [::]:8443
+2025-11-17T09:33:30.266702101Z I1117 09:33:30.266691       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+2025-11-17T09:33:30.274636404Z I1117 09:33:30.274608       1 leaderelection.go:255] successfully acquired lease openshift-kube-storage-version-migrator-operator/openshift-kube-storage-version-migrator-operator-lock
+2025-11-17T09:33:30.274962847Z I1117 09:33:30.274921       1 event.go:298] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-kube-storage-version-migrator-operator", Name:"openshift-kube-storage-version-migrator-operator-lock", UID:"5f74efb7-1b41-4e7f-b608-7c2c8440b5be", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"19883", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' kube-storage-version-migrator-operator-68b77c69d5-frbt6_80aafabe-ac90-4a07-a3f7-98822a93e4a2 became leader
+2025-11-17T09:33:30.285592654Z I1117 09:33:30.285540       1 base_controller.go:67] Waiting for caches to sync for LoggingSyncer
+2025-11-17T09:33:30.286490676Z I1117 09:33:30.286466       1 base_controller.go:67] Waiting for caches to sync for StatusSyncer_kube-storage-version-migrator
+2025-11-17T09:33:30.286614097Z I1117 09:33:30.286601       1 base_controller.go:67] Waiting for caches to sync for KubeStorageVersionMigratorStaticResources
+2025-11-17T09:33:30.286641790Z I1117 09:33:30.286635       1 base_controller.go:67] Waiting for caches to sync for KubeStorageVersionMigrator
+2025-11-17T09:33:30.286663824Z I1117 09:33:30.286658       1 base_controller.go:67] Waiting for caches to sync for StaticConditionsController
+2025-11-17T09:33:30.286685982Z I1117 09:33:30.286680       1 base_controller.go:67] Waiting for caches to sync for RemoveStaleConditionsController
+2025-11-17T09:33:30.365844715Z I1117 09:33:30.365797       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2025-11-17T09:33:30.365869834Z I1117 09:33:30.365851       1 shared_informer.go:318] Caches are synced for RequestHeaderAuthRequestController
+2025-11-17T09:33:30.365907166Z I1117 09:33:30.365880       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2025-11-17T09:33:30.386364557Z I1117 09:33:30.386323       1 base_controller.go:73] Caches are synced for LoggingSyncer 
+2025-11-17T09:33:30.386364557Z I1117 09:33:30.386342       1 base_controller.go:110] Starting #1 XXXXXX of LoggingSyncer controller ...
+2025-11-17T09:33:30.386766909Z I1117 09:33:30.386746       1 base_controller.go:73] Caches are synced for RemoveStaleConditionsController 
+2025-11-17T09:33:30.386766909Z I1117 09:33:30.386758       1 base_controller.go:110] Starting #1 XXXXXX of RemoveStaleConditionsController controller ...
+2025-11-17T09:33:30.386785372Z I1117 09:33:30.386773       1 base_controller.go:73] Caches are synced for StatusSyncer_kube-storage-version-migrator 
+2025-11-17T09:33:30.386785372Z I1117 09:33:30.386780       1 base_controller.go:110] Starting #1 XXXXXX of StatusSyncer_kube-storage-version-migrator controller ...
+2025-11-17T09:33:30.386804677Z I1117 09:33:30.386793       1 base_controller.go:73] Caches are synced for KubeStorageVersionMigratorStaticResources 
+2025-11-17T09:33:30.386804677Z I1117 09:33:30.386800       1 base_controller.go:110] Starting #1 XXXXXX of KubeStorageVersionMigratorStaticResources controller ...
+2025-11-17T09:33:30.386822401Z I1117 09:33:30.386811       1 base_controller.go:73] Caches are synced for KubeStorageVersionMigrator 
+2025-11-17T09:33:30.386822401Z I1117 09:33:30.386817       1 base_controller.go:110] Starting #1 XXXXXX of KubeStorageVersionMigrator controller ...
+2025-11-17T09:33:30.386845239Z I1117 09:33:30.386832       1 base_controller.go:73] Caches are synced for StaticConditionsController 
+2025-11-17T09:33:30.386845239Z I1117 09:33:30.386841       1 base_controller.go:110] Starting #1 XXXXXX of StaticConditionsController controller ...

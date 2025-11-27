@@ -1,0 +1,12 @@
+2025-11-17T09:08:27.650821883Z time="2025-11-17T09:08:27Z" level=info msg="#!/bin/bash"
+2025-11-17T09:08:27.650919134Z time="2025-11-17T09:08:27Z" level=info msg="chroot /host /bin/crictl pods --namespace openshift-ingress --state Ready | grep -qE 'router-default-[[:alnum:]]{5,}-[[:alnum:]]{5,}'"
+2025-11-17T09:08:27.650938404Z time="2025-11-17T09:08:27Z" level=info
+2025-11-17T09:08:27.650958538Z time="2025-11-17T09:08:27Z" level=info msg="Runtimecfg rendering template" path=/etc/keepalived/chk_default_ingress.sh
+2025-11-17T09:08:27.651184547Z time="2025-11-17T09:08:27Z" level=info msg="#!/bin/bash"
+2025-11-17T09:08:27.651207854Z time="2025-11-17T09:08:27Z" level=info msg="/usr/bin/curl -o /dev/null -kLfs http://localhost:9444/haproxy_ready && [ -e /var/run/keepalived/iptables-rule-exists ]"
+2025-11-17T09:08:27.651224909Z time="2025-11-17T09:08:27Z" level=info
+2025-11-17T09:08:27.651243897Z time="2025-11-17T09:08:27Z" level=info msg="Runtimecfg rendering template" path=/etc/keepalived/chk_ocp_script.sh
+2025-11-17T09:08:27.651396793Z time="2025-11-17T09:08:27Z" level=info msg="#!/bin/bash"
+2025-11-17T09:08:27.651421242Z time="2025-11-17T09:08:27Z" level=info msg="/usr/bin/curl -o /dev/null -kLfs http://localhost:9444/haproxy_ready && [ -e /var/run/keepalived/iptables-rule-exists ] || /usr/bin/curl -kLfs https://localhost:6443/readyz"
+2025-11-17T09:08:27.651438089Z time="2025-11-17T09:08:27Z" level=info
+2025-11-17T09:08:27.651456740Z time="2025-11-17T09:08:27Z" level=info msg="Runtimecfg rendering template" path=/etc/keepalived/chk_ocp_script_both.sh

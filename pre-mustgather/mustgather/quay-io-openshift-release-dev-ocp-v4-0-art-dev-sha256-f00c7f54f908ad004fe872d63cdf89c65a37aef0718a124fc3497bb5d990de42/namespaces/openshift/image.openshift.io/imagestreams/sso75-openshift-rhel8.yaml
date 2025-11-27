@@ -1,0 +1,116 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    description: Red Hat Single Sign-On 7.5 on OpenJDK
+    openshift.io/display-name: Red Hat Single Sign-On 7.5 on OpenJDK
+    openshift.io/image.dockerRepositoryCheck: "2025-11-17T09:30:32Z"
+    openshift.io/provider-display-name: Red Hat, Inc.
+    samples.operator.openshift.io/version: 4.14.59
+    version: 7.5.3.GA
+  creationTimestamp: "2025-11-17T09:27:31Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:description: {}
+          f:openshift.io/display-name: {}
+          f:openshift.io/provider-display-name: {}
+          f:samples.operator.openshift.io/version: {}
+          f:version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"7.5"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"XXXXXX"}:
+            .: {}
+            f:annotations: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2025-11-17T09:27:31Z"
+  name: sso75-openshift-rhel8
+  namespace: openshift
+  resourceVersion: "17467"
+  uid: 04eda496-8424-481a-84d6-9af2944c4b9b
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Red Hat Single Sign-On 7.5 on OpenJDK image
+      iconClass: icon-sso
+      openshift.io/display-name: Red Hat Single Sign-On 7.5 on OpenJDK
+      supports: sso:7.5
+      tags: sso,keycloak,redhat,hidden
+      version: "1.0"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rh-sso-7/sso75-openshift-rhel8:7.5
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "7.5"
+    referencePolicy:
+      type: Local
+  - annotations: null
+    from:
+      kind: ImageStreamTag
+      name: "7.5"
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: XXXXXX
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: ""
+  tags:
+  - items:
+    - created: "2025-11-17T09:30:32Z"
+      dockerImageReference: registry.redhat.io/rh-sso-7/sso75-openshift-rhel8@sha256:5522021e9081fa0f0163f75afedb9efaaad25c2a1dde6ce0fab3142ddcc7dd60
+      generation: 2
+      image: sha256:5522021e9081fa0f0163f75afedb9efaaad25c2a1dde6ce0fab3142ddcc7dd60
+    tag: "7.5"
+  - items:
+    - created: "2025-11-17T09:30:32Z"
+      dockerImageReference: registry.redhat.io/rh-sso-7/sso75-openshift-rhel8@sha256:5522021e9081fa0f0163f75afedb9efaaad25c2a1dde6ce0fab3142ddcc7dd60
+      generation: 2
+      image: sha256:5522021e9081fa0f0163f75afedb9efaaad25c2a1dde6ce0fab3142ddcc7dd60
+    tag: XXXXXX

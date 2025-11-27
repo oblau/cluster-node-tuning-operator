@@ -1,0 +1,298 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.20/23","fd02:0:0:1::14/64"],"mac_address":"0a:58:0a:80:00:14","gateway_ips":["10.128.0.1","fd02:0:0:1::1"],"routes":[{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.128.0.1"},{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.128.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.0.1"},{"dest":"fd02::/48","nextHop":"fd02:0:0:1::1"},{"dest":"fd03::/112","nextHop":"fd02:0:0:1::1"},{"dest":"fd98::/64","nextHop":"fd02:0:0:1::1"}]}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.20",
+              "fd02:0:0:1::14"
+          ],
+          "mac": "0a:58:0a:80:00:14",
+          "default": true,
+          "dns": {}
+      }]
+  creationTimestamp: "2025-11-17T09:22:06Z"
+  labels:
+    app: pruner
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f17ad6d2-b468-4e00-94b8-656e5bb735b7"}: {}
+      f:spec:
+        f:automountServiceAccountToken: {}
+        f:containers:
+          k:{"name":"pruner"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/kubernetes.io/serviceaccount"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsUser: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"kube-api-access"}:
+            .: {}
+            f:name: {}
+            f:projected:
+              .: {}
+              f:defaultMode: {}
+              f:sources: {}
+          k:{"name":"kubelet-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2025-11-17T09:22:06Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:k8s.ovn.org/pod-networks: {}
+    manager: XXXXXX1
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:22:06Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:22:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.20"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"fd02:0:0:1::14"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:22:39Z"
+  name: revision-pruner-6-XXXXXX1
+  namespace: openshift-kube-scheduler
+  ownerReferences:
+  - apiVersion: v1
+    kind: ConfigMap
+    name: revision-status-6
+    uid: f17ad6d2-b468-4e00-94b8-656e5bb735b7
+  resourceVersion: "11818"
+  uid: 287e8d84-c94d-4b7b-8cf4-7d5961a4a6b6
+spec:
+  automountServiceAccountToken: false
+  containers:
+  - args:
+    - -v=4
+    - --max-eligible-revision=6
+    - --protected-revisions=2,3,4,5,6
+    - --resource-dir=/etc/kubernetes/static-pod-resources
+    - --cert-dir=kube-scheduler-certs
+    - --static-pod-name=kube-scheduler-pod
+    command:
+    - cluster-kube-scheduler-operator
+    - prune
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e8da3ec3d996ecf44f62a5d8bf98299d3847dc1da633c023117e3cbd6c5ca5ed
+    imagePullPolicy: IfNotPresent
+    name: pruner
+    resources:
+      limits:
+        cpu: 150m
+        memory: 200M
+      requests:
+        cpu: 150m
+        memory: 200M
+    securityContext:
+      privileged: true
+      runAsUser: 0
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes/
+      name: kubelet-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: XXXXXX1
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Never
+  schedulerName: default-scheduler
+  securityContext:
+    runAsUser: 0
+  serviceAccount: installer-sa
+  serviceAccountName: installer-sa
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes/
+      type: ""
+    name: kubelet-dir
+  - name: kube-api-access
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3600
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:22:06Z"
+    reason: PodCompleted
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:22:06Z"
+    reason: PodCompleted
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:22:06Z"
+    reason: PodCompleted
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:22:06Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://6015dc1d7702233d1aafc7427a78739cd32c0436f62a1128d299c365d0e908a6
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e8da3ec3d996ecf44f62a5d8bf98299d3847dc1da633c023117e3cbd6c5ca5ed
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e8da3ec3d996ecf44f62a5d8bf98299d3847dc1da633c023117e3cbd6c5ca5ed
+    lastState: {}
+    name: pruner
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://6015dc1d7702233d1aafc7427a78739cd32c0436f62a1128d299c365d0e908a6
+        exitCode: 0
+        finishedAt: "2025-11-17T09:22:37Z"
+        reason: Completed
+        startedAt: "2025-11-17T09:22:36Z"
+  hostIP: XXXXXXXXXXX
+  phase: Succeeded
+  podIP: 10.128.0.20
+  podIPs:
+  - ip: 10.128.0.20
+  - ip: fd02:0:0:1::14
+  qosClass: Guaranteed
+  startTime: "2025-11-17T09:22:06Z"

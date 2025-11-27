@@ -1,0 +1,86 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:28:16Z"
+    creationTimestamp: "2025-11-17T09:28:16Z"
+    labels:
+      name: console-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:30:49Z"
+    name: metrics
+    namespace: openshift-console-operator
+    resourceVersion: "18777"
+    uid: 1e0c0521-8bb0-49de-a99e-db44d93df613
+  subsets:
+  - addresses:
+    - ip: 10.128.0.43
+      nodeName: XXXXXX1
+      targetRef:
+        kind: Pod
+        name: console-operator-6bbf6cd699-cp4p2
+        namespace: openshift-console-operator
+        uid: c4d380a4-557a-4261-b6b4-5f050dd884de
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:28:16Z"
+    creationTimestamp: "2025-11-17T09:28:16Z"
+    labels:
+      name: console-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:30:49Z"
+    name: webhook
+    namespace: openshift-console-operator
+    resourceVersion: "18776"
+    uid: cebf321e-842b-4b25-9a8b-3300a10a98f2
+  subsets:
+  - addresses:
+    - ip: 10.128.0.43
+      nodeName: XXXXXX1
+      targetRef:
+        kind: Pod
+        name: console-operator-6bbf6cd699-cp4p2
+        namespace: openshift-console-operator
+        uid: c4d380a4-557a-4261-b6b4-5f050dd884de
+    ports:
+    - name: webhook
+      port: 9443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "32425"

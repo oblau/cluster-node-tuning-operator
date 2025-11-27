@@ -1,0 +1,511 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2025-11-17T09:12:51Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2025-11-17T09:12:51Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:50:06Z"
+  name: images.v1.config.openshift.io
+  resourceVersion: "31545"
+  uid: d2601455-164d-46e0-86c9-f7c8ff3a5996
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 9
+          verb: get
+        requestCount: 10
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: get
+        requestCount: 1
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: XXXXXXXXXXX
+      requestCount: 14
+    - byUser:
+      - byVerb:
+        - requestCount: 386
+          verb: get
+        requestCount: 386
+        userAgent: cluster-samples-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-samples-operator:cluster-samples-operator
+      - byVerb:
+        - requestCount: 69
+          verb: get
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 71
+        userAgent: cluster-openshift-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver-operator:openshift-apiserver-operator
+      - byVerb:
+        - requestCount: 23
+          verb: get
+        requestCount: 23
+        userAgent: openshift-apiserver/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 3
+          verb: get
+        - requestCount: 2
+          verb: list
+        - requestCount: 4
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 7
+          verb: get
+        requestCount: 7
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 2
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 4
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: machine-config-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-config-operator:machine-config-controller
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: cluster-openshift-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager-operator:openshift-controller-manager-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: machine-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-config-operator:machine-config-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 1
+          verb: get
+        requestCount: 1
+        userAgent: insights-operator/v0.0.0
+        username: system:serviceaccount:openshift-insights:gather
+      nodeName: XXXXXXXXXXX
+      requestCount: 515
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: get
+        requestCount: 9
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      nodeName: XXXXXXXXXXX
+      requestCount: 15
+    requestCount: 544
+  last24h:
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 9
+          verb: get
+        requestCount: 10
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: get
+        requestCount: 1
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: XXXXXXXXXXX
+      requestCount: 14
+    - byUser:
+      - byVerb:
+        - requestCount: 386
+          verb: get
+        requestCount: 386
+        userAgent: cluster-samples-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-samples-operator:cluster-samples-operator
+      - byVerb:
+        - requestCount: 69
+          verb: get
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 71
+        userAgent: cluster-openshift-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver-operator:openshift-apiserver-operator
+      - byVerb:
+        - requestCount: 23
+          verb: get
+        requestCount: 23
+        userAgent: openshift-apiserver/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 3
+          verb: get
+        - requestCount: 2
+          verb: list
+        - requestCount: 4
+          verb: watch
+        requestCount: 9
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      - byVerb:
+        - requestCount: 7
+          verb: get
+        requestCount: 7
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 2
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 4
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: machine-config-controller/v0.0.0
+        username: system:serviceaccount:openshift-machine-config-operator:machine-config-controller
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: cluster-openshift-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager-operator:openshift-controller-manager-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: machine-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-machine-config-operator:machine-config-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 1
+          verb: get
+        requestCount: 1
+        userAgent: insights-operator/v0.0.0
+        username: system:serviceaccount:openshift-insights:gather
+      nodeName: XXXXXXXXXXX
+      requestCount: 515
+    - byUser:
+      - byVerb:
+        - requestCount: 9
+          verb: get
+        requestCount: 9
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: kube-controller-manager/v1.27.16+03a907c
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 2
+          verb: watch
+        requestCount: 3
+        userAgent: cluster-image-registry-operator/v0.0.0
+        username: system:serviceaccount:openshift-image-registry:cluster-image-registry-operator
+      nodeName: XXXXXXXXXXX
+      requestCount: 15
+    requestCount: 544
+  - requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    - nodeName: XXXXXXXXXXX
+      requestCount: 0
+    requestCount: 0
+  requestCount: 544

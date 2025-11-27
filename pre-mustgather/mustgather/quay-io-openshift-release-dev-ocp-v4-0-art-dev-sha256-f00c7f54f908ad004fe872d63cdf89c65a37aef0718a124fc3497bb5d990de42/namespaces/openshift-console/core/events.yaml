@@ -1,0 +1,5340 @@
+---
+apiVersion: v1
+items:
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:38:57.840639Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-595d4b756b-f6fvd
+    namespace: openshift-console
+    resourceVersion: "25061"
+    uid: 3a9c5da1-3ef6-4019-ad73-af42b85ddd85
+  kind: Event
+  lastTimestamp: null
+  message: '0/5 nodes are available: 2 node(s) didn''t match Pod''s node affinity/selector,
+    3 node(s) didn''t match pod anti-affinity rules. preemption: 0/5 nodes are available:
+    2 Preemption is not helpful for scheduling, 3 node(s) didn''t match pod anti-affinity
+    rules..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console-595d4b756b-f6fvd.1878c1cc6bbde0ea
+    namespace: openshift-console
+    resourceVersion: "25064"
+    uid: e21b79de-9684-47e0-b658-43e87751e6ec
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:39:10.321236Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-595d4b756b-f6fvd
+    namespace: openshift-console
+    resourceVersion: "25065"
+    uid: 3a9c5da1-3ef6-4019-ad73-af42b85ddd85
+  kind: Event
+  lastTimestamp: null
+  message: '0/5 nodes are available: 2 node(s) didn''t match Pod''s node affinity/selector,
+    3 node(s) didn''t match pod anti-affinity rules. preemption: 0/5 nodes are available:
+    2 Preemption is not helpful for scheduling, 3 node(s) didn''t match pod anti-affinity
+    rules..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:10Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:series:
+          .: {}
+          f:count: {}
+          f:lastObservedTime: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:39:13Z"
+    name: console-595d4b756b-f6fvd.1878c1cf53a4aa5d
+    namespace: openshift-console
+    resourceVersion: "25531"
+    uid: 458685f3-bc38-4b37-adc4-83fc01384efe
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  series:
+    count: 2
+    lastObservedTime: "2025-11-17T09:39:13.864775Z"
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:39:18.067107Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-595d4b756b-f6fvd
+    namespace: openshift-console
+    resourceVersion: "25065"
+    uid: 3a9c5da1-3ef6-4019-ad73-af42b85ddd85
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-console/console-595d4b756b-f6fvd to XXXXXX0
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:18Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:39:18Z"
+    name: console-595d4b756b-f6fvd.1878c1d121554ab7
+    namespace: openshift-console
+    resourceVersion: "25602"
+    uid: ee06f970-9dfd-4259-b7d0-e95962e018c0
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:20Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-595d4b756b-f6fvd
+    namespace: openshift-console
+    resourceVersion: "25604"
+    uid: 3a9c5da1-3ef6-4019-ad73-af42b85ddd85
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:20Z"
+  message: Add eth0 [10.130.0.22/23 fd02:0:0:3::16/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:39:20Z"
+    name: console-595d4b756b-f6fvd.1878c1d19b1fa6f8
+    namespace: openshift-console
+    resourceVersion: "25616"
+    uid: a54ac712-0c1d-441b-8f58-0acb997f769e
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:20Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-595d4b756b-f6fvd
+    namespace: openshift-console
+    resourceVersion: "25600"
+    uid: 3a9c5da1-3ef6-4019-ad73-af42b85ddd85
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:20Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dcaafeb58ed3f4be926bbcfeb33fe260e22de5c9effa79fe3fb60a19cedeb8b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:20Z"
+    name: console-595d4b756b-f6fvd.1878c1d1a92194a6
+    namespace: openshift-console
+    resourceVersion: "25625"
+    uid: 5dbb0234-c6fa-4429-8294-b3f98065d5ab
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:20Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-595d4b756b-f6fvd
+    namespace: openshift-console
+    resourceVersion: "25600"
+    uid: 3a9c5da1-3ef6-4019-ad73-af42b85ddd85
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:20Z"
+  message: Created container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:20Z"
+    name: console-595d4b756b-f6fvd.1878c1d1b16bc3c1
+    namespace: openshift-console
+    resourceVersion: "25627"
+    uid: 9e8293b2-7a34-4ae1-9d25-6b170e4297b0
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:20Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-595d4b756b-f6fvd
+    namespace: openshift-console
+    resourceVersion: "25600"
+    uid: 3a9c5da1-3ef6-4019-ad73-af42b85ddd85
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:20Z"
+  message: Started container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:20Z"
+    name: console-595d4b756b-f6fvd.1878c1d1b3624c93
+    namespace: openshift-console
+    resourceVersion: "25628"
+    uid: 8243a8d0-704d-420c-87ac-0eea205830be
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- apiVersion: v1
+  count: 10
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:20Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-595d4b756b-f6fvd
+    namespace: openshift-console
+    resourceVersion: "25600"
+    uid: 3a9c5da1-3ef6-4019-ad73-af42b85ddd85
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:18Z"
+  message: "Readiness probe error: Get \"https://10.130.0.22:8443/health\": dial tcp
+    10.130.0.22:8443: connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:18Z"
+    name: console-595d4b756b-f6fvd.1878c1d1bec538dc
+    namespace: openshift-console
+    resourceVersion: "27052"
+    uid: f04a8965-e51a-4010-8479-5ba7914f8f30
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Warning
+- apiVersion: v1
+  count: 10
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:20Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-595d4b756b-f6fvd
+    namespace: openshift-console
+    resourceVersion: "25600"
+    uid: 3a9c5da1-3ef6-4019-ad73-af42b85ddd85
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:18Z"
+  message: 'Readiness probe failed: Get "https://10.130.0.22:8443/health": dial tcp
+    10.130.0.22:8443: connect: connection refused'
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:18Z"
+    name: console-595d4b756b-f6fvd.1878c1d1bec5a97b
+    namespace: openshift-console
+    resourceVersion: "27053"
+    uid: 5bdc18dd-be06-463d-ae00-9af2b231bee1
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-595d4b756b-f6fvd
+    namespace: openshift-console
+    resourceVersion: "25600"
+    uid: 3a9c5da1-3ef6-4019-ad73-af42b85ddd85
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:02Z"
+  message: Stopping container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:02Z"
+    name: console-595d4b756b-f6fvd.1878c1db6052042c
+    namespace: openshift-console
+    resourceVersion: "26544"
+    uid: 7eec8b74-11c8-4bd8-a841-a6f732e81573
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:38:57.853471Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-595d4b756b-xlhtg
+    namespace: openshift-console
+    resourceVersion: "25066"
+    uid: 8b6f0d41-ad47-480e-a220-60896457bdf6
+  kind: Event
+  lastTimestamp: null
+  message: '0/5 nodes are available: 2 node(s) didn''t match Pod''s node affinity/selector,
+    3 node(s) didn''t match pod anti-affinity rules. preemption: 0/5 nodes are available:
+    2 Preemption is not helpful for scheduling, 3 node(s) didn''t match pod anti-affinity
+    rules..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console-595d4b756b-xlhtg.1878c1cc6c81a803
+    namespace: openshift-console
+    resourceVersion: "25069"
+    uid: ea4cbfb1-b84d-4761-9988-c811f0d9ac95
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:39:10.321732Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-595d4b756b-xlhtg
+    namespace: openshift-console
+    resourceVersion: "25072"
+    uid: 8b6f0d41-ad47-480e-a220-60896457bdf6
+  kind: Event
+  lastTimestamp: null
+  message: '0/5 nodes are available: 2 node(s) didn''t match Pod''s node affinity/selector,
+    3 node(s) didn''t match pod anti-affinity rules. preemption: 0/5 nodes are available:
+    2 Preemption is not helpful for scheduling, 3 node(s) didn''t match pod anti-affinity
+    rules..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:10Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:series:
+          .: {}
+          f:count: {}
+          f:lastObservedTime: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:45:53Z"
+    name: console-595d4b756b-xlhtg.1878c1cf53ac352e
+    namespace: openshift-console
+    resourceVersion: "29886"
+    uid: a49d1daf-10fa-4ea0-9c4f-669c2b5908b2
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  series:
+    count: 3
+    lastObservedTime: "2025-11-17T09:39:18.061712Z"
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:39:26.597821Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-595d4b756b-xlhtg
+    namespace: openshift-console
+    resourceVersion: "25072"
+    uid: 8b6f0d41-ad47-480e-a220-60896457bdf6
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-console/console-595d4b756b-xlhtg to XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:26Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:39:26Z"
+    name: console-595d4b756b-xlhtg.1878c1d31dcde3e5
+    namespace: openshift-console
+    resourceVersion: "25771"
+    uid: bed661d6-3bb0-4562-a2bf-ffddeb63f22e
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-595d4b756b-xlhtg
+    namespace: openshift-console
+    resourceVersion: "25773"
+    uid: 8b6f0d41-ad47-480e-a220-60896457bdf6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:28Z"
+  message: Add eth0 [10.128.0.65/23 fd02:0:0:1::41/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:39:28Z"
+    name: console-595d4b756b-xlhtg.1878c1d3a9721364
+    namespace: openshift-console
+    resourceVersion: "25796"
+    uid: ef5687a7-18cc-496d-ad15-b55c93c510ee
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-595d4b756b-xlhtg
+    namespace: openshift-console
+    resourceVersion: "25770"
+    uid: 8b6f0d41-ad47-480e-a220-60896457bdf6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:28Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dcaafeb58ed3f4be926bbcfeb33fe260e22de5c9effa79fe3fb60a19cedeb8b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:28Z"
+    name: console-595d4b756b-xlhtg.1878c1d3aae2f6e4
+    namespace: openshift-console
+    resourceVersion: "25798"
+    uid: 66ba06ed-de64-47cf-a6a1-22d7cf899863
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-595d4b756b-xlhtg
+    namespace: openshift-console
+    resourceVersion: "25770"
+    uid: 8b6f0d41-ad47-480e-a220-60896457bdf6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:29Z"
+  message: Created container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:29Z"
+    name: console-595d4b756b-xlhtg.1878c1d3b33d2e49
+    namespace: openshift-console
+    resourceVersion: "25803"
+    uid: 9fe0b830-b861-48e8-af45-34274bfe6c93
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-595d4b756b-xlhtg
+    namespace: openshift-console
+    resourceVersion: "25770"
+    uid: 8b6f0d41-ad47-480e-a220-60896457bdf6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:29Z"
+  message: Started container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:29Z"
+    name: console-595d4b756b-xlhtg.1878c1d3b4799efb
+    namespace: openshift-console
+    resourceVersion: "25805"
+    uid: bb4fe6c0-9d44-4337-8889-dfc7a6f7efdd
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 11
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-595d4b756b-xlhtg
+    namespace: openshift-console
+    resourceVersion: "25770"
+    uid: 8b6f0d41-ad47-480e-a220-60896457bdf6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:55Z"
+  message: "Readiness probe error: Get \"https://10.128.0.65:8443/health\": dial tcp
+    10.128.0.65:8443: connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:55Z"
+    name: console-595d4b756b-xlhtg.1878c1d4098462f0
+    namespace: openshift-console
+    resourceVersion: "27550"
+    uid: 6e7a955e-8efd-4b08-8cdc-942a7dd63442
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Warning
+- apiVersion: v1
+  count: 11
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:39:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-595d4b756b-xlhtg
+    namespace: openshift-console
+    resourceVersion: "25770"
+    uid: 8b6f0d41-ad47-480e-a220-60896457bdf6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:55Z"
+  message: 'Readiness probe failed: Get "https://10.128.0.65:8443/health": dial tcp
+    10.128.0.65:8443: connect: connection refused'
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:55Z"
+    name: console-595d4b756b-xlhtg.1878c1d40984ccc5
+    namespace: openshift-console
+    resourceVersion: "27551"
+    uid: 947f8243-3e4b-440f-8383-c2a145be6247
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:57Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-595d4b756b
+    namespace: openshift-console
+    resourceVersion: "25059"
+    uid: 94ac8adc-7f34-4a67-a05b-ccca68870dd3
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:57Z"
+  message: 'Created pod: console-595d4b756b-f6fvd'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console-595d4b756b.1878c1cc6bb3f350
+    namespace: openshift-console
+    resourceVersion: "25063"
+    uid: f911082e-08f5-46c6-9156-08032dc1f190
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:57Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-595d4b756b
+    namespace: openshift-console
+    resourceVersion: "25059"
+    uid: 94ac8adc-7f34-4a67-a05b-ccca68870dd3
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:57Z"
+  message: 'Created pod: console-595d4b756b-xlhtg'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console-595d4b756b.1878c1cc6c6bfbad
+    namespace: openshift-console
+    resourceVersion: "25068"
+    uid: 4a8d827b-afd0-468a-baca-92a8b68a88be
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-595d4b756b
+    namespace: openshift-console
+    resourceVersion: "26524"
+    uid: 94ac8adc-7f34-4a67-a05b-ccca68870dd3
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:02Z"
+  message: 'Deleted pod: console-595d4b756b-f6fvd'
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:40:02Z"
+    name: console-595d4b756b.1878c1db602613e5
+    namespace: openshift-console
+    resourceVersion: "26540"
+    uid: fa7702fc-58e2-45d9-b2ac-08c9cc8b4927
+  reason: SuccessfulDelete
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:41:18Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-595d4b756b
+    namespace: openshift-console
+    resourceVersion: "27795"
+    uid: 94ac8adc-7f34-4a67-a05b-ccca68870dd3
+  kind: Event
+  lastTimestamp: "2025-11-17T09:41:18Z"
+  message: 'Deleted pod: console-595d4b756b-xlhtg'
+  metadata:
+    creationTimestamp: "2025-11-17T09:41:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:41:18Z"
+    name: console-595d4b756b.1878c1ed0ef7d741
+    namespace: openshift-console
+    resourceVersion: "27799"
+    uid: 8ca34351-2977-4476-8d88-644378270e2d
+  reason: SuccessfulDelete
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:38:45.460477Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-6876ff4cb4-hqnh8
+    namespace: openshift-console
+    resourceVersion: "24341"
+    uid: 7f9f7f14-dc17-4503-a387-c8b3349654c7
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-console/console-6876ff4cb4-hqnh8 to XXXXXX2
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:45Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:38:45Z"
+    name: console-6876ff4cb4-hqnh8.1878c1c989d39cbc
+    namespace: openshift-console
+    resourceVersion: "24346"
+    uid: 0b86d691-d4f8-4f0e-b742-15c7927d5715
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:47Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-6876ff4cb4-hqnh8
+    namespace: openshift-console
+    resourceVersion: "24359"
+    uid: 7f9f7f14-dc17-4503-a387-c8b3349654c7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:47Z"
+  message: Add eth0 [10.129.0.68/23 fd02:0:0:2::44/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:38:47Z"
+    name: console-6876ff4cb4-hqnh8.1878c1ca0ab08ec1
+    namespace: openshift-console
+    resourceVersion: "24384"
+    uid: 6c1614b5-412a-4db1-80e8-c7a12ddc8b18
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:47Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-6876ff4cb4-hqnh8
+    namespace: openshift-console
+    resourceVersion: "24343"
+    uid: 7f9f7f14-dc17-4503-a387-c8b3349654c7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:47Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dcaafeb58ed3f4be926bbcfeb33fe260e22de5c9effa79fe3fb60a19cedeb8b"
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:47Z"
+    name: console-6876ff4cb4-hqnh8.1878c1ca1e06c5cf
+    namespace: openshift-console
+    resourceVersion: "24392"
+    uid: ffabae0d-8acf-4fc6-87ff-4374738cf637
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:53Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-6876ff4cb4-hqnh8
+    namespace: openshift-console
+    resourceVersion: "24343"
+    uid: 7f9f7f14-dc17-4503-a387-c8b3349654c7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:53Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dcaafeb58ed3f4be926bbcfeb33fe260e22de5c9effa79fe3fb60a19cedeb8b"
+    in 5.953158661s (5.953172894s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:53Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:53Z"
+    name: console-6876ff4cb4-hqnh8.1878c1cb80dd59b6
+    namespace: openshift-console
+    resourceVersion: "24845"
+    uid: 39580e70-3f77-47d3-9f4c-05dac85d2589
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:54Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-6876ff4cb4-hqnh8
+    namespace: openshift-console
+    resourceVersion: "24343"
+    uid: 7f9f7f14-dc17-4503-a387-c8b3349654c7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:54Z"
+  message: Created container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:54Z"
+    name: console-6876ff4cb4-hqnh8.1878c1cba94a09b4
+    namespace: openshift-console
+    resourceVersion: "24882"
+    uid: a4edc979-03f5-4d49-8776-f48a0a46f796
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:54Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-6876ff4cb4-hqnh8
+    namespace: openshift-console
+    resourceVersion: "24343"
+    uid: 7f9f7f14-dc17-4503-a387-c8b3349654c7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:54Z"
+  message: Started container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:54Z"
+    name: console-6876ff4cb4-hqnh8.1878c1cbab45903c
+    namespace: openshift-console
+    resourceVersion: "24886"
+    uid: 11575786-e0ea-4e87-9e97-ee2d7f4889c9
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 10
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-6876ff4cb4-hqnh8
+    namespace: openshift-console
+    resourceVersion: "24343"
+    uid: 7f9f7f14-dc17-4503-a387-c8b3349654c7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:55Z"
+  message: "Readiness probe error: Get \"https://10.129.0.68:8443/health\": dial tcp
+    10.129.0.68:8443: connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:55Z"
+    name: console-6876ff4cb4-hqnh8.1878c1cbc5517ca7
+    namespace: openshift-console
+    resourceVersion: "26380"
+    uid: 600b74ab-43d6-4bda-8a70-56972c500c23
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 10
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-6876ff4cb4-hqnh8
+    namespace: openshift-console
+    resourceVersion: "24343"
+    uid: 7f9f7f14-dc17-4503-a387-c8b3349654c7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:55Z"
+  message: 'Readiness probe failed: Get "https://10.129.0.68:8443/health": dial tcp
+    10.129.0.68:8443: connect: connection refused'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:55Z"
+    name: console-6876ff4cb4-hqnh8.1878c1cbc5565df6
+    namespace: openshift-console
+    resourceVersion: "26381"
+    uid: 82c4f3d2-54d7-44b7-88d5-66e52d79ea99
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-6876ff4cb4-hqnh8
+    namespace: openshift-console
+    resourceVersion: "24343"
+    uid: 7f9f7f14-dc17-4503-a387-c8b3349654c7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:02Z"
+  message: Stopping container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:02Z"
+    name: console-6876ff4cb4-hqnh8.1878c1db5d4387c1
+    namespace: openshift-console
+    resourceVersion: "26535"
+    uid: 09b17b15-4ac5-4326-bba4-99d5df7eee75
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:38:45.461651Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-6876ff4cb4-s96vh
+    namespace: openshift-console
+    resourceVersion: "24345"
+    uid: 783d6856-907c-4f4d-b752-57a2c9d3b991
+  kind: Event
+  lastTimestamp: null
+  message: '0/5 nodes are available: 2 node(s) didn''t match Pod''s node affinity/selector,
+    3 node(s) didn''t match pod anti-affinity rules. preemption: 0/5 nodes are available:
+    2 Preemption is not helpful for scheduling, 3 node(s) didn''t match pod anti-affinity
+    rules..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:45Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:38:45Z"
+    name: console-6876ff4cb4-s96vh.1878c1c989e57b41
+    namespace: openshift-console
+    resourceVersion: "24351"
+    uid: 0f3d3943-6326-43e3-8526-42a6ad44a1fe
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:38:49.752789Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-6876ff4cb4-s96vh
+    namespace: openshift-console
+    resourceVersion: "24353"
+    uid: 783d6856-907c-4f4d-b752-57a2c9d3b991
+  kind: Event
+  lastTimestamp: null
+  message: '0/5 nodes are available: 2 node(s) didn''t match Pod''s node affinity/selector,
+    3 node(s) didn''t match pod anti-affinity rules. preemption: 0/5 nodes are available:
+    2 Preemption is not helpful for scheduling, 3 node(s) didn''t match pod anti-affinity
+    rules..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:49Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:series:
+          .: {}
+          f:count: {}
+          f:lastObservedTime: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console-6876ff4cb4-s96vh.1878c1ca89ab0cec
+    namespace: openshift-console
+    resourceVersion: "25055"
+    uid: 97939d5e-15a8-47cb-97ca-e2a7eeb4e509
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  series:
+    count: 2
+    lastObservedTime: "2025-11-17T09:38:57.800592Z"
+  source: {}
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:45Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-6876ff4cb4
+    namespace: openshift-console
+    resourceVersion: "24338"
+    uid: eb8f00ee-39dc-4dae-a0c1-740429be2a0d
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:45Z"
+  message: 'Created pod: console-6876ff4cb4-hqnh8'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:45Z"
+    name: console-6876ff4cb4.1878c1c9890e9a9d
+    namespace: openshift-console
+    resourceVersion: "24342"
+    uid: 2720eb93-bec8-4c56-9af6-873bf9867de5
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:45Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-6876ff4cb4
+    namespace: openshift-console
+    resourceVersion: "24338"
+    uid: eb8f00ee-39dc-4dae-a0c1-740429be2a0d
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:45Z"
+  message: 'Created pod: console-6876ff4cb4-s96vh'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:45Z"
+    name: console-6876ff4cb4.1878c1c989db9fdc
+    namespace: openshift-console
+    resourceVersion: "24348"
+    uid: e6dbbdac-bc29-49fa-ad6a-8845e354f585
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:57Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-6876ff4cb4
+    namespace: openshift-console
+    resourceVersion: "25073"
+    uid: eb8f00ee-39dc-4dae-a0c1-740429be2a0d
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:57Z"
+  message: 'Deleted pod: console-6876ff4cb4-s96vh'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console-6876ff4cb4.1878c1cc6e16fa4c
+    namespace: openshift-console
+    resourceVersion: "25086"
+    uid: b269e7b7-095a-4178-94d6-102645a42c1a
+  reason: SuccessfulDelete
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-6876ff4cb4
+    namespace: openshift-console
+    resourceVersion: "26515"
+    uid: eb8f00ee-39dc-4dae-a0c1-740429be2a0d
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:02Z"
+  message: 'Deleted pod: console-6876ff4cb4-hqnh8'
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:40:02Z"
+    name: console-6876ff4cb4.1878c1db5d085f27
+    namespace: openshift-console
+    resourceVersion: "26532"
+    uid: 841b3140-cd9c-4bcd-b07d-c616dec52736
+  reason: SuccessfulDelete
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:40:02.000491Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-69dbd9bdf7-4hrtl
+    namespace: openshift-console
+    resourceVersion: "26519"
+    uid: 78388361-a36f-416e-b396-4bccc9cd0061
+  kind: Event
+  lastTimestamp: null
+  message: '0/5 nodes are available: 2 node(s) didn''t match Pod''s node affinity/selector,
+    3 node(s) didn''t match pod anti-affinity rules. preemption: 0/5 nodes are available:
+    2 Preemption is not helpful for scheduling, 3 node(s) didn''t match pod anti-affinity
+    rules..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:02Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:40:02Z"
+    name: console-69dbd9bdf7-4hrtl.1878c1db5bf784b3
+    namespace: openshift-console
+    resourceVersion: "26527"
+    uid: 753e4cce-1f78-413b-abf8-413621866ac5
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:40:03.085345Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-69dbd9bdf7-4hrtl
+    namespace: openshift-console
+    resourceVersion: "26528"
+    uid: 78388361-a36f-416e-b396-4bccc9cd0061
+  kind: Event
+  lastTimestamp: null
+  message: '0/5 nodes are available: 2 node(s) didn''t match Pod''s node affinity/selector,
+    3 node(s) didn''t match pod anti-affinity rules. preemption: 0/5 nodes are available:
+    2 Preemption is not helpful for scheduling, 3 node(s) didn''t match pod anti-affinity
+    rules..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:03Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:series:
+          .: {}
+          f:count: {}
+          f:lastObservedTime: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:40:05Z"
+    name: console-69dbd9bdf7-4hrtl.1878c1db9ca11411
+    namespace: openshift-console
+    resourceVersion: "26721"
+    uid: 95aeeaf9-911d-4379-9f37-637e6f07e7e8
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  series:
+    count: 2
+    lastObservedTime: "2025-11-17T09:40:05.614221Z"
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:40:27.634315Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-69dbd9bdf7-4hrtl
+    namespace: openshift-console
+    resourceVersion: "26528"
+    uid: 78388361-a36f-416e-b396-4bccc9cd0061
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-console/console-69dbd9bdf7-4hrtl to XXXXXX2
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:27Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:40:27Z"
+    name: console-69dbd9bdf7-4hrtl.1878c1e153dcb49f
+    namespace: openshift-console
+    resourceVersion: "27226"
+    uid: 86411abf-1bc1-4cbe-95bd-c86e7fe43f01
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:30Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-69dbd9bdf7-4hrtl
+    namespace: openshift-console
+    resourceVersion: "27231"
+    uid: 78388361-a36f-416e-b396-4bccc9cd0061
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:30Z"
+  message: Add eth0 [10.129.0.75/23 fd02:0:0:2::4b/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:40:30Z"
+    name: console-69dbd9bdf7-4hrtl.1878c1e1ed6bf7b1
+    namespace: openshift-console
+    resourceVersion: "27289"
+    uid: 17116402-4b0c-4b52-8910-8bb9711dd920
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-69dbd9bdf7-4hrtl
+    namespace: openshift-console
+    resourceVersion: "27225"
+    uid: 78388361-a36f-416e-b396-4bccc9cd0061
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:30Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dcaafeb58ed3f4be926bbcfeb33fe260e22de5c9effa79fe3fb60a19cedeb8b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:30Z"
+    name: console-69dbd9bdf7-4hrtl.1878c1e1ef248a7d
+    namespace: openshift-console
+    resourceVersion: "27291"
+    uid: a169a25a-377b-4a1c-9010-5097022a6688
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-69dbd9bdf7-4hrtl
+    namespace: openshift-console
+    resourceVersion: "27225"
+    uid: 78388361-a36f-416e-b396-4bccc9cd0061
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:30Z"
+  message: Created container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:30Z"
+    name: console-69dbd9bdf7-4hrtl.1878c1e1f761e11e
+    namespace: openshift-console
+    resourceVersion: "27292"
+    uid: 1e40d763-1a03-4908-be25-efb27712d018
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-69dbd9bdf7-4hrtl
+    namespace: openshift-console
+    resourceVersion: "27225"
+    uid: 78388361-a36f-416e-b396-4bccc9cd0061
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:30Z"
+  message: Started container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:30Z"
+    name: console-69dbd9bdf7-4hrtl.1878c1e1f8bf909b
+    namespace: openshift-console
+    resourceVersion: "27293"
+    uid: e436847c-b21b-474d-b698-d8100ead2267
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-69dbd9bdf7-4hrtl
+    namespace: openshift-console
+    resourceVersion: "27225"
+    uid: 78388361-a36f-416e-b396-4bccc9cd0061
+  kind: Event
+  lastTimestamp: "2025-11-17T09:41:08Z"
+  message: "Readiness probe error: Get \"https://10.129.0.75:8443/health\": dial tcp
+    10.129.0.75:8443: connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:41:08Z"
+    name: console-69dbd9bdf7-4hrtl.1878c1e241ac8b6f
+    namespace: openshift-console
+    resourceVersion: "27688"
+    uid: e18b873b-af23-4201-a944-8f9a43fb7837
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-69dbd9bdf7-4hrtl
+    namespace: openshift-console
+    resourceVersion: "27225"
+    uid: 78388361-a36f-416e-b396-4bccc9cd0061
+  kind: Event
+  lastTimestamp: "2025-11-17T09:41:08Z"
+  message: 'Readiness probe failed: Get "https://10.129.0.75:8443/health": dial tcp
+    10.129.0.75:8443: connect: connection refused'
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:41:08Z"
+    name: console-69dbd9bdf7-4hrtl.1878c1e241ad1e50
+    namespace: openshift-console
+    resourceVersion: "27689"
+    uid: 3de44053-1a05-4eb3-a0f5-aea0a9c2bc9f
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:40:01.980075Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-69dbd9bdf7-kbtj6
+    namespace: openshift-console
+    resourceVersion: "26513"
+    uid: 1ec7e699-74ab-4a3c-83a2-888f3db5c3ec
+  kind: Event
+  lastTimestamp: null
+  message: '0/5 nodes are available: 2 node(s) didn''t match Pod''s node affinity/selector,
+    3 node(s) didn''t match pod anti-affinity rules. preemption: 0/5 nodes are available:
+    2 Preemption is not helpful for scheduling, 3 node(s) didn''t match pod anti-affinity
+    rules..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:01Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:40:01Z"
+    name: console-69dbd9bdf7-kbtj6.1878c1db5abff98f
+    namespace: openshift-console
+    resourceVersion: "26518"
+    uid: 220c3214-2857-4ab2-b5ee-93bb436f40da
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:40:03.084396Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-69dbd9bdf7-kbtj6
+    namespace: openshift-console
+    resourceVersion: "26522"
+    uid: 1ec7e699-74ab-4a3c-83a2-888f3db5c3ec
+  kind: Event
+  lastTimestamp: null
+  message: '0/5 nodes are available: 2 node(s) didn''t match Pod''s node affinity/selector,
+    3 node(s) didn''t match pod anti-affinity rules. preemption: 0/5 nodes are available:
+    2 Preemption is not helpful for scheduling, 3 node(s) didn''t match pod anti-affinity
+    rules..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:03Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:series:
+          .: {}
+          f:count: {}
+          f:lastObservedTime: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:40:05Z"
+    name: console-69dbd9bdf7-kbtj6.1878c1db9c929648
+    namespace: openshift-console
+    resourceVersion: "26722"
+    uid: d6667e08-22bc-433c-9b47-00a45549d8cc
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  series:
+    count: 2
+    lastObservedTime: "2025-11-17T09:40:05.613860Z"
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:40:27.634333Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-69dbd9bdf7-kbtj6
+    namespace: openshift-console
+    resourceVersion: "26522"
+    uid: 1ec7e699-74ab-4a3c-83a2-888f3db5c3ec
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-console/console-69dbd9bdf7-kbtj6 to XXXXXX0
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:27Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:40:27Z"
+    name: console-69dbd9bdf7-kbtj6.1878c1e153dd026b
+    namespace: openshift-console
+    resourceVersion: "27227"
+    uid: a2d87f4d-5716-43f5-974d-a131ee8dcb02
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:30Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-69dbd9bdf7-kbtj6
+    namespace: openshift-console
+    resourceVersion: "27230"
+    uid: 1ec7e699-74ab-4a3c-83a2-888f3db5c3ec
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:30Z"
+  message: Add eth0 [10.130.0.32/23 fd02:0:0:3::20/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:40:30Z"
+    name: console-69dbd9bdf7-kbtj6.1878c1e1e37bdda6
+    namespace: openshift-console
+    resourceVersion: "27283"
+    uid: 20388ad2-395a-4e25-8463-07a716a55e2b
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-69dbd9bdf7-kbtj6
+    namespace: openshift-console
+    resourceVersion: "27224"
+    uid: 1ec7e699-74ab-4a3c-83a2-888f3db5c3ec
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:30Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dcaafeb58ed3f4be926bbcfeb33fe260e22de5c9effa79fe3fb60a19cedeb8b"
+    already present on machine
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:30Z"
+    name: console-69dbd9bdf7-kbtj6.1878c1e1e5107924
+    namespace: openshift-console
+    resourceVersion: "27286"
+    uid: 17fb1b76-0ce4-42fa-9744-b5c4a9ac38de
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-69dbd9bdf7-kbtj6
+    namespace: openshift-console
+    resourceVersion: "27224"
+    uid: 1ec7e699-74ab-4a3c-83a2-888f3db5c3ec
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:30Z"
+  message: Created container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:30Z"
+    name: console-69dbd9bdf7-kbtj6.1878c1e1ec1043af
+    namespace: openshift-console
+    resourceVersion: "27287"
+    uid: da54e21d-ea27-4355-9a38-d68887bd6068
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-69dbd9bdf7-kbtj6
+    namespace: openshift-console
+    resourceVersion: "27224"
+    uid: 1ec7e699-74ab-4a3c-83a2-888f3db5c3ec
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:30Z"
+  message: Started container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:40:30Z"
+    name: console-69dbd9bdf7-kbtj6.1878c1e1ecfaa156
+    namespace: openshift-console
+    resourceVersion: "27288"
+    uid: 03eaa627-f6a2-4ae5-8eca-d4a2fb734a22
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-69dbd9bdf7-kbtj6
+    namespace: openshift-console
+    resourceVersion: "27224"
+    uid: 1ec7e699-74ab-4a3c-83a2-888f3db5c3ec
+  kind: Event
+  lastTimestamp: "2025-11-17T09:41:07Z"
+  message: "Readiness probe error: Get \"https://10.130.0.32:8443/health\": dial tcp
+    10.130.0.32:8443: connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:41:07Z"
+    name: console-69dbd9bdf7-kbtj6.1878c1e21db156bb
+    namespace: openshift-console
+    resourceVersion: "27678"
+    uid: 13016617-a92f-48c7-8fac-89ba87c64d2b
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Warning
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-69dbd9bdf7-kbtj6
+    namespace: openshift-console
+    resourceVersion: "27224"
+    uid: 1ec7e699-74ab-4a3c-83a2-888f3db5c3ec
+  kind: Event
+  lastTimestamp: "2025-11-17T09:41:07Z"
+  message: 'Readiness probe failed: Get "https://10.130.0.32:8443/health": dial tcp
+    10.130.0.32:8443: connect: connection refused'
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:41:07Z"
+    name: console-69dbd9bdf7-kbtj6.1878c1e21db1b603
+    namespace: openshift-console
+    resourceVersion: "27680"
+    uid: 288b0b57-dd59-441d-aa18-35597c2d0398
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-69dbd9bdf7
+    namespace: openshift-console
+    resourceVersion: "26508"
+    uid: e2c8ad9c-312d-4598-be4f-d4e9ca11f06d
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:01Z"
+  message: 'Created pod: console-69dbd9bdf7-kbtj6'
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:40:01Z"
+    name: console-69dbd9bdf7.1878c1db5ab3567a
+    namespace: openshift-console
+    resourceVersion: "26517"
+    uid: 87112be1-38dc-40b3-b569-683da4ab2ea8
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-69dbd9bdf7
+    namespace: openshift-console
+    resourceVersion: "26508"
+    uid: e2c8ad9c-312d-4598-be4f-d4e9ca11f06d
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:01Z"
+  message: 'Created pod: console-69dbd9bdf7-4hrtl'
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:40:01Z"
+    name: console-69dbd9bdf7.1878c1db5b7d69de
+    namespace: openshift-console
+    resourceVersion: "26523"
+    uid: c888f423-134f-4892-a3df-6a2b4463231c
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:38:36.447354Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-7959f94788-4rchz
+    namespace: openshift-console
+    resourceVersion: "24041"
+    uid: e2e828b1-2b25-4432-aec4-c81b04fc4ad6
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-console/console-7959f94788-4rchz to XXXXXX0
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:36Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:38:36Z"
+    name: console-7959f94788-4rchz.1878c1c7709a3ede
+    namespace: openshift-console
+    resourceVersion: "24048"
+    uid: fe77af05-5e9e-4638-bfd1-029d18aa03f3
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:38Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-7959f94788-4rchz
+    namespace: openshift-console
+    resourceVersion: "24053"
+    uid: e2e828b1-2b25-4432-aec4-c81b04fc4ad6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:38Z"
+  message: Add eth0 [10.130.0.19/23 fd02:0:0:3::13/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:38:38Z"
+    name: console-7959f94788-4rchz.1878c1c7fd3e3d8d
+    namespace: openshift-console
+    resourceVersion: "24181"
+    uid: 09feab1c-cbad-4f89-b5b0-a9a1c6e49c0d
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-4rchz
+    namespace: openshift-console
+    resourceVersion: "24044"
+    uid: e2e828b1-2b25-4432-aec4-c81b04fc4ad6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:38Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dcaafeb58ed3f4be926bbcfeb33fe260e22de5c9effa79fe3fb60a19cedeb8b"
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:38Z"
+    name: console-7959f94788-4rchz.1878c1c7fe9759f0
+    namespace: openshift-console
+    resourceVersion: "24183"
+    uid: 3ad90671-f9bc-44d6-bced-fee3161590b4
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-4rchz
+    namespace: openshift-console
+    resourceVersion: "24044"
+    uid: e2e828b1-2b25-4432-aec4-c81b04fc4ad6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:52Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dcaafeb58ed3f4be926bbcfeb33fe260e22de5c9effa79fe3fb60a19cedeb8b"
+    in 13.397238509s (13.397256472s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:52Z"
+    name: console-7959f94788-4rchz.1878c1cb1d218c9c
+    namespace: openshift-console
+    resourceVersion: "24763"
+    uid: ca92421f-9968-4f99-b448-b9882e8148b9
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-4rchz
+    namespace: openshift-console
+    resourceVersion: "24044"
+    uid: e2e828b1-2b25-4432-aec4-c81b04fc4ad6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:52Z"
+  message: Created container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:52Z"
+    name: console-7959f94788-4rchz.1878c1cb24d5b32d
+    namespace: openshift-console
+    resourceVersion: "24770"
+    uid: 154552b9-1cbf-4f5e-9a27-673c7e33455b
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-4rchz
+    namespace: openshift-console
+    resourceVersion: "24044"
+    uid: e2e828b1-2b25-4432-aec4-c81b04fc4ad6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:52Z"
+  message: Started container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:52Z"
+    name: console-7959f94788-4rchz.1878c1cb25e01775
+    namespace: openshift-console
+    resourceVersion: "24771"
+    uid: 45b467dd-d37d-42c9-9be3-a99c8a97ea8b
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-4rchz
+    namespace: openshift-console
+    resourceVersion: "24044"
+    uid: e2e828b1-2b25-4432-aec4-c81b04fc4ad6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:52Z"
+  message: Stopping container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:52Z"
+    name: console-7959f94788-4rchz.1878c1cb3330a2fe
+    namespace: openshift-console
+    resourceVersion: "24774"
+    uid: 2ffe0f81-387a-4bfd-a405-cbe580bcfded
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-4rchz
+    namespace: openshift-console
+    resourceVersion: "24044"
+    uid: e2e828b1-2b25-4432-aec4-c81b04fc4ad6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:17Z"
+  message: "Readiness probe error: Get \"https://10.130.0.19:8443/health\": dial tcp
+    10.130.0.19:8443: connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:17Z"
+    name: console-7959f94788-4rchz.1878c1cb334b1e81
+    namespace: openshift-console
+    resourceVersion: "25593"
+    uid: 0fdbaa8e-837b-46ba-819e-f771ce5b76f7
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Warning
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-4rchz
+    namespace: openshift-console
+    resourceVersion: "24044"
+    uid: e2e828b1-2b25-4432-aec4-c81b04fc4ad6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:17Z"
+  message: 'Readiness probe failed: Get "https://10.130.0.19:8443/health": dial tcp
+    10.130.0.19:8443: connect: connection refused'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:17Z"
+    name: console-7959f94788-4rchz.1878c1cb334b861f
+    namespace: openshift-console
+    resourceVersion: "25594"
+    uid: 58ce5c3d-8573-4609-a339-463689d8015c
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX0
+  source:
+    component: kubelet
+    host: XXXXXX0
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:38:36.458630Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-7959f94788-8mbqp
+    namespace: openshift-console
+    resourceVersion: "24045"
+    uid: 5c17aafc-1958-4987-9d7b-eb4894849a35
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-console/console-7959f94788-8mbqp to XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:36Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:38:36Z"
+    name: console-7959f94788-8mbqp.1878c1c7714655e0
+    namespace: openshift-console
+    resourceVersion: "24052"
+    uid: 01e77b1e-a698-4d13-a5ca-e01b58107967
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:38Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: console-7959f94788-8mbqp
+    namespace: openshift-console
+    resourceVersion: "24057"
+    uid: 5c17aafc-1958-4987-9d7b-eb4894849a35
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:38Z"
+  message: Add eth0 [10.128.0.64/23 fd02:0:0:1::40/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:38:38Z"
+    name: console-7959f94788-8mbqp.1878c1c7fb29721b
+    namespace: openshift-console
+    resourceVersion: "24178"
+    uid: ad48fb71-1a3b-40b1-86be-00cc24378781
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-8mbqp
+    namespace: openshift-console
+    resourceVersion: "24050"
+    uid: 5c17aafc-1958-4987-9d7b-eb4894849a35
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:38Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dcaafeb58ed3f4be926bbcfeb33fe260e22de5c9effa79fe3fb60a19cedeb8b"
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:38Z"
+    name: console-7959f94788-8mbqp.1878c1c7fc84c40d
+    namespace: openshift-console
+    resourceVersion: "24180"
+    uid: ba71137a-d718-416a-bfa2-b42003bf8ce3
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:54Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-8mbqp
+    namespace: openshift-console
+    resourceVersion: "24050"
+    uid: 5c17aafc-1958-4987-9d7b-eb4894849a35
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:54Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dcaafeb58ed3f4be926bbcfeb33fe260e22de5c9effa79fe3fb60a19cedeb8b"
+    in 16.15320277s (16.153211806s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:54Z"
+    name: console-7959f94788-8mbqp.1878c1cbbf536da8
+    namespace: openshift-console
+    resourceVersion: "24906"
+    uid: 19ddd7dc-273c-4f4c-ae8b-191f9795f8c8
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-8mbqp
+    namespace: openshift-console
+    resourceVersion: "24050"
+    uid: 5c17aafc-1958-4987-9d7b-eb4894849a35
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:55Z"
+  message: Created container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:55Z"
+    name: console-7959f94788-8mbqp.1878c1cbc8d4da5c
+    namespace: openshift-console
+    resourceVersion: "24918"
+    uid: d017e317-5be6-4484-ac56-d1573159b82f
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-8mbqp
+    namespace: openshift-console
+    resourceVersion: "24050"
+    uid: 5c17aafc-1958-4987-9d7b-eb4894849a35
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:55Z"
+  message: Started container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:55Z"
+    name: console-7959f94788-8mbqp.1878c1cbc9d32f23
+    namespace: openshift-console
+    resourceVersion: "24919"
+    uid: a0accc1e-6900-4b02-9243-ca7c0a66906b
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-8mbqp
+    namespace: openshift-console
+    resourceVersion: "24050"
+    uid: 5c17aafc-1958-4987-9d7b-eb4894849a35
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:17Z"
+  message: "Readiness probe error: Get \"https://10.128.0.64:8443/health\": dial tcp
+    10.128.0.64:8443: connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:17Z"
+    name: console-7959f94788-8mbqp.1878c1cbd8e101fd
+    namespace: openshift-console
+    resourceVersion: "25591"
+    uid: 446a807b-2171-4855-8c35-160c07e0dad3
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Warning
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-8mbqp
+    namespace: openshift-console
+    resourceVersion: "24050"
+    uid: 5c17aafc-1958-4987-9d7b-eb4894849a35
+  kind: Event
+  lastTimestamp: "2025-11-17T09:39:17Z"
+  message: 'Readiness probe failed: Get "https://10.128.0.64:8443/health": dial tcp
+    10.128.0.64:8443: connect: connection refused'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:39:17Z"
+    name: console-7959f94788-8mbqp.1878c1cbd8e19495
+    namespace: openshift-console
+    resourceVersion: "25592"
+    uid: 6573b072-08b1-44ef-86fc-541c591418b6
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{console}
+    kind: Pod
+    name: console-7959f94788-8mbqp
+    namespace: openshift-console
+    resourceVersion: "24050"
+    uid: 5c17aafc-1958-4987-9d7b-eb4894849a35
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:57Z"
+  message: Stopping container console
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console-7959f94788-8mbqp.1878c1cc6d9519af
+    namespace: openshift-console
+    resourceVersion: "25079"
+    uid: 15bbcd15-d615-48a8-a8a5-47215d64292a
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:36Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-7959f94788
+    namespace: openshift-console
+    resourceVersion: "24038"
+    uid: f4635dcb-2b84-4460-b369-954be92a4cba
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:36Z"
+  message: 'Created pod: console-7959f94788-4rchz'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:36Z"
+    name: console-7959f94788.1878c1c76ffe4fe3
+    namespace: openshift-console
+    resourceVersion: "24042"
+    uid: 51a659c5-a942-4bc3-b8d1-bb61b88d2ecf
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:36Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-7959f94788
+    namespace: openshift-console
+    resourceVersion: "24038"
+    uid: f4635dcb-2b84-4460-b369-954be92a4cba
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:36Z"
+  message: 'Created pod: console-7959f94788-8mbqp'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:36Z"
+    name: console-7959f94788.1878c1c770954a9a
+    namespace: openshift-console
+    resourceVersion: "24047"
+    uid: dfd70868-d5ee-46bc-94ae-1819959ae9c7
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:45Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-7959f94788
+    namespace: openshift-console
+    resourceVersion: "24344"
+    uid: f4635dcb-2b84-4460-b369-954be92a4cba
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:45Z"
+  message: 'Deleted pod: console-7959f94788-4rchz'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:45Z"
+    name: console-7959f94788.1878c1c98abdee6f
+    namespace: openshift-console
+    resourceVersion: "24356"
+    uid: a8812131-f6fe-4be1-a8c8-4cae6e380415
+  reason: SuccessfulDelete
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:57Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: console-7959f94788
+    namespace: openshift-console
+    resourceVersion: "25067"
+    uid: f4635dcb-2b84-4460-b369-954be92a4cba
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:57Z"
+  message: 'Deleted pod: console-7959f94788-8mbqp'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console-7959f94788.1878c1cc6d734c85
+    namespace: openshift-console
+    resourceVersion: "25077"
+    uid: b04cee03-3785-4fcf-a9ac-66227874c024
+  reason: SuccessfulDelete
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:49Z"
+  involvedObject:
+    apiVersion: policy/v1
+    kind: PodDisruptionBudget
+    name: console
+    namespace: openshift-console
+    resourceVersion: "17706"
+    uid: adfa33ce-8f17-46d3-bb2b-f77f635a3f55
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:49Z"
+  message: No matching pods found
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:30:49Z"
+    name: console.1878c15ab2e46013
+    namespace: openshift-console
+    resourceVersion: "18828"
+    uid: f0de8b6f-1830-4c8b-baa0-d7dea95d3be4
+  reason: NoPods
+  reportingComponent: controllermanager
+  reportingInstance: ""
+  source:
+    component: controllermanager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:33:21Z"
+  involvedObject:
+    apiVersion: policy/v1
+    kind: PodDisruptionBudget
+    name: console
+    namespace: openshift-console
+    resourceVersion: "18771"
+    uid: adfa33ce-8f17-46d3-bb2b-f77f635a3f55
+  kind: Event
+  lastTimestamp: "2025-11-17T09:33:21Z"
+  message: No matching pods found
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:33:21Z"
+    name: console.1878c17e0820cbba
+    namespace: openshift-console
+    resourceVersion: "19748"
+    uid: 57c73935-c610-48ad-8494-d05d972a200e
+  reason: NoPods
+  reportingComponent: controllermanager
+  reportingInstance: ""
+  source:
+    component: controllermanager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:34:28Z"
+  involvedObject:
+    apiVersion: policy/v1
+    kind: PodDisruptionBudget
+    name: console
+    namespace: openshift-console
+    resourceVersion: "18771"
+    uid: adfa33ce-8f17-46d3-bb2b-f77f635a3f55
+  kind: Event
+  lastTimestamp: "2025-11-17T09:34:28Z"
+  message: No matching pods found
+  metadata:
+    creationTimestamp: "2025-11-17T09:34:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:34:28Z"
+    name: console.1878c18da9a20942
+    namespace: openshift-console
+    resourceVersion: "20811"
+    uid: 7e49a529-d4ee-49c5-b536-9be1e45dfda1
+  reason: NoPods
+  reportingComponent: controllermanager
+  reportingInstance: ""
+  source:
+    component: controllermanager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:36:20Z"
+  involvedObject:
+    apiVersion: policy/v1
+    kind: PodDisruptionBudget
+    name: console
+    namespace: openshift-console
+    resourceVersion: "18771"
+    uid: adfa33ce-8f17-46d3-bb2b-f77f635a3f55
+  kind: Event
+  lastTimestamp: "2025-11-17T09:36:20Z"
+  message: No matching pods found
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:36:20Z"
+    name: console.1878c1a7ae3128cf
+    namespace: openshift-console
+    resourceVersion: "21381"
+    uid: d49310ac-1c80-4d91-8dfb-17220329bbe1
+  reason: NoPods
+  reportingComponent: controllermanager
+  reportingInstance: ""
+  source:
+    component: controllermanager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:36:53Z"
+  involvedObject:
+    apiVersion: policy/v1
+    kind: PodDisruptionBudget
+    name: console
+    namespace: openshift-console
+    resourceVersion: "18771"
+    uid: adfa33ce-8f17-46d3-bb2b-f77f635a3f55
+  kind: Event
+  lastTimestamp: "2025-11-17T09:36:53Z"
+  message: No matching pods found
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:53Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:36:53Z"
+    name: console.1878c1af9506088d
+    namespace: openshift-console
+    resourceVersion: "21904"
+    uid: d41949d0-8012-46c3-bc81-201c76d240a8
+  reason: NoPods
+  reportingComponent: controllermanager
+  reportingInstance: ""
+  source:
+    component: controllermanager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:36Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console
+    namespace: openshift-console
+    resourceVersion: "24036"
+    uid: b12855f9-f877-4e47-9919-b0494f4fe2fe
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:36Z"
+  message: Scaled up replica set console-7959f94788 to 2
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:36Z"
+    name: console.1878c1c76f519890
+    namespace: openshift-console
+    resourceVersion: "24039"
+    uid: 360210bd-33f6-409d-8a4d-fab6aee70454
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:45Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console
+    namespace: openshift-console
+    resourceVersion: "24336"
+    uid: b12855f9-f877-4e47-9919-b0494f4fe2fe
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:45Z"
+  message: Scaled up replica set console-6876ff4cb4 to 2
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:45Z"
+    name: console.1878c1c9888e1220
+    namespace: openshift-console
+    resourceVersion: "24339"
+    uid: a7b789ef-cb64-4193-996b-5f181b858ea5
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:45Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console
+    namespace: openshift-console
+    resourceVersion: "24336"
+    uid: b12855f9-f877-4e47-9919-b0494f4fe2fe
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:45Z"
+  message: Scaled down replica set console-7959f94788 to 1 from 2
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:45Z"
+    name: console.1878c1c989d4dac3
+    namespace: openshift-console
+    resourceVersion: "24349"
+    uid: 4658e051-9589-4374-bdcf-0b23b28e92dc
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:57Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console
+    namespace: openshift-console
+    resourceVersion: "25057"
+    uid: b12855f9-f877-4e47-9919-b0494f4fe2fe
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:57Z"
+  message: Scaled up replica set console-595d4b756b to 2
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console.1878c1cc6b2fe464
+    namespace: openshift-console
+    resourceVersion: "25060"
+    uid: 6ba1015c-d35d-4f5f-8ac6-144b8489f26e
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:57Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console
+    namespace: openshift-console
+    resourceVersion: "25057"
+    uid: b12855f9-f877-4e47-9919-b0494f4fe2fe
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:57Z"
+  message: Scaled down replica set console-7959f94788 to 0 from 1
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console.1878c1cc6c999150
+    namespace: openshift-console
+    resourceVersion: "25071"
+    uid: 1132c02a-758a-4da3-9f01-4114b12f9dcb
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:57Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console
+    namespace: openshift-console
+    resourceVersion: "25057"
+    uid: b12855f9-f877-4e47-9919-b0494f4fe2fe
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:57Z"
+  message: Scaled down replica set console-6876ff4cb4 to 1 from 2
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console.1878c1cc6d299078
+    namespace: openshift-console
+    resourceVersion: "25075"
+    uid: bcdf56a7-3b8d-43b5-be9b-69459821db60
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:38:57Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Endpoints
+    name: console
+    namespace: openshift-console
+    resourceVersion: "24938"
+    uid: 62f9ee11-01d6-4147-aed8-8218cc0a1492
+  kind: Event
+  lastTimestamp: "2025-11-17T09:38:57Z"
+  message: 'Failed to update endpoint openshift-console/console: Operation cannot
+    be fulfilled on endpoints "console": the object has been modified; please apply
+    your changes to the XXXXXX version and try again'
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:57Z"
+    name: console.1878c1cc6ed4df37
+    namespace: openshift-console
+    resourceVersion: "25091"
+    uid: 44a6fc63-83f6-468e-b8c3-e06a35d5a6be
+  reason: FailedToUpdateEndpoint
+  reportingComponent: endpoint-controller
+  reportingInstance: ""
+  source:
+    component: endpoint-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console
+    namespace: openshift-console
+    resourceVersion: "26506"
+    uid: b12855f9-f877-4e47-9919-b0494f4fe2fe
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:01Z"
+  message: Scaled up replica set console-69dbd9bdf7 to 2
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:40:01Z"
+    name: console.1878c1db5278771c
+    namespace: openshift-console
+    resourceVersion: "26509"
+    uid: c71f32ec-b07b-49dd-9aba-d656e24c38d2
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:01Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console
+    namespace: openshift-console
+    resourceVersion: "26506"
+    uid: b12855f9-f877-4e47-9919-b0494f4fe2fe
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:01Z"
+  message: Scaled down replica set console-6876ff4cb4 to 0 from 1
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:40:01Z"
+    name: console.1878c1db5b42a3f7
+    namespace: openshift-console
+    resourceVersion: "26521"
+    uid: f024522a-d9cc-4599-a328-452173b58144
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:40:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console
+    namespace: openshift-console
+    resourceVersion: "26506"
+    uid: b12855f9-f877-4e47-9919-b0494f4fe2fe
+  kind: Event
+  lastTimestamp: "2025-11-17T09:40:02Z"
+  message: Scaled down replica set console-595d4b756b to 1 from 2
+  metadata:
+    creationTimestamp: "2025-11-17T09:40:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:40:02Z"
+    name: console.1878c1db5cef65ff
+    namespace: openshift-console
+    resourceVersion: "26531"
+    uid: 7b0a53ab-8608-41dd-ba07-e547a27323ef
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:41:18Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: console
+    namespace: openshift-console
+    resourceVersion: "27775"
+    uid: b12855f9-f877-4e47-9919-b0494f4fe2fe
+  kind: Event
+  lastTimestamp: "2025-11-17T09:41:18Z"
+  message: Scaled down replica set console-595d4b756b to 0 from 1
+  metadata:
+    creationTimestamp: "2025-11-17T09:41:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:41:18Z"
+    name: console.1878c1ed0e572ea4
+    namespace: openshift-console
+    resourceVersion: "27796"
+    uid: 6a14068f-e900-41a6-9afc-177c2914dbd1
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:49Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: downloads-7dcf8dd5c4-qchwz
+    namespace: openshift-console
+    resourceVersion: "18834"
+    uid: 51bc5d87-8d50-413d-b0ab-e8f15aa01c63
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:49Z"
+  message: Successfully assigned openshift-console/downloads-7dcf8dd5c4-qchwz to XXXXXX2
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:30:49Z"
+    name: downloads-7dcf8dd5c4-qchwz.1878c15abd2ab002
+    namespace: openshift-console
+    resourceVersion: "18850"
+    uid: 339f872c-138e-456e-82bf-dedbbdfcb742
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:52Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: downloads-7dcf8dd5c4-qchwz
+    namespace: openshift-console
+    resourceVersion: "18852"
+    uid: 51bc5d87-8d50-413d-b0ab-e8f15aa01c63
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:52Z"
+  message: Add eth0 [10.129.0.61/23 fd02:0:0:2::3d/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:30:52Z"
+    name: downloads-7dcf8dd5c4-qchwz.1878c15b4d92f1d0
+    namespace: openshift-console
+    resourceVersion: "18949"
+    uid: a98d0e78-e233-4d25-a92e-4121998e0308
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-qchwz
+    namespace: openshift-console
+    resourceVersion: "18844"
+    uid: 51bc5d87-8d50-413d-b0ab-e8f15aa01c63
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:52Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ed77bf76d333d8a2304bdf32c4896d4879542d3c417e784333acf1de7e871b7e"
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:30:52Z"
+    name: downloads-7dcf8dd5c4-qchwz.1878c15b4f0077af
+    namespace: openshift-console
+    resourceVersion: "18951"
+    uid: d145e2c5-2a92-437f-8b6b-280b77c149f7
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-qchwz
+    namespace: openshift-console
+    resourceVersion: "18844"
+    uid: 51bc5d87-8d50-413d-b0ab-e8f15aa01c63
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:28Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ed77bf76d333d8a2304bdf32c4896d4879542d3c417e784333acf1de7e871b7e"
+    in 36.567950476s (36.567966171s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: downloads-7dcf8dd5c4-qchwz.1878c163d29fdb61
+    namespace: openshift-console
+    resourceVersion: "19214"
+    uid: 3f8cbc80-8d43-4a6b-895b-7a5935d8068d
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-qchwz
+    namespace: openshift-console
+    resourceVersion: "18844"
+    uid: 51bc5d87-8d50-413d-b0ab-e8f15aa01c63
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:28Z"
+  message: Created container download-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: downloads-7dcf8dd5c4-qchwz.1878c163d90d141f
+    namespace: openshift-console
+    resourceVersion: "19215"
+    uid: 289cd488-220c-432b-9dda-a43c3e296713
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-qchwz
+    namespace: openshift-console
+    resourceVersion: "18844"
+    uid: 51bc5d87-8d50-413d-b0ab-e8f15aa01c63
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:28Z"
+  message: Started container download-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: downloads-7dcf8dd5c4-qchwz.1878c163da03c97d
+    namespace: openshift-console
+    resourceVersion: "19216"
+    uid: 81efa538-c3bd-4247-9fba-92a8433cec05
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-qchwz
+    namespace: openshift-console
+    resourceVersion: "18844"
+    uid: 51bc5d87-8d50-413d-b0ab-e8f15aa01c63
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:30Z"
+  message: "Readiness probe error: Get \"http://10.129.0.61:8080/\": dial tcp 10.129.0.61:8080:
+    connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: downloads-7dcf8dd5c4-qchwz.1878c163f482c5b2
+    namespace: openshift-console
+    resourceVersion: "19224"
+    uid: 1de89b0e-b837-4d6d-9c8b-a65d52d04eec
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-qchwz
+    namespace: openshift-console
+    resourceVersion: "18844"
+    uid: 51bc5d87-8d50-413d-b0ab-e8f15aa01c63
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:30Z"
+  message: 'Readiness probe failed: Get "http://10.129.0.61:8080/": dial tcp 10.129.0.61:8080:
+    connect: connection refused'
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: downloads-7dcf8dd5c4-qchwz.1878c163f4833beb
+    namespace: openshift-console
+    resourceVersion: "19225"
+    uid: ad2d1165-338a-44c0-af83-ff32515ade5a
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-qchwz
+    namespace: openshift-console
+    resourceVersion: "18844"
+    uid: 51bc5d87-8d50-413d-b0ab-e8f15aa01c63
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:29Z"
+  message: "Liveness probe error: Get \"http://10.129.0.61:8080/\": dial tcp 10.129.0.61:8080:
+    connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: downloads-7dcf8dd5c4-qchwz.1878c16420dd0b7b
+    namespace: openshift-console
+    resourceVersion: "19219"
+    uid: bd1fb27f-89d4-482f-b639-0391f9517c3d
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-qchwz
+    namespace: openshift-console
+    resourceVersion: "18844"
+    uid: 51bc5d87-8d50-413d-b0ab-e8f15aa01c63
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:29Z"
+  message: 'Liveness probe failed: Get "http://10.129.0.61:8080/": dial tcp 10.129.0.61:8080:
+    connect: connection refused'
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: downloads-7dcf8dd5c4-qchwz.1878c16420dfb943
+    namespace: openshift-console
+    resourceVersion: "19222"
+    uid: ade30909-0586-4884-9759-fece8434c763
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:49Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: downloads-7dcf8dd5c4-tcfsl
+    namespace: openshift-console
+    resourceVersion: "18825"
+    uid: 926524e0-1bd4-41c9-ba97-e2e909d35a6e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:49Z"
+  message: Successfully assigned openshift-console/downloads-7dcf8dd5c4-tcfsl to XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:30:49Z"
+    name: downloads-7dcf8dd5c4-tcfsl.1878c15abc02d62e
+    namespace: openshift-console
+    resourceVersion: "18837"
+    uid: df6a20a8-3659-4f63-b717-735ddb959204
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:51Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: downloads-7dcf8dd5c4-tcfsl
+    namespace: openshift-console
+    resourceVersion: "18851"
+    uid: 926524e0-1bd4-41c9-ba97-e2e909d35a6e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:51Z"
+  message: Add eth0 [10.128.0.50/23 fd02:0:0:1::32/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:30:51Z"
+    name: downloads-7dcf8dd5c4-tcfsl.1878c15b3d70b524
+    namespace: openshift-console
+    resourceVersion: "18941"
+    uid: 83e2d4ff-5f38-4ac3-a49e-669cbdca4790
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-tcfsl
+    namespace: openshift-console
+    resourceVersion: "18829"
+    uid: 926524e0-1bd4-41c9-ba97-e2e909d35a6e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:51Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ed77bf76d333d8a2304bdf32c4896d4879542d3c417e784333acf1de7e871b7e"
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:30:51Z"
+    name: downloads-7dcf8dd5c4-tcfsl.1878c15b3ee3c20a
+    namespace: openshift-console
+    resourceVersion: "18943"
+    uid: 938d7ece-0ab9-4d29-b17c-4fabed290321
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-tcfsl
+    namespace: openshift-console
+    resourceVersion: "18829"
+    uid: 926524e0-1bd4-41c9-ba97-e2e909d35a6e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:23Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ed77bf76d333d8a2304bdf32c4896d4879542d3c417e784333acf1de7e871b7e"
+    in 32.072230486s (32.072241683s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:05Z"
+    name: downloads-7dcf8dd5c4-tcfsl.1878c162b68b90a8
+    namespace: openshift-console
+    resourceVersion: "19364"
+    uid: 9b203b2a-6950-4af3-b85b-3510c6f858e7
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-tcfsl
+    namespace: openshift-console
+    resourceVersion: "18829"
+    uid: 926524e0-1bd4-41c9-ba97-e2e909d35a6e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:24Z"
+  message: Created container download-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:05Z"
+    name: downloads-7dcf8dd5c4-tcfsl.1878c162c0c2eba5
+    namespace: openshift-console
+    resourceVersion: "19365"
+    uid: c8b88600-43dd-47a5-bbb2-200080576a52
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-tcfsl
+    namespace: openshift-console
+    resourceVersion: "18829"
+    uid: 926524e0-1bd4-41c9-ba97-e2e909d35a6e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:24Z"
+  message: Started container download-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:05Z"
+    name: downloads-7dcf8dd5c4-tcfsl.1878c162c2ce9b16
+    namespace: openshift-console
+    resourceVersion: "19366"
+    uid: 24869054-89b1-46d3-a3ea-3852c5c4f796
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-tcfsl
+    namespace: openshift-console
+    resourceVersion: "18829"
+    uid: 926524e0-1bd4-41c9-ba97-e2e909d35a6e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:26Z"
+  message: "Readiness probe error: Get \"http://10.128.0.50:8080/\": dial tcp 10.128.0.50:8080:
+    connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:05Z"
+    name: downloads-7dcf8dd5c4-tcfsl.1878c162cc2f7916
+    namespace: openshift-console
+    resourceVersion: "19372"
+    uid: ed9a6670-3a2e-410e-9258-a1d7acdb8707
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Warning
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:31:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{download-server}
+    kind: Pod
+    name: downloads-7dcf8dd5c4-tcfsl
+    namespace: openshift-console
+    resourceVersion: "18829"
+    uid: 926524e0-1bd4-41c9-ba97-e2e909d35a6e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:31:26Z"
+  message: 'Readiness probe failed: Get "http://10.128.0.50:8080/": dial tcp 10.128.0.50:8080:
+    connect: connection refused'
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:05Z"
+    name: downloads-7dcf8dd5c4-tcfsl.1878c162cc2feaa2
+    namespace: openshift-console
+    resourceVersion: "19374"
+    uid: 908b1a53-2a0f-447f-b399-3845402f7386
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:49Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: downloads-7dcf8dd5c4
+    namespace: openshift-console
+    resourceVersion: "18791"
+    uid: 2a061b47-b6c4-453b-8ab9-e876fb3fc1d2
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:49Z"
+  message: 'Created pod: downloads-7dcf8dd5c4-tcfsl'
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:30:49Z"
+    name: downloads-7dcf8dd5c4.1878c15abbb71e2e
+    namespace: openshift-console
+    resourceVersion: "18831"
+    uid: 5ecea33c-e534-4703-b3ad-4676083c9815
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:49Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: downloads-7dcf8dd5c4
+    namespace: openshift-console
+    resourceVersion: "18791"
+    uid: 2a061b47-b6c4-453b-8ab9-e876fb3fc1d2
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:49Z"
+  message: 'Created pod: downloads-7dcf8dd5c4-qchwz'
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:30:49Z"
+    name: downloads-7dcf8dd5c4.1878c15abc730a5d
+    namespace: openshift-console
+    resourceVersion: "18840"
+    uid: d2e79617-ee56-4756-a595-47ab8404da9e
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:49Z"
+  involvedObject:
+    apiVersion: policy/v1
+    kind: PodDisruptionBudget
+    name: downloads
+    namespace: openshift-console
+    resourceVersion: "17877"
+    uid: 21ec9d9e-5386-4d5f-9b09-63d7ebf025fe
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:49Z"
+  message: No matching pods found
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:30:49Z"
+    name: downloads.1878c15ab77512a7
+    namespace: openshift-console
+    resourceVersion: "18842"
+    uid: a8d75afc-4c5a-4a58-a8b1-58992303ff90
+  reason: NoPods
+  reportingComponent: controllermanager
+  reportingInstance: ""
+  source:
+    component: controllermanager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:30:49Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: downloads
+    namespace: openshift-console
+    resourceVersion: "17732"
+    uid: 8fbe6622-974c-42e3-8157-90cdf36c6266
+  kind: Event
+  lastTimestamp: "2025-11-17T09:30:49Z"
+  message: Scaled up replica set downloads-7dcf8dd5c4 to 2
+  metadata:
+    creationTimestamp: "2025-11-17T09:30:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:30:49Z"
+    name: downloads.1878c15ab8a64435
+    namespace: openshift-console
+    resourceVersion: "18801"
+    uid: 2ed397c6-79c6-4c36-befb-dbdef43c7652
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "32425"

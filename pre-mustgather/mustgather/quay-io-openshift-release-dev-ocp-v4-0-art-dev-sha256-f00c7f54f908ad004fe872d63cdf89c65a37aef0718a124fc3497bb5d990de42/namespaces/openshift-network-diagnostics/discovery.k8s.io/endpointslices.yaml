@@ -1,0 +1,182 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.6
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: network-check-source-b56b967f4-6jv22
+      namespace: openshift-network-diagnostics
+      uid: bfe3fe1e-b17c-4751-816a-ad36f021b9a6
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:38:36Z"
+    creationTimestamp: "2025-11-17T09:18:34Z"
+    generateName: network-check-source-
+    generation: 2
+    labels:
+      app: network-check-source
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: network-check-source
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f9ed31bd-4723-49c2-a2de-2cf9d9c5dfc7"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:36Z"
+    name: network-check-source-g9gdh
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: network-check-source
+      uid: f9ed31bd-4723-49c2-a2de-2cf9d9c5dfc7
+    resourceVersion: "24061"
+    uid: 4eb1a2ae-1821-4e6c-8361-ac79f3fbf028
+  ports:
+  - name: check-endpoints
+    port: 17698
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: network-check-target-9vrwt
+      namespace: openshift-network-diagnostics
+      uid: 2be366a9-51a6-45ac-920e-319e5231b0da
+  - addresses:
+    - 10.129.0.3
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: network-check-target-k2czz
+      namespace: openshift-network-diagnostics
+      uid: 6573486a-8497-406a-bcfa-e19617cc84d1
+  - addresses:
+    - 10.131.0.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: network-check-target-fl5jm
+      namespace: openshift-network-diagnostics
+      uid: 5c1e3dfd-c8f9-43e4-ac96-43402229563e
+  - addresses:
+    - 10.130.0.7
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: network-check-target-mx9tb
+      namespace: openshift-network-diagnostics
+      uid: 00d061c4-b9d2-43ae-a9dd-f94835fff5f3
+  - addresses:
+    - 10.128.2.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: network-check-target-wcbr5
+      namespace: openshift-network-diagnostics
+      uid: 5abc6edc-3bf8-4410-9ee8-d91af824d7ec
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:39:44Z"
+    creationTimestamp: "2025-11-17T09:18:36Z"
+    generateName: network-check-target-
+    generation: 11
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: network-check-target
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"998399b5-ec7a-4a9d-8cd7-a3f12ef5f872"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:39:44Z"
+    name: network-check-target-mx9ft
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: network-check-target
+      uid: 998399b5-ec7a-4a9d-8cd7-a3f12ef5f872
+    resourceVersion: "26213"
+    uid: 82010e67-2b27-4246-8cbc-7f5f3c6db8f9
+  ports:
+  - name: ""
+    port: 8080
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32585"

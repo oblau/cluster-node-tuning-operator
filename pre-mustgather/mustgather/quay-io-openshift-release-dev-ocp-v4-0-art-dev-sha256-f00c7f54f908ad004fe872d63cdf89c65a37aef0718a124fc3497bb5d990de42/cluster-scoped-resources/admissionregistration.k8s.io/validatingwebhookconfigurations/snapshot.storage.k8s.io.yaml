@@ -1,0 +1,94 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2025-11-17T09:20:20Z"
+  generation: 2
+  labels:
+    app: csi-snapshot-webhook
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+        f:labels:
+          .: {}
+          f:app: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"volumesnapshotclasses.snapshot.storage.k8s.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    time: "2025-11-17T09:20:20Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"volumesnapshotclasses.snapshot.storage.k8s.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2025-11-17T09:20:31Z"
+  name: snapshot.storage.k8s.io
+  resourceVersion: "7221"
+  uid: 6848b911-9723-4be7-a931-47c9a98b8720
+webhooks:
+- admissionReviewVersions:
+  - v1
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJSEtVak9wekp2T293RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjMk16TTNNVEl5TURBZQpGdzB5TlRFeE1UY3dPVEl3TVRsYUZ3MHlPREF4TVRZd09USXdNakJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNOak16TnpFeU1qQXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRREpac2xHcXRBeUcrQUYxYkNiVmxVczlzUVJMa21KN2w2dgpsVXpEd2Y3Rk9GaEpFcWRON1ZrSXgwblgvbXhZVVlWMWpHVVJvMDZub0tacldWNno0TFhPZmN3NFg0WElPemt4CllObTFreUQ5TUpHeXg2VXY5WnhpQXNndXFxR3dCdDBTZjhmWGJjcVNCQ2N0eTdNeXIwQk5zQi9LM0ZKdmJFOHAKblR4KzFHK1BybUJrUkVTOEdKZTdBdjdTMzFnbnZabDJKNlY3RWt5SUJKdFNIdDU3WmNzOUZCbXVEUWNwaFBoZwozOGpnUWh6bExwVWJMTWtjSkxBRDkvcG9sYnJwcm40cHJzeklsSmVldzVBcWtWc0JLZmZKemVpa1JndHhVOTdMClZrbUluVnl0QmxCN21wN3JqdUlsM21CN29pbWo1VWZWd2RUNUZHK0t3RGlhb2JvRzQxUTlBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFYYTlWUApMYWxLdTg5b0w4UFVCZzlKOW1NYVFUQWZCZ05WSFNNRUdEQVdnQlFYYTlWUExhbEt1ODlvTDhQVUJnOUo5bU1hClFUQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFzNDZlWEpMRWlXTTdXVmlpMGRhSndjWTZDalFDVDl3NzZ2UCsKVjJQM29DUlhQK1VDVFpBU0lxWlJwaTY0VDk5UjdiTTdXN0ZkYTE2cnB5b3kveGNNcDBzYXlyZktrci9qNE56cApENnJ2eDAzcDM4dUQ1ZGE3TS9XYmxNdmpFSVovYUEyRDNCamhDZGUzRlBFNnE1Y3BGK1g5UmhrMkI2TVg2U2VqCnFDeVEwMkVEcWxUVVJ5ZExWZjYzeXE0QysxNjZNQ3RId0txTlJjUlQ1OFJVRTFzdkNBRmZkQldoVTRES3YrV0sKR0YwSkNBenROSzlPaEJXY3c3aUFYWWZDSHVoN3NDZnNlRjUxUG03UzU0L2hNbXo5RHpHSWtBRis0UnE5R1QyYwpEdUdBMHhlUFNUY2pZM2pyb2pkWkpvdmdveFhBY2pmd0NDN3BCWXVxdTFQclRLNUdUdz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: csi-snapshot-webhook
+      namespace: openshift-cluster-storage-operator
+      path: /volumesnapshot
+      port: 443
+  failurePolicy: Ignore
+  matchPolicy: Equivalent
+  name: volumesnapshotclasses.snapshot.storage.k8s.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - snapshot.storage.k8s.io
+    apiVersions:
+    - v1beta1
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - volumesnapshots
+    - volumesnapshotcontents
+    - volumesnapshotclasses
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

@@ -1,0 +1,43 @@
+2025-11-17T09:37:58.757817721Z ++ K8S_NODE=
+2025-11-17T09:37:58.757817721Z ++ [[ -n '' ]]
+2025-11-17T09:37:58.757901051Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2025-11-17T09:37:58.757901051Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2025-11-17T09:37:58.757901051Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2025-11-17T09:37:58.757901051Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2025-11-17T09:37:58.757901051Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2025-11-17T09:37:58.757901051Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2025-11-17T09:37:58.757901051Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2025-11-17T09:37:58.757901051Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2025-11-17T09:37:58.757901051Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2025-11-17T09:37:58.757901051Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2025-11-17T09:37:58.759618762Z + start-rbac-proxy-node ovn-metrics 9105 29105 /etc/pki/tls/metrics-cert/tls.key /etc/pki/tls/metrics-cert/tls.crt
+2025-11-17T09:37:58.759628117Z + local detail=ovn-metrics
+2025-11-17T09:37:58.759628117Z + local listen_port=9105
+2025-11-17T09:37:58.759635082Z + local upstream_port=29105
+2025-11-17T09:37:58.759640389Z + local privkey=/etc/pki/tls/metrics-cert/tls.key
+2025-11-17T09:37:58.759645434Z + local clientcert=/etc/pki/tls/metrics-cert/tls.crt
+2025-11-17T09:37:58.759650220Z + [[ 5 -ne 5 ]]
+2025-11-17T09:37:58.760036452Z ++ date -Iseconds
+2025-11-17T09:37:58.762088780Z + echo '2025-11-17T09:37:58+00:00 INFO: waiting for ovn-metrics certs to be mounted'
+2025-11-17T09:37:58.762109570Z 2025-11-17T09:37:58+00:00 INFO: waiting for ovn-metrics certs to be mounted
+2025-11-17T09:37:58.762121831Z + wait-for-certs ovn-metrics /etc/pki/tls/metrics-cert/tls.key /etc/pki/tls/metrics-cert/tls.crt
+2025-11-17T09:37:58.762155339Z + local detail=ovn-metrics
+2025-11-17T09:37:58.762155339Z + local privkey=/etc/pki/tls/metrics-cert/tls.key
+2025-11-17T09:37:58.762161337Z + local clientcert=/etc/pki/tls/metrics-cert/tls.crt
+2025-11-17T09:37:58.762161337Z + [[ 3 -ne 3 ]]
+2025-11-17T09:37:58.762175231Z + retries=0
+2025-11-17T09:37:58.762550487Z ++ date +%s
+2025-11-17T09:37:58.764319824Z + TS=1763372278
+2025-11-17T09:37:58.764347138Z + WARN_TS=1763373478
+2025-11-17T09:37:58.764347138Z + HAS_LOGGED_INFO=0
+2025-11-17T09:37:58.764353984Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2025-11-17T09:37:58.764373701Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.crt ]]
+2025-11-17T09:37:58.764755752Z ++ date -Iseconds
+2025-11-17T09:37:58.766843606Z 2025-11-17T09:37:58+00:00 INFO: ovn-metrics certs mounted, starting kube-rbac-proxy
+2025-11-17T09:37:58.766854809Z + echo '2025-11-17T09:37:58+00:00 INFO: ovn-metrics certs mounted, starting kube-rbac-proxy'
+2025-11-17T09:37:58.766870722Z + exec /usr/bin/kube-rbac-proxy --logtostderr --secure-listen-address=:9105 --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 --upstream=http://127.0.0.1:29105/ --tls-private-key-file=/etc/pki/tls/metrics-cert/tls.key --tls-cert-file=/etc/pki/tls/metrics-cert/tls.crt
+2025-11-17T09:37:58.794017216Z Flag --logtostderr has been deprecated, will be removed in a future release, see https://github.com/kubernetes/enhancements/tree/XXXXXX/keps/sig-instrumentation/2845-deprecate-klog-specific-flags-in-k8s-components
+2025-11-17T09:37:58.794713350Z I1117 09:37:58.794660    7962 kube-rbac-proxy.go:285] Valid token audiences: 
+2025-11-17T09:37:58.794748655Z I1117 09:37:58.794734    7962 kube-rbac-proxy.go:399] Reading certificate files
+2025-11-17T09:37:58.795225464Z I1117 09:37:58.795203    7962 kube-rbac-proxy.go:447] Starting TCP socket on :9105
+2025-11-17T09:37:58.795602951Z I1117 09:37:58.795585    7962 kube-rbac-proxy.go:454] Listening securely on :9105

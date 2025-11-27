@@ -1,0 +1,67 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: "2025-11-17T09:29:46Z"
+  labels:
+    app: oauth-openshift
+  managedFields:
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:host: {}
+        f:port:
+          .: {}
+          f:targetPort: {}
+        f:tls:
+          .: {}
+          f:insecureEdgeTerminationPolicy: {}
+          f:termination: {}
+        f:to:
+          f:kind: {}
+          f:name: {}
+          f:weight: {}
+        f:wildcardPolicy: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2025-11-17T09:29:46Z"
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:ingress: {}
+    manager: openshift-router
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:28Z"
+  name: oauth-openshift
+  namespace: openshift-authentication
+  resourceVersion: "23766"
+  uid: a2ae4662-3cf4-48ea-82de-244b9c927fc0
+spec:
+  host: oauth-openshift.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+  port:
+    targetPort: 6443
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: passthrough
+  to:
+    kind: Service
+    name: oauth-openshift
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2025-11-17T09:38:28Z"
+      status: "True"
+      type: Admitted
+    host: oauth-openshift.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+    routerCanonicalHostname: router-default.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+    routerName: default
+    wildcardPolicy: None

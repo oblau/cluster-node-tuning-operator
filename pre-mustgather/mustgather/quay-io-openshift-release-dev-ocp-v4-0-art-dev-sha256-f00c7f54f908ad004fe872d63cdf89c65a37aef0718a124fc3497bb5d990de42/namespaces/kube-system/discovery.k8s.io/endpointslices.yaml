@@ -1,0 +1,103 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - XXXXXXXXXX
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: XXXXXX0
+      uid: be542f6b-71a2-46af-9c87-f2120b48ad2f
+  - addresses:
+    - XXXXXXXXXX
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: XXXXXX1
+      uid: 82931ca4-5958-4718-ae08-c14b5ced3530
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: XXXXXX2
+      uid: 9bbf3978-9a24-4194-97bd-19975c5a4042
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: XXXXXX0
+      uid: bc15ced4-edf1-4c10-8cd9-fecd74736a61
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: XXXXXX1
+      uid: 08d8653a-e1d4-4358-b485-d849df97cbd8
+  kind: EndpointSlice
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:49Z"
+    generateName: kubelet-
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: prometheus-operator
+      app.kubernetes.io/name: kubelet
+      endpointslice.kubernetes.io/managed-by: endpointslicemirroring-controller.k8s.io
+      k8s-app: kubelet
+      kubernetes.io/service-name: kubelet
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8d11998f-3236-43e7-8033-f5c0485b8ea3"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:49Z"
+    name: kubelet-qjbtp
+    namespace: kube-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Endpoints
+      name: kubelet
+      uid: 8d11998f-3236-43e7-8033-f5c0485b8ea3
+    resourceVersion: "24451"
+    uid: 40f3399f-6170-4f62-bfbd-19a9a16337fc
+  ports:
+  - name: http-metrics
+    port: 10255
+    protocol: TCP
+  - name: https-metrics
+    port: 10250
+    protocol: TCP
+  - name: cadvisor
+    port: 4194
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32515"

@@ -1,0 +1,211 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: OpenShiftAPIServer
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2025-11-17T09:05:29Z"
+  generation: 5
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:29Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:apiServerArguments:
+            .: {}
+            f:feature-gates: {}
+          f:projectConfig:
+            .: {}
+            f:projectRequestMessage: {}
+          f:routingConfig:
+            .: {}
+            f:subdomain: {}
+          f:servingInfo:
+            .: {}
+            f:cipherSuites: {}
+            f:minTLSVersion: {}
+          f:storageConfig:
+            .: {}
+            f:urls: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2025-11-17T09:40:01Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:generations: {}
+        f:XXXXXXAvailableRevision: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:44:25Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "29402"
+  uid: f723e66f-9149-4e77-93d5-f22259f28403
+spec:
+  logLevel: Normal
+  managementState: Managed
+  observedConfig:
+    apiServerArguments:
+      feature-gates:
+      - AdminNetworkPolicy=false
+      - AdmissionWebhookMatchConditions=false
+      - AlibabaPlatform=true
+      - AutomatedEtcdBackup=false
+      - AzureWorkloadIdentity=true
+      - BuildCSIVolumes=true
+      - CSIDriverSharedResource=false
+      - CloudDualStackNodeIPs=true
+      - DynamicResourceAllocation=false
+      - EventedPLEG=false
+      - ExternalCloudProvider=false
+      - ExternalCloudProviderAzure=true
+      - ExternalCloudProviderExternal=true
+      - ExternalCloudProviderGCP=false
+      - GCPLabelsTags=false
+      - GatewayAPI=false
+      - InsightsConfigAPI=false
+      - MachineAPIOperatorDisableMachineHealthCheckController=false
+      - MachineAPIProviderOpenStack=false
+      - MaxUnavailableStatefulSet=false
+      - NetworkLiveMigration=false
+      - NodeSwap=false
+      - OpenShiftPodSecurityAdmission=false
+      - PrivateHostedZoneAWS=true
+      - RetroactiveDefaultStorageClass=false
+      - RouteExternalCertificate=false
+      - SigstoreImageVerification=false
+      - VSphereStaticIPs=false
+      - ValidatingAdmissionPolicy=false
+    projectConfig:
+      projectRequestMessage: ""
+    routingConfig:
+      subdomain: apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+    servingInfo:
+      cipherSuites:
+      - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      minTLSVersion: VersionTLS12
+    storageConfig:
+      urls:
+      - https://XXXXXXXXXXX:2379
+      - https://XXXXXXXXXXX:2379
+      - https://XXXXXXXXXXX:2379
+  operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:20:20Z"
+    reason: NoUnsupportedConfigOverrides
+    status: "True"
+    type: UnsupportedConfigOverridesUpgradeable
+  - lastTransitionTime: "2025-11-17T09:20:20Z"
+    status: "False"
+    type: APIServicesDegraded
+  - lastTransitionTime: "2025-11-17T09:29:48Z"
+    status: "True"
+    type: APIServicesAvailable
+  - lastTransitionTime: "2025-11-17T09:22:15Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2025-11-17T09:20:22Z"
+    status: "False"
+    type: EncryptionKeyControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:20:22Z"
+    status: "False"
+    type: EncryptionStateControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:20:22Z"
+    status: "False"
+    type: Encrypted
+  - lastTransitionTime: "2025-11-17T09:20:22Z"
+    status: "False"
+    type: EncryptionPruneControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:20:22Z"
+    status: "False"
+    type: EncryptionMigrationControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:20:22Z"
+    status: "False"
+    type: EncryptionMigrationControllerProgressing
+  - lastTransitionTime: "2025-11-17T09:22:33Z"
+    reason: AsExpected
+    status: "True"
+    type: APIServerDeploymentAvailable
+  - lastTransitionTime: "2025-11-17T09:44:25Z"
+    reason: AsExpected
+    status: "False"
+    type: APIServerDeploymentDegraded
+  - lastTransitionTime: "2025-11-17T09:42:59Z"
+    reason: AsExpected
+    status: "False"
+    type: APIServerDeploymentProgressing
+  - lastTransitionTime: "2025-11-17T09:20:23Z"
+    status: "False"
+    type: APIServerWorkloadDegraded
+  - lastTransitionTime: "2025-11-17T09:20:28Z"
+    status: "False"
+    type: RevisionControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:20:26Z"
+    status: "False"
+    type: AuditPolicyDegraded
+  - lastTransitionTime: "2025-11-17T09:20:25Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2025-11-17T09:20:27Z"
+    reason: AsExpected
+    status: "False"
+    type: APIServerStaticResourcesDegraded
+  - lastTransitionTime: "2025-11-17T09:40:06Z"
+    reason: AsExpected
+    status: "False"
+    type: OperatorConfigProgressing
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 4
+    name: apiserver
+    namespace: openshift-apiserver
+    resource: deployments
+  XXXXXXAvailableRevision: 2
+  observedGeneration: 5
+  readyReplicas: 0

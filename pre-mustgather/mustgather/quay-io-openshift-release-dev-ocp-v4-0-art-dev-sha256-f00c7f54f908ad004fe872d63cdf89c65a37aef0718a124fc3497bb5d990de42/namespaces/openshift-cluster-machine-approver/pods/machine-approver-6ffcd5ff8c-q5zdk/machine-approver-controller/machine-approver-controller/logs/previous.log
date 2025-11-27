@@ -1,0 +1,24 @@
+2025-11-17T09:26:48.740202268Z W1117 09:26:48.739936       1 client_config.go:618] Neither --kubeconfig nor --XXXXXX was specified.  Using the inClusterConfig.  This might not work.
+2025-11-17T09:26:48.740312679Z W1117 09:26:48.740261       1 client_config.go:618] Neither --kubeconfig nor --XXXXXX was specified.  Using the inClusterConfig.  This might not work.
+2025-11-17T09:26:48.740395013Z I1117 09:26:48.740373       1 main.go:149] setting up manager
+2025-11-17T09:26:48.740775860Z I1117 09:26:48.740754       1 listener.go:44] "controller-runtime/metrics: Metrics server is starting to listen" addr=":9191"
+2025-11-17T09:26:48.741077994Z I1117 09:26:48.741058       1 main.go:165] registering components
+2025-11-17T09:26:48.741077994Z I1117 09:26:48.741070       1 main.go:167] setting up scheme
+2025-11-17T09:26:48.741428172Z I1117 09:26:48.741405       1 main.go:205] setting up controllers
+2025-11-17T09:26:48.741446519Z I1117 09:26:48.741431       1 config.go:33] using default as failed to load config /var/run/configmaps/config/config.yaml: open /var/run/configmaps/config/config.yaml: no such file or directory
+2025-11-17T09:26:48.741451874Z I1117 09:26:48.741442       1 config.go:23] machine approver config: {NodeClientCert:{Disabled:false}}
+2025-11-17T09:26:48.741580058Z I1117 09:26:48.741563       1 main.go:230] starting the cmd
+2025-11-17T09:26:48.741871992Z I1117 09:26:48.741846       1 server.go:50] "starting server" path="/metrics" kind="metrics" addr="[::]:9191"
+2025-11-17T09:26:48.741937074Z I1117 09:26:48.741909       1 leaderelection.go:245] attempting to acquire leader lease openshift-cluster-machine-approver/cluster-machine-approver-leader...
+2025-11-17T09:29:48.933613024Z I1117 09:29:48.933468       1 leaderelection.go:255] successfully acquired lease openshift-cluster-machine-approver/cluster-machine-approver-leader
+2025-11-17T09:29:48.933768814Z I1117 09:29:48.933735       1 recorder.go:104] "events: XXXXXX2_caac038e-23ec-4d17-ac24-dd363ee0fafa became leader" type="Normal" object={Kind:Lease Namespace:openshift-cluster-machine-approver Name:cluster-machine-approver-leader UID:37128be7-fe88-44f0-abe3-229c4ea734e1 APIVersion:coordination.k8s.io/v1 ResourceVersion:15530 FieldPath:} reason="LeaderElection"
+2025-11-17T09:29:48.933925868Z I1117 09:29:48.933910       1 controller.go:177] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.CertificateSigningRequest"
+2025-11-17T09:29:48.933951647Z I1117 09:29:48.933941       1 controller.go:177] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.ConfigMap"
+2025-11-17T09:29:48.933957026Z I1117 09:29:48.933951       1 controller.go:185] "Starting Controller" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest"
+2025-11-17T09:29:48.934703942Z I1117 09:29:48.934659       1 status.go:97] Starting cluster operator status controller
+2025-11-17T09:29:49.139960983Z I1117 09:29:49.139905       1 controller.go:219] "Starting XXXXXXs" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" XXXXXX count=10
+2025-11-17T09:32:06.970038433Z E1117 09:32:06.969977       1 leaderelection.go:327] error retrieving resource lock openshift-cluster-machine-approver/cluster-machine-approver-leader: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io cluster-machine-approver-leader)
+2025-11-17T09:32:54.499790529Z E1117 09:32:54.499719       1 leaderelection.go:364] Failed to update lock: client rate limiter Wait returned an error: context deadline exceeded
+2025-11-17T09:32:54.499834709Z I1117 09:32:54.499783       1 leaderelection.go:280] failed to renew lease openshift-cluster-machine-approver/cluster-machine-approver-leader: timed out waiting for the condition
+2025-11-17T09:32:55.335489934Z E1117 09:32:55.335436       1 leaderelection.go:303] Failed to release lock: leases.coordination.k8s.io "cluster-machine-approver-leader" is forbidden: User "system:serviceaccount:openshift-cluster-machine-approver:machine-approver-sa" cannot update resource "leases" in API group "coordination.k8s.io" in the namespace "openshift-cluster-machine-approver"
+2025-11-17T09:32:55.335552200Z F1117 09:32:55.335541       1 main.go:232] unable to run the manager: leader election lost

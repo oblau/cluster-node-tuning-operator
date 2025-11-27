@@ -1,0 +1,34 @@
+2025-11-17T09:33:21.606032205Z + declare -r haproxy_sock=/var/run/haproxy/haproxy-XXXXXX.sock
+2025-11-17T09:33:21.606032205Z + declare -r haproxy_log_sock=/var/run/haproxy/haproxy-log.sock
+2025-11-17T09:33:21.606032205Z + export -f msg_handler
+2025-11-17T09:33:21.606258469Z + export -f reload_haproxy
+2025-11-17T09:33:21.606258469Z + export -f verify_old_haproxy_ps_being_deleted
+2025-11-17T09:33:21.606258469Z + rm -f /var/run/haproxy/haproxy-XXXXXX.sock /var/run/haproxy/haproxy-log.sock
+2025-11-17T09:33:21.608303972Z + '[' -s /etc/haproxy/haproxy.cfg ']'
+2025-11-17T09:33:21.608338392Z + socat UNIX-LISTEN:/var/run/haproxy/haproxy-XXXXXX.sock,fork 'system:bash -c msg_handler'
+2025-11-17T09:33:21.608364014Z + socat UNIX-RECV:/var/run/haproxy/haproxy-log.sock STDOUT
+2025-11-17T09:33:51.967156345Z The client send: reload
+2025-11-17T09:33:52.000600093Z [NOTICE]   (14) : New XXXXXX (16) forked
+2025-11-17T09:33:52.000600093Z [NOTICE]   (14) : Loading success.
+2025-11-17T09:33:52.186006245Z [WARNING]  (16) : Server XXXXXXs/XXXXXX0 is DOWN, reason: Layer4 connection problem, info: "Connection refused", check duration: 0ms. 2 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:33:52.186133835Z <129>Nov 17 09:33:52 haproxy[16]: Server XXXXXXs/XXXXXX0 is DOWN, reason: Layer4 connection problem, info: "Connection refused", check duration: 0ms. 2 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:33:53.652126637Z [WARNING]  (16) : Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 3ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:33:53.652216406Z <129>Nov 17 09:33:53 haproxy[16]: Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 3ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:35:28.366801056Z [WARNING]  (16) : Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 4ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:35:28.366869031Z [ALERT]    (16) : backend 'XXXXXXs' has no server available!
+2025-11-17T09:35:28.366971535Z <129>Nov 17 09:35:28 haproxy[16]: Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 4ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:35:28.366990129Z <129>Nov 17 09:35:28 haproxy[16]: backend XXXXXXs has no server available!
+2025-11-17T09:36:22.155456582Z [WARNING]  (16) : Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 6ms. 1 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:36:22.155595736Z <133>Nov 17 09:36:22 haproxy[16]: Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 6ms. 1 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:36:51.407951472Z [WARNING]  (16) : Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 3ms. 2 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:36:51.408036173Z <133>Nov 17 09:36:51 haproxy[16]: Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 3ms. 2 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:41:08.351557008Z [WARNING]  (16) : Server XXXXXXs/XXXXXX0 is UP, reason: Layer7 check passed, code: 200, check duration: 6ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:41:08.351778301Z <133>Nov 17 09:41:08 haproxy[16]: Server XXXXXXs/XXXXXX0 is UP, reason: Layer7 check passed, code: 200, check duration: 6ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:42:46.676133425Z [WARNING]  (16) : Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 1ms. 2 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:42:46.676334277Z <129>Nov 17 09:42:46 haproxy[16]: Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 1ms. 2 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:44:07.844297447Z [WARNING]  (16) : Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 7ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:44:07.844351414Z <133>Nov 17 09:44:07 haproxy[16]: Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 7ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:45:53.111747439Z [WARNING]  (16) : Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 2ms. 2 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:45:53.111820770Z <129>Nov 17 09:45:53 haproxy[16]: Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 2ms. 2 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:47:08.169791619Z [WARNING]  (16) : Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 9ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:47:08.169848613Z <133>Nov 17 09:47:08 haproxy[16]: Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 9ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.

@@ -1,0 +1,11 @@
+2025-11-17T09:40:54.599349228Z + timeout 3m /bin/bash -exuo pipefail -c 'while [ -n "$(ss -Htanop \( sport = 9443 \))" ]; do sleep 1; done'
+2025-11-17T09:40:54.602978245Z ++ ss -Htanop '(' sport = 9443 ')'
+2025-11-17T09:40:54.611792725Z + '[' -n '' ']'
+2025-11-17T09:40:54.612546190Z + exec cluster-kube-controller-manager-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-controller-cert-syncer-kubeconfig/kubeconfig --namespace=openshift-kube-controller-manager --listen=0.0.0.0:9443 -v=2
+2025-11-17T09:40:54.658660701Z W1117 09:40:54.658567       1 cmd.go:237] Using insecure, self-signed certificates
+2025-11-17T09:40:54.658794303Z I1117 09:40:54.658781       1 crypto.go:601] Generating new CA for cert-recovery-controller-signer@1763372454 cert, and key in /tmp/serving-cert-1132686518/serving-signer.crt, /tmp/serving-cert-1132686518/serving-signer.key
+2025-11-17T09:40:55.176847976Z I1117 09:40:55.176758       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:40:55.177532992Z I1117 09:40:55.177504       1 observer_polling.go:159] Starting file observer
+2025-11-17T09:40:55.197283348Z I1117 09:40:55.197141       1 builder.go:271] cert-recovery-controller version 4.14.0-202511060117.p2.g4e05963.assembly.stream.el8-4e05963-4e059638c2cbf003551ee699106dc024760eece3
+2025-11-17T09:40:55.201155500Z I1117 09:40:55.201047       1 leaderelection.go:245] attempting to acquire leader lease openshift-kube-controller-manager/cert-recovery-controller-lock...
+2025-11-17T09:46:56.863732504Z E1117 09:46:56.863555       1 leaderelection.go:327] error retrieving resource lock openshift-kube-controller-manager/cert-recovery-controller-lock: Get "https://localhost:6443/apis/coordination.k8s.io/v1/namespaces/openshift-kube-controller-manager/leases/cert-recovery-controller-lock?timeout=1m47s": dial tcp [::1]:6443: connect: connection refused

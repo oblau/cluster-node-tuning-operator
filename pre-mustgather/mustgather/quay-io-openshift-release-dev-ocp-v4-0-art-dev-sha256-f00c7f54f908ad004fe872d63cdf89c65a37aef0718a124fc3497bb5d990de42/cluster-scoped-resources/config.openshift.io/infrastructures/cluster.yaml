@@ -1,0 +1,75 @@
+---
+apiVersion: config.openshift.io/v1
+kind: Infrastructure
+metadata:
+  creationTimestamp: "2025-11-17T09:05:13Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:cloudConfig:
+          .: {}
+          f:name: {}
+        f:platformSpec:
+          .: {}
+          f:type: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2025-11-17T09:05:13Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:apiServerInternalURI: {}
+        f:apiServerURL: {}
+        f:controlPlaneTopology: {}
+        f:cpuPartitioning: {}
+        f:etcdDiscoveryDomain: {}
+        f:infrastructureName: {}
+        f:infrastructureTopology: {}
+        f:platform: {}
+        f:platformStatus:
+          .: {}
+          f:baremetal:
+            .: {}
+            f:apiServerInternalIP: {}
+            f:apiServerInternalIPs: {}
+            f:ingressIP: {}
+            f:ingressIPs: {}
+          f:type: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:05:13Z"
+  name: cluster
+  resourceVersion: "533"
+  uid: 087fe0a7-d5d8-46c4-8f5e-e1d59ea83262
+spec:
+  cloudConfig:
+    name: ""
+  platformSpec:
+    type: BareMetal
+status:
+  apiServerInternalURI: https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443
+  apiServerURL: https://api.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443
+  controlPlaneTopology: HighlyAvailable
+  cpuPartitioning: None
+  etcdDiscoveryDomain: ""
+  infrastructureName: hlxcl51-5vf88
+  infrastructureTopology: HighlyAvailable
+  platform: BareMetal
+  platformStatus:
+    baremetal:
+      apiServerInternalIP: XXXXXXXXXX0
+      apiServerInternalIPs:
+      - XXXXXXXXXX0
+      - 2620:52:0:2e1a::10
+      ingressIP: XXXXXXXXXX1
+      ingressIPs:
+      - XXXXXXXXXX1
+      - 2620:52:0:2e1a::11
+    type: BareMetal

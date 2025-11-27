@@ -1,0 +1,63 @@
+2025-11-17T09:19:10.557465147Z + [[ -f /env/_XXXXXX ]]
+2025-11-17T09:19:10.557734025Z ++ date '+%m%d %H:%M:%S.%N'
+2025-11-17T09:19:10.558964333Z + echo 'I1117 09:19:10.558748832 - network-node-identity - start approver'
+2025-11-17T09:19:10.558974960Z I1117 09:19:10.558748832 - network-node-identity - start approver
+2025-11-17T09:19:10.559009450Z + exec /usr/bin/ovnkube-identity --k8s-apiserver=https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 --disable-webhook --csr-acceptance-conditions=/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json --loglevel=4
+2025-11-17T09:19:10.577090025Z I1117 09:19:10.576988       1 ovnkubeidentity.go:131] Config: {kubeconfig: apiServer:https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 logLevel:4 port:9443 host:localhost certDir: metricsAddress:0 leaseNamespace: enableInterconnect:false enableHybridOverlay:false disableWebhook:true disableApprover:false waitForKAPIDuration:0 localKAPIPort:6443 extraAllowedUsers:{slice:[] hasBeenSet:false} csrAcceptanceConditionFile:/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json csrAcceptanceConditions:[] podAdmissionConditionFile: podAdmissionConditions:[]}
+2025-11-17T09:19:10.577090025Z W1117 09:19:10.577073       1 client_config.go:618] Neither --kubeconfig nor --XXXXXX was specified.  Using the inClusterConfig.  This might not work.
+2025-11-17T09:19:10.577720100Z I1117 09:19:10.577699       1 ovnkubeidentity.go:468] Starting certificate signing request approver
+2025-11-17T09:19:10.577790144Z I1117 09:19:10.577770       1 shared_informer.go:341] caches populated
+2025-11-17T09:19:10.577873091Z I1117 09:19:10.577855       1 leaderelection.go:245] attempting to acquire leader lease openshift-network-node-identity/ovnkube-identity...
+2025-11-17T09:19:10.587794936Z I1117 09:19:10.587723       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:19:10.587794936Z I1117 09:19:10.587742       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:19:46.628261042Z I1117 09:19:46.628196       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:19:46.628261042Z I1117 09:19:46.628220       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:20:27.284857785Z I1117 09:20:27.284696       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:20:27.284857785Z I1117 09:20:27.284719       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:20:56.878638573Z I1117 09:20:56.878586       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:20:56.878638573Z I1117 09:20:56.878602       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:21:39.043774108Z I1117 09:21:39.043709       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:21:39.043774108Z I1117 09:21:39.043724       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:22:19.769526562Z I1117 09:22:19.769374       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:22:19.769526562Z I1117 09:22:19.769435       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:23:01.417136698Z I1117 09:23:01.417073       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:23:01.417136698Z I1117 09:23:01.417094       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:23:36.251238310Z I1117 09:23:36.251098       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:23:36.251238310Z I1117 09:23:36.251117       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:24:18.498179689Z I1117 09:24:18.497962       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:24:18.498179689Z I1117 09:24:18.498002       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:24:49.695737352Z I1117 09:24:49.695583       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:24:49.695737352Z I1117 09:24:49.695604       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:26:18.067413867Z E1117 09:26:18.067262       1 leaderelection.go:327] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io ovnkube-identity)
+2025-11-17T09:26:18.067552064Z I1117 09:26:18.067540       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:26:47.385772243Z I1117 09:26:47.385528       1 with_retry.go:234] Got a Retry-After 5s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:26:52.395847170Z I1117 09:26:52.395788       1 with_retry.go:234] Got a Retry-After 5s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:26:57.405804413Z I1117 09:26:57.405652       1 with_retry.go:234] Got a Retry-After 5s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:27:02.415857992Z I1117 09:27:02.415798       1 with_retry.go:234] Got a Retry-After 5s response for attempt 4 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:27:07.425859106Z I1117 09:27:07.425797       1 with_retry.go:234] Got a Retry-After 5s response for attempt 5 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:27:07.427203022Z E1117 09:27:07.427157       1 leaderelection.go:327] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": dial tcp [2620:52:0:2e1a::10]:6443: connect: connection refused
+2025-11-17T09:27:07.427203022Z I1117 09:27:07.427199       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:27:29.380224945Z I1117 09:27:29.380122       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:27:29.380224945Z I1117 09:27:29.380149       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:28:00.832582223Z I1117 09:28:00.832453       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:28:00.832582223Z I1117 09:28:00.832469       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:28:24.850728816Z I1117 09:28:24.850652       1 leaderelection.go:349] lock is held by XXXXXX2_68b7dbf0-b309-405d-9f97-be8870900e1b and has not yet expired
+2025-11-17T09:28:24.850728816Z I1117 09:28:24.850698       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:29:04.396162191Z I1117 09:29:04.396069       1 leaderelection.go:255] successfully acquired lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:29:04.396315194Z I1117 09:29:04.396272       1 recorder.go:104] "events: XXXXXX1_35b72ff6-6f1e-4bdc-9b47-0a46be3b2c1b became leader" type="Normal" object={"kind":"Lease","namespace":"openshift-network-node-identity","name":"ovnkube-identity","uid":"4659b2c6-ade4-4d67-b4a9-67def0d42dec","apiVersion":"coordination.k8s.io/v1","resourceVersion":"15313"} reason="LeaderElection"
+2025-11-17T09:29:04.396441336Z I1117 09:29:04.396421       1 controller.go:177] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.CertificateSigningRequest"
+2025-11-17T09:29:04.396649909Z I1117 09:29:04.396584       1 controller.go:185] "Starting Controller" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest"
+2025-11-17T09:29:04.398318001Z I1117 09:29:04.398278       1 reflector.go:287] Starting reflector *v1.CertificateSigningRequest (10h11m1.625644397s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:29:04.398318001Z I1117 09:29:04.398295       1 reflector.go:323] Listing and watching *v1.CertificateSigningRequest from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:29:04.498921526Z I1117 09:29:04.498782       1 shared_informer.go:341] caches populated
+2025-11-17T09:29:04.498921526Z I1117 09:29:04.498868       1 shared_informer.go:341] caches populated
+2025-11-17T09:29:04.498921526Z I1117 09:29:04.498901       1 controller.go:219] "Starting XXXXXXs" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" XXXXXX count=1
+2025-11-17T09:29:04.499391698Z I1117 09:29:04.499359       1 approver.go:230] Finished syncing CSR csr-wmwzn for unknown node in 36.477µs
+2025-11-17T09:29:04.499557794Z I1117 09:29:04.499541       1 approver.go:230] Finished syncing CSR csr-947tr for unknown node in 15.844µs
+2025-11-17T09:29:04.499620899Z I1117 09:29:04.499611       1 approver.go:230] Finished syncing CSR csr-lpstt for unknown node in 15.103µs
+2025-11-17T09:29:04.499649236Z I1117 09:29:04.499639       1 approver.go:230] Finished syncing CSR csr-wlsld for unknown node in 14.279µs
+2025-11-17T09:31:28.188130479Z I1117 09:31:28.187964       1 reflector.go:788] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233: Watch close - *v1.CertificateSigningRequest total 2 items received
+2025-11-17T09:31:34.595234941Z E1117 09:31:34.595162       1 leaderelection.go:327] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": context deadline exceeded
+2025-11-17T09:31:34.595234941Z I1117 09:31:34.595226       1 leaderelection.go:280] failed to renew lease openshift-network-node-identity/ovnkube-identity: timed out waiting for the condition
+2025-11-17T09:31:41.599852817Z E1117 09:31:41.599800       1 leaderelection.go:303] Failed to release lock: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2025-11-17T09:31:41.599906128Z error running approver: leader election lost

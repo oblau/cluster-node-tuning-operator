@@ -1,0 +1,481 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubernetes.io/config.hash: 20d5fd846732318521a1ce8aeb2ef0a0
+    kubernetes.io/config.mirror: 20d5fd846732318521a1ce8aeb2ef0a0
+    kubernetes.io/config.seen: "2025-11-17T09:32:19.678130245Z"
+    kubernetes.io/config.source: file
+    openshift.io/scc: privileged
+    target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+  creationTimestamp: "2025-11-17T09:34:45Z"
+  labels:
+    app: kni-infra-api-lb
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/config.hash: {}
+          f:kubernetes.io/config.mirror: {}
+          f:kubernetes.io/config.seen: {}
+          f:kubernetes.io/config.source: {}
+          f:target.workload.openshift.io/management: {}
+        f:labels:
+          .: {}
+          f:app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"bc15ced4-edf1-4c10-8cd9-fecd74736a61"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"haproxy"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"OLD_HAPROXY_PS_FORCE_DEL_TIMEOUT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/haproxy"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/haproxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"haproxy-monitor"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/config"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/etc/haproxy"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/host"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/haproxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"verify-api-int-resolvable"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/host"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"chroot-host"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"conf-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"kubeconfigvarlib"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"resource-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"run-dir"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+    manager: kubelet
+    operation: Update
+    time: "2025-11-17T09:34:45Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"XXXXXXXXXXX"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"2620:52:0:2e1a::20"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:36:59Z"
+  name: haproxy-XXXXXX0
+  namespace: openshift-kni-infra
+  ownerReferences:
+  - apiVersion: v1
+    controller: true
+    kind: Node
+    name: XXXXXX0
+    uid: bc15ced4-edf1-4c10-8cd9-fecd74736a61
+  resourceVersion: "22229"
+  uid: f173d0c3-979a-4fe3-aa77-391c3150425d
+spec:
+  containers:
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      #/bin/bash
+      verify_old_haproxy_ps_being_deleted()
+      {
+        local prev_pids
+
+        prev_pids="$1"
+        sleep $OLD_HAPROXY_PS_FORCE_DEL_TIMEOUT
+        cur_pids=$(pidof haproxy)
+
+        for val in $prev_pids; do
+            if [[ $cur_pids =~ (^|[[:space:]])"$val"($|[[:space:]]) ]] ; then
+               kill $val
+            fi
+        done
+      }
+
+      reload_haproxy()
+      {
+        old_pids=$(pidof haproxy)
+        if [ -n "$old_pids" ]; then
+            /usr/sbin/haproxy -W -db -f /etc/haproxy/haproxy.cfg  -p /var/lib/haproxy/run/haproxy.pid -x /var/lib/haproxy/run/haproxy.sock -sf $old_pids &
+            #There seems to be some cases where HAProxy doesn't drain properly.
+            #To handle that case, SIGTERM signal being sent to old HAProxy processes which haven't terminated.
+            verify_old_haproxy_ps_being_deleted "$old_pids"  &
+        else
+            /usr/sbin/haproxy -W -db -f /etc/haproxy/haproxy.cfg  -p /var/lib/haproxy/run/haproxy.pid &
+        fi
+      }
+
+      msg_handler()
+      {
+        while read -r line; do
+          echo "The client send: $line"  >&2
+          # currently only 'reload' msg is supported
+          if [ "$line" = reload ]; then
+              reload_haproxy
+          fi
+        done
+      }
+      set -ex
+      declare -r haproxy_sock="/var/run/haproxy/haproxy-XXXXXX.sock"
+      declare -r haproxy_log_sock="/var/run/haproxy/haproxy-log.sock"
+      export -f msg_handler
+      export -f reload_haproxy
+      export -f verify_old_haproxy_ps_being_deleted
+      rm -f "$haproxy_sock" "$haproxy_log_sock"
+      socat UNIX-RECV:${haproxy_log_sock} STDOUT &
+      if [ -s "/etc/haproxy/haproxy.cfg" ]; then
+          /usr/sbin/haproxy -W -db -f /etc/haproxy/haproxy.cfg  -p /var/lib/haproxy/run/haproxy.pid &
+      fi
+      socat UNIX-LISTEN:${haproxy_sock},fork system:'bash -c msg_handler'
+    env:
+    - name: OLD_HAPROXY_PS_FORCE_DEL_TIMEOUT
+      value: "120"
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0edb715030d631711ac59ca73dc7f9083080f937f5675f5e45503e40b1e8aa5d
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /haproxy_ready
+        port: 9444
+        scheme: HTTP
+      initialDelaySeconds: 50
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: haproxy
+    resources:
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/haproxy
+      mountPropagation: HostToContainer
+      name: conf-dir
+    - mountPath: /var/run/haproxy
+      name: run-dir
+  - command:
+    - monitor
+    - /var/lib/kubelet/kubeconfig
+    - /config/haproxy.cfg.tmpl
+    - /etc/haproxy/haproxy.cfg
+    - --api-vips
+    - XXXXXXXXXX0,2620:52:0:2e1a::10
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imagePullPolicy: IfNotPresent
+    name: haproxy-monitor
+    resources:
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/haproxy
+      mountPropagation: HostToContainer
+      name: conf-dir
+    - mountPath: /var/run/haproxy
+      name: run-dir
+    - mountPath: /config
+      mountPropagation: HostToContainer
+      name: resource-dir
+    - mountPath: /host
+      mountPropagation: HostToContainer
+      name: chroot-host
+    - mountPath: /var/lib/kubelet
+      mountPropagation: HostToContainer
+      name: kubeconfigvarlib
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  initContainers:
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      /usr/bin/curl -o /dev/null -kLfs https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/healthz
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imagePullPolicy: IfNotPresent
+    name: verify-api-int-resolvable
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /host
+      mountPropagation: HostToContainer
+      name: chroot-host
+    - mountPath: /var/lib/kubelet
+      mountPropagation: HostToContainer
+      name: kubeconfigvarlib
+  nodeName: XXXXXX0
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes/static-pod-resources/haproxy
+      type: ""
+    name: resource-dir
+  - hostPath:
+      path: /var/lib/kubelet
+      type: ""
+    name: kubeconfigvarlib
+  - emptyDir: {}
+    name: run-dir
+  - hostPath:
+      path: /etc/haproxy
+      type: ""
+    name: conf-dir
+  - hostPath:
+      path: /
+      type: ""
+    name: chroot-host
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:33:09Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:33:21Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:33:21Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:32:19Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://ad2746ec81ef4774632a90da75180324ee8878332685755d0dd597a36bbf4b63
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0edb715030d631711ac59ca73dc7f9083080f937f5675f5e45503e40b1e8aa5d
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0edb715030d631711ac59ca73dc7f9083080f937f5675f5e45503e40b1e8aa5d
+    lastState: {}
+    name: haproxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:33:21Z"
+  - containerID: cri-o://41ec53517772cd93d1202fde08025b97bacb99cd759db10f1b2b940687b33bf5
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    lastState: {}
+    name: haproxy-monitor
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:33:21Z"
+  hostIP: XXXXXXXXXXX
+  initContainerStatuses:
+  - containerID: cri-o://50e08ec2b3dcf3fba92b7b521cdbe3cce3a59733963a3b83f2dc37905677e456
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    lastState: {}
+    name: verify-api-int-resolvable
+    ready: true
+    restartCount: 3
+    state:
+      terminated:
+        containerID: cri-o://50e08ec2b3dcf3fba92b7b521cdbe3cce3a59733963a3b83f2dc37905677e456
+        exitCode: 0
+        finishedAt: "2025-11-17T09:33:08Z"
+        reason: Completed
+        startedAt: "2025-11-17T09:33:08Z"
+  phase: Running
+  podIP: XXXXXXXXXXX
+  podIPs:
+  - ip: XXXXXXXXXXX
+  - ip: 2620:52:0:2e1a::20
+  qosClass: Burstable
+  startTime: "2025-11-17T09:32:19Z"

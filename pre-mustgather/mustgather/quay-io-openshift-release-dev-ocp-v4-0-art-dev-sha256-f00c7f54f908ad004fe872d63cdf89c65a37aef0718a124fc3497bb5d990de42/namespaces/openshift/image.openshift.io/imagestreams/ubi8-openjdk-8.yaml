@@ -1,0 +1,223 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: Red Hat OpenJDK 1.8 (UBI8)
+    openshift.io/image.dockerRepositoryCheck: "2025-11-17T09:30:34Z"
+    openshift.io/provider-display-name: Red Hat, Inc.
+    samples.operator.openshift.io/version: 4.14.59
+    version: 1.4.17
+  creationTimestamp: "2025-11-17T09:27:31Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+    xpaas: 1.4.17
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:openshift.io/provider-display-name: {}
+          f:samples.operator.openshift.io/version: {}
+          f:version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+          f:xpaas: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"1.3"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"1.10"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"1.11"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"1.12"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2025-11-17T09:27:31Z"
+  name: ubi8-openjdk-8
+  namespace: openshift
+  resourceVersion: "18020"
+  uid: 9d867984-001e-4efd-87e2-a54170eb8cd4
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Build and run Java applications using Maven and OpenJDK 1.8 upon
+        UBI8.
+      iconClass: icon-rh-openjdk
+      openshift.io/display-name: Red Hat OpenJDK 1.8 (UBI8)
+      sampleContextDir: undertow-servlet
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts
+      tags: builder,java,openjdk,ubi8,hidden
+      version: "1.10"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/openjdk-8:1.10
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "1.10"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Java applications using Maven and OpenJDK 1.8 upon
+        UBI8.
+      iconClass: icon-rh-openjdk
+      openshift.io/display-name: Red Hat OpenJDK 1.8 (UBI8)
+      sampleContextDir: undertow-servlet
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts
+      tags: builder,java,openjdk,ubi8,hidden
+      version: "1.11"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/openjdk-8:1.11
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "1.11"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Java applications using Maven and OpenJDK 1.8 upon
+        UBI8.
+      iconClass: icon-rh-openjdk
+      openshift.io/display-name: Red Hat OpenJDK 1.8 (UBI8)
+      sampleContextDir: undertow-servlet
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts
+      tags: builder,java,openjdk,ubi8,hidden
+      version: "1.12"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/openjdk-8:1.12
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "1.12"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Java applications using Maven and OpenJDK 1.8 upon
+        UBI8.
+      iconClass: icon-rh-openjdk
+      openshift.io/display-name: Red Hat OpenJDK 1.8 (UBI8)
+      sampleContextDir: undertow-servlet
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts
+      tags: builder,java,openjdk,ubi8,hidden
+      version: "1.3"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/openjdk-8:1.3
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "1.3"
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: ""
+  tags:
+  - items:
+    - created: "2025-11-17T09:30:34Z"
+      dockerImageReference: registry.access.redhat.com/ubi8/openjdk-8@sha256:496e23be70520863bce6f7cdc54d280aca2c133d06e992795c4dcbde1a9dd1ab
+      generation: 2
+      image: sha256:496e23be70520863bce6f7cdc54d280aca2c133d06e992795c4dcbde1a9dd1ab
+    tag: "1.10"
+  - items:
+    - created: "2025-11-17T09:30:34Z"
+      dockerImageReference: registry.access.redhat.com/ubi8/openjdk-8@sha256:022488b1bf697b7dd8c393171a3247bef4ea545a9ab828501e72168f2aac9415
+      generation: 2
+      image: sha256:022488b1bf697b7dd8c393171a3247bef4ea545a9ab828501e72168f2aac9415
+    tag: "1.11"
+  - items:
+    - created: "2025-11-17T09:30:34Z"
+      dockerImageReference: registry.access.redhat.com/ubi8/openjdk-8@sha256:7164a06e9ba98a3ce9991bd7019512488efe30895175bb463e255f00eb9421fd
+      generation: 2
+      image: sha256:7164a06e9ba98a3ce9991bd7019512488efe30895175bb463e255f00eb9421fd
+    tag: "1.12"
+  - items:
+    - created: "2025-11-17T09:30:34Z"
+      dockerImageReference: registry.access.redhat.com/ubi8/openjdk-8@sha256:f7ca08a8dda3610fcc10cc1fe5f5d0b9f8fc7a283b01975d0fe2c1e77ae06193
+      generation: 2
+      image: sha256:f7ca08a8dda3610fcc10cc1fe5f5d0b9f8fc7a283b01975d0fe2c1e77ae06193
+    tag: "1.3"

@@ -1,0 +1,26 @@
+2025-11-17T09:19:57.895546978Z + [[ -f /env/_XXXXXX ]]
+2025-11-17T09:19:57.895640019Z + . /ovnkube-lib/ovnkube-lib.sh
+2025-11-17T09:19:57.895699401Z ++ set -x
+2025-11-17T09:19:57.895728250Z ++ K8S_NODE=
+2025-11-17T09:19:57.895759534Z ++ [[ -n '' ]]
+2025-11-17T09:19:57.895776959Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2025-11-17T09:19:57.895792868Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2025-11-17T09:19:57.895836475Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2025-11-17T09:19:57.895853734Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2025-11-17T09:19:57.895869805Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2025-11-17T09:19:57.895886115Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2025-11-17T09:19:57.895902380Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2025-11-17T09:19:57.895918559Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2025-11-17T09:19:57.895934800Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2025-11-17T09:19:57.895951794Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2025-11-17T09:19:57.896917372Z + trap quit-sbdb TERM INT
+2025-11-17T09:19:57.896953731Z + start-sbdb info
+2025-11-17T09:19:57.896975458Z + local log_level=info
+2025-11-17T09:19:57.897009564Z + [[ 1 -ne 1 ]]
+2025-11-17T09:19:57.897214548Z + wait 18368
+2025-11-17T09:19:57.897355791Z + exec /usr/share/ovn/scripts/ovn-ctl --no-monitor --db-sb-sock=/var/run/ovn/ovnsb_db.sock '--ovn-sb-log=-vconsole:info -vfile:off -vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' run_sb_ovsdb
+2025-11-17T09:19:57.965769023Z 2025-11-17T09:19:57.965Z|00001|vlog|INFO|opened log file /var/log/ovn/ovsdb-server-sb.log
+2025-11-17T09:19:57.978380666Z 2025-11-17T09:19:57.978Z|00002|ovsdb_server|INFO|ovsdb-server (Open vSwitch) 3.3.6-141.el9fdp
+2025-11-17T09:19:59.942311424Z 2025-11-17T09:19:59.942Z|00003|ovsdb_server|INFO|memory trimming after compaction enabled.
+2025-11-17T09:20:07.984908899Z 2025-11-17T09:20:07.984Z|00004|memory|INFO|15928 kB peak resident set size after 10.0 seconds
+2025-11-17T09:20:07.984982324Z 2025-11-17T09:20:07.984Z|00005|memory|INFO|atoms:11638 cells:10474 json-caches:2 monitors:5 n-weak-refs:117 sessions:3

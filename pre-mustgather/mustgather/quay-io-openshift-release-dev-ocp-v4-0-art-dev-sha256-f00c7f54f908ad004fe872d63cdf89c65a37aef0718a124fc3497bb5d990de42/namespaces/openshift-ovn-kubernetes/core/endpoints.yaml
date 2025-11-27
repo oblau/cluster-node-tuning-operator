@@ -1,0 +1,128 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:18:30Z"
+    creationTimestamp: "2025-11-17T09:18:27Z"
+    labels:
+      app: ovnkube-control-plane
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:18:30Z"
+    name: ovn-kubernetes-control-plane
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "4960"
+    uid: 80adfbbf-9786-44d5-9efa-e7d26a5858e6
+  subsets:
+  - addresses:
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX1
+      targetRef:
+        kind: Pod
+        name: ovnkube-control-plane-5b87466b4f-bzt59
+        namespace: openshift-ovn-kubernetes
+        uid: fb3b7565-5314-4142-802d-118b1327bc02
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX2
+      targetRef:
+        kind: Pod
+        name: ovnkube-control-plane-5b87466b4f-q7qgm
+        namespace: openshift-ovn-kubernetes
+        uid: 5512ce15-073b-4e53-98f0-31cea4e2c227
+    ports:
+    - name: metrics
+      port: 9108
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:36:56Z"
+    creationTimestamp: "2025-11-17T09:18:28Z"
+    labels:
+      app: ovnkube-node
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:36:56Z"
+    name: ovn-kubernetes-node
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "22113"
+    uid: 598488dd-4fa3-4df8-aeb8-2ee2bc34ebcc
+  subsets:
+  - addresses:
+    - ip: XXXXXXXXXX
+      nodeName: XXXXXX0
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-jj2tm
+        namespace: openshift-ovn-kubernetes
+        uid: d2a94ac1-4b38-47b0-9862-de32b564862a
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX0
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-dwqcv
+        namespace: openshift-ovn-kubernetes
+        uid: ac8aa453-8ddd-4ceb-af95-d6afa051ec84
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX1
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-25n8b
+        namespace: openshift-ovn-kubernetes
+        uid: 61db5a63-a633-43bd-9c06-d57471b3ff70
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX2
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-xhqqm
+        namespace: openshift-ovn-kubernetes
+        uid: e4120c89-3f68-4688-bd35-f658944b44be
+    - ip: XXXXXXXXXX
+      nodeName: XXXXXX1
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-r5bjq
+        namespace: openshift-ovn-kubernetes
+        uid: 1dd645cd-42a8-43f4-8178-f4b5403d16ba
+    ports:
+    - name: ovn-metrics
+      port: 9105
+      protocol: TCP
+    - name: metrics
+      port: 9103
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "32577"

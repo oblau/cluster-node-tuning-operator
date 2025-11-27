@@ -1,0 +1,163 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/image.dockerRepositoryCheck: "2025-11-17T09:30:31Z"
+    samples.operator.openshift.io/version: 4.14.59
+  creationTimestamp: "2025-11-17T09:27:30Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:samples.operator.openshift.io/version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"XXXXXX"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"scheduled-upgrade"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+              f:scheduled: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"user-maintained-upgrade"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2025-11-17T09:27:30Z"
+  name: jenkins-agent-base
+  namespace: openshift
+  resourceVersion: "17282"
+  uid: 8c9bc5a4-e386-4eeb-a77f-c156a50f6e7d
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Provides a Jenkins Base Agent to extend Jenkins agents
+      iconClass: icon-jenkins
+      openshift.io/display-name: Jenkins Base Agent
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: jenkins
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ocp-tools-4/jenkins-agent-base-rhel8:v4.13.0-1686680363
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: XXXXXX
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Provides a Jenkins Base Agent to extend Jenkins agents. OpenShift
+        will periodically check to ensure that the XXXXXX digest for this image tag
+        is imported.
+      iconClass: icon-jenkins
+      openshift.io/display-name: Jenkins Base Agent
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: jenkins
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ocp-tools-4/jenkins-agent-base-rhel8:v4.13.0
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+      scheduled: true
+    name: scheduled-upgrade
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Provides a Jenkins Base Agent to extend Jenkins agents. A user
+        must invoke 'oc import-image jenkins-agent-base:user-maintained-upgrade-redeploy
+        -n openshift' in order for the ImageStream controller to pull the XXXXXX digest
+        for the image tag.
+      iconClass: icon-jenkins
+      openshift.io/display-name: Jenkins Base Agent
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: jenkins
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ocp-tools-4/jenkins-agent-base-rhel8:v4.13.0
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: user-maintained-upgrade
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: ""
+  tags:
+  - items:
+    - created: "2025-11-17T09:30:31Z"
+      dockerImageReference: registry.redhat.io/ocp-tools-4/jenkins-agent-base-rhel8@sha256:50729a37cfd9eeb05865038eef01b6a2baa92e2f12fe429de3f43d85ef8824b5
+      generation: 2
+      image: sha256:50729a37cfd9eeb05865038eef01b6a2baa92e2f12fe429de3f43d85ef8824b5
+    tag: XXXXXX
+  - items:
+    - created: "2025-11-17T09:30:31Z"
+      dockerImageReference: registry.redhat.io/ocp-tools-4/jenkins-agent-base-rhel8@sha256:52f9b4df3f7833876ee502a6bff2539491db07e060b213b6a0a8fda0c4a881c1
+      generation: 2
+      image: sha256:52f9b4df3f7833876ee502a6bff2539491db07e060b213b6a0a8fda0c4a881c1
+    tag: scheduled-upgrade
+  - items:
+    - created: "2025-11-17T09:30:31Z"
+      dockerImageReference: registry.redhat.io/ocp-tools-4/jenkins-agent-base-rhel8@sha256:52f9b4df3f7833876ee502a6bff2539491db07e060b213b6a0a8fda0c4a881c1
+      generation: 2
+      image: sha256:52f9b4df3f7833876ee502a6bff2539491db07e060b213b6a0a8fda0c4a881c1
+    tag: user-maintained-upgrade

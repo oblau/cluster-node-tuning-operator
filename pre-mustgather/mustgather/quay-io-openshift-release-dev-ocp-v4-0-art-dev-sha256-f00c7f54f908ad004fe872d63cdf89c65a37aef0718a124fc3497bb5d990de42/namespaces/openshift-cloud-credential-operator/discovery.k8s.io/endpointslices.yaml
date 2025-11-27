@@ -1,0 +1,68 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.17
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: cloud-credential-operator-556f884-xb6p6
+      namespace: openshift-cloud-credential-operator
+      uid: baa741d0-f224-4f26-a412-27efed90d4c0
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:58Z"
+    creationTimestamp: "2025-11-17T09:06:16Z"
+    generateName: cco-metrics-
+    generation: 2
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: cco-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"89cbbc49-8227-417f-a5fd-5028c68f511a"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:58Z"
+    name: cco-metrics-5xfhh
+    namespace: openshift-cloud-credential-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: cco-metrics
+      uid: 89cbbc49-8227-417f-a5fd-5028c68f511a
+    resourceVersion: "10500"
+    uid: 9984e9b8-65d0-45b8-b2af-1c25bde6ebb5
+  ports:
+  - name: metrics
+    port: 8443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32421"

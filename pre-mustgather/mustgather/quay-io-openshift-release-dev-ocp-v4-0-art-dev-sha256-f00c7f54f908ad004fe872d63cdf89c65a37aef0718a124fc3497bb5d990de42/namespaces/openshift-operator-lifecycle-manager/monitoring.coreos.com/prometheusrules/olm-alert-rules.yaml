@@ -1,0 +1,95 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2025-11-17T09:05:43Z"
+  generation: 1
+  labels:
+    prometheus: alert-rules
+    role: alert-rules
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:labels:
+          .: {}
+          f:prometheus: {}
+          f:role: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec:
+        .: {}
+        f:groups:
+          .: {}
+          k:{"name":"olm.csv_abnormal.rules"}:
+            .: {}
+            f:name: {}
+            f:rules: {}
+          k:{"name":"olm.installplan.rules"}:
+            .: {}
+            f:name: {}
+            f:rules: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:43Z"
+  name: olm-alert-rules
+  namespace: openshift-operator-lifecycle-manager
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "1627"
+  uid: 6456b391-af61-4ab4-bd2a-2c84ee930bb7
+spec:
+  groups:
+  - name: olm.csv_abnormal.rules
+    rules:
+    - alert: CsvAbnormalFailedOver2Min
+      annotations:
+        description: Fires whenever a CSV has been in the failed phase for more than
+          2 minutes.
+        message: Failed to install Operator {{ $labels.name }} version {{ $labels.version
+          }}. Reason-{{ $labels.reason }}
+        summary: CSV failed for over 2 minutes
+      expr: csv_abnormal{phase=~"^Failed$"}
+      for: 2m
+      labels:
+        namespace: '{{ $labels.namespace }}'
+        severity: warning
+    - alert: CsvAbnormalOver30Min
+      annotations:
+        description: Fires whenever a CSV is in the Replacing, Pending, Deleting,
+          or Unknown phase for more than 30 minutes.
+        message: Failed to install Operator {{ $labels.name }} version {{ $labels.version
+          }}. Phase-{{ $labels.phase }} Reason-{{ $labels.reason }}
+        summary: CSV abnormal for over 30 minutes
+      expr: csv_abnormal{phase=~"(^Replacing$|^Pending$|^Deleting$|^Unknown$)"}
+      for: 30m
+      labels:
+        namespace: '{{ $labels.namespace }}'
+        severity: warning
+  - name: olm.installplan.rules
+    rules:
+    - alert: InstallPlanStepAppliedWithWarnings
+      annotations:
+        description: Fires whenever the API server returns a warning when attempting
+          to modify an operator.
+        message: The API server returned a warning during installation or upgrade
+          of an operator. An Event with reason "AppliedWithWarnings" has been created
+          with complete details, including a reference to the InstallPlan step that
+          generated the warning.
+        summary: API returned a warning when modifying an operator
+      expr: sum(increase(installplan_warnings_total[5m])) > 0
+      labels:
+        severity: warning

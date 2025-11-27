@@ -1,0 +1,364 @@
+---
+apiVersion: v1
+items:
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:20:30.139552Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: migrator-7fc59d687-kfxq5
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7155"
+    uid: a562bfcc-2542-4b94-9805-a5039f758e16
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-kube-storage-version-migrator/migrator-7fc59d687-kfxq5
+    to XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:30Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:20:30Z"
+    name: migrator-7fc59d687-kfxq5.1878c0ca839cae5e
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7162"
+    uid: dd0d436a-6507-4531-ba7c-ed0aa821547c
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:32Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: migrator-7fc59d687-kfxq5
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7166"
+    uid: a562bfcc-2542-4b94-9805-a5039f758e16
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:32Z"
+  message: Add eth0 [10.128.0.8/23 fd02:0:0:1::8/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:20:32Z"
+    name: migrator-7fc59d687-kfxq5.1878c0cb10b8a65a
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7394"
+    uid: 50c717d8-de9e-46f4-8d89-3cebcd9abf7c
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{migrator}
+    kind: Pod
+    name: migrator-7fc59d687-kfxq5
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7158"
+    uid: a562bfcc-2542-4b94-9805-a5039f758e16
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:32Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:430408e1d338dd3e13407042f1ab225a128944fd1f5131f205a7afd1157b6dad"
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:20:32Z"
+    name: migrator-7fc59d687-kfxq5.1878c0cb11ba0fde
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7396"
+    uid: 77f2919d-2b19-4914-9ec4-e07970d597bb
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{migrator}
+    kind: Pod
+    name: migrator-7fc59d687-kfxq5
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7158"
+    uid: a562bfcc-2542-4b94-9805-a5039f758e16
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:46Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:430408e1d338dd3e13407042f1ab225a128944fd1f5131f205a7afd1157b6dad"
+    in 13.553024177s (13.553041818s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:20:46Z"
+    name: migrator-7fc59d687-kfxq5.1878c0ce398d6b1a
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "8112"
+    uid: 492796e0-a93b-43e0-8ce9-b4e45934f7f3
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{migrator}
+    kind: Pod
+    name: migrator-7fc59d687-kfxq5
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7158"
+    uid: a562bfcc-2542-4b94-9805-a5039f758e16
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:46Z"
+  message: Created container migrator
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:20:46Z"
+    name: migrator-7fc59d687-kfxq5.1878c0ce3ed3c8fe
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "8116"
+    uid: 720bf49b-1da4-4c21-902e-ef2abc2d0da6
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{migrator}
+    kind: Pod
+    name: migrator-7fc59d687-kfxq5
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7158"
+    uid: a562bfcc-2542-4b94-9805-a5039f758e16
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:46Z"
+  message: Started container migrator
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:20:46Z"
+    name: migrator-7fc59d687-kfxq5.1878c0ce3ff162f2
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "8119"
+    uid: 8bb9a4dd-802e-4147-a454-cace646bd005
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:30Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: migrator-7fc59d687
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7151"
+    uid: ff17ab68-675d-451b-a087-386dfc156cdf
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:30Z"
+  message: 'Created pod: migrator-7fc59d687-kfxq5'
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:20:30Z"
+    name: migrator-7fc59d687.1878c0ca836a6a4a
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7157"
+    uid: a8d01e17-8b11-4379-9cb6-6c4afe9851fd
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:20:30Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: migrator
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7149"
+    uid: 6ce317cf-61bb-49c7-baa6-559dd5b7b3a6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:30Z"
+  message: Scaled up replica set migrator-7fc59d687 to 1
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:20:30Z"
+    name: migrator.1878c0ca832038a1
+    namespace: openshift-kube-storage-version-migrator
+    resourceVersion: "7153"
+    uid: e6a339fb-5383-417d-bfe2-d590fd0d4a6d
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "32529"

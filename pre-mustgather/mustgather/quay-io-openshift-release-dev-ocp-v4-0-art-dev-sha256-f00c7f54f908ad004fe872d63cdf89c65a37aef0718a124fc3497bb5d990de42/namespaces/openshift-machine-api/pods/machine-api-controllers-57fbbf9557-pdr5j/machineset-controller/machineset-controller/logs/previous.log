@@ -1,0 +1,46 @@
+2025-11-17T09:27:13.540539526Z I1117 09:27:13.540318       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:27:13.540645617Z 2025/11/17 09:27:13 Watching cluster-api objects only in namespace "openshift-machine-api" for reconciliation.
+2025-11-17T09:27:13.540645617Z 2025/11/17 09:27:13 Registering Components.
+2025-11-17T09:27:13.540911895Z I1117 09:27:13.540874       1 leaderelection.go:122] The leader election gives 4 retries and allows for 13s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m26s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:27:13.541598292Z I1117 09:27:13.541572       1 listener.go:44] "controller-runtime/metrics: Metrics server is starting to listen" addr=":8082"
+2025-11-17T09:27:13.577916316Z I1117 09:27:13.577871       1 server.go:187] "controller-runtime/webhook: Registering webhook" path="/mutate-machine-openshift-io-v1beta1-machine"
+2025-11-17T09:27:13.578041503Z I1117 09:27:13.578027       1 server.go:187] "controller-runtime/webhook: Registering webhook" path="/validate-machine-openshift-io-v1beta1-machine"
+2025-11-17T09:27:13.578107619Z I1117 09:27:13.578096       1 server.go:187] "controller-runtime/webhook: Registering webhook" path="/mutate-machine-openshift-io-v1beta1-machineset"
+2025-11-17T09:27:13.578162671Z I1117 09:27:13.578155       1 server.go:187] "controller-runtime/webhook: Registering webhook" path="/validate-machine-openshift-io-v1beta1-machineset"
+2025-11-17T09:27:13.578180315Z 2025/11/17 09:27:13 Registering Components.
+2025-11-17T09:27:13.578333952Z 2025/11/17 09:27:13 Starting the Cmd.
+2025-11-17T09:27:13.578648092Z I1117 09:27:13.578618       1 server.go:216] "controller-runtime/webhook/webhooks: Starting webhook server"
+2025-11-17T09:27:13.578648092Z I1117 09:27:13.578639       1 internal.go:360] "Starting server" kind="health probe" addr="[::]:9441"
+2025-11-17T09:27:13.578891530Z I1117 09:27:13.578847       1 server.go:50] "starting server" path="/metrics" kind="metrics" addr="[::]:8082"
+2025-11-17T09:27:13.578935625Z I1117 09:27:13.578912       1 leaderelection.go:245] attempting to acquire leader lease openshift-machine-api/cluster-api-provider-machineset-leader...
+2025-11-17T09:27:13.579291616Z I1117 09:27:13.579269       1 certwatcher.go:161] "controller-runtime/certwatcher: Updated current TLS certificate"
+2025-11-17T09:27:13.579401994Z I1117 09:27:13.579382       1 server.go:273] "controller-runtime/webhook: Serving webhook server" host="" port=8443
+2025-11-17T09:27:13.579484988Z I1117 09:27:13.579467       1 certwatcher.go:115] "controller-runtime/certwatcher: Starting certificate watcher"
+2025-11-17T09:29:37.730662836Z I1117 09:29:37.730603       1 leaderelection.go:255] successfully acquired lease openshift-machine-api/cluster-api-provider-machineset-leader
+2025-11-17T09:29:37.730863161Z I1117 09:29:37.730825       1 recorder.go:104] "events: machine-api-controllers-57fbbf9557-pdr5j_374e28f9-5b9a-412d-8971-07e6737a1d51 became leader" type="Normal" object={"kind":"Lease","namespace":"openshift-machine-api","name":"cluster-api-provider-machineset-leader","uid":"32ffc975-526e-4385-9bab-38a4cafc8001","apiVersion":"coordination.k8s.io/v1","resourceVersion":"15382"} reason="LeaderElection"
+2025-11-17T09:29:37.730921275Z I1117 09:29:37.730893       1 controller.go:177] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.MachineSet"
+2025-11-17T09:29:37.730928707Z I1117 09:29:37.730922       1 controller.go:177] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.Machine"
+2025-11-17T09:29:37.730945097Z I1117 09:29:37.730932       1 controller.go:177] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.Machine"
+2025-11-17T09:29:37.730945097Z I1117 09:29:37.730939       1 controller.go:185] "Starting Controller" controller="machineset_controller"
+2025-11-17T09:29:37.732337736Z I1117 09:29:37.732282       1 reflector.go:287] Starting reflector *v1beta1.MachineSet (10m35.060113062s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:29:37.732337736Z I1117 09:29:37.732311       1 reflector.go:323] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:29:37.732354831Z I1117 09:29:37.732337       1 reflector.go:287] Starting reflector *v1beta1.Machine (9m10.771326051s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:29:37.732360672Z I1117 09:29:37.732352       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:29:37.833430869Z I1117 09:29:37.833383       1 controller.go:219] "Starting XXXXXXs" controller="machineset_controller" XXXXXX count=1
+2025-11-17T09:29:44.300250891Z I1117 09:29:44.299951       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-0
+2025-11-17T09:29:44.323606322Z I1117 09:29:44.323562       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-1
+2025-11-17T09:29:44.346719752Z I1117 09:29:44.346657       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-2
+2025-11-17T09:29:44.369265827Z I1117 09:29:44.369209       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-0-csjwc
+2025-11-17T09:29:44.390999802Z I1117 09:29:44.390937       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-0-qk9w5
+2025-11-17T09:29:44.399918303Z I1117 09:29:44.399878       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-0
+2025-11-17T09:29:44.416578770Z I1117 09:29:44.416465       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-1
+2025-11-17T09:29:44.433896968Z I1117 09:29:44.433831       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-2
+2025-11-17T09:29:44.449807849Z I1117 09:29:44.449769       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-0-csjwc
+2025-11-17T09:29:44.466903595Z I1117 09:29:44.466856       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-0-qk9w5
+2025-11-17T09:30:06.100265100Z I1117 09:30:06.100203       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-0
+2025-11-17T09:30:06.119901570Z I1117 09:30:06.119845       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-1
+2025-11-17T09:30:06.135674157Z I1117 09:30:06.135630       1 machine_webhook.go:500] Validate webhook called for Machine: hlxcl51-5vf88-XXXXXX-2
+2025-11-17T09:31:55.764715922Z E1117 09:31:55.764630       1 leaderelection.go:327] error retrieving resource lock openshift-machine-api/cluster-api-provider-machineset-leader: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io cluster-api-provider-machineset-leader)
+2025-11-17T09:32:42.764103563Z E1117 09:32:42.764032       1 leaderelection.go:327] error retrieving resource lock openshift-machine-api/cluster-api-provider-machineset-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": context deadline exceeded
+2025-11-17T09:32:42.764103563Z I1117 09:32:42.764078       1 leaderelection.go:280] failed to renew lease openshift-machine-api/cluster-api-provider-machineset-leader: timed out waiting for the condition
+2025-11-17T09:32:42.764155382Z 2025/11/17 09:32:42 leader election lost

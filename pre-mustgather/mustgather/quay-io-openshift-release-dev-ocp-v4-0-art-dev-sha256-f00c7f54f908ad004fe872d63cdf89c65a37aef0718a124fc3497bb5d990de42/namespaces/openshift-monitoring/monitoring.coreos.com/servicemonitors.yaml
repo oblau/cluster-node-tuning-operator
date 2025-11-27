@@ -1,0 +1,883 @@
+---
+apiVersion: monitoring.coreos.com/v1
+items:
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:57Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: alert-router
+      app.kubernetes.io/instance: main
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: alertmanager
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.25.0
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:39:57Z"
+    name: alertmanager-main
+    namespace: openshift-monitoring
+    resourceVersion: "26403"
+    uid: 504fad89-1f9d-4008-b4ee-0d77005e8807
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      interval: 30s
+      port: metrics
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: alertmanager-main.openshift-monitoring.svc
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: alert-router
+        app.kubernetes.io/instance: main
+        app.kubernetes.io/name: alertmanager
+        app.kubernetes.io/part-of: openshift-monitoring
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:51Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: cluster-monitoring-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:38:51Z"
+    name: cluster-monitoring-operator
+    namespace: openshift-monitoring
+    resourceVersion: "24698"
+    uid: ec9ed8d6-df4f-4987-80f4-f3e59936db7f
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      metricRelabelings:
+      - action: drop
+        regex: (apiserver|go_sched|workqueue)_.+
+        sourceLabels:
+        - __name__
+      port: https
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: cluster-monitoring-operator.openshift-monitoring.svc
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        app.kubernetes.io/name: cluster-monitoring-operator
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:01Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: kube-state-metrics
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 2.9.2
+      monitoring.openshift.io/collection-profile: full
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:monitoring.openshift.io/collection-profile: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:jobLabel: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:39:01Z"
+    name: kube-state-metrics
+    namespace: openshift-monitoring
+    resourceVersion: "25247"
+    uid: 2d46bc01-91f5-4964-8bd7-697ce5dc3b9f
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      honorLabels: true
+      interval: 1m
+      metricRelabelings:
+      - action: labeldrop
+        regex: instance
+      port: https-main
+      relabelings:
+      - action: labeldrop
+        regex: pod
+      scheme: https
+      scrapeTimeout: 1m
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: kube-state-metrics.openshift-monitoring.svc
+    - bearerTokenSecret:
+        key: ""
+      interval: 1m
+      port: https-self
+      scheme: https
+      scrapeTimeout: 1m
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: kube-state-metrics.openshift-monitoring.svc
+    jobLabel: app.kubernetes.io/name
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: exporter
+        app.kubernetes.io/name: kube-state-metrics
+        app.kubernetes.io/part-of: openshift-monitoring
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:50Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: kubelet
+      app.kubernetes.io/part-of: openshift-monitoring
+      k8s-app: kubelet
+      monitoring.openshift.io/collection-profile: full
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:k8s-app: {}
+            f:monitoring.openshift.io/collection-profile: {}
+        f:spec:
+          .: {}
+          f:attachMetadata:
+            .: {}
+            f:node: {}
+          f:endpoints: {}
+          f:jobLabel: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:38:50Z"
+    name: kubelet
+    namespace: openshift-monitoring
+    resourceVersion: "24518"
+    uid: 7995d3a2-3a9b-4776-a867-8bae53223082
+  spec:
+    attachMetadata:
+      node: true
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      honorLabels: true
+      interval: 30s
+      metricRelabelings:
+      - action: drop
+        regex: kubelet_(pod_XXXXXX_latency_microseconds|pod_start_latency_microseconds|cgroup_manager_latency_microseconds|pod_XXXXXX_start_latency_microseconds|pleg_relist_latency_microseconds|pleg_relist_interval_microseconds|runtime_operations|runtime_operations_latency_microseconds|runtime_operations_errors|eviction_stats_age_microseconds|device_plugin_registration_count|device_plugin_alloc_latency_microseconds|network_plugin_operations_latency_microseconds)
+        sourceLabels:
+        - __name__
+      - action: drop
+        regex: scheduler_(e2e_scheduling_latency_microseconds|scheduling_algorithm_predicate_evaluation|scheduling_algorithm_priority_evaluation|scheduling_algorithm_preemption_evaluation|scheduling_algorithm_latency_microseconds|binding_latency_microseconds|scheduling_latency_seconds)
+        sourceLabels:
+        - __name__
+      - action: drop
+        regex: apiserver_(request_count|request_latencies|request_latencies_summary|dropped_requests|storage_data_key_generation_latencies_microseconds|storage_transformation_failures_total|storage_transformation_latencies_microseconds|proxy_tunnel_sync_latency_secs|longrunning_gauge|registered_watchers)
+        sourceLabels:
+        - __name__
+      - action: drop
+        regex: kubelet_docker_(operations|operations_latency_microseconds|operations_errors|operations_timeout)
+        sourceLabels:
+        - __name__
+      - action: drop
+        regex: reflector_(items_per_list|items_per_watch|list_duration_seconds|lists_total|short_watches_total|watch_duration_seconds|watches_total)
+        sourceLabels:
+        - __name__
+      - action: drop
+        regex: etcd_(helper_cache_hit_count|helper_cache_miss_count|helper_cache_entry_count|object_counts|request_cache_get_latencies_summary|request_cache_add_latencies_summary|request_latencies_summary)
+        sourceLabels:
+        - __name__
+      - action: drop
+        regex: transformation_(transformation_latencies_microseconds|failures_total)
+        sourceLabels:
+        - __name__
+      - action: drop
+        regex: (admission_quota_controller_adds|admission_quota_controller_depth|admission_quota_controller_longest_running_processor_microseconds|admission_quota_controller_queue_latency|admission_quota_controller_unfinished_work_seconds|admission_quota_controller_work_duration|APIServiceOpenAPIAggregationControllerQueue1_adds|APIServiceOpenAPIAggregationControllerQueue1_depth|APIServiceOpenAPIAggregationControllerQueue1_longest_running_processor_microseconds|APIServiceOpenAPIAggregationControllerQueue1_queue_latency|APIServiceOpenAPIAggregationControllerQueue1_retries|APIServiceOpenAPIAggregationControllerQueue1_unfinished_work_seconds|APIServiceOpenAPIAggregationControllerQueue1_work_duration|APIServiceRegistrationController_adds|APIServiceRegistrationController_depth|APIServiceRegistrationController_longest_running_processor_microseconds|APIServiceRegistrationController_queue_latency|APIServiceRegistrationController_retries|APIServiceRegistrationController_unfinished_work_seconds|APIServiceRegistrationController_work_duration|autoregister_adds|autoregister_depth|autoregister_longest_running_processor_microseconds|autoregister_queue_latency|autoregister_retries|autoregister_unfinished_work_seconds|autoregister_work_duration|AvailableConditionController_adds|AvailableConditionController_depth|AvailableConditionController_longest_running_processor_microseconds|AvailableConditionController_queue_latency|AvailableConditionController_retries|AvailableConditionController_unfinished_work_seconds|AvailableConditionController_work_duration|crd_autoregistration_controller_adds|crd_autoregistration_controller_depth|crd_autoregistration_controller_longest_running_processor_microseconds|crd_autoregistration_controller_queue_latency|crd_autoregistration_controller_retries|crd_autoregistration_controller_unfinished_work_seconds|crd_autoregistration_controller_work_duration|crdEstablishing_adds|crdEstablishing_depth|crdEstablishing_longest_running_processor_microseconds|crdEstablishing_queue_latency|crdEstablishing_retries|crdEstablishing_unfinished_work_seconds|crdEstablishing_work_duration|crd_finalizer_adds|crd_finalizer_depth|crd_finalizer_longest_running_processor_microseconds|crd_finalizer_queue_latency|crd_finalizer_retries|crd_finalizer_unfinished_work_seconds|crd_finalizer_work_duration|crd_naming_condition_controller_adds|crd_naming_condition_controller_depth|crd_naming_condition_controller_longest_running_processor_microseconds|crd_naming_condition_controller_queue_latency|crd_naming_condition_controller_retries|crd_naming_condition_controller_unfinished_work_seconds|crd_naming_condition_controller_work_duration|crd_openapi_controller_adds|crd_openapi_controller_depth|crd_openapi_controller_longest_running_processor_microseconds|crd_openapi_controller_queue_latency|crd_openapi_controller_retries|crd_openapi_controller_unfinished_work_seconds|crd_openapi_controller_work_duration|DiscoveryController_adds|DiscoveryController_depth|DiscoveryController_longest_running_processor_microseconds|DiscoveryController_queue_latency|DiscoveryController_retries|DiscoveryController_unfinished_work_seconds|DiscoveryController_work_duration|kubeproxy_sync_proxy_rules_latency_microseconds|non_structural_schema_condition_controller_adds|non_structural_schema_condition_controller_depth|non_structural_schema_condition_controller_longest_running_processor_microseconds|non_structural_schema_condition_controller_queue_latency|non_structural_schema_condition_controller_retries|non_structural_schema_condition_controller_unfinished_work_seconds|non_structural_schema_condition_controller_work_duration|rest_client_request_latency_seconds|storage_operation_errors_total|storage_operation_status_count)
+        sourceLabels:
+        - __name__
+      port: https-metrics
+      relabelings:
+      - action: replace
+        sourceLabels:
+        - __metrics_path__
+        targetLabel: metrics_path
+      scheme: https
+      scrapeTimeout: 30s
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/kubelet-serving-ca-bundle/ca-bundle.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+    - bearerTokenSecret:
+        key: ""
+      honorLabels: true
+      honorTimestamps: false
+      interval: 30s
+      metricRelabelings:
+      - action: drop
+        regex: container_(network_tcp_usage_total|network_udp_usage_total|tasks_state|cpu_load_average_10s)
+        sourceLabels:
+        - __name__
+      - action: drop
+        regex: (container_spec_.*|container_file_descriptors|container_sockets|container_threads_max|container_threads|container_start_time_seconds|container_last_seen);;
+        sourceLabels:
+        - __name__
+        - pod
+        - namespace
+      - action: drop
+        regex: (container_blkio_device_usage_total);.+
+        sourceLabels:
+        - __name__
+        - container
+      - action: drop
+        regex: container_memory_failures_total
+        sourceLabels:
+        - __name__
+      - action: replace
+        regex: container_fs_usage_bytes
+        replacement: "true"
+        sourceLabels:
+        - __name__
+        targetLabel: __tmp_keep_metric
+      - action: drop
+        regex: ;(container_fs_.*);.+
+        sourceLabels:
+        - __tmp_keep_metric
+        - __name__
+        - container
+      - action: labeldrop
+        regex: __tmp_keep_metric
+      path: /metrics/cadvisor
+      port: https-metrics
+      relabelings:
+      - action: replace
+        sourceLabels:
+        - __metrics_path__
+        targetLabel: metrics_path
+      scheme: https
+      scrapeTimeout: 30s
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/kubelet-serving-ca-bundle/ca-bundle.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+    - bearerTokenSecret:
+        key: ""
+      honorLabels: true
+      interval: 30s
+      path: /metrics/probes
+      port: https-metrics
+      relabelings:
+      - action: replace
+        sourceLabels:
+        - __metrics_path__
+        targetLabel: metrics_path
+      scheme: https
+      scrapeTimeout: 30s
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/kubelet-serving-ca-bundle/ca-bundle.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+    - bearerTokenSecret:
+        key: ""
+      interval: 30s
+      port: https-metrics
+      relabelings:
+      - action: keep
+        regex: (linux|)
+        sourceLabels:
+        - __meta_kubernetes_node_label_kubernetes_io_os
+      - action: replace
+        regex: (.+)(?::\d+)
+        replacement: $1:9537
+        sourceLabels:
+        - __address__
+        targetLabel: __address__
+      - action: replace
+        replacement: crio
+        sourceLabels:
+        - endpoint
+        targetLabel: endpoint
+      - action: replace
+        replacement: crio
+        targetLabel: job
+    jobLabel: k8s-app
+    namespaceSelector:
+      matchNames:
+      - kube-system
+    selector:
+      matchLabels:
+        k8s-app: kubelet
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:02Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: node-exporter
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 1.6.1
+      monitoring.openshift.io/collection-profile: full
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:monitoring.openshift.io/collection-profile: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:jobLabel: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:39:02Z"
+    name: node-exporter
+    namespace: openshift-monitoring
+    resourceVersion: "25278"
+    uid: 3cbb845e-42ac-4e88-9691-20737c3960a1
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      interval: 15s
+      metricRelabelings:
+      - action: replace
+        regex: (node_mountstats_nfs_read_bytes_total|node_mountstats_nfs_write_bytes_total|node_mountstats_nfs_operations_requests_total)
+        replacement: "true"
+        sourceLabels:
+        - __name__
+        targetLabel: __tmp_keep
+      - action: drop
+        regex: node_mountstats_nfs_.+;
+        sourceLabels:
+        - __name__
+        - __tmp_keep
+      - action: labeldrop
+        regex: __tmp_keep
+      port: https
+      relabelings:
+      - action: replace
+        regex: (.*)
+        replacement: $1
+        sourceLabels:
+        - __meta_kubernetes_pod_node_name
+        targetLabel: instance
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: node-exporter.openshift-monitoring.svc
+    jobLabel: app.kubernetes.io/name
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: exporter
+        app.kubernetes.io/name: node-exporter
+        app.kubernetes.io/part-of: openshift-monitoring
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:59Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+      k8s-app: openshift-state-metrics
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/part-of: {}
+            f:k8s-app: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:jobLabel: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:38:59Z"
+    name: openshift-state-metrics
+    namespace: openshift-monitoring
+    resourceVersion: "25144"
+    uid: 1d2f5346-e5bd-451d-8054-d9396c6deb8a
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      honorLabels: true
+      interval: 2m
+      port: https-main
+      scheme: https
+      scrapeTimeout: 2m
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: openshift-state-metrics.openshift-monitoring.svc
+    - bearerTokenSecret:
+        key: ""
+      interval: 2m
+      port: https-self
+      scheme: https
+      scrapeTimeout: 2m
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: openshift-state-metrics.openshift-monitoring.svc
+    jobLabel: k8s-app
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        k8s-app: openshift-state-metrics
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:15Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: metrics-adapter
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: prometheus-adapter
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.10.0
+      monitoring.openshift.io/collection-profile: full
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:monitoring.openshift.io/collection-profile: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:39:15Z"
+    name: prometheus-adapter
+    namespace: openshift-monitoring
+    resourceVersion: "25568"
+    uid: bfe92d7c-a73b-4cf3-a21a-8651d7530ac4
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      interval: 30s
+      metricRelabelings:
+      - action: drop
+        regex: (apiserver_client_certificate_.*|apiserver_envelope_.*|apiserver_flowcontrol_.*|apiserver_storage_.*|apiserver_webhooks_.*|workqueue_.*)
+        sourceLabels:
+        - __name__
+      port: https
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: prometheus-adapter.openshift-monitoring.svc
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: metrics-adapter
+        app.kubernetes.io/name: prometheus-adapter
+        app.kubernetes.io/part-of: openshift-monitoring
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:02Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: prometheus
+      app.kubernetes.io/instance: k8s
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 2.46.0
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:39:02Z"
+    name: prometheus-k8s
+    namespace: openshift-monitoring
+    resourceVersion: "25286"
+    uid: 31610833-732b-49a0-bc28-3c76d3684e67
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      interval: 30s
+      port: metrics
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: prometheus-k8s.openshift-monitoring.svc
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: prometheus
+        app.kubernetes.io/instance: k8s
+        app.kubernetes.io/name: prometheus
+        app.kubernetes.io/part-of: openshift-monitoring
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:38:50Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: prometheus-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.67.1
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:38:50Z"
+    name: prometheus-operator
+    namespace: openshift-monitoring
+    resourceVersion: "24480"
+    uid: 56e10c16-e1d0-44cd-8232-5c9873f3dc77
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      honorLabels: true
+      port: https
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: prometheus-operator.openshift-monitoring.svc
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: controller
+        app.kubernetes.io/name: prometheus-operator
+        app.kubernetes.io/part-of: openshift-monitoring
+        app.kubernetes.io/version: 0.67.1
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:15Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+      k8s-app: telemeter-client
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/part-of: {}
+            f:k8s-app: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:jobLabel: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:39:15Z"
+    name: telemeter-client
+    namespace: openshift-monitoring
+    resourceVersion: "25561"
+    uid: 3e592f8c-783c-4b11-9489-06b582b2c7e5
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      interval: 30s
+      port: https
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: telemeter-client.openshift-monitoring.svc
+    jobLabel: k8s-app
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        k8s-app: telemeter-client
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:43Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: query-layer
+      app.kubernetes.io/instance: thanos-querier
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: thanos-query
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.30.2
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:39:43Z"
+    name: thanos-querier
+    namespace: openshift-monitoring
+    resourceVersion: "26174"
+    uid: 038e0eb6-95a1-46dd-993e-cf1d22cf2950
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      interval: 30s
+      port: metrics
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: thanos-querier.openshift-monitoring.svc
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: query-layer
+        app.kubernetes.io/instance: thanos-querier
+        app.kubernetes.io/name: thanos-query
+        app.kubernetes.io/part-of: openshift-monitoring
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-11-17T09:39:02Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: thanos-sidecar
+      app.kubernetes.io/instance: k8s
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 2.46.0
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:39:02Z"
+    name: thanos-sidecar
+    namespace: openshift-monitoring
+    resourceVersion: "25287"
+    uid: 2ff47eaa-be5c-4a22-b5f5-70dd5b5ba9ea
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      interval: 30s
+      port: thanos-proxy
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+        keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+        serverName: prometheus-k8s-thanos-sidecar.openshift-monitoring.svc
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: thanos-sidecar
+kind: ServiceMonitorList
+metadata:
+  continue: ""
+  resourceVersion: "32460"

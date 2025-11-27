@@ -1,0 +1,262 @@
+---
+apiVersion: route.openshift.io/v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2025-11-17T09:38:50Z"
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/part-of: {}
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:38:50Z"
+    name: alertmanager-main
+    namespace: openshift-monitoring
+    resourceVersion: "26478"
+    uid: 82186233-3310-4c85-860d-5a2d94b9f0f9
+  spec:
+    host: alertmanager-main-openshift-monitoring.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+    path: /api
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: alertmanager-main
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2025-11-17T09:38:50Z"
+        status: "True"
+        type: Admitted
+      host: alertmanager-main-openshift-monitoring.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerCanonicalHostname: router-default.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2025-11-17T09:38:50Z"
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/part-of: {}
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:38:50Z"
+    name: prometheus-k8s
+    namespace: openshift-monitoring
+    resourceVersion: "26480"
+    uid: a913a3ef-f407-42bc-86b6-0d8bfd6b082d
+  spec:
+    host: prometheus-k8s-openshift-monitoring.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+    path: /api
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: prometheus-k8s
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2025-11-17T09:38:50Z"
+        status: "True"
+        type: Admitted
+      host: prometheus-k8s-openshift-monitoring.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerCanonicalHostname: router-default.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2025-11-17T09:38:51Z"
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/part-of: {}
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:38:51Z"
+    name: prometheus-k8s-federate
+    namespace: openshift-monitoring
+    resourceVersion: "26501"
+    uid: daf60fa8-ce08-41fb-b6d2-c79d4e668b85
+  spec:
+    host: prometheus-k8s-federate-openshift-monitoring.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+    path: /federate
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: prometheus-k8s
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2025-11-17T09:38:51Z"
+        status: "True"
+        type: Admitted
+      host: prometheus-k8s-federate-openshift-monitoring.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerCanonicalHostname: router-default.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2025-11-17T09:38:50Z"
+    labels:
+      app.kubernetes.io/component: query-layer
+      app.kubernetes.io/instance: thanos-querier
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: thanos-query
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.30.2
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2025-11-17T09:38:50Z"
+    name: thanos-querier
+    namespace: openshift-monitoring
+    resourceVersion: "26481"
+    uid: 341bd0e6-ee8d-487f-adad-6f6f2435dda3
+  spec:
+    host: thanos-querier-openshift-monitoring.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+    path: /api
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: thanos-querier
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2025-11-17T09:38:50Z"
+        status: "True"
+        type: Admitted
+      host: thanos-querier-openshift-monitoring.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerCanonicalHostname: router-default.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX
+      routerName: default
+      wildcardPolicy: None
+kind: RouteList
+metadata:
+  resourceVersion: "32457"

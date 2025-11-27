@@ -1,0 +1,356 @@
+2025-11-17T09:33:17.240232556Z Overwriting root TLS certificate authority trust store
+2025-11-17T09:33:17.310851204Z I1117 09:33:17.310672       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:33:17.312039272Z I1117 09:33:17.311993       1 observer_polling.go:159] Starting file observer
+2025-11-17T09:33:17.332776170Z I1117 09:33:17.332736       1 leaderelection.go:245] attempting to acquire leader lease openshift-image-registry/openshift-XXXXXX-controllers...
+2025-11-17T09:33:17.340041091Z I1117 09:33:17.340009       1 leaderelection.go:255] successfully acquired lease openshift-image-registry/openshift-XXXXXX-controllers
+2025-11-17T09:33:17.340113041Z I1117 09:33:17.340085       1 event.go:298] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-image-registry", Name:"openshift-XXXXXX-controllers", UID:"1c180b32-cbe9-4453-8b9f-18a2dfe149d3", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"19673", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' cluster-image-registry-operator-5dff8d47d9-8b9pq_eafd7c10-bcdb-4688-8358-fe79f3c56119 became leader
+2025-11-17T09:33:17.340208102Z I1117 09:33:17.340187       1 main.go:30] Cluster Image Registry Operator Version: b79142147
+2025-11-17T09:33:17.340208102Z I1117 09:33:17.340201       1 main.go:31] Go Version: go1.20.12 X:strictfipsruntime
+2025-11-17T09:33:17.340208102Z I1117 09:33:17.340205       1 main.go:32] Go OS/Arch: linux/amd64
+2025-11-17T09:33:17.340217788Z I1117 09:33:17.340209       1 main.go:63] Watching files [/var/run/configmaps/trusted-ca/tls-ca-bundle.pem /etc/secrets/tls.crt /etc/secrets/tls.key]...
+2025-11-17T09:33:17.352403986Z I1117 09:33:17.352370       1 metrics.go:88] Starting MetricsController
+2025-11-17T09:33:17.354262832Z I1117 09:33:17.354228       1 azurestackcloud.go:172] Starting AzureStackCloudController
+2025-11-17T09:33:17.354302927Z I1117 09:33:17.354296       1 clusteroperator.go:143] Starting ClusterOperatorStatusController
+2025-11-17T09:33:17.354325750Z I1117 09:33:17.354311       1 nodecadaemon.go:202] Starting NodeCADaemonController
+2025-11-17T09:33:17.354333079Z I1117 09:33:17.354321       1 azurepathfixcontroller.go:317] Starting AzurePathFixController
+2025-11-17T09:33:17.354341464Z I1117 09:33:17.354336       1 imageconfig.go:88] Starting ImageConfigController
+2025-11-17T09:33:17.354360123Z I1117 09:33:17.354326       1 imageregistrycertificates.go:207] Starting ImageRegistryCertificatesController
+2025-11-17T09:33:17.354387290Z I1117 09:33:17.354372       1 base_controller.go:67] Waiting for caches to sync for LoggingSyncer
+2025-11-17T09:33:17.453354438Z I1117 09:33:17.453215       1 metrics.go:94] Started MetricsController
+2025-11-17T09:33:17.454479816Z I1117 09:33:17.454443       1 base_controller.go:73] Caches are synced for LoggingSyncer 
+2025-11-17T09:33:17.454479816Z I1117 09:33:17.454473       1 base_controller.go:110] Starting #1 XXXXXX of LoggingSyncer controller ...
+2025-11-17T09:33:17.454491086Z I1117 09:33:17.454475       1 clusteroperator.go:150] Started ClusterOperatorStatusController
+2025-11-17T09:33:17.454564777Z I1117 09:33:17.454547       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:33:17.454605126Z I1117 09:33:17.454574       1 nodecadaemon.go:209] Started NodeCADaemonController
+2025-11-17T09:33:17.454605126Z I1117 09:33:17.454576       1 azurepathfixcontroller.go:324] Started AzurePathFixController
+2025-11-17T09:33:17.454657579Z I1117 09:33:17.454643       1 imageconfig.go:95] Started ImageConfigController
+2025-11-17T09:33:17.454708774Z I1117 09:33:17.454685       1 controllerimagepruner.go:386] Starting ImagePrunerController
+2025-11-17T09:33:17.454748752Z I1117 09:33:17.454733       1 controller.go:452] Starting Controller
+2025-11-17T09:33:17.454829919Z I1117 09:33:17.454812       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:33:17.454835785Z I1117 09:33:17.454690       1 azurestackcloud.go:179] Started AzureStackCloudController
+2025-11-17T09:33:17.454840685Z I1117 09:33:17.454456       1 imageregistrycertificates.go:214] Started ImageRegistryCertificatesController
+2025-11-17T09:33:17.750497980Z I1117 09:33:17.750441       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:33:02Z" -> "2025-11-17T09:33:17Z"}
+2025-11-17T09:33:18.548311104Z I1117 09:33:18.548150       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:33:17Z" -> "2025-11-17T09:33:18Z"}
+2025-11-17T09:33:19.384337009Z I1117 09:33:19.383156       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:33:18Z" -> "2025-11-17T09:33:19Z"}
+2025-11-17T09:33:20.152493089Z I1117 09:33:20.152430       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:33:19Z" -> "2025-11-17T09:33:20Z"}
+2025-11-17T09:33:20.953214054Z I1117 09:33:20.953111       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:33:35.683947925Z I1117 09:33:35.680309       1 generator.go:62] object *v1.ClusterOperator, Name=image-registry updated: removed:apiVersion="config.openshift.io/v1", removed:kind="ClusterOperator", changed:metadata.managedFields.2.time={"2025-11-17T09:30:27Z" -> "2025-11-17T09:33:35Z"}, changed:metadata.resourceVersion={"16082" -> "20033"}, changed:status.conditions.1.lastTransitionTime={"2025-11-17T09:30:27Z" -> "2025-11-17T09:33:35Z"}, changed:status.conditions.1.message={"NodeCADaemonProgressing: The daemon set node-ca is deployed\nProgressing: All registry resources are removed" -> "NodeCADaemonProgressing: The daemon set node-ca is deploying node pods\nProgressing: All registry resources are removed"}, changed:status.conditions.1.reason={"Removed" -> "NodeCADaemonUnavailable::Removed"}, changed:status.conditions.1.status={"False" -> "True"}
+2025-11-17T09:33:35.713942123Z I1117 09:33:35.713896       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:33:20Z" -> "2025-11-17T09:33:35Z"}
+2025-11-17T09:33:35.761350848Z I1117 09:33:35.760585       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:36:01.384405029Z E1117 09:36:01.384357       1 leaderelection.go:327] error retrieving resource lock openshift-image-registry/openshift-XXXXXX-controllers: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io openshift-XXXXXX-controllers)
+2025-11-17T09:36:02.444432999Z I1117 09:36:02.444387       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.444477811Z I1117 09:36:02.444443       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.515826943Z I1117 09:36:02.515780       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.515871055Z I1117 09:36:02.515833       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.545435654Z W1117 09:36:02.543460       1 reflector.go:533] github.com/openshift/client-go/image/informers/externalversions/factory.go:101: failed to list *v1.ImageStream: the server is currently unable to handle the request (get imagestreams.image.openshift.io)
+2025-11-17T09:36:02.545435654Z E1117 09:36:02.543499       1 reflector.go:148] github.com/openshift/client-go/image/informers/externalversions/factory.go:101: Failed to watch *v1.ImageStream: failed to list *v1.ImageStream: the server is currently unable to handle the request (get imagestreams.image.openshift.io)
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.687832       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.687883       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.687977       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.687988       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688050       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688059       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688116       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688126       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688171       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688181       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688230       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688239       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688295       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688307       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688350       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688359       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688390       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688399       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688443       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688452       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688496       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688504       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688547       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688556       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688611       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688623       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688663       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688673       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688712       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.688807708Z I1117 09:36:02.688724       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.950056540Z I1117 09:36:02.948603       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:02.950056540Z I1117 09:36:02.948657       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.086671949Z I1117 09:36:03.086631       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.086705100Z I1117 09:36:03.086690       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.088387766Z I1117 09:36:03.086890       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.088387766Z I1117 09:36:03.086906       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.088387766Z I1117 09:36:03.086989       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.088387766Z I1117 09:36:03.087000       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.088387766Z I1117 09:36:03.087083       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.088387766Z I1117 09:36:03.087094       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.088387766Z I1117 09:36:03.087200       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.088387766Z I1117 09:36:03.087209       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.279093824Z E1117 09:36:03.278738       1 reflector.go:148] github.com/openshift/client-go/route/informers/externalversions/factory.go:101: Failed to watch *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2025-11-17T09:36:03.315693300Z I1117 09:36:03.314128       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.315693300Z I1117 09:36:03.314186       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.315693300Z I1117 09:36:03.314331       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.315693300Z I1117 09:36:03.314345       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.485111986Z I1117 09:36:03.483490       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.485111986Z I1117 09:36:03.483574       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.485111986Z I1117 09:36:03.483676       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.485111986Z I1117 09:36:03.483695       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:03.609379471Z I1117 09:36:03.608469       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:33:35Z" -> "2025-11-17T09:36:03Z"}
+2025-11-17T09:36:03.758327200Z I1117 09:36:03.757461       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:36:04.352328951Z I1117 09:36:04.351210       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:36:03Z" -> "2025-11-17T09:36:04Z"}
+2025-11-17T09:36:05.143361093Z I1117 09:36:05.143307       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:36:04Z" -> "2025-11-17T09:36:05Z"}
+2025-11-17T09:36:05.918324644Z W1117 09:36:05.915079       1 reflector.go:533] github.com/openshift/client-go/route/informers/externalversions/factory.go:101: failed to list *v1.Route: routes.route.openshift.io is forbidden: User "system:anonymous" cannot list resource "routes" in API group "route.openshift.io" in the namespace "openshift-image-registry"
+2025-11-17T09:36:05.918324644Z E1117 09:36:05.915128       1 reflector.go:148] github.com/openshift/client-go/route/informers/externalversions/factory.go:101: Failed to watch *v1.Route: failed to list *v1.Route: routes.route.openshift.io is forbidden: User "system:anonymous" cannot list resource "routes" in API group "route.openshift.io" in the namespace "openshift-image-registry"
+2025-11-17T09:36:05.918624925Z W1117 09:36:05.918601       1 reflector.go:533] github.com/openshift/client-go/image/informers/externalversions/factory.go:101: failed to list *v1.ImageStream: imagestreams.image.openshift.io is forbidden: User "system:anonymous" cannot list resource "imagestreams" in API group "image.openshift.io" at the cluster scope
+2025-11-17T09:36:05.918673928Z E1117 09:36:05.918656       1 reflector.go:148] github.com/openshift/client-go/image/informers/externalversions/factory.go:101: Failed to watch *v1.ImageStream: failed to list *v1.ImageStream: imagestreams.image.openshift.io is forbidden: User "system:anonymous" cannot list resource "imagestreams" in API group "image.openshift.io" at the cluster scope
+2025-11-17T09:36:05.949411217Z I1117 09:36:05.949374       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:36:10.768800338Z E1117 09:36:10.768708       1 reflector.go:148] github.com/openshift/client-go/image/informers/externalversions/factory.go:101: Failed to watch *v1.ImageStream: the server is currently unable to handle the request (get imagestreams.image.openshift.io)
+2025-11-17T09:36:12.028507382Z E1117 09:36:12.028461       1 reflector.go:148] github.com/openshift/client-go/route/informers/externalversions/factory.go:101: Failed to watch *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.645532       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.645586       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.645687       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.645704       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.645866       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.645878       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.645957       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.645967       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.646049       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.646059       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.646094       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.646988679Z I1117 09:36:44.646104       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.792955425Z I1117 09:36:44.792892       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.792955425Z I1117 09:36:44.792950       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.793923350Z I1117 09:36:44.793014       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.793923350Z I1117 09:36:44.793038       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.821031070Z I1117 09:36:44.820147       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:36:05Z" -> "2025-11-17T09:36:44Z"}
+2025-11-17T09:36:44.889173862Z I1117 09:36:44.889123       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.889173862Z I1117 09:36:44.889169       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.889294589Z I1117 09:36:44.889267       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.889313092Z I1117 09:36:44.889282       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.889347235Z I1117 09:36:44.889333       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.889355408Z I1117 09:36:44.889347       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.889398983Z I1117 09:36:44.889386       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.889407402Z I1117 09:36:44.889399       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.889446517Z I1117 09:36:44.889435       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.889454634Z I1117 09:36:44.889446       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.889490435Z I1117 09:36:44.889479       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.889498319Z I1117 09:36:44.889493       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:44.908077265Z I1117 09:36:44.908020       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:36:45.399550284Z I1117 09:36:45.397821       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:45.399550284Z I1117 09:36:45.397872       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:45.666442322Z I1117 09:36:45.663901       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:45.666442322Z I1117 09:36:45.663958       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:45.666442322Z I1117 09:36:45.664024       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:45.666442322Z I1117 09:36:45.664035       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:45.905737203Z I1117 09:36:45.905601       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:45.905737203Z I1117 09:36:45.905658       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:45.963660255Z I1117 09:36:45.963517       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:36:45.963660255Z I1117 09:36:45.963578       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:37:24.391714462Z I1117 09:37:24.391514       1 generator.go:62] object *v1.ClusterOperator, Name=image-registry updated: removed:apiVersion="config.openshift.io/v1", removed:kind="ClusterOperator", changed:metadata.managedFields.2.time={"2025-11-17T09:33:35Z" -> "2025-11-17T09:37:24Z"}, changed:metadata.resourceVersion={"20033" -> "22676"}, changed:status.conditions.1.lastTransitionTime={"2025-11-17T09:33:35Z" -> "2025-11-17T09:37:24Z"}, changed:status.conditions.1.message={"NodeCADaemonProgressing: The daemon set node-ca is deploying node pods\nProgressing: All registry resources are removed" -> "NodeCADaemonProgressing: The daemon set node-ca is deployed\nProgressing: All registry resources are removed"}, changed:status.conditions.1.reason={"NodeCADaemonUnavailable::Removed" -> "Removed"}, changed:status.conditions.1.status={"True" -> "False"}
+2025-11-17T09:37:24.406089959Z I1117 09:37:24.405587       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:36:44Z" -> "2025-11-17T09:37:24Z"}
+2025-11-17T09:37:24.454859374Z I1117 09:37:24.451479       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:38:17.941522011Z I1117 09:38:17.941433       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:37:24Z" -> "2025-11-17T09:38:17Z"}
+2025-11-17T09:38:17.972406080Z I1117 09:38:17.972252       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:38:18.337512670Z I1117 09:38:18.337366       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:17Z" -> "2025-11-17T09:38:18Z"}
+2025-11-17T09:38:19.299675272Z I1117 09:38:19.299546       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:18Z" -> "2025-11-17T09:38:19Z"}
+2025-11-17T09:38:19.937109312Z I1117 09:38:19.937058       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:38:32.040861121Z I1117 09:38:32.039946       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:38:32.040861121Z I1117 09:38:32.040003       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:38:32.064620720Z I1117 09:38:32.064546       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:19Z" -> "2025-11-17T09:38:32Z"}
+2025-11-17T09:38:32.093190669Z I1117 09:38:32.093123       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:38:37.609038398Z I1117 09:38:37.608323       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:38:37.609038398Z I1117 09:38:37.608401       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:38:37.633116253Z I1117 09:38:37.633059       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:32Z" -> "2025-11-17T09:38:37Z"}
+2025-11-17T09:38:37.669205263Z I1117 09:38:37.669155       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:38:38.167808162Z I1117 09:38:38.167757       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:37Z" -> "2025-11-17T09:38:38Z"}
+2025-11-17T09:38:38.824392914Z I1117 09:38:38.824264       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:37Z" -> "2025-11-17T09:38:38Z"}
+2025-11-17T09:38:38.829326761Z E1117 09:38:38.829215       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:38:39.634186368Z I1117 09:38:39.634032       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:38Z" -> "2025-11-17T09:38:39Z"}
+2025-11-17T09:38:40.422001939Z I1117 09:38:40.421949       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:38Z" -> "2025-11-17T09:38:40Z"}
+2025-11-17T09:38:40.425974234Z E1117 09:38:40.425939       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:38:41.222953226Z I1117 09:38:41.222834       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:39Z" -> "2025-11-17T09:38:41Z"}
+2025-11-17T09:38:42.023209437Z I1117 09:38:42.023143       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:39Z" -> "2025-11-17T09:38:42Z"}
+2025-11-17T09:38:42.028877576Z E1117 09:38:42.027656       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:38:42.823136854Z I1117 09:38:42.823076       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:41Z" -> "2025-11-17T09:38:42Z"}
+2025-11-17T09:38:43.624361435Z I1117 09:38:43.624273       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:41Z" -> "2025-11-17T09:38:43Z"}
+2025-11-17T09:38:43.628155884Z E1117 09:38:43.628123       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:38:44.423396381Z I1117 09:38:44.423344       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:42Z" -> "2025-11-17T09:38:44Z"}
+2025-11-17T09:38:45.224621725Z I1117 09:38:45.224443       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:42Z" -> "2025-11-17T09:38:45Z"}
+2025-11-17T09:38:45.228236856Z E1117 09:38:45.228191       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:38:46.023536629Z I1117 09:38:46.023486       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:44Z" -> "2025-11-17T09:38:46Z"}
+2025-11-17T09:38:46.822835817Z I1117 09:38:46.822784       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:38:51.064820521Z I1117 09:38:51.064759       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:46Z" -> "2025-11-17T09:38:51Z"}
+2025-11-17T09:38:51.130333274Z I1117 09:38:51.130249       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:46Z" -> "2025-11-17T09:38:51Z"}
+2025-11-17T09:38:51.137045279Z E1117 09:38:51.136988       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:38:51.448799147Z I1117 09:38:51.446255       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:38:52.233119401Z I1117 09:38:52.233063       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:51Z" -> "2025-11-17T09:38:52Z"}
+2025-11-17T09:38:53.089572967Z I1117 09:38:53.089526       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:51Z" -> "2025-11-17T09:38:53Z"}
+2025-11-17T09:38:53.093692155Z E1117 09:38:53.093661       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:38:53.838876284Z I1117 09:38:53.838805       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:52Z" -> "2025-11-17T09:38:53Z"}
+2025-11-17T09:38:54.638534521Z I1117 09:38:54.638367       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:52Z" -> "2025-11-17T09:38:54Z"}
+2025-11-17T09:38:54.645912355Z E1117 09:38:54.645855       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:38:55.428380291Z I1117 09:38:55.428321       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:53Z" -> "2025-11-17T09:38:55Z"}
+2025-11-17T09:38:56.230409632Z I1117 09:38:56.230350       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:55Z" -> "2025-11-17T09:38:56Z"}
+2025-11-17T09:38:57.030746356Z I1117 09:38:57.030672       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:56Z" -> "2025-11-17T09:38:57Z"}
+2025-11-17T09:38:57.829303837Z I1117 09:38:57.829224       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:38:58.633382176Z I1117 09:38:58.633258       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:57Z" -> "2025-11-17T09:38:58Z"}
+2025-11-17T09:38:59.430724650Z I1117 09:38:59.430657       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:58Z" -> "2025-11-17T09:38:59Z"}
+2025-11-17T09:39:00.229879040Z I1117 09:39:00.229824       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:38:59Z" -> "2025-11-17T09:39:00Z"}
+2025-11-17T09:39:01.028265746Z I1117 09:39:01.028201       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:00Z" -> "2025-11-17T09:39:01Z"}
+2025-11-17T09:39:01.828352204Z I1117 09:39:01.828303       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:39:20.276923030Z I1117 09:39:20.276718       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:01Z" -> "2025-11-17T09:39:20Z"}
+2025-11-17T09:39:20.305629189Z I1117 09:39:20.305589       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:01Z" -> "2025-11-17T09:39:20Z"}
+2025-11-17T09:39:20.311097954Z E1117 09:39:20.311058       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:39:20.656119397Z I1117 09:39:20.656054       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:39:21.464994688Z I1117 09:39:21.464771       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:20Z" -> "2025-11-17T09:39:21Z"}
+2025-11-17T09:39:22.255621985Z I1117 09:39:22.255558       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:21Z" -> "2025-11-17T09:39:22Z"}
+2025-11-17T09:39:23.054314900Z I1117 09:39:23.054224       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:22Z" -> "2025-11-17T09:39:23Z"}
+2025-11-17T09:39:23.854111521Z I1117 09:39:23.854051       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:39:39.445902519Z I1117 09:39:39.445835       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:23Z" -> "2025-11-17T09:39:39Z"}
+2025-11-17T09:39:39.470227101Z I1117 09:39:39.470164       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:23Z" -> "2025-11-17T09:39:39Z"}
+2025-11-17T09:39:39.474152264Z E1117 09:39:39.474112       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:39:39.839591586Z I1117 09:39:39.839532       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:39:40.639076726Z I1117 09:39:40.639011       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:39Z" -> "2025-11-17T09:39:40Z"}
+2025-11-17T09:39:41.443836598Z I1117 09:39:41.443782       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:40Z" -> "2025-11-17T09:39:41Z"}
+2025-11-17T09:39:42.240499544Z I1117 09:39:42.240434       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:41Z" -> "2025-11-17T09:39:42Z"}
+2025-11-17T09:39:43.040400848Z I1117 09:39:43.040300       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:42Z" -> "2025-11-17T09:39:43Z"}
+2025-11-17T09:39:43.843391907Z I1117 09:39:43.843333       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:39:57.250827565Z I1117 09:39:57.250779       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:39:57.250878120Z I1117 09:39:57.250829       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:39:57.303335326Z I1117 09:39:57.300042       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:43Z" -> "2025-11-17T09:39:57Z"}
+2025-11-17T09:39:57.345448656Z I1117 09:39:57.345353       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:40:14.700667207Z I1117 09:40:14.700616       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:57Z" -> "2025-11-17T09:40:14Z"}
+2025-11-17T09:40:14.722999982Z I1117 09:40:14.722961       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:39:57Z" -> "2025-11-17T09:40:14Z"}
+2025-11-17T09:40:14.727222786Z E1117 09:40:14.727188       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:40:15.094270350Z I1117 09:40:15.094176       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:40:14Z" -> "2025-11-17T09:40:15Z"}
+2025-11-17T09:40:15.895438003Z I1117 09:40:15.895384       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:40:14Z" -> "2025-11-17T09:40:15Z"}
+2025-11-17T09:40:15.903520920Z E1117 09:40:15.903420       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:40:16.699948337Z I1117 09:40:16.699678       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:40:15Z" -> "2025-11-17T09:40:16Z"}
+2025-11-17T09:40:17.494251377Z I1117 09:40:17.494192       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:40:15Z" -> "2025-11-17T09:40:17Z"}
+2025-11-17T09:40:17.498331036Z E1117 09:40:17.498295       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:40:18.304927866Z I1117 09:40:18.304860       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:40:16Z" -> "2025-11-17T09:40:18Z"}
+2025-11-17T09:40:19.095875051Z I1117 09:40:19.095815       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:40:18Z" -> "2025-11-17T09:40:19Z"}
+2025-11-17T09:40:19.895576858Z I1117 09:40:19.895505       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:40:43.412708100Z I1117 09:40:43.412643       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:40:19Z" -> "2025-11-17T09:40:43Z"}
+2025-11-17T09:40:43.437449673Z I1117 09:40:43.437408       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:40:56.438341027Z I1117 09:40:56.434742       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:40:43Z" -> "2025-11-17T09:40:56Z"}
+2025-11-17T09:40:56.481230870Z I1117 09:40:56.481178       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:41:15.352873566Z I1117 09:41:15.352813       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:40:56Z" -> "2025-11-17T09:41:15Z"}
+2025-11-17T09:41:15.375805433Z I1117 09:41:15.375757       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:40:56Z" -> "2025-11-17T09:41:15Z"}
+2025-11-17T09:41:15.379795987Z E1117 09:41:15.379688       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:41:15.747731642Z I1117 09:41:15.747675       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:41:16.548002710Z I1117 09:41:16.547954       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:15Z" -> "2025-11-17T09:41:16Z"}
+2025-11-17T09:41:17.347393228Z I1117 09:41:17.347352       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:16Z" -> "2025-11-17T09:41:17Z"}
+2025-11-17T09:41:18.146859212Z I1117 09:41:18.146817       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:17Z" -> "2025-11-17T09:41:18Z"}
+2025-11-17T09:41:18.947077283Z I1117 09:41:18.947029       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:41:27.969240026Z I1117 09:41:27.969184       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:18Z" -> "2025-11-17T09:41:27Z"}
+2025-11-17T09:41:27.992157524Z I1117 09:41:27.992110       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:18Z" -> "2025-11-17T09:41:27Z"}
+2025-11-17T09:41:27.996543288Z E1117 09:41:27.996501       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:41:28.364867048Z I1117 09:41:28.364357       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:27Z" -> "2025-11-17T09:41:28Z"}
+2025-11-17T09:41:29.164435573Z I1117 09:41:29.164385       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:27Z" -> "2025-11-17T09:41:29Z"}
+2025-11-17T09:41:29.170915437Z E1117 09:41:29.170873       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:41:29.964272314Z I1117 09:41:29.964208       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:28Z" -> "2025-11-17T09:41:29Z"}
+2025-11-17T09:41:30.765484099Z I1117 09:41:30.765425       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:28Z" -> "2025-11-17T09:41:30Z"}
+2025-11-17T09:41:30.769245601Z E1117 09:41:30.769218       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:41:31.565048524Z I1117 09:41:31.564912       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:29Z" -> "2025-11-17T09:41:31Z"}
+2025-11-17T09:41:32.364205508Z I1117 09:41:32.364138       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:31Z" -> "2025-11-17T09:41:32Z"}
+2025-11-17T09:41:33.165356023Z I1117 09:41:33.164019       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:32Z" -> "2025-11-17T09:41:33Z"}
+2025-11-17T09:41:33.964307295Z I1117 09:41:33.964242       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:41:49.194668855Z I1117 09:41:49.194616       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:33Z" -> "2025-11-17T09:41:49Z"}
+2025-11-17T09:41:49.224327166Z I1117 09:41:49.223606       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:33Z" -> "2025-11-17T09:41:49Z"}
+2025-11-17T09:41:49.232326720Z E1117 09:41:49.229502       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:41:49.560213794Z I1117 09:41:49.560154       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:41:50.361755412Z I1117 09:41:50.361689       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:49Z" -> "2025-11-17T09:41:50Z"}
+2025-11-17T09:41:51.162686877Z I1117 09:41:51.162618       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:50Z" -> "2025-11-17T09:41:51Z"}
+2025-11-17T09:41:51.964018806Z I1117 09:41:51.963963       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:45:45.906414344Z I1117 09:45:45.906334       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:51Z" -> "2025-11-17T09:45:45Z"}
+2025-11-17T09:45:45.931471040Z I1117 09:45:45.931415       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:41:51Z" -> "2025-11-17T09:45:45Z"}
+2025-11-17T09:45:45.935690475Z E1117 09:45:45.935655       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:45:46.297238275Z I1117 09:45:46.297183       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:45:45Z" -> "2025-11-17T09:45:46Z"}
+2025-11-17T09:45:47.094857459Z I1117 09:45:47.094802       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:45:45Z" -> "2025-11-17T09:45:47Z"}
+2025-11-17T09:45:47.098835788Z E1117 09:45:47.098801       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:45:47.896069283Z I1117 09:45:47.896008       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:45:46Z" -> "2025-11-17T09:45:47Z"}
+2025-11-17T09:45:48.696474235Z I1117 09:45:48.696422       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:45:47Z" -> "2025-11-17T09:45:48Z"}
+2025-11-17T09:45:49.496638967Z I1117 09:45:49.496577       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:45:48Z" -> "2025-11-17T09:45:49Z"}
+2025-11-17T09:45:50.295981716Z I1117 09:45:50.295919       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:45:49Z" -> "2025-11-17T09:45:50Z"}
+2025-11-17T09:45:51.097676984Z I1117 09:45:51.097595       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:45:50Z" -> "2025-11-17T09:45:51Z"}
+2025-11-17T09:45:51.895522073Z I1117 09:45:51.895466       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:46:11.264212280Z I1117 09:46:11.264144       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:45:51Z" -> "2025-11-17T09:46:11Z"}
+2025-11-17T09:46:11.288193017Z I1117 09:46:11.288099       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:46:11.659427611Z I1117 09:46:11.659375       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:46:31.791149785Z I1117 09:46:31.791073       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:46:11Z" -> "2025-11-17T09:46:31Z"}
+2025-11-17T09:46:31.814032762Z I1117 09:46:31.813974       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:46:11Z" -> "2025-11-17T09:46:31Z"}
+2025-11-17T09:46:31.818327543Z E1117 09:46:31.818264       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:46:32.186594420Z I1117 09:46:32.186531       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:46:31Z" -> "2025-11-17T09:46:32Z"}
+2025-11-17T09:46:32.996894092Z I1117 09:46:32.996837       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:46:44.646035740Z I1117 09:46:44.645957       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.646088113Z I1117 09:46:44.646075       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.646208591Z I1117 09:46:44.646175       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.646208591Z I1117 09:46:44.646194       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793299755Z I1117 09:46:44.793223       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793368120Z I1117 09:46:44.793346       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793505114Z I1117 09:46:44.793484       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793524420Z I1117 09:46:44.793511       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793641436Z I1117 09:46:44.793619       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793661519Z I1117 09:46:44.793648       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793771934Z I1117 09:46:44.793752       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793779665Z I1117 09:46:44.793774       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793847148Z I1117 09:46:44.793834       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793854459Z I1117 09:46:44.793849       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793907100Z I1117 09:46:44.793895       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793912844Z I1117 09:46:44.793908       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793963966Z I1117 09:46:44.793952       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.793969603Z I1117 09:46:44.793965       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.890094475Z I1117 09:46:44.889942       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.890148646Z I1117 09:46:44.890135       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.890236530Z I1117 09:46:44.890217       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:44.890243063Z I1117 09:46:44.890236       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.398887097Z I1117 09:46:45.398826       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.398927467Z I1117 09:46:45.398893       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.664974910Z I1117 09:46:45.664895       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.665026134Z I1117 09:46:45.664999       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.665141922Z I1117 09:46:45.665108       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.665141922Z I1117 09:46:45.665126       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.665196952Z I1117 09:46:45.665178       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.665196952Z I1117 09:46:45.665193       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.665261240Z I1117 09:46:45.665243       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.665261240Z I1117 09:46:45.665257       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.906883005Z I1117 09:46:45.906834       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.907008983Z I1117 09:46:45.906999       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.964427519Z I1117 09:46:45.964366       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:45.964469324Z I1117 09:46:45.964437       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:56.066815041Z I1117 09:46:56.066746       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:46:32Z" -> "2025-11-17T09:46:56Z"}
+2025-11-17T09:46:56.098432448Z I1117 09:46:56.098374       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:46:32Z" -> "2025-11-17T09:46:56Z"}
+2025-11-17T09:46:56.103250915Z E1117 09:46:56.103204       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:46:56.347327059Z I1117 09:46:56.347242       1 caconfig.go:123] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:56.347365738Z I1117 09:46:56.347328       1 imageregistryca.go:126] unable to get the service name to add service-ca.crt
+2025-11-17T09:46:56.450412508Z I1117 09:46:56.450347       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:46:32Z" -> "2025-11-17T09:46:56Z"}
+2025-11-17T09:46:56.457225622Z E1117 09:46:56.457160       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:46:57.249049396Z I1117 09:46:57.248990       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:46:56Z" -> "2025-11-17T09:46:57Z"}
+2025-11-17T09:46:58.050830654Z I1117 09:46:58.050776       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:46:56Z" -> "2025-11-17T09:46:58Z"}
+2025-11-17T09:46:58.058762191Z E1117 09:46:58.058712       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:46:58.847696904Z I1117 09:46:58.847629       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:46:57Z" -> "2025-11-17T09:46:58Z"}
+2025-11-17T09:46:59.647197835Z I1117 09:46:59.646873       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:46:58Z" -> "2025-11-17T09:46:59Z"}
+2025-11-17T09:47:00.487948679Z I1117 09:47:00.487891       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:46:59Z" -> "2025-11-17T09:47:00Z"}
+2025-11-17T09:47:01.249753438Z I1117 09:47:01.249699       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:00Z" -> "2025-11-17T09:47:01Z"}
+2025-11-17T09:47:02.058841086Z I1117 09:47:02.058770       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:01Z" -> "2025-11-17T09:47:02Z"}
+2025-11-17T09:47:02.847206668Z I1117 09:47:02.847141       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:47:21.852016208Z I1117 09:47:21.851918       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:02Z" -> "2025-11-17T09:47:21Z"}
+2025-11-17T09:47:21.877294667Z I1117 09:47:21.877232       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:02Z" -> "2025-11-17T09:47:21Z"}
+2025-11-17T09:47:21.881443261Z E1117 09:47:21.881400       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:47:22.244459954Z I1117 09:47:22.244407       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:21Z" -> "2025-11-17T09:47:22Z"}
+2025-11-17T09:47:23.044581258Z I1117 09:47:23.044532       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:21Z" -> "2025-11-17T09:47:23Z"}
+2025-11-17T09:47:23.049805229Z E1117 09:47:23.049743       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:47:23.845621553Z I1117 09:47:23.845566       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:22Z" -> "2025-11-17T09:47:23Z"}
+2025-11-17T09:47:24.644418574Z I1117 09:47:24.644315       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:22Z" -> "2025-11-17T09:47:24Z"}
+2025-11-17T09:47:24.649036114Z E1117 09:47:24.649015       1 controller.go:377] unable to sync: Operation cannot be fulfilled on configs.imageregistry.operator.openshift.io "cluster": the object has been modified; please apply your changes to the XXXXXX version and try again, requeuing
+2025-11-17T09:47:25.445696073Z I1117 09:47:25.445637       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:23Z" -> "2025-11-17T09:47:25Z"}
+2025-11-17T09:47:26.245254708Z I1117 09:47:26.245195       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:25Z" -> "2025-11-17T09:47:26Z"}
+2025-11-17T09:47:27.045101542Z I1117 09:47:27.045044       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:26Z" -> "2025-11-17T09:47:27Z"}
+2025-11-17T09:47:27.848596128Z I1117 09:47:27.848539       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:51:26.478631705Z I1117 09:51:26.478531       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:47:27Z" -> "2025-11-17T09:51:26Z"}
+2025-11-17T09:51:26.513075098Z I1117 09:51:26.513018       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:51:31.814633332Z I1117 09:51:31.813424       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:51:26Z" -> "2025-11-17T09:51:31Z"}
+2025-11-17T09:51:31.876043382Z I1117 09:51:31.875692       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 
+2025-11-17T09:51:37.415565010Z I1117 09:51:37.415500       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): changed:status.conditions.6.lastTransitionTime={"2025-11-17T09:51:31Z" -> "2025-11-17T09:51:37Z"}
+2025-11-17T09:51:37.440592785Z I1117 09:51:37.440484       1 controller.go:338] object changed: *v1.Config, Name=cluster (status=true): 

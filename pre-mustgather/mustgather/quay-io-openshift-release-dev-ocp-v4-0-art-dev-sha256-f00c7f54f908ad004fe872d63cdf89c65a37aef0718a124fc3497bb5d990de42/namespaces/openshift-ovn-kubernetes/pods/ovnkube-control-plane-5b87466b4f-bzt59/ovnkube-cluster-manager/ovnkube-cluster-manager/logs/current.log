@@ -1,0 +1,124 @@
+2025-11-17T09:19:09.603106049Z + [[ -f /env/_XXXXXX ]]
+2025-11-17T09:19:09.603106049Z + ovn_v4_join_subnet_opt=
+2025-11-17T09:19:09.603106049Z + [[ '' != '' ]]
+2025-11-17T09:19:09.603106049Z + ovn_v6_join_subnet_opt=
+2025-11-17T09:19:09.603106049Z + [[ '' != '' ]]
+2025-11-17T09:19:09.603106049Z + ovn_v4_transit_switch_subnet_opt=
+2025-11-17T09:19:09.603106049Z + [[ '' != '' ]]
+2025-11-17T09:19:09.603106049Z + ovn_v6_transit_switch_subnet_opt=
+2025-11-17T09:19:09.603241303Z + [[ '' != '' ]]
+2025-11-17T09:19:09.603405782Z ++ date '+%m%d %H:%M:%S.%N'
+2025-11-17T09:19:09.604710842Z + echo 'I1117 09:19:09.604424574 - ovnkube-control-plane - start ovnkube --init-cluster-manager XXXXXX1'
+2025-11-17T09:19:09.604731468Z I1117 09:19:09.604424574 - ovnkube-control-plane - start ovnkube --init-cluster-manager XXXXXX1
+2025-11-17T09:19:09.604763538Z + exec /usr/bin/ovnkube --enable-interconnect --init-cluster-manager XXXXXX1 --config-file=/run/ovnkube-config/ovnkube.conf --loglevel 4 --metrics-bind-address 127.0.0.1:29108 --metrics-enable-pprof --metrics-enable-config-duration
+2025-11-17T09:19:09.623708939Z I1117 09:19:09.623608       1 config.go:2164] Parsed config file /run/ovnkube-config/ovnkube.conf
+2025-11-17T09:19:09.623837371Z I1117 09:19:09.623678       1 config.go:2165] Parsed config: {Default:{MTU:1400 RoutableMTU:0 ConntrackZone:64000 HostMasqConntrackZone:0 OVNMasqConntrackZone:0 HostNodePortConntrackZone:0 ReassemblyConntrackZone:0 EncapType:geneve EncapIP: EncapPort:6081 InactivityProbe:100000 OpenFlowProbe:180 OfctrlWaitBeforeClear:0 MonitorAll:true OVSDBTxnTimeout:1m40s LFlowCacheEnable:true LFlowCacheLimit:0 LFlowCacheLimitKb:1048576 RawClusterSubnets:10.128.0.0/14/23,fd02::/48/64 ClusterSubnets:[] EnableUDPAggregation:true Zone:global} Logging:{File: CNIFile: LibovsdbFile:/var/log/ovnkube/libovsdb.log Level:4 LogFileMaxSize:100 LogFileMaxBackups:5 LogFileMaxAge:0 ACLLoggingRateLimit:20} Monitoring:{RawNetFlowTargets: RawSFlowTargets: RawIPFIXTargets: NetFlowTargets:[] SFlowTargets:[] IPFIXTargets:[]} IPFIX:{Sampling:400 CacheActiveTimeout:60 CacheMaxFlows:0} CNI:{ConfDir:/etc/cni/net.d Plugin:ovn-k8s-cni-overlay} OVNKubernetesFeature:{EnableAdminNetworkPolicy:false EnableEgressIP:true EgressIPReachabiltyTotalTimeout:1 EnableEgressFirewall:true EnableEgressQoS:true EnableEgressService:true EgressIPNodeHealthCheckPort:9107 EnableMultiNetwork:true EnableMultiNetworkPolicy:false EnableStatelessNetPol:false EnableInterconnect:false EnableMultiExternalGateway:false} Kubernetes:{BootstrapKubeconfig: CertDir: CertDuration:10m0s Kubeconfig: CACert: CAData:[] APIServer:https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 Token: TokenFile: CompatServiceCIDR: RawServiceCIDRs:172.30.0.0/16,fd03::/112 ServiceCIDRs:[] OVNConfigNamespace:openshift-ovn-kubernetes OVNEmptyLbEvents:false PodIP: RawNoHostSubnetNodes: NoHostSubnetNodes:nil HostNetworkNamespace:openshift-host-network PlatformType:BareMetal HealthzBindAddress:0.0.0.0:10256 CompatMetricsBindAddress: CompatOVNMetricsBindAddress: CompatMetricsEnablePprof:false DNSServiceNamespace:openshift-dns DNSServiceName:dns-default} Metrics:{BindAddress: OVNMetricsBindAddress: ExportOVSMetrics:false EnablePprof:false NodeServerPrivKey: NodeServerCert: EnableConfigDuration:false EnableScaleMetrics:false} OvnNorth:{Address: PrivKey: Cert: CACert: CertCommonName: Scheme: ElectionTimer:0 northbound:false exec:<nil>} OvnSouth:{Address: PrivKey: Cert: CACert: CertCommonName: Scheme: ElectionTimer:0 northbound:false exec:<nil>} Gateway:{Mode:shared Interface: EgressGWInterface: NextHop: VLANID:0 NodeportEnable:true DisableSNATMultipleGWs:false V4JoinSubnet:100.64.0.0/16 V6JoinSubnet:fd98::/64 V4MasqueradeSubnet:169.254.169.0/29 V6MasqueradeSubnet:fd69::/125 MasqueradeIPs:{V4OVNMasqueradeIP:169.254.169.1 V6OVNMasqueradeIP:fd69::1 V4HostMasqueradeIP:169.254.169.2 V6HostMasqueradeIP:fd69::2 V4HostETPLocalMasqueradeIP:169.254.169.3 V6HostETPLocalMasqueradeIP:fd69::3 V4DummyNextHopMasqueradeIP:169.254.169.4 V6DummyNextHopMasqueradeIP:fd69::4 V4OVNServiceHairpinMasqueradeIP:169.254.169.5 V6OVNServiceHairpinMasqueradeIP:fd69::5} DisablePacketMTUCheck:false RouterSubnet: SingleNode:false DisableForwarding:false AllowNoUplink:false} MasterHA:{ElectionLeaseDuration:137 ElectionRenewDeadline:107 ElectionRetryPeriod:26} ClusterMgrHA:{ElectionLeaseDuration:0 ElectionRenewDeadline:0 ElectionRetryPeriod:0} HybridOverlay:{Enabled:false RawClusterSubnets: ClusterSubnets:[] VXLANPort:4789} OvnKubeNode:{Mode:full DPResourceDeviceIdsMap:map[] MgmtPortNetdev: MgmtPortDPResourceName:} ClusterManager:{V4TransitSwitchSubnet:100.88.0.0/16 V6TransitSwitchSubnet:fd97::/64}}
+2025-11-17T09:19:09.625556594Z I1117 09:19:09.625534       1 leaderelection.go:245] attempting to acquire leader lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX...
+2025-11-17T09:19:09.625630616Z I1117 09:19:09.625597       1 metrics.go:487] Starting metrics server to serve at address "127.0.0.1:29108"
+2025-11-17T09:19:09.635365814Z I1117 09:19:09.635327       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:19:09.635365814Z I1117 09:19:09.635352       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:19:09.635417113Z I1117 09:19:09.635389       1 ovnkube.go:401] Lost the election to ovnkube-control-plane-5b87466b4f-q7qgm; in standby mode
+2025-11-17T09:19:59.140305879Z I1117 09:19:59.140227       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:19:59.140305879Z I1117 09:19:59.140250       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:20:32.434231831Z I1117 09:20:32.433988       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:20:32.434231831Z I1117 09:20:32.434194       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:21:16.644295705Z I1117 09:21:16.644159       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:21:16.644295705Z I1117 09:21:16.644179       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:22:08.544613129Z I1117 09:22:08.544488       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:22:08.544613129Z I1117 09:22:08.544520       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:23:01.481162326Z I1117 09:23:01.481041       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:23:01.481162326Z I1117 09:23:01.481078       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:23:40.867057895Z I1117 09:23:40.866998       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:23:40.867057895Z I1117 09:23:40.867020       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:24:31.236604897Z I1117 09:24:31.236359       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:24:31.236604897Z I1117 09:24:31.236404       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:26:01.352279676Z E1117 09:26:01.352167       1 leaderelection.go:327] error retrieving resource lock openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io ovn-kubernetes-XXXXXX)
+2025-11-17T09:26:01.352279676Z I1117 09:26:01.352221       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:26:53.505247447Z I1117 09:26:53.505088       1 with_retry.go:234] Got a Retry-After 5s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:26:58.512468078Z I1117 09:26:58.512285       1 with_retry.go:234] Got a Retry-After 5s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:27:03.518668549Z I1117 09:27:03.518459       1 with_retry.go:234] Got a Retry-After 5s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:27:03.520926289Z E1117 09:27:03.520884       1 leaderelection.go:327] error retrieving resource lock openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX: Get "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX": dial tcp [2620:52:0:2e1a::10]:6443: connect: connection refused
+2025-11-17T09:27:03.520960678Z I1117 09:27:03.520953       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:27:46.192135994Z I1117 09:27:46.192081       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:27:46.192135994Z I1117 09:27:46.192104       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:28:32.668059036Z I1117 09:28:32.668002       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:28:32.668059036Z I1117 09:28:32.668022       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:29:19.124222993Z I1117 09:29:19.124087       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:29:19.124222993Z I1117 09:29:19.124125       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:29:49.618926793Z I1117 09:29:49.618860       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:29:49.618926793Z I1117 09:29:49.618885       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:30:31.405762714Z I1117 09:30:31.405716       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:30:31.405762714Z I1117 09:30:31.405735       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:32:06.368543444Z E1117 09:32:06.368479       1 leaderelection.go:327] error retrieving resource lock openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io ovn-kubernetes-XXXXXX)
+2025-11-17T09:32:06.368543444Z I1117 09:32:06.368520       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:32:57.841930509Z I1117 09:32:57.841839       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:32:58.846745362Z I1117 09:32:58.846606       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:32:59.847901921Z I1117 09:32:59.847856       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:33:00.849955606Z I1117 09:33:00.849890       1 with_retry.go:234] Got a Retry-After 1s response for attempt 4 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:33:01.852087188Z I1117 09:33:01.852018       1 with_retry.go:234] Got a Retry-After 1s response for attempt 5 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:33:01.879728111Z I1117 09:33:01.879083       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:33:01.879728111Z I1117 09:33:01.879108       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:33:42.731239023Z I1117 09:33:42.731162       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:33:42.731239023Z I1117 09:33:42.731185       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:34:24.397493555Z I1117 09:34:24.397376       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:34:24.397493555Z I1117 09:34:24.397395       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:35:51.449055769Z I1117 09:35:51.448775       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:35:52.453381602Z I1117 09:35:52.453335       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:35:53.455918672Z I1117 09:35:53.455860       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:35:54.459741954Z I1117 09:35:54.459375       1 with_retry.go:234] Got a Retry-After 1s response for attempt 4 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:35:55.461781205Z I1117 09:35:55.461741       1 with_retry.go:234] Got a Retry-After 1s response for attempt 5 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:35:56.463878928Z I1117 09:35:56.463836       1 with_retry.go:234] Got a Retry-After 1s response for attempt 6 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:35:57.466900171Z I1117 09:35:57.466852       1 with_retry.go:234] Got a Retry-After 1s response for attempt 7 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:35:58.469009412Z I1117 09:35:58.468922       1 with_retry.go:234] Got a Retry-After 1s response for attempt 8 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:35:59.470083168Z I1117 09:35:59.470036       1 with_retry.go:234] Got a Retry-After 1s response for attempt 9 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:36:00.472246080Z I1117 09:36:00.472202       1 with_retry.go:234] Got a Retry-After 1s response for attempt 10 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX
+2025-11-17T09:36:00.476456287Z E1117 09:36:00.476408       1 leaderelection.go:327] error retrieving resource lock openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX: Get "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-ovn-kubernetes/leases/ovn-kubernetes-XXXXXX": EOF
+2025-11-17T09:36:00.476456287Z I1117 09:36:00.476439       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:36:41.182487615Z I1117 09:36:41.182443       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:36:41.182487615Z I1117 09:36:41.182461       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:37:08.405482982Z I1117 09:37:08.405429       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:37:08.405482982Z I1117 09:37:08.405452       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:37:57.289117354Z I1117 09:37:57.289021       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:37:57.289117354Z I1117 09:37:57.289048       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:38:27.584823046Z I1117 09:38:27.582845       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:38:27.584823046Z I1117 09:38:27.582867       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:39:00.730947765Z I1117 09:39:00.730879       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:39:00.730947765Z I1117 09:39:00.730896       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:39:47.587515305Z I1117 09:39:47.587471       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:39:47.587515305Z I1117 09:39:47.587490       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:40:42.463585563Z I1117 09:40:42.463505       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:40:42.463585563Z I1117 09:40:42.463529       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:41:36.499315435Z I1117 09:41:36.499261       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:41:36.499315435Z I1117 09:41:36.499280       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:42:28.138172400Z I1117 09:42:28.138110       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:42:28.138172400Z I1117 09:42:28.138135       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:43:02.865138438Z I1117 09:43:02.864984       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:43:02.865138438Z I1117 09:43:02.865007       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:43:56.853910619Z I1117 09:43:56.853845       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:43:56.853984211Z I1117 09:43:56.853975       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:44:34.820895625Z I1117 09:44:34.820834       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:44:34.820895625Z I1117 09:44:34.820859       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:45:12.608316653Z I1117 09:45:12.608262       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:45:12.608316653Z I1117 09:45:12.608303       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:45:54.123725954Z I1117 09:45:54.123659       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:45:54.123725954Z I1117 09:45:54.123678       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:46:23.589007871Z I1117 09:46:23.588958       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:46:23.589007871Z I1117 09:46:23.588975       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:46:58.535752805Z I1117 09:46:58.535075       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:46:58.535752805Z I1117 09:46:58.535108       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:47:46.898339185Z I1117 09:47:46.898252       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:47:46.898339185Z I1117 09:47:46.898275       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:48:37.171548415Z I1117 09:48:37.171490       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:48:37.171548415Z I1117 09:48:37.171509       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:49:11.310113613Z I1117 09:49:11.309936       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:49:11.310113613Z I1117 09:49:11.309977       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:49:43.058751188Z I1117 09:49:43.058574       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:49:43.058751188Z I1117 09:49:43.058600       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:50:16.474559897Z I1117 09:50:16.474476       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:50:16.474559897Z I1117 09:50:16.474498       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:51:05.212283507Z I1117 09:51:05.211911       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:51:05.212283507Z I1117 09:51:05.211958       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:51:36.298073487Z I1117 09:51:36.298031       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:51:36.298073487Z I1117 09:51:36.298047       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX
+2025-11-17T09:52:09.391754895Z I1117 09:52:09.391675       1 leaderelection.go:349] lock is held by ovnkube-control-plane-5b87466b4f-q7qgm and has not yet expired
+2025-11-17T09:52:09.391754895Z I1117 09:52:09.391723       1 leaderelection.go:250] failed to acquire lease openshift-ovn-kubernetes/ovn-kubernetes-XXXXXX

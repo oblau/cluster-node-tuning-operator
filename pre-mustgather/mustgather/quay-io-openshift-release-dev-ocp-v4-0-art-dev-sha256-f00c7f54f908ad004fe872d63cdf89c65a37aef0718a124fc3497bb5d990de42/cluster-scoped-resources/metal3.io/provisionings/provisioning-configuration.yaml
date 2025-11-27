@@ -1,0 +1,87 @@
+---
+apiVersion: metal3.io/v1alpha1
+kind: Provisioning
+metadata:
+  creationTimestamp: "2025-11-17T09:06:15Z"
+  finalizers:
+  - provisioning.metal3.io
+  generation: 2
+  managedFields:
+  - apiVersion: metal3.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:provisioningNetwork: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2025-11-17T09:06:15Z"
+  - apiVersion: metal3.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"provisioning.metal3.io": {}
+      f:spec:
+        f:preProvisioningOSDownloadURLs: {}
+        f:provisioningMacAddresses: {}
+    manager: cluster-baremetal-operator
+    operation: Update
+    time: "2025-11-17T09:22:00Z"
+  - apiVersion: metal3.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:generations: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+    manager: cluster-baremetal-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:22:16Z"
+  name: provisioning-configuration
+  resourceVersion: "11007"
+  uid: a8ca0356-f879-4a17-9b5b-d90847d2a49f
+spec:
+  preProvisioningOSDownloadURLs: {}
+  provisioningMacAddresses:
+  - XXXXXXXXXXXXXXXXX
+  - XXXXXXXXXXXXXXXXX
+  - XXXXXXXXXXXXXXXXX
+  provisioningNetwork: Disabled
+status:
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: metal3
+    namespace: openshift-machine-api
+    resource: deployments
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: metal3-baremetal-operator
+    namespace: openshift-machine-api
+    resource: deployments
+  - group: admissionregistration.k8s.io
+    hash: ""
+    lastGeneration: 2
+    name: baremetal-operator-validating-webhook-configuration
+    namespace: ""
+    resource: validatingwebhookconfigurations
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: metal3-image-customization
+    namespace: openshift-machine-api
+    resource: deployments
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: ironic-proxy
+    namespace: openshift-machine-api
+    resource: daemonsets
+  observedGeneration: 2
+  readyReplicas: 0

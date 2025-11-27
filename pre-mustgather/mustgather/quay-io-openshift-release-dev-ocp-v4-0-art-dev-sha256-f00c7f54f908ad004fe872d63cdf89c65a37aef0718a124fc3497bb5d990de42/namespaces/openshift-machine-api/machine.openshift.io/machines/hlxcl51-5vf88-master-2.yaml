@@ -1,0 +1,159 @@
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  annotations:
+    machine.openshift.io/instance-state: unmanaged
+    metal3.io/BareMetalHost: openshift-machine-api/XXXXXX2
+  creationTimestamp: "2025-11-17T09:06:01Z"
+  finalizers:
+  - machine.machine.openshift.io
+  generation: 3
+  labels:
+    machine.openshift.io/cluster-api-cluster: hlxcl51-5vf88
+    machine.openshift.io/cluster-api-machine-role: XXXXXX
+    machine.openshift.io/cluster-api-machine-type: XXXXXX
+  managedFields:
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+          f:machine.openshift.io/cluster-api-machine-role: {}
+          f:machine.openshift.io/cluster-api-machine-type: {}
+      f:spec:
+        .: {}
+        f:lifecycleHooks: {}
+        f:metadata: {}
+        f:providerSpec:
+          .: {}
+          f:value:
+            .: {}
+            f:apiVersion: {}
+            f:customDeploy:
+              .: {}
+              f:method: {}
+            f:hostSelector: {}
+            f:image:
+              .: {}
+              f:checksum: {}
+              f:url: {}
+            f:kind: {}
+            f:metadata:
+              .: {}
+              f:creationTimestamp: {}
+            f:userData:
+              .: {}
+              f:name: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2025-11-17T09:06:01Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:06:01Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machine.openshift.io/instance-state: {}
+          f:metal3.io/BareMetalHost: {}
+        f:finalizers:
+          .: {}
+          v:"machine.machine.openshift.io": {}
+      f:spec:
+        f:providerID: {}
+    manager: machine-controller-manager
+    operation: Update
+    time: "2025-11-17T09:29:44Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:lifecycleHooks:
+          f:preDrain:
+            .: {}
+            k:{"name":"EtcdQuorumOperator"}:
+              .: {}
+              f:name: {}
+              f:owner: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2025-11-17T09:30:06Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:addresses: {}
+        f:conditions: {}
+        f:phase: {}
+    manager: machine-controller-manager
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:30:06Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:lastUpdated: {}
+        f:nodeRef: {}
+    manager: Go-http-client
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:36:53Z"
+  name: hlxcl51-5vf88-XXXXXX-2
+  namespace: openshift-machine-api
+  resourceVersion: "21854"
+  uid: 25b2006d-0526-4e4b-a15a-bba6e5e0e783
+spec:
+  lifecycleHooks:
+    preDrain:
+    - name: EtcdQuorumOperator
+      owner: clusteroperator/etcd
+  metadata: {}
+  providerID: baremetalhost:///openshift-machine-api/XXXXXX2/4224540b-7055-41c3-aa88-4ef22288a07c
+  providerSpec:
+    value:
+      apiVersion: baremetal.cluster.k8s.io/v1alpha1
+      customDeploy:
+        method: install_coreos
+      hostSelector: {}
+      image:
+        checksum: ""
+        url: ""
+      kind: BareMetalMachineProviderSpec
+      metadata:
+        creationTimestamp: null
+      userData:
+        name: XXXXXX-user-data-managed
+status:
+  addresses:
+  - address: XXXXXXXXXXX
+    type: InternalIP
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:30:06Z"
+    message: 'Drain operation currently blocked by: [{Name:EtcdQuorumOperator Owner:clusteroperator/etcd}]'
+    reason: HookPresent
+    severity: Warning
+    status: "False"
+    type: Drainable
+  - lastTransitionTime: "2025-11-17T09:29:44Z"
+    status: "True"
+    type: InstanceExists
+  - lastTransitionTime: "2025-11-17T09:22:59Z"
+    status: "True"
+    type: Terminable
+  lastUpdated: "2025-11-17T09:36:53Z"
+  nodeRef:
+    kind: Node
+    name: XXXXXX2
+    uid: 9bbf3978-9a24-4194-97bd-19975c5a4042
+  phase: Running

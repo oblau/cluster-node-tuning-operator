@@ -1,0 +1,45 @@
+2025-11-17T09:33:15.631127955Z I1117 09:33:15.630989       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:33:15.631229640Z I1117 09:33:15.631171       1 main.go:29] Go Version: go1.20.12 X:strictfipsruntime
+2025-11-17T09:33:15.631229640Z I1117 09:33:15.631176       1 main.go:30] Go OS/Arch: linux/amd64
+2025-11-17T09:33:15.631229640Z I1117 09:33:15.631179       1 main.go:31] operator-sdk Version: v0.5.0+git
+2025-11-17T09:33:15.631678472Z I1117 09:33:15.631385       1 leaderelection.go:122] The leader election gives 4 retries and allows for 13s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m26s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:33:15.631678472Z I1117 09:33:15.631418       1 main.go:109] Watching machine-api objects only in namespace "openshift-machine-api" for reconciliation.
+2025-11-17T09:33:15.632244762Z I1117 09:33:15.631862       1 listener.go:44] "controller-runtime/metrics: Metrics server is starting to listen" addr=":8083"
+2025-11-17T09:33:15.632244762Z I1117 09:33:15.632088       1 main.go:117] Registering Components.
+2025-11-17T09:33:15.640159711Z I1117 09:33:15.640129       1 main.go:140] Starting the Cmd.
+2025-11-17T09:33:15.640478704Z I1117 09:33:15.640454       1 reflector.go:287] Starting reflector *v1beta1.Machine (9h3m0.703477787s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:33:15.640485404Z I1117 09:33:15.640477       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:33:15.640799396Z I1117 09:33:15.640787       1 internal.go:360] "Starting server" kind="health probe" addr="[::]:9442"
+2025-11-17T09:33:15.741717924Z I1117 09:33:15.740843       1 server.go:50] "starting server" path="/metrics" kind="metrics" addr="[::]:8083"
+2025-11-17T09:33:15.741717924Z I1117 09:33:15.740943       1 leaderelection.go:245] attempting to acquire leader lease openshift-machine-api/cluster-api-provider-healthcheck-leader...
+2025-11-17T09:36:03.224932569Z I1117 09:36:03.224768       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:34.958490613Z I1117 09:36:34.958448       1 leaderelection.go:255] successfully acquired lease openshift-machine-api/cluster-api-provider-healthcheck-leader
+2025-11-17T09:36:34.958677212Z I1117 09:36:34.958639       1 recorder.go:104] "events: machine-api-controllers-57fbbf9557-pdr5j_acb52be7-3b60-43be-a23c-21c89150012d became leader" type="Normal" object={"kind":"Lease","namespace":"openshift-machine-api","name":"cluster-api-provider-healthcheck-leader","uid":"c5bb4b86-f11b-47c5-a378-8afce49acc60","apiVersion":"coordination.k8s.io/v1","resourceVersion":"21691"} reason="LeaderElection"
+2025-11-17T09:36:34.958748160Z I1117 09:36:34.958729       1 controller.go:177] "Starting EventSource" controller="machinehealthcheck-controller" source="kind source: *v1beta1.MachineHealthCheck"
+2025-11-17T09:36:34.958755242Z I1117 09:36:34.958748       1 controller.go:177] "Starting EventSource" controller="machinehealthcheck-controller" source="kind source: *v1beta1.Machine"
+2025-11-17T09:36:34.958759475Z I1117 09:36:34.958755       1 controller.go:177] "Starting EventSource" controller="machinehealthcheck-controller" source="kind source: *v1.Node"
+2025-11-17T09:36:34.958763739Z I1117 09:36:34.958761       1 controller.go:185] "Starting Controller" controller="machinehealthcheck-controller"
+2025-11-17T09:36:34.960805682Z I1117 09:36:34.960778       1 reflector.go:287] Starting reflector *v1.Node (10h15m9.766664605s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:34.960805682Z I1117 09:36:34.960790       1 reflector.go:323] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:34.960905952Z I1117 09:36:34.960882       1 reflector.go:287] Starting reflector *v1beta1.MachineHealthCheck (9h24m40.592561543s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:34.960905952Z I1117 09:36:34.960898       1 reflector.go:323] Listing and watching *v1beta1.MachineHealthCheck from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:35.062359079Z W1117 09:36:35.061179       1 machinehealthcheck_controller.go:578] No-op: Unable to retrieve machine from node "/XXXXXX0": expecting one machine for node XXXXXX0, got: []
+2025-11-17T09:36:35.062359079Z I1117 09:36:35.061384       1 controller.go:219] "Starting XXXXXXs" controller="machinehealthcheck-controller" XXXXXX count=1
+2025-11-17T09:36:35.062529489Z W1117 09:36:35.062514       1 machinehealthcheck_controller.go:578] No-op: Unable to retrieve machine from node "/XXXXXX0": expecting one machine for node XXXXXX0, got: []
+2025-11-17T09:36:35.062553861Z W1117 09:36:35.062545       1 machinehealthcheck_controller.go:578] No-op: Unable to retrieve machine from node "/XXXXXX1": expecting one machine for node XXXXXX1, got: []
+2025-11-17T09:36:44.169367443Z I1117 09:36:44.169309       1 reflector.go:323] Listing and watching *v1beta1.MachineHealthCheck from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:45.312723100Z I1117 09:36:45.312256       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:38:19.032700498Z I1117 09:38:19.032612       1 machinehealthcheck_controller.go:162] Reconciling openshift-machine-api/machine-api-termination-handler
+2025-11-17T09:38:19.032700498Z I1117 09:38:19.032651       1 machinehealthcheck_controller.go:188] Reconciling openshift-machine-api/machine-api-termination-handler: finding targets
+2025-11-17T09:38:19.032820874Z I1117 09:38:19.032798       1 machinehealthcheck_controller.go:251] Remediations are allowed for openshift-machine-api/machine-api-termination-handler: total targets: 0,  max unhealthy: 100%, unhealthy targets: 0
+2025-11-17T09:38:19.062949940Z I1117 09:38:19.062824       1 machinehealthcheck_controller.go:279] Reconciling openshift-machine-api/machine-api-termination-handler: no more targets meet unhealthy criteria
+2025-11-17T09:38:19.062949940Z I1117 09:38:19.062871       1 machinehealthcheck_controller.go:162] Reconciling openshift-machine-api/machine-api-termination-handler
+2025-11-17T09:38:19.062949940Z I1117 09:38:19.062920       1 machinehealthcheck_controller.go:188] Reconciling openshift-machine-api/machine-api-termination-handler: finding targets
+2025-11-17T09:38:19.062982264Z I1117 09:38:19.062960       1 machinehealthcheck_controller.go:251] Remediations are allowed for openshift-machine-api/machine-api-termination-handler: total targets: 0,  max unhealthy: 100%, unhealthy targets: 0
+2025-11-17T09:38:19.111182408Z I1117 09:38:19.111128       1 machinehealthcheck_controller.go:279] Reconciling openshift-machine-api/machine-api-termination-handler: no more targets meet unhealthy criteria
+2025-11-17T09:46:56.277746028Z I1117 09:46:56.275817       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:46:56.502725852Z I1117 09:46:56.502301       1 reflector.go:323] Listing and watching *v1beta1.MachineHealthCheck from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:46:56.505776074Z I1117 09:46:56.505305       1 machinehealthcheck_controller.go:162] Reconciling openshift-machine-api/machine-api-termination-handler
+2025-11-17T09:46:56.505776074Z I1117 09:46:56.505356       1 machinehealthcheck_controller.go:188] Reconciling openshift-machine-api/machine-api-termination-handler: finding targets
+2025-11-17T09:46:56.505776074Z I1117 09:46:56.505453       1 machinehealthcheck_controller.go:251] Remediations are allowed for openshift-machine-api/machine-api-termination-handler: total targets: 0,  max unhealthy: 100%, unhealthy targets: 0
+2025-11-17T09:46:56.513602801Z I1117 09:46:56.513561       1 machinehealthcheck_controller.go:279] Reconciling openshift-machine-api/machine-api-termination-handler: no more targets meet unhealthy criteria

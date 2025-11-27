@@ -1,0 +1,55 @@
+2025-11-17T09:33:09.275300273Z W1117 09:33:09.275070       1 client_config.go:618] Neither --kubeconfig nor --XXXXXX was specified.  Using the inClusterConfig.  This might not work.
+2025-11-17T09:33:09.276552776Z W1117 09:33:09.276524       1 client_config.go:618] Neither --kubeconfig nor --XXXXXX was specified.  Using the inClusterConfig.  This might not work.
+2025-11-17T09:33:09.276739232Z I1117 09:33:09.276717       1 main.go:149] setting up manager
+2025-11-17T09:33:09.277295705Z I1117 09:33:09.277260       1 listener.go:44] "controller-runtime/metrics: Metrics server is starting to listen" addr=":9191"
+2025-11-17T09:33:09.277618133Z I1117 09:33:09.277588       1 main.go:165] registering components
+2025-11-17T09:33:09.277618133Z I1117 09:33:09.277615       1 main.go:167] setting up scheme
+2025-11-17T09:33:09.278073525Z I1117 09:33:09.278051       1 main.go:205] setting up controllers
+2025-11-17T09:33:09.278100284Z I1117 09:33:09.278081       1 config.go:33] using default as failed to load config /var/run/configmaps/config/config.yaml: open /var/run/configmaps/config/config.yaml: no such file or directory
+2025-11-17T09:33:09.278100284Z I1117 09:33:09.278091       1 config.go:23] machine approver config: {NodeClientCert:{Disabled:false}}
+2025-11-17T09:33:09.278277171Z I1117 09:33:09.278259       1 main.go:230] starting the cmd
+2025-11-17T09:33:09.278616746Z I1117 09:33:09.278583       1 server.go:50] "starting server" path="/metrics" kind="metrics" addr="[::]:9191"
+2025-11-17T09:33:09.278670301Z I1117 09:33:09.278646       1 leaderelection.go:245] attempting to acquire leader lease openshift-cluster-machine-approver/cluster-machine-approver-leader...
+2025-11-17T09:36:59.175089297Z I1117 09:36:59.175012       1 leaderelection.go:255] successfully acquired lease openshift-cluster-machine-approver/cluster-machine-approver-leader
+2025-11-17T09:36:59.175170153Z I1117 09:36:59.175144       1 recorder.go:104] "events: XXXXXX2_e0f59aee-9791-4948-8b03-f525ef88297c became leader" type="Normal" object={Kind:Lease Namespace:openshift-cluster-machine-approver Name:cluster-machine-approver-leader UID:37128be7-fe88-44f0-abe3-229c4ea734e1 APIVersion:coordination.k8s.io/v1 ResourceVersion:22214 FieldPath:} reason="LeaderElection"
+2025-11-17T09:36:59.175327595Z I1117 09:36:59.175297       1 status.go:97] Starting cluster operator status controller
+2025-11-17T09:36:59.175327595Z I1117 09:36:59.175306       1 controller.go:177] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.CertificateSigningRequest"
+2025-11-17T09:36:59.175353678Z I1117 09:36:59.175341       1 controller.go:177] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.ConfigMap"
+2025-11-17T09:36:59.175359680Z I1117 09:36:59.175354       1 controller.go:185] "Starting Controller" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest"
+2025-11-17T09:36:59.381327509Z I1117 09:36:59.380717       1 controller.go:219] "Starting XXXXXXs" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" XXXXXX count=10
+2025-11-17T09:37:58.523785231Z I1117 09:37:58.523697       1 controller.go:120] Reconciling CSR: csr-f5vgn
+2025-11-17T09:37:58.568747563Z I1117 09:37:58.568687       1 csr_check.go:163] csr-f5vgn: CSR does not appear to be client csr
+2025-11-17T09:37:58.568747563Z E1117 09:37:58.568735       1 csr_check.go:170] csr-f5vgn: Unrecoverable serving cert error, cannot approve: map["client auth":{} "digital signature":{}] is missing usages
+2025-11-17T09:37:58.568793520Z I1117 09:37:58.568746       1 controller.go:232] csr-f5vgn: CSR not authorized
+2025-11-17T09:37:58.576275033Z I1117 09:37:58.576225       1 controller.go:120] Reconciling CSR: csr-f5vgn
+2025-11-17T09:37:58.599303012Z I1117 09:37:58.599236       1 controller.go:213] csr-f5vgn: CSR is already approved
+2025-11-17T09:38:03.336938231Z I1117 09:38:03.336883       1 controller.go:120] Reconciling CSR: csr-xqknx
+2025-11-17T09:38:03.360206922Z I1117 09:38:03.360154       1 csr_check.go:163] csr-xqknx: CSR does not appear to be client csr
+2025-11-17T09:38:03.360206922Z E1117 09:38:03.360184       1 csr_check.go:170] csr-xqknx: Unrecoverable serving cert error, cannot approve: map["client auth":{} "digital signature":{}] is missing usages
+2025-11-17T09:38:03.360206922Z I1117 09:38:03.360192       1 controller.go:232] csr-xqknx: CSR not authorized
+2025-11-17T09:38:03.365336773Z I1117 09:38:03.365204       1 controller.go:120] Reconciling CSR: csr-xqknx
+2025-11-17T09:38:03.384741919Z I1117 09:38:03.384705       1 controller.go:213] csr-xqknx: CSR is already approved
+2025-11-17T09:38:05.585965867Z I1117 09:38:05.585904       1 controller.go:120] Reconciling CSR: csr-v7vt8
+2025-11-17T09:38:05.609548728Z I1117 09:38:05.609493       1 csr_check.go:163] csr-v7vt8: CSR does not appear to be client csr
+2025-11-17T09:38:05.609548728Z E1117 09:38:05.609525       1 csr_check.go:170] csr-v7vt8: Unrecoverable serving cert error, cannot approve: map["client auth":{} "digital signature":{}] is missing usages
+2025-11-17T09:38:05.609548728Z I1117 09:38:05.609534       1 controller.go:232] csr-v7vt8: CSR not authorized
+2025-11-17T09:38:05.615282852Z I1117 09:38:05.615215       1 controller.go:120] Reconciling CSR: csr-v7vt8
+2025-11-17T09:38:05.633181229Z I1117 09:38:05.633124       1 controller.go:213] csr-v7vt8: CSR is already approved
+2025-11-17T09:38:09.185053613Z I1117 09:38:09.184997       1 controller.go:120] Reconciling CSR: csr-lsx8z
+2025-11-17T09:38:09.204263792Z I1117 09:38:09.204208       1 csr_check.go:163] csr-lsx8z: CSR does not appear to be client csr
+2025-11-17T09:38:09.204263792Z E1117 09:38:09.204238       1 csr_check.go:170] csr-lsx8z: Unrecoverable serving cert error, cannot approve: map["client auth":{} "digital signature":{}] is missing usages
+2025-11-17T09:38:09.204263792Z I1117 09:38:09.204251       1 controller.go:232] csr-lsx8z: CSR not authorized
+2025-11-17T09:38:09.210433245Z I1117 09:38:09.210381       1 controller.go:120] Reconciling CSR: csr-lsx8z
+2025-11-17T09:38:09.228736627Z I1117 09:38:09.228693       1 controller.go:213] csr-lsx8z: CSR is already approved
+2025-11-17T09:38:09.836966222Z I1117 09:38:09.836892       1 controller.go:120] Reconciling CSR: csr-x7tgd
+2025-11-17T09:38:09.859022554Z I1117 09:38:09.858895       1 csr_check.go:163] csr-x7tgd: CSR does not appear to be client csr
+2025-11-17T09:38:09.859022554Z E1117 09:38:09.858925       1 csr_check.go:170] csr-x7tgd: Unrecoverable serving cert error, cannot approve: map["client auth":{} "digital signature":{}] is missing usages
+2025-11-17T09:38:09.859022554Z I1117 09:38:09.858934       1 controller.go:232] csr-x7tgd: CSR not authorized
+2025-11-17T09:38:09.863624694Z I1117 09:38:09.863575       1 controller.go:120] Reconciling CSR: csr-x7tgd
+2025-11-17T09:38:09.880323001Z I1117 09:38:09.880277       1 controller.go:213] csr-x7tgd: CSR is already approved
+2025-11-17T09:38:10.875858164Z I1117 09:38:10.875319       1 controller.go:120] Reconciling CSR: csr-bt9hn
+2025-11-17T09:38:10.895374400Z I1117 09:38:10.893891       1 csr_check.go:163] csr-bt9hn: CSR does not appear to be client csr
+2025-11-17T09:38:10.895374400Z E1117 09:38:10.893920       1 csr_check.go:170] csr-bt9hn: Unrecoverable serving cert error, cannot approve: map["client auth":{} "digital signature":{}] is missing usages
+2025-11-17T09:38:10.895374400Z I1117 09:38:10.893928       1 controller.go:232] csr-bt9hn: CSR not authorized
+2025-11-17T09:38:10.900772215Z I1117 09:38:10.900689       1 controller.go:120] Reconciling CSR: csr-bt9hn
+2025-11-17T09:38:10.917851815Z I1117 09:38:10.917799       1 controller.go:213] csr-bt9hn: CSR is already approved

@@ -1,0 +1,56 @@
+2025-11-17T09:33:43.263758526Z I1117 09:33:43.263509       1 cmd.go:233] Using service-serving-cert provided certificates
+2025-11-17T09:33:43.263854473Z I1117 09:33:43.263759       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:33:43.264496012Z I1117 09:33:43.264448       1 observer_polling.go:159] Starting file observer
+2025-11-17T09:33:43.280118131Z I1117 09:33:43.279908       1 builder.go:271] config-operator version 4.14.0-202511060117.p2.g2378670.assembly.stream.el8-2378670-2378670aee1858db6b1ff425a1d208eb7d73afec
+2025-11-17T09:33:43.521429118Z I1117 09:33:43.521369       1 secure_serving.go:57] Forcing use of http/1.1 only
+2025-11-17T09:33:43.521429118Z W1117 09:33:43.521390       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' detected.
+2025-11-17T09:33:43.521429118Z W1117 09:33:43.521396       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' detected.
+2025-11-17T09:33:43.524241190Z I1117 09:33:43.524120       1 requestheader_controller.go:169] Starting RequestHeaderAuthRequestController
+2025-11-17T09:33:43.524241190Z I1117 09:33:43.524156       1 shared_informer.go:311] Waiting for caches to sync for RequestHeaderAuthRequestController
+2025-11-17T09:33:43.524241190Z I1117 09:33:43.524180       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2025-11-17T09:33:43.524241190Z I1117 09:33:43.524226       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2025-11-17T09:33:43.524263501Z I1117 09:33:43.524246       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+2025-11-17T09:33:43.524352395Z I1117 09:33:43.524315       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2025-11-17T09:33:43.524722141Z I1117 09:33:43.524697       1 leaderelection.go:245] attempting to acquire leader lease openshift-config-operator/config-operator-lock...
+2025-11-17T09:33:43.524787481Z I1117 09:33:43.524731       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key"
+2025-11-17T09:33:43.525419658Z I1117 09:33:43.525399       1 secure_serving.go:210] Serving securely on [::]:8443
+2025-11-17T09:33:43.525465919Z I1117 09:33:43.525442       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+2025-11-17T09:33:43.531851048Z I1117 09:33:43.531735       1 leaderelection.go:255] successfully acquired lease openshift-config-operator/config-operator-lock
+2025-11-17T09:33:43.531851048Z I1117 09:33:43.531781       1 event.go:298] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-config-operator", Name:"config-operator-lock", UID:"a189fbf5-24b4-436a-9216-ee4e4b7a4b4a", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"20247", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' openshift-config-operator-c567bd864-gx8jm_e8cafccf-443f-475c-815d-e1f95e240f67 became leader
+2025-11-17T09:33:43.536790579Z I1117 09:33:43.536764       1 base_controller.go:67] Waiting for caches to sync for FeatureUpgradeableController
+2025-11-17T09:33:43.536813055Z I1117 09:33:43.536794       1 base_controller.go:67] Waiting for caches to sync for MigrationPlatformStatusController
+2025-11-17T09:33:43.536827649Z I1117 09:33:43.536810       1 base_controller.go:67] Waiting for caches to sync for ConfigOperatorController
+2025-11-17T09:33:43.536848975Z I1117 09:33:43.536822       1 base_controller.go:67] Waiting for caches to sync for FeatureGateController
+2025-11-17T09:33:43.536848975Z I1117 09:33:43.536831       1 base_controller.go:73] Caches are synced for ConfigOperatorController 
+2025-11-17T09:33:43.536848975Z I1117 09:33:43.536841       1 base_controller.go:110] Starting #1 XXXXXX of ConfigOperatorController controller ...
+2025-11-17T09:33:43.536878037Z I1117 09:33:43.536857       1 base_controller.go:67] Waiting for caches to sync for RemoveStaleConditionsController
+2025-11-17T09:33:43.536908764Z I1117 09:33:43.536898       1 base_controller.go:67] Waiting for caches to sync for AWSPlatformServiceLocationController
+2025-11-17T09:33:43.536936981Z I1117 09:33:43.536927       1 base_controller.go:67] Waiting for caches to sync for KubeCloudConfigController
+2025-11-17T09:33:43.536952873Z I1117 09:33:43.536944       1 base_controller.go:67] Waiting for caches to sync for LoggingSyncer
+2025-11-17T09:33:43.536975748Z I1117 09:33:43.536821       1 base_controller.go:67] Waiting for caches to sync for LatencySensitiveRemovalController
+2025-11-17T09:33:43.536994250Z I1117 09:33:43.536979       1 base_controller.go:73] Caches are synced for LatencySensitiveRemovalController 
+2025-11-17T09:33:43.536999299Z I1117 09:33:43.536992       1 base_controller.go:110] Starting #1 XXXXXX of LatencySensitiveRemovalController controller ...
+2025-11-17T09:33:43.537111154Z I1117 09:33:43.537086       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-config-operator", Name:"openshift-config-operator", UID:"bff8ca63-0bc7-4399-9964-2b5cce322d80", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Warning' reason: 'FastControllerResync' Controller "ConfigOperatorController" resync interval is set to 10s which might lead to client request throttling
+2025-11-17T09:33:43.537111154Z I1117 09:33:43.537106       1 base_controller.go:67] Waiting for caches to sync for StatusSyncer_config-operator
+2025-11-17T09:33:43.537119264Z E1117 09:33:43.537107       1 base_controller.go:268] ConfigOperatorController reconciliation failed: configs.operator.openshift.io "cluster" not found
+2025-11-17T09:33:43.544792634Z E1117 09:33:43.544757       1 base_controller.go:268] ConfigOperatorController reconciliation failed: configs.operator.openshift.io "cluster" not found
+2025-11-17T09:33:43.624985925Z I1117 09:33:43.624930       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2025-11-17T09:33:43.624985925Z I1117 09:33:43.624941       1 shared_informer.go:318] Caches are synced for RequestHeaderAuthRequestController
+2025-11-17T09:33:43.625024174Z I1117 09:33:43.624968       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2025-11-17T09:33:43.637326202Z I1117 09:33:43.637298       1 base_controller.go:73] Caches are synced for FeatureGateController 
+2025-11-17T09:33:43.637371721Z I1117 09:33:43.637363       1 base_controller.go:110] Starting #1 XXXXXX of FeatureGateController controller ...
+2025-11-17T09:33:43.637406809Z I1117 09:33:43.637320       1 base_controller.go:73] Caches are synced for RemoveStaleConditionsController 
+2025-11-17T09:33:43.637423412Z I1117 09:33:43.637417       1 base_controller.go:110] Starting #1 XXXXXX of RemoveStaleConditionsController controller ...
+2025-11-17T09:33:43.637501737Z I1117 09:33:43.637470       1 base_controller.go:73] Caches are synced for KubeCloudConfigController 
+2025-11-17T09:33:43.637530656Z I1117 09:33:43.637511       1 base_controller.go:110] Starting #1 XXXXXX of KubeCloudConfigController controller ...
+2025-11-17T09:33:43.637574546Z I1117 09:33:43.637506       1 base_controller.go:73] Caches are synced for LoggingSyncer 
+2025-11-17T09:33:43.637608760Z I1117 09:33:43.637589       1 base_controller.go:110] Starting #1 XXXXXX of LoggingSyncer controller ...
+2025-11-17T09:33:43.637667799Z I1117 09:33:43.637608       1 base_controller.go:73] Caches are synced for StatusSyncer_config-operator 
+2025-11-17T09:33:43.637703596Z I1117 09:33:43.637685       1 base_controller.go:110] Starting #1 XXXXXX of StatusSyncer_config-operator controller ...
+2025-11-17T09:33:43.637747785Z I1117 09:33:43.637566       1 base_controller.go:73] Caches are synced for AWSPlatformServiceLocationController 
+2025-11-17T09:33:43.637786658Z I1117 09:33:43.637342       1 base_controller.go:73] Caches are synced for MigrationPlatformStatusController 
+2025-11-17T09:33:43.637821759Z I1117 09:33:43.637792       1 base_controller.go:110] Starting #1 XXXXXX of MigrationPlatformStatusController controller ...
+2025-11-17T09:33:43.637849377Z I1117 09:33:43.637794       1 base_controller.go:110] Starting #1 XXXXXX of AWSPlatformServiceLocationController controller ...
+2025-11-17T09:33:43.637898224Z I1117 09:33:43.637352       1 base_controller.go:73] Caches are synced for FeatureUpgradeableController 
+2025-11-17T09:33:43.638033997Z I1117 09:33:43.638002       1 base_controller.go:110] Starting #1 XXXXXX of FeatureUpgradeableController controller ...
+2025-11-17T09:36:01.556451609Z E1117 09:36:01.556389       1 leaderelection.go:327] error retrieving resource lock openshift-config-operator/config-operator-lock: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io config-operator-lock)

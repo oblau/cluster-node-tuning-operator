@@ -1,0 +1,246 @@
+[openshift-must-gather-cw8sn/10.130.0.39fd02:0:0:3::27/must-gather-cpvtm]
+{
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+        "annotations": {
+            "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.130.0.39/23\",\"fd02:0:0:3::27/64\"],\"mac_address\":\"0a:58:0a:82:00:27\",\"gateway_ips\":[\"10.130.0.1\",\"fd02:0:0:3::1\"],\"routes\":[{\"dest\":\"10.128.0.0/14\",\"nextHop\":\"10.130.0.1\"},{\"dest\":\"172.30.0.0/16\",\"nextHop\":\"10.130.0.1\"},{\"dest\":\"100.64.0.0/16\",\"nextHop\":\"10.130.0.1\"},{\"dest\":\"fd02::/48\",\"nextHop\":\"fd02:0:0:3::1\"},{\"dest\":\"fd03::/112\",\"nextHop\":\"fd02:0:0:3::1\"},{\"dest\":\"fd98::/64\",\"nextHop\":\"fd02:0:0:3::1\"}]}}",
+            "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.130.0.39\",\n        \"fd02:0:0:3::27\"\n    ],\n    \"mac\": \"0a:58:0a:82:00:27\",\n    \"default\": true,\n    \"dns\": {}\n}]"
+        },
+        "creationTimestamp": "2025-11-17T09:51:31Z",
+        "generateName": "must-gather-",
+        "labels": {
+            "app": "must-gather"
+        },
+        "name": "must-gather-cpvtm",
+        "namespace": "openshift-must-gather-cw8sn",
+        "resourceVersion": "32315",
+        "uid": "82888a52-6ee2-40d4-ac81-88e5fdb267c0"
+    },
+    "spec": {
+        "containers": [
+            {
+                "command": [
+                    "/bin/bash",
+                    "-c",
+                    "/usr/bin/gather; sync"
+                ],
+                "env": [
+                    {
+                        "name": "NODE_NAME",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "spec.nodeName"
+                            }
+                        }
+                    },
+                    {
+                        "name": "POD_NAME",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "metadata.name"
+                            }
+                        }
+                    }
+                ],
+                "image": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f00c7f54f908ad004fe872d63cdf89c65a37aef0718a124fc3497bb5d990de42",
+                "imagePullPolicy": "IfNotPresent",
+                "name": "gather",
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/must-gather",
+                        "name": "must-gather-output"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-cmwjj",
+                        "readOnly": true
+                    }
+                ]
+            },
+            {
+                "command": [
+                    "/bin/bash",
+                    "-c",
+                    "trap : TERM INT; sleep infinity \u0026 wait"
+                ],
+                "image": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f00c7f54f908ad004fe872d63cdf89c65a37aef0718a124fc3497bb5d990de42",
+                "imagePullPolicy": "IfNotPresent",
+                "name": "copy",
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/must-gather",
+                        "name": "must-gather-output"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-cmwjj",
+                        "readOnly": true
+                    }
+                ]
+            }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "imagePullSecrets": [
+            {
+                "name": "default-dockercfg-hkb79"
+            }
+        ],
+        "nodeName": "XXXXXX0",
+        "nodeSelector": {
+            "kubernetes.io/os": "linux",
+            "node-role.kubernetes.io/XXXXXX": ""
+        },
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 2000000000,
+        "priorityClassName": "system-cluster-critical",
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "default",
+        "serviceAccountName": "default",
+        "terminationGracePeriodSeconds": 0,
+        "tolerations": [
+            {
+                "operator": "Exists"
+            }
+        ],
+        "volumes": [
+            {
+                "emptyDir": {},
+                "name": "must-gather-output"
+            },
+            {
+                "name": "kube-api-access-cmwjj",
+                "projected": {
+                    "defaultMode": 420,
+                    "sources": [
+                        {
+                            "serviceAccountToken": {
+                                "expirationSeconds": 3607,
+                                "path": "token"
+                            }
+                        },
+                        {
+                            "configMap": {
+                                "items": [
+                                    {
+                                        "key": "ca.crt",
+                                        "path": "ca.crt"
+                                    }
+                                ],
+                                "name": "kube-root-ca.crt"
+                            }
+                        },
+                        {
+                            "downwardAPI": {
+                                "items": [
+                                    {
+                                        "fieldRef": {
+                                            "apiVersion": "v1",
+                                            "fieldPath": "metadata.namespace"
+                                        },
+                                        "path": "namespace"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "configMap": {
+                                "items": [
+                                    {
+                                        "key": "service-ca.crt",
+                                        "path": "service-ca.crt"
+                                    }
+                                ],
+                                "name": "openshift-service-ca.crt"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2025-11-17T09:51:31Z",
+                "status": "True",
+                "type": "Initialized"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2025-11-17T09:51:38Z",
+                "status": "True",
+                "type": "Ready"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2025-11-17T09:51:38Z",
+                "status": "True",
+                "type": "ContainersReady"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2025-11-17T09:51:31Z",
+                "status": "True",
+                "type": "PodScheduled"
+            }
+        ],
+        "containerStatuses": [
+            {
+                "containerID": "cri-o://33a14bfc1986e261ba336feb79bcdd4490667fc78092b66d23507403523111df",
+                "image": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f00c7f54f908ad004fe872d63cdf89c65a37aef0718a124fc3497bb5d990de42",
+                "imageID": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f00c7f54f908ad004fe872d63cdf89c65a37aef0718a124fc3497bb5d990de42",
+                "lastState": {},
+                "name": "copy",
+                "ready": true,
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2025-11-17T09:51:38Z"
+                    }
+                }
+            },
+            {
+                "containerID": "cri-o://3c89b5808bbaecc60e76af45c89152fd9a363623c2244beb7c50279668dfed0c",
+                "image": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f00c7f54f908ad004fe872d63cdf89c65a37aef0718a124fc3497bb5d990de42",
+                "imageID": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f00c7f54f908ad004fe872d63cdf89c65a37aef0718a124fc3497bb5d990de42",
+                "lastState": {},
+                "name": "gather",
+                "ready": true,
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2025-11-17T09:51:38Z"
+                    }
+                }
+            }
+        ],
+        "hostIP": "XXXXXXXXXXX",
+        "phase": "Running",
+        "podIP": "10.130.0.39",
+        "podIPs": [
+            {
+                "ip": "10.130.0.39"
+            },
+            {
+                "ip": "fd02:0:0:3::27"
+            }
+        ],
+        "qosClass": "BestEffort",
+        "startTime": "2025-11-17T09:51:31Z"
+    }
+}

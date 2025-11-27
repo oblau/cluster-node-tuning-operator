@@ -1,0 +1,64 @@
+---
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  creationTimestamp: "2025-11-17T09:33:35Z"
+  generateName: csr-
+  managedFields:
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+    manager: kubelet
+    operation: Update
+    time: "2025-11-17T09:33:35Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Approved"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: assisted-installer-controller
+    operation: Update
+    subresource: approval
+    time: "2025-11-17T09:34:02Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:certificate: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:34:02Z"
+  name: csr-44z4r
+  resourceVersion: "20565"
+  uid: 85bc2325-4f37-4ffd-9660-816897fe8eb0
+spec:
+  groups:
+  - system:nodes
+  - system:authenticated
+  request: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0KTUlJQkxEQ0IxQUlCQURBMU1SVXdFd1lEVlFRS0V3eHplWE4wWlcwNmJtOWtaWE14SERBYUJnTlZCQU1URTNONQpjM1JsYlRwdWIyUmxPbTFoYzNSbGNqQXdXVEFUQmdjcWhrak9QUUlCQmdncWhrak9QUU1CQndOQ0FBU0Q3UjF2ClgwdzBWRHlrOExpalhzMGs0NmtNVlh4L0kzSlFrY3pudVRLdmNYZ2Y4OHF3WkRaSjdTR1hCZUxQOXBLeHJPS2MKNENkWVBzL0NtZnV3dXBKMW9EMHdPd1lKS29aSWh2Y05BUWtPTVM0d0xEQXFCZ05WSFJFRUl6QWhnZ2R0WVhOMApaWEl3aHdRS0xob1VoeEFtSUFCU0FBQXVHZ0FBQUFBQUFBQWdNQW9HQ0NxR1NNNDlCQU1DQTBjQU1FUUNJRkpICjFZMXphSUV0SDB1MzJaZDQvb09HNFFibFM3bE4xWVFJc1V3dHo4RFdBaUFqeDBSQm13LzhETC91NGJMa2IzaUkKN0ZYUk14d0JycmYrVjlFMzNJK3Y5UT09Ci0tLS0tRU5EIENFUlRJRklDQVRFIFJFUVVFU1QtLS0tLQo=
+  signerName: kubernetes.io/kubelet-serving
+  usages:
+  - digital signature
+  - server auth
+  username: system:node:XXXXXX0
+status:
+  certificate: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNuekNDQVllZ0F3SUJBZ0lSQUptQU5yQzFEQ0Y5UXZEUTFWcVZ4K293RFFZSktvWklodmNOQVFFTEJRQXcKSmpFa01DSUdBMVVFQXd3YmEzVmlaUzFqYzNJdGMybG5ibVZ5WDBBeE56WXpNemN4TWpJMU1CNFhEVEkxTVRFeApOekE1TWprd01sb1hEVEkxTVRFeE9EQTVNREV5T1Zvd05URVZNQk1HQTFVRUNoTU1jM2x6ZEdWdE9tNXZaR1Z6Ck1Sd3dHZ1lEVlFRREV4TnplWE4wWlcwNmJtOWtaVHB0WVhOMFpYSXdNRmt3RXdZSEtvWkl6ajBDQVFZSUtvWkkKemowREFRY0RRZ0FFZyswZGIxOU1ORlE4cFBDNG8xN05KT09wREZWOGZ5TnlVSkhNNTdreXIzRjRIL1BLc0dRMgpTZTBobHdYaXovYVNzYXppbk9BbldEN1B3cG43c0xxU2RhT0JnekNCZ0RBT0JnTlZIUThCQWY4RUJBTUNCNEF3CkV3WURWUjBsQkF3d0NnWUlLd1lCQlFVSEF3RXdEQVlEVlIwVEFRSC9CQUl3QURBZkJnTlZIU01FR0RBV2dCUnQKNyt1TFVTMVp6S3VkWmdWaHRxeGQvM3VJQ0RBcUJnTlZIUkVFSXpBaGdnZHRZWE4wWlhJd2h3UUtMaG9VaHhBbQpJQUJTQUFBdUdnQUFBQUFBQUFBZ01BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQStydHpuL2ViR1IrQ3JHeUZICll6Nm5xMEZEa1hqSEJwa0wxdHY1bmgwNE55NG83WFFGTGUwRElkbWVXdVpVSWFIUFE0MU1DV053K3FCQks5Y1QKUElkZjVGN21SVDNDQzg5elVWSG8vbVRRVFlnd05tMFRNczg5VGs1VW92UitnZVVIeVJ4K2k1WkVvY1pVUUJIVwpIMW1wYk9HVGw3MDhHam1jNkhpNGlYblpHclZROUdHWnRsV3RWY2dpM1h4dDFQVE9uQUUzaklWKzNLMWEvWHZECm84VzlJN1ZWczJOZTVkRk0rdHloVUV6WmppeFl5dzBGNDN3MlkyUVZFZnY4bUY4czVLZFhVbFFwc3NKNm84MTgKSHRIcXBuQmhtaUU3R2RHN3c1ZURzcCtKQ1A5M2pDWThYTEZMMzN5bERKQWhaTURCZUFPaVROSnE0UFVpSXpsTQovU1h0Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:34:02Z"
+    lastUpdateTime: "2025-11-17T09:34:02Z"
+    message: This CSR was approved by the assisted-installer-controller
+    reason: NodeCSRApprove
+    status: "True"
+    type: Approved

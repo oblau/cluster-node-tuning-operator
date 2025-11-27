@@ -1,0 +1,105 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: ImageRegistry
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2025-11-17T09:05:22Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:22Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:05:23Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:37:24Z"
+  name: image-registry
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "22676"
+  uid: c23afa48-66ae-49e2-bfc1-952c3ceda56d
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:30:27Z"
+    message: |-
+      NodeCADaemonAvailable: The daemon set node-ca has available replicas
+      Available: The registry is removed
+      ImagePrunerAvailable: Pruner CronJob has been created
+    reason: Removed
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2025-11-17T09:37:24Z"
+    message: |-
+      NodeCADaemonProgressing: The daemon set node-ca is deployed
+      Progressing: All registry resources are removed
+    reason: Removed
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2025-11-17T09:29:59Z"
+    message: 'Degraded: The registry is removed'
+    reason: Removed
+    status: "False"
+    type: Degraded
+  extension: null
+  relatedObjects:
+  - group: imageregistry.operator.openshift.io
+    name: cluster
+    resource: configs
+  - group: imageregistry.operator.openshift.io
+    name: cluster
+    resource: imagepruners
+  - group: rbac.authorization.k8s.io
+    name: system:registry
+    resource: clusterroles
+  - group: rbac.authorization.k8s.io
+    name: registry-registry-role
+    resource: clusterrolebindings
+  - group: rbac.authorization.k8s.io
+    name: openshift-image-registry-pruner
+    resource: clusterrolebindings
+  - group: ""
+    name: openshift-image-registry
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.14.59

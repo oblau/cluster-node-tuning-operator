@@ -1,0 +1,15 @@
+2025-11-17T09:19:10.442148206Z + [[ -f /env/_XXXXXX ]]
+2025-11-17T09:19:10.442148206Z + ho_enable=
+2025-11-17T09:19:10.442518211Z ++ date '+%m%d %H:%M:%S.%N'
+2025-11-17T09:19:10.444114822Z + echo 'I1117 09:19:10.443735791 - network-node-identity - start webhook'
+2025-11-17T09:19:10.444127390Z I1117 09:19:10.443735791 - network-node-identity - start webhook
+2025-11-17T09:19:10.444187221Z + exec /usr/bin/ovnkube-identity --k8s-apiserver=https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 --webhook-cert-dir=/etc/webhook-cert --webhook-host=127.0.0.1 --webhook-port=9743 --enable-interconnect --disable-approver --extra-allowed-user=system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-control-plane --wait-for-kubernetes-api=200s --pod-admission-conditions=/var/run/ovnkube-identity-config/additional-pod-admission-cond.json --loglevel=2
+2025-11-17T09:19:10.461599241Z I1117 09:19:10.461527       1 ovnkubeidentity.go:131] Config: {kubeconfig: apiServer:https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 logLevel:2 port:9743 host:127.0.0.1 certDir:/etc/webhook-cert metricsAddress:0 leaseNamespace: enableInterconnect:true enableHybridOverlay:false disableWebhook:false disableApprover:true waitForKAPIDuration:200000000000 localKAPIPort:6443 extraAllowedUsers:{slice:[system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-control-plane] hasBeenSet:true} csrAcceptanceConditionFile: csrAcceptanceConditions:[] podAdmissionConditionFile:/var/run/ovnkube-identity-config/additional-pod-admission-cond.json podAdmissionConditions:[]}
+2025-11-17T09:19:10.461599241Z W1117 09:19:10.461582       1 client_config.go:618] Neither --kubeconfig nor --XXXXXX was specified.  Using the inClusterConfig.  This might not work.
+2025-11-17T09:19:10.462198680Z I1117 09:19:10.462182       1 ovnkubeidentity.go:350] Waiting for caches to sync
+2025-11-17T09:19:10.563056556Z I1117 09:19:10.563002       1 certwatcher.go:161] "controller-runtime/certwatcher: Updated current TLS certificate"
+2025-11-17T09:19:10.563378763Z I1117 09:19:10.563350       1 certwatcher.go:115] "controller-runtime/certwatcher: Starting certificate watcher"
+2025-11-17T09:19:10.563437461Z I1117 09:19:10.563417       1 ovnkubeidentity.go:429] Starting the webhook server
+2025-11-17T09:33:01.880279172Z I1117 09:33:01.879804       1 trace.go:236] Trace[1427273422]: "Reflector ListAndWatch" name:k8s.io/client-go/informers/factory.go:159 (17-Nov-2025 09:32:51.842) (total time: 10037ms):
+2025-11-17T09:33:01.880279172Z Trace[1427273422]: ---"Objects listed" error:<nil> 10037ms (09:33:01.879)
+2025-11-17T09:33:01.880279172Z Trace[1427273422]: [10.037330728s] [10.037330728s] END

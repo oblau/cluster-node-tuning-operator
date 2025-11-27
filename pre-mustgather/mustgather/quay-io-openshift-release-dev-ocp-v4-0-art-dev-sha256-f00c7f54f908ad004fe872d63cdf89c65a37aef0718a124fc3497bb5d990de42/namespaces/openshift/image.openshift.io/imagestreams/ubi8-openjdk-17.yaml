@@ -1,0 +1,135 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: Red Hat OpenJDK 17 (UBI8)
+    openshift.io/image.dockerRepositoryCheck: "2025-11-17T09:30:32Z"
+    openshift.io/provider-display-name: Red Hat, Inc.
+    samples.operator.openshift.io/version: 4.14.59
+    version: 1.4.17
+  creationTimestamp: "2025-11-17T09:27:31Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+    xpaas: 1.4.17
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:openshift.io/provider-display-name: {}
+          f:samples.operator.openshift.io/version: {}
+          f:version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+          f:xpaas: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"1.11"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"1.12"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2025-11-17T09:27:31Z"
+  name: ubi8-openjdk-17
+  namespace: openshift
+  resourceVersion: "17588"
+  uid: 1b709529-3f10-4a4b-b3aa-99ea6ffcfc02
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Build and run Java applications using Maven and OpenJDK 17 upon
+        RHEL8.
+      iconClass: icon-rh-openjdk
+      openshift.io/display-name: Red Hat OpenJDK 17 (UBI8)
+      sampleContextDir: undertow-servlet
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts
+      tags: builder,java,openjdk,ubi8,hidden
+      version: "1.11"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/openjdk-17:1.11
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "1.11"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Java applications using Maven and OpenJDK 17 upon
+        RHEL8.
+      iconClass: icon-rh-openjdk
+      openshift.io/display-name: Red Hat OpenJDK 17 (UBI8)
+      sampleContextDir: undertow-servlet
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts
+      tags: builder,java,openjdk,ubi8,hidden
+      version: "1.12"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/openjdk-17:1.12
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "1.12"
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: ""
+  tags:
+  - items:
+    - created: "2025-11-17T09:30:32Z"
+      dockerImageReference: registry.access.redhat.com/ubi8/openjdk-17@sha256:d186c94f8843f854d77b2b05d10efb0d272f88a4bf4f1d8ebe304428b9396392
+      generation: 2
+      image: sha256:d186c94f8843f854d77b2b05d10efb0d272f88a4bf4f1d8ebe304428b9396392
+    tag: "1.11"
+  - items:
+    - created: "2025-11-17T09:30:32Z"
+      dockerImageReference: registry.access.redhat.com/ubi8/openjdk-17@sha256:e37aeaeb0159194a9855350e13e399470f39ce340d6381069933742990741fb8
+      generation: 2
+      image: sha256:e37aeaeb0159194a9855350e13e399470f39ce340d6381069933742990741fb8
+    tag: "1.12"

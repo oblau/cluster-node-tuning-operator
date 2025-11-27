@@ -1,0 +1,407 @@
+2025-11-17T09:32:38.518422157Z + remove_vip XXXXXXXXXX0
+2025-11-17T09:32:38.518422157Z + address=XXXXXXXXXX0
+2025-11-17T09:32:38.518937628Z ++ ip -o a
+2025-11-17T09:32:38.519150472Z ++ awk '/\sXXXXXXXXXX0\// {print $2}'
+2025-11-17T09:32:38.524574383Z + interface=
+2025-11-17T09:32:38.525130651Z ++ ip -o a
+2025-11-17T09:32:38.525293393Z ++ awk '/\sXXXXXXXXXX0\// {print $4}'
+2025-11-17T09:32:38.527771786Z + cidr=
+2025-11-17T09:32:38.527771786Z + '[' -n '' ']'
+2025-11-17T09:32:38.527802191Z + remove_vip 2620:52:0:2e1a::10
+2025-11-17T09:32:38.527808521Z + address=2620:52:0:2e1a::10
+2025-11-17T09:32:38.528378995Z ++ ip -o a
+2025-11-17T09:32:38.528547893Z ++ awk '/\s2620:52:0:2e1a::10\// {print $2}'
+2025-11-17T09:32:38.531435097Z + interface=
+2025-11-17T09:32:38.531924111Z ++ ip -o a
+2025-11-17T09:32:38.532095277Z ++ awk '/\s2620:52:0:2e1a::10\// {print $4}'
+2025-11-17T09:32:38.534104748Z + cidr=
+2025-11-17T09:32:38.534104748Z + '[' -n '' ']'
+2025-11-17T09:32:38.534127210Z + remove_vip XXXXXXXXXX1
+2025-11-17T09:32:38.534136001Z + address=XXXXXXXXXX1
+2025-11-17T09:32:38.534732123Z ++ ip -o a
+2025-11-17T09:32:38.534818498Z ++ awk '/\sXXXXXXXXXX1\// {print $2}'
+2025-11-17T09:32:38.537342336Z + interface=
+2025-11-17T09:32:38.537850952Z ++ ip -o a
+2025-11-17T09:32:38.537964104Z ++ awk '/\sXXXXXXXXXX1\// {print $4}'
+2025-11-17T09:32:38.539886094Z + cidr=
+2025-11-17T09:32:38.539895381Z + '[' -n '' ']'
+2025-11-17T09:32:38.539923934Z + remove_vip 2620:52:0:2e1a::11
+2025-11-17T09:32:38.539930056Z + address=2620:52:0:2e1a::11
+2025-11-17T09:32:38.540472938Z ++ ip -o a
+2025-11-17T09:32:38.540575702Z ++ awk '/\s2620:52:0:2e1a::11\// {print $2}'
+2025-11-17T09:32:38.542577693Z + interface=
+2025-11-17T09:32:38.543068951Z ++ ip -o a
+2025-11-17T09:32:38.543233991Z ++ awk '/\s2620:52:0:2e1a::11\// {print $4}'
+2025-11-17T09:32:38.545139818Z + cidr=
+2025-11-17T09:32:38.545139818Z + '[' -n '' ']'
+2025-11-17T09:32:38.545193296Z + declare -r keepalived_sock=/var/run/keepalived/keepalived.sock
+2025-11-17T09:32:38.545205441Z + export -f msg_handler
+2025-11-17T09:32:38.545205441Z + export -f reload_keepalived
+2025-11-17T09:32:38.545223722Z + export -f sigterm_handler
+2025-11-17T09:32:38.545243886Z + '[' -f /run/nodeip-configuration/remote-XXXXXX ']'
+2025-11-17T09:32:38.545264593Z + trap sigterm_handler SIGTERM
+2025-11-17T09:32:38.545297404Z + '[' -s /etc/keepalived/keepalived.conf ']'
+2025-11-17T09:32:38.545313201Z + rm -f /var/run/keepalived/keepalived.sock
+2025-11-17T09:32:38.549768347Z + socat UNIX-LISTEN:/var/run/keepalived/keepalived.sock,fork 'system:bash -c msg_handler'
+2025-11-17T09:33:59.024987017Z The client sent: reload
+2025-11-17T09:33:59.039463794Z Mon Nov 17 09:33:59 2025: Starting Keepalived v2.1.5 (07/13,2020)
+2025-11-17T09:33:59.039463794Z Mon Nov 17 09:33:59 2025: Running on Linux 5.14.0-284.147.1.el9_2.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Nov 10 20:53:54 EST 2025 (built for Linux 4.18.0)
+2025-11-17T09:33:59.039511874Z Mon Nov 17 09:33:59 2025: Command line: '/usr/sbin/keepalived' '-f' '/etc/keepalived/keepalived.conf' '--dont-fork' '--vrrp'
+2025-11-17T09:33:59.039511874Z Mon Nov 17 09:33:59 2025:               '--log-detail' '--log-console'
+2025-11-17T09:33:59.039597047Z Mon Nov 17 09:33:59 2025: Opening file '/etc/keepalived/keepalived.conf'.
+2025-11-17T09:33:59.041351994Z Mon Nov 17 09:33:59 2025: Starting VRRP child process, pid=75
+2025-11-17T09:33:59.041600982Z Mon Nov 17 09:33:59 2025: Registering Kernel netlink reflector
+2025-11-17T09:33:59.041644382Z Mon Nov 17 09:33:59 2025: Registering Kernel netlink command channel
+2025-11-17T09:33:59.041798868Z Mon Nov 17 09:33:59 2025: Opening file '/etc/keepalived/keepalived.conf'.
+2025-11-17T09:33:59.041928503Z Mon Nov 17 09:33:59 2025: (/etc/keepalived/keepalived.conf: Line 82) Truncating auth_pass to 8 characters
+2025-11-17T09:33:59.041971355Z Mon Nov 17 09:33:59 2025: (/etc/keepalived/keepalived.conf: Line 115) Truncating auth_pass to 8 characters
+2025-11-17T09:33:59.042008334Z Mon Nov 17 09:33:59 2025: (/etc/keepalived/keepalived.conf: Line 149) Truncating auth_pass to 8 characters
+2025-11-17T09:33:59.042030724Z Mon Nov 17 09:33:59 2025: (/etc/keepalived/keepalived.conf: Line 152) Cannot specify label for IPv6 addresses (2620:52:0:2e1a::10/128) - ignoring label
+2025-11-17T09:33:59.042064631Z Mon Nov 17 09:33:59 2025: (/etc/keepalived/keepalived.conf: Line 182) Truncating auth_pass to 8 characters
+2025-11-17T09:33:59.042082677Z Mon Nov 17 09:33:59 2025: (/etc/keepalived/keepalived.conf: Line 185) Cannot specify label for IPv6 addresses (2620:52:0:2e1a::11/128) - ignoring label
+2025-11-17T09:33:59.042365262Z Mon Nov 17 09:33:59 2025: Assigned address XXXXXXXXXXX for interface br-ex
+2025-11-17T09:33:59.042394797Z Mon Nov 17 09:33:59 2025: Assigned address fe80::5054:ff:fea6:e20 for interface br-ex
+2025-11-17T09:33:59.042410469Z Mon Nov 17 09:33:59 2025: (hlxcl51_API_1) VRRP version 3 does not support authentication. Ignoring.
+2025-11-17T09:33:59.042425121Z Mon Nov 17 09:33:59 2025: (hlxcl51_INGRESS_1) VRRP version 3 does not support authentication. Ignoring.
+2025-11-17T09:33:59.042620310Z Mon Nov 17 09:33:59 2025: Registering gratuitous ARP shared channel
+2025-11-17T09:33:59.042640090Z Mon Nov 17 09:33:59 2025: Registering gratuitous NDISC shared channel
+2025-11-17T09:33:59.042654374Z Mon Nov 17 09:33:59 2025: (hlxcl51_API_0) removing VIPs.
+2025-11-17T09:33:59.042679606Z Mon Nov 17 09:33:59 2025: (hlxcl51_INGRESS_0) removing VIPs.
+2025-11-17T09:33:59.042698907Z Mon Nov 17 09:33:59 2025: (hlxcl51_API_1) removing VIPs.
+2025-11-17T09:33:59.042721995Z Mon Nov 17 09:33:59 2025: (hlxcl51_INGRESS_1) removing VIPs.
+2025-11-17T09:33:59.043119639Z Mon Nov 17 09:33:59 2025: (hlxcl51_API_0) Entering BACKUP STATE (init)
+2025-11-17T09:33:59.043136405Z Mon Nov 17 09:33:59 2025: (hlxcl51_API_1) Entering BACKUP STATE (init)
+2025-11-17T09:33:59.043157198Z Mon Nov 17 09:33:59 2025: VRRP sockpool: [ifindex(  5), family(IPv4), proto(112), fd(13,14), unicast, address(XXXXXXXXXXX)]
+2025-11-17T09:33:59.043198075Z Mon Nov 17 09:33:59 2025: VRRP sockpool: [ifindex(  5), family(IPv6), proto(112), fd(15,16), unicast, address(2620:52:0:2e1a::20)]
+2025-11-17T09:33:59.053851253Z Mon Nov 17 09:33:59 2025: Script `chk_ingress` now returning 7
+2025-11-17T09:33:59.053851253Z Mon Nov 17 09:33:59 2025: VRRP_Script(chk_ingress) failed (exited with status 7)
+2025-11-17T09:33:59.053892858Z Mon Nov 17 09:33:59 2025: (hlxcl51_INGRESS_0) Entering FAULT STATE
+2025-11-17T09:33:59.053892858Z Mon Nov 17 09:33:59 2025: (hlxcl51_INGRESS_1) Entering FAULT STATE
+2025-11-17T09:33:59.054135423Z Mon Nov 17 09:33:59 2025: Script `chk_ingress_ready` now returning 7
+2025-11-17T09:33:59.054148562Z Mon Nov 17 09:33:59 2025: VRRP_Script(chk_ingress_ready) failed (exited with status 7)
+2025-11-17T09:33:59.054880983Z Mon Nov 17 09:33:59 2025: Script `chk_ocp_lb` now returning 1
+2025-11-17T09:33:59.054904988Z Mon Nov 17 09:33:59 2025: VRRP_Script(chk_ocp_lb) failed (exited with status 1)
+2025-11-17T09:33:59.061625952Z Mon Nov 17 09:33:59 2025: Script `chk_ocp_both` now returning 7
+2025-11-17T09:33:59.061674889Z Mon Nov 17 09:33:59 2025: VRRP_Script(chk_ocp_both) failed (exited with status 7)
+2025-11-17T09:33:59.104775790Z Mon Nov 17 09:33:59 2025: Script `chk_default_ingress` now returning 1
+2025-11-17T09:33:59.104816237Z Mon Nov 17 09:33:59 2025: VRRP_Script(chk_default_ingress) failed (exited with status 1)
+2025-11-17T09:34:03.889155945Z Mon Nov 17 09:34:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:34:03.889155945Z Mon Nov 17 09:34:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:34:13.886238694Z Mon Nov 17 09:34:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:34:13.886238694Z Mon Nov 17 09:34:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:34:21.054503292Z Mon Nov 17 09:34:21 2025: Script `chk_ocp_lb` now returning 0
+2025-11-17T09:34:21.054717708Z Mon Nov 17 09:34:21 2025: Script `chk_ocp_both` now returning 0
+2025-11-17T09:34:23.886144262Z Mon Nov 17 09:34:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:34:23.886144262Z Mon Nov 17 09:34:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:34:25.054794132Z Mon Nov 17 09:34:25 2025: VRRP_Script(chk_ocp_lb) succeeded
+2025-11-17T09:34:25.054834665Z Mon Nov 17 09:34:25 2025: (hlxcl51_API_0) Changing effective priority from 40 to 60
+2025-11-17T09:34:25.054834665Z Mon Nov 17 09:34:25 2025: (hlxcl51_API_1) Changing effective priority from 40 to 60
+2025-11-17T09:34:25.054840861Z Mon Nov 17 09:34:25 2025: VRRP_Script(chk_ocp_both) succeeded
+2025-11-17T09:34:25.054856351Z Mon Nov 17 09:34:25 2025: (hlxcl51_API_0) Changing effective priority from 60 to 65
+2025-11-17T09:34:25.054871097Z Mon Nov 17 09:34:25 2025: (hlxcl51_API_1) Changing effective priority from 60 to 65
+2025-11-17T09:34:33.885823324Z Mon Nov 17 09:34:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:34:33.885823324Z Mon Nov 17 09:34:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:34:43.886050372Z Mon Nov 17 09:34:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:34:43.886050372Z Mon Nov 17 09:34:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:34:53.884666543Z Mon Nov 17 09:34:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:34:53.884666543Z Mon Nov 17 09:34:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:35:03.891719369Z Mon Nov 17 09:35:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:35:03.891719369Z Mon Nov 17 09:35:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:35:13.889290371Z Mon Nov 17 09:35:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:35:13.889290371Z Mon Nov 17 09:35:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:35:23.892315513Z Mon Nov 17 09:35:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:35:23.892315513Z Mon Nov 17 09:35:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:35:33.884739839Z Mon Nov 17 09:35:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:35:33.884739839Z Mon Nov 17 09:35:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:35:43.885256748Z Mon Nov 17 09:35:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:35:43.885256748Z Mon Nov 17 09:35:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:35:53.886704228Z Mon Nov 17 09:35:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:35:53.886704228Z Mon Nov 17 09:35:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:36:03.892229681Z Mon Nov 17 09:36:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:36:03.892229681Z Mon Nov 17 09:36:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:36:13.885503144Z Mon Nov 17 09:36:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:36:13.885503144Z Mon Nov 17 09:36:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:36:23.888174224Z Mon Nov 17 09:36:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:36:23.888174224Z Mon Nov 17 09:36:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:36:33.886081830Z Mon Nov 17 09:36:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:36:33.886081830Z Mon Nov 17 09:36:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:36:34.469684903Z Mon Nov 17 09:36:34 2025: (hlxcl51_API_0) received lower priority (40) advert from XXXXXXXXXXX - discarding
+2025-11-17T09:36:34.488913089Z Mon Nov 17 09:36:34 2025: (hlxcl51_API_1) received lower priority (40) advert from 2620:52:0:2e1a::22 - discarding
+2025-11-17T09:36:35.469407702Z Mon Nov 17 09:36:35 2025: (hlxcl51_API_0) received lower priority (40) advert from XXXXXXXXXXX - discarding
+2025-11-17T09:36:35.489197808Z Mon Nov 17 09:36:35 2025: (hlxcl51_API_1) received lower priority (40) advert from 2620:52:0:2e1a::22 - discarding
+2025-11-17T09:36:36.469468220Z Mon Nov 17 09:36:36 2025: (hlxcl51_API_0) received lower priority (40) advert from XXXXXXXXXXX - discarding
+2025-11-17T09:36:36.489505454Z Mon Nov 17 09:36:36 2025: (hlxcl51_API_1) received lower priority (40) advert from 2620:52:0:2e1a::22 - discarding
+2025-11-17T09:36:37.215480102Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_0) Receive advertisement timeout
+2025-11-17T09:36:37.215646247Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_0) Entering MASTER STATE
+2025-11-17T09:36:37.215680109Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_0) setting VIPs.
+2025-11-17T09:36:37.215816067Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_0) Sending/queueing gratuitous ARPs on br-ex for XXXXXXXXXX0
+2025-11-17T09:36:37.215860572Z Mon Nov 17 09:36:37 2025: Sending gratuitous ARP on br-ex for XXXXXXXXXX0
+2025-11-17T09:36:37.216067397Z Mon Nov 17 09:36:37 2025: Sending gratuitous ARP on br-ex for XXXXXXXXXX0
+2025-11-17T09:36:37.216103000Z Mon Nov 17 09:36:37 2025: Sending gratuitous ARP on br-ex for XXXXXXXXXX0
+2025-11-17T09:36:37.216133097Z Mon Nov 17 09:36:37 2025: Sending gratuitous ARP on br-ex for XXXXXXXXXX0
+2025-11-17T09:36:37.216183756Z Mon Nov 17 09:36:37 2025: Sending gratuitous ARP on br-ex for XXXXXXXXXX0
+2025-11-17T09:36:37.216912893Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_0) Master received advert from XXXXXXXXXXX with same priority 65 but higher IP address than ours
+2025-11-17T09:36:37.216964383Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_0) Entering BACKUP STATE
+2025-11-17T09:36:37.216993436Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_0) removing VIPs.
+2025-11-17T09:36:37.235264748Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_1) Receive advertisement timeout
+2025-11-17T09:36:37.235411580Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_1) Entering MASTER STATE
+2025-11-17T09:36:37.235445684Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_1) using locally configured advertisement interval (1000 milli-sec)
+2025-11-17T09:36:37.235472467Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_1) setting VIPs.
+2025-11-17T09:36:37.235621510Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_1) Sending/queueing Unsolicited Neighbour Adverts on br-ex for 2620:52:0:2e1a::10
+2025-11-17T09:36:37.235734311Z Mon Nov 17 09:36:37 2025: Sending unsolicited Neighbour Advert on br-ex for 2620:52:0:2e1a::10
+2025-11-17T09:36:37.235811957Z Mon Nov 17 09:36:37 2025: Sending unsolicited Neighbour Advert on br-ex for 2620:52:0:2e1a::10
+2025-11-17T09:36:37.235868664Z Mon Nov 17 09:36:37 2025: Sending unsolicited Neighbour Advert on br-ex for 2620:52:0:2e1a::10
+2025-11-17T09:36:37.235902014Z Mon Nov 17 09:36:37 2025: Sending unsolicited Neighbour Advert on br-ex for 2620:52:0:2e1a::10
+2025-11-17T09:36:37.235934920Z Mon Nov 17 09:36:37 2025: Sending unsolicited Neighbour Advert on br-ex for 2620:52:0:2e1a::10
+2025-11-17T09:36:37.237464726Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_1) Master received advert from 2620:52:0:2e1a::21 with same priority 65 but higher IP address than ours
+2025-11-17T09:36:37.237556048Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_1) Entering BACKUP STATE
+2025-11-17T09:36:37.237589671Z Mon Nov 17 09:36:37 2025: (hlxcl51_API_1) removing VIPs.
+2025-11-17T09:36:43.888984081Z Mon Nov 17 09:36:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:36:43.889054806Z Mon Nov 17 09:36:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:36:53.887273742Z Mon Nov 17 09:36:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:36:53.887333774Z Mon Nov 17 09:36:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:37:03.896951601Z Mon Nov 17 09:37:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:37:03.896951601Z Mon Nov 17 09:37:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:37:13.894344121Z Mon Nov 17 09:37:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:37:13.894344121Z Mon Nov 17 09:37:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:37:23.893316588Z Mon Nov 17 09:37:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:37:23.893316588Z Mon Nov 17 09:37:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:37:33.893788558Z Mon Nov 17 09:37:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:37:33.893788558Z Mon Nov 17 09:37:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:37:43.891640172Z Mon Nov 17 09:37:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:37:43.891640172Z Mon Nov 17 09:37:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:37:53.888763998Z Mon Nov 17 09:37:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:37:53.888821268Z Mon Nov 17 09:37:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:38:00.550399956Z Mon Nov 17 09:38:00 2025: Interface br-int added
+2025-11-17T09:38:00.550793411Z Mon Nov 17 09:38:00 2025: (br-int) MAC Address changed from b2:43:a7:bb:3b:c9 to 06:bc:d2:35:ee:c8
+2025-11-17T09:38:03.885493222Z Mon Nov 17 09:38:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:38:03.885552739Z Mon Nov 17 09:38:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:38:07.247408689Z Mon Nov 17 09:38:07 2025: Interface ovn-k8s-mp0 added
+2025-11-17T09:38:09.605193548Z Mon Nov 17 09:38:09 2025: Interface genev_sys_6081 added
+2025-11-17T09:38:13.887359390Z Mon Nov 17 09:38:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:38:13.887359390Z Mon Nov 17 09:38:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:38:22.775776194Z Mon Nov 17 09:38:22 2025: Interface dfc731b316a38f1 added
+2025-11-17T09:38:22.776407265Z Mon Nov 17 09:38:22 2025: Interface 980bb6ed2e61078 added
+2025-11-17T09:38:22.784542733Z Mon Nov 17 09:38:22 2025: Interface 3cc416b5fb3ec69 added
+2025-11-17T09:38:22.835633933Z Mon Nov 17 09:38:22 2025: Interface e88efe44d03f432 added
+2025-11-17T09:38:23.888124092Z Mon Nov 17 09:38:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:38:23.888124092Z Mon Nov 17 09:38:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:38:24.118048047Z Mon Nov 17 09:38:24 2025: Interface bbedefad1b90b3d added
+2025-11-17T09:38:24.591987595Z Mon Nov 17 09:38:24 2025: Interface 389c8a1dc62aaf8 added
+2025-11-17T09:38:27.497241234Z Mon Nov 17 09:38:27 2025: Interface 9ca0a2237ebb3f8 added
+2025-11-17T09:38:31.397069407Z Mon Nov 17 09:38:31 2025: Interface 49bd8d25eb039fe added
+2025-11-17T09:38:33.903024859Z Mon Nov 17 09:38:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:38:33.903024859Z Mon Nov 17 09:38:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:38:36.099972880Z Mon Nov 17 09:38:36 2025: Interface b88fa2286177f08 added
+2025-11-17T09:38:36.144689948Z Mon Nov 17 09:38:36 2025: Interface fa064aa54b3d7f1 added
+2025-11-17T09:38:37.398219666Z Mon Nov 17 09:38:37 2025: Interface 32ea4d2e465031d added
+2025-11-17T09:38:37.400362454Z Mon Nov 17 09:38:37 2025: Interface 5898d9002150f06 added
+2025-11-17T09:38:37.932428015Z Mon Nov 17 09:38:37 2025: Interface 421c0e149c3c6af added
+2025-11-17T09:38:41.672371217Z Mon Nov 17 09:38:41 2025: Interface 9ca0a2237ebb3f8 deleted
+2025-11-17T09:38:43.886521837Z Mon Nov 17 09:38:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:38:43.886521837Z Mon Nov 17 09:38:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:38:49.640158535Z Mon Nov 17 09:38:49 2025: Interface 32ea4d2e465031d deleted
+2025-11-17T09:38:52.685956542Z Mon Nov 17 09:38:52 2025: Interface 5e04e39a5765e26 added
+2025-11-17T09:38:53.888965544Z Mon Nov 17 09:38:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:38:53.888965544Z Mon Nov 17 09:38:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:38:57.211435907Z Mon Nov 17 09:38:57 2025: Interface 347da6e06640996 added
+2025-11-17T09:38:57.668600243Z Mon Nov 17 09:38:57 2025: Interface 5e04e39a5765e26 deleted
+2025-11-17T09:39:03.887924415Z Mon Nov 17 09:39:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:39:03.887924415Z Mon Nov 17 09:39:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:39:04.801031064Z Mon Nov 17 09:39:04 2025: Interface 5a583691d25e50d added
+2025-11-17T09:39:04.803039099Z Mon Nov 17 09:39:04 2025: Interface 1e886939c547292 added
+2025-11-17T09:39:10.205460559Z Mon Nov 17 09:39:10 2025: Interface 389c8a1dc62aaf8 deleted
+2025-11-17T09:39:13.732708112Z Mon Nov 17 09:39:13 2025: Interface 49bd8d25eb039fe deleted
+2025-11-17T09:39:13.894259003Z Mon Nov 17 09:39:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:39:13.894359093Z Mon Nov 17 09:39:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:39:14.071888040Z Mon Nov 17 09:39:14 2025: Interface 976db9ecf4e43c3 added
+2025-11-17T09:39:17.924655604Z Mon Nov 17 09:39:17 2025: Interface 5898d9002150f06 deleted
+2025-11-17T09:39:18.436401439Z Mon Nov 17 09:39:18 2025: Interface 83274bd8e1e2b3c added
+2025-11-17T09:39:20.943129858Z Mon Nov 17 09:39:20 2025: Interface b88fa2286177f08 deleted
+2025-11-17T09:39:21.805220938Z Mon Nov 17 09:39:21 2025: Interface fa064aa54b3d7f1 deleted
+2025-11-17T09:39:21.821261717Z Mon Nov 17 09:39:21 2025: Interface 9addcdf36d702cb added
+2025-11-17T09:39:23.887594235Z Mon Nov 17 09:39:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:39:23.887594235Z Mon Nov 17 09:39:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:39:28.957144832Z Mon Nov 17 09:39:28 2025: Interface 7075c83a445a123 added
+2025-11-17T09:39:32.834250793Z Mon Nov 17 09:39:32 2025: Interface 6287dbd5cf18142 added
+2025-11-17T09:39:33.890930792Z Mon Nov 17 09:39:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:39:33.890930792Z Mon Nov 17 09:39:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:39:37.849919341Z Mon Nov 17 09:39:37 2025: Interface 347da6e06640996 deleted
+2025-11-17T09:39:39.040280705Z Mon Nov 17 09:39:39 2025: Interface ab73c36d915e51c added
+2025-11-17T09:39:41.196014339Z Mon Nov 17 09:39:41 2025: Interface f852ea6bdffd28c added
+2025-11-17T09:39:43.889289388Z Mon Nov 17 09:39:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:39:43.889289388Z Mon Nov 17 09:39:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:39:47.120381987Z Mon Nov 17 09:39:47 2025: Interface 976db9ecf4e43c3 deleted
+2025-11-17T09:39:53.891363782Z Mon Nov 17 09:39:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:39:53.891363782Z Mon Nov 17 09:39:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:39:58.417913163Z Mon Nov 17 09:39:58 2025: Interface 8b79ba2540ccce0 added
+2025-11-17T09:39:59.179766544Z Mon Nov 17 09:39:59 2025: Interface 980bb6ed2e61078 deleted
+2025-11-17T09:40:02.953704303Z Mon Nov 17 09:40:02 2025: Interface 8b79ba2540ccce0 deleted
+2025-11-17T09:40:03.887469458Z Mon Nov 17 09:40:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:40:03.887469458Z Mon Nov 17 09:40:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:40:03.984362320Z Mon Nov 17 09:40:03 2025: Interface 27d666ff680e52e added
+2025-11-17T09:40:07.332624491Z Mon Nov 17 09:40:07 2025: Interface 5ba674a3eb77809 added
+2025-11-17T09:40:11.988960629Z Mon Nov 17 09:40:11 2025: Interface 5ba674a3eb77809 deleted
+2025-11-17T09:40:13.887497540Z Mon Nov 17 09:40:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:40:13.887497540Z Mon Nov 17 09:40:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:40:20.082900511Z Mon Nov 17 09:40:20 2025: Interface 533b2d10a29fdc7 added
+2025-11-17T09:40:21.845632825Z Mon Nov 17 09:40:21 2025: Interface ab73c36d915e51c deleted
+2025-11-17T09:40:22.323778104Z Mon Nov 17 09:40:22 2025: Interface 1e6cb4aec26cbaf added
+2025-11-17T09:40:23.887627903Z Mon Nov 17 09:40:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:40:23.887681013Z Mon Nov 17 09:40:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:40:27.069506051Z Mon Nov 17 09:40:27 2025: Interface 1e6cb4aec26cbaf deleted
+2025-11-17T09:40:27.344314623Z Mon Nov 17 09:40:27 2025: Interface 83274bd8e1e2b3c deleted
+2025-11-17T09:40:27.995575088Z Mon Nov 17 09:40:27 2025: Interface ef04be360cc89eb added
+2025-11-17T09:40:33.891010412Z Mon Nov 17 09:40:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:40:33.891010412Z Mon Nov 17 09:40:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:40:43.889491551Z Mon Nov 17 09:40:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:40:43.889491551Z Mon Nov 17 09:40:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:40:53.886028053Z Mon Nov 17 09:40:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:40:53.886028053Z Mon Nov 17 09:40:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:41:02.218254413Z Mon Nov 17 09:41:02 2025: Interface 533b2d10a29fdc7 deleted
+2025-11-17T09:41:03.892365527Z Mon Nov 17 09:41:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:41:03.892365527Z Mon Nov 17 09:41:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:41:06.221631319Z Mon Nov 17 09:41:06 2025: Interface ffbe7160f0d6b49 added
+2025-11-17T09:41:13.889879962Z Mon Nov 17 09:41:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:41:13.889879962Z Mon Nov 17 09:41:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:41:17.843093620Z Mon Nov 17 09:41:17 2025: Interface e88efe44d03f432 deleted
+2025-11-17T09:41:20.334271643Z Mon Nov 17 09:41:20 2025: Interface 2841eee1ef09b7c added
+2025-11-17T09:41:23.888274333Z Mon Nov 17 09:41:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:41:23.888274333Z Mon Nov 17 09:41:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:41:33.889198623Z Mon Nov 17 09:41:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:41:33.889198623Z Mon Nov 17 09:41:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:41:43.885673944Z Mon Nov 17 09:41:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:41:43.885673944Z Mon Nov 17 09:41:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:41:53.886978837Z Mon Nov 17 09:41:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:41:53.886978837Z Mon Nov 17 09:41:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:42:03.884921294Z Mon Nov 17 09:42:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:42:03.884962448Z Mon Nov 17 09:42:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:42:13.890307697Z Mon Nov 17 09:42:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:42:13.890307697Z Mon Nov 17 09:42:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:42:23.891467214Z Mon Nov 17 09:42:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:42:23.891467214Z Mon Nov 17 09:42:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:42:33.887249358Z Mon Nov 17 09:42:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:42:33.887249358Z Mon Nov 17 09:42:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:42:43.886214268Z Mon Nov 17 09:42:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:42:43.886214268Z Mon Nov 17 09:42:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:42:53.888777977Z Mon Nov 17 09:42:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:42:53.888777977Z Mon Nov 17 09:42:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:43:03.888308638Z Mon Nov 17 09:43:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:43:03.888387527Z Mon Nov 17 09:43:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:43:13.885533621Z Mon Nov 17 09:43:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:43:13.885705571Z Mon Nov 17 09:43:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:43:23.887414774Z Mon Nov 17 09:43:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:43:23.887571258Z Mon Nov 17 09:43:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:43:33.886415014Z Mon Nov 17 09:43:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:43:33.886585318Z Mon Nov 17 09:43:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:43:43.887358061Z Mon Nov 17 09:43:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:43:43.887388266Z Mon Nov 17 09:43:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:43:53.889303671Z Mon Nov 17 09:43:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:43:53.889303671Z Mon Nov 17 09:43:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:44:03.890736478Z Mon Nov 17 09:44:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:44:03.890736478Z Mon Nov 17 09:44:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:44:13.886497066Z Mon Nov 17 09:44:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:44:13.886497066Z Mon Nov 17 09:44:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:44:15.612928258Z Mon Nov 17 09:44:15 2025: Interface dfc00896733d2f8 added
+2025-11-17T09:44:23.888872818Z Mon Nov 17 09:44:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:44:23.888923367Z Mon Nov 17 09:44:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:44:33.887210589Z Mon Nov 17 09:44:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:44:33.887210589Z Mon Nov 17 09:44:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:44:43.886161176Z Mon Nov 17 09:44:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:44:43.886346156Z Mon Nov 17 09:44:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:44:52.008321147Z Mon Nov 17 09:44:52 2025: Interface dfc00896733d2f8 deleted
+2025-11-17T09:44:53.889540964Z Mon Nov 17 09:44:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:44:53.889540964Z Mon Nov 17 09:44:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:45:03.890598472Z Mon Nov 17 09:45:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:45:03.890598472Z Mon Nov 17 09:45:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:45:13.887863701Z Mon Nov 17 09:45:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:45:13.887863701Z Mon Nov 17 09:45:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:45:23.888110101Z Mon Nov 17 09:45:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:45:23.888110101Z Mon Nov 17 09:45:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:45:33.887976594Z Mon Nov 17 09:45:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:45:33.887976594Z Mon Nov 17 09:45:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:45:43.891312558Z Mon Nov 17 09:45:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:45:43.891312558Z Mon Nov 17 09:45:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:45:53.889108841Z Mon Nov 17 09:45:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:45:53.889392145Z Mon Nov 17 09:45:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:46:03.888271665Z Mon Nov 17 09:46:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:46:03.888271665Z Mon Nov 17 09:46:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:46:13.888742035Z Mon Nov 17 09:46:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:46:13.888742035Z Mon Nov 17 09:46:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:46:23.888249345Z Mon Nov 17 09:46:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:46:23.888249345Z Mon Nov 17 09:46:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:46:33.887927025Z Mon Nov 17 09:46:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:46:33.887927025Z Mon Nov 17 09:46:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:46:36.024817919Z Mon Nov 17 09:46:36 2025: Interface 52a85734ac1a8af added
+2025-11-17T09:46:40.368009440Z Mon Nov 17 09:46:40 2025: Interface 52a85734ac1a8af deleted
+2025-11-17T09:46:43.888515401Z Mon Nov 17 09:46:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:46:43.888515401Z Mon Nov 17 09:46:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:46:53.887484472Z Mon Nov 17 09:46:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:46:53.887484472Z Mon Nov 17 09:46:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:47:03.889858704Z Mon Nov 17 09:47:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:47:03.889858704Z Mon Nov 17 09:47:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:47:13.889114175Z Mon Nov 17 09:47:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:47:13.889114175Z Mon Nov 17 09:47:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:47:23.888060779Z Mon Nov 17 09:47:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:47:23.888060779Z Mon Nov 17 09:47:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:47:33.891611258Z Mon Nov 17 09:47:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:47:33.891611258Z Mon Nov 17 09:47:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:47:43.886420902Z Mon Nov 17 09:47:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:47:43.886420902Z Mon Nov 17 09:47:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:47:53.889461140Z Mon Nov 17 09:47:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:47:53.889537686Z Mon Nov 17 09:47:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:47:57.283358408Z Mon Nov 17 09:47:57 2025: Interface 284a397cdceefe1 added
+2025-11-17T09:48:01.676378143Z Mon Nov 17 09:48:01 2025: Interface 284a397cdceefe1 deleted
+2025-11-17T09:48:03.887887950Z Mon Nov 17 09:48:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:48:03.887887950Z Mon Nov 17 09:48:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:48:13.885895538Z Mon Nov 17 09:48:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:48:13.885895538Z Mon Nov 17 09:48:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:48:23.886335024Z Mon Nov 17 09:48:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:48:23.886400399Z Mon Nov 17 09:48:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:48:33.888541756Z Mon Nov 17 09:48:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:48:33.888541756Z Mon Nov 17 09:48:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:48:43.893082519Z Mon Nov 17 09:48:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:48:43.893082519Z Mon Nov 17 09:48:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:48:53.887808105Z Mon Nov 17 09:48:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:48:53.887808105Z Mon Nov 17 09:48:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:49:03.889900507Z Mon Nov 17 09:49:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:49:03.889900507Z Mon Nov 17 09:49:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:49:13.887659739Z Mon Nov 17 09:49:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:49:13.887659739Z Mon Nov 17 09:49:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:49:23.888904324Z Mon Nov 17 09:49:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:49:23.888904324Z Mon Nov 17 09:49:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:49:33.888581112Z Mon Nov 17 09:49:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:49:33.888581112Z Mon Nov 17 09:49:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:49:43.888588543Z Mon Nov 17 09:49:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:49:43.888588543Z Mon Nov 17 09:49:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:49:53.887520740Z Mon Nov 17 09:49:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:49:53.887520740Z Mon Nov 17 09:49:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:50:03.885561732Z Mon Nov 17 09:50:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:50:03.885561732Z Mon Nov 17 09:50:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:50:13.884935756Z Mon Nov 17 09:50:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:50:13.884935756Z Mon Nov 17 09:50:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:50:23.893377391Z Mon Nov 17 09:50:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:50:23.893377391Z Mon Nov 17 09:50:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:50:31.535357783Z Mon Nov 17 09:50:31 2025: Interface b9414e1bdb00a98 added
+2025-11-17T09:50:33.887084303Z Mon Nov 17 09:50:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:50:33.887084303Z Mon Nov 17 09:50:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:50:43.890466345Z Mon Nov 17 09:50:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:50:43.890724923Z Mon Nov 17 09:50:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:50:53.894148364Z Mon Nov 17 09:50:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:50:53.894359971Z Mon Nov 17 09:50:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:51:03.892940601Z Mon Nov 17 09:51:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:51:03.893005812Z Mon Nov 17 09:51:03 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:51:07.328341507Z Mon Nov 17 09:51:07 2025: Interface b9414e1bdb00a98 deleted
+2025-11-17T09:51:13.890364152Z Mon Nov 17 09:51:13 2025: Printing parent data for process(74) on signal
+2025-11-17T09:51:13.890364152Z Mon Nov 17 09:51:13 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:51:23.887621654Z Mon Nov 17 09:51:23 2025: Printing parent data for process(74) on signal
+2025-11-17T09:51:23.887650571Z Mon Nov 17 09:51:23 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:51:32.357732407Z Mon Nov 17 09:51:32 2025: Interface f5f3451310fe7b0 added
+2025-11-17T09:51:33.885689011Z Mon Nov 17 09:51:33 2025: Printing parent data for process(74) on signal
+2025-11-17T09:51:33.885689011Z Mon Nov 17 09:51:33 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:51:43.887757633Z Mon Nov 17 09:51:43 2025: Printing parent data for process(74) on signal
+2025-11-17T09:51:43.887788696Z Mon Nov 17 09:51:43 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:51:53.888734871Z Mon Nov 17 09:51:53 2025: Printing parent data for process(74) on signal
+2025-11-17T09:51:53.888734871Z Mon Nov 17 09:51:53 2025: Printing VRRP data for process(75) on signal
+2025-11-17T09:52:03.890067284Z Mon Nov 17 09:52:03 2025: Printing parent data for process(74) on signal
+2025-11-17T09:52:03.890263240Z Mon Nov 17 09:52:03 2025: Printing VRRP data for process(75) on signal

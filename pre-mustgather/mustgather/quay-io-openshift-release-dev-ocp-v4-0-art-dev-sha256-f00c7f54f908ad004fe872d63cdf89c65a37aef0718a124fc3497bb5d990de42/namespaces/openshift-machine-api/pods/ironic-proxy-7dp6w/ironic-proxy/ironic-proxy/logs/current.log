@@ -1,0 +1,106 @@
+2025-11-17T09:38:47.432506496Z ++ IRONIC_IP=
+2025-11-17T09:38:47.432506496Z ++ PROVISIONING_INTERFACE=
+2025-11-17T09:38:47.432506496Z ++ PROVISIONING_IP=XXXXXXXXXXX
+2025-11-17T09:38:47.432593549Z ++ PROVISIONING_MACS=
+2025-11-17T09:38:47.433055739Z +++ get_provisioning_interface
+2025-11-17T09:38:47.433087617Z +++ [[ -n '' ]]
+2025-11-17T09:38:47.433101677Z +++ local interface=provisioning
+2025-11-17T09:38:47.433122976Z +++ echo provisioning
+2025-11-17T09:38:47.433317678Z ++ PROVISIONING_INTERFACE=provisioning
+2025-11-17T09:38:47.433342907Z ++ export PROVISIONING_INTERFACE
+2025-11-17T09:38:47.433367773Z ++ export LISTEN_ALL_INTERFACES=true
+2025-11-17T09:38:47.433367773Z ++ LISTEN_ALL_INTERFACES=true
+2025-11-17T09:38:47.433568906Z ++ export IRONIC_PRIVATE_PORT=unix
+2025-11-17T09:38:47.433568906Z ++ IRONIC_PRIVATE_PORT=unix
+2025-11-17T09:38:47.433589174Z ++ export IRONIC_INSPECTOR_PRIVATE_PORT=unix
+2025-11-17T09:38:47.433589174Z ++ IRONIC_INSPECTOR_PRIVATE_PORT=unix
+2025-11-17T09:38:47.433607880Z ++ export IRONIC_ACCESS_PORT=6385
+2025-11-17T09:38:47.433607880Z ++ IRONIC_ACCESS_PORT=6385
+2025-11-17T09:38:47.433627965Z ++ export IRONIC_LISTEN_PORT=6385
+2025-11-17T09:38:47.433627965Z ++ IRONIC_LISTEN_PORT=6385
+2025-11-17T09:38:47.433647173Z ++ export IRONIC_INSPECTOR_ACCESS_PORT=5050
+2025-11-17T09:38:47.433647173Z ++ IRONIC_INSPECTOR_ACCESS_PORT=5050
+2025-11-17T09:38:47.433669917Z ++ export IRONIC_INSPECTOR_LISTEN_PORT=5050
+2025-11-17T09:38:47.433669917Z ++ IRONIC_INSPECTOR_LISTEN_PORT=5050
+2025-11-17T09:38:47.433693812Z + wait_for_interface_or_ip
+2025-11-17T09:38:47.433715016Z + [[ -n XXXXXXXXXXX ]]
+2025-11-17T09:38:47.434460628Z ++ ipcalc XXXXXXXXXXX
+2025-11-17T09:38:47.434596881Z ++ grep '^Address:'
+2025-11-17T09:38:47.434847462Z ++ awk '{print $2}'
+2025-11-17T09:38:47.438838080Z + IRONIC_IP=XXXXXXXXXXX
+2025-11-17T09:38:47.438869348Z + export IRONIC_IP
+2025-11-17T09:38:47.439157009Z + grep -F ' XXXXXXXXXXX/' /dev/fd/63
+2025-11-17T09:38:47.439302371Z ++ ip -br addr show
+2025-11-17T09:38:47.441467164Z br-ex            UNKNOWN        XXXXXXXXXXX/27 169.254.169.2/29 fd69::2/125 2620:52:0:2e1a::20/64 fe80::5054:ff:fea6:e20/64 
+2025-11-17T09:38:47.443146216Z + [[ XXXXXXXXXXX =~ .*:.* ]]
+2025-11-17T09:38:47.443201495Z + export IPV=4
+2025-11-17T09:38:47.443201495Z + IPV=4
+2025-11-17T09:38:47.443224565Z + export IRONIC_URL_HOST=XXXXXXXXXXX
+2025-11-17T09:38:47.443224565Z + IRONIC_URL_HOST=XXXXXXXXXXX
+2025-11-17T09:38:47.443264850Z + export IRONIC_PROXY_PORT=6385
+2025-11-17T09:38:47.443264850Z + IRONIC_PROXY_PORT=6385
+2025-11-17T09:38:47.443277941Z + export IRONIC_INSPECTOR_PROXY_PORT=5050
+2025-11-17T09:38:47.443277941Z + IRONIC_INSPECTOR_PROXY_PORT=5050
+2025-11-17T09:38:47.443289714Z + export IRONIC_UPSTREAM_IP=XXXXXXXXXXX
+2025-11-17T09:38:47.443289714Z + IRONIC_UPSTREAM_IP=XXXXXXXXXXX
+2025-11-17T09:38:47.443302436Z + export IRONIC_UPSTREAM_PORT=6388
+2025-11-17T09:38:47.443302436Z + IRONIC_UPSTREAM_PORT=6388
+2025-11-17T09:38:47.443316229Z + export IRONIC_UPSTREAM_PROTO=https
+2025-11-17T09:38:47.443316229Z + IRONIC_UPSTREAM_PROTO=https
+2025-11-17T09:38:47.443329158Z + export IRONIC_INSPECTOR_UPSTREAM_IP=XXXXXXXXXXX
+2025-11-17T09:38:47.443329158Z + IRONIC_INSPECTOR_UPSTREAM_IP=XXXXXXXXXXX
+2025-11-17T09:38:47.443342582Z + export IRONIC_INSPECTOR_UPSTREAM_PORT=5051
+2025-11-17T09:38:47.443342582Z + IRONIC_INSPECTOR_UPSTREAM_PORT=5051
+2025-11-17T09:38:47.443356570Z + export IRONIC_INSPECTOR_UPSTREAM_PROTO=https
+2025-11-17T09:38:47.443356570Z + IRONIC_INSPECTOR_UPSTREAM_PROTO=https
+2025-11-17T09:38:47.443370199Z + [[ XXXXXXXXXXX =~ .*:.* ]]
+2025-11-17T09:38:47.443392007Z + [[ XXXXXXXXXXX =~ .*:.* ]]
+2025-11-17T09:38:47.443415255Z + sed -i 's/^Listen .*$/Listen [::]:6385/' /etc/httpd/conf/httpd.conf
+2025-11-17T09:38:47.445340493Z + sed -i -e 's%^ \+CustomLog.*%    CustomLog /dev/stderr combined%g' /etc/httpd/conf/httpd.conf
+2025-11-17T09:38:47.446672864Z + sed -i -e 's%^ErrorLog.*%ErrorLog /dev/stderr%g' /etc/httpd/conf/httpd.conf
+2025-11-17T09:38:47.448019215Z + render_j2_config /etc/httpd-proxy.conf.j2 /etc/httpd/conf.d/ironic-proxy.conf
+2025-11-17T09:38:47.448034295Z + python3 -c 'import os; import sys; import jinja2; sys.stdout.write(jinja2.Template(sys.stdin.read()).render(env=os.environ))'
+2025-11-17T09:38:47.531016170Z + exec /usr/sbin/httpd -DFOREGROUND
+2025-11-17T09:38:47.566726932Z AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 2620:52:0:2e1a::20. Set the 'ServerName' directive globally to suppress this message
+2025-11-17T09:38:47.569038084Z [Mon Nov 17 09:38:47.568967 2025] [ssl:info] [pid 1:tid 1] AH01914: Configuring server 2620:52:0:2e1a::20:5050 for SSL protocol
+2025-11-17T09:38:47.569950035Z [Mon Nov 17 09:38:47.569909 2025] [ssl:debug] [pid 1:tid 1] ssl_engine_init.c(528): AH01893: Configuring TLS extension handling
+2025-11-17T09:38:47.571540445Z [Mon Nov 17 09:38:47.571511 2025] [ssl:debug] [pid 1:tid 1] ssl_util_ssl.c(451): AH02412: [2620:52:0:2e1a::20:5050] Cert does not match for name '2620:52:0:2e1a::20' [subject: CN=localhost / issuer: CN=metal3-ironic / serial: 308161B48418AD6D / notbefore: Nov 17 09:22:09 2025 GMT / notafter: Nov 17 09:22:10 2027 GMT]
+2025-11-17T09:38:47.571540445Z [Mon Nov 17 09:38:47.571524 2025] [ssl:warn] [pid 1:tid 1] AH01909: 2620:52:0:2e1a::20:5050:0 server certificate does NOT include an ID which matches the server name
+2025-11-17T09:38:47.571540445Z [Mon Nov 17 09:38:47.571526 2025] [ssl:info] [pid 1:tid 1] AH02568: Certificate and private key 2620:52:0:2e1a::20:5050:0 configured from /certs/ironic-inspector/tls.crt and /certs/ironic-inspector/tls.key
+2025-11-17T09:38:47.573000980Z [Mon Nov 17 09:38:47.572973 2025] [ssl:info] [pid 1:tid 1] AH01914: Configuring server 2620:52:0:2e1a::20:6385 for SSL protocol
+2025-11-17T09:38:47.573382691Z [Mon Nov 17 09:38:47.573362 2025] [ssl:debug] [pid 1:tid 1] ssl_engine_init.c(528): AH01893: Configuring TLS extension handling
+2025-11-17T09:38:47.574454703Z [Mon Nov 17 09:38:47.574430 2025] [ssl:debug] [pid 1:tid 1] ssl_util_ssl.c(451): AH02412: [2620:52:0:2e1a::20:6385] Cert does not match for name '2620:52:0:2e1a::20' [subject: CN=localhost / issuer: CN=metal3-ironic / serial: 308161B48418AD6D / notbefore: Nov 17 09:22:09 2025 GMT / notafter: Nov 17 09:22:10 2027 GMT]
+2025-11-17T09:38:47.574454703Z [Mon Nov 17 09:38:47.574438 2025] [ssl:warn] [pid 1:tid 1] AH01909: 2620:52:0:2e1a::20:6385:0 server certificate does NOT include an ID which matches the server name
+2025-11-17T09:38:47.574454703Z [Mon Nov 17 09:38:47.574440 2025] [ssl:info] [pid 1:tid 1] AH02568: Certificate and private key 2620:52:0:2e1a::20:6385:0 configured from /certs/ironic/tls.crt and /certs/ironic/tls.key
+2025-11-17T09:38:47.583679731Z AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 2620:52:0:2e1a::20. Set the 'ServerName' directive globally to suppress this message
+2025-11-17T09:38:47.584356372Z [Mon Nov 17 09:38:47.584340 2025] [ssl:warn] [pid 1:tid 1] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+2025-11-17T09:38:47.584356372Z [Mon Nov 17 09:38:47.584347 2025] [ssl:info] [pid 1:tid 1] AH01914: Configuring server 2620:52:0:2e1a::20:5050 for SSL protocol
+2025-11-17T09:38:47.584766337Z [Mon Nov 17 09:38:47.584751 2025] [ssl:debug] [pid 1:tid 1] ssl_engine_init.c(528): AH01893: Configuring TLS extension handling
+2025-11-17T09:38:47.585817721Z [Mon Nov 17 09:38:47.585801 2025] [ssl:debug] [pid 1:tid 1] ssl_util_ssl.c(451): AH02412: [2620:52:0:2e1a::20:5050] Cert does not match for name '2620:52:0:2e1a::20' [subject: CN=localhost / issuer: CN=metal3-ironic / serial: 308161B48418AD6D / notbefore: Nov 17 09:22:09 2025 GMT / notafter: Nov 17 09:22:10 2027 GMT]
+2025-11-17T09:38:47.585817721Z [Mon Nov 17 09:38:47.585810 2025] [ssl:warn] [pid 1:tid 1] AH01909: 2620:52:0:2e1a::20:5050:0 server certificate does NOT include an ID which matches the server name
+2025-11-17T09:38:47.585817721Z [Mon Nov 17 09:38:47.585812 2025] [ssl:info] [pid 1:tid 1] AH02568: Certificate and private key 2620:52:0:2e1a::20:5050:0 configured from /certs/ironic-inspector/tls.crt and /certs/ironic-inspector/tls.key
+2025-11-17T09:38:47.587055594Z [Mon Nov 17 09:38:47.587038 2025] [ssl:info] [pid 1:tid 1] AH01914: Configuring server 2620:52:0:2e1a::20:6385 for SSL protocol
+2025-11-17T09:38:47.587440258Z [Mon Nov 17 09:38:47.587415 2025] [ssl:debug] [pid 1:tid 1] ssl_engine_init.c(528): AH01893: Configuring TLS extension handling
+2025-11-17T09:38:47.588551336Z [Mon Nov 17 09:38:47.588534 2025] [ssl:debug] [pid 1:tid 1] ssl_util_ssl.c(451): AH02412: [2620:52:0:2e1a::20:6385] Cert does not match for name '2620:52:0:2e1a::20' [subject: CN=localhost / issuer: CN=metal3-ironic / serial: 308161B48418AD6D / notbefore: Nov 17 09:22:09 2025 GMT / notafter: Nov 17 09:22:10 2027 GMT]
+2025-11-17T09:38:47.588551336Z [Mon Nov 17 09:38:47.588542 2025] [ssl:warn] [pid 1:tid 1] AH01909: 2620:52:0:2e1a::20:6385:0 server certificate does NOT include an ID which matches the server name
+2025-11-17T09:38:47.588551336Z [Mon Nov 17 09:38:47.588544 2025] [ssl:info] [pid 1:tid 1] AH02568: Certificate and private key 2620:52:0:2e1a::20:6385:0 configured from /certs/ironic/tls.crt and /certs/ironic/tls.key
+2025-11-17T09:38:47.591181903Z [Mon Nov 17 09:38:47.591138 2025] [mpm_event:notice] [pid 1:tid 1] AH00489: Apache/2.4.53 (Red Hat Enterprise Linux) mod_wsgi/4.7.1 Python/3.9 OpenSSL/3.0.7 configured -- resuming normal operations
+2025-11-17T09:38:47.591181903Z [Mon Nov 17 09:38:47.591175 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+2025-11-17T09:38:47.622360723Z [Mon Nov 17 09:38:47.622307 2025] [proxy:debug] [pid 31:tid 31] proxy_util.c(2123): AH00925: initializing XXXXXX https://XXXXXXXXXXX:5051/ shared
+2025-11-17T09:38:47.622360723Z [Mon Nov 17 09:38:47.622323 2025] [proxy:debug] [pid 31:tid 31] proxy_util.c(2183): AH00927: initializing XXXXXX https://XXXXXXXXXXX:5051/ local
+2025-11-17T09:38:47.622360723Z [Mon Nov 17 09:38:47.622343 2025] [proxy:debug] [pid 31:tid 31] proxy_util.c(2214): AH00930: initialized pool in child 31 for (XXXXXXXXXXX) min=0 max=25 smax=25
+2025-11-17T09:38:47.622360723Z [Mon Nov 17 09:38:47.622347 2025] [proxy:debug] [pid 31:tid 31] proxy_util.c(2123): AH00925: initializing XXXXXX https://XXXXXXXXXXX:6388/ shared
+2025-11-17T09:38:47.622360723Z [Mon Nov 17 09:38:47.622354 2025] [proxy:debug] [pid 31:tid 31] proxy_util.c(2183): AH00927: initializing XXXXXX https://XXXXXXXXXXX:6388/ local
+2025-11-17T09:38:47.622400278Z [Mon Nov 17 09:38:47.622371 2025] [proxy:debug] [pid 31:tid 31] proxy_util.c(2214): AH00930: initialized pool in child 31 for (XXXXXXXXXXX) min=0 max=25 smax=25
+2025-11-17T09:38:47.630741001Z [Mon Nov 17 09:38:47.630699 2025] [proxy:debug] [pid 32:tid 32] proxy_util.c(2123): AH00925: initializing XXXXXX https://XXXXXXXXXXX:5051/ shared
+2025-11-17T09:38:47.630741001Z [Mon Nov 17 09:38:47.630695 2025] [proxy:debug] [pid 33:tid 33] proxy_util.c(2123): AH00925: initializing XXXXXX https://XXXXXXXXXXX:5051/ shared
+2025-11-17T09:38:47.630741001Z [Mon Nov 17 09:38:47.630714 2025] [proxy:debug] [pid 33:tid 33] proxy_util.c(2183): AH00927: initializing XXXXXX https://XXXXXXXXXXX:5051/ local
+2025-11-17T09:38:47.630784679Z [Mon Nov 17 09:38:47.630743 2025] [proxy:debug] [pid 33:tid 33] proxy_util.c(2214): AH00930: initialized pool in child 33 for (XXXXXXXXXXX) min=0 max=25 smax=25
+2025-11-17T09:38:47.630784679Z [Mon Nov 17 09:38:47.630747 2025] [proxy:debug] [pid 33:tid 33] proxy_util.c(2123): AH00925: initializing XXXXXX https://XXXXXXXXXXX:6388/ shared
+2025-11-17T09:38:47.630784679Z [Mon Nov 17 09:38:47.630755 2025] [proxy:debug] [pid 33:tid 33] proxy_util.c(2183): AH00927: initializing XXXXXX https://XXXXXXXXXXX:6388/ local
+2025-11-17T09:38:47.630784679Z [Mon Nov 17 09:38:47.630764 2025] [proxy:debug] [pid 33:tid 33] proxy_util.c(2214): AH00930: initialized pool in child 33 for (XXXXXXXXXXX) min=0 max=25 smax=25
+2025-11-17T09:38:47.630809301Z [Mon Nov 17 09:38:47.630799 2025] [proxy:debug] [pid 32:tid 32] proxy_util.c(2183): AH00927: initializing XXXXXX https://XXXXXXXXXXX:5051/ local
+2025-11-17T09:38:47.630856323Z [Mon Nov 17 09:38:47.630843 2025] [proxy:debug] [pid 32:tid 32] proxy_util.c(2214): AH00930: initialized pool in child 32 for (XXXXXXXXXXX) min=0 max=25 smax=25
+2025-11-17T09:38:47.630877985Z [Mon Nov 17 09:38:47.630869 2025] [proxy:debug] [pid 32:tid 32] proxy_util.c(2123): AH00925: initializing XXXXXX https://XXXXXXXXXXX:6388/ shared
+2025-11-17T09:38:47.630903154Z [Mon Nov 17 09:38:47.630894 2025] [proxy:debug] [pid 32:tid 32] proxy_util.c(2183): AH00927: initializing XXXXXX https://XXXXXXXXXXX:6388/ local
+2025-11-17T09:38:47.630922883Z [Mon Nov 17 09:38:47.630916 2025] [proxy:debug] [pid 32:tid 32] proxy_util.c(2214): AH00930: initialized pool in child 32 for (XXXXXXXXXXX) min=0 max=25 smax=25

@@ -1,0 +1,75 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    capability.openshift.io/name: Storage
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2025-11-17T09:05:49Z"
+  generation: 1
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+        f:secretRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:49Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncGeneration: {}
+        f:provisioned: {}
+    manager: Go-http-client
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:06:02Z"
+  name: openshift-vmware-vsphere-csi-driver-operator
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "2268"
+  uid: c582cd92-0330-468c-9edc-0c010789a5b3
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: VSphereProviderSpec
+  secretRef:
+    name: vmware-vsphere-cloud-credentials
+    namespace: openshift-cluster-csi-drivers
+status:
+  conditions:
+  - lastProbeTime: "2025-11-17T09:06:02Z"
+    lastTransitionTime: "2025-11-17T09:06:02Z"
+    message: CredentialsRequest is not for platform BareMetal
+    reason: InfrastructureMismatch
+    status: "True"
+    type: Ignored
+  lastSyncGeneration: 0
+  provisioned: false

@@ -1,0 +1,140 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2025-11-17T09:05:22Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:22Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:05:23Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:44:25Z"
+  name: openshift-apiserver
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "29403"
+  uid: 0a1dae31-23da-4984-a866-267810dd5530
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:20:20Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2025-11-17T09:42:59Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2025-11-17T09:29:48Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2025-11-17T09:20:20Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: openshiftapiservers
+  - group: ""
+    name: openshift-config
+    resource: namespaces
+  - group: ""
+    name: openshift-config-managed
+    resource: namespaces
+  - group: ""
+    name: openshift-apiserver-operator
+    resource: namespaces
+  - group: ""
+    name: openshift-apiserver
+    resource: namespaces
+  - group: ""
+    name: openshift-etcd-operator
+    resource: namespaces
+  - group: ""
+    name: host-etcd-2
+    namespace: openshift-etcd
+    resource: endpoints
+  - group: controlplane.operator.openshift.io
+    name: ""
+    namespace: openshift-apiserver
+    resource: podnetworkconnectivitychecks
+  - group: apiregistration.k8s.io
+    name: v1.apps.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.authorization.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.build.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.image.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.project.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.quota.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.route.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.security.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.template.openshift.io
+    resource: apiservices
+  versions:
+  - name: operator
+    version: 4.14.59
+  - name: openshift-apiserver
+    version: 4.14.59

@@ -1,0 +1,42 @@
+---
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  creationTimestamp: "2025-11-17T09:05:50Z"
+  generation: 1
+  labels:
+    machineconfiguration.openshift.io/role: XXXXXX
+  managedFields:
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machineconfiguration.openshift.io/role: {}
+      f:spec:
+        .: {}
+        f:config:
+          .: {}
+          f:ignition:
+            .: {}
+            f:version: {}
+          f:passwd:
+            .: {}
+            f:users: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2025-11-17T09:05:50Z"
+  name: 99-assisted-installer-XXXXXX-ssh
+  resourceVersion: "1900"
+  uid: 3f78eada-62c6-4e34-a2d9-376ce3e4b552
+spec:
+  config:
+    ignition:
+      version: 3.1.0
+    passwd:
+      users:
+      - name: core
+        sshAuthorizedKeys:
+        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqDexZ0VwIUonxXTVkTrpo4DwLYfXYczILsosUjezbVZyPA2+NTZ4b5erEFaBxZy3cw8Bzr8rl0XmquUE3EHOATDFE+3NnZx0d+ZyFwFm0My7t17qr9VRbaLejXBMP/9/kc3yXS1OUzgaAiMI6lQGPSchiAltHDkyqZ5MDMEuC5hahgfQHziSL/y+n9gZ9YgrsEzA88FI79yQ6OTytkvbFybvTwVoiJKcRWf/05MJiVLDhtGJmu3LfQZeMtP6/X06OjP9PFGNMd9CRJGKLTphzYJM30qv/TjKFIu+6sQI0+T6MlKke9XcM9LTjq+LfR/zChjPNNY2jJsRlzLOeClL8yLGlNofJu0FX4SN35PyZ+OyLyYxAcuWbPLi5Xf1R888k9H06f3X3jabQ2Zblf18WZ++9ztX5krTYjWkkSY8QQOfXRILVggK137Nyo0frVhdjsMtj2WxbAOjgNvreBq5FryBSWm0p31+x4XZFJVj391HHJurWNDt6kpdL/8O/Kes=
+          root@XXXXXX0

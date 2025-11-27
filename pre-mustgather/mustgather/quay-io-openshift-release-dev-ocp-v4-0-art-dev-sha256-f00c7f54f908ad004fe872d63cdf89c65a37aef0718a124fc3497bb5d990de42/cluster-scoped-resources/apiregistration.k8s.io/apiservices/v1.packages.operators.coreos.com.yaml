@@ -1,0 +1,70 @@
+---
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  creationTimestamp: "2025-11-17T09:21:36Z"
+  labels:
+    olm.owner: packageserver
+    olm.owner.kind: ClusterServiceVersion
+    olm.owner.namespace: openshift-operator-lifecycle-manager
+  managedFields:
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:olm.owner: {}
+          f:olm.owner.kind: {}
+          f:olm.owner.namespace: {}
+      f:spec:
+        f:caBundle: {}
+        f:group: {}
+        f:groupPriorityMinimum: {}
+        f:service:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+          f:port: {}
+        f:version: {}
+        f:versionPriority: {}
+    manager: olm
+    operation: Update
+    time: "2025-11-17T09:21:36Z"
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:24:48Z"
+  name: v1.packages.operators.coreos.com
+  resourceVersion: "14003"
+  uid: 2afddd90-ab1e-4936-9cc1-4c4d92fa0d70
+spec:
+  caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ1ekNDQVdLZ0F3SUJBZ0lJRjRCNXNSQW9HTXd3Q2dZSUtvWkl6ajBFQXdJd1FqRVdNQlFHQTFVRUNoTU4KVW1Wa0lFaGhkQ3dnU1c1akxqRW9NQ1lHQTFVRUF4TWZiMnh0TFhObGJHWnphV2R1WldRdE1UYzRNRGM1WWpFeApNREk0TVRoall6QWVGdzB5TlRFeE1UY3dPVEl4TXpaYUZ3MHlOekV4TVRjd09USXhNelphTUVJeEZqQVVCZ05WCkJBb1REVkpsWkNCSVlYUXNJRWx1WXk0eEtEQW1CZ05WQkFNVEgyOXNiUzF6Wld4bWMybG5ibVZrTFRFM09EQTMKT1dJeE1UQXlPREU0WTJNd1dUQVRCZ2NxaGtqT1BRSUJCZ2dxaGtqT1BRTUJCd05DQUFTSEM5bmdSVGZnSG1QdQpTaHZHU01jZjEwL3d3RWgxUGViM2pLNkRoMmFPVGNxUS9hRVVpUitOT1BtbGdEZFZMUzFqQnNWUGZvdGF1cHpjCmtPZUVtNW5XbzBJd1FEQU9CZ05WSFE4QkFmOEVCQU1DQWdRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlYKSFE0RUZnUVUwRDVjRTNwYTJFaUk5eU5sUmRxejdYMG83SVV3Q2dZSUtvWkl6ajBFQXdJRFJ3QXdSQUlnQkJOSApmTG1INFBOTkRvUk5xbzUvWVYvdzUxVlVEdjNqTkhDMTh1Q2tsZjBDSUFOdjd2OXB1MjM4amtDT2t3Ty8zYXlRClNacVNKc1FBbFhBeUhsTW4wbmM3Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  group: packages.operators.coreos.com
+  groupPriorityMinimum: 2000
+  service:
+    name: packageserver-service
+    namespace: openshift-operator-lifecycle-manager
+    port: 5443
+  version: v1
+  versionPriority: 15
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:24:48Z"
+    message: all checks passed
+    reason: Passed
+    status: "True"
+    type: Available

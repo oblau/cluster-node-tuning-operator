@@ -1,0 +1,1269 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.2.13
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: alertmanager-main-1
+      namespace: openshift-monitoring
+      uid: 81a196b2-92c5-473b-b978-1f4df2a9ed96
+  - addresses:
+    - 10.131.0.19
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: alertmanager-main-0
+      namespace: openshift-monitoring
+      uid: 3a39c0c3-a63c-4ab6-9abf-f4a0749cf71f
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:41:06Z"
+    creationTimestamp: "2025-11-17T09:38:52Z"
+    generateName: alertmanager-main-
+    generation: 13
+    labels:
+      app.kubernetes.io/component: alert-router
+      app.kubernetes.io/instance: main
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: alertmanager
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.25.0
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: alertmanager-main
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"5c8bf4de-0be9-46a9-8c2c-a96ca8793907"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:41:06Z"
+    name: alertmanager-main-qk8jd
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: alertmanager-main
+      uid: 5c8bf4de-0be9-46a9-8c2c-a96ca8793907
+    resourceVersion: "27664"
+    uid: 28b9f1b7-bf17-4edf-a702-821e7f6bf824
+  ports:
+  - name: web
+    port: 9095
+    protocol: TCP
+  - name: tenancy
+    port: 9092
+    protocol: TCP
+  - name: metrics
+    port: 9097
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.2.13
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hostname: alertmanager-main-1
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: alertmanager-main-1
+      namespace: openshift-monitoring
+      uid: 81a196b2-92c5-473b-b978-1f4df2a9ed96
+  - addresses:
+    - 10.131.0.19
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hostname: alertmanager-main-0
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: alertmanager-main-0
+      namespace: openshift-monitoring
+      uid: 3a39c0c3-a63c-4ab6-9abf-f4a0749cf71f
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:41:06Z"
+    creationTimestamp: "2025-11-17T09:38:57Z"
+    generateName: alertmanager-operated-
+    generation: 13
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: alertmanager-operated
+      operated-alertmanager: "true"
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:operated-alertmanager: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"e30986c3-abef-4fbe-ba5e-4b8024c6d78f"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:41:06Z"
+    name: alertmanager-operated-x27pj
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: alertmanager-operated
+      uid: e30986c3-abef-4fbe-ba5e-4b8024c6d78f
+    resourceVersion: "27660"
+    uid: 8564a93f-569e-4c2d-a108-fed9b63ecc99
+  ports:
+  - name: web
+    port: 9095
+    protocol: TCP
+  - name: udp-mesh
+    port: 9094
+    protocol: UDP
+  - name: tcp-mesh
+    port: 9094
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.30
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: cluster-monitoring-operator-694f894778-95kgk
+      namespace: openshift-monitoring
+      uid: 8cc11b76-a267-425a-ba72-1efeab836e01
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:44Z"
+    creationTimestamp: "2025-11-17T09:05:49Z"
+    generateName: cluster-monitoring-operator-
+    generation: 2
+    labels:
+      app.kubernetes.io/name: cluster-monitoring-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: cluster-monitoring-operator
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/name: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"414b9db0-4b2b-4dff-8dae-81c59ead8ba5"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:45Z"
+    name: cluster-monitoring-operator-f58gp
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: cluster-monitoring-operator
+      uid: 414b9db0-4b2b-4dff-8dae-81c59ead8ba5
+    resourceVersion: "9672"
+    uid: 2f6a7a36-da04-4723-a342-1ce64db7e2cb
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.12
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: kube-state-metrics-688f695dcc-5xxjr
+      namespace: openshift-monitoring
+      uid: ea8c33d4-c240-46f1-98bc-a5e93727b5bb
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:39:00Z"
+    creationTimestamp: "2025-11-17T09:38:51Z"
+    generateName: kube-state-metrics-
+    generation: 2
+    labels:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: kube-state-metrics
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 2.9.2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: kube-state-metrics
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"5009e394-9f6b-4733-a68c-dc8ebb526120"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:39:00Z"
+    name: kube-state-metrics-r2lqr
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: kube-state-metrics
+      uid: 5009e394-9f6b-4733-a68c-dc8ebb526120
+    resourceVersion: "25212"
+    uid: d90f375f-570e-4c5a-b77e-0364def8f53f
+  ports:
+  - name: https-main
+    port: 8443
+    protocol: TCP
+  - name: https-self
+    port: 9443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.10
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: monitoring-plugin-7b5d6d66c-mxrkd
+      namespace: openshift-monitoring
+      uid: 67379c02-3b58-4dc4-8f32-3451e23088bc
+  - addresses:
+    - 10.128.2.8
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: monitoring-plugin-7b5d6d66c-k6f6m
+      namespace: openshift-monitoring
+      uid: b465f5aa-8c1c-4859-abe0-ecfcd42867b2
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:39:00Z"
+    creationTimestamp: "2025-11-17T09:38:51Z"
+    generateName: monitoring-plugin-
+    generation: 3
+    labels:
+      app.kubernetes.io/component: monitoring-plugin
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: monitoring-plugin
+      app.kubernetes.io/part-of: openshift-monitoring
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: monitoring-plugin
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"bb721275-80d2-4e71-bba5-9b924d036127"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:39:00Z"
+    name: monitoring-plugin-856r5
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: monitoring-plugin
+      uid: bb721275-80d2-4e71-bba5-9b924d036127
+    resourceVersion: "25225"
+    uid: 60220681-e149-4dff-9074-45f0238011a4
+  ports:
+  - name: https
+    port: 9443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: node-exporter-x4xx4
+      namespace: openshift-monitoring
+      uid: a9d26177-527f-4cc7-8518-e5c25958581a
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: node-exporter-mbvln
+      namespace: openshift-monitoring
+      uid: 1a7d11ed-d74e-4a3e-9e77-e4002bdb5593
+  - addresses:
+    - XXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: node-exporter-kwg8s
+      namespace: openshift-monitoring
+      uid: 912cbcbf-f037-4be8-9c0c-badabeec1002
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: node-exporter-2xsjl
+      namespace: openshift-monitoring
+      uid: 05ae5698-710b-443c-b40d-00a4903eca1a
+  - addresses:
+    - XXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: node-exporter-7sftb
+      namespace: openshift-monitoring
+      uid: 0c98d144-115b-46ac-8097-d78f6916d656
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:39:03Z"
+    creationTimestamp: "2025-11-17T09:38:51Z"
+    generateName: node-exporter-
+    generation: 9
+    labels:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: node-exporter
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 1.6.1
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: node-exporter
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6df8a349-c8a0-458f-89b4-9e3c26c1cc46"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:39:03Z"
+    name: node-exporter-28hlp
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: node-exporter
+      uid: 6df8a349-c8a0-458f-89b4-9e3c26c1cc46
+    resourceVersion: "25334"
+    uid: a89ad41b-b72a-45d1-8da3-f0a639d930cd
+  ports:
+  - name: https
+    port: 9100
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.11
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: openshift-state-metrics-fb74d4bc4-q2ssp
+      namespace: openshift-monitoring
+      uid: f298a6c8-69b1-4e01-b3b7-265bc9a51bff
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:38:58Z"
+    creationTimestamp: "2025-11-17T09:38:51Z"
+    generateName: openshift-state-metrics-
+    generation: 2
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: openshift-state-metrics
+      kubernetes.io/service-name: openshift-state-metrics
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/part-of: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"3f1b569c-c5d4-4636-98ef-a8a1f28b7195"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:58Z"
+    name: openshift-state-metrics-rhxb6
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: openshift-state-metrics
+      uid: 3f1b569c-c5d4-4636-98ef-a8a1f28b7195
+    resourceVersion: "25104"
+    uid: 5237c7c7-2fab-4313-9a77-eb53e5df7411
+  ports:
+  - name: https-main
+    port: 8443
+    protocol: TCP
+  - name: https-self
+    port: 9443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.13
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: prometheus-adapter-5d757bbd4b-rm9nc
+      namespace: openshift-monitoring
+      uid: 7841a133-9800-4137-8d59-a6d6bb0f0bb2
+  - addresses:
+    - 10.128.2.9
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: prometheus-adapter-5d757bbd4b-hr9ql
+      namespace: openshift-monitoring
+      uid: 29f3c962-8b06-4323-b3f1-aca63c9ae199
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:39:14Z"
+    creationTimestamp: "2025-11-17T09:38:51Z"
+    generateName: prometheus-adapter-
+    generation: 5
+    labels:
+      app.kubernetes.io/component: metrics-adapter
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: prometheus-adapter
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.10.0
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: prometheus-adapter
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"4bee75f3-1f36-46b7-9b4f-b5a5795bbfb7"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:39:14Z"
+    name: prometheus-adapter-474k7
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-adapter
+      uid: 4bee75f3-1f36-46b7-9b4f-b5a5795bbfb7
+    resourceVersion: "25552"
+    uid: 1d8f7d89-04c8-4ce9-8346-174eda862e0f
+  ports:
+  - name: https
+    port: 6443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.18
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: prometheus-k8s-1
+      namespace: openshift-monitoring
+      uid: e7ad942c-9cee-4087-a4ca-cb9207a48ad3
+  - addresses:
+    - 10.128.2.14
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: prometheus-k8s-0
+      namespace: openshift-monitoring
+      uid: e24e28f5-9445-40fe-8f63-bdf68e8dec6e
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:38:54Z"
+    creationTimestamp: "2025-11-17T09:38:54Z"
+    generateName: prometheus-k8s-
+    generation: 13
+    labels:
+      app.kubernetes.io/component: prometheus
+      app.kubernetes.io/instance: k8s
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 2.46.0
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: prometheus-k8s
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"2c96e8be-1854-432a-874a-dadbe863b926"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:40:56Z"
+    name: prometheus-k8s-c8vpr
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-k8s
+      uid: 2c96e8be-1854-432a-874a-dadbe863b926
+    resourceVersion: "27566"
+    uid: 1acf73e6-4e44-46de-abc9-3aef952f8362
+  ports:
+  - name: web
+    port: 9091
+    protocol: TCP
+  - name: metrics
+    port: 9092
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.18
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: prometheus-k8s-1
+      namespace: openshift-monitoring
+      uid: e7ad942c-9cee-4087-a4ca-cb9207a48ad3
+  - addresses:
+    - 10.128.2.14
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: prometheus-k8s-0
+      namespace: openshift-monitoring
+      uid: e24e28f5-9445-40fe-8f63-bdf68e8dec6e
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:38:54Z"
+    creationTimestamp: "2025-11-17T09:38:54Z"
+    generateName: prometheus-k8s-thanos-sidecar-
+    generation: 13
+    labels:
+      app.kubernetes.io/component: thanos-sidecar
+      app.kubernetes.io/instance: k8s
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 2.46.0
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: prometheus-k8s-thanos-sidecar
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"e436d056-d401-41bf-866f-5f792935ae6a"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:40:56Z"
+    name: prometheus-k8s-thanos-sidecar-gszpd
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-k8s-thanos-sidecar
+      uid: e436d056-d401-41bf-866f-5f792935ae6a
+    resourceVersion: "27565"
+    uid: 2b8c0dbf-04b4-40d7-bbeb-12968fd5ba81
+  ports:
+  - name: thanos-proxy
+    port: 10902
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.18
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hostname: prometheus-k8s-1
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: prometheus-k8s-1
+      namespace: openshift-monitoring
+      uid: e7ad942c-9cee-4087-a4ca-cb9207a48ad3
+  - addresses:
+    - 10.128.2.14
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hostname: prometheus-k8s-0
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: prometheus-k8s-0
+      namespace: openshift-monitoring
+      uid: e24e28f5-9445-40fe-8f63-bdf68e8dec6e
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:39:02Z"
+    creationTimestamp: "2025-11-17T09:39:02Z"
+    generateName: prometheus-operated-
+    generation: 13
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: prometheus-operated
+      operated-prometheus: "true"
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:operated-prometheus: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"c9c5dc34-bafd-4e7c-a2b3-b35c49a5aa52"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:40:56Z"
+    name: prometheus-operated-r94nj
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-operated
+      uid: c9c5dc34-bafd-4e7c-a2b3-b35c49a5aa52
+    resourceVersion: "27563"
+    uid: 638a2c0c-c902-423d-9e00-f4b48da8212e
+  ports:
+  - name: web
+    port: 9091
+    protocol: TCP
+  - name: grpc
+    port: 10901
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.5
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: prometheus-operator-admission-webhook-686c664ffb-qdprf
+      namespace: openshift-monitoring
+      uid: cdbf460a-1e25-4772-b247-891cf13a0530
+  - addresses:
+    - 10.128.2.7
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: prometheus-operator-admission-webhook-686c664ffb-xlz8g
+      namespace: openshift-monitoring
+      uid: 5436cb5b-a908-4d1e-a701-08e1ec7d492e
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:38:36Z"
+    creationTimestamp: "2025-11-17T09:21:44Z"
+    generateName: prometheus-operator-admission-webhook-
+    generation: 5
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: prometheus-operator-admission-webhook
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.67.1
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: prometheus-operator-admission-webhook
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"192c1df9-942f-4014-a2c9-b790ac9da348"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:36Z"
+    name: prometheus-operator-admission-webhook-d85fp
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-operator-admission-webhook
+      uid: 192c1df9-942f-4014-a2c9-b790ac9da348
+    resourceVersion: "24075"
+    uid: e4f2f1b9-b16e-4edc-a31f-d0c35f62777d
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.20
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: prometheus-operator-f9ccfd6c9-ht5ln
+      namespace: openshift-monitoring
+      uid: b122bc53-fcda-4afb-8fbb-e4abfbdd16ee
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:38:49Z"
+    creationTimestamp: "2025-11-17T09:38:36Z"
+    generateName: prometheus-operator-
+    generation: 2
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: prometheus-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.67.1
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: prometheus-operator
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"c0c6bc73-d5fb-4f51-8fee-025c5f89ca67"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:49Z"
+    name: prometheus-operator-hwrnl
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-operator
+      uid: c0c6bc73-d5fb-4f51-8fee-025c5f89ca67
+    resourceVersion: "24462"
+    uid: fdda02eb-1b91-426c-bf9c-13e75e59112c
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.14
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: telemeter-client-7bb98fb6bc-ptrbd
+      namespace: openshift-monitoring
+      uid: c33ff651-0b96-40b2-8486-62496542cf35
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:39:14Z"
+    creationTimestamp: "2025-11-17T09:38:51Z"
+    generateName: telemeter-client-
+    generation: 2
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: telemeter-client
+      kubernetes.io/service-name: telemeter-client
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/part-of: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"91ae80e5-d159-4245-b678-66ddaf2ac994"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:39:14Z"
+    name: telemeter-client-9thlj
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: telemeter-client
+      uid: 91ae80e5-d159-4245-b678-66ddaf2ac994
+    resourceVersion: "25541"
+    uid: aa82849f-d440-4ad6-9b8f-1a69f300a4cd
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.16
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: thanos-querier-95bdbdd77-7dzg4
+      namespace: openshift-monitoring
+      uid: 933165de-4ce0-4b39-bb84-b3980102d7f4
+  - addresses:
+    - 10.128.2.11
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: thanos-querier-95bdbdd77-wnqt4
+      namespace: openshift-monitoring
+      uid: f51a98b1-7f37-45a9-859f-363d8e12e691
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:39:42Z"
+    creationTimestamp: "2025-11-17T09:38:50Z"
+    generateName: thanos-querier-
+    generation: 5
+    labels:
+      app.kubernetes.io/component: query-layer
+      app.kubernetes.io/instance: thanos-querier
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: thanos-query
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.30.2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: thanos-querier
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"712fe34c-9217-40e9-82ff-cd481bae55ad"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:39:42Z"
+    name: thanos-querier-4tdpd
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: thanos-querier
+      uid: 712fe34c-9217-40e9-82ff-cd481bae55ad
+    resourceVersion: "26163"
+    uid: a0ad3a42-fc1b-47be-a332-0bacc52ce20e
+  ports:
+  - name: web
+    port: 9091
+    protocol: TCP
+  - name: metrics
+    port: 9094
+    protocol: TCP
+  - name: tenancy
+    port: 9092
+    protocol: TCP
+  - name: tenancy-rules
+    port: 9093
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32460"

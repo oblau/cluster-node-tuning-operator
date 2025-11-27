@@ -1,0 +1,453 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    configmaps/client-ca: "13843"
+    configmaps/config: "13877"
+    configmaps/openshift-global-ca: "7454"
+    configmaps/openshift-service-ca: "8004"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.130.0.13/23","fd02:0:0:3::d/64"],"mac_address":"0a:58:0a:82:00:0d","gateway_ips":["10.130.0.1","fd02:0:0:3::1"],"routes":[{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.130.0.1"},{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.130.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.130.0.1"},{"dest":"fd02::/48","nextHop":"fd02:0:0:3::1"},{"dest":"fd03::/112","nextHop":"fd02:0:0:3::1"},{"dest":"fd98::/64","nextHop":"fd02:0:0:3::1"}]}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.130.0.13",
+              "fd02:0:0:3::d"
+          ],
+          "mac": "0a:58:0a:82:00:0d",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    openshiftcontrollermanagers.operator.openshift.io/cluster: "2"
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2025-11-17T09:33:53Z"
+  generateName: controller-manager-89cf55877-
+  labels:
+    app: openshift-controller-manager-a
+    controller-manager: "true"
+    openshift-route-controller-manager-anti-affinity: "true"
+    pod-template-hash: 89cf55877
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:configmaps/client-ca: {}
+          f:configmaps/config: {}
+          f:configmaps/openshift-global-ca: {}
+          f:configmaps/openshift-service-ca: {}
+          f:openshiftcontrollermanagers.operator.openshift.io/cluster: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:controller-manager: {}
+          f:openshift-route-controller-manager-anti-affinity: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"8d5346e0-73f3-4752-8807-2def8b47aaa5"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"controller-manager"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/configmaps/client-ca"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/configmaps/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"client-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"proxy-ca-bundles"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"serving-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-11-17T09:33:53Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:36:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: XXXXXX0
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.130.0.13"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"fd02:0:0:3::d"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:41Z"
+  name: controller-manager-89cf55877-hlqxw
+  namespace: openshift-controller-manager
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: controller-manager-89cf55877
+    uid: 8d5346e0-73f3-4752-8807-2def8b47aaa5
+  resourceVersion: "24269"
+  uid: 853a756a-ff00-4478-9961-2025f3667c66
+spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchLabels:
+            app: openshift-controller-manager-a
+            controller-manager: "true"
+            openshift-route-controller-manager-anti-affinity: "true"
+        topologyKey: kubernetes.io/hostname
+  containers:
+  - args:
+    - --config=/var/run/configmaps/config/config.yaml
+    - -v=2
+    command:
+    - openshift-controller-manager
+    - start
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8e9eb588e207480ad5f5a5f817253451df5fd90749ee5bffe3addf652c1a84af
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: healthz
+        port: 8443
+        scheme: HTTPS
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: controller-manager
+    ports:
+    - containerPort: 8443
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 10
+      httpGet:
+        path: healthz
+        port: 8443
+        scheme: HTTPS
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 100m
+        memory: 100Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000590000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/configmaps/config
+      name: config
+    - mountPath: /var/run/configmaps/client-ca
+      name: client-ca
+    - mountPath: /var/run/secrets/serving-cert
+      name: serving-cert
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: proxy-ca-bundles
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-gzkjp
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: openshift-controller-manager-sa-dockercfg-hqrts
+  nodeName: XXXXXX0
+  nodeSelector:
+    node-role.kubernetes.io/XXXXXX: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000590000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c24,c19
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: openshift-controller-manager-sa
+  serviceAccountName: openshift-controller-manager-sa
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/XXXXXX
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: config
+    name: config
+  - configMap:
+      defaultMode: 420
+      name: client-ca
+    name: client-ca
+  - name: serving-cert
+    secret:
+      defaultMode: 420
+      secretName: serving-cert
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: openshift-global-ca
+    name: proxy-ca-bundles
+  - name: kube-api-access-gzkjp
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:38:21Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:38:41Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:38:41Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:38:21Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://0ad4b49875a2a2125da93b202996d17fcc07d0746ca6d944ce78f38764d270a5
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8e9eb588e207480ad5f5a5f817253451df5fd90749ee5bffe3addf652c1a84af
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8e9eb588e207480ad5f5a5f817253451df5fd90749ee5bffe3addf652c1a84af
+    lastState: {}
+    name: controller-manager
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:38:40Z"
+  hostIP: XXXXXXXXXXX
+  phase: Running
+  podIP: 10.130.0.13
+  podIPs:
+  - ip: 10.130.0.13
+  - ip: fd02:0:0:3::d
+  qosClass: Burstable
+  startTime: "2025-11-17T09:38:21Z"

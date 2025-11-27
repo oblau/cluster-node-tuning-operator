@@ -1,0 +1,65 @@
+---
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  creationTimestamp: "2025-11-17T09:19:20Z"
+  generateName: csr-
+  managedFields:
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:certificate: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:19:20Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+    manager: multus-daemon
+    operation: Update
+    time: "2025-11-17T09:19:20Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Approved"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: ovnkube-identity
+    operation: Update
+    subresource: approval
+    time: "2025-11-17T09:19:20Z"
+  name: csr-wlsld
+  resourceVersion: "5457"
+  uid: 7ebb45a6-4f97-472d-8604-02a9f69fcd8e
+spec:
+  expirationSeconds: 86400
+  groups:
+  - system:nodes
+  - system:authenticated
+  request: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0KTUlIek1JR2FBZ0VBTURneEZqQVVCZ05WQkFvVERYTjVjM1JsYlRwdGRXeDBkWE14SGpBY0JnTlZCQU1URlhONQpjM1JsYlRwdGRXeDBkWE02YldGemRHVnlNakJaTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEEwSUFCQ3hYCnNQclZPYXJ5Zk5iclFPY3VScXpOWGEzRlNiV2Z6TVdMVFR6SE1Ba2NhV1M0cVM1aTRFMk10Y2xxcG5wUlN1VlcKLytPQnVpOHZyOVhWL2lhNEV6K2dBREFLQmdncWhrak9QUVFEQWdOSUFEQkZBaUVBL3ZOWWtzYi9PS0I0eDRINgpRRlk1NUhMZGdKZVk2VERERW1lZC9QQk9oTzhDSUdvd1BEN1F2QmxIUkdSc2lHNzRRVG8yWnA2TGkvQ3habDRYCitNWllJM0lBCi0tLS0tRU5EIENFUlRJRklDQVRFIFJFUVVFU1QtLS0tLQo=
+  signerName: kubernetes.io/kube-apiserver-client
+  usages:
+  - digital signature
+  - client auth
+  username: system:node:XXXXXX2
+status:
+  certificate: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNlekNDQVdPZ0F3SUJBZ0lSQUxYdThZdlRIckRGekNSYTRuMFFWMDR3RFFZSktvWklodmNOQVFFTEJRQXcKTFRFU01CQUdBMVVFQ3hNSmIzQmxibk5vYVdaME1SY3dGUVlEVlFRREV3NXJkV0psYkdWMExYTnBaMjVsY2pBZQpGdzB5TlRFeE1UY3dPVEUwTWpCYUZ3MHlOVEV4TVRnd09UQXhNamxhTURneEZqQVVCZ05WQkFvVERYTjVjM1JsCmJUcHRkV3gwZFhNeEhqQWNCZ05WQkFNVEZYTjVjM1JsYlRwdGRXeDBkWE02YldGemRHVnlNakJaTUJNR0J5cUcKU000OUFnRUdDQ3FHU000OUF3RUhBMElBQkN4WHNQclZPYXJ5Zk5iclFPY3VScXpOWGEzRlNiV2Z6TVdMVFR6SApNQWtjYVdTNHFTNWk0RTJNdGNscXBucFJTdVZXLytPQnVpOHZyOVhWL2lhNEV6K2pWakJVTUE0R0ExVWREd0VCCi93UUVBd0lIZ0RBVEJnTlZIU1VFRERBS0JnZ3JCZ0VGQlFjREFqQU1CZ05WSFJNQkFmOEVBakFBTUI4R0ExVWQKSXdRWU1CYUFGSjR2OEgvR3FxeHB6UXVqSmZzRG41T1pFdEZlTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFDcQpMakhpeitsZkozMlFRaURzcGhzZ2V3SW5hTW03aEVkb0xIUUJIVGQvc3BOczV2bjYxRW8vMjY2QVBGUUdwL3N4CmhDZEFlTjVXY2J3VUhSRnVzRGtEVDBsTVE1WUY4VDIvazJJeXVlblp1VGdDRjkvTnhvVHRRTmJaSXZOUDFldDMKMmV3TUM5TGdKWXZNVGE5NGdodU80Q2lsOFhyeitZazRTY29Jb21lQ3h3Zkp2Rm4xbEN4aXYwbE1GMG1vMnJRVQpXMmpHeWFrTTk1T3A2d0Q2NkRjeldKV0JkQWR1OFlFb0ZnOHhBeTlFUEp5YzFxcVM5V1FYcnRvZG9EQWF3YXVSCitQbzB5TEhjcVluZlRsU3l4c1dDek9OT3hEL0hMVHJQQmN2MlBTMkN0YjlOSWNXSWlmaFRwdzhhSzhYZlduL1IKUG5sU3BJdisxbldrdmhNNDdrcE0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:19:20Z"
+    lastUpdateTime: "2025-11-17T09:19:20Z"
+    message: Auto-approved CSR "csr-wlsld"
+    reason: AutoApproved
+    status: "True"
+    type: Approved

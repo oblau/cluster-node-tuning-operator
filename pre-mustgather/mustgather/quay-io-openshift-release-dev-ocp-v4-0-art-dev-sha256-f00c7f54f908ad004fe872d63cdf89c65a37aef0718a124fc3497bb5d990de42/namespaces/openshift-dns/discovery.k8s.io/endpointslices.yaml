@@ -1,0 +1,124 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.14
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: dns-default-2c5n5
+      namespace: openshift-dns
+      uid: 2189eb4d-c306-44c7-a348-fd7e4f8a9c53
+  - addresses:
+    - 10.129.0.41
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: dns-default-vxwpl
+      namespace: openshift-dns
+      uid: 59c40d68-c889-4059-ba55-bc21a6525349
+  - addresses:
+    - 10.130.0.17
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: dns-default-fgdkx
+      namespace: openshift-dns
+      uid: eac6be00-6fa4-44e0-9299-a9cafd5675dd
+  - addresses:
+    - 10.131.0.8
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: dns-default-62bnh
+      namespace: openshift-dns
+      uid: 2037d310-7c49-43f9-a11f-fcce373a5aef
+  - addresses:
+    - 10.128.2.5
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: dns-default-vmfrz
+      namespace: openshift-dns
+      uid: 86ddc09c-d2cd-40a5-9f03-2a52f6140d35
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:38:36Z"
+    creationTimestamp: "2025-11-17T09:21:44Z"
+    generateName: dns-default-
+    generation: 11
+    labels:
+      dns.operator.openshift.io/owning-dns: default
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: dns-default
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:dns.operator.openshift.io/owning-dns: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"1f8d31b3-687b-4f56-bbff-9967ee488441"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:38:36Z"
+    name: dns-default-mknf7
+    namespace: openshift-dns
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: dns-default
+      uid: 1f8d31b3-687b-4f56-bbff-9967ee488441
+    resourceVersion: "24090"
+    uid: caf29b4b-1b83-4f08-b17b-363bcfad86d9
+  ports:
+  - name: dns-tcp
+    port: 5353
+    protocol: TCP
+  - name: metrics
+    port: 9154
+    protocol: TCP
+  - name: dns
+    port: 5353
+    protocol: UDP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32432"

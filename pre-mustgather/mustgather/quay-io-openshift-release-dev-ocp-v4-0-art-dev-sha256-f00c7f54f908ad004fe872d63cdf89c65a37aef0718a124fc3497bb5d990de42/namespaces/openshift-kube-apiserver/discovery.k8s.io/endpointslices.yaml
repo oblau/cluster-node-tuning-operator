@@ -1,0 +1,92 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX0
+    targetRef:
+      kind: Pod
+      name: kube-apiserver-XXXXXX0
+      namespace: openshift-kube-apiserver
+      uid: 1a107d1f-2839-4059-a15b-f272eb3b2bcf
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: kube-apiserver-XXXXXX2
+      namespace: openshift-kube-apiserver
+      uid: 099aa1f5-5878-4911-a170-696ff9d8250c
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: kube-apiserver-XXXXXX1
+      namespace: openshift-kube-apiserver
+      uid: b729351e-35e6-431a-80ff-8269417669ca
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:47:19Z"
+    creationTimestamp: "2025-11-17T09:20:36Z"
+    generateName: apiserver-
+    generation: 22
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: apiserver
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"7c2c2bae-e6c7-4a8b-9a1f-340c0fe4b59a"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:47:20Z"
+    name: apiserver-s9pjv
+    namespace: openshift-kube-apiserver
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: apiserver
+      uid: 7c2c2bae-e6c7-4a8b-9a1f-340c0fe4b59a
+    resourceVersion: "30550"
+    uid: bb392dec-07d6-40d5-a0bd-46258769381d
+  ports:
+  - name: https
+    port: 6443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32474"

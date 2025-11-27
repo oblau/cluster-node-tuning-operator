@@ -1,0 +1,53 @@
+2025-11-17T09:38:59.498974159Z ts=2025-11-17T09:38:59+00:00 num_cpus=12 gomaxprocs=4
+2025-11-17T09:38:59.513394395Z ts=2025-11-17T09:38:59.513Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.6.1, branch=HEAD, revision=c6a59f9107b70d353691af4104bb866b7eae1ff2)"
+2025-11-17T09:38:59.513394395Z ts=2025-11-17T09:38:59.513Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.20.12 X:strictfipsruntime, platform=linux/amd64, user=root@87b9e5c9cfc9, date=20231018-11:07:01, tags=netgo,osusergo,static_build,strictfipsruntime)"
+2025-11-17T09:38:59.513696870Z ts=2025-11-17T09:38:59.513Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+2025-11-17T09:38:59.513995645Z ts=2025-11-17T09:38:59.513Z caller=netdev_common.go:81 level=info collector=netdev msg="Parsed flag --collector.netdev.device-exclude" flag=^(veth.*|[a-f0-9]{15}|enP.*|ovn-k8s-mp[0-9]*|br-ex|br-int|br-ext|br[0-9]*|tun[0-9]*|cali[a-f0-9]*)$
+2025-11-17T09:38:59.514845552Z ts=2025-11-17T09:38:59.514Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|sys|run/k3s/containerd/.+|var/lib/docker/.+|var/lib/kubelet/pods/.+)($|/)
+2025-11-17T09:38:59.514901405Z ts=2025-11-17T09:38:59.514Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+2025-11-17T09:38:59.515653854Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+2025-11-17T09:38:59.515667112Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=arp
+2025-11-17T09:38:59.515697293Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=bcache
+2025-11-17T09:38:59.515708459Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=bonding
+2025-11-17T09:38:59.515732513Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=conntrack
+2025-11-17T09:38:59.515732513Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=cpu
+2025-11-17T09:38:59.515780618Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=diskstats
+2025-11-17T09:38:59.515788391Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=dmi
+2025-11-17T09:38:59.515804370Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=edac
+2025-11-17T09:38:59.515818913Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=entropy
+2025-11-17T09:38:59.515826078Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=fibrechannel
+2025-11-17T09:38:59.515842219Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=filefd
+2025-11-17T09:38:59.515865029Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=filesystem
+2025-11-17T09:38:59.515879492Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=hwmon
+2025-11-17T09:38:59.515894363Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=infiniband
+2025-11-17T09:38:59.515901089Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=ipvs
+2025-11-17T09:38:59.515917429Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=loadavg
+2025-11-17T09:38:59.515931642Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=mdadm
+2025-11-17T09:38:59.515958910Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=meminfo
+2025-11-17T09:38:59.515979433Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=netclass
+2025-11-17T09:38:59.515984939Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=netdev
+2025-11-17T09:38:59.515989888Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=netstat
+2025-11-17T09:38:59.515994681Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=nfs
+2025-11-17T09:38:59.515999670Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=nfsd
+2025-11-17T09:38:59.516004710Z ts=2025-11-17T09:38:59.515Z caller=node_exporter.go:117 level=info collector=nvme
+2025-11-17T09:38:59.516009646Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=os
+2025-11-17T09:38:59.516015829Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+2025-11-17T09:38:59.516020768Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=pressure
+2025-11-17T09:38:59.516040853Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=rapl
+2025-11-17T09:38:59.516054859Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=schedstat
+2025-11-17T09:38:59.516093195Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=selinux
+2025-11-17T09:38:59.516101186Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=sockstat
+2025-11-17T09:38:59.516130696Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=softnet
+2025-11-17T09:38:59.516145394Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=stat
+2025-11-17T09:38:59.516153062Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=tapestats
+2025-11-17T09:38:59.516160242Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=textfile
+2025-11-17T09:38:59.516169107Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=thermal_zone
+2025-11-17T09:38:59.516178757Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=time
+2025-11-17T09:38:59.516207486Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=timex
+2025-11-17T09:38:59.516727199Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=udp_queues
+2025-11-17T09:38:59.516727199Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=uname
+2025-11-17T09:38:59.516727199Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=vmstat
+2025-11-17T09:38:59.516753582Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=xfs
+2025-11-17T09:38:59.516753582Z ts=2025-11-17T09:38:59.516Z caller=node_exporter.go:117 level=info collector=zfs
+2025-11-17T09:38:59.517835983Z ts=2025-11-17T09:38:59.517Z caller=tls_config.go:274 level=info msg="Listening on" address=127.0.0.1:9100
+2025-11-17T09:38:59.517835983Z ts=2025-11-17T09:38:59.517Z caller=tls_config.go:277 level=info msg="TLS is disabled." http2=false address=127.0.0.1:9100

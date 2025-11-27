@@ -1,0 +1,27 @@
+2025-11-17T09:33:16.315663302Z I1117 09:33:16.315528       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:33:16.340262039Z I1117 09:33:16.340217       1 main.go:165] CCCMOConfigSyncControllers/setup "msg"="starting manager" 
+2025-11-17T09:33:16.340651171Z I1117 09:33:16.340631       1 internal.go:360] CCCMOConfigSyncControllers "msg"="Starting server" "addr"={"IP":"127.0.0.1","Port":9260,"Zone":""} "kind"="health probe"
+2025-11-17T09:33:16.340690940Z I1117 09:33:16.340676       1 leaderelection.go:245] attempting to acquire leader lease openshift-cloud-controller-manager-operator/cluster-cloud-config-sync-leader...
+2025-11-17T09:37:17.848967648Z E1117 09:37:17.848838       1 leaderelection.go:327] error retrieving resource lock openshift-cloud-controller-manager-operator/cluster-cloud-config-sync-leader: Get "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-cloud-controller-manager-operator/leases/cluster-cloud-config-sync-leader": http2: client connection lost
+2025-11-17T09:37:53.394068489Z I1117 09:37:53.393978       1 leaderelection.go:255] successfully acquired lease openshift-cloud-controller-manager-operator/cluster-cloud-config-sync-leader
+2025-11-17T09:37:53.394334557Z I1117 09:37:53.394298       1 controller.go:177] CCCMOConfigSyncControllers "msg"="Starting EventSource" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "source"="kind source: *v1.ConfigMap"
+2025-11-17T09:37:53.394361025Z I1117 09:37:53.394334       1 controller.go:177] CCCMOConfigSyncControllers "msg"="Starting EventSource" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "source"="kind source: *v1.Infrastructure"
+2025-11-17T09:37:53.394361025Z I1117 09:37:53.394349       1 controller.go:177] CCCMOConfigSyncControllers "msg"="Starting EventSource" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "source"="kind source: *v1.Network"
+2025-11-17T09:37:53.394371051Z I1117 09:37:53.394362       1 controller.go:185] CCCMOConfigSyncControllers "msg"="Starting Controller" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap"
+2025-11-17T09:37:53.394456764Z I1117 09:37:53.394431       1 controller.go:177] CCCMOConfigSyncControllers "msg"="Starting EventSource" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "source"="kind source: *v1.ConfigMap"
+2025-11-17T09:37:53.394540615Z I1117 09:37:53.394526       1 controller.go:177] CCCMOConfigSyncControllers "msg"="Starting EventSource" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "source"="kind source: *v1.Proxy"
+2025-11-17T09:37:53.394592658Z I1117 09:37:53.394582       1 controller.go:185] CCCMOConfigSyncControllers "msg"="Starting Controller" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap"
+2025-11-17T09:37:53.599317768Z I1117 09:37:53.597344       1 controller.go:219] CCCMOConfigSyncControllers "msg"="Starting XXXXXXs" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "XXXXXX count"=1
+2025-11-17T09:37:53.599317768Z I1117 09:37:53.597357       1 controller.go:219] CCCMOConfigSyncControllers "msg"="Starting XXXXXXs" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "XXXXXX count"=1
+2025-11-17T09:37:53.602884909Z I1117 09:37:53.602717       1 trusted_ca_bundle_controller.go:155] cloud-config was not found: ConfigMap "cloud-conf" not found
+2025-11-17T09:37:53.701748020Z I1117 09:37:53.701683       1 trusted_ca_bundle_controller.go:155] cloud-config was not found: ConfigMap "cloud-conf" not found
+2025-11-17T09:37:53.705514628Z I1117 09:37:53.705465       1 cloud_config_sync_controller.go:68] cloud-config sync is not needed, returning early
+2025-11-17T09:37:53.715412299Z I1117 09:37:53.715147       1 cloud_config_sync_controller.go:68] cloud-config sync is not needed, returning early
+2025-11-17T09:37:53.721202939Z I1117 09:37:53.721158       1 cloud_config_sync_controller.go:68] cloud-config sync is not needed, returning early
+2025-11-17T09:37:53.730303479Z I1117 09:37:53.730239       1 cloud_config_sync_controller.go:68] cloud-config sync is not needed, returning early
+2025-11-17T09:37:53.736912135Z I1117 09:37:53.736870       1 cloud_config_sync_controller.go:68] cloud-config sync is not needed, returning early
+2025-11-17T09:37:53.743400319Z I1117 09:37:53.743357       1 cloud_config_sync_controller.go:68] cloud-config sync is not needed, returning early
+2025-11-17T09:37:53.756260682Z I1117 09:37:53.754153       1 cloud_config_sync_controller.go:68] cloud-config sync is not needed, returning early
+2025-11-17T09:37:53.765963830Z I1117 09:37:53.765922       1 cloud_config_sync_controller.go:68] cloud-config sync is not needed, returning early
+2025-11-17T09:37:53.774072300Z I1117 09:37:53.774015       1 cloud_config_sync_controller.go:68] cloud-config sync is not needed, returning early
+2025-11-17T09:37:53.782698408Z I1117 09:37:53.782646       1 cloud_config_sync_controller.go:68] cloud-config sync is not needed, returning early

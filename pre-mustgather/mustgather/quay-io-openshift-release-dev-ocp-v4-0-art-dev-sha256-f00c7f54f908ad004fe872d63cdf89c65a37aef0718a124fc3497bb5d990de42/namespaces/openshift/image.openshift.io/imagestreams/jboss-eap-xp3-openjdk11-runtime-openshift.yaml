@@ -1,0 +1,129 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: JBoss EAP XP 3.0 with OpenJDK11 (Runtime Image)
+    openshift.io/image.dockerRepositoryCheck: "2025-11-17T09:30:32Z"
+    openshift.io/provider-display-name: Red Hat
+    samples.operator.openshift.io/version: 4.14.59
+    version: "3.0"
+  creationTimestamp: "2025-11-17T09:27:30Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:openshift.io/provider-display-name: {}
+          f:samples.operator.openshift.io/version: {}
+          f:version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"3.0"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"XXXXXX"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2025-11-17T09:27:30Z"
+  name: jboss-eap-xp3-openjdk11-runtime-openshift
+  namespace: openshift
+  resourceVersion: "17553"
+  uid: 117a3fbe-b1d6-431b-894e-42fc85e9532d
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Runtime image for JBoss EAP expansion pack 3.0 to run Microservices
+        applications on RHEL8 with OpenJDK11.
+      iconClass: icon-eap
+      openshift.io/display-name: JBoss EAP XP 3.0 with OpenJDK11 (Runtime Image)
+      supports: eap-xp:3,javaee:8,java:11
+      tags: runtime,eap-xp,javaee,java,jboss,hidden
+      version: "3.0"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/jboss-eap-7/eap-xp3-openjdk11-runtime-openshift-rhel8:3.0
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "3.0"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Runtime image for JBoss EAP expansion pack 3.0 to run Microservices
+        applications on RHEL8 with OpenJDK11.
+      iconClass: icon-eap
+      openshift.io/display-name: JBoss EAP XP 3.0 with OpenJDK11 (Runtime Image)
+      supports: eap-xp:3,javaee:8,java:11
+      tags: runtime,eap-xp,javaee,java,jboss,hidden
+      version: XXXXXX
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/jboss-eap-7/eap-xp3-openjdk11-runtime-openshift-rhel8:XXXXXX
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: XXXXXX
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: ""
+  tags:
+  - items:
+    - created: "2025-11-17T09:30:32Z"
+      dockerImageReference: registry.redhat.io/jboss-eap-7/eap-xp3-openjdk11-runtime-openshift-rhel8@sha256:deaaa8255efc84a6a7fd4d1b6e5593eaab6c2753e1f2f84a5b83d4e047f03f3f
+      generation: 2
+      image: sha256:deaaa8255efc84a6a7fd4d1b6e5593eaab6c2753e1f2f84a5b83d4e047f03f3f
+    tag: "3.0"
+  - items:
+    - created: "2025-11-17T09:30:32Z"
+      dockerImageReference: registry.redhat.io/jboss-eap-7/eap-xp3-openjdk11-runtime-openshift-rhel8@sha256:deaaa8255efc84a6a7fd4d1b6e5593eaab6c2753e1f2f84a5b83d4e047f03f3f
+      generation: 2
+      image: sha256:deaaa8255efc84a6a7fd4d1b6e5593eaab6c2753e1f2f84a5b83d4e047f03f3f
+    tag: XXXXXX

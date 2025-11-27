@@ -1,0 +1,29 @@
+2025-11-17T09:37:54.082903455Z + [[ -f /env/_XXXXXX ]]
+2025-11-17T09:37:54.082903455Z + . /ovnkube-lib/ovnkube-lib.sh
+2025-11-17T09:37:54.083017213Z ++ set -x
+2025-11-17T09:37:54.083017213Z ++ K8S_NODE=XXXXXX0
+2025-11-17T09:37:54.083017213Z ++ [[ -n XXXXXX0 ]]
+2025-11-17T09:37:54.083017213Z ++ [[ -f /env/XXXXXX0 ]]
+2025-11-17T09:37:54.083017213Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2025-11-17T09:37:54.083026567Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2025-11-17T09:37:54.083031942Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2025-11-17T09:37:54.083036794Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2025-11-17T09:37:54.083043178Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2025-11-17T09:37:54.083049331Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2025-11-17T09:37:54.083055539Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2025-11-17T09:37:54.083061754Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2025-11-17T09:37:54.083066547Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2025-11-17T09:37:54.083072644Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2025-11-17T09:37:54.084375939Z + trap quit-nbdb TERM INT
+2025-11-17T09:37:54.084375939Z + start-nbdb info
+2025-11-17T09:37:54.084387052Z + local log_level=info
+2025-11-17T09:37:54.084402324Z + [[ 1 -ne 1 ]]
+2025-11-17T09:37:54.084657466Z + wait 8066
+2025-11-17T09:37:54.084753320Z + exec /usr/share/ovn/scripts/ovn-ctl --no-monitor --db-nb-sock=/var/run/ovn/ovnnb_db.sock '--ovn-nb-log=-vconsole:info -vfile:off -vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' run_nb_ovsdb
+2025-11-17T09:37:54.138144224Z /etc/ovn/ovnnb_db.db does not exist ... (warning).
+2025-11-17T09:37:54.149147095Z Creating empty database /etc/ovn/ovnnb_db.db.
+2025-11-17T09:37:54.164237584Z 2025-11-17T09:37:54.164Z|00001|vlog|INFO|opened log file /var/log/ovn/ovsdb-server-nb.log
+2025-11-17T09:37:54.169661206Z 2025-11-17T09:37:54.169Z|00002|ovsdb_server|INFO|ovsdb-server (Open vSwitch) 3.3.6-141.el9fdp
+2025-11-17T09:37:56.128352895Z 2025-11-17T09:37:56.128Z|00003|ovsdb_server|INFO|memory trimming after compaction enabled.
+2025-11-17T09:38:04.177284006Z 2025-11-17T09:38:04.176Z|00004|memory|INFO|12316 kB peak resident set size after 10.0 seconds
+2025-11-17T09:38:04.177284006Z 2025-11-17T09:38:04.177Z|00005|memory|INFO|atoms:4894 cells:2919 json-caches:2 monitors:3 n-weak-refs:79 sessions:2

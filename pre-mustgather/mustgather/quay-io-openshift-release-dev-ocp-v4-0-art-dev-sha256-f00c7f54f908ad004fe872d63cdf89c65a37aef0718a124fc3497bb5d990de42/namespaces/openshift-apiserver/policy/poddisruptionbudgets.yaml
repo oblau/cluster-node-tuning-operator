@@ -1,0 +1,67 @@
+---
+apiVersion: policy/v1
+items:
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    creationTimestamp: "2025-11-17T09:20:27Z"
+    generation: 1
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:maxUnavailable: {}
+          f:selector: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2025-11-17T09:20:27Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-11-17T09:44:22Z"
+    name: openshift-apiserver-pdb
+    namespace: openshift-apiserver
+    resourceVersion: "29389"
+    uid: 28518a65-cba9-4c00-8352-1d3b535037bd
+  spec:
+    maxUnavailable: 1
+    selector:
+      matchLabels:
+        apiserver: "true"
+        app: openshift-apiserver-a
+  status:
+    conditions:
+    - lastTransitionTime: "2025-11-17T09:44:22Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 3
+    desiredHealthy: 2
+    disruptionsAllowed: 1
+    expectedPods: 3
+    observedGeneration: 1
+kind: PodDisruptionBudgetList
+metadata:
+  resourceVersion: "32598"

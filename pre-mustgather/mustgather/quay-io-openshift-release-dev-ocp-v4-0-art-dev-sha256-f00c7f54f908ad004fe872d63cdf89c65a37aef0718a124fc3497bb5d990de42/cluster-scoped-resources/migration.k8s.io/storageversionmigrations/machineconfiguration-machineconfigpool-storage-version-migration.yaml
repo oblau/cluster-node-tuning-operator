@@ -1,0 +1,62 @@
+---
+apiVersion: migration.k8s.io/v1alpha1
+kind: StorageVersionMigration
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2025-11-17T09:05:45Z"
+  generation: 1
+  managedFields:
+  - apiVersion: migration.k8s.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec:
+        .: {}
+        f:resource:
+          .: {}
+          f:group: {}
+          f:resource: {}
+          f:version: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:45Z"
+  - apiVersion: migration.k8s.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+    manager: migrator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:20:49Z"
+  name: machineconfiguration-machineconfigpool-storage-version-migration
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "8246"
+  uid: 4377fa2a-ff0c-44d8-850b-312da6fa3867
+spec:
+  resource:
+    group: machineconfiguration.openshift.io
+    resource: machineconfigpools
+    version: v1
+status:
+  conditions:
+  - lastUpdateTime: "2025-11-17T09:20:49Z"
+    status: "True"
+    type: Succeeded

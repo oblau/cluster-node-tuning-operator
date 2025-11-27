@@ -1,0 +1,208 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.16
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: catalog-operator-859b6d7548-64txz
+      namespace: openshift-operator-lifecycle-manager
+      uid: e738d937-3e1a-4284-9931-b5278c36bb5c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:35Z"
+    creationTimestamp: "2025-11-17T09:05:50Z"
+    generateName: catalog-operator-metrics-
+    generation: 3
+    labels:
+      app: catalog-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: catalog-operator-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"e51a9ec9-463b-4fbb-af12-9eb7a6f62143"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:35Z"
+    name: catalog-operator-metrics-lrngb
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: catalog-operator-metrics
+      uid: e51a9ec9-463b-4fbb-af12-9eb7a6f62143
+    resourceVersion: "9110"
+    uid: f7601b8e-af83-4a72-a85d-a91dd72bb9db
+  ports:
+  - name: https-metrics
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.15
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: olm-operator-65b5dbdc9f-qv6dw
+      namespace: openshift-operator-lifecycle-manager
+      uid: 1b5914b8-cd74-478d-9e4f-fa567bb53609
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:35Z"
+    creationTimestamp: "2025-11-17T09:05:50Z"
+    generateName: olm-operator-metrics-
+    generation: 3
+    labels:
+      app: olm-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: olm-operator-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"890af720-47af-4bfe-8d19-1b194bd5bfbe"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:35Z"
+    name: olm-operator-metrics-c6mk4
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: olm-operator-metrics
+      uid: 890af720-47af-4bfe-8d19-1b194bd5bfbe
+    resourceVersion: "9116"
+    uid: 9c27ae18-bca4-4cf3-9074-d71f9e982be5
+  ports:
+  - name: https-metrics
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.40
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: packageserver-878fff4dd-c6kwc
+      namespace: openshift-operator-lifecycle-manager
+      uid: 7b9b54d0-84f4-4cb6-8a3d-829c3627f967
+  - addresses:
+    - 10.128.0.12
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX1
+    targetRef:
+      kind: Pod
+      name: packageserver-878fff4dd-bvsjl
+      namespace: openshift-operator-lifecycle-manager
+      uid: 05950cc5-44e4-405e-8c62-01e85baf657a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:52Z"
+    creationTimestamp: "2025-11-17T09:21:36Z"
+    generateName: packageserver-service-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: packageserver-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"596d1d05-86ff-48d5-9c23-b01fe6c47d59"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:52Z"
+    name: packageserver-service-pfzjb
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: packageserver-service
+      uid: 596d1d05-86ff-48d5-9c23-b01fe6c47d59
+    resourceVersion: "10327"
+    uid: 306a8f88-6e0a-4424-9852-93b044ff012b
+  ports:
+  - name: "5443"
+    port: 5443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32603"

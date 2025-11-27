@@ -1,0 +1,516 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.22/23","fd02:0:0:1::16/64"],"mac_address":"0a:58:0a:80:00:16","gateway_ips":["10.128.0.1","fd02:0:0:1::1"],"routes":[{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.128.0.1"},{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.128.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.0.1"},{"dest":"fd02::/48","nextHop":"fd02:0:0:1::1"},{"dest":"fd03::/112","nextHop":"fd02:0:0:1::1"},{"dest":"fd98::/64","nextHop":"fd02:0:0:1::1"}]}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.22",
+              "fd02:0:0:1::16"
+          ],
+          "mac": "0a:58:0a:80:00:16",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: hostnetwork-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2025-11-17T09:22:11Z"
+  generateName: metal3-baremetal-operator-6f455c9bb-
+  labels:
+    baremetal.openshift.io/cluster-baremetal-operator: metal3-baremetal-operator
+    baremetal.openshift.io/metal3-validating-webhook: metal3-validating-webhook
+    k8s-app: metal3
+    pod-template-hash: 6f455c9bb
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:baremetal.openshift.io/cluster-baremetal-operator: {}
+          f:baremetal.openshift.io/metal3-validating-webhook: {}
+          f:k8s-app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"6ae24c46-0b74-4f2d-99d5-fdcafb537b70"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"metal3-baremetal-operator"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"DEPLOY_KERNEL_URL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_CACERT_FILE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_ENDPOINT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_EXTERNAL_IP"}:
+                .: {}
+                f:name: {}
+              k:{"name":"IRONIC_EXTERNAL_URL_V6"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_INSECURE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IRONIC_INSPECTOR_ENDPOINT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"LIVE_ISO_FORCE_PERSISTENT_BOOT_DEVICE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"METAL3_AUTH_ROOT_DIR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"WATCH_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9447,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/auth/ironic"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/auth/ironic-inspector"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/certs/ironic"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"metal3-inspector-basic-auth"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+          k:{"name":"metal3-inspector-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"metal3-ironic-basic-auth"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+          k:{"name":"metal3-ironic-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"trusted-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-11-17T09:22:11Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: XXXXXX1
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:22:11Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:22:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.22"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"fd02:0:0:1::16"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:22:50Z"
+  name: metal3-baremetal-operator-6f455c9bb-lh5hn
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: metal3-baremetal-operator-6f455c9bb
+    uid: 6ae24c46-0b74-4f2d-99d5-fdcafb537b70
+  resourceVersion: "12120"
+  uid: 2a417a38-ce18-4cde-bb07-d33850c06073
+spec:
+  containers:
+  - args:
+    - --health-addr
+    - :9446
+    - -build-preprov-image
+    - --webhook-port
+    - "9447"
+    command:
+    - /baremetal-operator
+    env:
+    - name: WATCH_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: OPERATOR_NAME
+      value: baremetal-operator
+    - name: IRONIC_CACERT_FILE
+      value: /certs/ironic/tls.crt
+    - name: IRONIC_INSECURE
+      value: "true"
+    - name: DEPLOY_KERNEL_URL
+      value: file:///shared/html/images/ironic-python-agent.kernel
+    - name: IRONIC_ENDPOINT
+      value: https://metal3-state.openshift-machine-api.svc.cluster.local:6388/v1/
+    - name: IRONIC_INSPECTOR_ENDPOINT
+      value: https://metal3-state.openshift-machine-api.svc.cluster.local:5051/v1/
+    - name: LIVE_ISO_FORCE_PERSISTENT_BOOT_DEVICE
+      value: Never
+    - name: METAL3_AUTH_ROOT_DIR
+      value: /auth
+    - name: IRONIC_EXTERNAL_IP
+    - name: IRONIC_EXTERNAL_URL_V6
+      value: https://[2620:52:0:2e1a::21]:6183
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:47f0484734ad2f554dbca4d9b5b2e40ec796513bcb8a4569ab3e7b30a4c3dd14
+    imagePullPolicy: IfNotPresent
+    name: metal3-baremetal-operator
+    ports:
+    - containerPort: 9447
+      hostPort: 9447
+      name: webhook-server
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 20m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000480000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /auth/ironic
+      name: metal3-ironic-basic-auth
+      readOnly: true
+    - mountPath: /auth/ironic-inspector
+      name: metal3-inspector-basic-auth
+      readOnly: true
+    - mountPath: /certs/ironic
+      name: metal3-ironic-tls
+      readOnly: true
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: cert
+      readOnly: true
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: trusted-ca
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5gmbx
+      readOnly: true
+  dnsPolicy: ClusterFirstWithHostNet
+  enableServiceLinks: true
+  nodeName: XXXXXX1
+  nodeSelector:
+    node-role.kubernetes.io/XXXXXX: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000480000
+    seLinuxOptions:
+      level: s0:c22,c9
+    seccompProfile:
+      type: RuntimeDefault
+    supplementalGroups:
+    - 1000480000
+  serviceAccount: cluster-baremetal-operator
+  serviceAccountName: cluster-baremetal-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/XXXXXX
+    operator: Exists
+  - key: CriticalAddonsOnly
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: cbo-trusted-ca
+      optional: true
+    name: trusted-ca
+  - name: cert
+    secret:
+      defaultMode: 420
+      secretName: baremetal-operator-webhook-server-cert
+  - name: metal3-ironic-basic-auth
+    secret:
+      defaultMode: 420
+      items:
+      - key: username
+        path: username
+      - key: password
+        path: password
+      - key: auth-config
+        path: auth-config
+      secretName: metal3-ironic-password
+  - name: metal3-inspector-basic-auth
+    secret:
+      defaultMode: 420
+      items:
+      - key: username
+        path: username
+      - key: password
+        path: password
+      - key: auth-config
+        path: auth-config
+      secretName: metal3-ironic-inspector-password
+  - name: metal3-ironic-tls
+    secret:
+      defaultMode: 420
+      secretName: metal3-ironic-tls
+  - name: metal3-inspector-tls
+    secret:
+      defaultMode: 420
+      secretName: metal3-ironic-tls
+  - name: kube-api-access-5gmbx
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:22:11Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:22:50Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:22:50Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:22:11Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://621974cd1a2acb111d626bc923f9b27018e1c85dbba4cb08bc0b53962f8adfe9
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:47f0484734ad2f554dbca4d9b5b2e40ec796513bcb8a4569ab3e7b30a4c3dd14
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:47f0484734ad2f554dbca4d9b5b2e40ec796513bcb8a4569ab3e7b30a4c3dd14
+    lastState: {}
+    name: metal3-baremetal-operator
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:22:50Z"
+  hostIP: XXXXXXXXXXX
+  phase: Running
+  podIP: 10.128.0.22
+  podIPs:
+  - ip: 10.128.0.22
+  - ip: fd02:0:0:1::16
+  qosClass: Burstable
+  startTime: "2025-11-17T09:22:11Z"

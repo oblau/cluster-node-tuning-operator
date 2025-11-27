@@ -1,0 +1,1081 @@
+2025-11-17T09:33:15.344727361Z I1117 09:33:15.344461       1 main.go:243] baremetal-controller-manager "msg"="Found API group metal3.io/v1alpha1" 
+2025-11-17T09:33:15.344727361Z I1117 09:33:15.344548       1 main.go:142] Watching machine-api objects only in namespace "openshift-machine-api" for reconciliation.
+2025-11-17T09:33:15.359390713Z I1117 09:33:15.359350       1 listener.go:44] controller-runtime/metrics "msg"="Metrics server is starting to listen" "addr"=":8081"
+2025-11-17T09:33:15.361903095Z I1117 09:33:15.361875       1 webhook.go:124] controller-runtime/builder "msg"="Registering a mutating webhook" "GVK"={"Group":"infrastructure.cluster.x-k8s.io","Version":"v1beta1","Kind":"Metal3Remediation"} "path"="/mutate-infrastructure-cluster-x-k8s-io-v1beta1-metal3remediation"
+2025-11-17T09:33:15.361965534Z I1117 09:33:15.361953       1 server.go:149] controller-runtime/webhook "msg"="Registering webhook" "path"="/mutate-infrastructure-cluster-x-k8s-io-v1beta1-metal3remediation"
+2025-11-17T09:33:15.362012943Z I1117 09:33:15.362001       1 webhook.go:153] controller-runtime/builder "msg"="Registering a validating webhook" "GVK"={"Group":"infrastructure.cluster.x-k8s.io","Version":"v1beta1","Kind":"Metal3Remediation"} "path"="/validate-infrastructure-cluster-x-k8s-io-v1beta1-metal3remediation"
+2025-11-17T09:33:15.362046451Z I1117 09:33:15.362038       1 server.go:149] controller-runtime/webhook "msg"="Registering webhook" "path"="/validate-infrastructure-cluster-x-k8s-io-v1beta1-metal3remediation"
+2025-11-17T09:33:15.362114205Z I1117 09:33:15.362103       1 webhook.go:124] controller-runtime/builder "msg"="Registering a mutating webhook" "GVK"={"Group":"infrastructure.cluster.x-k8s.io","Version":"v1beta1","Kind":"Metal3RemediationTemplate"} "path"="/mutate-infrastructure-cluster-x-k8s-io-v1beta1-metal3remediationtemplate"
+2025-11-17T09:33:15.362146188Z I1117 09:33:15.362138       1 server.go:149] controller-runtime/webhook "msg"="Registering webhook" "path"="/mutate-infrastructure-cluster-x-k8s-io-v1beta1-metal3remediationtemplate"
+2025-11-17T09:33:15.362177831Z I1117 09:33:15.362169       1 webhook.go:153] controller-runtime/builder "msg"="Registering a validating webhook" "GVK"={"Group":"infrastructure.cluster.x-k8s.io","Version":"v1beta1","Kind":"Metal3RemediationTemplate"} "path"="/validate-infrastructure-cluster-x-k8s-io-v1beta1-metal3remediationtemplate"
+2025-11-17T09:33:15.362210626Z I1117 09:33:15.362203       1 server.go:149] controller-runtime/webhook "msg"="Registering webhook" "path"="/validate-infrastructure-cluster-x-k8s-io-v1beta1-metal3remediationtemplate"
+2025-11-17T09:33:15.362300435Z I1117 09:33:15.362292       1 server.go:217] controller-runtime/webhook/webhooks "msg"="Starting webhook server" 
+2025-11-17T09:33:15.362446747Z I1117 09:33:15.362428       1 internal.go:369]  "msg"="Starting server" "addr"={"IP":"::","Port":9440,"Zone":""} "kind"="health probe"
+2025-11-17T09:33:15.362480344Z I1117 09:33:15.362451       1 internal.go:369]  "msg"="Starting server" "addr"={"IP":"::","Port":8081,"Zone":""} "kind"="metrics" "path"="/metrics"
+2025-11-17T09:33:15.362770692Z I1117 09:33:15.362755       1 leaderelection.go:248] attempting to acquire leader lease openshift-machine-api/controller-leader-election-capbm...
+2025-11-17T09:33:15.362874948Z I1117 09:33:15.362864       1 certwatcher.go:131] controller-runtime/certwatcher "msg"="Updated current TLS certificate" 
+2025-11-17T09:33:15.362963402Z I1117 09:33:15.362954       1 server.go:271] controller-runtime/webhook "msg"="Serving webhook server" "host"="" "port"=8440
+2025-11-17T09:33:15.363045352Z I1117 09:33:15.363021       1 certwatcher.go:85] controller-runtime/certwatcher "msg"="Starting certificate watcher" 
+2025-11-17T09:36:27.174892234Z I1117 09:36:27.174714       1 leaderelection.go:258] successfully acquired lease openshift-machine-api/controller-leader-election-capbm
+2025-11-17T09:36:27.175035275Z I1117 09:36:27.174999       1 recorder.go:103] events "msg"="machine-api-controllers-57fbbf9557-pdr5j_3373e4eb-0bbb-45ca-8fcd-ff4af58d71ea became leader" "object"={"kind":"Lease","namespace":"openshift-machine-api","name":"controller-leader-election-capbm","uid":"e7c89752-80bf-4329-8f5b-cb5ccfa696ee","apiVersion":"coordination.k8s.io/v1","resourceVersion":"21584"} "reason"="LeaderElection" "type"="Normal"
+2025-11-17T09:36:27.175102249Z I1117 09:36:27.175074       1 controller.go:186]  "msg"="Starting EventSource" "controller"="machineset-controller" "source"="kind source: *v1beta1.MachineSet"
+2025-11-17T09:36:27.175108850Z I1117 09:36:27.175075       1 controller.go:186]  "msg"="Starting EventSource" "controller"="machine-controller" "source"="kind source: *v1alpha1.BareMetalHost"
+2025-11-17T09:36:27.175188967Z I1117 09:36:27.175105       1 controller.go:186]  "msg"="Starting EventSource" "controller"="machineset-controller" "source"="kind source: *v1alpha1.BareMetalHost"
+2025-11-17T09:36:27.175188967Z I1117 09:36:27.175181       1 controller.go:186]  "msg"="Starting EventSource" "controller"="machine-controller" "source"="kind source: *v1.Node"
+2025-11-17T09:36:27.175212159Z I1117 09:36:27.175176       1 controller.go:186]  "msg"="Starting EventSource" "controller"="machine-drain-controller" "source"="kind source: *v1alpha1.BareMetalHost"
+2025-11-17T09:36:27.175217772Z I1117 09:36:27.175199       1 controller.go:194]  "msg"="Starting Controller" "controller"="machineset-controller"
+2025-11-17T09:36:27.175232378Z I1117 09:36:27.175201       1 controller.go:186]  "msg"="Starting EventSource" "controller"="machine-controller" "source"="kind source: *v1beta1.Machine"
+2025-11-17T09:36:27.175238850Z I1117 09:36:27.175232       1 controller.go:186]  "msg"="Starting EventSource" "controller"="machine-drain-controller" "source"="kind source: *v1.Node"
+2025-11-17T09:36:27.175244144Z I1117 09:36:27.175235       1 controller.go:194]  "msg"="Starting Controller" "controller"="machine-controller"
+2025-11-17T09:36:27.175267260Z I1117 09:36:27.175252       1 controller.go:186]  "msg"="Starting EventSource" "controller"="machine-drain-controller" "source"="kind source: *v1beta1.Machine"
+2025-11-17T09:36:27.175273028Z I1117 09:36:27.175264       1 controller.go:194]  "msg"="Starting Controller" "controller"="machine-drain-controller"
+2025-11-17T09:36:27.175287877Z I1117 09:36:27.175223       1 controller.go:186]  "msg"="Starting EventSource" "controller"="metal3remediation" "controllerGroup"="infrastructure.cluster.x-k8s.io" "controllerKind"="Metal3Remediation" "source"="kind source: *v1beta1.Metal3Remediation"
+2025-11-17T09:36:27.175338749Z I1117 09:36:27.175324       1 controller.go:194]  "msg"="Starting Controller" "controller"="metal3remediation" "controllerGroup"="infrastructure.cluster.x-k8s.io" "controllerKind"="Metal3Remediation"
+2025-11-17T09:36:27.175576776Z I1117 09:36:27.175553       1 reflector.go:221] Starting reflector *v1beta1.MachineSet (9h17m36.063456625s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:27.175576776Z I1117 09:36:27.175565       1 reflector.go:257] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:27.175943830Z I1117 09:36:27.175897       1 reflector.go:221] Starting reflector *v1.Node (9h14m10.193295837s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:27.175943830Z I1117 09:36:27.175930       1 reflector.go:257] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:27.176106768Z I1117 09:36:27.176079       1 reflector.go:221] Starting reflector *v1alpha1.BareMetalHost (9h53m56.701865551s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:27.176106768Z I1117 09:36:27.176093       1 reflector.go:257] Listing and watching *v1alpha1.BareMetalHost from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:27.176235947Z I1117 09:36:27.176212       1 reflector.go:221] Starting reflector *v1beta1.Machine (9h15m2.940715215s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:27.176235947Z I1117 09:36:27.176224       1 reflector.go:257] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:27.176484837Z I1117 09:36:27.176462       1 reflector.go:221] Starting reflector *v1beta1.Metal3Remediation (9h33m2.395070298s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:27.176484837Z I1117 09:36:27.176472       1 reflector.go:257] Listing and watching *v1beta1.Metal3Remediation from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:27.277133688Z I1117 09:36:27.277081       1 controller.go:228]  "msg"="Starting XXXXXXs" "controller"="machineset-controller" "XXXXXX count"=1
+2025-11-17T09:36:27.277133688Z I1117 09:36:27.277109       1 controller.go:228]  "msg"="Starting XXXXXXs" "controller"="metal3remediation" "controllerGroup"="infrastructure.cluster.x-k8s.io" "controllerKind"="Metal3Remediation" "XXXXXX count"=1
+2025-11-17T09:36:27.277177456Z I1117 09:36:27.277088       1 controller.go:228]  "msg"="Starting XXXXXXs" "controller"="machine-drain-controller" "XXXXXX count"=1
+2025-11-17T09:36:27.277177456Z I1117 09:36:27.277146       1 controller.go:228]  "msg"="Starting XXXXXXs" "controller"="machine-controller" "XXXXXX count"=1
+2025-11-17T09:36:27.277223065Z I1117 09:36:27.277204       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:36:27.277228981Z 2025/11/17 09:36:27 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:27.277275915Z 2025/11/17 09:36:27 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:27.277281121Z I1117 09:36:27.277275       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:36:27.277281121Z 2025/11/17 09:36:27 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:27.278752413Z 2025/11/17 09:36:27 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:27.287135248Z I1117 09:36:27.287105       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:36:27.287135248Z 2025/11/17 09:36:27 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:36:27.287135248Z 2025/11/17 09:36:27 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:36:27.287149751Z I1117 09:36:27.287139       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:36:27.287149751Z 2025/11/17 09:36:27 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:36:27.287208551Z 2025/11/17 09:36:27 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:36:27.295247340Z I1117 09:36:27.295223       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:36:27.295247340Z 2025/11/17 09:36:27 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:27.295258379Z 2025/11/17 09:36:27 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:27.295258379Z I1117 09:36:27.295256       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:36:27.295264621Z 2025/11/17 09:36:27 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:27.295310417Z 2025/11/17 09:36:27 Not setting Node ProviderID - Node does not yet exist for Machine hlxcl51-5vf88-XXXXXX-0-csjwc
+2025-11-17T09:36:27.295310417Z 2025/11/17 09:36:27 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:27.302832581Z I1117 09:36:27.302808       1 controller.go:333] hlxcl51-5vf88-XXXXXX-0-csjwc: has no node yet, requeuing
+2025-11-17T09:36:27.302861621Z I1117 09:36:27.302849       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:36:27.302861621Z 2025/11/17 09:36:27 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:27.302881300Z 2025/11/17 09:36:27 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:27.302886904Z I1117 09:36:27.302880       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:36:27.302886904Z 2025/11/17 09:36:27 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:27.302923249Z 2025/11/17 09:36:27 Not setting Node ProviderID - Node does not yet exist for Machine hlxcl51-5vf88-XXXXXX-0-qk9w5
+2025-11-17T09:36:27.302923249Z 2025/11/17 09:36:27 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:27.309481087Z I1117 09:36:27.309365       1 controller.go:333] hlxcl51-5vf88-XXXXXX-0-qk9w5: has no node yet, requeuing
+2025-11-17T09:36:27.309481087Z I1117 09:36:27.309410       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:36:27.309481087Z 2025/11/17 09:36:27 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:27.309481087Z 2025/11/17 09:36:27 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:27.309481087Z I1117 09:36:27.309434       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:36:27.309481087Z 2025/11/17 09:36:27 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:27.309481087Z 2025/11/17 09:36:27 Not setting Node ProviderID - Node does not yet exist for Machine hlxcl51-5vf88-XXXXXX-0
+2025-11-17T09:36:27.309481087Z 2025/11/17 09:36:27 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:27.317496242Z I1117 09:36:27.317463       1 controller.go:333] hlxcl51-5vf88-XXXXXX-0: has no node yet, requeuing
+2025-11-17T09:36:37.224252426Z I1117 09:36:37.224202       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:36:37.224252426Z 2025/11/17 09:36:37 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:37.224276092Z 2025/11/17 09:36:37 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:37.224276092Z I1117 09:36:37.224271       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:36:37.224276092Z 2025/11/17 09:36:37 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:37.224466145Z 2025/11/17 09:36:37 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:37.236502449Z I1117 09:36:37.236441       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:36:37.236502449Z 2025/11/17 09:36:37 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:36:37.236502449Z 2025/11/17 09:36:37 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:36:37.236502449Z I1117 09:36:37.236485       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:36:37.236502449Z 2025/11/17 09:36:37 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:36:37.236603286Z 2025/11/17 09:36:37 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:36:37.323161897Z I1117 09:36:37.321806       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:36:37.323161897Z 2025/11/17 09:36:37 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:37.323161897Z 2025/11/17 09:36:37 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:37.323161897Z I1117 09:36:37.321853       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:36:37.323161897Z 2025/11/17 09:36:37 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:37.323161897Z 2025/11/17 09:36:37 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:44.290812605Z I1117 09:36:44.290754       1 reflector.go:257] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:44.337970109Z I1117 09:36:44.337920       1 reflector.go:257] Listing and watching *v1beta1.Metal3Remediation from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:44.385030708Z I1117 09:36:44.384977       1 reflector.go:257] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:44.389732556Z I1117 09:36:44.389402       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:36:44.389732556Z 2025/11/17 09:36:44 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:44.389732556Z 2025/11/17 09:36:44 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:44.389732556Z I1117 09:36:44.389448       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:36:44.389732556Z 2025/11/17 09:36:44 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:44.389732556Z 2025/11/17 09:36:44 Not setting Node ProviderID - Node does not yet exist for Machine hlxcl51-5vf88-XXXXXX-0
+2025-11-17T09:36:44.389732556Z 2025/11/17 09:36:44 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:44.394027094Z I1117 09:36:44.393987       1 reflector.go:257] Listing and watching *v1alpha1.BareMetalHost from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers_map.go:262
+2025-11-17T09:36:44.399424897Z I1117 09:36:44.399383       1 controller.go:333] hlxcl51-5vf88-XXXXXX-0: has no node yet, requeuing
+2025-11-17T09:36:44.399522264Z I1117 09:36:44.399503       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:36:44.399531015Z 2025/11/17 09:36:44 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:44.399571467Z 2025/11/17 09:36:44 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:44.399577321Z I1117 09:36:44.399569       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:36:44.399577321Z 2025/11/17 09:36:44 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:44.399761691Z 2025/11/17 09:36:44 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:44.411883870Z I1117 09:36:44.411833       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:36:44.411883870Z 2025/11/17 09:36:44 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:36:44.411904297Z 2025/11/17 09:36:44 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:36:44.411904297Z I1117 09:36:44.411892       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:36:44.411904297Z 2025/11/17 09:36:44 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:36:44.411994528Z 2025/11/17 09:36:44 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:36:44.418178195Z I1117 09:36:44.418134       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:36:44.418178195Z 2025/11/17 09:36:44 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:44.418178195Z 2025/11/17 09:36:44 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:44.418216848Z I1117 09:36:44.418169       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:36:44.418216848Z 2025/11/17 09:36:44 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:44.418223323Z 2025/11/17 09:36:44 Not setting Node ProviderID - Node does not yet exist for Machine hlxcl51-5vf88-XXXXXX-0-csjwc
+2025-11-17T09:36:44.418223323Z 2025/11/17 09:36:44 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:44.429184035Z I1117 09:36:44.429130       1 controller.go:333] hlxcl51-5vf88-XXXXXX-0-csjwc: has no node yet, requeuing
+2025-11-17T09:36:44.429289442Z I1117 09:36:44.429272       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:36:44.429289442Z 2025/11/17 09:36:44 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:44.429313283Z 2025/11/17 09:36:44 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:44.429319349Z I1117 09:36:44.429315       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:36:44.429319349Z 2025/11/17 09:36:44 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:44.429393584Z 2025/11/17 09:36:44 Not setting Node ProviderID - Node does not yet exist for Machine hlxcl51-5vf88-XXXXXX-0-qk9w5
+2025-11-17T09:36:44.429393584Z 2025/11/17 09:36:44 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:44.435803029Z I1117 09:36:44.435765       1 controller.go:333] hlxcl51-5vf88-XXXXXX-0-qk9w5: has no node yet, requeuing
+2025-11-17T09:36:44.435840495Z I1117 09:36:44.435832       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:36:44.435846861Z 2025/11/17 09:36:44 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:44.435878555Z 2025/11/17 09:36:44 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:44.435878555Z I1117 09:36:44.435874       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:36:44.435885306Z 2025/11/17 09:36:44 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:44.435923814Z 2025/11/17 09:36:44 Not setting Node ProviderID - Node does not yet exist for Machine hlxcl51-5vf88-XXXXXX-0
+2025-11-17T09:36:44.435923814Z 2025/11/17 09:36:44 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:44.443105628Z I1117 09:36:44.443063       1 controller.go:333] hlxcl51-5vf88-XXXXXX-0: has no node yet, requeuing
+2025-11-17T09:36:44.443153969Z I1117 09:36:44.443112       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:36:44.443153969Z 2025/11/17 09:36:44 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:44.443153969Z 2025/11/17 09:36:44 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:44.443153969Z I1117 09:36:44.443151       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:36:44.443162099Z 2025/11/17 09:36:44 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:44.443258044Z 2025/11/17 09:36:44 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:53.282962089Z I1117 09:36:53.282910       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:36:53.282962089Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:53.282962089Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:53.282990213Z I1117 09:36:53.282961       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.282990213Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:53.283034747Z 2025/11/17 09:36:53 Setting ProviderID baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5 for node XXXXXX1.
+2025-11-17T09:36:53.295399543Z 2025/11/17 09:36:53 Failed to update node ProviderID, error: Operation cannot be fulfilled on nodes "XXXXXX1": the object has been modified; please apply your changes to the XXXXXX version and try again
+2025-11-17T09:36:53.295399543Z E1117 09:36:53.295068       1 controller.go:307] hlxcl51-5vf88-XXXXXX-0-qk9w5: error updating machine: failed to set node provider id: Operation cannot be fulfilled on nodes "XXXXXX1": the object has been modified; please apply your changes to the XXXXXX version and try again, retrying in 30s seconds
+2025-11-17T09:36:53.303993969Z I1117 09:36:53.303910       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:36:53.303993969Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:53.303993969Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:53.303993969Z I1117 09:36:53.303962       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.303993969Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:53.304042073Z 2025/11/17 09:36:53 Setting ProviderID baremetalhost:///openshift-machine-api/XXXXXX0/16079139-861a-4231-8459-c3dca9130db3 for node XXXXXX0.
+2025-11-17T09:36:53.310263592Z E1117 09:36:53.309543       1 controller.go:307] hlxcl51-5vf88-XXXXXX-0-csjwc: error updating machine: requeue in: 0s, retrying in 30s seconds
+2025-11-17T09:36:53.318881474Z I1117 09:36:53.318835       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:36:53.318881474Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:53.318902844Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:53.318921167Z I1117 09:36:53.318907       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.318921167Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:53.319006161Z 2025/11/17 09:36:53 Setting ProviderID baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5 for node XXXXXX1.
+2025-11-17T09:36:53.332149957Z E1117 09:36:53.327239       1 controller.go:307] hlxcl51-5vf88-XXXXXX-0-qk9w5: error updating machine: requeue in: 0s, retrying in 30s seconds
+2025-11-17T09:36:53.337776950Z I1117 09:36:53.337091       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:36:53.337776950Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:53.337776950Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:36:53.337776950Z I1117 09:36:53.337156       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.337776950Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:53.337776950Z 2025/11/17 09:36:53 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:36:53.344253862Z I1117 09:36:53.343850       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:36:53.344253862Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:53.344253862Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:53.344253862Z I1117 09:36:53.343907       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.344253862Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:53.344253862Z 2025/11/17 09:36:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:53.344253862Z I1117 09:36:53.343973       1 controller.go:426] hlxcl51-5vf88-XXXXXX-0-qk9w5: going into phase "Running"
+2025-11-17T09:36:53.354757021Z I1117 09:36:53.354700       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:36:53.354757021Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:36:53.354757021Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:36:53.354757021Z I1117 09:36:53.354738       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.354757021Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:36:53.354910474Z 2025/11/17 09:36:53 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:36:53.362419326Z I1117 09:36:53.362376       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:36:53.362419326Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:53.362442967Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:53.362442967Z I1117 09:36:53.362434       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.362442967Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:53.362511880Z 2025/11/17 09:36:53 Setting ProviderID baremetalhost:///openshift-machine-api/XXXXXX0/95cbd55d-19ca-47db-9d26-8c5b40b04877 for node XXXXXX0.
+2025-11-17T09:36:53.368277360Z E1117 09:36:53.368229       1 controller.go:307] hlxcl51-5vf88-XXXXXX-0: error updating machine: requeue in: 0s, retrying in 30s seconds
+2025-11-17T09:36:53.375531759Z I1117 09:36:53.375278       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:36:53.375531759Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:53.375531759Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:53.375531759Z I1117 09:36:53.375321       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.375531759Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:53.375531759Z 2025/11/17 09:36:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:53.388570739Z I1117 09:36:53.388533       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:36:53.388570739Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:53.388570739Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:53.388595727Z I1117 09:36:53.388573       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.388595727Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:53.388675776Z 2025/11/17 09:36:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:53.388675776Z I1117 09:36:53.388657       1 controller.go:426] hlxcl51-5vf88-XXXXXX-0-csjwc: going into phase "Running"
+2025-11-17T09:36:53.399089237Z I1117 09:36:53.399056       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:36:53.399089237Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:53.399113348Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:53.399113348Z I1117 09:36:53.399099       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.399113348Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:53.399162658Z 2025/11/17 09:36:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:53.399167832Z I1117 09:36:53.399163       1 controller.go:426] hlxcl51-5vf88-XXXXXX-0: going into phase "Running"
+2025-11-17T09:36:53.406375360Z I1117 09:36:53.405956       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:36:53.406375360Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:53.406375360Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:53.406375360Z I1117 09:36:53.405994       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.406375360Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:53.406375360Z 2025/11/17 09:36:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:53.412136007Z I1117 09:36:53.412110       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:36:53.412136007Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:53.412155342Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:53.412155342Z I1117 09:36:53.412146       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.412155342Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:53.412729763Z 2025/11/17 09:36:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:53.971451711Z I1117 09:36:53.971417       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:36:53.971499231Z 2025/11/17 09:36:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:53.971537469Z 2025/11/17 09:36:53 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:53.971560143Z I1117 09:36:53.971553       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:36:53.971573399Z 2025/11/17 09:36:53 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:53.971665521Z 2025/11/17 09:36:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:57.303615752Z I1117 09:36:57.303570       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:36:57.303667566Z 2025/11/17 09:36:57 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:57.303774684Z 2025/11/17 09:36:57 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:57.303813308Z I1117 09:36:57.303804       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:36:57.303843876Z 2025/11/17 09:36:57 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:57.303954752Z 2025/11/17 09:36:57 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:57.311629624Z I1117 09:36:57.311586       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:36:57.311720107Z 2025/11/17 09:36:57 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:57.311771201Z 2025/11/17 09:36:57 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:57.311801845Z I1117 09:36:57.311792       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:36:57.311821328Z 2025/11/17 09:36:57 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:57.311947136Z 2025/11/17 09:36:57 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:57.324415696Z I1117 09:36:57.324371       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:36:57.324465631Z 2025/11/17 09:36:57 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:57.324505063Z 2025/11/17 09:36:57 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:57.324533928Z I1117 09:36:57.324524       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:36:57.324553063Z 2025/11/17 09:36:57 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:57.324660176Z 2025/11/17 09:36:57 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:58.848950017Z I1117 09:36:58.848906       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:36:58.848950017Z 2025/11/17 09:36:58 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:58.848989272Z 2025/11/17 09:36:58 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:36:58.848989272Z I1117 09:36:58.848969       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:36:58.848989272Z 2025/11/17 09:36:58 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:58.849091919Z 2025/11/17 09:36:58 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:36:58.863014417Z I1117 09:36:58.862125       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:36:58.863014417Z 2025/11/17 09:36:58 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:58.863014417Z 2025/11/17 09:36:58 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:36:58.863014417Z I1117 09:36:58.862175       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:36:58.863014417Z 2025/11/17 09:36:58 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:58.863014417Z 2025/11/17 09:36:58 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:36:58.869649366Z I1117 09:36:58.869613       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:36:58.869649366Z 2025/11/17 09:36:58 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:58.869680785Z 2025/11/17 09:36:58 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:36:58.869680785Z I1117 09:36:58.869658       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:36:58.869680785Z 2025/11/17 09:36:58 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:36:58.870750413Z 2025/11/17 09:36:58 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:37:14.564286669Z I1117 09:37:14.563817       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:37:14.564286669Z 2025/11/17 09:37:14 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:37:14.564286669Z 2025/11/17 09:37:14 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:37:14.564286669Z I1117 09:37:14.563875       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:37:14.564286669Z 2025/11/17 09:37:14 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:37:14.564286669Z 2025/11/17 09:37:14 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:37:15.886859023Z I1117 09:37:15.886789       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:37:15.886859023Z 2025/11/17 09:37:15 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:37:15.886859023Z 2025/11/17 09:37:15 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:37:15.886895948Z I1117 09:37:15.886847       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:37:15.886895948Z 2025/11/17 09:37:15 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:37:15.886954540Z 2025/11/17 09:37:15 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:37:19.093410012Z I1117 09:37:19.092944       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:37:19.093410012Z 2025/11/17 09:37:19 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:37:19.093410012Z 2025/11/17 09:37:19 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:37:19.093410012Z I1117 09:37:19.092993       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:37:19.093410012Z 2025/11/17 09:37:19 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:37:19.093410012Z 2025/11/17 09:37:19 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:37:19.578992177Z I1117 09:37:19.578949       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:37:19.579599404Z 2025/11/17 09:37:19 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:37:19.579655036Z 2025/11/17 09:37:19 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:37:19.579708725Z I1117 09:37:19.579677       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:37:19.579730013Z 2025/11/17 09:37:19 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:37:19.579814403Z 2025/11/17 09:37:19 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:37:20.898887525Z I1117 09:37:20.898733       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:37:20.898887525Z 2025/11/17 09:37:20 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:37:20.898887525Z 2025/11/17 09:37:20 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:37:20.898887525Z I1117 09:37:20.898792       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:37:20.898887525Z 2025/11/17 09:37:20 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:37:20.898926293Z 2025/11/17 09:37:20 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:37:22.278169155Z I1117 09:37:22.277957       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:37:22.278169155Z 2025/11/17 09:37:22 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:37:22.278169155Z 2025/11/17 09:37:22 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:37:22.278169155Z I1117 09:37:22.278016       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:37:22.278169155Z 2025/11/17 09:37:22 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:37:22.278169155Z 2025/11/17 09:37:22 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:37:24.105598232Z I1117 09:37:24.105549       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:37:24.105598232Z 2025/11/17 09:37:24 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:37:24.105624653Z 2025/11/17 09:37:24 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:37:24.105624653Z I1117 09:37:24.105612       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:37:24.105624653Z 2025/11/17 09:37:24 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:37:24.105738368Z 2025/11/17 09:37:24 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:37:24.582896118Z I1117 09:37:24.582828       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:37:24.582896118Z 2025/11/17 09:37:24 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:37:24.582896118Z 2025/11/17 09:37:24 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:37:24.582928198Z I1117 09:37:24.582894       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:37:24.582928198Z 2025/11/17 09:37:24 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:37:24.585917428Z 2025/11/17 09:37:24 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:37:25.903332623Z I1117 09:37:25.903210       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:37:25.903332623Z 2025/11/17 09:37:25 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:37:25.903332623Z 2025/11/17 09:37:25 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:37:25.903332623Z I1117 09:37:25.903327       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:37:25.903369255Z 2025/11/17 09:37:25 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:37:25.903433749Z 2025/11/17 09:37:25 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:37:29.108933679Z I1117 09:37:29.108877       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:37:29.108933679Z 2025/11/17 09:37:29 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:37:29.108933679Z 2025/11/17 09:37:29 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:37:29.108968948Z I1117 09:37:29.108942       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:37:29.108968948Z 2025/11/17 09:37:29 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:37:29.109042860Z 2025/11/17 09:37:29 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:37:39.823765082Z I1117 09:37:39.823672       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:37:39.823765082Z 2025/11/17 09:37:39 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:37:39.823765082Z 2025/11/17 09:37:39 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:37:39.823765082Z I1117 09:37:39.823750       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:37:39.823765082Z 2025/11/17 09:37:39 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:37:39.823830975Z 2025/11/17 09:37:39 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:37:50.768363195Z I1117 09:37:50.768301       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:37:50.768363195Z 2025/11/17 09:37:50 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:37:50.768363195Z 2025/11/17 09:37:50 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:37:50.768363195Z I1117 09:37:50.768352       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:37:50.768363195Z 2025/11/17 09:37:50 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:37:50.768426761Z 2025/11/17 09:37:50 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:37:51.738246944Z I1117 09:37:51.738156       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:37:51.738246944Z 2025/11/17 09:37:51 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:37:51.738246944Z 2025/11/17 09:37:51 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:37:51.738246944Z I1117 09:37:51.738206       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:37:51.738246944Z 2025/11/17 09:37:51 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:37:51.738289835Z 2025/11/17 09:37:51 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:37:52.081847722Z I1117 09:37:52.081736       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:37:52.081847722Z 2025/11/17 09:37:52 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:37:52.081847722Z 2025/11/17 09:37:52 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:37:52.081847722Z I1117 09:37:52.081786       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:37:52.081847722Z 2025/11/17 09:37:52 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:37:52.081872204Z 2025/11/17 09:37:52 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:37:57.992851004Z I1117 09:37:57.992788       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:37:57.992851004Z 2025/11/17 09:37:57 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:37:57.992851004Z 2025/11/17 09:37:57 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:37:57.992898124Z I1117 09:37:57.992857       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:37:57.992898124Z 2025/11/17 09:37:57 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:37:57.992949767Z 2025/11/17 09:37:57 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:37:58.028749187Z I1117 09:37:58.028124       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:37:58.028749187Z 2025/11/17 09:37:58 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:37:58.028749187Z 2025/11/17 09:37:58 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:37:58.028749187Z I1117 09:37:58.028188       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:37:58.028749187Z 2025/11/17 09:37:58 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:37:58.028749187Z 2025/11/17 09:37:58 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:37:58.340565211Z I1117 09:37:58.340518       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:37:58.340565211Z 2025/11/17 09:37:58 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:37:58.340583686Z 2025/11/17 09:37:58 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:37:58.340583686Z I1117 09:37:58.340576       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:37:58.340583686Z 2025/11/17 09:37:58 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:37:58.340679052Z 2025/11/17 09:37:58 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:00.315507745Z I1117 09:38:00.314502       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:38:00.315507745Z 2025/11/17 09:38:00 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:00.315507745Z 2025/11/17 09:38:00 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:00.315507745Z I1117 09:38:00.314558       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:38:00.315507745Z 2025/11/17 09:38:00 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:00.315507745Z 2025/11/17 09:38:00 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:03.147091091Z I1117 09:38:03.147042       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:38:03.147091091Z 2025/11/17 09:38:03 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:38:03.147091091Z 2025/11/17 09:38:03 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:38:03.147123255Z I1117 09:38:03.147095       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:38:03.147123255Z 2025/11/17 09:38:03 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:38:03.147198073Z 2025/11/17 09:38:03 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:38:05.179216865Z I1117 09:38:05.179101       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:05.179216865Z 2025/11/17 09:38:05 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:05.179216865Z 2025/11/17 09:38:05 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:05.179216865Z I1117 09:38:05.179149       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:05.179216865Z 2025/11/17 09:38:05 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:05.179262300Z 2025/11/17 09:38:05 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:07.362742447Z I1117 09:38:07.362621       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:07.362742447Z 2025/11/17 09:38:07 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:07.362742447Z 2025/11/17 09:38:07 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:07.362742447Z I1117 09:38:07.362678       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:07.362742447Z 2025/11/17 09:38:07 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:07.363468361Z 2025/11/17 09:38:07 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:07.807701176Z I1117 09:38:07.807617       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:07.807701176Z 2025/11/17 09:38:07 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:07.807701176Z 2025/11/17 09:38:07 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:07.807779954Z I1117 09:38:07.807663       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:07.807779954Z 2025/11/17 09:38:07 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:07.807779954Z 2025/11/17 09:38:07 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:07.931800177Z I1117 09:38:07.930854       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:38:07.931800177Z 2025/11/17 09:38:07 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:07.931800177Z 2025/11/17 09:38:07 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:07.931800177Z I1117 09:38:07.930907       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:38:07.931800177Z 2025/11/17 09:38:07 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:07.931800177Z 2025/11/17 09:38:07 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:08.386679726Z I1117 09:38:08.385136       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:08.386679726Z 2025/11/17 09:38:08 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:08.386679726Z 2025/11/17 09:38:08 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:08.386679726Z I1117 09:38:08.385201       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:08.386679726Z 2025/11/17 09:38:08 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:08.386679726Z 2025/11/17 09:38:08 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:08.509152235Z I1117 09:38:08.509083       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:38:08.509152235Z 2025/11/17 09:38:08 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:08.509152235Z 2025/11/17 09:38:08 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:08.509205448Z I1117 09:38:08.509148       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:38:08.509205448Z 2025/11/17 09:38:08 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:08.509286079Z 2025/11/17 09:38:08 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:09.515958076Z I1117 09:38:09.515772       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:09.515958076Z 2025/11/17 09:38:09 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:09.515958076Z 2025/11/17 09:38:09 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:09.515958076Z I1117 09:38:09.515852       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:09.515958076Z 2025/11/17 09:38:09 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:09.515993367Z 2025/11/17 09:38:09 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:10.092312892Z I1117 09:38:10.092257       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:10.092312892Z 2025/11/17 09:38:10 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:10.092312892Z 2025/11/17 09:38:10 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:10.092345352Z I1117 09:38:10.092322       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:10.092345352Z 2025/11/17 09:38:10 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:10.092435331Z 2025/11/17 09:38:10 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:21.534032867Z I1117 09:38:21.533722       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:21.534283151Z 2025/11/17 09:38:21 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:21.534366425Z 2025/11/17 09:38:21 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:21.534411277Z I1117 09:38:21.534399       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:21.534434471Z 2025/11/17 09:38:21 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:21.534581473Z 2025/11/17 09:38:21 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:21.714844071Z I1117 09:38:21.714503       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:21.714844071Z 2025/11/17 09:38:21 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:21.714844071Z 2025/11/17 09:38:21 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:21.714844071Z I1117 09:38:21.714579       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:21.714844071Z 2025/11/17 09:38:21 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:21.714844071Z 2025/11/17 09:38:21 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:22.698652520Z I1117 09:38:22.698019       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:22.698652520Z 2025/11/17 09:38:22 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:22.698652520Z 2025/11/17 09:38:22 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:22.698652520Z I1117 09:38:22.698065       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:22.698652520Z 2025/11/17 09:38:22 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:22.698652520Z 2025/11/17 09:38:22 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:22.819332457Z I1117 09:38:22.819279       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:22.819332457Z 2025/11/17 09:38:22 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:22.819332457Z 2025/11/17 09:38:22 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:22.819332457Z I1117 09:38:22.819322       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:22.819332457Z 2025/11/17 09:38:22 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:22.819395587Z 2025/11/17 09:38:22 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:23.114701021Z I1117 09:38:23.114344       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:38:23.114701021Z 2025/11/17 09:38:23 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:23.114701021Z 2025/11/17 09:38:23 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:23.114701021Z I1117 09:38:23.114447       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:38:23.114701021Z 2025/11/17 09:38:23 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:23.114701021Z 2025/11/17 09:38:23 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:23.243067131Z I1117 09:38:23.243008       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:38:23.243067131Z 2025/11/17 09:38:23 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:23.243100295Z 2025/11/17 09:38:23 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:23.243100295Z I1117 09:38:23.243094       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:38:23.243100295Z 2025/11/17 09:38:23 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:23.243286330Z 2025/11/17 09:38:23 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:23.631826420Z I1117 09:38:23.631777       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:38:23.631826420Z 2025/11/17 09:38:23 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:23.631856134Z 2025/11/17 09:38:23 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:23.631856134Z I1117 09:38:23.631849       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:38:23.631856134Z 2025/11/17 09:38:23 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:23.631975887Z 2025/11/17 09:38:23 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:24.302404669Z I1117 09:38:24.301422       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:38:24.302404669Z 2025/11/17 09:38:24 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:24.302404669Z 2025/11/17 09:38:24 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:24.302404669Z I1117 09:38:24.301484       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:38:24.302404669Z 2025/11/17 09:38:24 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:24.302404669Z 2025/11/17 09:38:24 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:26.720006155Z I1117 09:38:26.719609       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:26.720006155Z 2025/11/17 09:38:26 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:26.720006155Z 2025/11/17 09:38:26 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:26.720006155Z I1117 09:38:26.719665       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:26.720006155Z 2025/11/17 09:38:26 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:26.720006155Z 2025/11/17 09:38:26 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:27.711652654Z I1117 09:38:27.711603       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:27.711652654Z 2025/11/17 09:38:27 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:27.712049590Z 2025/11/17 09:38:27 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:27.712049590Z I1117 09:38:27.711678       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:27.712049590Z 2025/11/17 09:38:27 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:27.712049590Z 2025/11/17 09:38:27 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:30.273305645Z I1117 09:38:30.273256       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:30.273305645Z 2025/11/17 09:38:30 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:30.273305645Z 2025/11/17 09:38:30 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:30.273347196Z I1117 09:38:30.273309       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:30.273347196Z 2025/11/17 09:38:30 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:30.273385598Z 2025/11/17 09:38:30 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:31.539642571Z I1117 09:38:31.539592       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:31.539642571Z 2025/11/17 09:38:31 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:31.539668726Z 2025/11/17 09:38:31 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:31.539668726Z I1117 09:38:31.539657       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:31.539668726Z 2025/11/17 09:38:31 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:31.539808680Z 2025/11/17 09:38:31 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:31.750267438Z I1117 09:38:31.748590       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:31.750267438Z 2025/11/17 09:38:31 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:31.750267438Z 2025/11/17 09:38:31 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:31.750267438Z I1117 09:38:31.748657       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:31.750267438Z 2025/11/17 09:38:31 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:31.750267438Z 2025/11/17 09:38:31 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:32.722941416Z I1117 09:38:32.722893       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:32.723010297Z 2025/11/17 09:38:32 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:32.723054357Z 2025/11/17 09:38:32 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:32.723084717Z I1117 09:38:32.723075       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:32.723101596Z 2025/11/17 09:38:32 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:32.723190764Z 2025/11/17 09:38:32 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:34.840796658Z I1117 09:38:34.840716       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:34.840796658Z 2025/11/17 09:38:34 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:34.840796658Z 2025/11/17 09:38:34 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:34.840843024Z I1117 09:38:34.840799       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:34.840843024Z 2025/11/17 09:38:34 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:34.840918699Z 2025/11/17 09:38:34 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:34.860476325Z I1117 09:38:34.859055       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:34.860476325Z 2025/11/17 09:38:34 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:34.860476325Z 2025/11/17 09:38:34 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:34.860476325Z I1117 09:38:34.859123       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:34.860476325Z 2025/11/17 09:38:34 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:34.860476325Z 2025/11/17 09:38:34 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:38.981712732Z I1117 09:38:38.981609       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:38.981712732Z 2025/11/17 09:38:38 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:38.981766039Z 2025/11/17 09:38:38 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:38.981766039Z I1117 09:38:38.981741       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:38.981766039Z 2025/11/17 09:38:38 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:38.982137062Z 2025/11/17 09:38:38 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:39.507263986Z I1117 09:38:39.507205       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:39.507263986Z 2025/11/17 09:38:39 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:39.507311115Z 2025/11/17 09:38:39 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:39.507311115Z I1117 09:38:39.507288       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:39.507311115Z 2025/11/17 09:38:39 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:39.507456388Z 2025/11/17 09:38:39 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:43.998711363Z I1117 09:38:43.998651       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:43.998711363Z 2025/11/17 09:38:43 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:43.998711363Z 2025/11/17 09:38:43 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:43.998751775Z I1117 09:38:43.998716       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:43.998751775Z 2025/11/17 09:38:43 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:43.998816729Z 2025/11/17 09:38:43 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:44.521379913Z I1117 09:38:44.521311       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:44.521379913Z 2025/11/17 09:38:44 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:44.521379913Z 2025/11/17 09:38:44 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:44.521379913Z I1117 09:38:44.521363       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:44.521379913Z 2025/11/17 09:38:44 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:44.521470297Z 2025/11/17 09:38:44 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:48.995836279Z I1117 09:38:48.995754       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:48.995836279Z 2025/11/17 09:38:48 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:48.995836279Z 2025/11/17 09:38:48 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:48.995836279Z I1117 09:38:48.995816       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:48.995836279Z 2025/11/17 09:38:48 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:48.995925068Z 2025/11/17 09:38:48 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:49.531074232Z I1117 09:38:49.531028       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:49.531074232Z 2025/11/17 09:38:49 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:49.531074232Z 2025/11/17 09:38:49 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:49.531112974Z I1117 09:38:49.531082       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:49.531112974Z 2025/11/17 09:38:49 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:49.531162725Z 2025/11/17 09:38:49 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:51.971240719Z I1117 09:38:51.971202       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:38:51.971289882Z 2025/11/17 09:38:51 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:51.971338538Z 2025/11/17 09:38:51 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:38:51.971363900Z I1117 09:38:51.971357       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:38:51.971380897Z 2025/11/17 09:38:51 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:51.971543766Z 2025/11/17 09:38:51 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:38:53.602209015Z I1117 09:38:53.601554       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:38:53.602209015Z 2025/11/17 09:38:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:53.602209015Z 2025/11/17 09:38:53 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:38:53.602209015Z I1117 09:38:53.601656       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:38:53.602209015Z 2025/11/17 09:38:53 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:53.602209015Z 2025/11/17 09:38:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:38:53.680254605Z I1117 09:38:53.680130       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:38:53.680254605Z 2025/11/17 09:38:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:53.680254605Z 2025/11/17 09:38:53 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:53.680254605Z I1117 09:38:53.680245       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:38:53.680254605Z 2025/11/17 09:38:53 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:53.680387230Z 2025/11/17 09:38:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:54.009929072Z I1117 09:38:54.009887       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:38:54.009929072Z 2025/11/17 09:38:54 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:54.009956797Z 2025/11/17 09:38:54 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:54.009956797Z I1117 09:38:54.009946       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:38:54.009956797Z 2025/11/17 09:38:54 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:54.010049570Z 2025/11/17 09:38:54 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:57.304171856Z I1117 09:38:57.304112       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:38:57.304171856Z 2025/11/17 09:38:57 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:57.304171856Z 2025/11/17 09:38:57 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:57.304224445Z I1117 09:38:57.304176       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:38:57.304224445Z 2025/11/17 09:38:57 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:57.304293687Z 2025/11/17 09:38:57 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:59.021402047Z I1117 09:38:59.021338       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:38:59.021402047Z 2025/11/17 09:38:59 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:59.021402047Z 2025/11/17 09:38:59 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:38:59.021402047Z I1117 09:38:59.021392       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:38:59.021402047Z 2025/11/17 09:38:59 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:38:59.021477386Z 2025/11/17 09:38:59 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:39:04.630283130Z I1117 09:39:04.630215       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:39:04.630381466Z 2025/11/17 09:39:04 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:39:04.630497411Z 2025/11/17 09:39:04 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:39:04.630559508Z I1117 09:39:04.630549       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:39:04.630621748Z 2025/11/17 09:39:04 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:39:04.630796935Z 2025/11/17 09:39:04 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:39:05.057037798Z I1117 09:39:05.056944       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:39:05.057037798Z 2025/11/17 09:39:05 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:39:05.057037798Z 2025/11/17 09:39:05 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:39:05.057037798Z I1117 09:39:05.057010       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:39:05.057037798Z 2025/11/17 09:39:05 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:39:05.057121557Z 2025/11/17 09:39:05 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:39:10.070468159Z I1117 09:39:10.070205       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:39:10.070468159Z 2025/11/17 09:39:10 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:39:10.070468159Z 2025/11/17 09:39:10 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:39:10.070468159Z I1117 09:39:10.070294       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:39:10.070468159Z 2025/11/17 09:39:10 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:39:10.070468159Z 2025/11/17 09:39:10 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:39:11.689787651Z I1117 09:39:11.689577       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:39:11.689787651Z 2025/11/17 09:39:11 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:39:11.689787651Z 2025/11/17 09:39:11 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:39:11.689787651Z I1117 09:39:11.689642       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:39:11.689787651Z 2025/11/17 09:39:11 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:39:11.689787651Z 2025/11/17 09:39:11 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:39:15.073561174Z I1117 09:39:15.073494       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:39:15.073561174Z 2025/11/17 09:39:15 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:39:15.073561174Z 2025/11/17 09:39:15 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:39:15.073561174Z I1117 09:39:15.073554       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:39:15.073606169Z 2025/11/17 09:39:15 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:39:15.073735178Z 2025/11/17 09:39:15 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:39:22.591943104Z I1117 09:39:22.591881       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:39:22.591943104Z 2025/11/17 09:39:22 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:39:22.591943104Z 2025/11/17 09:39:22 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:39:22.591992668Z I1117 09:39:22.591952       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:39:22.591992668Z 2025/11/17 09:39:22 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:39:22.592081812Z 2025/11/17 09:39:22 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:39:24.123516360Z I1117 09:39:24.123464       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:39:24.123561978Z 2025/11/17 09:39:24 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:39:24.123615154Z 2025/11/17 09:39:24 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:39:24.123650572Z I1117 09:39:24.123640       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:39:24.123669731Z 2025/11/17 09:39:24 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:39:24.123850528Z 2025/11/17 09:39:24 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:39:24.244801833Z I1117 09:39:24.244739       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:39:24.244865895Z 2025/11/17 09:39:24 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:39:24.244927132Z 2025/11/17 09:39:24 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:39:24.244971614Z I1117 09:39:24.244962       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:39:24.244992103Z 2025/11/17 09:39:24 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:39:24.245129371Z 2025/11/17 09:39:24 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:39:53.544005273Z I1117 09:39:53.543091       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:39:53.544005273Z 2025/11/17 09:39:53 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:39:53.544005273Z 2025/11/17 09:39:53 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:39:53.544005273Z I1117 09:39:53.543143       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:39:53.544005273Z 2025/11/17 09:39:53 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:39:53.544005273Z 2025/11/17 09:39:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:39:54.848168794Z I1117 09:39:54.848108       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:39:54.848168794Z 2025/11/17 09:39:54 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:39:54.848168794Z 2025/11/17 09:39:54 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:39:54.848168794Z I1117 09:39:54.848159       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:39:54.848168794Z 2025/11/17 09:39:54 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:39:54.848385576Z 2025/11/17 09:39:54 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:39:54.890558778Z I1117 09:39:54.890504       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:39:54.890558778Z 2025/11/17 09:39:54 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:39:54.890558778Z 2025/11/17 09:39:54 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:39:54.890601822Z I1117 09:39:54.890563       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:39:54.890601822Z 2025/11/17 09:39:54 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:39:54.890742683Z 2025/11/17 09:39:54 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:44:10.673176123Z I1117 09:44:10.673086       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:44:10.673176123Z 2025/11/17 09:44:10 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:44:10.673176123Z 2025/11/17 09:44:10 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:44:10.673232927Z I1117 09:44:10.673183       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:44:10.673232927Z 2025/11/17 09:44:10 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:44:10.674598524Z 2025/11/17 09:44:10 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:44:18.464159011Z I1117 09:44:18.464064       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:44:18.464159011Z 2025/11/17 09:44:18 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:44:18.464159011Z 2025/11/17 09:44:18 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:44:18.464159011Z I1117 09:44:18.464138       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:44:18.464159011Z 2025/11/17 09:44:18 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:44:18.464267749Z 2025/11/17 09:44:18 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:44:59.302084232Z I1117 09:44:59.302001       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:44:59.302084232Z 2025/11/17 09:44:59 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:44:59.302084232Z 2025/11/17 09:44:59 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:44:59.302143684Z I1117 09:44:59.302082       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:44:59.302143684Z 2025/11/17 09:44:59 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:44:59.302217998Z 2025/11/17 09:44:59 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:44:59.886315842Z I1117 09:44:59.886192       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:44:59.886315842Z 2025/11/17 09:44:59 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:44:59.886315842Z 2025/11/17 09:44:59 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:44:59.886315842Z I1117 09:44:59.886246       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:44:59.886315842Z 2025/11/17 09:44:59 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:44:59.886409772Z 2025/11/17 09:44:59 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:45:00.328826090Z I1117 09:45:00.328767       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:45:00.328826090Z 2025/11/17 09:45:00 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:45:00.328826090Z 2025/11/17 09:45:00 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:45:00.328853013Z I1117 09:45:00.328840       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:45:00.328853013Z 2025/11/17 09:45:00 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:45:00.328967691Z 2025/11/17 09:45:00 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:49:16.325094154Z I1117 09:49:16.324998       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:49:16.325094154Z 2025/11/17 09:49:16 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:49:16.325094154Z 2025/11/17 09:49:16 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:49:16.325094154Z I1117 09:49:16.325054       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:49:16.325094154Z 2025/11/17 09:49:16 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:49:16.325227371Z 2025/11/17 09:49:16 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:49:24.676639565Z I1117 09:49:24.676597       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:49:24.676639565Z 2025/11/17 09:49:24 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:49:24.676663871Z 2025/11/17 09:49:24 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:49:24.676663871Z I1117 09:49:24.676660       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:49:24.676671747Z 2025/11/17 09:49:24 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:49:24.676824407Z 2025/11/17 09:49:24 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:49:55.992482057Z I1117 09:49:55.990795       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:49:55.992482057Z 2025/11/17 09:49:55 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:49:55.992482057Z 2025/11/17 09:49:55 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:49:55.992482057Z I1117 09:49:55.990865       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:49:55.992482057Z 2025/11/17 09:49:55 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:49:55.992482057Z 2025/11/17 09:49:55 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:49:56.014330921Z I1117 09:49:56.014278       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:49:56.014330921Z 2025/11/17 09:49:56 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:49:56.014330921Z 2025/11/17 09:49:56 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:49:56.014330921Z I1117 09:49:56.014322       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:49:56.014330921Z 2025/11/17 09:49:56 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:49:56.014402488Z 2025/11/17 09:49:56 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:49:56.022377538Z I1117 09:49:56.022319       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:49:56.022377538Z 2025/11/17 09:49:56 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:49:56.022377538Z 2025/11/17 09:49:56 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:49:56.022416962Z I1117 09:49:56.022374       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:49:56.022416962Z 2025/11/17 09:49:56 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:49:56.022513254Z 2025/11/17 09:49:56 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:49:56.029831391Z I1117 09:49:56.029774       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:49:56.029831391Z 2025/11/17 09:49:56 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:49:56.029831391Z 2025/11/17 09:49:56 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:49:56.029831391Z I1117 09:49:56.029813       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:49:56.029831391Z 2025/11/17 09:49:56 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:49:56.029926138Z 2025/11/17 09:49:56 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:49:56.038613989Z I1117 09:49:56.038549       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:49:56.038613989Z 2025/11/17 09:49:56 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:49:56.038613989Z 2025/11/17 09:49:56 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:49:56.038613989Z I1117 09:49:56.038603       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:49:56.038613989Z 2025/11/17 09:49:56 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:49:56.038763404Z 2025/11/17 09:49:56 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:49:56.680416359Z I1117 09:49:56.680360       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:49:56.680416359Z 2025/11/17 09:49:56 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:49:56.680467772Z 2025/11/17 09:49:56 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:49:56.680467772Z I1117 09:49:56.680427       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:49:56.680467772Z 2025/11/17 09:49:56 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:49:56.680527518Z 2025/11/17 09:49:56 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:49:56.696856594Z I1117 09:49:56.696786       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:49:56.696856594Z 2025/11/17 09:49:56 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:49:56.696856594Z 2025/11/17 09:49:56 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:49:56.696856594Z I1117 09:49:56.696831       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:49:56.696856594Z 2025/11/17 09:49:56 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:49:56.696936449Z 2025/11/17 09:49:56 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:49:56.707555548Z I1117 09:49:56.707494       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:49:56.707555548Z 2025/11/17 09:49:56 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:49:56.707612033Z 2025/11/17 09:49:56 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:49:56.707612033Z I1117 09:49:56.707573       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:49:56.707612033Z 2025/11/17 09:49:56 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:49:56.707672574Z 2025/11/17 09:49:56 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:49:56.717524744Z I1117 09:49:56.717404       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:49:56.717524744Z 2025/11/17 09:49:56 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:49:56.717524744Z 2025/11/17 09:49:56 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:49:56.717524744Z I1117 09:49:56.717459       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:49:56.717524744Z 2025/11/17 09:49:56 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:49:56.717561395Z 2025/11/17 09:49:56 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:49:56.725580410Z I1117 09:49:56.725530       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:49:56.725580410Z 2025/11/17 09:49:56 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:49:56.725580410Z 2025/11/17 09:49:56 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:49:56.725608340Z I1117 09:49:56.725584       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:49:56.725608340Z 2025/11/17 09:49:56 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:49:56.725681628Z 2025/11/17 09:49:56 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:49:59.279750436Z I1117 09:49:59.276676       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:49:59.279750436Z 2025/11/17 09:49:59 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:49:59.279750436Z 2025/11/17 09:49:59 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:49:59.279750436Z I1117 09:49:59.276767       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:49:59.279750436Z 2025/11/17 09:49:59 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:49:59.279750436Z 2025/11/17 09:49:59 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:49:59.289746025Z I1117 09:49:59.288927       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:49:59.289746025Z 2025/11/17 09:49:59 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:49:59.289746025Z 2025/11/17 09:49:59 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:49:59.289746025Z I1117 09:49:59.289020       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:49:59.289746025Z 2025/11/17 09:49:59 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:49:59.289746025Z 2025/11/17 09:49:59 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:49:59.300735207Z I1117 09:49:59.300361       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:49:59.300735207Z 2025/11/17 09:49:59 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:49:59.300735207Z 2025/11/17 09:49:59 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:49:59.300735207Z I1117 09:49:59.300423       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:49:59.300735207Z 2025/11/17 09:49:59 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:49:59.300735207Z 2025/11/17 09:49:59 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:49:59.308932818Z I1117 09:49:59.308876       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:49:59.308932818Z 2025/11/17 09:49:59 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:49:59.308960507Z 2025/11/17 09:49:59 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:49:59.308960507Z I1117 09:49:59.308944       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:49:59.308960507Z 2025/11/17 09:49:59 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:49:59.309096831Z 2025/11/17 09:49:59 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:49:59.317297217Z I1117 09:49:59.317146       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:49:59.317297217Z 2025/11/17 09:49:59 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:49:59.317297217Z 2025/11/17 09:49:59 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:49:59.317297217Z I1117 09:49:59.317224       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:49:59.317297217Z 2025/11/17 09:49:59 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:49:59.317372399Z 2025/11/17 09:49:59 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:04.452005724Z I1117 09:50:04.451932       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:50:04.452005724Z 2025/11/17 09:50:04 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:04.452005724Z 2025/11/17 09:50:04 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:04.452057152Z I1117 09:50:04.452014       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:50:04.452057152Z 2025/11/17 09:50:04 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:04.452162368Z 2025/11/17 09:50:04 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:04.466584165Z I1117 09:50:04.466519       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:50:04.466584165Z 2025/11/17 09:50:04 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:50:04.466620540Z 2025/11/17 09:50:04 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:50:04.466629671Z I1117 09:50:04.466619       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:50:04.466629671Z 2025/11/17 09:50:04 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:50:04.466795054Z 2025/11/17 09:50:04 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:50:04.481849699Z I1117 09:50:04.479160       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:50:04.481849699Z 2025/11/17 09:50:04 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:04.481849699Z 2025/11/17 09:50:04 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:04.481849699Z I1117 09:50:04.479231       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:50:04.481849699Z 2025/11/17 09:50:04 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:04.481849699Z 2025/11/17 09:50:04 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:05.047336825Z I1117 09:50:05.047284       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:05.047401451Z 2025/11/17 09:50:05 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:05.047465171Z 2025/11/17 09:50:05 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:05.047507140Z I1117 09:50:05.047494       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:05.047543265Z 2025/11/17 09:50:05 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:05.047704383Z 2025/11/17 09:50:05 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:05.247681143Z I1117 09:50:05.247623       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:50:05.247803012Z 2025/11/17 09:50:05 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:05.247877858Z 2025/11/17 09:50:05 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:05.247922132Z I1117 09:50:05.247909       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:50:05.247950103Z 2025/11/17 09:50:05 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:05.248102658Z 2025/11/17 09:50:05 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:05.478677650Z I1117 09:50:05.478132       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:50:05.478677650Z 2025/11/17 09:50:05 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:05.478677650Z 2025/11/17 09:50:05 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:05.478677650Z I1117 09:50:05.478196       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:50:05.478677650Z 2025/11/17 09:50:05 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:05.478677650Z 2025/11/17 09:50:05 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:05.956231640Z I1117 09:50:05.956177       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:50:05.956301986Z 2025/11/17 09:50:05 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:05.956360620Z 2025/11/17 09:50:05 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:05.956404424Z I1117 09:50:05.956392       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:50:05.956430862Z 2025/11/17 09:50:05 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:05.956563898Z 2025/11/17 09:50:05 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:06.047100563Z I1117 09:50:06.046989       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:50:06.047100563Z 2025/11/17 09:50:06 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:06.047100563Z 2025/11/17 09:50:06 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:06.047100563Z I1117 09:50:06.047070       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:50:06.047100563Z 2025/11/17 09:50:06 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:06.047203711Z 2025/11/17 09:50:06 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:06.059782776Z I1117 09:50:06.059608       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:06.059782776Z 2025/11/17 09:50:06 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:06.059782776Z 2025/11/17 09:50:06 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:06.059782776Z I1117 09:50:06.059673       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:06.059782776Z 2025/11/17 09:50:06 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:06.059821760Z 2025/11/17 09:50:06 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:06.846091413Z I1117 09:50:06.846047       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:06.846091413Z 2025/11/17 09:50:06 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:06.846119858Z 2025/11/17 09:50:06 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:06.846126310Z I1117 09:50:06.846120       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:06.846126310Z 2025/11/17 09:50:06 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:06.846240830Z 2025/11/17 09:50:06 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:08.017239259Z I1117 09:50:08.017181       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:50:08.017239259Z 2025/11/17 09:50:08 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:08.017239259Z 2025/11/17 09:50:08 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:08.017273376Z I1117 09:50:08.017241       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:50:08.017273376Z 2025/11/17 09:50:08 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:08.017351635Z 2025/11/17 09:50:08 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:09.471529564Z I1117 09:50:09.471179       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:50:09.471529564Z 2025/11/17 09:50:09 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:09.471529564Z 2025/11/17 09:50:09 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:09.471529564Z I1117 09:50:09.471254       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:50:09.471529564Z 2025/11/17 09:50:09 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:09.471529564Z 2025/11/17 09:50:09 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:10.058625333Z I1117 09:50:10.058553       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:10.058625333Z 2025/11/17 09:50:10 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:10.058625333Z 2025/11/17 09:50:10 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:10.058625333Z I1117 09:50:10.058600       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:10.058625333Z 2025/11/17 09:50:10 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:10.058704766Z 2025/11/17 09:50:10 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:10.338374741Z I1117 09:50:10.338319       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:10.338374741Z 2025/11/17 09:50:10 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:10.338374741Z 2025/11/17 09:50:10 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:10.338418219Z I1117 09:50:10.338379       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:10.338418219Z 2025/11/17 09:50:10 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:10.338482729Z 2025/11/17 09:50:10 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:18.202464589Z I1117 09:50:18.202164       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:18.202464589Z 2025/11/17 09:50:18 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:18.202464589Z 2025/11/17 09:50:18 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:18.202464589Z I1117 09:50:18.202228       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:18.202464589Z 2025/11/17 09:50:18 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:18.202464589Z 2025/11/17 09:50:18 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:21.227443801Z I1117 09:50:21.227359       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:50:21.227443801Z 2025/11/17 09:50:21 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:21.227443801Z 2025/11/17 09:50:21 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:21.227443801Z I1117 09:50:21.227429       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:50:21.227443801Z 2025/11/17 09:50:21 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:21.228002435Z 2025/11/17 09:50:21 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:23.220547058Z I1117 09:50:23.220265       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:23.220547058Z 2025/11/17 09:50:23 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:23.220547058Z 2025/11/17 09:50:23 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:23.220547058Z I1117 09:50:23.220329       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:23.220547058Z 2025/11/17 09:50:23 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:23.220547058Z 2025/11/17 09:50:23 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:26.242562007Z I1117 09:50:26.241719       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:50:26.242562007Z 2025/11/17 09:50:26 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:26.242562007Z 2025/11/17 09:50:26 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:26.242562007Z I1117 09:50:26.241853       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:50:26.242562007Z 2025/11/17 09:50:26 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:26.242562007Z 2025/11/17 09:50:26 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:28.220051614Z I1117 09:50:28.219648       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:28.220051614Z 2025/11/17 09:50:28 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:28.220051614Z 2025/11/17 09:50:28 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:28.220051614Z I1117 09:50:28.219732       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:28.220051614Z 2025/11/17 09:50:28 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:28.220051614Z 2025/11/17 09:50:28 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:30.533792660Z I1117 09:50:30.533361       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:30.533792660Z 2025/11/17 09:50:30 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:30.533792660Z 2025/11/17 09:50:30 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:30.533792660Z I1117 09:50:30.533408       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:30.533792660Z 2025/11/17 09:50:30 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:30.533792660Z 2025/11/17 09:50:30 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:31.244030422Z I1117 09:50:31.243974       1 controller.go:179] hlxcl51-5vf88-XXXXXX-1: reconciling Machine
+2025-11-17T09:50:31.244030422Z 2025/11/17 09:50:31 Checking if machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:31.244064203Z 2025/11/17 09:50:31 Machine hlxcl51-5vf88-XXXXXX-1 exists.
+2025-11-17T09:50:31.244064203Z I1117 09:50:31.244043       1 controller.go:305] hlxcl51-5vf88-XXXXXX-1: reconciling machine triggers idempotent update
+2025-11-17T09:50:31.244064203Z 2025/11/17 09:50:31 Updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:31.244175215Z 2025/11/17 09:50:31 Finished updating machine hlxcl51-5vf88-XXXXXX-1 .
+2025-11-17T09:50:33.234740877Z I1117 09:50:33.234494       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:50:33.234740877Z 2025/11/17 09:50:33 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:33.234740877Z 2025/11/17 09:50:33 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:33.234740877Z I1117 09:50:33.234568       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:50:33.234740877Z 2025/11/17 09:50:33 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:33.234740877Z 2025/11/17 09:50:33 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:36.262352832Z I1117 09:50:36.262278       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:50:36.262352832Z 2025/11/17 09:50:36 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:36.262352832Z 2025/11/17 09:50:36 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:36.262435785Z I1117 09:50:36.262347       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:50:36.262435785Z 2025/11/17 09:50:36 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:36.262586006Z 2025/11/17 09:50:36 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:36.798664351Z I1117 09:50:36.798438       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:50:36.798664351Z 2025/11/17 09:50:36 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:36.798664351Z 2025/11/17 09:50:36 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:36.798664351Z I1117 09:50:36.798505       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:50:36.798664351Z 2025/11/17 09:50:36 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:36.798664351Z 2025/11/17 09:50:36 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:38.254968823Z I1117 09:50:38.254913       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:50:38.254968823Z 2025/11/17 09:50:38 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:38.254968823Z 2025/11/17 09:50:38 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:38.255023979Z I1117 09:50:38.254974       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:50:38.255023979Z 2025/11/17 09:50:38 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:38.255081427Z 2025/11/17 09:50:38 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:39.767090313Z I1117 09:50:39.767034       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:50:39.767090313Z 2025/11/17 09:50:39 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:39.767090313Z 2025/11/17 09:50:39 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:39.767144815Z I1117 09:50:39.767099       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:50:39.767144815Z 2025/11/17 09:50:39 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:39.767621764Z 2025/11/17 09:50:39 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:41.283507023Z I1117 09:50:41.283439       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:50:41.283507023Z 2025/11/17 09:50:41 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:41.283507023Z 2025/11/17 09:50:41 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:41.283558015Z I1117 09:50:41.283498       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:50:41.283558015Z 2025/11/17 09:50:41 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:41.284346725Z 2025/11/17 09:50:41 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:46.838882248Z I1117 09:50:46.838749       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:50:46.838882248Z 2025/11/17 09:50:46 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:46.838882248Z 2025/11/17 09:50:46 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:46.838882248Z I1117 09:50:46.838835       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:50:46.838882248Z 2025/11/17 09:50:46 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:46.838981167Z 2025/11/17 09:50:46 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:50.174397174Z I1117 09:50:50.174332       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:50:50.174397174Z 2025/11/17 09:50:50 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:50.174397174Z 2025/11/17 09:50:50 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:50.174431278Z I1117 09:50:50.174402       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:50:50.174431278Z 2025/11/17 09:50:50 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:50.175704704Z 2025/11/17 09:50:50 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:51.850322301Z I1117 09:50:51.850264       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:50:51.850322301Z 2025/11/17 09:50:51 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:51.850322301Z 2025/11/17 09:50:51 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:51.850359366Z I1117 09:50:51.850325       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:50:51.850359366Z 2025/11/17 09:50:51 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:51.850400484Z 2025/11/17 09:50:51 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:53.768462155Z I1117 09:50:53.768396       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:53.768462155Z 2025/11/17 09:50:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:53.768462155Z 2025/11/17 09:50:53 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:53.768462155Z I1117 09:50:53.768454       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:53.768462155Z 2025/11/17 09:50:53 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:53.768570110Z 2025/11/17 09:50:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:53.783409352Z I1117 09:50:53.781479       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:53.783409352Z 2025/11/17 09:50:53 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:53.783409352Z 2025/11/17 09:50:53 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:53.783409352Z I1117 09:50:53.781538       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:53.783409352Z 2025/11/17 09:50:53 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:53.783409352Z 2025/11/17 09:50:53 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:55.187582662Z I1117 09:50:55.187532       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:50:55.187650178Z 2025/11/17 09:50:55 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:55.187712662Z 2025/11/17 09:50:55 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:50:55.187760053Z I1117 09:50:55.187750       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:50:55.187779944Z 2025/11/17 09:50:55 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:55.187931226Z 2025/11/17 09:50:55 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:50:56.857664055Z I1117 09:50:56.857588       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling Machine
+2025-11-17T09:50:56.857664055Z 2025/11/17 09:50:56 Checking if machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:56.857706383Z 2025/11/17 09:50:56 Machine hlxcl51-5vf88-XXXXXX-0-qk9w5 exists.
+2025-11-17T09:50:56.857715103Z I1117 09:50:56.857704       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-qk9w5: reconciling machine triggers idempotent update
+2025-11-17T09:50:56.857715103Z 2025/11/17 09:50:56 Updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:56.857861718Z 2025/11/17 09:50:56 Finished updating machine hlxcl51-5vf88-XXXXXX-0-qk9w5 .
+2025-11-17T09:50:56.984969726Z I1117 09:50:56.984927       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:56.985030155Z 2025/11/17 09:50:56 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:56.985077297Z 2025/11/17 09:50:56 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:56.985114028Z I1117 09:50:56.985105       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:56.985135944Z 2025/11/17 09:50:56 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:56.985274203Z 2025/11/17 09:50:56 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:58.783105014Z I1117 09:50:58.783023       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:50:58.783105014Z 2025/11/17 09:50:58 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:58.783105014Z 2025/11/17 09:50:58 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:50:58.783105014Z I1117 09:50:58.783086       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:50:58.783105014Z 2025/11/17 09:50:58 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:50:58.783215487Z 2025/11/17 09:50:58 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:51:00.193971920Z I1117 09:51:00.193916       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0: reconciling Machine
+2025-11-17T09:51:00.193971920Z 2025/11/17 09:51:00 Checking if machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:51:00.194009373Z 2025/11/17 09:51:00 Machine hlxcl51-5vf88-XXXXXX-0 exists.
+2025-11-17T09:51:00.194009373Z I1117 09:51:00.193987       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0: reconciling machine triggers idempotent update
+2025-11-17T09:51:00.194009373Z 2025/11/17 09:51:00 Updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:51:00.194107187Z 2025/11/17 09:51:00 Finished updating machine hlxcl51-5vf88-XXXXXX-0 .
+2025-11-17T09:51:04.814713773Z I1117 09:51:04.814655       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:51:04.814805324Z 2025/11/17 09:51:04 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:51:04.814847009Z 2025/11/17 09:51:04 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:51:04.814872971Z I1117 09:51:04.814865       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:51:04.814887105Z 2025/11/17 09:51:04 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:51:04.814978630Z 2025/11/17 09:51:04 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:51:05.214814920Z I1117 09:51:05.214651       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:51:05.214814920Z 2025/11/17 09:51:05 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:05.214814920Z 2025/11/17 09:51:05 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:05.214814920Z I1117 09:51:05.214739       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:51:05.214814920Z 2025/11/17 09:51:05 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:51:05.214894596Z 2025/11/17 09:51:05 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:51:08.678828816Z I1117 09:51:08.678765       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:51:08.678828816Z 2025/11/17 09:51:08 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:08.678869511Z 2025/11/17 09:51:08 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:08.678869511Z I1117 09:51:08.678844       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:51:08.678869511Z 2025/11/17 09:51:08 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:51:08.678963679Z 2025/11/17 09:51:08 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:51:09.836475590Z I1117 09:51:09.836425       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:51:09.837333881Z 2025/11/17 09:51:09 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:51:09.837429391Z 2025/11/17 09:51:09 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:51:09.837482746Z I1117 09:51:09.837469       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:51:09.837506770Z 2025/11/17 09:51:09 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:51:09.837628049Z 2025/11/17 09:51:09 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:51:10.230661323Z I1117 09:51:10.230603       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:51:10.230741285Z 2025/11/17 09:51:10 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:10.230788516Z 2025/11/17 09:51:10 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:10.230847970Z I1117 09:51:10.230835       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:51:10.230864652Z 2025/11/17 09:51:10 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:51:10.230962494Z 2025/11/17 09:51:10 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:51:14.829148499Z I1117 09:51:14.829092       1 controller.go:179] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling Machine
+2025-11-17T09:51:14.829241694Z 2025/11/17 09:51:14 Checking if machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:51:14.829291429Z 2025/11/17 09:51:14 Machine hlxcl51-5vf88-XXXXXX-0-csjwc exists.
+2025-11-17T09:51:14.829328674Z I1117 09:51:14.829318       1 controller.go:305] hlxcl51-5vf88-XXXXXX-0-csjwc: reconciling machine triggers idempotent update
+2025-11-17T09:51:14.829349663Z 2025/11/17 09:51:14 Updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:51:14.829471047Z 2025/11/17 09:51:14 Finished updating machine hlxcl51-5vf88-XXXXXX-0-csjwc .
+2025-11-17T09:51:26.802258704Z I1117 09:51:26.802095       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:51:26.802258704Z 2025/11/17 09:51:26 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:26.802258704Z 2025/11/17 09:51:26 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:26.802258704Z I1117 09:51:26.802178       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:51:26.802258704Z 2025/11/17 09:51:26 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:51:26.802303979Z 2025/11/17 09:51:26 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:51:31.827426573Z I1117 09:51:31.827378       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:51:31.827426573Z 2025/11/17 09:51:31 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:31.827456728Z 2025/11/17 09:51:31 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:31.827456728Z I1117 09:51:31.827435       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:51:31.827456728Z 2025/11/17 09:51:31 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:51:31.827552196Z 2025/11/17 09:51:31 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:51:36.819117995Z I1117 09:51:36.818388       1 controller.go:179] hlxcl51-5vf88-XXXXXX-2: reconciling Machine
+2025-11-17T09:51:36.819117995Z 2025/11/17 09:51:36 Checking if machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:36.819117995Z 2025/11/17 09:51:36 Machine hlxcl51-5vf88-XXXXXX-2 exists.
+2025-11-17T09:51:36.819117995Z I1117 09:51:36.818461       1 controller.go:305] hlxcl51-5vf88-XXXXXX-2: reconciling machine triggers idempotent update
+2025-11-17T09:51:36.819117995Z 2025/11/17 09:51:36 Updating machine hlxcl51-5vf88-XXXXXX-2 .
+2025-11-17T09:51:36.819117995Z 2025/11/17 09:51:36 Finished updating machine hlxcl51-5vf88-XXXXXX-2 .

@@ -1,0 +1,105 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-secret-name: router-metrics-certs-default
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1763371220
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1763371220
+    creationTimestamp: "2025-11-17T09:21:49Z"
+    labels:
+      ingresscontroller.operator.openshift.io/owning-ingresscontroller: default
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.alpha.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:ingresscontroller.operator.openshift.io/owning-ingresscontroller: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"9aabc1a6-53a2-4df2-bcd3-d323724e5f66"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":80,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":1936,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2025-11-17T09:21:49Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2025-11-17T09:21:49Z"
+    name: router-internal-default
+    namespace: openshift-ingress
+    ownerReferences:
+    - apiVersion: apps/v1
+      controller: true
+      kind: Deployment
+      name: router-default
+      uid: 9aabc1a6-53a2-4df2-bcd3-d323724e5f66
+    resourceVersion: "10145"
+    uid: 760128ba-b17c-4c25-8245-bdf0a645a58f
+  spec:
+    clusterIP: 172.30.104.60
+    clusterIPs:
+    - 172.30.104.60
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: http
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: https
+    - name: metrics
+      port: 1936
+      protocol: TCP
+      targetPort: metrics
+    selector:
+      ingresscontroller.operator.openshift.io/deployment-ingresscontroller: default
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "32381"

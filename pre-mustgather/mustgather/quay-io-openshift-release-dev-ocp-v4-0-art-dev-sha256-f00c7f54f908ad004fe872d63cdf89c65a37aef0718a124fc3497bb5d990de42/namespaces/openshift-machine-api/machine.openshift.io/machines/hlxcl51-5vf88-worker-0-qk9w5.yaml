@@ -1,0 +1,146 @@
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  annotations:
+    machine.openshift.io/instance-state: unmanaged
+    metal3.io/BareMetalHost: openshift-machine-api/XXXXXX1
+  creationTimestamp: "2025-11-17T09:22:50Z"
+  finalizers:
+  - machine.machine.openshift.io
+  generateName: hlxcl51-5vf88-XXXXXX-0-
+  generation: 2
+  labels:
+    machine.openshift.io/cluster-api-cluster: hlxcl51-5vf88
+    machine.openshift.io/cluster-api-machine-role: XXXXXX
+    machine.openshift.io/cluster-api-machine-type: XXXXXX
+    machine.openshift.io/cluster-api-machineset: hlxcl51-5vf88-XXXXXX-0
+  managedFields:
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+          f:machine.openshift.io/cluster-api-machine-role: {}
+          f:machine.openshift.io/cluster-api-machine-type: {}
+          f:machine.openshift.io/cluster-api-machineset: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"37af4e8d-097f-43c7-860f-e5d6ce530300"}: {}
+      f:spec:
+        .: {}
+        f:lifecycleHooks: {}
+        f:metadata: {}
+        f:providerSpec:
+          .: {}
+          f:value:
+            .: {}
+            f:apiVersion: {}
+            f:customDeploy:
+              .: {}
+              f:method: {}
+            f:hostSelector: {}
+            f:image:
+              .: {}
+              f:checksum: {}
+              f:url: {}
+            f:kind: {}
+            f:metadata:
+              .: {}
+              f:creationTimestamp: {}
+            f:userData:
+              .: {}
+              f:name: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2025-11-17T09:22:50Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machine.openshift.io/instance-state: {}
+          f:metal3.io/BareMetalHost: {}
+        f:finalizers:
+          .: {}
+          v:"machine.machine.openshift.io": {}
+      f:spec:
+        f:providerID: {}
+    manager: machine-controller-manager
+    operation: Update
+    time: "2025-11-17T09:29:44Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:addresses: {}
+        f:conditions: {}
+        f:phase: {}
+    manager: machine-controller-manager
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:36:53Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:lastUpdated: {}
+        f:nodeRef: {}
+    manager: Go-http-client
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:22Z"
+  name: hlxcl51-5vf88-XXXXXX-0-qk9w5
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: machine.openshift.io/v1beta1
+    blockOwnerDeletion: true
+    controller: true
+    kind: MachineSet
+    name: hlxcl51-5vf88-XXXXXX-0
+    uid: 37af4e8d-097f-43c7-860f-e5d6ce530300
+  resourceVersion: "23549"
+  uid: d16e0ec2-4d4d-4dfc-be34-5ea85c068beb
+spec:
+  lifecycleHooks: {}
+  metadata: {}
+  providerID: baremetalhost:///openshift-machine-api/XXXXXX1/af25af90-fc9a-49ec-a054-c1a93e1921c5
+  providerSpec:
+    value:
+      apiVersion: baremetal.cluster.k8s.io/v1alpha1
+      customDeploy:
+        method: install_coreos
+      hostSelector: {}
+      image:
+        checksum: ""
+        url: ""
+      kind: BareMetalMachineProviderSpec
+      metadata:
+        creationTimestamp: null
+      userData:
+        name: XXXXXX-user-data-managed
+status:
+  addresses:
+  - address: XXXXXXXXXX
+    type: InternalIP
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:22:59Z"
+    status: "True"
+    type: Drainable
+  - lastTransitionTime: "2025-11-17T09:29:44Z"
+    status: "True"
+    type: InstanceExists
+  - lastTransitionTime: "2025-11-17T09:22:59Z"
+    status: "True"
+    type: Terminable
+  lastUpdated: "2025-11-17T09:38:22Z"
+  nodeRef:
+    kind: Node
+    name: XXXXXX1
+    uid: 82931ca4-5958-4718-ae08-c14b5ced3530
+  phase: Running

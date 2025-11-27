@@ -1,0 +1,46 @@
+---
+apiVersion: config.openshift.io/v1
+items:
+- apiVersion: config.openshift.io/v1
+  kind: Build
+  metadata:
+    annotations:
+      capability.openshift.io/name: Build
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+      release.openshift.io/create-only: "true"
+    creationTimestamp: "2025-11-17T09:05:25Z"
+    generation: 1
+    managedFields:
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+            f:release.openshift.io/create-only: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+        f:spec: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2025-11-17T09:05:25Z"
+    name: cluster
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+    resourceVersion: "839"
+    uid: 78ab43be-d07d-4f26-b8e6-d5830f3c51bd
+  spec: {}
+kind: BuildList
+metadata:
+  continue: ""
+  resourceVersion: "32363"

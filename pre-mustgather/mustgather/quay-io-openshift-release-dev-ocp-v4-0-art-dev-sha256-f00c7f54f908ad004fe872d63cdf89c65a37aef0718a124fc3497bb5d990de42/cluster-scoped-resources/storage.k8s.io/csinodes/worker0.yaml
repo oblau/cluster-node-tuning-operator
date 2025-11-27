@@ -1,0 +1,31 @@
+---
+apiVersion: storage.k8s.io/v1
+kind: CSINode
+metadata:
+  annotations:
+    storage.alpha.kubernetes.io/migrated-plugins: kubernetes.io/aws-ebs,kubernetes.io/azure-disk,kubernetes.io/azure-file,kubernetes.io/cinder,kubernetes.io/gce-pd,kubernetes.io/vsphere-volume
+  creationTimestamp: "2025-11-17T09:33:38Z"
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:storage.alpha.kubernetes.io/migrated-plugins: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"be542f6b-71a2-46af-9c87-f2120b48ad2f"}: {}
+    manager: kubelet
+    operation: Update
+    time: "2025-11-17T09:33:38Z"
+  name: XXXXXX0
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: XXXXXX0
+    uid: be542f6b-71a2-46af-9c87-f2120b48ad2f
+  resourceVersion: "20159"
+  uid: b7a58f62-7f8a-4779-97f6-6d14052cbdcf
+spec:
+  drivers: null

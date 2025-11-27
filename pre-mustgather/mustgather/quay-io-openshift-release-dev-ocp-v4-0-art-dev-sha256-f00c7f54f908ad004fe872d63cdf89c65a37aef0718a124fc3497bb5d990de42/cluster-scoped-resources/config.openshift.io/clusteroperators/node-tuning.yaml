@@ -1,0 +1,102 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: NodeTuning
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2025-11-17T09:05:22Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:22Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:05:23Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-node-tuning-operator
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:14Z"
+  name: node-tuning
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "23433"
+  uid: 112b4442-5957-4b2e-8725-facc057c7708
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:21:58Z"
+    message: Cluster has deployed "4.14.59"
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2025-11-17T09:38:14Z"
+    message: Cluster version is "4.14.59"
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2025-11-17T09:21:57Z"
+    message: DaemonSet "tuned" available
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-cluster-node-tuning-operator
+    resource: namespaces
+  - group: tuned.openshift.io
+    name: ""
+    namespace: openshift-cluster-node-tuning-operator
+    resource: profiles
+  - group: tuned.openshift.io
+    name: ""
+    namespace: openshift-cluster-node-tuning-operator
+    resource: tuneds
+  - group: apps
+    name: tuned
+    namespace: openshift-cluster-node-tuning-operator
+    resource: daemonsets
+  - group: performance.openshift.io
+    name: ""
+    resource: performanceprofiles
+  versions:
+  - name: operator
+    version: 4.14.59
+  - name: openshift-tuned
+    version: 4.14.59

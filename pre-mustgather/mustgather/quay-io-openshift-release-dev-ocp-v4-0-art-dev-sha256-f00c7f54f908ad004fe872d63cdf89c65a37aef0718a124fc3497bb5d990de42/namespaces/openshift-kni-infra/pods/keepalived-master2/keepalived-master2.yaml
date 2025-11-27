@@ -1,0 +1,606 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubernetes.io/config.hash: 06eef85e32949d79a6c9330101db28fb
+    kubernetes.io/config.mirror: 06eef85e32949d79a6c9330101db28fb
+    kubernetes.io/config.seen: "2025-11-17T09:08:25.052095585Z"
+    kubernetes.io/config.source: file
+    openshift.io/scc: privileged
+    target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+  creationTimestamp: "2025-11-17T09:09:37Z"
+  labels:
+    app: kni-infra-vrrp
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/config.hash: {}
+          f:kubernetes.io/config.mirror: {}
+          f:kubernetes.io/config.seen: {}
+          f:kubernetes.io/config.source: {}
+          f:target.workload.openshift.io/management: {}
+        f:labels:
+          .: {}
+          f:app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"9bbf3978-9a24-4194-97bd-19975c5a4042"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"keepalived"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"NSS_SDB_USE_CACHE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/keepalived"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/host"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/run/nodeip-configuration"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/keepalived"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"keepalived-monitor"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"ENABLE_UNICAST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IS_BOOTSTRAP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/config"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/etc/keepalived"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/host"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/run/nodeip-configuration"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/keepalived"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"render-config-keepalived"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/config"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/etc/keepalived"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/run/nodeip-configuration"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"chroot-host"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"conf-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"kubeconfig"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"kubeconfigvarlib"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"nodeip-configuration"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"resource-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"run-dir"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"script-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kubelet
+    operation: Update
+    time: "2025-11-17T09:09:37Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"XXXXXXXXXXX"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"2620:52:0:2e1a::22"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:09:45Z"
+  name: keepalived-XXXXXX2
+  namespace: openshift-kni-infra
+  ownerReferences:
+  - apiVersion: v1
+    controller: true
+    kind: Node
+    name: XXXXXX2
+    uid: 9bbf3978-9a24-4194-97bd-19975c5a4042
+  resourceVersion: "3136"
+  uid: 420034f8-60d0-4a5d-8627-6961a93413ae
+spec:
+  containers:
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      #/bin/bash
+      sigterm_handler()
+      {
+        if pid=$(pgrep -o keepalived); then
+          kill -s SIGTERM "$pid"
+        fi
+      }
+
+      reload_keepalived()
+      {
+        if pid=$(pgrep -o keepalived); then
+            kill -s SIGHUP "$pid"
+        else
+            /usr/sbin/keepalived -f /etc/keepalived/keepalived.conf --dont-fork --vrrp --log-detail --log-console &
+        fi
+      }
+
+      msg_handler()
+      {
+        while read -r line; do
+          echo "The client sent: $line" >&2
+          # currently only 'reload' msg is supported
+          if [ "$line" = reload ]; then
+              reload_keepalived
+          fi
+        done
+      }
+
+      remove_vip()
+      {
+        address=$1
+        interface=$(ip -o a | awk "/\s${address}\// {print \$2}")
+        cidr=$(ip -o a | awk "/\s${address}\// {print \$4}")
+        if [ -n "$interface" ]; then
+            ip a del $cidr dev $interface
+        fi
+      }
+
+      set -ex
+      # Ensure that we don't have stale VIPs configured
+      # See https://bugzilla.redhat.com/show_bug.cgi?id=1931505
+      remove_vip "XXXXXXXXXX0"
+      remove_vip "2620:52:0:2e1a::10"
+      remove_vip "XXXXXXXXXX1"
+      remove_vip "2620:52:0:2e1a::11"
+      declare -r keepalived_sock="/var/run/keepalived/keepalived.sock"
+      export -f msg_handler
+      export -f reload_keepalived
+      export -f sigterm_handler
+
+      # in remote XXXXXX case sleep forever
+      if [ -f "/run/nodeip-configuration/remote-XXXXXX" ]; then
+         sleep infinity
+         exit 0
+      fi
+
+      trap sigterm_handler SIGTERM
+      if [ -s "/etc/keepalived/keepalived.conf" ]; then
+          /usr/sbin/keepalived -f /etc/keepalived/keepalived.conf --dont-fork --vrrp --log-detail --log-console &
+      fi
+
+      rm -f "$keepalived_sock"
+      socat UNIX-LISTEN:${keepalived_sock},fork system:'bash -c msg_handler'
+    env:
+    - name: NSS_SDB_USE_CACHE
+      value: "no"
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:41a6c259299f7019a4b737c86e0c785ae99119710064c2513778df37be2a4894
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      exec:
+        command:
+        - /bin/bash
+        - -c
+        - |
+          [ ! -s "/etc/keepalived/keepalived.conf" ] || (echo "" > /tmp/keepalived.data && kill -s SIGUSR1 "$(pgrep -o keepalived)" && for i in $(seq 5); do grep -q "VRRP Instance" /tmp/keepalived.data && exit 0 || sleep 1; done && exit 1)
+      failureThreshold: 3
+      initialDelaySeconds: 20
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    name: keepalived
+    resources:
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/keepalived
+      mountPropagation: HostToContainer
+      name: conf-dir
+    - mountPath: /var/run/keepalived
+      name: run-dir
+    - mountPath: /host
+      mountPropagation: HostToContainer
+      name: chroot-host
+    - mountPath: /var/lib/kubelet
+      mountPropagation: HostToContainer
+      name: kubeconfigvarlib
+    - mountPath: /run/nodeip-configuration
+      mountPropagation: HostToContainer
+      name: nodeip-configuration
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      #/bin/bash
+      # in remote XXXXXX case sleep forever
+      if [ -f "/run/nodeip-configuration/remote-XXXXXX" ]; then
+          sleep infinity
+          exit 0
+      fi
+      api_vips=XXXXXXXXXX0,2620:52:0:2e1a::10
+      ingress_vips=XXXXXXXXXX1,2620:52:0:2e1a::11
+      dynkeepalived /var/lib/kubelet/kubeconfig /config/keepalived.conf.tmpl /etc/keepalived/keepalived.conf --api-vips "${api_vips}" --ingress-vips "${ingress_vips}"
+    env:
+    - name: ENABLE_UNICAST
+      value: "yes"
+    - name: IS_BOOTSTRAP
+      value: "no"
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imagePullPolicy: IfNotPresent
+    name: keepalived-monitor
+    resources:
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /config
+      mountPropagation: HostToContainer
+      name: resource-dir
+    - mountPath: /var/lib/kubelet
+      mountPropagation: HostToContainer
+      name: kubeconfigvarlib
+    - mountPath: /etc/keepalived
+      mountPropagation: HostToContainer
+      name: conf-dir
+    - mountPath: /var/run/keepalived
+      name: run-dir
+    - mountPath: /host
+      mountPropagation: HostToContainer
+      name: chroot-host
+    - mountPath: /run/nodeip-configuration
+      mountPropagation: HostToContainer
+      name: nodeip-configuration
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  initContainers:
+  - command:
+    - runtimecfg
+    - render
+    - /etc/kubernetes/kubeconfig
+    - --api-vips
+    - XXXXXXXXXX0,2620:52:0:2e1a::10
+    - --ingress-vips
+    - XXXXXXXXXX1,2620:52:0:2e1a::11
+    - /config
+    - --out-dir
+    - /etc/keepalived
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imagePullPolicy: IfNotPresent
+    name: render-config-keepalived
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/kubernetes
+      mountPropagation: HostToContainer
+      name: kubeconfig
+    - mountPath: /config
+      mountPropagation: HostToContainer
+      name: script-dir
+    - mountPath: /etc/keepalived
+      mountPropagation: HostToContainer
+      name: conf-dir
+    - mountPath: /run/nodeip-configuration
+      mountPropagation: HostToContainer
+      name: nodeip-configuration
+  nodeName: XXXXXX2
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes/static-pod-resources/keepalived
+      type: ""
+    name: resource-dir
+  - hostPath:
+      path: /etc/kubernetes/static-pod-resources/keepalived/scripts
+      type: ""
+    name: script-dir
+  - hostPath:
+      path: /etc/kubernetes
+      type: ""
+    name: kubeconfig
+  - hostPath:
+      path: /var/lib/kubelet
+      type: ""
+    name: kubeconfigvarlib
+  - hostPath:
+      path: /etc/keepalived
+      type: ""
+    name: conf-dir
+  - emptyDir: {}
+    name: run-dir
+  - hostPath:
+      path: /
+      type: ""
+    name: chroot-host
+  - hostPath:
+      path: /run/nodeip-configuration
+      type: ""
+    name: nodeip-configuration
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:08:28Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:08:34Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:08:34Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:08:25Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://fa1d283f91a04afaca6f082d7494a19e7be28ff5f98ff54821dbd7068f507275
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:41a6c259299f7019a4b737c86e0c785ae99119710064c2513778df37be2a4894
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:41a6c259299f7019a4b737c86e0c785ae99119710064c2513778df37be2a4894
+    lastState: {}
+    name: keepalived
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:08:33Z"
+  - containerID: cri-o://c34eecba93b6c21e75bc0c751265772b592479b47aadb46c01583f167f83e14e
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    lastState: {}
+    name: keepalived-monitor
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:08:33Z"
+  hostIP: XXXXXXXXXXX
+  initContainerStatuses:
+  - containerID: cri-o://baeb6dd615c9c47679aa1b8c63f1e5c36a6749b6d327a5fcb253e82f965030a3
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    lastState: {}
+    name: render-config-keepalived
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://baeb6dd615c9c47679aa1b8c63f1e5c36a6749b6d327a5fcb253e82f965030a3
+        exitCode: 0
+        finishedAt: "2025-11-17T09:08:27Z"
+        reason: Completed
+        startedAt: "2025-11-17T09:08:27Z"
+  phase: Running
+  podIP: XXXXXXXXXXX
+  podIPs:
+  - ip: XXXXXXXXXXX
+  - ip: 2620:52:0:2e1a::22
+  qosClass: Burstable
+  startTime: "2025-11-17T09:08:25Z"

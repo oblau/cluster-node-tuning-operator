@@ -1,0 +1,14 @@
+2025-11-17T09:26:40.651769191Z I1117 09:26:40.651672       1 main.go:139] Version: b482e44ff14d48da061ce247b88409943e1daff0
+2025-11-17T09:26:40.652808553Z I1117 09:26:40.652785       1 main.go:188] Start NewCSISnapshotController with kubeconfig [] resyncPeriod [15m0s]
+2025-11-17T09:27:13.129357867Z I1117 09:27:13.129302       1 leaderelection.go:248] attempting to acquire leader lease openshift-cluster-storage-operator/snapshot-controller-leader...
+2025-11-17T09:27:13.184320984Z I1117 09:27:13.172852       1 leaderelection.go:258] successfully acquired lease openshift-cluster-storage-operator/snapshot-controller-leader
+2025-11-17T09:27:13.184320984Z I1117 09:27:13.173167       1 leader_election.go:178] became leader, starting
+2025-11-17T09:27:13.184320984Z I1117 09:27:13.174548       1 snapshot_controller_base.go:152] Starting snapshot controller
+2025-11-17T09:32:07.309314646Z E1117 09:32:07.309193       1 leaderelection.go:330] error retrieving resource lock openshift-cluster-storage-operator/snapshot-controller-leader: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io snapshot-controller-leader)
+2025-11-17T09:32:52.093397049Z W1117 09:32:52.087147       1 reflector.go:424] k8s.io/client-go/informers/factory.go:150: failed to list *v1.PersistentVolumeClaim: Get "https://172.30.0.1:443/api/v1/persistentvolumeclaims?resourceVersion=18925": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:52.093397049Z E1117 09:32:52.087237       1 reflector.go:140] k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.PersistentVolumeClaim: failed to list *v1.PersistentVolumeClaim: Get "https://172.30.0.1:443/api/v1/persistentvolumeclaims?resourceVersion=18925": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:54.542992841Z W1117 09:32:54.542937       1 reflector.go:424] k8s.io/client-go/informers/factory.go:150: failed to list *v1.PersistentVolumeClaim: Get "https://172.30.0.1:443/api/v1/persistentvolumeclaims?resourceVersion=18925": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:54.542992841Z E1117 09:32:54.542978       1 reflector.go:140] k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.PersistentVolumeClaim: failed to list *v1.PersistentVolumeClaim: Get "https://172.30.0.1:443/api/v1/persistentvolumeclaims?resourceVersion=18925": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:54.554431655Z E1117 09:32:54.554386       1 leaderelection.go:367] Failed to update lock: client rate limiter Wait returned an error: context deadline exceeded
+2025-11-17T09:32:54.554468198Z I1117 09:32:54.554452       1 leaderelection.go:283] failed to renew lease openshift-cluster-storage-operator/snapshot-controller-leader: timed out waiting for the condition
+2025-11-17T09:32:54.554493608Z F1117 09:32:54.554480       1 leader_election.go:182] stopped leading

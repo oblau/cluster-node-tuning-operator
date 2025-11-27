@@ -1,0 +1,466 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubernetes.io/config.hash: 47df9adf42f0cf871be2389238d63bd9
+    kubernetes.io/config.mirror: 47df9adf42f0cf871be2389238d63bd9
+    kubernetes.io/config.seen: "2025-11-17T09:32:19.691872753Z"
+    kubernetes.io/config.source: file
+    openshift.io/scc: privileged
+    target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+  creationTimestamp: "2025-11-17T09:36:34Z"
+  labels:
+    app: kni-infra-coredns
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/config.hash: {}
+          f:kubernetes.io/config.mirror: {}
+          f:kubernetes.io/config.seen: {}
+          f:kubernetes.io/config.source: {}
+          f:target.workload.openshift.io/management: {}
+        f:labels:
+          .: {}
+          f:app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"82931ca4-5958-4718-ae08-c14b5ced3530"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"coredns"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/coredns"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/run/nodeip-configuration"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+          k:{"name":"coredns-monitor"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/config"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/etc/coredns"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/run/nodeip-configuration"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/NetworkManager"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"render-config-coredns"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/config"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/etc/coredns"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/run/nodeip-configuration"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/NetworkManager"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"conf-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"kubeconfig"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"nm-resolv"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"nodeip-configuration"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"resource-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kubelet
+    operation: Update
+    time: "2025-11-17T09:36:34Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"XXXXXXXXXX"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"2620:52:0:2e1a::3"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:36:59Z"
+  name: coredns-XXXXXX1
+  namespace: openshift-kni-infra
+  ownerReferences:
+  - apiVersion: v1
+    controller: true
+    kind: Node
+    name: XXXXXX1
+    uid: 82931ca4-5958-4718-ae08-c14b5ced3530
+  resourceVersion: "22238"
+  uid: b6530bae-e1f8-465e-b498-6c5265b56cde
+spec:
+  containers:
+  - args:
+    - --conf
+    - /etc/coredns/Corefile
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dc628de8b8f6899659a0da11b21ba81d4cb9f73684f3f502bee47e06c5dbe36
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 5
+      httpGet:
+        path: /health
+        port: 18080
+        scheme: HTTP
+      initialDelaySeconds: 60
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    name: coredns
+    resources:
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/coredns
+      name: conf-dir
+    - mountPath: /run/nodeip-configuration
+      mountPropagation: HostToContainer
+      name: nodeip-configuration
+  - command:
+    - corednsmonitor
+    - /var/lib/kubelet/kubeconfig
+    - /config/Corefile.tmpl
+    - /etc/coredns/Corefile
+    - --api-vips
+    - XXXXXXXXXX0,2620:52:0:2e1a::10
+    - --ingress-vips
+    - XXXXXXXXXX1,2620:52:0:2e1a::11
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imagePullPolicy: IfNotPresent
+    name: coredns-monitor
+    resources:
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/lib/kubelet
+      mountPropagation: HostToContainer
+      name: kubeconfig
+    - mountPath: /config
+      mountPropagation: HostToContainer
+      name: resource-dir
+    - mountPath: /etc/coredns
+      mountPropagation: HostToContainer
+      name: conf-dir
+    - mountPath: /var/run/NetworkManager
+      mountPropagation: HostToContainer
+      name: nm-resolv
+    - mountPath: /run/nodeip-configuration
+      mountPropagation: HostToContainer
+      name: nodeip-configuration
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  initContainers:
+  - command:
+    - runtimecfg
+    - render
+    - /var/lib/kubelet/kubeconfig
+    - --api-vips
+    - XXXXXXXXXX0,2620:52:0:2e1a::10
+    - --ingress-vips
+    - XXXXXXXXXX1,2620:52:0:2e1a::11
+    - /config
+    - --out-dir
+    - /etc/coredns
+    - --resolvconf-path
+    - /var/run/NetworkManager/resolv.conf
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imagePullPolicy: IfNotPresent
+    name: render-config-coredns
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/lib/kubelet
+      mountPropagation: HostToContainer
+      name: kubeconfig
+    - mountPath: /config
+      mountPropagation: HostToContainer
+      name: resource-dir
+    - mountPath: /etc/coredns
+      mountPropagation: HostToContainer
+      name: conf-dir
+    - mountPath: /var/run/NetworkManager
+      mountPropagation: HostToContainer
+      name: nm-resolv
+    - mountPath: /run/nodeip-configuration
+      mountPropagation: HostToContainer
+      name: nodeip-configuration
+  nodeName: XXXXXX1
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes/static-pod-resources/coredns
+      type: ""
+    name: resource-dir
+  - hostPath:
+      path: /var/lib/kubelet
+      type: ""
+    name: kubeconfig
+  - hostPath:
+      path: /etc/coredns
+      type: ""
+    name: conf-dir
+  - hostPath:
+      path: /var/run/NetworkManager
+      type: ""
+    name: nm-resolv
+  - hostPath:
+      path: /run/nodeip-configuration
+      type: ""
+    name: nodeip-configuration
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:32:22Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:32:36Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:32:36Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:32:19Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://64d4aeb52ef83c25ceda708f1e9d14efbb20af92bb16bbe577ba44a5526932d6
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dc628de8b8f6899659a0da11b21ba81d4cb9f73684f3f502bee47e06c5dbe36
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0dc628de8b8f6899659a0da11b21ba81d4cb9f73684f3f502bee47e06c5dbe36
+    lastState: {}
+    name: coredns
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:32:36Z"
+  - containerID: cri-o://655f70bedad8f3ce17ef8bd2015a61a92adc78e291e34dc23dbb9a48793a6bcb
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    lastState: {}
+    name: coredns-monitor
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:32:36Z"
+  hostIP: XXXXXXXXXX
+  initContainerStatuses:
+  - containerID: cri-o://0787510042aeeb36457f56f68ecb8e5fcc3516db381261dc8b535e7112ac256d
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:86702c0acd55053ff2e5c2072d86f82109142b1d0d7c8701919f5c06489d1ffe
+    lastState: {}
+    name: render-config-coredns
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://0787510042aeeb36457f56f68ecb8e5fcc3516db381261dc8b535e7112ac256d
+        exitCode: 0
+        finishedAt: "2025-11-17T09:32:22Z"
+        reason: Completed
+        startedAt: "2025-11-17T09:32:22Z"
+  phase: Running
+  podIP: XXXXXXXXXX
+  podIPs:
+  - ip: XXXXXXXXXX
+  - ip: 2620:52:0:2e1a::3
+  qosClass: Burstable
+  startTime: "2025-11-17T09:32:19Z"

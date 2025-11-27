@@ -1,0 +1,40 @@
+---
+apiVersion: v1
+imagePullSecrets:
+- name: ovn-kubernetes-control-plane-dockercfg-7lpsx
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2025-11-17T09:18:21Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"de0dec5f-c369-4191-91db-e20c2450d94e"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2025-11-17T09:18:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:imagePullSecrets: {}
+      f:secrets:
+        .: {}
+        k:{"name":"ovn-kubernetes-control-plane-dockercfg-7lpsx"}: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2025-11-17T09:30:33Z"
+  name: ovn-kubernetes-control-plane
+  namespace: openshift-ovn-kubernetes
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: de0dec5f-c369-4191-91db-e20c2450d94e
+  resourceVersion: "17654"
+  uid: 72d312f0-80ad-4009-bad0-c49e0eb40fab
+secrets:
+- name: ovn-kubernetes-control-plane-dockercfg-7lpsx

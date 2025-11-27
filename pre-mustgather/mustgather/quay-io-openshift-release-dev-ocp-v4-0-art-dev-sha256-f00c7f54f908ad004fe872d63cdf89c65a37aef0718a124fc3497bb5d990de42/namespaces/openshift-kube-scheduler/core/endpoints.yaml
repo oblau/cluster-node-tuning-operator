@@ -1,0 +1,60 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:43:01Z"
+    creationTimestamp: "2025-11-17T09:20:24Z"
+    labels:
+      prometheus: kube-scheduler
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:prometheus: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:43:01Z"
+    name: scheduler
+    namespace: openshift-kube-scheduler
+    resourceVersion: "28832"
+    uid: 63a6b179-7b45-4f59-afbc-0272fabec9ca
+  subsets:
+  - addresses:
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX0
+      targetRef:
+        kind: Pod
+        name: openshift-kube-scheduler-XXXXXX0
+        namespace: openshift-kube-scheduler
+        uid: 0b01f5bd-86db-4eeb-97b6-b24113c06754
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX1
+      targetRef:
+        kind: Pod
+        name: openshift-kube-scheduler-XXXXXX1
+        namespace: openshift-kube-scheduler
+        uid: b6118f4d-441a-446b-94d1-9d48218676c3
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX2
+      targetRef:
+        kind: Pod
+        name: openshift-kube-scheduler-XXXXXX2
+        namespace: openshift-kube-scheduler
+        uid: 3d9d7e7a-e24f-4ad9-98ee-4db01557c260
+    ports:
+    - name: https
+      port: 10259
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "32524"

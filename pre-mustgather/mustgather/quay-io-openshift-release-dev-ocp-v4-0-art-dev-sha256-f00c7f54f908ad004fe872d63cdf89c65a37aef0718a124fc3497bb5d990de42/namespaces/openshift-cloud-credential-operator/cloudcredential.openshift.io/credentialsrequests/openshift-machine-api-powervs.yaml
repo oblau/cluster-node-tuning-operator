@@ -1,0 +1,99 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    capability.openshift.io/name: MachineAPI
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2025-11-17T09:05:45Z"
+  generation: 1
+  labels:
+    controller-tools.k8s.io: "1.0"
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:labels:
+          .: {}
+          f:controller-tools.k8s.io: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:policies: {}
+        f:secretRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:45Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncGeneration: {}
+        f:provisioned: {}
+    manager: Go-http-client
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:06:02Z"
+  name: openshift-machine-api-powervs
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "2282"
+  uid: 0a5c7cf9-a537-4409-aab2-17beea74b7dc
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: IBMCloudPowerVSProviderSpec
+    policies:
+    - attributes:
+      - name: serviceName
+        value: power-iaas
+      roles:
+      - crn:v1:bluemix:public:iam::::role:Viewer
+      - crn:v1:bluemix:public:iam::::serviceRole:Reader
+      - crn:v1:bluemix:public:iam::::serviceRole:Manager
+    - attributes:
+      - name: resourceType
+        value: resource-group
+      roles:
+      - crn:v1:bluemix:public:iam::::role:Viewer
+    - attributes:
+      - name: serviceName
+        value: is
+      roles:
+      - crn:v1:bluemix:public:iam::::role:Editor
+      - crn:v1:bluemix:public:iam::::role:Operator
+      - crn:v1:bluemix:public:iam::::role:Viewer
+  secretRef:
+    name: powervs-credentials
+    namespace: openshift-machine-api
+status:
+  conditions:
+  - lastProbeTime: "2025-11-17T09:06:02Z"
+    lastTransitionTime: "2025-11-17T09:06:02Z"
+    message: CredentialsRequest is not for platform BareMetal
+    reason: InfrastructureMismatch
+    status: "True"
+    type: Ignored
+  lastSyncGeneration: 0
+  provisioned: false

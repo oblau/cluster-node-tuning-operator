@@ -1,0 +1,35 @@
+2025-11-17T09:33:15.160362987Z I1117 09:33:15.160171       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:33:15.160468882Z 2025/11/17 09:33:15 Watching cluster-api objects only in namespace "openshift-machine-api" for reconciliation.
+2025-11-17T09:33:15.160468882Z 2025/11/17 09:33:15 Registering Components.
+2025-11-17T09:33:15.160736398Z I1117 09:33:15.160678       1 leaderelection.go:122] The leader election gives 4 retries and allows for 13s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m26s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:33:15.161293434Z I1117 09:33:15.161269       1 listener.go:44] "controller-runtime/metrics: Metrics server is starting to listen" addr=":8082"
+2025-11-17T09:33:15.208133649Z I1117 09:33:15.208095       1 server.go:187] "controller-runtime/webhook: Registering webhook" path="/mutate-machine-openshift-io-v1beta1-machine"
+2025-11-17T09:33:15.210761767Z I1117 09:33:15.208174       1 server.go:187] "controller-runtime/webhook: Registering webhook" path="/validate-machine-openshift-io-v1beta1-machine"
+2025-11-17T09:33:15.210761767Z I1117 09:33:15.208228       1 server.go:187] "controller-runtime/webhook: Registering webhook" path="/mutate-machine-openshift-io-v1beta1-machineset"
+2025-11-17T09:33:15.210761767Z I1117 09:33:15.208276       1 server.go:187] "controller-runtime/webhook: Registering webhook" path="/validate-machine-openshift-io-v1beta1-machineset"
+2025-11-17T09:33:15.210761767Z 2025/11/17 09:33:15 Registering Components.
+2025-11-17T09:33:15.210761767Z 2025/11/17 09:33:15 Starting the Cmd.
+2025-11-17T09:33:15.210761767Z I1117 09:33:15.208537       1 server.go:216] "controller-runtime/webhook/webhooks: Starting webhook server"
+2025-11-17T09:33:15.210761767Z I1117 09:33:15.208599       1 internal.go:360] "Starting server" kind="health probe" addr="[::]:9441"
+2025-11-17T09:33:15.210761767Z I1117 09:33:15.208811       1 server.go:50] "starting server" path="/metrics" kind="metrics" addr="[::]:8082"
+2025-11-17T09:33:15.210761767Z I1117 09:33:15.208881       1 leaderelection.go:245] attempting to acquire leader lease openshift-machine-api/cluster-api-provider-machineset-leader...
+2025-11-17T09:33:15.210761767Z I1117 09:33:15.209129       1 certwatcher.go:161] "controller-runtime/certwatcher: Updated current TLS certificate"
+2025-11-17T09:33:15.210761767Z I1117 09:33:15.209233       1 server.go:273] "controller-runtime/webhook: Serving webhook server" host="" port=8443
+2025-11-17T09:33:15.210761767Z I1117 09:33:15.210218       1 certwatcher.go:115] "controller-runtime/certwatcher: Starting certificate watcher"
+2025-11-17T09:36:04.219481814Z I1117 09:36:04.217104       1 leaderelection.go:255] successfully acquired lease openshift-machine-api/cluster-api-provider-machineset-leader
+2025-11-17T09:36:04.219481814Z I1117 09:36:04.217392       1 controller.go:177] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.MachineSet"
+2025-11-17T09:36:04.219481814Z I1117 09:36:04.217419       1 controller.go:177] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.Machine"
+2025-11-17T09:36:04.219481814Z I1117 09:36:04.217478       1 controller.go:177] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.Machine"
+2025-11-17T09:36:04.219481814Z I1117 09:36:04.217478       1 recorder.go:104] "events: machine-api-controllers-57fbbf9557-pdr5j_0a7f4f29-a88a-4819-ac4e-ddac8da3a2e7 became leader" type="Normal" object={"kind":"Lease","namespace":"openshift-machine-api","name":"cluster-api-provider-machineset-leader","uid":"32ffc975-526e-4385-9bab-38a4cafc8001","apiVersion":"coordination.k8s.io/v1","resourceVersion":"21187"} reason="LeaderElection"
+2025-11-17T09:36:04.219481814Z I1117 09:36:04.217491       1 controller.go:185] "Starting Controller" controller="machineset_controller"
+2025-11-17T09:36:04.221433457Z I1117 09:36:04.221399       1 reflector.go:287] Starting reflector *v1beta1.MachineSet (10m44.021560481s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:04.221433457Z I1117 09:36:04.221412       1 reflector.go:323] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:04.221653735Z I1117 09:36:04.221636       1 reflector.go:287] Starting reflector *v1beta1.Machine (9m29.12630769s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:04.221653735Z I1117 09:36:04.221647       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:04.321958598Z I1117 09:36:04.321904       1 controller.go:219] "Starting XXXXXXs" controller="machineset_controller" XXXXXX count=1
+2025-11-17T09:36:44.039479951Z I1117 09:36:44.039350       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:44.169085206Z I1117 09:36:44.169031       1 reflector.go:323] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:53.290447362Z I1117 09:36:53.289402       1 reflector.go:287] Starting reflector *v1.Node (9m43.443626455s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:36:53.290447362Z I1117 09:36:53.289419       1 reflector.go:323] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:46:55.914251027Z I1117 09:46:55.914147       1 reflector.go:323] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233
+2025-11-17T09:46:56.162805192Z I1117 09:46:56.162747       1 reflector.go:323] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:233

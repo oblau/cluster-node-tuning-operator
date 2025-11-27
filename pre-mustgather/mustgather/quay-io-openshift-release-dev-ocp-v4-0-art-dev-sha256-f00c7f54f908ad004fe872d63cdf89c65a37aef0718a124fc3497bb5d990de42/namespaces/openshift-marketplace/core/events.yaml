@@ -1,0 +1,4510 @@
+---
+apiVersion: v1
+items:
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:36:56.634873Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: certified-operators-7hvs9
+    namespace: openshift-marketplace
+    resourceVersion: "19126"
+    uid: 20229c9e-2574-4ba3-966c-157d841a5aa7
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/certified-operators-7hvs9 to
+    XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:56Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:36:56Z"
+    name: certified-operators-7hvs9.1878c1b03350b30d
+    namespace: openshift-marketplace
+    resourceVersion: "22047"
+    uid: d72fbcdb-f21f-40e9-b5fc-3763d3807ac6
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:36:58Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: certified-operators-7hvs9
+    namespace: openshift-marketplace
+    resourceVersion: "22090"
+    uid: 20229c9e-2574-4ba3-966c-157d841a5aa7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:36:58Z"
+  message: Add eth0 [10.128.0.59/23 fd02:0:0:1::3b/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:36:58Z"
+    name: certified-operators-7hvs9.1878c1b0ab6e7bda
+    namespace: openshift-marketplace
+    resourceVersion: "22190"
+    uid: 2c2fb907-b5fe-43bf-a1d1-60dbde3eb3f5
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:36:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-7hvs9
+    namespace: openshift-marketplace
+    resourceVersion: "22033"
+    uid: 20229c9e-2574-4ba3-966c-157d841a5aa7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:36:58Z"
+  message: Pulling image "registry.redhat.io/redhat/certified-operator-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:36:58Z"
+    name: certified-operators-7hvs9.1878c1b0ad5c7ef0
+    namespace: openshift-marketplace
+    resourceVersion: "22192"
+    uid: f75e6b44-7cff-47e0-a95d-381464641d21
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-7hvs9
+    namespace: openshift-marketplace
+    resourceVersion: "22033"
+    uid: 20229c9e-2574-4ba3-966c-157d841a5aa7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:00Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/certified-operator-index:v4.14"
+    in 1.687769932s (1.687782569s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:00Z"
+    name: certified-operators-7hvs9.1878c1b111f6433d
+    namespace: openshift-marketplace
+    resourceVersion: "22253"
+    uid: 3c3ed826-14f2-46a8-af51-52064943306e
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-7hvs9
+    namespace: openshift-marketplace
+    resourceVersion: "22033"
+    uid: 20229c9e-2574-4ba3-966c-157d841a5aa7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:00Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:00Z"
+    name: certified-operators-7hvs9.1878c1b1198e62b0
+    namespace: openshift-marketplace
+    resourceVersion: "22257"
+    uid: 448c31e4-b134-44d0-8a9a-6ca8d1bf3ec7
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-7hvs9
+    namespace: openshift-marketplace
+    resourceVersion: "22033"
+    uid: 20229c9e-2574-4ba3-966c-157d841a5aa7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:00Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:00Z"
+    name: certified-operators-7hvs9.1878c1b11ac2b91e
+    namespace: openshift-marketplace
+    resourceVersion: "22258"
+    uid: 63699dd0-0853-4e12-b4f8-adf5b579c9b4
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-7hvs9
+    namespace: openshift-marketplace
+    resourceVersion: "22033"
+    uid: 20229c9e-2574-4ba3-966c-157d841a5aa7
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:09Z"
+  message: Stopping container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:09Z"
+    name: certified-operators-7hvs9.1878c1b3485ab4ac
+    namespace: openshift-marketplace
+    resourceVersion: "22397"
+    uid: 902a00ed-722e-44c9-af33-4054fd2694e2
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:21:47.091646Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: certified-operators-nwz2m
+    namespace: openshift-marketplace
+    resourceVersion: "9858"
+    uid: 614c4bc4-2c9c-4c2b-8b80-70ea398978e3
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/certified-operators-nwz2m to
+    XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:47Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:21:47Z"
+    name: certified-operators-nwz2m.1878c0dc6e506ffa
+    namespace: openshift-marketplace
+    resourceVersion: "9867"
+    uid: cf465ecc-63a8-4518-8ff8-d772dd09e7cc
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:49Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: certified-operators-nwz2m
+    namespace: openshift-marketplace
+    resourceVersion: "9872"
+    uid: 614c4bc4-2c9c-4c2b-8b80-70ea398978e3
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:49Z"
+  message: Add eth0 [10.128.0.18/23 fd02:0:0:1::12/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:21:49Z"
+    name: certified-operators-nwz2m.1878c0dcf5baefc2
+    namespace: openshift-marketplace
+    resourceVersion: "10068"
+    uid: c2fb721f-1afa-47b6-8efc-72de0db3b186
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-nwz2m
+    namespace: openshift-marketplace
+    resourceVersion: "9863"
+    uid: 614c4bc4-2c9c-4c2b-8b80-70ea398978e3
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:49Z"
+  message: Pulling image "registry.redhat.io/redhat/certified-operator-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:49Z"
+    name: certified-operators-nwz2m.1878c0dcf6db84ab
+    namespace: openshift-marketplace
+    resourceVersion: "10071"
+    uid: f80a7102-65c4-4e54-a4d3-b1024c15889e
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-nwz2m
+    namespace: openshift-marketplace
+    resourceVersion: "9863"
+    uid: 614c4bc4-2c9c-4c2b-8b80-70ea398978e3
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/certified-operator-index:v4.14"
+    in 46.984351945s (46.984363864s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: certified-operators-nwz2m.1878c0e7e7585f45
+    namespace: openshift-marketplace
+    resourceVersion: "11635"
+    uid: 3d38e08a-7c8a-417d-a8ad-aa4844b58cd1
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-nwz2m
+    namespace: openshift-marketplace
+    resourceVersion: "9863"
+    uid: 614c4bc4-2c9c-4c2b-8b80-70ea398978e3
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: certified-operators-nwz2m.1878c0e7f4fd0ace
+    namespace: openshift-marketplace
+    resourceVersion: "11655"
+    uid: 83cc4e65-c85f-4b57-9236-9c193dce02d4
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-nwz2m
+    namespace: openshift-marketplace
+    resourceVersion: "9863"
+    uid: 614c4bc4-2c9c-4c2b-8b80-70ea398978e3
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: certified-operators-nwz2m.1878c0e7f75f0ee2
+    namespace: openshift-marketplace
+    resourceVersion: "11660"
+    uid: d76fe7c4-26c0-4b10-a20d-020da13a3ed7
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-nwz2m
+    namespace: openshift-marketplace
+    resourceVersion: "9863"
+    uid: 614c4bc4-2c9c-4c2b-8b80-70ea398978e3
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:38Z"
+  message: |
+    Startup probe failed: timeout: failed to connect service ":50051" within 1s
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:38Z"
+    name: certified-operators-nwz2m.1878c0e864c459f5
+    namespace: openshift-marketplace
+    resourceVersion: "11769"
+    uid: 3ecb8326-3733-4fbe-99d8-7d262463fc63
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:46:54.127656Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: certified-operators-t86tc
+    namespace: openshift-marketplace
+    resourceVersion: "30295"
+    uid: 8d9c9732-0fe2-406c-af12-ef68bcfd6857
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/certified-operators-t86tc to
+    XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:54Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:46:54Z"
+    name: certified-operators-t86tc.1878c23b50a904f7
+    namespace: openshift-marketplace
+    resourceVersion: "30300"
+    uid: d7f8129f-f5fa-4626-bef7-ab95acdf58e3
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: certified-operators-t86tc
+    namespace: openshift-marketplace
+    resourceVersion: "30306"
+    uid: 8d9c9732-0fe2-406c-af12-ef68bcfd6857
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:56Z"
+  message: Add eth0 [10.128.0.76/23 fd02:0:0:1::4c/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:46:56Z"
+    name: certified-operators-t86tc.1878c23bc3c9f9d0
+    namespace: openshift-marketplace
+    resourceVersion: "30342"
+    uid: 219dc4bf-c965-4cb3-8b30-c2540f4aa747
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:56Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-t86tc
+    namespace: openshift-marketplace
+    resourceVersion: "30296"
+    uid: 8d9c9732-0fe2-406c-af12-ef68bcfd6857
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:56Z"
+  message: Pulling image "registry.redhat.io/redhat/certified-operator-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:56Z"
+    name: certified-operators-t86tc.1878c23bc52ccac2
+    namespace: openshift-marketplace
+    resourceVersion: "30346"
+    uid: 2c4b64b1-f174-4f96-afca-5f36a9934656
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-t86tc
+    namespace: openshift-marketplace
+    resourceVersion: "30296"
+    uid: 8d9c9732-0fe2-406c-af12-ef68bcfd6857
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:57Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/certified-operator-index:v4.14"
+    in 1.506097375s (1.506115486s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:57Z"
+    name: certified-operators-t86tc.1878c23c1ef27dac
+    namespace: openshift-marketplace
+    resourceVersion: "30361"
+    uid: 6b28e424-dc3a-4788-9d0c-68ab964d2327
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-t86tc
+    namespace: openshift-marketplace
+    resourceVersion: "30296"
+    uid: 8d9c9732-0fe2-406c-af12-ef68bcfd6857
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:57Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:57Z"
+    name: certified-operators-t86tc.1878c23c27888e1f
+    namespace: openshift-marketplace
+    resourceVersion: "30362"
+    uid: c4382dc7-7283-4eef-b797-123a8ec079c0
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-t86tc
+    namespace: openshift-marketplace
+    resourceVersion: "30296"
+    uid: 8d9c9732-0fe2-406c-af12-ef68bcfd6857
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:57Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:57Z"
+    name: certified-operators-t86tc.1878c23c28da9f2d
+    namespace: openshift-marketplace
+    resourceVersion: "30363"
+    uid: a910b70d-a9de-47e3-a8ac-b3609779a0ba
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:47:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: certified-operators-t86tc
+    namespace: openshift-marketplace
+    resourceVersion: "30296"
+    uid: 8d9c9732-0fe2-406c-af12-ef68bcfd6857
+  kind: Event
+  lastTimestamp: "2025-11-17T09:47:06Z"
+  message: Stopping container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:47:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:47:06Z"
+    name: certified-operators-t86tc.1878c23e3f16aeaf
+    namespace: openshift-marketplace
+    resourceVersion: "30458"
+    uid: 2a9af36a-e6ae-487a-9688-7f76de11207b
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:46:54.125865Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: community-operators-2qbss
+    namespace: openshift-marketplace
+    resourceVersion: "30294"
+    uid: ac07b1e6-e841-49bf-98ed-451d2ae6b53c
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/community-operators-2qbss to
+    XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:54Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:46:54Z"
+    name: community-operators-2qbss.1878c23b508db3c7
+    namespace: openshift-marketplace
+    resourceVersion: "30299"
+    uid: 6d32f37c-3ef6-4943-ba25-8b9a665ffd59
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: community-operators-2qbss
+    namespace: openshift-marketplace
+    resourceVersion: "30310"
+    uid: ac07b1e6-e841-49bf-98ed-451d2ae6b53c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:56Z"
+  message: Add eth0 [10.128.0.77/23 fd02:0:0:1::4d/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:46:56Z"
+    name: community-operators-2qbss.1878c23bd8a62088
+    namespace: openshift-marketplace
+    resourceVersion: "30352"
+    uid: ec0b62df-272b-42c0-9127-c4d6accb115d
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:56Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-2qbss
+    namespace: openshift-marketplace
+    resourceVersion: "30297"
+    uid: ac07b1e6-e841-49bf-98ed-451d2ae6b53c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:56Z"
+  message: Pulling image "registry.redhat.io/redhat/community-operator-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:56Z"
+    name: community-operators-2qbss.1878c23bda5fbe2e
+    namespace: openshift-marketplace
+    resourceVersion: "30354"
+    uid: f5219847-cea2-4142-b353-759f9027cca3
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-2qbss
+    namespace: openshift-marketplace
+    resourceVersion: "30297"
+    uid: ac07b1e6-e841-49bf-98ed-451d2ae6b53c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:57Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/community-operator-index:v4.14"
+    in 1.485577565s (1.485590001s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:57Z"
+    name: community-operators-2qbss.1878c23c32f810c2
+    namespace: openshift-marketplace
+    resourceVersion: "30365"
+    uid: 7c0f4a0e-b028-486b-86e5-7c6b91820dd2
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-2qbss
+    namespace: openshift-marketplace
+    resourceVersion: "30297"
+    uid: ac07b1e6-e841-49bf-98ed-451d2ae6b53c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:58Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:58Z"
+    name: community-operators-2qbss.1878c23c3c1c2d55
+    namespace: openshift-marketplace
+    resourceVersion: "30368"
+    uid: d0456d70-e328-4046-bbc4-e43bd38ce79f
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-2qbss
+    namespace: openshift-marketplace
+    resourceVersion: "30297"
+    uid: ac07b1e6-e841-49bf-98ed-451d2ae6b53c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:58Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:58Z"
+    name: community-operators-2qbss.1878c23c3df278b1
+    namespace: openshift-marketplace
+    resourceVersion: "30369"
+    uid: 3d8696bd-009a-4e1c-b83a-aa97511a0601
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:47:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-2qbss
+    namespace: openshift-marketplace
+    resourceVersion: "30297"
+    uid: ac07b1e6-e841-49bf-98ed-451d2ae6b53c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:47:06Z"
+  message: Stopping container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:47:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:47:06Z"
+    name: community-operators-2qbss.1878c23e3f170c2b
+    namespace: openshift-marketplace
+    resourceVersion: "30459"
+    uid: 88f27538-2c42-4f13-a416-e9fc5d1ba57a
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:36:56.627501Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: community-operators-46r88
+    namespace: openshift-marketplace
+    resourceVersion: "19129"
+    uid: c3724e5b-6dec-4953-b4f8-56cb47340e5c
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/community-operators-46r88 to
+    XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:56Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:36:56Z"
+    name: community-operators-46r88.1878c1b032e02b1a
+    namespace: openshift-marketplace
+    resourceVersion: "22039"
+    uid: bfc50232-2f33-4e71-b91c-22094be5b3e3
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:36:58Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: community-operators-46r88
+    namespace: openshift-marketplace
+    resourceVersion: "22051"
+    uid: c3724e5b-6dec-4953-b4f8-56cb47340e5c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:36:58Z"
+  message: Add eth0 [10.128.0.57/23 fd02:0:0:1::39/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:36:58Z"
+    name: community-operators-46r88.1878c1b0b4968c11
+    namespace: openshift-marketplace
+    resourceVersion: "22198"
+    uid: 74cf9539-430b-4cd4-82f4-cc9337920fd6
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:36:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-46r88
+    namespace: openshift-marketplace
+    resourceVersion: "22031"
+    uid: c3724e5b-6dec-4953-b4f8-56cb47340e5c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:36:58Z"
+  message: Pulling image "registry.redhat.io/redhat/community-operator-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:36:58Z"
+    name: community-operators-46r88.1878c1b0b6173d7f
+    namespace: openshift-marketplace
+    resourceVersion: "22200"
+    uid: de4d0ed0-719e-49b2-862a-75da54233be4
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-46r88
+    namespace: openshift-marketplace
+    resourceVersion: "22031"
+    uid: c3724e5b-6dec-4953-b4f8-56cb47340e5c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:00Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/community-operator-index:v4.14"
+    in 1.34012497s (1.340140973s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:00Z"
+    name: community-operators-46r88.1878c1b105f86d8a
+    namespace: openshift-marketplace
+    resourceVersion: "22246"
+    uid: 0d5a91f0-c587-452a-99de-5892ff4e8f09
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-46r88
+    namespace: openshift-marketplace
+    resourceVersion: "22031"
+    uid: c3724e5b-6dec-4953-b4f8-56cb47340e5c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:00Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:00Z"
+    name: community-operators-46r88.1878c1b10eb1adbb
+    namespace: openshift-marketplace
+    resourceVersion: "22251"
+    uid: d5c58d0f-1dab-4a6b-9f9a-e1ff7eea82b8
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-46r88
+    namespace: openshift-marketplace
+    resourceVersion: "22031"
+    uid: c3724e5b-6dec-4953-b4f8-56cb47340e5c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:00Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:00Z"
+    name: community-operators-46r88.1878c1b10fc481d8
+    namespace: openshift-marketplace
+    resourceVersion: "22252"
+    uid: 13b93160-2b69-479e-bb05-8b9781655711
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-46r88
+    namespace: openshift-marketplace
+    resourceVersion: "22031"
+    uid: c3724e5b-6dec-4953-b4f8-56cb47340e5c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:09Z"
+  message: Stopping container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:09Z"
+    name: community-operators-46r88.1878c1b3485c8824
+    namespace: openshift-marketplace
+    resourceVersion: "22398"
+    uid: 8f033c15-0a44-4068-a9eb-c5655053fc89
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:21:46.401555Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: community-operators-5gd2z
+    namespace: openshift-marketplace
+    resourceVersion: "9773"
+    uid: 3cd04188-f1aa-42ee-a8c0-ca73bc6795b2
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/community-operators-5gd2z to
+    XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:46Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:21:46Z"
+    name: community-operators-5gd2z.1878c0dc452e730e
+    namespace: openshift-marketplace
+    resourceVersion: "9780"
+    uid: 63c309a0-34cd-40f0-907a-17e220498a76
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:48Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: community-operators-5gd2z
+    namespace: openshift-marketplace
+    resourceVersion: "9790"
+    uid: 3cd04188-f1aa-42ee-a8c0-ca73bc6795b2
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:48Z"
+  message: Add eth0 [10.128.0.15/23 fd02:0:0:1::f/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:21:48Z"
+    name: community-operators-5gd2z.1878c0dcace33faa
+    namespace: openshift-marketplace
+    resourceVersion: "9937"
+    uid: cd9bbe1f-7897-4e90-9f21-86a891b6a8a1
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-5gd2z
+    namespace: openshift-marketplace
+    resourceVersion: "9775"
+    uid: 3cd04188-f1aa-42ee-a8c0-ca73bc6795b2
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:48Z"
+  message: Pulling image "registry.redhat.io/redhat/community-operator-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:48Z"
+    name: community-operators-5gd2z.1878c0dcadd26f77
+    namespace: openshift-marketplace
+    resourceVersion: "9939"
+    uid: 34374865-8fc2-46cc-b33f-718e4496e298
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-5gd2z
+    namespace: openshift-marketplace
+    resourceVersion: "9775"
+    uid: 3cd04188-f1aa-42ee-a8c0-ca73bc6795b2
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/community-operator-index:v4.14"
+    in 48.179409124s (48.179421069s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: community-operators-5gd2z.1878c0e7e58a4ac6
+    namespace: openshift-marketplace
+    resourceVersion: "11631"
+    uid: b76b9a55-d0d2-4092-bf9b-9aecd8893c05
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-5gd2z
+    namespace: openshift-marketplace
+    resourceVersion: "9775"
+    uid: 3cd04188-f1aa-42ee-a8c0-ca73bc6795b2
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: community-operators-5gd2z.1878c0e7f5d33b8f
+    namespace: openshift-marketplace
+    resourceVersion: "11658"
+    uid: f803d7c4-8470-41de-93a7-262521c355d5
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: community-operators-5gd2z
+    namespace: openshift-marketplace
+    resourceVersion: "9775"
+    uid: 3cd04188-f1aa-42ee-a8c0-ca73bc6795b2
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: community-operators-5gd2z.1878c0e7f8478e5e
+    namespace: openshift-marketplace
+    resourceVersion: "11663"
+    uid: 476b1b92-7444-4f13-96e6-8f491ac772c7
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:11:06.335278Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "3425"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: null
+  message: '0/2 nodes are available: 2 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:11:06Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:11:06Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c0473e421fbc
+    namespace: openshift-marketplace
+    resourceVersion: "3427"
+    uid: f6898bd5-92fb-412b-b2e8-e4b5b090ced6
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:16:29.605256Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "3429"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: null
+  message: '0/2 nodes are available: 2 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:16:29Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:16:29Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c09282a6822e
+    namespace: openshift-marketplace
+    resourceVersion: "4418"
+    uid: 9486cc20-e2a8-4b34-87f9-d9aa68e4de6f
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:19:25.304394Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "3429"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/marketplace-operator-69f959b844-8hlkw
+    to XXXXXX2
+  metadata:
+    creationTimestamp: "2025-11-17T09:19:25Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:19:25Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c0bb6b22a3dc
+    namespace: openshift-marketplace
+    resourceVersion: "5545"
+    uid: c71f0bff-1265-4f24-a5bc-2a0d8236dfe6
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 8
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:19:25Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "5519"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:29Z"
+  message: 'MountVolume.SetUp failed for volume "marketplace-operator-metrics" : secret
+    "marketplace-operator-metrics" not found'
+  metadata:
+    creationTimestamp: "2025-11-17T09:19:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:20:29Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c0bb7c45fa0a
+    namespace: openshift-marketplace
+    resourceVersion: "7056"
+    uid: 0244d64d-1fdd-4482-ad74-aaa1f5356a6b
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "5519"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:28Z"
+  message: 'Unable to attach or mount volumes: unmounted volumes=[marketplace-operator-metrics],
+    unattached volumes=[], failed to process volumes=[]: timed out waiting for the
+    condition'
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:28Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c0d81300502a
+    namespace: openshift-marketplace
+    resourceVersion: "8938"
+    uid: d1dcbf44-15bc-4fdb-a23c-9345e9b1094f
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:35Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "6030"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:35Z"
+  message: Add eth0 [10.129.0.27/23 fd02:0:0:2::1b/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:21:35Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c0d9c57b4986
+    namespace: openshift-marketplace
+    resourceVersion: "9067"
+    uid: aeaee938-6a01-4db9-9cc3-493f26be2a74
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{marketplace-operator}
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "5519"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:35Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3f0fa3977d0a00292dc382c8492a38f2f6619e7b9b1b2d691e9f8c4116c43bff"
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:35Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c0d9c6be232e
+    namespace: openshift-marketplace
+    resourceVersion: "9069"
+    uid: f380d18f-6785-494b-aa93-40075e1e0684
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:45Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{marketplace-operator}
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "5519"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:45Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3f0fa3977d0a00292dc382c8492a38f2f6619e7b9b1b2d691e9f8c4116c43bff"
+    in 10.109013531s (10.109030356s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:45Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c0dc214a12bd
+    namespace: openshift-marketplace
+    resourceVersion: "9728"
+    uid: e4ec97d7-ab6b-4a81-a55a-dca8274b786c
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:45Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{marketplace-operator}
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "5519"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:32:38Z"
+  message: Created container marketplace-operator
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c0dc29635794
+    namespace: openshift-marketplace
+    resourceVersion: "19243"
+    uid: 1f3983a8-476c-4f4d-af30-a31a9e91e6da
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:45Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{marketplace-operator}
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "5519"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:32:38Z"
+  message: Started container marketplace-operator
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c0dc2a963a7c
+    namespace: openshift-marketplace
+    resourceVersion: "19245"
+    uid: cc8b59bd-15b4-40db-bc33-c438fee5fd07
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{marketplace-operator}
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "5519"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:32:39Z"
+  message: "Readiness probe error: Get \"http://10.129.0.27:8080/healthz\": dial tcp
+    10.129.0.27:8080: connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c0dc30c15579
+    namespace: openshift-marketplace
+    resourceVersion: "19248"
+    uid: efce5e0d-7263-4e0d-bebc-0ba77414bcd8
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{marketplace-operator}
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "5519"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:32:38Z"
+  message: 'Readiness probe failed: Get "http://10.129.0.27:8080/healthz": dial tcp
+    10.129.0.27:8080: connect: connection refused'
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c0dc30c25ac3
+    namespace: openshift-marketplace
+    resourceVersion: "19247"
+    uid: f0af71b8-f083-46f9-8873-dadbebb001b2
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:26:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{marketplace-operator}
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "5519"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:32:38Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3f0fa3977d0a00292dc382c8492a38f2f6619e7b9b1b2d691e9f8c4116c43bff"
+    already present on machine
+  metadata:
+    creationTimestamp: "2025-11-17T09:27:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c11e2d24de69
+    namespace: openshift-marketplace
+    resourceVersion: "19242"
+    uid: bec6ad6f-fa13-4d13-9001-d4a44cee9ee3
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:32:21Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{marketplace-operator}
+    kind: Pod
+    name: marketplace-operator-69f959b844-8hlkw
+    namespace: openshift-marketplace
+    resourceVersion: "5519"
+    uid: e61018c3-d3e3-4d6f-be2f-eaacdc20b93e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:32:24Z"
+  message: Back-off restarting failed container marketplace-operator in pod marketplace-operator-69f959b844-8hlkw_openshift-marketplace(e61018c3-d3e3-4d6f-be2f-eaacdc20b93e)
+  metadata:
+    creationTimestamp: "2025-11-17T09:33:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:33:02Z"
+    name: marketplace-operator-69f959b844-8hlkw.1878c1701ff81c00
+    namespace: openshift-marketplace
+    resourceVersion: "19241"
+    uid: f7ed2a27-2ff2-4637-be71-bf3edbeb331b
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 16
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:05:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: marketplace-operator-69f959b844
+    namespace: openshift-marketplace
+    resourceVersion: "1439"
+    uid: 3af57c5c-9424-4df1-bba9-c163dd6b9f5b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:08:22Z"
+  message: 'Error creating: pods "marketplace-operator-69f959b844-" is forbidden:
+    autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any
+    nodes'
+  metadata:
+    creationTimestamp: "2025-11-17T09:05:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:08:22Z"
+    name: marketplace-operator-69f959b844.1878bffaf0adef6e
+    namespace: openshift-marketplace
+    resourceVersion: "2817"
+    uid: 2355481c-bf12-48d5-a369-02e1742adcba
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:11:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: marketplace-operator-69f959b844
+    namespace: openshift-marketplace
+    resourceVersion: "1443"
+    uid: 3af57c5c-9424-4df1-bba9-c163dd6b9f5b
+  kind: Event
+  lastTimestamp: "2025-11-17T09:11:06Z"
+  message: 'Created pod: marketplace-operator-69f959b844-8hlkw'
+  metadata:
+    creationTimestamp: "2025-11-17T09:11:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:11:06Z"
+    name: marketplace-operator-69f959b844.1878c0473e3e6810
+    namespace: openshift-marketplace
+    resourceVersion: "3426"
+    uid: 617d8cc3-7162-4b59-9123-a517e1b195bf
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:05:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: marketplace-operator
+    namespace: openshift-marketplace
+    resourceVersion: "1438"
+    uid: c528c5e2-21a2-4a18-89b9-d12c64503807
+  kind: Event
+  lastTimestamp: "2025-11-17T09:05:38Z"
+  message: Scaled up replica set marketplace-operator-69f959b844 to 1
+  metadata:
+    creationTimestamp: "2025-11-17T09:05:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:05:38Z"
+    name: marketplace-operator.1878bffaf07f2c73
+    namespace: openshift-marketplace
+    resourceVersion: "1440"
+    uid: 2fd7da79-0cfd-49d6-9a01-16823d601afa
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:46:54.180990Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-marketplace-9mch7
+    namespace: openshift-marketplace
+    resourceVersion: "30304"
+    uid: 12c6768d-a67c-43f7-ac2f-da776ea9d0fa
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/redhat-marketplace-9mch7 to
+    XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:54Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:46:54Z"
+    name: redhat-marketplace-9mch7.1878c23b53d6e36c
+    namespace: openshift-marketplace
+    resourceVersion: "30308"
+    uid: 9ef2e8ad-1249-48be-8bfb-7156b2e97e25
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-marketplace-9mch7
+    namespace: openshift-marketplace
+    resourceVersion: "30316"
+    uid: 12c6768d-a67c-43f7-ac2f-da776ea9d0fa
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:56Z"
+  message: Add eth0 [10.128.0.78/23 fd02:0:0:1::4e/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:46:56Z"
+    name: redhat-marketplace-9mch7.1878c23bcf77d134
+    namespace: openshift-marketplace
+    resourceVersion: "30349"
+    uid: e23dcfd2-a92e-4e51-86e5-dedf205c6237
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:56Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-9mch7
+    namespace: openshift-marketplace
+    resourceVersion: "30307"
+    uid: 12c6768d-a67c-43f7-ac2f-da776ea9d0fa
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:56Z"
+  message: Pulling image "registry.redhat.io/redhat/redhat-marketplace-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:56Z"
+    name: redhat-marketplace-9mch7.1878c23bd110cde7
+    namespace: openshift-marketplace
+    resourceVersion: "30351"
+    uid: 1fe8020e-0809-46f1-b4cd-e3b8e56e3d01
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-9mch7
+    namespace: openshift-marketplace
+    resourceVersion: "30307"
+    uid: 12c6768d-a67c-43f7-ac2f-da776ea9d0fa
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:57Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/redhat-marketplace-index:v4.14"
+    in 1.505972091s (1.505993405s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:57Z"
+    name: redhat-marketplace-9mch7.1878c23c2ad4b7be
+    namespace: openshift-marketplace
+    resourceVersion: "30364"
+    uid: 7d9c3800-f951-4427-a64a-7802788f0796
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-9mch7
+    namespace: openshift-marketplace
+    resourceVersion: "30307"
+    uid: 12c6768d-a67c-43f7-ac2f-da776ea9d0fa
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:57Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:57Z"
+    name: redhat-marketplace-9mch7.1878c23c33a408a2
+    namespace: openshift-marketplace
+    resourceVersion: "30366"
+    uid: 9d2d94fe-5071-46fe-9b7e-7a4d10f730e3
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-9mch7
+    namespace: openshift-marketplace
+    resourceVersion: "30307"
+    uid: 12c6768d-a67c-43f7-ac2f-da776ea9d0fa
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:57Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:57Z"
+    name: redhat-marketplace-9mch7.1878c23c357629c7
+    namespace: openshift-marketplace
+    resourceVersion: "30367"
+    uid: 3b93c5e0-0f53-4727-a3d6-7a872e8fa4b5
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:47:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-9mch7
+    namespace: openshift-marketplace
+    resourceVersion: "30307"
+    uid: 12c6768d-a67c-43f7-ac2f-da776ea9d0fa
+  kind: Event
+  lastTimestamp: "2025-11-17T09:47:06Z"
+  message: Stopping container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:47:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:47:06Z"
+    name: redhat-marketplace-9mch7.1878c23e3f111160
+    namespace: openshift-marketplace
+    resourceVersion: "30457"
+    uid: 38643376-8d4d-4cc9-ab0e-13f87f51d98e
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:21:46.402687Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-marketplace-jsdq4
+    namespace: openshift-marketplace
+    resourceVersion: "9774"
+    uid: be607b68-5c05-4be2-b6af-f17d3fcdc2b8
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/redhat-marketplace-jsdq4 to
+    XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:46Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:21:46Z"
+    name: redhat-marketplace-jsdq4.1878c0dc453fdce7
+    namespace: openshift-marketplace
+    resourceVersion: "9781"
+    uid: 9185e97e-a79a-4bff-b5f9-e7ebad0a81b9
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:48Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-marketplace-jsdq4
+    namespace: openshift-marketplace
+    resourceVersion: "9792"
+    uid: be607b68-5c05-4be2-b6af-f17d3fcdc2b8
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:48Z"
+  message: Add eth0 [10.128.0.16/23 fd02:0:0:1::10/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:21:48Z"
+    name: redhat-marketplace-jsdq4.1878c0dccf090d78
+    namespace: openshift-marketplace
+    resourceVersion: "9982"
+    uid: 3749c230-4650-400b-b3a8-4147fc4fef00
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-jsdq4
+    namespace: openshift-marketplace
+    resourceVersion: "9776"
+    uid: be607b68-5c05-4be2-b6af-f17d3fcdc2b8
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:48Z"
+  message: Pulling image "registry.redhat.io/redhat/redhat-marketplace-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:48Z"
+    name: redhat-marketplace-jsdq4.1878c0dcd0137654
+    namespace: openshift-marketplace
+    resourceVersion: "9988"
+    uid: 091bb19e-a5d5-48d4-8b33-b24e8761290b
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-jsdq4
+    namespace: openshift-marketplace
+    resourceVersion: "9776"
+    uid: be607b68-5c05-4be2-b6af-f17d3fcdc2b8
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/redhat-marketplace-index:v4.14"
+    in 47.62400771s (47.624021988s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: redhat-marketplace-jsdq4.1878c0e7e6b093f7
+    namespace: openshift-marketplace
+    resourceVersion: "11632"
+    uid: 0409d21f-a447-408f-bc56-91e326e9ad6a
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-jsdq4
+    namespace: openshift-marketplace
+    resourceVersion: "9776"
+    uid: be607b68-5c05-4be2-b6af-f17d3fcdc2b8
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: redhat-marketplace-jsdq4.1878c0e7f502ddc0
+    namespace: openshift-marketplace
+    resourceVersion: "11656"
+    uid: 1c597cce-39aa-4ea7-826d-10bfa2c7dc9b
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-jsdq4
+    namespace: openshift-marketplace
+    resourceVersion: "9776"
+    uid: be607b68-5c05-4be2-b6af-f17d3fcdc2b8
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: redhat-marketplace-jsdq4.1878c0e7f66a3521
+    namespace: openshift-marketplace
+    resourceVersion: "11659"
+    uid: 530beb3c-cb46-4319-b657-84aa380f3c1e
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:36:56.644453Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-marketplace-x56kr
+    namespace: openshift-marketplace
+    resourceVersion: "19113"
+    uid: 14f03502-a098-4619-af89-94d0672a9d19
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/redhat-marketplace-x56kr to
+    XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:56Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:36:56Z"
+    name: redhat-marketplace-x56kr.1878c1b033e2d9c1
+    namespace: openshift-marketplace
+    resourceVersion: "22046"
+    uid: b7cbe23a-032c-449a-9a60-032a90b4a4f9
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:36:58Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-marketplace-x56kr
+    namespace: openshift-marketplace
+    resourceVersion: "22074"
+    uid: 14f03502-a098-4619-af89-94d0672a9d19
+  kind: Event
+  lastTimestamp: "2025-11-17T09:36:58Z"
+  message: Add eth0 [10.128.0.61/23 fd02:0:0:1::3d/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:36:58Z"
+    name: redhat-marketplace-x56kr.1878c1b0a28ce6c3
+    namespace: openshift-marketplace
+    resourceVersion: "22181"
+    uid: cd55ff5e-74e3-4232-be4a-301ed10bed53
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:36:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-x56kr
+    namespace: openshift-marketplace
+    resourceVersion: "22037"
+    uid: 14f03502-a098-4619-af89-94d0672a9d19
+  kind: Event
+  lastTimestamp: "2025-11-17T09:36:58Z"
+  message: Pulling image "registry.redhat.io/redhat/redhat-marketplace-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:36:58Z"
+    name: redhat-marketplace-x56kr.1878c1b0a4077178
+    namespace: openshift-marketplace
+    resourceVersion: "22185"
+    uid: 2b1ff892-5e7a-4b32-9cf3-a19b8047d34c
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-x56kr
+    namespace: openshift-marketplace
+    resourceVersion: "22037"
+    uid: 14f03502-a098-4619-af89-94d0672a9d19
+  kind: Event
+  lastTimestamp: "2025-11-17T09:36:59Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/redhat-marketplace-index:v4.14"
+    in 1.470029057s (1.470050619s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:36:59Z"
+    name: redhat-marketplace-x56kr.1878c1b0fba6ee99
+    namespace: openshift-marketplace
+    resourceVersion: "22244"
+    uid: 7c74e77a-222d-4201-b29a-601d95564f15
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-x56kr
+    namespace: openshift-marketplace
+    resourceVersion: "22037"
+    uid: 14f03502-a098-4619-af89-94d0672a9d19
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:00Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:00Z"
+    name: redhat-marketplace-x56kr.1878c1b1051a11c1
+    namespace: openshift-marketplace
+    resourceVersion: "22245"
+    uid: 99fbb4e8-5e75-4d8d-8a29-e469220ff5fc
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-x56kr
+    namespace: openshift-marketplace
+    resourceVersion: "22037"
+    uid: 14f03502-a098-4619-af89-94d0672a9d19
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:00Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:00Z"
+    name: redhat-marketplace-x56kr.1878c1b1066e6e24
+    namespace: openshift-marketplace
+    resourceVersion: "22247"
+    uid: 89ed2568-f646-4c2b-ae75-14a1d615096a
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-marketplace-x56kr
+    namespace: openshift-marketplace
+    resourceVersion: "22037"
+    uid: 14f03502-a098-4619-af89-94d0672a9d19
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:09Z"
+  message: Stopping container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:09Z"
+    name: redhat-marketplace-x56kr.1878c1b34858f8bb
+    namespace: openshift-marketplace
+    resourceVersion: "22396"
+    uid: e1a0593d-7faf-458d-8a59-4aa415f03b9b
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:36:56.627723Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-operators-4c56h
+    namespace: openshift-marketplace
+    resourceVersion: "19115"
+    uid: 8d53e455-f73a-4947-8b02-2193b3cd043c
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/redhat-operators-4c56h to XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:56Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:36:56Z"
+    name: redhat-operators-4c56h.1878c1b032e382bf
+    namespace: openshift-marketplace
+    resourceVersion: "22043"
+    uid: 2d26f280-5db2-4904-a0c1-b81dbdc7645f
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-operators-4c56h
+    namespace: openshift-marketplace
+    resourceVersion: "22082"
+    uid: 8d53e455-f73a-4947-8b02-2193b3cd043c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:36:59Z"
+  message: Add eth0 [10.128.0.58/23 fd02:0:0:1::3a/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:36:59Z"
+    name: redhat-operators-4c56h.1878c1b0c3573825
+    namespace: openshift-marketplace
+    resourceVersion: "22210"
+    uid: 7674f745-634a-4619-92b0-9b1635e91341
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:36:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-4c56h
+    namespace: openshift-marketplace
+    resourceVersion: "22032"
+    uid: 8d53e455-f73a-4947-8b02-2193b3cd043c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:36:59Z"
+  message: Pulling image "registry.redhat.io/redhat/redhat-operator-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:36:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:36:59Z"
+    name: redhat-operators-4c56h.1878c1b0c53c7ec4
+    namespace: openshift-marketplace
+    resourceVersion: "22212"
+    uid: 3988652f-e669-4c8a-b45c-e02231b1a615
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-4c56h
+    namespace: openshift-marketplace
+    resourceVersion: "22032"
+    uid: 8d53e455-f73a-4947-8b02-2193b3cd043c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:00Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/redhat-operator-index:v4.14"
+    in 1.488129189s (1.48814121s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:00Z"
+    name: redhat-operators-4c56h.1878c1b11deff1fa
+    namespace: openshift-marketplace
+    resourceVersion: "22259"
+    uid: e3cfa9bc-8691-4c50-9887-ac39ede5cb05
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-4c56h
+    namespace: openshift-marketplace
+    resourceVersion: "22032"
+    uid: 8d53e455-f73a-4947-8b02-2193b3cd043c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:00Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:00Z"
+    name: redhat-operators-4c56h.1878c1b1267ba9df
+    namespace: openshift-marketplace
+    resourceVersion: "22263"
+    uid: 160e8835-0823-468d-a0f0-325bc2915cd8
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-4c56h
+    namespace: openshift-marketplace
+    resourceVersion: "22032"
+    uid: 8d53e455-f73a-4947-8b02-2193b3cd043c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:00Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:00Z"
+    name: redhat-operators-4c56h.1878c1b12834f6f2
+    namespace: openshift-marketplace
+    resourceVersion: "22265"
+    uid: 7fb831cf-dfb5-45c1-80c1-e4e2a8363e75
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:37:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-4c56h
+    namespace: openshift-marketplace
+    resourceVersion: "22032"
+    uid: 8d53e455-f73a-4947-8b02-2193b3cd043c
+  kind: Event
+  lastTimestamp: "2025-11-17T09:37:09Z"
+  message: Stopping container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:37:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:37:09Z"
+    name: redhat-operators-4c56h.1878c1b3485d0dae
+    namespace: openshift-marketplace
+    resourceVersion: "22399"
+    uid: 521faab3-0df1-416e-a850-e95b29a04bb7
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:46:54.208857Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-operators-9t5dt
+    namespace: openshift-marketplace
+    resourceVersion: "30309"
+    uid: 04120876-0fb2-4f4d-82e3-1939af492734
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/redhat-operators-9t5dt to XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:54Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:46:54Z"
+    name: redhat-operators-9t5dt.1878c23b55801e6c
+    namespace: openshift-marketplace
+    resourceVersion: "30314"
+    uid: 2c14500f-5fec-4a1e-9774-133c7e6eddee
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-operators-9t5dt
+    namespace: openshift-marketplace
+    resourceVersion: "30318"
+    uid: 04120876-0fb2-4f4d-82e3-1939af492734
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:56Z"
+  message: Add eth0 [10.128.0.79/23 fd02:0:0:1::4f/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:46:56Z"
+    name: redhat-operators-9t5dt.1878c23bf8e3dd14
+    namespace: openshift-marketplace
+    resourceVersion: "30355"
+    uid: 6ee3353d-22ed-4da0-b8a8-7a18ae34c50a
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:56Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-9t5dt
+    namespace: openshift-marketplace
+    resourceVersion: "30313"
+    uid: 04120876-0fb2-4f4d-82e3-1939af492734
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:56Z"
+  message: Pulling image "registry.redhat.io/redhat/redhat-operator-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:56Z"
+    name: redhat-operators-9t5dt.1878c23bfa83bee8
+    namespace: openshift-marketplace
+    resourceVersion: "30357"
+    uid: 5e6f0296-4130-49a1-a0a5-a49215769ae8
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-9t5dt
+    namespace: openshift-marketplace
+    resourceVersion: "30313"
+    uid: 04120876-0fb2-4f4d-82e3-1939af492734
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:58Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/redhat-operator-index:v4.14"
+    in 1.658493012s (1.658502228s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:58Z"
+    name: redhat-operators-9t5dt.1878c23c5d5ece45
+    namespace: openshift-marketplace
+    resourceVersion: "30370"
+    uid: e3ce0ff2-89fd-4815-b309-737a96d2fdd3
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-9t5dt
+    namespace: openshift-marketplace
+    resourceVersion: "30313"
+    uid: 04120876-0fb2-4f4d-82e3-1939af492734
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:58Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:58Z"
+    name: redhat-operators-9t5dt.1878c23c6e9c3742
+    namespace: openshift-marketplace
+    resourceVersion: "30375"
+    uid: 430f315d-7c52-4402-84cd-e91a3eb42097
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:46:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-9t5dt
+    namespace: openshift-marketplace
+    resourceVersion: "30313"
+    uid: 04120876-0fb2-4f4d-82e3-1939af492734
+  kind: Event
+  lastTimestamp: "2025-11-17T09:46:58Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:46:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:46:58Z"
+    name: redhat-operators-9t5dt.1878c23c7069ce54
+    namespace: openshift-marketplace
+    resourceVersion: "30376"
+    uid: 7f7cb339-65bd-4966-b600-bf5b4fc9282e
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:47:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-9t5dt
+    namespace: openshift-marketplace
+    resourceVersion: "30313"
+    uid: 04120876-0fb2-4f4d-82e3-1939af492734
+  kind: Event
+  lastTimestamp: "2025-11-17T09:47:07Z"
+  message: Stopping container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:47:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:47:07Z"
+    name: redhat-operators-9t5dt.1878c23e7b24756f
+    namespace: openshift-marketplace
+    resourceVersion: "30467"
+    uid: 35cd049b-2478-4644-abc4-f09f65ae9088
+  reason: Killing
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:21:46.885388Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-operators-9x9d7
+    namespace: openshift-marketplace
+    resourceVersion: "9828"
+    uid: 71621752-95ef-41f7-b2f7-ed419c253cfb
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-marketplace/redhat-operators-9x9d7 to XXXXXX1
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:46Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:21:46Z"
+    name: redhat-operators-9x9d7.1878c0dc62053171
+    namespace: openshift-marketplace
+    resourceVersion: "9832"
+    uid: a6f1593d-99cd-42c6-bd50-1fc02813ec87
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:49Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: redhat-operators-9x9d7
+    namespace: openshift-marketplace
+    resourceVersion: "9836"
+    uid: 71621752-95ef-41f7-b2f7-ed419c253cfb
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:49Z"
+  message: Add eth0 [10.128.0.17/23 fd02:0:0:1::11/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:21:49Z"
+    name: redhat-operators-9x9d7.1878c0dced433175
+    namespace: openshift-marketplace
+    resourceVersion: "10060"
+    uid: dfb90b33-2a0b-455f-9581-0c20f1627e10
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-9x9d7
+    namespace: openshift-marketplace
+    resourceVersion: "9829"
+    uid: 71621752-95ef-41f7-b2f7-ed419c253cfb
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:49Z"
+  message: Pulling image "registry.redhat.io/redhat/redhat-operator-index:v4.14"
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:49Z"
+    name: redhat-operators-9x9d7.1878c0dcee4f5c23
+    namespace: openshift-marketplace
+    resourceVersion: "10064"
+    uid: e1c3959f-50f5-4ba6-bba7-8633689f4f99
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-9x9d7
+    namespace: openshift-marketplace
+    resourceVersion: "9829"
+    uid: 71621752-95ef-41f7-b2f7-ed419c253cfb
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Successfully pulled image "registry.redhat.io/redhat/redhat-operator-index:v4.14"
+    in 47.225965618s (47.225979008s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: redhat-operators-9x9d7.1878c0e7ed32eedd
+    namespace: openshift-marketplace
+    resourceVersion: "11650"
+    uid: 334b7993-d83e-487c-aec3-29dfabb6662d
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-9x9d7
+    namespace: openshift-marketplace
+    resourceVersion: "9829"
+    uid: 71621752-95ef-41f7-b2f7-ed419c253cfb
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Created container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: redhat-operators-9x9d7.1878c0e7f7f03365
+    namespace: openshift-marketplace
+    resourceVersion: "11661"
+    uid: 36740193-41a6-4475-b6a7-56ca5eec7c85
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-9x9d7
+    namespace: openshift-marketplace
+    resourceVersion: "9829"
+    uid: 71621752-95ef-41f7-b2f7-ed419c253cfb
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:36Z"
+  message: Started container registry-server
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:36Z"
+    name: redhat-operators-9x9d7.1878c0e7f9e7facf
+    namespace: openshift-marketplace
+    resourceVersion: "11664"
+    uid: adba71e7-17d7-4431-94c0-cbc688693a07
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:22:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{registry-server}
+    kind: Pod
+    name: redhat-operators-9x9d7
+    namespace: openshift-marketplace
+    resourceVersion: "9829"
+    uid: 71621752-95ef-41f7-b2f7-ed419c253cfb
+  kind: Event
+  lastTimestamp: "2025-11-17T09:22:38Z"
+  message: |
+    Startup probe failed: timeout: failed to connect service ":50051" within 1s
+  metadata:
+    creationTimestamp: "2025-11-17T09:22:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:22:38Z"
+    name: redhat-operators-9x9d7.1878c0e859a4a5db
+    namespace: openshift-marketplace
+    resourceVersion: "11750"
+    uid: 1d85ab65-a289-4589-b5b9-75cd9230c48a
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX1
+  source:
+    component: kubelet
+    host: XXXXXX1
+  type: Warning
+kind: EventList
+metadata:
+  resourceVersion: "32550"

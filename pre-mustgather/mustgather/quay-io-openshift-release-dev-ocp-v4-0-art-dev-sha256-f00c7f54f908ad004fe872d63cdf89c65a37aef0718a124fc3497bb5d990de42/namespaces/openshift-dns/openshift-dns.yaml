@@ -1,0 +1,67 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c25,c5
+    openshift.io/sa.scc.supplemental-groups: 1000610000/10000
+    openshift.io/sa.scc.uid-range: 1000610000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2025-11-17T09:21:44Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-dns
+    olm.operatorgroup.uid/b2637a98-e91c-4934-979a-9b4b19b95496: ""
+    openshift.io/cluster-monitoring: "true"
+    openshift.io/run-level: "0"
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/warn: privileged
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+          f:openshift.io/run-level: {}
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/enforce: {}
+          f:pod-security.kubernetes.io/warn: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2025-11-17T09:21:44Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2025-11-17T09:21:44Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/b2637a98-e91c-4934-979a-9b4b19b95496: {}
+    manager: olm
+    operation: Update
+    time: "2025-11-17T09:27:09Z"
+  name: openshift-dns
+  resourceVersion: "14091"
+  uid: 39ca3dbf-3669-4116-965f-b091847908d5
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

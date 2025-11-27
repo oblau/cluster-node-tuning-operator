@@ -1,0 +1,77 @@
+2025-11-17T09:08:44.670679386Z + declare -r haproxy_sock=/var/run/haproxy/haproxy-XXXXXX.sock
+2025-11-17T09:08:44.670679386Z + declare -r haproxy_log_sock=/var/run/haproxy/haproxy-log.sock
+2025-11-17T09:08:44.670679386Z + export -f msg_handler
+2025-11-17T09:08:44.670679386Z + export -f reload_haproxy
+2025-11-17T09:08:44.670915823Z + export -f verify_old_haproxy_ps_being_deleted
+2025-11-17T09:08:44.670915823Z + rm -f /var/run/haproxy/haproxy-XXXXXX.sock /var/run/haproxy/haproxy-log.sock
+2025-11-17T09:08:44.672461972Z + '[' -s /etc/haproxy/haproxy.cfg ']'
+2025-11-17T09:08:44.672494462Z + socat UNIX-RECV:/var/run/haproxy/haproxy-log.sock STDOUT
+2025-11-17T09:08:44.672494462Z + socat UNIX-LISTEN:/var/run/haproxy/haproxy-XXXXXX.sock,fork 'system:bash -c msg_handler'
+2025-11-17T09:09:12.305042227Z The client send: reload
+2025-11-17T09:09:12.334012007Z [NOTICE]   (13) : New XXXXXX (15) forked
+2025-11-17T09:09:12.334012007Z [NOTICE]   (13) : Loading success.
+2025-11-17T09:09:12.513384849Z [WARNING]  (15) : Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer4 connection problem, info: "Connection refused", check duration: 0ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:09:12.513484668Z <129>Nov 17 09:09:12 haproxy[15]: Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer4 connection problem, info: "Connection refused", check duration: 0ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:09:14.818612476Z [WARNING]  (15) : Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer4 connection problem, info: "Connection refused", check duration: 0ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:09:14.818612476Z [ALERT]    (15) : backend 'XXXXXXs' has no server available!
+2025-11-17T09:09:14.818750634Z <129>Nov 17 09:09:14 haproxy[15]: Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer4 connection problem, info: "Connection refused", check duration: 0ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:09:14.818750634Z <129>Nov 17 09:09:14 haproxy[15]: backend XXXXXXs has no server available!
+2025-11-17T09:23:47.794724901Z [WARNING]  (15) : Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 3ms. 1 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:23:47.794903888Z <133>Nov 17 09:23:47 haproxy[15]: Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 3ms. 1 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:25:42.875565825Z <129>Nov 17 09:25:42 haproxy[15]: Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 4ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:25:42.875565825Z <129>Nov 17 09:25:42 haproxy[15]: backend XXXXXXs has no server available!
+2025-11-17T09:25:42.875624492Z [WARNING]  (15) : Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 4ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:25:42.875624492Z [ALERT]    (15) : backend 'XXXXXXs' has no server available!
+2025-11-17T09:27:15.258730693Z <133>Nov 17 09:27:15 haproxy[15]: Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 11ms. 1 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:27:15.258767857Z [WARNING]  (15) : Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 11ms. 1 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:27:27.651062201Z [WARNING]  (15) : Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 4ms. 2 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:27:27.651155942Z <133>Nov 17 09:27:27 haproxy[15]: Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 4ms. 2 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:31:17.813101003Z <129>Nov 17 09:31:17 haproxy[15]: Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 2ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:31:17.813163495Z [WARNING]  (15) : Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 2ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:31:38.458367341Z [WARNING]  (15) : Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 2ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:31:38.458415175Z [ALERT]    (15) : backend 'XXXXXXs' has no server available!
+2025-11-17T09:31:38.458537311Z <129>Nov 17 09:31:38 haproxy[15]: Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 2ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:31:38.458542881Z <129>Nov 17 09:31:38 haproxy[15]: backend XXXXXXs has no server available!
+2025-11-17T09:33:01.515242183Z [WARNING]  (15) : Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 6ms. 1 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:33:01.515364014Z <133>Nov 17 09:33:01 haproxy[15]: Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 6ms. 1 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:33:05.299907855Z [WARNING]  (15) : Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 6ms. 2 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:33:05.300058307Z <133>Nov 17 09:33:05 haproxy[15]: Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 6ms. 2 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:33:50.457956125Z The client send: reload
+2025-11-17T09:33:50.498066500Z [WARNING]  (15) : Proxy main stopped (cumulated conns: FE: 206, BE: 0).
+2025-11-17T09:33:50.498091121Z [WARNING]  (15) : Proxy health_check_http_url stopped (cumulated conns: FE: 1616, BE: 0).
+2025-11-17T09:33:50.498099278Z [NOTICE]   (30) : New XXXXXX (34) forked
+2025-11-17T09:33:50.498129163Z <132>Nov 17 09:33:50 haproxy[15]: Proxy main stopped (cumulated conns: FE: 206, BE: 0).
+2025-11-17T09:33:50.498132965Z [NOTICE]   (30) : Loading success.
+2025-11-17T09:33:50.498132965Z [WARNING]  (15) : Proxy stats stopped (cumulated conns: FE: 0, BE: 0).
+2025-11-17T09:33:50.498137939Z <132>Nov 17 09:33:50 haproxy[15]: Proxy health_check_http_url stopped (cumulated conns: FE: 1616, BE: 0).
+2025-11-17T09:33:50.498160087Z <132>Nov 17 09:33:50 haproxy[15]: Proxy stats stopped (cumulated conns: FE: 0, BE: 0).
+2025-11-17T09:33:50.498164828Z [WARNING]  (15) : Proxy XXXXXXs stopped (cumulated conns: FE: 0, BE: 206).
+2025-11-17T09:33:50.498192565Z <132>Nov 17 09:33:50 haproxy[15]: Proxy XXXXXXs stopped (cumulated conns: FE: 0, BE: 206).
+2025-11-17T09:33:50.498203575Z [WARNING]  (15) : Proxy <HTTPCLIENT> stopped (cumulated conns: FE: 0, BE: 0).
+2025-11-17T09:33:50.498722992Z [NOTICE]   (13) : haproxy version is 2.6.13-234aa6d
+2025-11-17T09:33:50.498722992Z [NOTICE]   (13) : path to executable is /usr/sbin/haproxy
+2025-11-17T09:33:50.498730763Z [WARNING]  (13) : Exiting Master process...
+2025-11-17T09:33:50.508599136Z [WARNING]  (13) : Current XXXXXX (15) exited with code 0 (Exit)
+2025-11-17T09:33:50.508599136Z [WARNING]  (13) : All XXXXXXs exited. Exiting... (0)
+2025-11-17T09:33:50.689668433Z [WARNING]  (34) : Server XXXXXXs/XXXXXX0 is DOWN, reason: Layer4 connection problem, info: "Connection refused", check duration: 1ms. 2 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:33:50.689882074Z <129>Nov 17 09:33:50 haproxy[34]: Server XXXXXXs/XXXXXX0 is DOWN, reason: Layer4 connection problem, info: "Connection refused", check duration: 1ms. 2 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:33:52.138089749Z <129>Nov 17 09:33:52 haproxy[34]: Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 3ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:33:52.138109946Z [WARNING]  (34) : Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 3ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:35:30.362208463Z [WARNING]  (34) : Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 2ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:35:30.362208463Z [ALERT]    (34) : backend 'XXXXXXs' has no server available!
+2025-11-17T09:35:30.363896660Z <129>Nov 17 09:35:30 haproxy[34]: Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 2ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:35:30.363896660Z <129>Nov 17 09:35:30 haproxy[34]: backend XXXXXXs has no server available!
+2025-11-17T09:36:19.224741109Z <133>Nov 17 09:36:19 haproxy[34]: Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 3ms. 1 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:36:19.224766268Z [WARNING]  (34) : Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 3ms. 1 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:36:50.442742193Z <133>Nov 17 09:36:50 haproxy[34]: Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 1ms. 2 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:36:50.442782048Z [WARNING]  (34) : Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 1ms. 2 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:41:05.790208477Z [WARNING]  (34) : Server XXXXXXs/XXXXXX0 is UP, reason: Layer7 check passed, code: 200, check duration: 4ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:41:05.790275826Z <133>Nov 17 09:41:05 haproxy[34]: Server XXXXXXs/XXXXXX0 is UP, reason: Layer7 check passed, code: 200, check duration: 4ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:42:45.673949923Z <129>Nov 17 09:42:45 haproxy[34]: Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 1ms. 2 active and 0 backup servers left. 19 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:42:45.673993618Z [WARNING]  (34) : Server XXXXXXs/XXXXXX2 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 1ms. 2 active and 0 backup servers left. 19 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:44:05.721742159Z [WARNING]  (34) : Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 4ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:44:05.721843650Z <133>Nov 17 09:44:05 haproxy[34]: Server XXXXXXs/XXXXXX2 is UP, reason: Layer7 check passed, code: 200, check duration: 4ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:45:54.543444444Z [WARNING]  (34) : Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 1ms. 2 active and 0 backup servers left. 53 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:45:54.543538686Z <129>Nov 17 09:45:54 haproxy[34]: Server XXXXXXs/XXXXXX1 is DOWN, reason: Layer7 wrong status, code: 500, info: "Internal Server Error", check duration: 1ms. 2 active and 0 backup servers left. 53 sessions active, 0 requeued, 0 remaining in queue.
+2025-11-17T09:47:04.579154281Z [WARNING]  (34) : Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 4ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+2025-11-17T09:47:04.579235362Z <133>Nov 17 09:47:04 haproxy[34]: Server XXXXXXs/XXXXXX1 is UP, reason: Layer7 check passed, code: 200, check duration: 4ms. 3 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.

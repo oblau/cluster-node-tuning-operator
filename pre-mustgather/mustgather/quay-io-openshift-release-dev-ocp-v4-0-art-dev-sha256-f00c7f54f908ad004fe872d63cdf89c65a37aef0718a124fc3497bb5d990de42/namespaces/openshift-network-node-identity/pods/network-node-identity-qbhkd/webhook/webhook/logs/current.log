@@ -1,0 +1,16 @@
+2025-11-17T09:19:09.603171752Z + [[ -f /env/_XXXXXX ]]
+2025-11-17T09:19:09.603171752Z + ho_enable=
+2025-11-17T09:19:09.603276399Z ++ date '+%m%d %H:%M:%S.%N'
+2025-11-17T09:19:09.604801314Z I1117 09:19:09.604529815 - network-node-identity - start webhook
+2025-11-17T09:19:09.604818575Z + echo 'I1117 09:19:09.604529815 - network-node-identity - start webhook'
+2025-11-17T09:19:09.604863936Z + exec /usr/bin/ovnkube-identity --k8s-apiserver=https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 --webhook-cert-dir=/etc/webhook-cert --webhook-host=127.0.0.1 --webhook-port=9743 --enable-interconnect --disable-approver --extra-allowed-user=system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-control-plane --wait-for-kubernetes-api=200s --pod-admission-conditions=/var/run/ovnkube-identity-config/additional-pod-admission-cond.json --loglevel=2
+2025-11-17T09:19:09.638448417Z I1117 09:19:09.638339       1 ovnkubeidentity.go:131] Config: {kubeconfig: apiServer:https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 logLevel:2 port:9743 host:127.0.0.1 certDir:/etc/webhook-cert metricsAddress:0 leaseNamespace: enableInterconnect:true enableHybridOverlay:false disableWebhook:false disableApprover:true waitForKAPIDuration:200000000000 localKAPIPort:6443 extraAllowedUsers:{slice:[system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-control-plane] hasBeenSet:true} csrAcceptanceConditionFile: csrAcceptanceConditions:[] podAdmissionConditionFile:/var/run/ovnkube-identity-config/additional-pod-admission-cond.json podAdmissionConditions:[]}
+2025-11-17T09:19:09.638448417Z W1117 09:19:09.638421       1 client_config.go:618] Neither --kubeconfig nor --XXXXXX was specified.  Using the inClusterConfig.  This might not work.
+2025-11-17T09:19:09.639189964Z I1117 09:19:09.639143       1 ovnkubeidentity.go:350] Waiting for caches to sync
+2025-11-17T09:19:09.740246763Z I1117 09:19:09.740121       1 certwatcher.go:161] "controller-runtime/certwatcher: Updated current TLS certificate"
+2025-11-17T09:19:09.740462048Z I1117 09:19:09.740434       1 certwatcher.go:115] "controller-runtime/certwatcher: Starting certificate watcher"
+2025-11-17T09:19:09.740518446Z I1117 09:19:09.740496       1 ovnkubeidentity.go:429] Starting the webhook server
+2025-11-17T09:33:01.762276827Z I1117 09:33:01.762175       1 trace.go:236] Trace[396427260]: "Reflector ListAndWatch" name:k8s.io/client-go/informers/factory.go:159 (17-Nov-2025 09:32:51.717) (total time: 10044ms):
+2025-11-17T09:33:01.762276827Z Trace[396427260]: ---"Objects listed" error:<nil> 10044ms (09:33:01.762)
+2025-11-17T09:33:01.762276827Z Trace[396427260]: [10.044735981s] [10.044735981s] END
+2025-11-17T09:37:22.254807830Z W1117 09:37:22.254633       1 reflector.go:456] k8s.io/client-go/informers/factory.go:159: watch of *v1.Node ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding

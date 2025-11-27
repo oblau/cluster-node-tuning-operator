@@ -1,0 +1,186 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfigPool
+metadata:
+  creationTimestamp: "2025-11-17T09:21:37Z"
+  generation: 4
+  labels:
+    machineconfiguration.openshift.io/mco-built-in: ""
+    operator.machineconfiguration.openshift.io/required-for-upgrade: ""
+    pools.operator.machineconfiguration.openshift.io/XXXXXX: ""
+  managedFields:
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machineconfiguration.openshift.io/mco-built-in: {}
+          f:operator.machineconfiguration.openshift.io/required-for-upgrade: {}
+          f:pools.operator.machineconfiguration.openshift.io/XXXXXX: {}
+      f:spec:
+        .: {}
+        f:configuration: {}
+        f:machineConfigSelector:
+          .: {}
+          f:matchLabels:
+            .: {}
+            f:machineconfiguration.openshift.io/role: {}
+        f:nodeSelector:
+          .: {}
+          f:matchLabels:
+            .: {}
+            f:node-role.kubernetes.io/XXXXXX: {}
+        f:paused: {}
+    manager: machine-config-operator
+    operation: Update
+    time: "2025-11-17T09:21:37Z"
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:configuration:
+          f:name: {}
+          f:source: {}
+    manager: machine-config-controller
+    operation: Update
+    time: "2025-11-17T09:49:59Z"
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:certExpirys: {}
+        f:conditions: {}
+        f:configuration:
+          .: {}
+          f:name: {}
+          f:source: {}
+        f:degradedMachineCount: {}
+        f:machineCount: {}
+        f:observedGeneration: {}
+        f:readyMachineCount: {}
+        f:unavailableMachineCount: {}
+        f:updatedMachineCount: {}
+    manager: machine-config-controller
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:51:41Z"
+  name: XXXXXX
+  resourceVersion: "32349"
+  uid: b6a9a0a0-1202-4364-9a0f-cdfefeb6a2f6
+spec:
+  configuration:
+    name: rendered-XXXXXX-a9414c15fcdc6591f547a2fc5642702a
+    source:
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 00-XXXXXX
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 01-XXXXXX-container-runtime
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 01-XXXXXX-kubelet
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 50-XXXXXXs-chrony-configuration
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 97-XXXXXX-generated-kubelet
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 98-XXXXXX-generated-kubelet
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 99-assisted-installer-XXXXXX-ssh
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 99-XXXXXX-generated-registries
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 99-XXXXXX-ssh
+  machineConfigSelector:
+    matchLabels:
+      machineconfiguration.openshift.io/role: XXXXXX
+  nodeSelector:
+    matchLabels:
+      node-role.kubernetes.io/XXXXXX: ""
+  paused: false
+status:
+  certExpirys:
+  - bundle: KubeAPIServerServingCAData
+    subject: CN=admin-kubeconfig-signer,OU=openshift
+  - bundle: KubeAPIServerServingCAData
+    subject: CN=kube-csr-signer_@1763371225
+  - bundle: KubeAPIServerServingCAData
+    subject: CN=kubelet-signer,OU=openshift
+  - bundle: KubeAPIServerServingCAData
+    subject: CN=kube-apiserver-to-kubelet-signer,OU=openshift
+  - bundle: KubeAPIServerServingCAData
+    subject: CN=kube-control-plane-signer,OU=openshift
+  - bundle: KubeAPIServerServingCAData
+    subject: CN=kubelet-bootstrap-kubeconfig-signer,OU=openshift
+  - bundle: KubeAPIServerServingCAData
+    subject: CN=openshift-kube-apiserver-operator_node-system-admin-signer@1763371229
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:21:50Z"
+    message: ""
+    reason: ""
+    status: "False"
+    type: RenderDegraded
+  - lastTransitionTime: "2025-11-17T09:22:28Z"
+    message: ""
+    reason: ""
+    status: "False"
+    type: NodeDegraded
+  - lastTransitionTime: "2025-11-17T09:22:28Z"
+    message: ""
+    reason: ""
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2025-11-17T09:51:41Z"
+    message: All nodes are updated with MachineConfig rendered-XXXXXX-a9414c15fcdc6591f547a2fc5642702a
+    reason: ""
+    status: "True"
+    type: Updated
+  - lastTransitionTime: "2025-11-17T09:51:41Z"
+    message: ""
+    reason: ""
+    status: "False"
+    type: Updating
+  configuration:
+    name: rendered-XXXXXX-a9414c15fcdc6591f547a2fc5642702a
+    source:
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 00-XXXXXX
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 01-XXXXXX-container-runtime
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 01-XXXXXX-kubelet
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 50-XXXXXXs-chrony-configuration
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 97-XXXXXX-generated-kubelet
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 98-XXXXXX-generated-kubelet
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 99-assisted-installer-XXXXXX-ssh
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 99-XXXXXX-generated-registries
+    - apiVersion: machineconfiguration.openshift.io/v1
+      kind: MachineConfig
+      name: 99-XXXXXX-ssh
+  degradedMachineCount: 0
+  machineCount: 3
+  observedGeneration: 4
+  readyMachineCount: 3
+  unavailableMachineCount: 0
+  updatedMachineCount: 3

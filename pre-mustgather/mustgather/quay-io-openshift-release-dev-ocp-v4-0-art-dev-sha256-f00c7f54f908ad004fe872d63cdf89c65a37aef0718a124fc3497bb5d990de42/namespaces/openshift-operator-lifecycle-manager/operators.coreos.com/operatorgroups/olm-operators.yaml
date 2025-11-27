@@ -1,0 +1,71 @@
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    olm.providedAPIs: PackageManifest.v1.packages.operators.coreos.com
+  creationTimestamp: "2025-11-17T09:05:53Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+      f:spec:
+        .: {}
+        f:targetNamespaces:
+          .: {}
+          v:"openshift-operator-lifecycle-manager": {}
+        f:upgradeStrategy: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:53Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:olm.providedAPIs: {}
+    manager: olm
+    operation: Update
+    time: "2025-11-17T09:21:36Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:lastUpdated: {}
+        f:namespaces:
+          .: {}
+          v:"openshift-operator-lifecycle-manager": {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:21:36Z"
+  name: olm-operators
+  namespace: openshift-operator-lifecycle-manager
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "9160"
+  uid: 2cc1f59d-136f-44bb-a97c-635ea9216713
+spec:
+  targetNamespaces:
+  - openshift-operator-lifecycle-manager
+  upgradeStrategy: Default
+status:
+  lastUpdated: "2025-11-17T09:21:36Z"
+  namespaces:
+  - openshift-operator-lifecycle-manager

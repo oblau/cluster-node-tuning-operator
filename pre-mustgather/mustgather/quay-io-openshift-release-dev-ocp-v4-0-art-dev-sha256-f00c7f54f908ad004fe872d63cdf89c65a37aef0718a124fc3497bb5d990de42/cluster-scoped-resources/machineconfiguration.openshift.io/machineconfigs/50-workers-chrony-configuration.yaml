@@ -1,0 +1,43 @@
+---
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  creationTimestamp: "2025-11-17T09:05:45Z"
+  generation: 1
+  labels:
+    machineconfiguration.openshift.io/role: XXXXXX
+  managedFields:
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machineconfiguration.openshift.io/role: {}
+      f:spec:
+        .: {}
+        f:config:
+          .: {}
+          f:ignition:
+            .: {}
+            f:version: {}
+          f:storage:
+            .: {}
+            f:files: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2025-11-17T09:05:45Z"
+  name: 50-XXXXXXs-chrony-configuration
+  resourceVersion: "1687"
+  uid: 9e4ec5a2-3b35-428d-8441-dda8be47f45b
+spec:
+  config:
+    ignition:
+      version: 3.1.0
+    storage:
+      files:
+      - contents:
+          source: data:text/plain;charset=utf-8;base64,CnBvb2wgMC5yaGVsLnBvb2wubnRwLm9yZyBpYnVyc3QKZHJpZnRmaWxlIC92YXIvbGliL2Nocm9ueS9kcmlmdAptYWtlc3RlcCAxLjAgMwpydGNzeW5jCmxvZ2RpciAvdmFyL2xvZy9jaHJvbnkKc2VydmVyIGNsb2NrMS5yZHUyLnJlZGhhdC5jb20gaWJ1cnN0CnNlcnZlciBjbG9jay5yZWRoYXQuY29tIGlidXJzdApzZXJ2ZXIgbnRwMi5udHAtMDAxLnByb2QuaWFkMi5kYy5yZWRoYXQuY29tIGlidXJzdApzZXJ2ZXIgY2xvY2suY29ycC5yZWRoYXQuY29tIGlidXJzdApzZXJ2ZXIgbnRwMS5udHAtMDAxLnByb2QuaWFkMi5kYy5yZWRoYXQuY29tIGlidXJzdA==
+        mode: 420
+        overwrite: true
+        path: /etc/chrony.conf

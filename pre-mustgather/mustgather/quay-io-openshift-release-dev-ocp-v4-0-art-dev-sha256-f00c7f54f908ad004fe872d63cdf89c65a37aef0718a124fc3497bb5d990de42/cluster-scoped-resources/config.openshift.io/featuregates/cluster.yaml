@@ -1,0 +1,67 @@
+apiVersion: config.openshift.io/v1
+kind: FeatureGate
+metadata:
+  creationTimestamp: "2025-11-17T09:05:31Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2025-11-17T09:05:31Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:featureGates:
+          .: {}
+          k:{"version":"4.14.59"}:
+            .: {}
+            f:disabled: {}
+            f:enabled: {}
+            f:version: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:05:31Z"
+  name: cluster
+  resourceVersion: "1111"
+  uid: 79ddf29b-34e7-440a-aaac-090644ec5c58
+spec: {}
+status:
+  featureGates:
+  - disabled:
+    - name: AdminNetworkPolicy
+    - name: AdmissionWebhookMatchConditions
+    - name: AutomatedEtcdBackup
+    - name: CSIDriverSharedResource
+    - name: DynamicResourceAllocation
+    - name: EventedPLEG
+    - name: ExternalCloudProvider
+    - name: ExternalCloudProviderGCP
+    - name: GCPLabelsTags
+    - name: GatewayAPI
+    - name: InsightsConfigAPI
+    - name: MachineAPIOperatorDisableMachineHealthCheckController
+    - name: MachineAPIProviderOpenStack
+    - name: MaxUnavailableStatefulSet
+    - name: NetworkLiveMigration
+    - name: NodeSwap
+    - name: OpenShiftPodSecurityAdmission
+    - name: RetroactiveDefaultStorageClass
+    - name: RouteExternalCertificate
+    - name: SigstoreImageVerification
+    - name: VSphereStaticIPs
+    - name: ValidatingAdmissionPolicy
+    enabled:
+    - name: AlibabaPlatform
+    - name: AzureWorkloadIdentity
+    - name: BuildCSIVolumes
+    - name: CloudDualStackNodeIPs
+    - name: ExternalCloudProviderAzure
+    - name: ExternalCloudProviderExternal
+    - name: PrivateHostedZoneAWS
+    version: 4.14.59

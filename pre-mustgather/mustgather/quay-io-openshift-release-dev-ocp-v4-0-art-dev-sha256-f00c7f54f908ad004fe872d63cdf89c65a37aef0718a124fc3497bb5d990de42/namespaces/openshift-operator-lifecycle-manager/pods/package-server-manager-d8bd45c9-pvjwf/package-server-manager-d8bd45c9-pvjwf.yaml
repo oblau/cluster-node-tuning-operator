@@ -1,0 +1,399 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.0.32/23","fd02:0:0:2::20/64"],"mac_address":"0a:58:0a:81:00:20","gateway_ips":["10.129.0.1","fd02:0:0:2::1"],"routes":[{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.129.0.1"},{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.129.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.129.0.1"},{"dest":"fd02::/48","nextHop":"fd02:0:0:2::1"},{"dest":"fd03::/112","nextHop":"fd02:0:0:2::1"},{"dest":"fd98::/64","nextHop":"fd02:0:0:2::1"}]}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.0.32",
+              "fd02:0:0:2::20"
+          ],
+          "mac": "0a:58:0a:81:00:20",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2025-11-17T09:11:18Z"
+  generateName: package-server-manager-d8bd45c9-
+  labels:
+    app: package-server-manager
+    pod-template-hash: d8bd45c9
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b4fc4e30-96a1-4380-a8c6-d01b4a37384f"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"package-server-manager"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"PACKAGESERVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PACKAGESERVER_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PACKAGESERVER_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-11-17T09:11:18Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:11:18Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: XXXXXX2
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:20:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:20:17Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.129.0.32"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"fd02:0:0:2::20"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:33:46Z"
+  name: package-server-manager-d8bd45c9-pvjwf
+  namespace: openshift-operator-lifecycle-manager
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: package-server-manager-d8bd45c9
+    uid: b4fc4e30-96a1-4380-a8c6-d01b4a37384f
+  resourceVersion: "20300"
+  uid: 92c495b3-df2a-418f-bf51-81a61099d8ce
+spec:
+  containers:
+  - args:
+    - --name
+    - $(PACKAGESERVER_NAME)
+    - --namespace
+    - $(PACKAGESERVER_NAMESPACE)
+    command:
+    - /bin/psm
+    - start
+    env:
+    - name: PACKAGESERVER_NAME
+      value: packageserver
+    - name: PACKAGESERVER_IMAGE
+      value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f5a9e4e7ae83db4da1a39746e2c4482ec2a1f966c80a20c2fdc9324048985d3b
+    - name: PACKAGESERVER_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: RELEASE_VERSION
+      value: 4.14.59
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f5a9e4e7ae83db4da1a39746e2c4482ec2a1f966c80a20c2fdc9324048985d3b
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8080
+        scheme: HTTP
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: package-server-manager
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8080
+        scheme: HTTP
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000390000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-bfqw9
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: XXXXXX2
+  nodeSelector:
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/XXXXXX: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000390000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c20,c5
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: olm-operator-serviceaccount
+  serviceAccountName: olm-operator-serviceaccount
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/XXXXXX
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-bfqw9
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:19:25Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:33:46Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:33:46Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:19:25Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://302cd67a219938fd558a4c81a4941f7afdfc473dc96ddf37c8f44a76f02892b9
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f5a9e4e7ae83db4da1a39746e2c4482ec2a1f966c80a20c2fdc9324048985d3b
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f5a9e4e7ae83db4da1a39746e2c4482ec2a1f966c80a20c2fdc9324048985d3b
+    lastState:
+      terminated:
+        containerID: cri-o://f1685f101b665c1e8934e1266db18d353a0de6fedea60c7eb8ecdba60367ad94
+        exitCode: 1
+        finishedAt: "2025-11-17T09:32:47Z"
+        message: "er-lock)\nE1117 09:32:40.316865       1 leaderelection.go:327] error
+          retrieving resource lock openshift-operator-lifecycle-manager/packageserver-controller-lock:
+          Get \"https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-operator-lifecycle-manager/leases/packageserver-controller-lock\":
+          context deadline exceeded\nI1117 09:32:40.316992       1 leaderelection.go:280]
+          failed to renew lease openshift-operator-lifecycle-manager/packageserver-controller-lock:
+          timed out waiting for the condition\nE1117 09:32:47.324153       1 leaderelection.go:303]
+          Failed to release lock: rpc error: code = DeadlineExceeded desc = context
+          deadline exceeded\n2025-11-17T09:32:47Z\tDEBUG\tevents\tpackage-server-manager-d8bd45c9-pvjwf_443e20f7-31a3-4fde-be29-92d692d734c1
+          stopped leading\t{\"type\": \"Normal\", \"object\": {\"kind\":\"Lease\",\"namespace\":\"openshift-operator-lifecycle-manager\",\"name\":\"packageserver-controller-lock\",\"uid\":\"b5fe08c0-cc4a-438c-959d-2d8033de90cd\",\"apiVersion\":\"coordination.k8s.io/v1\",\"resourceVersion\":\"16070\"},
+          \"reason\": \"LeaderElection\"}\n2025-11-17T09:32:47Z\tERROR\tsetup\tproblem
+          running manager\t{\"error\": \"leader election lost\"}\nmain.run\n\t/build/cmd/package-server-manager/main.go:128\ngithub.com/spf13/cobra.(*Command).execute\n\t/build/vendor/github.com/spf13/cobra/command.go:940\ngithub.com/spf13/cobra.(*Command).ExecuteC\n\t/build/vendor/github.com/spf13/cobra/command.go:1068\ngithub.com/spf13/cobra.(*Command).Execute\n\t/build/vendor/github.com/spf13/cobra/command.go:992\nmain.main\n\t/build/cmd/package-server-manager/main.go:39\nruntime.main\n\t/usr/lib/golang/src/runtime/proc.go:250\nError:
+          leader election lost\nencountered an error while executing the binary: leader
+          election lost\n2025-11-17T09:32:47Z\tINFO\tStopping and waiting for non
+          leader election runnables\n2025-11-17T09:32:47Z\tINFO\tStopping and waiting
+          for leader election runnables\n2025-11-17T09:32:47Z\tINFO\tStopping and
+          waiting for caches\n2025-11-17T09:32:47Z\tINFO\tStopping and waiting for
+          webhooks\n2025-11-17T09:32:47Z\tINFO\tWait completed, proceeding to shutdown
+          the manager\n"
+        reason: Error
+        startedAt: "2025-11-17T09:26:56Z"
+    name: package-server-manager
+    ready: true
+    restartCount: 2
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:33:12Z"
+  hostIP: XXXXXXXXXXX
+  phase: Running
+  podIP: 10.129.0.32
+  podIPs:
+  - ip: 10.129.0.32
+  - ip: fd02:0:0:2::20
+  qosClass: Burstable
+  startTime: "2025-11-17T09:19:25Z"

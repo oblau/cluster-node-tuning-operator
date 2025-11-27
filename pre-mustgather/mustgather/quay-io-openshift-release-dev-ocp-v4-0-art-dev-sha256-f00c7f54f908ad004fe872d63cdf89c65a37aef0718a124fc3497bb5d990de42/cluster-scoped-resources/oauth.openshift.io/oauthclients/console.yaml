@@ -1,0 +1,52 @@
+---
+apiVersion: oauth.openshift.io/v1
+grantMethod: auto
+kind: OAuthClient
+metadata:
+  annotations:
+    capability.openshift.io/name: Console
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2025-11-17T09:27:59Z"
+  managedFields:
+  - apiVersion: oauth.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:grantMethod: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:27:59Z"
+  - apiVersion: oauth.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:redirectURIs:
+        .: {}
+        v:"https://console-openshift-console.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX/auth/callback": {}
+      f:secret: {}
+    manager: console
+    operation: Update
+    time: "2025-11-17T09:38:35Z"
+  name: console
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "24014"
+  uid: c9aeba19-119f-4249-ae5a-438654c70880
+redirectURIs:
+- https://console-openshift-console.apps.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX/auth/callback
+secret: Gtd3tnIK4RhwIpUlUPErNfcX2tESI4xXvBeSwffTqtM

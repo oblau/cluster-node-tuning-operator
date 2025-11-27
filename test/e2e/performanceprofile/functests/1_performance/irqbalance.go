@@ -301,7 +301,56 @@ var _ = Describe("[performance] Checking IRQBalance settings", Ordered, func() {
 			Expect(out).To(Equal("0"), "file %s does not contain the expect output; expected=0 actual=%s", fullPath, out)
 		})
 	})
+
+	Context("Verify irqbalance housekeeping annotation value", Label(string(label.Tier0), "omer"), func() {
+		testpod := &corev1.Pod{} //migh be wrong - i used this so the It block and beforeAll blocks be using the same shared variable
+		BeforeAll(func() {
+			cpuRequest := 4
+			annotations := map[string]string{
+				"irq-load-balancing.crio.io": "housekeeping",
+			}
+			testpod = getTestPodWithProfileAndAnnotations(profile, annotations, cpuRequest)
+			testpod.Spec.NodeName = targetNode.Name
+
+			data, _ := json.Marshal(testpod)
+			testlog.Infof("using testpod:\n%s", string(data))
+
+			if cpuRequest >= isolatedCPUSet.Size() {
+				Skip(fmt.Sprintf("cpus request %d is greater than the available on the node as the isolated cpus are %d", cpuRequest, isolatedCPUSet.Size()))
+			}
+
+			err = testclient.DataPlaneClient.Create(context.TODO(), testpod)
+			Expect(err).ToNot(HaveOccurred())
+
+			testpod, err = pods.WaitForCondition(context.TODO(), client.ObjectKeyFromObject(testpod), corev1.PodReady, corev1.ConditionTrue, 10*time.Minute)
+			logEventsForPod(testpod)
+		})
+
+		It("verify housekeeping env var 'OPENSHIFT_HOUSEKEEPING_CPUS' is present", func() {
+			getHousekeepingCpus := []string{"printenv", "OPENSHIFT_HOUSEKEEPING_CPUS"}
+			testpodCpusByte, err := pods.ExecCommandOnPod(testclient.K8sClient, testpod, testpod.Spec.Containers[0].Name, getHousekeepingCpus)
+			Expect(err).ToNot(HaveOccurred())
+			testpodCpusStr := string(testpodCpusByte)
+			fmt.Println(testpodCpusStr)
+		})
+
+		It("verify 'OPENSHIFT_HOUSEKEEPING_CPUS' has the first cpu asigned to pod", func() {
+			getHousekeepingCpus := []string{"printenv", "OPENSHIFT_HOUSEKEEPING_CPUS"}
+			testpodCpusByte, err := pods.ExecCommandOnPod(testclient.K8sClient, testpod, testpod.Spec.Containers[0].Name, getHousekeepingCpus)
+			Expect(err).ToNot(HaveOccurred())
+			testpodCpusStr := string(testpodCpusByte)
+			fmt.Println(testpodCpusStr)
+		})
+
+	})
 })
+
+// defer func() {
+// 	if testpod != nil {
+// 		testlog.Infof("deleting pod %q", testpod.Name)
+// 		deleteTestPod(context.TODO(), testpod)
+// 	}
+// }
 
 // nodes.BannedCPUs fails (!!!) if the current banned list is empty because, deep down, ExecCommandOnNode expects non-empty stdout.
 // In turn, we do this to at least have a chance to detect failed commands vs failed to execute commands (we had this issue in

@@ -1,0 +1,504 @@
+2025-11-17T09:21:57.395016472Z Copying system trust bundle
+2025-11-17T09:21:57.455169742Z time="2025-11-17T09:21:57Z" level=info msg="setting up client for manager"
+2025-11-17T09:21:57.456174813Z time="2025-11-17T09:21:57Z" level=info msg="running file observer" file=/var/run/configmaps/trusted-ca-bundle/tls-ca-bundle.pem
+2025-11-17T09:21:57.456194613Z I1117 09:21:57.456172       1 observer_polling.go:159] Starting file observer
+2025-11-17T09:21:57.456302342Z time="2025-11-17T09:21:57Z" level=info msg="generated leader election ID" id=b1c54c2c-d0b7-41ed-9544-4486e0d2ecbd
+2025-11-17T09:21:57.456778710Z I1117 09:21:57.456739       1 leaderelection.go:245] attempting to acquire leader lease openshift-cloud-credential-operator/cloud-credential-operator-leader...
+2025-11-17T09:21:57.477783796Z time="2025-11-17T09:21:57Z" level=info msg="current leader: b4512d0f-e2d4-4184-8034-f07cb14f1ddf"
+2025-11-17T09:26:35.126764825Z E1117 09:26:35.126420       1 leaderelection.go:327] error retrieving resource lock openshift-cloud-credential-operator/cloud-credential-operator-leader: the server was unable to return a response in the time allotted, but may still be processing the request (get configmaps cloud-credential-operator-leader)
+2025-11-17T09:29:22.715148634Z I1117 09:29:22.715059       1 leaderelection.go:255] successfully acquired lease openshift-cloud-credential-operator/cloud-credential-operator-leader
+2025-11-17T09:29:22.715229576Z time="2025-11-17T09:29:22Z" level=info msg="became leader" id=b1c54c2c-d0b7-41ed-9544-4486e0d2ecbd
+2025-11-17T09:29:22.715349802Z time="2025-11-17T09:29:22Z" level=info msg="checking prerequisites"
+2025-11-17T09:29:22.716760057Z time="2025-11-17T09:29:22Z" level=info msg="setting up scheme"
+2025-11-17T09:29:22.822021629Z time="2025-11-17T09:29:22Z" level=info msg="filtering the set of secrets we watch"
+2025-11-17T09:29:22.822021629Z time="2025-11-17T09:29:22Z" level=info msg="adding label selector cloudcredential.openshift.io/credentials-request=true to cache options for Secrets"
+2025-11-17T09:29:22.822021629Z time="2025-11-17T09:29:22Z" level=info msg="setting up managers"
+2025-11-17T09:29:22.822967513Z time="2025-11-17T09:29:22Z" level=info msg="registering components"
+2025-11-17T09:29:22.822967513Z time="2025-11-17T09:29:22Z" level=info msg="setting up scheme"
+2025-11-17T09:29:22.823193558Z time="2025-11-17T09:29:22Z" level=info msg="setting up scheme"
+2025-11-17T09:29:22.823321026Z time="2025-11-17T09:29:22Z" level=info msg="setting up controllers"
+2025-11-17T09:29:22.823775338Z time="2025-11-17T09:29:22Z" level=info msg="setting up scheme"
+2025-11-17T09:29:22.828371183Z time="2025-11-17T09:29:22Z" level=info msg="Setting up secret annotator. Platform Type is BareMetal"
+2025-11-17T09:29:22.828746528Z time="2025-11-17T09:29:22Z" level=info msg="setting up scheme"
+2025-11-17T09:29:22.832337418Z time="2025-11-17T09:29:22Z" level=warning msg="Failed to get platform type" controller=pod-identity
+2025-11-17T09:29:22.832624882Z time="2025-11-17T09:29:22Z" level=info msg="setting up scheme"
+2025-11-17T09:29:22.837068211Z time="2025-11-17T09:29:22Z" level=info msg="setting up scheme"
+2025-11-17T09:29:22.842140939Z time="2025-11-17T09:29:22Z" level=info msg="initializing no-op actuator (unsupported platform)"
+2025-11-17T09:29:22.842218592Z time="2025-11-17T09:29:22Z" level=info msg="starting the managers"
+2025-11-17T09:29:22.842467797Z time="2025-11-17T09:29:22Z" level=info msg="started metrics calculator goroutine" controller=metrics
+2025-11-17T09:29:22.842481744Z time="2025-11-17T09:29:22Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:29:22.944217531Z time="2025-11-17T09:29:22Z" level=info msg="requeueing all CredentialsRequests"
+2025-11-17T09:29:22.944806353Z time="2025-11-17T09:29:22Z" level=info msg="parent credential secret does not exist" controller=secretannotator
+2025-11-17T09:29:22.947807612Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/gcp-cloud-credentials namespace=openshift-machine-api
+2025-11-17T09:29:22.947851325Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/vsphere-cloud-credentials namespace=openshift-machine-api
+2025-11-17T09:29:22.947874005Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/ibmcloud-credentials namespace=openshift-machine-api
+2025-11-17T09:29:22.947893996Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/ovirt-credentials namespace=openshift-machine-api
+2025-11-17T09:29:22.947914255Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/aws-cloud-credentials namespace=openshift-machine-api
+2025-11-17T09:29:22.947933808Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/azure-cloud-credentials namespace=openshift-machine-api
+2025-11-17T09:29:22.947954422Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/powervs-credentials namespace=openshift-machine-api
+2025-11-17T09:29:22.947974029Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/openstack-cloud-credentials namespace=openshift-machine-api
+2025-11-17T09:29:22.947993249Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/nutanix-credentials namespace=openshift-machine-api
+2025-11-17T09:29:22.949598492Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds namespace=openshift-cloud-credential-operator
+2025-11-17T09:29:22.949635820Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro-creds namespace=openshift-cloud-credential-operator
+2025-11-17T09:29:22.949842182Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-storage-operator/vsphere-cloud-credentials namespace=openshift-cluster-storage-operator
+2025-11-17T09:29:22.950435714Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-network-config-controller/cloud-credentials namespace=openshift-cloud-network-config-controller
+2025-11-17T09:29:22.950471542Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-network-config-controller/cloud-credentials namespace=openshift-cloud-network-config-controller
+2025-11-17T09:29:22.950491987Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-network-config-controller/cloud-credentials namespace=openshift-cloud-network-config-controller
+2025-11-17T09:29:22.950510624Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-network-config-controller/cloud-credentials namespace=openshift-cloud-network-config-controller
+2025-11-17T09:29:22.951663260Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2025-11-17T09:29:22.951707626Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2025-11-17T09:29:22.951750404Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2025-11-17T09:29:22.951770479Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2025-11-17T09:29:22.951789844Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2025-11-17T09:29:22.951809641Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2025-11-17T09:29:22.951828126Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2025-11-17T09:29:22.953171197Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-network-operator/installer-cloud-credentials namespace=openshift-network-operator
+2025-11-17T09:29:22.953794545Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/vsphere-cloud-credentials namespace=openshift-cloud-controller-manager
+2025-11-17T09:29:22.953823909Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/ibm-cloud-credentials namespace=openshift-cloud-controller-manager
+2025-11-17T09:29:22.953841708Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/openstack-cloud-credentials namespace=openshift-cloud-controller-manager
+2025-11-17T09:29:22.953861416Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/azure-cloud-credentials namespace=openshift-cloud-controller-manager
+2025-11-17T09:29:22.953878371Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/gcp-ccm-cloud-credentials namespace=openshift-cloud-controller-manager
+2025-11-17T09:29:22.953894855Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/nutanix-credentials namespace=openshift-cloud-controller-manager
+2025-11-17T09:29:22.953916174Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/ibm-cloud-credentials namespace=openshift-cloud-controller-manager
+2025-11-17T09:29:22.955171636Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-ingress-operator/cloud-credentials namespace=openshift-ingress-operator
+2025-11-17T09:29:22.955204402Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-ingress-operator/cloud-credentials namespace=openshift-ingress-operator
+2025-11-17T09:29:22.955223430Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-ingress-operator/cloud-credentials namespace=openshift-ingress-operator
+2025-11-17T09:29:22.958742576Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/gcp-pd-cloud-credentials namespace=openshift-cluster-csi-drivers
+2025-11-17T09:29:22.958742576Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/ibm-cloud-credentials namespace=openshift-cluster-csi-drivers
+2025-11-17T09:29:22.958742576Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/ovirt-credentials namespace=openshift-cluster-csi-drivers
+2025-11-17T09:29:22.958772655Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/azure-disk-credentials namespace=openshift-cluster-csi-drivers
+2025-11-17T09:29:22.958772655Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/manila-cloud-credentials namespace=openshift-cluster-csi-drivers
+2025-11-17T09:29:22.958772655Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/openstack-cloud-credentials namespace=openshift-cluster-csi-drivers
+2025-11-17T09:29:22.958772655Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/vmware-vsphere-cloud-credentials namespace=openshift-cluster-csi-drivers
+2025-11-17T09:29:22.958772655Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/ibm-powervs-cloud-credentials namespace=openshift-cluster-csi-drivers
+2025-11-17T09:29:22.958782617Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/azure-file-credentials namespace=openshift-cluster-csi-drivers
+2025-11-17T09:29:22.958782617Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/alibaba-disk-credentials namespace=openshift-cluster-csi-drivers
+2025-11-17T09:29:22.958790026Z time="2025-11-17T09:29:22Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/ebs-cloud-credentials namespace=openshift-cluster-csi-drivers
+2025-11-17T09:29:23.045753620Z time="2025-11-17T09:29:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:29:23.045909168Z time="2025-11-17T09:29:23Z" level=info msg="reconcile complete" controller=metrics elapsed=203.326841ms
+2025-11-17T09:29:23.047923998Z time="2025-11-17T09:29:23Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:29:23.048024946Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2025-11-17T09:29:23.048299744Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2025-11-17T09:29:23.048375899Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2025-11-17T09:29:23.048424286Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2025-11-17T09:29:23.048466368Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2025-11-17T09:29:23.048500689Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cluster-csi-drivers
+2025-11-17T09:29:23.048532210Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2025-11-17T09:29:23.048579933Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos-powervs
+2025-11-17T09:29:23.048625453Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2025-11-17T09:29:23.048668143Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-alibaba
+2025-11-17T09:29:23.048719039Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2025-11-17T09:29:23.048756309Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2025-11-17T09:29:23.048792233Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/alibaba-disk-csi-driver-operator
+2025-11-17T09:29:23.048834768Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2025-11-17T09:29:23.048874793Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2025-11-17T09:29:23.048914656Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2025-11-17T09:29:23.048955065Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2025-11-17T09:29:23.048990720Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2025-11-17T09:29:23.049029124Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2025-11-17T09:29:23.049063935Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2025-11-17T09:29:23.049095741Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2025-11-17T09:29:23.049144646Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2025-11-17T09:29:23.049182028Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2025-11-17T09:29:23.049226654Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2025-11-17T09:29:23.049258357Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2025-11-17T09:29:23.049305257Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2025-11-17T09:29:23.049341263Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2025-11-17T09:29:23.049371759Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2025-11-17T09:29:23.049403795Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2025-11-17T09:29:23.049441599Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2025-11-17T09:29:23.049475240Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2025-11-17T09:29:23.049527649Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2025-11-17T09:29:23.049564400Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2025-11-17T09:29:23.049623197Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2025-11-17T09:29:23.049663243Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2025-11-17T09:29:23.049700785Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-nutanix-cloud-controller-manager
+2025-11-17T09:29:23.049731942Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2025-11-17T09:29:23.049773533Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ovirt
+2025-11-17T09:29:23.049804950Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2025-11-17T09:29:23.049845050Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2025-11-17T09:29:23.049883346Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2025-11-17T09:29:23.049916238Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2025-11-17T09:29:23.049953419Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2025-11-17T09:29:23.049988010Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2025-11-17T09:29:23.050032642Z time="2025-11-17T09:29:23Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2025-11-17T09:29:23.149650258Z time="2025-11-17T09:29:23Z" level=info msg="version has changed, updating progressing condition lastTransitionTime" controller=status new="[{operator 4.14.59}]" old="[{operator }]"
+2025-11-17T09:29:23.159994316Z time="2025-11-17T09:29:23Z" level=info msg="clusteroperator status updated" controller=status
+2025-11-17T09:29:23.161496600Z time="2025-11-17T09:29:23Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:31:23.049557134Z time="2025-11-17T09:31:23Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:31:23.049557134Z time="2025-11-17T09:31:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:31:23.049557134Z time="2025-11-17T09:31:23Z" level=info msg="reconcile complete" controller=metrics elapsed=1.037491ms
+2025-11-17T09:32:54.487695802Z E1117 09:32:54.486370       1 leaderelection.go:327] error retrieving resource lock openshift-cloud-credential-operator/cloud-credential-operator-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cloud-credential-operator/leases/cloud-credential-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2025-11-17T09:32:56.362364527Z time="2025-11-17T09:32:56Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="requeueing all CredentialsRequests"
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="requeueing all CredentialsRequests"
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cluster-csi-drivers
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos-powervs
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-alibaba
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2025-11-17T09:32:56.364909633Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2025-11-17T09:32:56.364997768Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2025-11-17T09:32:56.365032266Z time="2025-11-17T09:32:56Z" level=info msg="parent credential secret does not exist" controller=secretannotator
+2025-11-17T09:32:56.365110765Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/alibaba-disk-csi-driver-operator
+2025-11-17T09:32:56.365270913Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2025-11-17T09:32:56.365270913Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2025-11-17T09:32:56.365270913Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2025-11-17T09:32:56.365742324Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2025-11-17T09:32:56.365742324Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2025-11-17T09:32:56.365742324Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2025-11-17T09:32:56.365742324Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2025-11-17T09:32:56.365742324Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2025-11-17T09:32:56.365742324Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2025-11-17T09:32:56.365742324Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-nutanix-cloud-controller-manager
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ovirt
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2025-11-17T09:32:56.371775427Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2025-11-17T09:32:56.691141574Z time="2025-11-17T09:32:56Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:32:56.702604256Z time="2025-11-17T09:32:56Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:32:56.705943827Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/alibaba-disk-csi-driver-operator
+2025-11-17T09:32:56.707420326Z time="2025-11-17T09:32:56Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:32:56.707514173Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2025-11-17T09:32:56.707575591Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2025-11-17T09:32:56.707608038Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2025-11-17T09:32:56.707649947Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2025-11-17T09:32:56.707694529Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2025-11-17T09:32:56.707740608Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2025-11-17T09:32:56.707770005Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2025-11-17T09:32:56.707807458Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2025-11-17T09:32:56.707841938Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2025-11-17T09:32:56.707896646Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2025-11-17T09:32:56.707949268Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2025-11-17T09:32:56.707987321Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2025-11-17T09:32:56.708049046Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2025-11-17T09:32:56.708056365Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cluster-csi-drivers
+2025-11-17T09:32:56.708103048Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2025-11-17T09:32:56.708134395Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2025-11-17T09:32:56.708209385Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2025-11-17T09:32:56.708209385Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2025-11-17T09:32:56.708255506Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-alibaba
+2025-11-17T09:32:56.708402573Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2025-11-17T09:32:56.708402573Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2025-11-17T09:32:56.708443096Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2025-11-17T09:32:56.708484678Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos-powervs
+2025-11-17T09:32:56.708529047Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2025-11-17T09:32:56.708566866Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2025-11-17T09:32:56.708609626Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2025-11-17T09:32:56.708678649Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2025-11-17T09:32:56.708684489Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2025-11-17T09:32:56.708738846Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2025-11-17T09:32:56.708790819Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2025-11-17T09:32:56.708830828Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2025-11-17T09:32:56.708885535Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2025-11-17T09:32:56.708926093Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2025-11-17T09:32:56.708983182Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ovirt
+2025-11-17T09:32:56.709003411Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2025-11-17T09:32:56.709050897Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2025-11-17T09:32:56.709087184Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2025-11-17T09:32:56.709140965Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-nutanix-cloud-controller-manager
+2025-11-17T09:32:56.709159796Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2025-11-17T09:32:56.709196967Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2025-11-17T09:32:56.709241423Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2025-11-17T09:32:56.709298789Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2025-11-17T09:32:56.709336426Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2025-11-17T09:32:56.709375390Z time="2025-11-17T09:32:56Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2025-11-17T09:33:23.049858897Z time="2025-11-17T09:33:23Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:33:23.050999717Z time="2025-11-17T09:33:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:33:23.051060302Z time="2025-11-17T09:33:23Z" level=info msg="reconcile complete" controller=metrics elapsed=1.356609ms
+2025-11-17T09:34:23.161130777Z time="2025-11-17T09:34:23Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:35:23.051347675Z time="2025-11-17T09:35:23Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:35:23.052102898Z time="2025-11-17T09:35:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:35:23.052161724Z time="2025-11-17T09:35:23Z" level=info msg="reconcile complete" controller=metrics elapsed="911.583µs"
+2025-11-17T09:36:02.660121960Z time="2025-11-17T09:36:02Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:36:02.660162313Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/alibaba-disk-csi-driver-operator
+2025-11-17T09:36:02.661751179Z time="2025-11-17T09:36:02Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:36:02.662345598Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2025-11-17T09:36:02.662366980Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cluster-csi-drivers
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2025-11-17T09:36:02.662913069Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2025-11-17T09:36:02.662952801Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2025-11-17T09:36:02.662997696Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-alibaba
+2025-11-17T09:36:02.663042311Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2025-11-17T09:36:02.663086997Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2025-11-17T09:36:02.663127242Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2025-11-17T09:36:02.663164026Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos-powervs
+2025-11-17T09:36:02.663211724Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2025-11-17T09:36:02.666330846Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2025-11-17T09:36:02.666330846Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2025-11-17T09:36:02.666330846Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2025-11-17T09:36:02.666330846Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2025-11-17T09:36:02.666330846Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2025-11-17T09:36:02.666330846Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2025-11-17T09:36:02.666330846Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2025-11-17T09:36:02.666330846Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2025-11-17T09:36:02.666330846Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2025-11-17T09:36:02.666330846Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ovirt
+2025-11-17T09:36:02.666330846Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2025-11-17T09:36:02.667733687Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2025-11-17T09:36:02.667733687Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2025-11-17T09:36:02.667733687Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-nutanix-cloud-controller-manager
+2025-11-17T09:36:02.667733687Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2025-11-17T09:36:02.667733687Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2025-11-17T09:36:02.667733687Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2025-11-17T09:36:02.667733687Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2025-11-17T09:36:02.667733687Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2025-11-17T09:36:02.667733687Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2025-11-17T09:36:02.667733687Z time="2025-11-17T09:36:02Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:36:02.668650958Z time="2025-11-17T09:36:02Z" level=info msg="requeueing all CredentialsRequests"
+2025-11-17T09:36:02.668650958Z time="2025-11-17T09:36:02Z" level=info msg="requeueing all CredentialsRequests"
+2025-11-17T09:36:02.668956463Z time="2025-11-17T09:36:02Z" level=info msg="parent credential secret does not exist" controller=secretannotator
+2025-11-17T09:36:02.669087202Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2025-11-17T09:36:02.669150945Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2025-11-17T09:36:02.669194595Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2025-11-17T09:36:02.669237664Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2025-11-17T09:36:02.669320762Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2025-11-17T09:36:02.669329538Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2025-11-17T09:36:02.669375201Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2025-11-17T09:36:02.669410999Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2025-11-17T09:36:02.669469548Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2025-11-17T09:36:02.669504299Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2025-11-17T09:36:02.669535727Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2025-11-17T09:36:02.669779910Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2025-11-17T09:36:02.669779910Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2025-11-17T09:36:02.669779910Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2025-11-17T09:36:02.669779910Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-nutanix-cloud-controller-manager
+2025-11-17T09:36:02.669779910Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2025-11-17T09:36:02.669779910Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ovirt
+2025-11-17T09:36:02.669779910Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2025-11-17T09:36:02.669926990Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2025-11-17T09:36:02.669969022Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2025-11-17T09:36:02.670334771Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2025-11-17T09:36:02.670334771Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2025-11-17T09:36:02.670334771Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2025-11-17T09:36:02.670334771Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2025-11-17T09:36:02.670334771Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2025-11-17T09:36:02.670334771Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2025-11-17T09:36:02.670334771Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2025-11-17T09:36:02.670334771Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cluster-csi-drivers
+2025-11-17T09:36:02.670360114Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2025-11-17T09:36:02.670448066Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos-powervs
+2025-11-17T09:36:02.670493889Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2025-11-17T09:36:02.670526598Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2025-11-17T09:36:02.670565467Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2025-11-17T09:36:02.670597532Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-alibaba
+2025-11-17T09:36:02.670646600Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/alibaba-disk-csi-driver-operator
+2025-11-17T09:36:02.670704659Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2025-11-17T09:36:02.670759889Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2025-11-17T09:36:02.670800073Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2025-11-17T09:36:02.670840364Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2025-11-17T09:36:02.670879811Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2025-11-17T09:36:02.670916496Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2025-11-17T09:36:02.670954187Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2025-11-17T09:36:02.670988830Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2025-11-17T09:36:02.671026247Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2025-11-17T09:36:02.671094964Z time="2025-11-17T09:36:02Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2025-11-17T09:36:03.304322910Z time="2025-11-17T09:36:03Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:36:44.639982822Z time="2025-11-17T09:36:44Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:36:44.640206127Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/alibaba-disk-csi-driver-operator
+2025-11-17T09:36:44.640987777Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2025-11-17T09:36:44.641078448Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2025-11-17T09:36:44.641135280Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2025-11-17T09:36:44.641209071Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2025-11-17T09:36:44.641267229Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2025-11-17T09:36:44.641331856Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2025-11-17T09:36:44.641399643Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2025-11-17T09:36:44.641447815Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2025-11-17T09:36:44.641501541Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2025-11-17T09:36:44.641549801Z time="2025-11-17T09:36:44Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:36:44.641567090Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2025-11-17T09:36:44.641628718Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2025-11-17T09:36:44.641686197Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2025-11-17T09:36:44.641731191Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2025-11-17T09:36:44.641800800Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cluster-csi-drivers
+2025-11-17T09:36:44.641859021Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2025-11-17T09:36:44.641911259Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2025-11-17T09:36:44.641956015Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2025-11-17T09:36:44.642005026Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2025-11-17T09:36:44.646869108Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-alibaba
+2025-11-17T09:36:44.646960411Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2025-11-17T09:36:44.647034474Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2025-11-17T09:36:44.647100302Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2025-11-17T09:36:44.647134357Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos-powervs
+2025-11-17T09:36:44.647192405Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2025-11-17T09:36:44.647249115Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2025-11-17T09:36:44.647300656Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2025-11-17T09:36:44.647337671Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2025-11-17T09:36:44.647395158Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2025-11-17T09:36:44.647446756Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2025-11-17T09:36:44.647523440Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2025-11-17T09:36:44.647562435Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2025-11-17T09:36:44.647632175Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2025-11-17T09:36:44.647673356Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2025-11-17T09:36:44.647724022Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ovirt
+2025-11-17T09:36:44.647775538Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2025-11-17T09:36:44.647813593Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2025-11-17T09:36:44.647850544Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2025-11-17T09:36:44.647916567Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-nutanix-cloud-controller-manager
+2025-11-17T09:36:44.647946580Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2025-11-17T09:36:44.647992847Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2025-11-17T09:36:44.648034841Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2025-11-17T09:36:44.648076314Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2025-11-17T09:36:44.648107182Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2025-11-17T09:36:44.648151087Z time="2025-11-17T09:36:44Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="parent credential secret does not exist" controller=secretannotator
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="requeueing all CredentialsRequests"
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="requeueing all CredentialsRequests"
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-nutanix-cloud-controller-manager
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ovirt
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cluster-csi-drivers
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos-powervs
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-alibaba
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/alibaba-disk-csi-driver-operator
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2025-11-17T09:36:46.098325327Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2025-11-17T09:36:46.098406949Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2025-11-17T09:36:46.098406949Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2025-11-17T09:36:46.098412771Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2025-11-17T09:36:46.098690678Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2025-11-17T09:36:46.098690678Z time="2025-11-17T09:36:46Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2025-11-17T09:37:23.052724674Z time="2025-11-17T09:37:23Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:37:23.054014534Z time="2025-11-17T09:37:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:37:23.054054740Z time="2025-11-17T09:37:23Z" level=info msg="reconcile complete" controller=metrics elapsed=1.652788ms
+2025-11-17T09:39:23.054709420Z time="2025-11-17T09:39:23Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:39:23.055494365Z time="2025-11-17T09:39:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:39:23.055524711Z time="2025-11-17T09:39:23Z" level=info msg="reconcile complete" controller=metrics elapsed=1.012886ms
+2025-11-17T09:39:23.163091503Z time="2025-11-17T09:39:23Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:41:23.056336812Z time="2025-11-17T09:41:23Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:41:23.057183540Z time="2025-11-17T09:41:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:41:23.057211364Z time="2025-11-17T09:41:23Z" level=info msg="reconcile complete" controller=metrics elapsed=1.044968ms
+2025-11-17T09:43:23.058410680Z time="2025-11-17T09:43:23Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:43:23.059315750Z time="2025-11-17T09:43:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:43:23.059315750Z time="2025-11-17T09:43:23Z" level=info msg="reconcile complete" controller=metrics elapsed=1.054284ms
+2025-11-17T09:44:23.165675219Z time="2025-11-17T09:44:23Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:45:23.060632830Z time="2025-11-17T09:45:23Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:45:23.061578309Z time="2025-11-17T09:45:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:45:23.061578309Z time="2025-11-17T09:45:23Z" level=info msg="reconcile complete" controller=metrics elapsed=1.266491ms
+2025-11-17T09:46:54.028054229Z time="2025-11-17T09:46:54Z" level=info msg="requeueing all CredentialsRequests"
+2025-11-17T09:46:54.028054229Z time="2025-11-17T09:46:54Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:46:54.028513456Z time="2025-11-17T09:46:54Z" level=info msg="requeueing all CredentialsRequests"
+2025-11-17T09:46:54.028663582Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2025-11-17T09:46:54.028794729Z time="2025-11-17T09:46:54Z" level=info msg="parent credential secret does not exist" controller=secretannotator
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-nutanix-cloud-controller-manager
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ovirt
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cluster-csi-drivers
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos-powervs
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-alibaba
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/alibaba-disk-csi-driver-operator
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2025-11-17T09:46:54.031367215Z time="2025-11-17T09:46:54Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2025-11-17T09:47:23.062316589Z time="2025-11-17T09:47:23Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:47:23.063271661Z time="2025-11-17T09:47:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:47:23.063271661Z time="2025-11-17T09:47:23Z" level=info msg="reconcile complete" controller=metrics elapsed=1.072946ms
+2025-11-17T09:49:23.063663373Z time="2025-11-17T09:49:23Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:49:23.064589609Z time="2025-11-17T09:49:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:49:23.064602199Z time="2025-11-17T09:49:23Z" level=info msg="reconcile complete" controller=metrics elapsed=1.186633ms
+2025-11-17T09:49:23.168347045Z time="2025-11-17T09:49:23Z" level=info msg="reconciling clusteroperator status"
+2025-11-17T09:51:23.065253722Z time="2025-11-17T09:51:23Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2025-11-17T09:51:23.066244338Z time="2025-11-17T09:51:23Z" level=info msg="unsupported cloud for determining CCO mode" cloud=BareMetal controller=metrics
+2025-11-17T09:51:23.066264719Z time="2025-11-17T09:51:23Z" level=info msg="reconcile complete" controller=metrics elapsed=1.19834ms

@@ -1,0 +1,996 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:49Z"
+  involvedObject:
+    apiVersion: operator.openshift.io/v1
+    kind: IngressController
+    name: default
+    namespace: openshift-ingress-operator
+    resourceVersion: "10004"
+    uid: 59655a0e-9613-47f8-acf0-3aa642e6d50d
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:49Z"
+  message: ingresscontroller passed validation
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2025-11-17T09:21:49Z"
+    name: default.1878c0dcfc3c2307
+    namespace: openshift-ingress-operator
+    resourceVersion: "10091"
+    uid: 5f8b4fc1-d10a-4758-be9e-12377cc08374
+  reason: Admitted
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: ingress_controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:49Z"
+  involvedObject:
+    apiVersion: operator.openshift.io/v1
+    kind: IngressController
+    name: default
+    namespace: openshift-ingress-operator
+    resourceVersion: "10150"
+    uid: 59655a0e-9613-47f8-acf0-3aa642e6d50d
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:49Z"
+  message: Created default wildcard certificate "router-certs-default"
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2025-11-17T09:21:49Z"
+    name: default.1878c0dd144441ff
+    namespace: openshift-ingress-operator
+    resourceVersion: "10168"
+    uid: d1b438ed-2341-4b8f-afda-e570d0b9700f
+  reason: CreatedDefaultCertificate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: certificate_controller
+  type: Normal
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:11:19.709622Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "3529"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: null
+  message: '0/2 nodes are available: 2 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:11:19Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:11:19Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c04a5b6e71bd
+    namespace: openshift-ingress-operator
+    resourceVersion: "3531"
+    uid: d45ee4e2-4446-4b26-bd58-059507e12e06
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Warning
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2025-11-17T09:16:29.606498Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "3533"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: null
+  message: '0/2 nodes are available: 2 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/2 nodes are available: 2 Preemption is not helpful for scheduling..'
+  metadata:
+    creationTimestamp: "2025-11-17T09:16:29Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:16:29Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c09282b978fb
+    namespace: openshift-ingress-operator
+    resourceVersion: "4415"
+    uid: 07208eae-e744-470e-af5a-02682b310f94
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-11-17T09:19:25.305004Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "3533"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-ingress-operator/ingress-operator-66db58ffbb-hlkc5
+    to XXXXXX2
+  metadata:
+    creationTimestamp: "2025-11-17T09:19:25Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-11-17T09:19:25Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0bb6b2be5b7
+    namespace: openshift-ingress-operator
+    resourceVersion: "5564"
+    uid: f5332a13-9fb4-4b7b-a606-e22f63b19707
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-XXXXXX0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 8
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:19:25Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "5527"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:20:29Z"
+  message: 'MountVolume.SetUp failed for volume "metrics-tls" : secret "metrics-tls"
+    not found'
+  metadata:
+    creationTimestamp: "2025-11-17T09:19:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:20:29Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0bb7c160bca
+    namespace: openshift-ingress-operator
+    resourceVersion: "7051"
+    uid: c14a4a59-ae5c-4f14-a71c-0c1c966b4d1e
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "5527"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:28Z"
+  message: 'Unable to attach or mount volumes: unmounted volumes=[metrics-tls], unattached
+    volumes=[], failed to process volumes=[]: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:28Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0d81652aa83
+    namespace: openshift-ingress-operator
+    resourceVersion: "8943"
+    uid: 2e03fc06-d370-4392-99f4-6f2cbbedcebc
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:35Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "6033"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:35Z"
+  message: Add eth0 [10.129.0.31/23 fd02:0:0:2::1f/64] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-11-17T09:21:35Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0d9d4b60643
+    namespace: openshift-ingress-operator
+    resourceVersion: "9105"
+    uid: 4152e0b0-adef-4e0c-ade1-de2b5a498871
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ingress-operator}
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "5527"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:35Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6913f393088542a2ab8382b1f12df53c6bbb6ccc8bde7ee8736053b7875be849"
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:35Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0d9d6674c5c
+    namespace: openshift-ingress-operator
+    resourceVersion: "9118"
+    uid: e5e68a5c-fffd-4b98-84c1-c333403cde60
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ingress-operator}
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "5527"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:48Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6913f393088542a2ab8382b1f12df53c6bbb6ccc8bde7ee8736053b7875be849"
+    in 12.552942349s (12.552955534s including waiting)
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:48Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0dcc29e97db
+    namespace: openshift-ingress-operator
+    resourceVersion: "9959"
+    uid: 6f4c1032-0a1d-4b85-8b93-c5900058ba8f
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ingress-operator}
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "5527"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:24:02Z"
+  message: Created container ingress-operator
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:24:02Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0dccbacded4
+    namespace: openshift-ingress-operator
+    resourceVersion: "13312"
+    uid: 447699ee-b0a9-457f-b5e8-e4437d9b6ea3
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ingress-operator}
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "5527"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:24:02Z"
+  message: Started container ingress-operator
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:24:02Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0dcceab2545
+    namespace: openshift-ingress-operator
+    resourceVersion: "13313"
+    uid: 63cfcd52-7035-4cfa-8bc3-7fa121fe4933
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "5527"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:48Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ba9ff4c933739f1774bc8277d636053c5306863221a8c7b7b9ddc4470eb7feff"
+    already present on machine
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:48Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0dccebf136d
+    namespace: openshift-ingress-operator
+    resourceVersion: "9981"
+    uid: 85e13108-976e-421b-944b-da3a76266e64
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "5527"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:48Z"
+  message: Created container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:48Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0dcd8af4298
+    namespace: openshift-ingress-operator
+    resourceVersion: "10000"
+    uid: c21b6c70-06c6-431b-a489-45d3087eff5d
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "5527"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:48Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:21:48Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0dcda104f1b
+    namespace: openshift-ingress-operator
+    resourceVersion: "10002"
+    uid: 0cbf37d6-8b02-4d39-ab2b-6dd804df7a35
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:24:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ingress-operator}
+    kind: Pod
+    name: ingress-operator-66db58ffbb-hlkc5
+    namespace: openshift-ingress-operator
+    resourceVersion: "5527"
+    uid: 1dfe20a9-54bf-4892-b6fb-c4b3f6ca458e
+  kind: Event
+  lastTimestamp: "2025-11-17T09:24:02Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6913f393088542a2ab8382b1f12df53c6bbb6ccc8bde7ee8736053b7875be849"
+    already present on machine
+  metadata:
+    creationTimestamp: "2025-11-17T09:24:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-11-17T09:24:02Z"
+    name: ingress-operator-66db58ffbb-hlkc5.1878c0fc0445afbe
+    namespace: openshift-ingress-operator
+    resourceVersion: "13305"
+    uid: ca377917-e6cc-4db2-92dc-d093dfb6e44b
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: XXXXXX2
+  source:
+    component: kubelet
+    host: XXXXXX2
+  type: Normal
+- apiVersion: v1
+  count: 16
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:05:51Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: ingress-operator-66db58ffbb
+    namespace: openshift-ingress-operator
+    resourceVersion: "1979"
+    uid: b9e3eb44-b458-43e5-a089-5745eabd9fb6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:08:35Z"
+  message: 'Error creating: pods "ingress-operator-66db58ffbb-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+    the cluster does not have any nodes'
+  metadata:
+    creationTimestamp: "2025-11-17T09:05:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:08:35Z"
+    name: ingress-operator-66db58ffbb.1878bffe0ddf5e46
+    namespace: openshift-ingress-operator
+    resourceVersion: "2840"
+    uid: 56823997-d060-4178-a5af-1f9b1839a1bf
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:11:19Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: ingress-operator-66db58ffbb
+    namespace: openshift-ingress-operator
+    resourceVersion: "1983"
+    uid: b9e3eb44-b458-43e5-a089-5745eabd9fb6
+  kind: Event
+  lastTimestamp: "2025-11-17T09:11:19Z"
+  message: 'Created pod: ingress-operator-66db58ffbb-hlkc5'
+  metadata:
+    creationTimestamp: "2025-11-17T09:11:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:11:19Z"
+    name: ingress-operator-66db58ffbb.1878c04a5b5e136e
+    namespace: openshift-ingress-operator
+    resourceVersion: "3530"
+    uid: d6fb588b-2940-49c1-b32d-ea1fd3305d58
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:05:51Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ingress-operator
+    namespace: openshift-ingress-operator
+    resourceVersion: "1978"
+    uid: c5ed5977-5c37-44b2-a766-51a137dffe10
+  kind: Event
+  lastTimestamp: "2025-11-17T09:05:51Z"
+  message: Scaled up replica set ingress-operator-66db58ffbb to 1
+  metadata:
+    creationTimestamp: "2025-11-17T09:05:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:05:51Z"
+    name: ingress-operator.1878bffe0db9a0db
+    namespace: openshift-ingress-operator
+    resourceVersion: "1980"
+    uid: effff381-2ccc-4a6e-8762-a8c7dd212c84
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:48Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ingress-operator
+    namespace: openshift-ingress-operator
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:48Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AlibabaPlatform",
+    "AzureWorkloadIdentity", "BuildCSIVolumes", "CloudDualStackNodeIPs", "ExternalCloudProviderAzure",
+    "ExternalCloudProviderExternal", "PrivateHostedZoneAWS"}, Disabled:[]v1.FeatureGateName{"AdminNetworkPolicy",
+    "AdmissionWebhookMatchConditions", "AutomatedEtcdBackup", "CSIDriverSharedResource",
+    "DynamicResourceAllocation", "EventedPLEG", "ExternalCloudProvider", "ExternalCloudProviderGCP",
+    "GCPLabelsTags", "GatewayAPI", "InsightsConfigAPI", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "MachineAPIProviderOpenStack", "MaxUnavailableStatefulSet", "NetworkLiveMigration",
+    "NodeSwap", "OpenShiftPodSecurityAdmission", "RetroactiveDefaultStorageClass",
+    "RouteExternalCertificate", "SigstoreImageVerification", "VSphereStaticIPs", "ValidatingAdmissionPolicy"}}
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: ingress-operator
+      operation: Update
+      time: "2025-11-17T09:21:48Z"
+    name: ingress-operator.1878c0dcd352f1e9
+    namespace: openshift-ingress-operator
+    resourceVersion: "9992"
+    uid: 74802488-28af-477c-850f-4464656ae721
+  reason: FeatureGatesInitialized
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cluster-ingress-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:24:02Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ingress-operator
+    namespace: openshift-ingress-operator
+  kind: Event
+  lastTimestamp: "2025-11-17T09:24:02Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AlibabaPlatform",
+    "AzureWorkloadIdentity", "BuildCSIVolumes", "CloudDualStackNodeIPs", "ExternalCloudProviderAzure",
+    "ExternalCloudProviderExternal", "PrivateHostedZoneAWS"}, Disabled:[]v1.FeatureGateName{"AdminNetworkPolicy",
+    "AdmissionWebhookMatchConditions", "AutomatedEtcdBackup", "CSIDriverSharedResource",
+    "DynamicResourceAllocation", "EventedPLEG", "ExternalCloudProvider", "ExternalCloudProviderGCP",
+    "GCPLabelsTags", "GatewayAPI", "InsightsConfigAPI", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "MachineAPIProviderOpenStack", "MaxUnavailableStatefulSet", "NetworkLiveMigration",
+    "NodeSwap", "OpenShiftPodSecurityAdmission", "RetroactiveDefaultStorageClass",
+    "RouteExternalCertificate", "SigstoreImageVerification", "VSphereStaticIPs", "ValidatingAdmissionPolicy"}}
+  metadata:
+    creationTimestamp: "2025-11-17T09:24:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: ingress-operator
+      operation: Update
+      time: "2025-11-17T09:24:02Z"
+    name: ingress-operator.1878c0fc123729b4
+    namespace: openshift-ingress-operator
+    resourceVersion: "13315"
+    uid: 7b083618-fac4-4522-9e48-da0f38078ed6
+  reason: FeatureGatesInitialized
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: cluster-ingress-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-11-17T09:21:49Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Secret
+    name: router-ca
+    namespace: openshift-ingress-operator
+    resourceVersion: "10082"
+    uid: dbb6d77b-3ff6-4942-82df-1b6ccf67ea57
+  kind: Event
+  lastTimestamp: "2025-11-17T09:21:49Z"
+  message: Created a default wildcard CA certificate
+  metadata:
+    creationTimestamp: "2025-11-17T09:21:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2025-11-17T09:21:49Z"
+    name: router-ca.1878c0dcfab1216b
+    namespace: openshift-ingress-operator
+    resourceVersion: "10085"
+    uid: 725c06f4-e431-4d13-b311-991fe1e02ae5
+  reason: CreatedWildcardCACert
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: certificate_controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "32449"

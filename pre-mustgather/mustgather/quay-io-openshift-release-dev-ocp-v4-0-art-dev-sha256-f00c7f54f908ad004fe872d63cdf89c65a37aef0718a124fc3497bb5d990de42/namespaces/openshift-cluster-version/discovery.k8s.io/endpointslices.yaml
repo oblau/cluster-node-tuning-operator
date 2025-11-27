@@ -1,0 +1,70 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - XXXXXXXXXXX
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: XXXXXX2
+    targetRef:
+      kind: Pod
+      name: cluster-version-operator-6bccd5fdcc-kpbx4
+      namespace: openshift-cluster-version
+      uid: fe2edf2b-a8bf-4da1-a492-9893501acf75
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:21:28Z"
+    creationTimestamp: "2025-11-17T09:04:56Z"
+    generateName: cluster-version-operator-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: cluster-version-operator
+      kubernetes.io/service-name: cluster-version-operator
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f968cf54-31fb-477a-89d0-bf9c8b9f95f2"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:21:28Z"
+    name: cluster-version-operator-dmnb4
+    namespace: openshift-cluster-version
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: cluster-version-operator
+      uid: f968cf54-31fb-477a-89d0-bf9c8b9f95f2
+    resourceVersion: "8971"
+    uid: 31ee22df-097e-433a-be61-3d6157e3e12f
+  ports:
+  - name: metrics
+    port: 9099
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "32328"

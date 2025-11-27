@@ -1,0 +1,346 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.8/23","fd02:0:0:5::8/64"],"mac_address":"0a:58:0a:80:02:08","gateway_ips":["10.128.2.1","fd02:0:0:5::1"],"routes":[{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.128.2.1"},{"dest":XXXXXXXXXXXXXXX,"nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"},{"dest":"fd02::/48","nextHop":"fd02:0:0:5::1"},{"dest":"fd03::/112","nextHop":"fd02:0:0:5::1"},{"dest":"fd98::/64","nextHop":"fd02:0:0:5::1"}]}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.2.8",
+              "fd02:0:0:5::8"
+          ],
+          "mac": "0a:58:0a:80:02:08",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2025-11-17T09:38:51Z"
+  generateName: monitoring-plugin-7b5d6d66c-
+  labels:
+    app.kubernetes.io/component: monitoring-plugin
+    app.kubernetes.io/managed-by: cluster-monitoring-operator
+    app.kubernetes.io/name: monitoring-plugin
+    app.kubernetes.io/part-of: openshift-monitoring
+    pod-template-hash: 7b5d6d66c
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"2d866b58-5c44-40ca-92a2-70917edc65a0"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:automountServiceAccountToken: {}
+        f:containers:
+          k:{"name":"monitoring-plugin"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/nginx/nginx.conf"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+                f:subPath: {}
+              k:{"mountPath":"/var/cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"monitoring-plugin-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"nginx-conf"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-11-17T09:38:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: XXXXXX0
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:38:53Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.2.8"}:
+            .: {}
+            f:ip: {}
+          k:{"ip":"fd02:0:0:5::8"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:39:00Z"
+  name: monitoring-plugin-7b5d6d66c-k6f6m
+  namespace: openshift-monitoring
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: monitoring-plugin-7b5d6d66c
+    uid: 2d866b58-5c44-40ca-92a2-70917edc65a0
+  resourceVersion: "25224"
+  uid: b465f5aa-8c1c-4859-abe0-ecfcd42867b2
+spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchLabels:
+            app.kubernetes.io/component: monitoring-plugin
+            app.kubernetes.io/managed-by: cluster-monitoring-operator
+            app.kubernetes.io/name: monitoring-plugin
+            app.kubernetes.io/part-of: openshift-monitoring
+        namespaces:
+        - openshift-monitoring
+        topologyKey: kubernetes.io/hostname
+  automountServiceAccountToken: false
+  containers:
+  - command:
+    - /bin/sh
+    - -c
+    - |
+      if echo "$POD_IP" | grep -qE '^([0-9]{1,3}\.){3}[0-9]{1,3}$'; then
+        LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME="9443"
+      else
+        LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME="[::]:9443"
+      fi
+      sed "s/LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME/$LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME/g" /etc/nginx/nginx.conf > /tmp/nginx.conf
+      exec nginx -c /tmp/nginx.conf -g 'daemon off;'
+    env:
+    - name: POD_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.podIP
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1bed9ed6078f08a2bf1169d65d3185e08124231b209fdf8d1f107b5a914fb776
+    imagePullPolicy: IfNotPresent
+    name: monitoring-plugin
+    ports:
+    - containerPort: 9443
+      name: https
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000440000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/cert
+      name: monitoring-plugin-cert
+      readOnly: true
+    - mountPath: /etc/nginx/nginx.conf
+      name: nginx-conf
+      readOnly: true
+      subPath: nginx.conf
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: default-dockercfg-vdmlv
+  nodeName: XXXXXX0
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000440000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c21,c10
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: monitoring-plugin
+    name: nginx-conf
+  - name: monitoring-plugin-cert
+    secret:
+      defaultMode: 420
+      secretName: monitoring-plugin-cert
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:38:51Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:39:00Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:39:00Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-11-17T09:38:51Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://32e6aed9eeead16506a814bd0646763acba095281c1de2f2a0783a7c345e9340
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1bed9ed6078f08a2bf1169d65d3185e08124231b209fdf8d1f107b5a914fb776
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1bed9ed6078f08a2bf1169d65d3185e08124231b209fdf8d1f107b5a914fb776
+    lastState: {}
+    name: monitoring-plugin
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-11-17T09:39:00Z"
+  hostIP: XXXXXXXXXX
+  phase: Running
+  podIP: 10.128.2.8
+  podIPs:
+  - ip: 10.128.2.8
+  - ip: fd02:0:0:5::8
+  qosClass: Burstable
+  startTime: "2025-11-17T09:38:51Z"

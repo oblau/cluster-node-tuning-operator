@@ -1,0 +1,27 @@
+2025-11-17T09:19:55.773170793Z + [[ -f /env/_XXXXXX ]]
+2025-11-17T09:19:55.773170793Z + . /ovnkube-lib/ovnkube-lib.sh
+2025-11-17T09:19:55.773170793Z ++ set -x
+2025-11-17T09:19:55.773170793Z ++ K8S_NODE=XXXXXX1
+2025-11-17T09:19:55.773170793Z ++ [[ -n XXXXXX1 ]]
+2025-11-17T09:19:55.773170793Z ++ [[ -f /env/XXXXXX1 ]]
+2025-11-17T09:19:55.773170793Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2025-11-17T09:19:55.773170793Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2025-11-17T09:19:55.773170793Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2025-11-17T09:19:55.773170793Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2025-11-17T09:19:55.773170793Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2025-11-17T09:19:55.773170793Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2025-11-17T09:19:55.773170793Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2025-11-17T09:19:55.773170793Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2025-11-17T09:19:55.773170793Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2025-11-17T09:19:55.773170793Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2025-11-17T09:19:55.773993026Z + trap quit-nbdb TERM INT
+2025-11-17T09:19:55.774037864Z + start-nbdb info
+2025-11-17T09:19:55.774037864Z + local log_level=info
+2025-11-17T09:19:55.774037864Z + [[ 1 -ne 1 ]]
+2025-11-17T09:19:55.774266064Z + wait 18172
+2025-11-17T09:19:55.774323132Z + exec /usr/share/ovn/scripts/ovn-ctl --no-monitor --db-nb-sock=/var/run/ovn/ovnnb_db.sock '--ovn-nb-log=-vconsole:info -vfile:off -vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' run_nb_ovsdb
+2025-11-17T09:19:55.843513862Z 2025-11-17T09:19:55.843Z|00001|vlog|INFO|opened log file /var/log/ovn/ovsdb-server-nb.log
+2025-11-17T09:19:55.857132924Z 2025-11-17T09:19:55.856Z|00002|ovsdb_server|INFO|ovsdb-server (Open vSwitch) 3.3.6-141.el9fdp
+2025-11-17T09:19:57.816655538Z 2025-11-17T09:19:57.816Z|00003|ovsdb_server|INFO|memory trimming after compaction enabled.
+2025-11-17T09:20:05.881278040Z 2025-11-17T09:20:05.881Z|00004|memory|INFO|12912 kB peak resident set size after 10.0 seconds
+2025-11-17T09:20:05.881395575Z 2025-11-17T09:20:05.881Z|00005|memory|INFO|atoms:3689 cells:2346 json-caches:2 monitors:3 n-weak-refs:43 sessions:2

@@ -1,0 +1,66 @@
+---
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  creationTimestamp: "2025-11-17T09:33:23Z"
+  generateName: csr-
+  managedFields:
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+    manager: kubelet
+    operation: Update
+    time: "2025-11-17T09:33:23Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Approved"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: assisted-installer-controller
+    operation: Update
+    subresource: approval
+    time: "2025-11-17T09:33:32Z"
+  - apiVersion: certificates.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:certificate: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2025-11-17T09:33:32Z"
+  name: csr-gf5qm
+  resourceVersion: "19915"
+  uid: 626d22f7-af7b-400f-b99d-09d065a99d00
+spec:
+  groups:
+  - system:serviceaccounts
+  - system:serviceaccounts:openshift-machine-config-operator
+  - system:authenticated
+  request: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0KTUlIeE1JR1hBZ0VBTURVeEZUQVRCZ05WQkFvVERITjVjM1JsYlRwdWIyUmxjekVjTUJvR0ExVUVBeE1UYzNsegpkR1Z0T201dlpHVTZiV0Z6ZEdWeU1EQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJQa1JCdm1RCkdwd2x0bHYxR0dGVWJhVnN2TFROODcxMTdOZFZjRGJ0aDh0alVSWlVPWVZNeTYxazJKSERNdVVBTDFlK3lmNGsKYUxuMzJ5ZVd4WjRpcUltZ0FEQUtCZ2dxaGtqT1BRUURBZ05KQURCR0FpRUFxZFF4SlJuMTFJdmwyeHhVZnZRdAppbkV4NzAweThpTXcrZkI2ZW1iSGszZ0NJUUNJaXIrOHlDUUZudE1ZY202L3ZwbXdsekJmdU0zQnV5YllYZWhNCk8rMnBWZz09Ci0tLS0tRU5EIENFUlRJRklDQVRFIFJFUVVFU1QtLS0tLQo=
+  signerName: kubernetes.io/kube-apiserver-client-kubelet
+  uid: fede3621-31a7-4d34-a284-5648d07b05ee
+  usages:
+  - digital signature
+  - client auth
+  username: system:serviceaccount:openshift-machine-config-operator:node-bootstrapper
+status:
+  certificate: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNjRENDQVZpZ0F3SUJBZ0lRZms2WlRIZTcrdFpKKy84TEdJRTdVekFOQmdrcWhraUc5dzBCQVFzRkFEQW0KTVNRd0lnWURWUVFEREJ0cmRXSmxMV056Y2kxemFXZHVaWEpmUURFM05qTXpOekV5TWpVd0hoY05NalV4TVRFMwpNRGt5T0RNeVdoY05NalV4TVRFNE1Ea3dNVEk1V2pBMU1SVXdFd1lEVlFRS0V3eHplWE4wWlcwNmJtOWtaWE14CkhEQWFCZ05WQkFNVEUzTjVjM1JsYlRwdWIyUmxPbTFoYzNSbGNqQXdXVEFUQmdjcWhrak9QUUlCQmdncWhrak8KUFFNQkJ3TkNBQVQ1RVFiNWtCcWNKYlpiOVJoaFZHMmxiTHkwemZPOWRlelhWWEEyN1lmTFkxRVdWRG1GVE11dApaTmlSd3pMbEFDOVh2c24rSkdpNTk5c25sc1dlSXFpSm8xWXdWREFPQmdOVkhROEJBZjhFQkFNQ0I0QXdFd1lEClZSMGxCQXd3Q2dZSUt3WUJCUVVIQXdJd0RBWURWUjBUQVFIL0JBSXdBREFmQmdOVkhTTUVHREFXZ0JSdDcrdUwKVVMxWnpLdWRaZ1ZodHF4ZC8zdUlDREFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBUS9qNlRmU3ZwMk9xeFRQLwpOWUprcnNqMnZQQ1U2K0ZoREhQRExiektaQmpreW5NZTF5NnF3bWU1L0tYcndBa204d2lidE8xMmwrU1Zvb2k3CkVOZGpwY2JzdkZLQ1BYS3NCSGFtaUpBYllpNGVSTFNyY3hycS8xeVNobTJ5SE9kSHpjbVczbGhaVzl2bytPQjEKa2drMDdETjZUZ0h4MVNqaTh6Y2JhbFJGc3dDR3hlRUtXdW9CYS9IWHJEWlJ0aExPZWFOVU5YTXFWRmFmWjFYQgpwRVVFN0E4YXlaQzF1TkdiWEtnYnhwYlBKcXF2M0NPL1Yzb2NUcWQ5ZDVzbnZrUjc0LzRDSDJvby9kVms4TVBuCmtweE5XRllkZWgrdzNub0RwU2tmelNZbWRpMUdHZ0hjZWF2aC9zQzFtSnB1cjA0MUtmYWwyM1kveVZ1THFQQ2cKS2k0dlFnPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+  conditions:
+  - lastTransitionTime: "2025-11-17T09:33:32Z"
+    lastUpdateTime: "2025-11-17T09:33:32Z"
+    message: This CSR was approved by the assisted-installer-controller
+    reason: NodeCSRApprove
+    status: "True"
+    type: Approved

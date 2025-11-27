@@ -1,0 +1,110 @@
+2025-11-17T09:31:42.381471444Z + [[ -f /env/_XXXXXX ]]
+2025-11-17T09:31:42.381835001Z ++ date '+%m%d %H:%M:%S.%N'
+2025-11-17T09:31:42.383890950Z + echo 'I1117 09:31:42.383558704 - network-node-identity - start approver'
+2025-11-17T09:31:42.383903255Z I1117 09:31:42.383558704 - network-node-identity - start approver
+2025-11-17T09:31:42.383943994Z + exec /usr/bin/ovnkube-identity --k8s-apiserver=https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 --disable-webhook --csr-acceptance-conditions=/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json --loglevel=4
+2025-11-17T09:31:42.404009689Z I1117 09:31:42.403932       1 ovnkubeidentity.go:131] Config: {kubeconfig: apiServer:https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443 logLevel:4 port:9443 host:localhost certDir: metricsAddress:0 leaseNamespace: enableInterconnect:false enableHybridOverlay:false disableWebhook:true disableApprover:false waitForKAPIDuration:0 localKAPIPort:6443 extraAllowedUsers:{slice:[] hasBeenSet:false} csrAcceptanceConditionFile:/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json csrAcceptanceConditions:[] podAdmissionConditionFile: podAdmissionConditions:[]}
+2025-11-17T09:31:42.404027137Z W1117 09:31:42.404006       1 client_config.go:618] Neither --kubeconfig nor --XXXXXX was specified.  Using the inClusterConfig.  This might not work.
+2025-11-17T09:31:42.404645963Z I1117 09:31:42.404629       1 ovnkubeidentity.go:468] Starting certificate signing request approver
+2025-11-17T09:31:42.404694128Z I1117 09:31:42.404677       1 shared_informer.go:341] caches populated
+2025-11-17T09:31:42.404746154Z I1117 09:31:42.404735       1 leaderelection.go:245] attempting to acquire leader lease openshift-network-node-identity/ovnkube-identity...
+2025-11-17T09:31:43.407949178Z I1117 09:31:43.407894       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:31:44.409573344Z I1117 09:31:44.409449       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:31:45.411176840Z I1117 09:31:45.411037       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:31:46.412761076Z I1117 09:31:46.412561       1 with_retry.go:234] Got a Retry-After 1s response for attempt 4 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:31:47.414888761Z I1117 09:31:47.414838       1 with_retry.go:234] Got a Retry-After 1s response for attempt 5 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:31:48.417322236Z I1117 09:31:48.417173       1 with_retry.go:234] Got a Retry-After 1s response for attempt 6 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:31:49.418956137Z I1117 09:31:49.418831       1 with_retry.go:234] Got a Retry-After 1s response for attempt 7 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:31:50.420443528Z I1117 09:31:50.420332       1 with_retry.go:234] Got a Retry-After 1s response for attempt 8 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:31:51.421867705Z I1117 09:31:51.421789       1 with_retry.go:234] Got a Retry-After 1s response for attempt 9 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:31:52.425986495Z I1117 09:31:52.425898       1 with_retry.go:234] Got a Retry-After 1s response for attempt 10 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:31:52.427771213Z E1117 09:31:52.427683       1 leaderelection.go:327] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": EOF
+2025-11-17T09:31:52.427771213Z I1117 09:31:52.427738       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:32:32.242624407Z I1117 09:32:32.242557       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:32:33.244819622Z I1117 09:32:33.244650       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:32:34.246472354Z I1117 09:32:34.246350       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:32:35.248797197Z I1117 09:32:35.248592       1 with_retry.go:234] Got a Retry-After 1s response for attempt 4 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:32:36.250449691Z I1117 09:32:36.250303       1 with_retry.go:234] Got a Retry-After 1s response for attempt 5 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:32:37.252100812Z I1117 09:32:37.252056       1 with_retry.go:234] Got a Retry-After 1s response for attempt 6 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:32:38.253624508Z I1117 09:32:38.253541       1 with_retry.go:234] Got a Retry-After 1s response for attempt 7 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:32:39.255429906Z I1117 09:32:39.255302       1 with_retry.go:234] Got a Retry-After 1s response for attempt 8 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:32:40.258091779Z I1117 09:32:40.257910       1 with_retry.go:234] Got a Retry-After 1s response for attempt 9 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:32:41.260254523Z I1117 09:32:41.260193       1 with_retry.go:234] Got a Retry-After 1s response for attempt 10 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:32:41.261824692Z E1117 09:32:41.261799       1 leaderelection.go:327] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": EOF
+2025-11-17T09:32:41.261824692Z I1117 09:32:41.261816       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:33:14.352737336Z I1117 09:33:14.349117       1 leaderelection.go:349] lock is held by XXXXXX1_35b72ff6-6f1e-4bdc-9b47-0a46be3b2c1b and has not yet expired
+2025-11-17T09:33:14.352737336Z I1117 09:33:14.349151       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:33:47.813726815Z I1117 09:33:47.813607       1 leaderelection.go:349] lock is held by XXXXXX1_35b72ff6-6f1e-4bdc-9b47-0a46be3b2c1b and has not yet expired
+2025-11-17T09:33:47.813726815Z I1117 09:33:47.813624       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:34:29.831336867Z I1117 09:34:29.831273       1 leaderelection.go:349] lock is held by XXXXXX2_e18b296c-e194-4404-856d-9c31178857df and has not yet expired
+2025-11-17T09:34:29.831336867Z I1117 09:34:29.831289       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:35:51.449298201Z I1117 09:35:51.448503       1 with_retry.go:234] Got a Retry-After 1s response for attempt 1 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:35:52.451904448Z I1117 09:35:52.451842       1 with_retry.go:234] Got a Retry-After 1s response for attempt 2 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:35:53.453301040Z I1117 09:35:53.453199       1 with_retry.go:234] Got a Retry-After 1s response for attempt 3 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:35:54.454987587Z I1117 09:35:54.454839       1 with_retry.go:234] Got a Retry-After 1s response for attempt 4 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:35:55.456888097Z I1117 09:35:55.456845       1 with_retry.go:234] Got a Retry-After 1s response for attempt 5 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:35:56.458889116Z I1117 09:35:56.458845       1 with_retry.go:234] Got a Retry-After 1s response for attempt 6 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:35:57.460323076Z I1117 09:35:57.460262       1 with_retry.go:234] Got a Retry-After 1s response for attempt 7 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:35:58.462908248Z I1117 09:35:58.462871       1 with_retry.go:234] Got a Retry-After 1s response for attempt 8 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:35:59.464959515Z I1117 09:35:59.464920       1 with_retry.go:234] Got a Retry-After 1s response for attempt 9 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:00.466942273Z I1117 09:36:00.466896       1 with_retry.go:234] Got a Retry-After 1s response for attempt 10 to https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity
+2025-11-17T09:36:00.467946194Z E1117 09:36:00.467898       1 leaderelection.go:327] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": EOF
+2025-11-17T09:36:00.467946194Z I1117 09:36:00.467921       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:36:42.611311087Z I1117 09:36:42.611266       1 leaderelection.go:349] lock is held by XXXXXX2_e18b296c-e194-4404-856d-9c31178857df and has not yet expired
+2025-11-17T09:36:42.611311087Z I1117 09:36:42.611285       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:37:12.182102144Z I1117 09:37:12.182046       1 leaderelection.go:349] lock is held by XXXXXX2_e18b296c-e194-4404-856d-9c31178857df and has not yet expired
+2025-11-17T09:37:12.182102144Z I1117 09:37:12.182066       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:37:54.361502881Z I1117 09:37:54.361398       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:37:54.361502881Z I1117 09:37:54.361430       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:38:23.113552287Z I1117 09:38:23.113471       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:38:23.113552287Z I1117 09:38:23.113510       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:38:48.705383290Z I1117 09:38:48.705332       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:38:48.705383290Z I1117 09:38:48.705350       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:39:21.645511615Z I1117 09:39:21.645414       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:39:21.645511615Z I1117 09:39:21.645438       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:39:55.592401143Z I1117 09:39:55.592337       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:39:55.592401143Z I1117 09:39:55.592359       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:40:20.670975986Z I1117 09:40:20.670926       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:40:20.670975986Z I1117 09:40:20.670947       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:40:56.210125601Z I1117 09:40:56.210068       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:40:56.210125601Z I1117 09:40:56.210093       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:41:32.288168122Z I1117 09:41:32.288124       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:41:32.288168122Z I1117 09:41:32.288144       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:42:12.918601370Z I1117 09:42:12.918549       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:42:12.918601370Z I1117 09:42:12.918569       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:42:45.972310379Z I1117 09:42:45.972244       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:42:45.972310379Z I1117 09:42:45.972266       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:43:06.860710914Z I1117 09:43:06.860615       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:43:06.860710914Z I1117 09:43:06.860631       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:43:47.311341456Z I1117 09:43:47.311275       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:43:47.311341456Z I1117 09:43:47.311304       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:44:10.616072504Z I1117 09:44:10.615997       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:44:10.616072504Z I1117 09:44:10.616050       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:44:48.639477298Z I1117 09:44:48.639428       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:44:48.639534650Z I1117 09:44:48.639526       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:45:29.518931900Z I1117 09:45:29.518855       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:45:29.518999047Z I1117 09:45:29.518988       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:45:54.008348193Z I1117 09:45:54.008293       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:45:54.008348193Z I1117 09:45:54.008314       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:46:23.157412916Z I1117 09:46:23.157353       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:46:23.157412916Z I1117 09:46:23.157383       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:47:00.368695959Z I1117 09:47:00.368641       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:47:00.368758279Z I1117 09:47:00.368750       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:47:32.244812527Z I1117 09:47:32.244761       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:47:32.244869668Z I1117 09:47:32.244861       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:48:06.353365238Z I1117 09:48:06.353293       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:48:06.353365238Z I1117 09:48:06.353317       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:48:31.386634817Z I1117 09:48:31.386586       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:48:31.386634817Z I1117 09:48:31.386609       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:49:12.469186100Z I1117 09:49:12.469051       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:49:12.469186100Z I1117 09:49:12.469070       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:49:43.338646189Z I1117 09:49:43.338575       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:49:43.338646189Z I1117 09:49:43.338593       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:50:22.942401531Z I1117 09:50:22.942330       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:50:22.942401531Z I1117 09:50:22.942358       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:50:45.800027895Z I1117 09:50:45.799963       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:50:45.800027895Z I1117 09:50:45.799990       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:51:23.723760484Z I1117 09:51:23.723693       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:51:23.723760484Z I1117 09:51:23.723726       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2025-11-17T09:51:58.311840366Z I1117 09:51:58.311732       1 leaderelection.go:349] lock is held by XXXXXX2_52ab6f90-430b-4aa2-bf8c-337c20c76c52 and has not yet expired
+2025-11-17T09:51:58.311840366Z I1117 09:51:58.311773       1 leaderelection.go:250] failed to acquire lease openshift-network-node-identity/ovnkube-identity

@@ -1,0 +1,71 @@
+---
+apiVersion: v1
+data:
+  service-ca.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDUTCCAjmgAwIBAgIIHKUjOpzJvOowDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UE
+    Awwrb3BlbnNoaWZ0LXNlcnZpY2Utc2VydmluZy1zaWduZXJAMTc2MzM3MTIyMDAe
+    Fw0yNTExMTcwOTIwMTlaFw0yODAxMTYwOTIwMjBaMDYxNDAyBgNVBAMMK29wZW5z
+    aGlmdC1zZXJ2aWNlLXNlcnZpbmctc2lnbmVyQDE3NjMzNzEyMjAwggEiMA0GCSqG
+    SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJZslGqtAyG+AF1bCbVlUs9sQRLkmJ7l6v
+    lUzDwf7FOFhJEqdN7VkIx0nX/mxYUYV1jGURo06noKZrWV6z4LXOfcw4X4XIOzkx
+    YNm1kyD9MJGyx6Uv9ZxiAsguqqGwBt0Sf8fXbcqSBCcty7Myr0BNsB/K3FJvbE8p
+    nTx+1G+PrmBkRES8GJe7Av7S31gnvZl2J6V7EkyIBJtSHt57Zcs9FBmuDQcphPhg
+    38jgQhzlLpUbLMkcJLAD9/polbrprn4prszIlJeew5AqkVsBKffJzeikRgtxU97L
+    VkmInVytBlB7mp7rjuIl3mB7oimj5UfVwdT5FG+KwDiaoboG41Q9AgMBAAGjYzBh
+    MA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBQXa9VP
+    LalKu89oL8PUBg9J9mMaQTAfBgNVHSMEGDAWgBQXa9VPLalKu89oL8PUBg9J9mMa
+    QTANBgkqhkiG9w0BAQsFAAOCAQEAs46eXJLEiWM7WVii0daJwcY6CjQCT9w76vP+
+    V2P3oCRXP+UCTZASIqZRpi64T99R7bM7W7Fda16rpyoy/xcMp0sayrfKkr/j4Nzp
+    D6rvx03p38uD5da7M/WblMvjEIZ/aA2D3BjhCde3FPE6q5cpF+X9Rhk2B6MX6Sej
+    qCyQ02EDqlTURydLVf63yq4C+166MCtHwKqNRcRT58RUE1svCAFfdBWhU4DKv+WK
+    GF0JCAztNK9OhBWcw7iAXYfCHuh7sCfseF51Pm7S54/hMmz9DzGIkAF+4Rq9GT2c
+    DuGA0xePSTcjY3jrojdZJovgoxXAcjfwCC7pBYuqu1PrTK5GTw==
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  annotations:
+    capability.openshift.io/name: Insights
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2025-11-17T09:05:55Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5b5cce96-2701-4c85-af4f-4dbf8e0e7775"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2025-11-17T09:05:55Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:service-ca.crt: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2025-11-17T09:20:36Z"
+  name: service-ca-bundle
+  namespace: openshift-insights
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 5b5cce96-2701-4c85-af4f-4dbf8e0e7775
+  resourceVersion: "7678"
+  uid: 9c0b3cc9-5b1f-49a2-a1dc-b7075eb5ba96

@@ -1,0 +1,215 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: Red Hat OpenJDK 11 Runtime (UBI8)
+    openshift.io/image.dockerRepositoryCheck: "2025-11-17T09:30:33Z"
+    openshift.io/provider-display-name: Red Hat, Inc.
+    samples.operator.openshift.io/version: 4.14.59
+  creationTimestamp: "2025-11-17T09:27:31Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:openshift.io/provider-display-name: {}
+          f:samples.operator.openshift.io/version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"1.9"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"1.10"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"1.11"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"1.12"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2025-11-17T09:27:31Z"
+  name: ubi8-openjdk-11-runtime
+  namespace: openshift
+  resourceVersion: "17790"
+  uid: e66668da-7cc1-4ac8-9dee-0d53ed0ce656
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Run Java applications using OpenJDK 11 upon RHEL8.
+      iconClass: icon-rh-openjdk
+      openshift.io/display-name: Red Hat OpenJDK 11 Runtime (UBI8)
+      sampleContextDir: undertow-servlet
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts
+      tags: java,openjdk,ubi8
+      version: "1.10"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/openjdk-11-runtime:1.10
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "1.10"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Run Java applications using OpenJDK 11 upon RHEL8.
+      iconClass: icon-rh-openjdk
+      openshift.io/display-name: Red Hat OpenJDK 11 Runtime (UBI8)
+      sampleContextDir: undertow-servlet
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts
+      tags: java,openjdk,ubi8
+      version: "1.11"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/openjdk-11-runtime:1.11
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "1.11"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Run Java applications using OpenJDK 11 upon RHEL8.
+      iconClass: icon-rh-openjdk
+      openshift.io/display-name: Red Hat OpenJDK 11 Runtime (UBI8)
+      sampleContextDir: undertow-servlet
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts
+      tags: java,openjdk,ubi8
+      version: "1.12"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/openjdk-11-runtime:1.12
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "1.12"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Run Java applications using OpenJDK 11 upon RHEL8.
+      iconClass: icon-rh-openjdk
+      openshift.io/display-name: Red Hat OpenJDK 11 Runtime (UBI8)
+      sampleContextDir: undertow-servlet
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts
+      tags: java,openjdk,ubi8
+      version: "1.9"
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/ubi8/openjdk-11-runtime:1.9
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "1.9"
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: ""
+  tags:
+  - items:
+    - created: "2025-11-17T09:30:33Z"
+      dockerImageReference: registry.access.redhat.com/ubi8/openjdk-11-runtime@sha256:431753c8a6a8541fdc0edd3385b2c765925d244fdd2347d2baa61303789696be
+      generation: 2
+      image: sha256:431753c8a6a8541fdc0edd3385b2c765925d244fdd2347d2baa61303789696be
+    tag: "1.10"
+  - items:
+    - created: "2025-11-17T09:30:33Z"
+      dockerImageReference: registry.access.redhat.com/ubi8/openjdk-11-runtime@sha256:64acf3403b5c2c85f7a28f326c63f1312b568db059c66d90b34e3c59fde3a74b
+      generation: 2
+      image: sha256:64acf3403b5c2c85f7a28f326c63f1312b568db059c66d90b34e3c59fde3a74b
+    tag: "1.11"
+  - items:
+    - created: "2025-11-17T09:30:33Z"
+      dockerImageReference: registry.access.redhat.com/ubi8/openjdk-11-runtime@sha256:74051f86b00fb102e34276f03a310c16bc57b9c2a001a56ba66359e15ee48ba6
+      generation: 2
+      image: sha256:74051f86b00fb102e34276f03a310c16bc57b9c2a001a56ba66359e15ee48ba6
+    tag: "1.12"
+  - items:
+    - created: "2025-11-17T09:30:33Z"
+      dockerImageReference: registry.access.redhat.com/ubi8/openjdk-11-runtime@sha256:78bf175cecb15524b2ef81bff8cc11acdf7c0f74c08417f0e443483912e4878a
+      generation: 2
+      image: sha256:78bf175cecb15524b2ef81bff8cc11acdf7c0f74c08417f0e443483912e4878a
+    tag: "1.9"

@@ -1,0 +1,55 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-11-17T09:47:19Z"
+    creationTimestamp: "2025-11-17T09:20:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-11-17T09:47:19Z"
+    name: apiserver
+    namespace: openshift-kube-apiserver
+    resourceVersion: "30548"
+    uid: 0acc4a09-941e-4d03-ad96-f3120f0d3d3f
+  subsets:
+  - addresses:
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX0
+      targetRef:
+        kind: Pod
+        name: kube-apiserver-XXXXXX0
+        namespace: openshift-kube-apiserver
+        uid: 1a107d1f-2839-4059-a15b-f272eb3b2bcf
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX1
+      targetRef:
+        kind: Pod
+        name: kube-apiserver-XXXXXX1
+        namespace: openshift-kube-apiserver
+        uid: b729351e-35e6-431a-80ff-8269417669ca
+    - ip: XXXXXXXXXXX
+      nodeName: XXXXXX2
+      targetRef:
+        kind: Pod
+        name: kube-apiserver-XXXXXX2
+        namespace: openshift-kube-apiserver
+        uid: 099aa1f5-5878-4911-a170-696ff9d8250c
+    ports:
+    - name: https
+      port: 6443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "32474"

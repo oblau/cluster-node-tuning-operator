@@ -1,0 +1,229 @@
+2025-11-17T09:27:21.285020172Z I1117 09:27:21.284909       1 cmd.go:233] Using service-serving-cert provided certificates
+2025-11-17T09:27:21.285165501Z I1117 09:27:21.285138       1 leaderelection.go:122] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2025-11-17T09:27:21.286490048Z I1117 09:27:21.286464       1 observer_polling.go:159] Starting file observer
+2025-11-17T09:27:21.319544582Z I1117 09:27:21.318652       1 builder.go:271] network-operator version 4.14.0-202511060117.p2.gc7f9fb8.assembly.stream.el8-c7f9fb8-c7f9fb8f2168ce81250bd588624e58bc2f6f36f8
+2025-11-17T09:27:22.033943117Z I1117 09:27:22.033898       1 secure_serving.go:57] Forcing use of http/1.1 only
+2025-11-17T09:27:22.034005652Z W1117 09:27:22.033996       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' detected.
+2025-11-17T09:27:22.034026517Z W1117 09:27:22.034019       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' detected.
+2025-11-17T09:27:22.037158011Z I1117 09:27:22.037128       1 leaderelection.go:245] attempting to acquire leader lease openshift-network-operator/network-operator-lock...
+2025-11-17T09:27:22.039309150Z I1117 09:27:22.039284       1 secure_serving.go:210] Serving securely on [::]:9104
+2025-11-17T09:27:22.039392548Z I1117 09:27:22.039382       1 requestheader_controller.go:169] Starting RequestHeaderAuthRequestController
+2025-11-17T09:27:22.039429147Z I1117 09:27:22.039422       1 shared_informer.go:311] Waiting for caches to sync for RequestHeaderAuthRequestController
+2025-11-17T09:27:22.039497996Z I1117 09:27:22.039484       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key"
+2025-11-17T09:27:22.039603708Z I1117 09:27:22.039594       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+2025-11-17T09:27:22.039756690Z I1117 09:27:22.039745       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2025-11-17T09:27:22.039783130Z I1117 09:27:22.039776       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2025-11-17T09:27:22.039812730Z I1117 09:27:22.039805       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+2025-11-17T09:27:22.039829042Z I1117 09:27:22.039823       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2025-11-17T09:27:22.142717756Z I1117 09:27:22.140800       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2025-11-17T09:27:22.142717756Z I1117 09:27:22.140854       1 shared_informer.go:318] Caches are synced for RequestHeaderAuthRequestController
+2025-11-17T09:27:22.142717756Z I1117 09:27:22.140971       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2025-11-17T09:30:14.929755692Z I1117 09:30:14.929697       1 leaderelection.go:255] successfully acquired lease openshift-network-operator/network-operator-lock
+2025-11-17T09:30:14.930012146Z I1117 09:30:14.929921       1 event.go:298] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-network-operator", Name:"network-operator-lock", UID:"ab71b9e4-3241-4ce9-8630-c8b5dddde0e8", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"15803", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' XXXXXX1_1d96f043-1869-47b8-893a-3e0ab3250886 became leader
+2025-11-17T09:30:14.940491872Z [controller-runtime] log.SetLogger(...) was never called, logs will not be displayed:
+2025-11-17T09:30:14.940491872Z goroutine 371 [running]:
+2025-11-17T09:30:14.940491872Z runtime/debug.Stack()
+2025-11-17T09:30:14.940491872Z 	runtime/debug/stack.go:24 +0x65
+2025-11-17T09:30:14.940491872Z sigs.k8s.io/controller-runtime/pkg/log.eventuallyFulfillRoot()
+2025-11-17T09:30:14.940491872Z 	sigs.k8s.io/controller-runtime@v0.15.0/pkg/log/log.go:59 +0xbd
+2025-11-17T09:30:14.940491872Z sigs.k8s.io/controller-runtime/pkg/log.(*delegatingLogSink).WithName(0xc000404180, {0x2d89fbf, 0x14})
+2025-11-17T09:30:14.940491872Z 	sigs.k8s.io/controller-runtime@v0.15.0/pkg/log/deleg.go:147 +0x4c
+2025-11-17T09:30:14.940491872Z github.com/go-logr/logr.Logger.WithName({{0x32430b8, 0xc000404180}, 0x0}, {0x2d89fbf?, 0x40?})
+2025-11-17T09:30:14.940491872Z 	github.com/go-logr/logr@v1.2.4/logr.go:336 +0x46
+2025-11-17T09:30:14.940491872Z sigs.k8s.io/controller-runtime/pkg/client.newClient(0xc00048e900, {0x0, 0x0, {0x3244e80, 0xc0004e73a0}, 0x0, {0x0, 0x0}, 0x0})
+2025-11-17T09:30:14.940491872Z 	sigs.k8s.io/controller-runtime@v0.15.0/pkg/client/client.go:115 +0xb4
+2025-11-17T09:30:14.940491872Z sigs.k8s.io/controller-runtime/pkg/client.New(0x322a030?, {0x0, 0x0, {0x3244e80, 0xc0004e73a0}, 0x0, {0x0, 0x0}, 0x0})
+2025-11-17T09:30:14.940491872Z 	sigs.k8s.io/controller-runtime@v0.15.0/pkg/client/client.go:101 +0x85
+2025-11-17T09:30:14.940491872Z github.com/openshift/cluster-network-operator/pkg/client.NewClusterClient(0xc00048e900, 0xc0002fdd40)
+2025-11-17T09:30:14.940491872Z 	github.com/openshift/cluster-network-operator/pkg/client/client.go:188 +0x2b0
+2025-11-17T09:30:14.940491872Z github.com/openshift/cluster-network-operator/pkg/client.NewClient(0x0?, 0x0?, {0x2d6b49f, 0x7}, 0x0?)
+2025-11-17T09:30:14.940491872Z 	github.com/openshift/cluster-network-operator/pkg/client/client.go:100 +0xa5
+2025-11-17T09:30:14.940491872Z github.com/openshift/cluster-network-operator/pkg/operator.RunOperator({0x323bd20, 0xc0000a1310}, 0xc001241f00, {0x2d6b49f, 0x7}, 0x0?)
+2025-11-17T09:30:14.940491872Z 	github.com/openshift/cluster-network-operator/pkg/operator/operator.go:46 +0xbd
+2025-11-17T09:30:14.940491872Z main.newNetworkOperatorCommand.func2({0x323bd20?, 0xc0000a1310?}, 0x0?)
+2025-11-17T09:30:14.940491872Z 	github.com/openshift/cluster-network-operator/cmd/cluster-network-operator/main.go:49 +0x3b
+2025-11-17T09:30:14.940491872Z github.com/openshift/library-go/pkg/controller/controllercmd.ControllerBuilder.getOnStartedLeadingFunc.func1.1()
+2025-11-17T09:30:14.940491872Z 	github.com/openshift/library-go@v0.0.0-20231103161458-0ec67489d123/pkg/controller/controllercmd/builder.go:360 +0x74
+2025-11-17T09:30:14.940491872Z created by github.com/openshift/library-go/pkg/controller/controllercmd.ControllerBuilder.getOnStartedLeadingFunc.func1
+2025-11-17T09:30:14.940491872Z 	github.com/openshift/library-go@v0.0.0-20231103161458-0ec67489d123/pkg/controller/controllercmd/builder.go:358 +0x10a
+2025-11-17T09:30:14.940832344Z I1117 09:30:14.940813       1 operator.go:90] Creating status manager for stand-alone cluster
+2025-11-17T09:30:14.940924496Z I1117 09:30:14.940915       1 operator.go:95] Adding controller-runtime controllers
+2025-11-17T09:30:14.941566573Z I1117 09:30:14.941535       1 operconfig_controller.go:101] Waiting for feature gates initialization...
+2025-11-17T09:30:14.941635922Z I1117 09:30:14.941582       1 simple_featuregate_reader.go:171] Starting feature-gate-detector
+2025-11-17T09:30:14.944083838Z I1117 09:30:14.944049       1 event.go:298] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-network-operator", Name:"network-operator", UID:"", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'FeatureGatesInitialized' FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AlibabaPlatform", "AzureWorkloadIdentity", "BuildCSIVolumes", "CloudDualStackNodeIPs", "ExternalCloudProviderAzure", "ExternalCloudProviderExternal", "PrivateHostedZoneAWS"}, Disabled:[]v1.FeatureGateName{"AdminNetworkPolicy", "AdmissionWebhookMatchConditions", "AutomatedEtcdBackup", "CSIDriverSharedResource", "DynamicResourceAllocation", "EventedPLEG", "ExternalCloudProvider", "ExternalCloudProviderGCP", "GCPLabelsTags", "GatewayAPI", "InsightsConfigAPI", "MachineAPIOperatorDisableMachineHealthCheckController", "MachineAPIProviderOpenStack", "MaxUnavailableStatefulSet", "NetworkLiveMigration", "NodeSwap", "OpenShiftPodSecurityAdmission", "RetroactiveDefaultStorageClass", "RouteExternalCertificate", "SigstoreImageVerification", "VSphereStaticIPs", "ValidatingAdmissionPolicy"}}
+2025-11-17T09:30:14.944101760Z I1117 09:30:14.944066       1 operconfig_controller.go:108] FeatureGates initialized: knownFeatureGates=[AdminNetworkPolicy AdmissionWebhookMatchConditions AlibabaPlatform AutomatedEtcdBackup AzureWorkloadIdentity BuildCSIVolumes CSIDriverSharedResource CloudDualStackNodeIPs DynamicResourceAllocation EventedPLEG ExternalCloudProvider ExternalCloudProviderAzure ExternalCloudProviderExternal ExternalCloudProviderGCP GCPLabelsTags GatewayAPI InsightsConfigAPI MachineAPIOperatorDisableMachineHealthCheckController MachineAPIProviderOpenStack MaxUnavailableStatefulSet NetworkLiveMigration NodeSwap OpenShiftPodSecurityAdmission PrivateHostedZoneAWS RetroactiveDefaultStorageClass RouteExternalCertificate SigstoreImageVerification VSphereStaticIPs ValidatingAdmissionPolicy]
+2025-11-17T09:30:14.944946191Z I1117 09:30:14.944919       1 client.go:232] Starting informers...
+2025-11-17T09:30:14.944988001Z I1117 09:30:14.944975       1 client.go:243] Waiting for informers to sync...
+2025-11-17T09:30:15.048934883Z I1117 09:30:15.046175       1 client.go:264] Informers started and synced
+2025-11-17T09:30:15.048934883Z I1117 09:30:15.046201       1 operator.go:119] Starting controller-manager
+2025-11-17T09:30:15.049002522Z I1117 09:30:15.048979       1 base_controller.go:67] Waiting for caches to sync for LoggingSyncer
+2025-11-17T09:30:15.049002522Z I1117 09:30:15.048993       1 base_controller.go:73] Caches are synced for LoggingSyncer 
+2025-11-17T09:30:15.049002522Z I1117 09:30:15.048997       1 base_controller.go:110] Starting #1 XXXXXX of LoggingSyncer controller ...
+2025-11-17T09:30:15.049533460Z I1117 09:30:15.049494       1 base_controller.go:67] Waiting for caches to sync for ManagementStateController
+2025-11-17T09:30:15.049575781Z I1117 09:30:15.049565       1 base_controller.go:73] Caches are synced for ManagementStateController 
+2025-11-17T09:30:15.049629578Z I1117 09:30:15.049617       1 base_controller.go:110] Starting #1 XXXXXX of ManagementStateController controller ...
+2025-11-17T09:30:15.050756239Z I1117 09:30:15.050645       1 base_controller.go:67] Waiting for caches to sync for ConnectivityCheckController
+2025-11-17T09:30:15.051207957Z I1117 09:30:15.051167       1 log.go:194]  openshift-network-operator/kube-root-ca.crt changed, triggering operconf reconciliation
+2025-11-17T09:30:15.051207957Z I1117 09:30:15.051191       1 log.go:194]  openshift-network-operator/mtu changed, triggering operconf reconciliation
+2025-11-17T09:30:15.051226090Z I1117 09:30:15.051200       1 log.go:194]  openshift-network-operator/openshift-service-ca.crt changed, triggering operconf reconciliation
+2025-11-17T09:30:15.051819683Z I1117 09:30:15.051788       1 log.go:194] Reconciling configmap from  openshift-apiserver/trusted-ca-bundle
+2025-11-17T09:30:15.052453830Z I1117 09:30:15.052420       1 pod_watcher.go:131] Operand /, Kind= openshift-multus/multus updated, re-generating status
+2025-11-17T09:30:15.052453830Z I1117 09:30:15.052441       1 pod_watcher.go:131] Operand /, Kind= openshift-multus/multus-additional-cni-plugins updated, re-generating status
+2025-11-17T09:30:15.052636922Z I1117 09:30:15.052610       1 pod_watcher.go:131] Operand /, Kind= openshift-multus/network-metrics-daemon updated, re-generating status
+2025-11-17T09:30:15.052636922Z I1117 09:30:15.052627       1 pod_watcher.go:131] Operand /, Kind= openshift-network-diagnostics/network-check-target updated, re-generating status
+2025-11-17T09:30:15.052652641Z I1117 09:30:15.052634       1 pod_watcher.go:131] Operand /, Kind= openshift-network-node-identity/network-node-identity updated, re-generating status
+2025-11-17T09:30:15.052652641Z I1117 09:30:15.052639       1 pod_watcher.go:131] Operand /, Kind= openshift-ovn-kubernetes/ovnkube-node updated, re-generating status
+2025-11-17T09:30:15.052755998Z I1117 09:30:15.052722       1 pod_watcher.go:131] Operand /, Kind= openshift-multus/multus-admission-controller updated, re-generating status
+2025-11-17T09:30:15.052755998Z I1117 09:30:15.052743       1 pod_watcher.go:131] Operand /, Kind= openshift-network-diagnostics/network-check-source updated, re-generating status
+2025-11-17T09:30:15.052772151Z I1117 09:30:15.052766       1 pod_watcher.go:131] Operand /, Kind= openshift-ovn-kubernetes/ovnkube-control-plane updated, re-generating status
+2025-11-17T09:30:15.055558034Z I1117 09:30:15.055484       1 log.go:194] ConfigMap openshift-apiserver/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.068325583Z W1117 09:30:15.068204       1 reflector.go:533] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:30:15.068325583Z E1117 09:30:15.068240       1 reflector.go:148] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: Failed to watch *v1alpha1.PodNetworkConnectivityCheck: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:30:15.084749041Z I1117 09:30:15.084223       1 allowlist_controller.go:103] Reconcile allowlist for openshift-multus/cni-sysctl-allowlist
+2025-11-17T09:30:15.149620523Z I1117 09:30:15.149526       1 log.go:194] Reconciling pki.network.operator.openshift.io openshift-ovn-kubernetes/signer
+2025-11-17T09:30:15.149846491Z I1117 09:30:15.149804       1 log.go:194] Reconciling additional trust bundle configmap 'openshift-config/admin-kubeconfig-client-ca'
+2025-11-17T09:30:15.152967788Z I1117 09:30:15.152930       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:15.153001477Z I1117 09:30:15.152968       1 log.go:194] Reconciling Infrastructure.config.openshift.io cluster
+2025-11-17T09:30:15.153078921Z I1117 09:30:15.153050       1 log.go:194] Reconciling Network.config.openshift.io cluster
+2025-11-17T09:30:15.153121240Z I1117 09:30:15.153106       1 log.go:194] Reconciling Network.operator.openshift.io cluster
+2025-11-17T09:30:15.153129711Z I1117 09:30:15.153125       1 log.go:194]  /XXXXXX2 changed, triggering operconf reconciliation
+2025-11-17T09:30:15.153148692Z I1117 09:30:15.153135       1 log.go:194] Reconciling update to IngressController openshift-ingress-operator/default
+2025-11-17T09:30:15.158620298Z I1117 09:30:15.158561       1 log.go:194] configmap 'openshift-config/admin-kubeconfig-client-ca' name differs from trustedCA of proxy 'cluster' or trustedCA not set; reconciliation will be skipped
+2025-11-17T09:30:15.158620298Z I1117 09:30:15.158602       1 log.go:194] Reconciling additional trust bundle configmap 'openshift-config/etcd-ca-bundle'
+2025-11-17T09:30:15.162757031Z I1117 09:30:15.162724       1 log.go:194] configmap 'openshift-config/etcd-ca-bundle' name differs from trustedCA of proxy 'cluster' or trustedCA not set; reconciliation will be skipped
+2025-11-17T09:30:15.162785667Z I1117 09:30:15.162758       1 log.go:194] Reconciling additional trust bundle configmap 'openshift-config/initial-kube-apiserver-server-ca'
+2025-11-17T09:30:15.168063429Z I1117 09:30:15.168011       1 log.go:194] configmap 'openshift-config/initial-kube-apiserver-server-ca' name differs from trustedCA of proxy 'cluster' or trustedCA not set; reconciliation will be skipped
+2025-11-17T09:30:15.168063429Z I1117 09:30:15.168036       1 log.go:194] reconciling (operator.openshift.io/v1, Kind=Network) /cluster
+2025-11-17T09:30:15.168133970Z I1117 09:30:15.168121       1 log.go:194] Reconciling additional trust bundle configmap 'openshift-config/openshift-service-ca.crt'
+2025-11-17T09:30:15.175862913Z I1117 09:30:15.175831       1 log.go:194] configmap 'openshift-config/openshift-service-ca.crt' name differs from trustedCA of proxy 'cluster' or trustedCA not set; reconciliation will be skipped
+2025-11-17T09:30:15.175882229Z I1117 09:30:15.175861       1 log.go:194] Reconciling additional trust bundle configmap 'openshift-config/admin-acks'
+2025-11-17T09:30:15.179789027Z I1117 09:30:15.179527       1 log.go:194] configmap 'openshift-config/admin-acks' name differs from trustedCA of proxy 'cluster' or trustedCA not set; reconciliation will be skipped
+2025-11-17T09:30:15.179789027Z I1117 09:30:15.179553       1 log.go:194] Reconciling additional trust bundle configmap 'openshift-config/etcd-metric-serving-ca'
+2025-11-17T09:30:15.183121109Z I1117 09:30:15.183004       1 log.go:194] Apply / Create of (operator.openshift.io/v1, Kind=Network) /cluster was successful
+2025-11-17T09:30:15.183121109Z I1117 09:30:15.183022       1 log.go:194] Successfully updated Operator config from Cluster config
+2025-11-17T09:30:15.183121109Z I1117 09:30:15.183093       1 log.go:194] Skipping reconcile of Network.operator.openshift.io: spec unchanged
+2025-11-17T09:30:15.251186788Z I1117 09:30:15.251061       1 log.go:194] successful reconciliation
+2025-11-17T09:30:15.289928466Z I1117 09:30:15.289881       1 log.go:194] configmap 'openshift-config/etcd-metric-serving-ca' name differs from trustedCA of proxy 'cluster' or trustedCA not set; reconciliation will be skipped
+2025-11-17T09:30:15.289955914Z I1117 09:30:15.289935       1 log.go:194] Reconciling additional trust bundle configmap 'openshift-config/etcd-serving-ca'
+2025-11-17T09:30:15.351496775Z I1117 09:30:15.351367       1 base_controller.go:73] Caches are synced for ConnectivityCheckController 
+2025-11-17T09:30:15.351496775Z I1117 09:30:15.351391       1 base_controller.go:110] Starting #1 XXXXXX of ConnectivityCheckController controller ...
+2025-11-17T09:30:15.351833585Z I1117 09:30:15.351809       1 connectivity_check_controller.go:166] ConnectivityCheckController is waiting for transition to desired version (4.14.59) to be completed.
+2025-11-17T09:30:15.621924880Z I1117 09:30:15.621886       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:15.621924880Z I1117 09:30:15.621907       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:15.621924880Z I1117 09:30:15.621913       1 log.go:194]  /XXXXXX2 changed, triggering operconf reconciliation
+2025-11-17T09:30:15.621924880Z I1117 09:30:15.621917       1 log.go:194]  /XXXXXX2 changed, triggering operconf reconciliation
+2025-11-17T09:30:15.658724406Z I1117 09:30:15.658234       1 log.go:194] Reconciling configmap from  openshift-config-managed/trusted-ca-bundle
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.660982       1 log.go:194] trusted-ca-bundle changed, updating 15 configMaps
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661024       1 log.go:194] ConfigMap openshift-authentication-operator/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661051       1 log.go:194] ConfigMap openshift-controller-manager/openshift-global-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661076       1 log.go:194] ConfigMap openshift-apiserver/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661101       1 log.go:194] ConfigMap openshift-ingress-operator/trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661125       1 log.go:194] ConfigMap openshift-machine-api/cbo-trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661147       1 log.go:194] ConfigMap openshift-machine-api/mao-trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661170       1 log.go:194] ConfigMap openshift-apiserver-operator/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661200       1 log.go:194] ConfigMap openshift-cluster-node-tuning-operator/trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661223       1 log.go:194] ConfigMap openshift-kube-controller-manager/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661249       1 log.go:194] ConfigMap openshift-authentication/v4-0-config-system-trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661274       1 log.go:194] ConfigMap openshift-cloud-credential-operator/cco-trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661307       1 log.go:194] ConfigMap openshift-image-registry/trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661336       1 log.go:194] ConfigMap openshift-insights/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661359       1 log.go:194] ConfigMap openshift-kube-apiserver/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.661445507Z I1117 09:30:15.661384       1 log.go:194] ConfigMap openshift-marketplace/marketplace-trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:15.691075116Z I1117 09:30:15.691035       1 log.go:194] configmap 'openshift-config/etcd-serving-ca' name differs from trustedCA of proxy 'cluster' or trustedCA not set; reconciliation will be skipped
+2025-11-17T09:30:15.691150318Z I1117 09:30:15.691142       1 log.go:194] Reconciling additional trust bundle configmap 'openshift-config/kube-root-ca.crt'
+2025-11-17T09:30:16.063904084Z I1117 09:30:16.063863       1 connectivity_check_controller.go:166] ConnectivityCheckController is waiting for transition to desired version (4.14.59) to be completed.
+2025-11-17T09:30:16.064033694Z I1117 09:30:16.064024       1 connectivity_check_controller.go:166] ConnectivityCheckController is waiting for transition to desired version (4.14.59) to be completed.
+2025-11-17T09:30:16.093798140Z I1117 09:30:16.093758       1 log.go:194] configmap 'openshift-config/kube-root-ca.crt' name differs from trustedCA of proxy 'cluster' or trustedCA not set; reconciliation will be skipped
+2025-11-17T09:30:16.093832251Z I1117 09:30:16.093798       1 log.go:194] Reconciling additional trust bundle configmap 'openshift-config/openshift-install-manifests'
+2025-11-17T09:30:16.258695844Z I1117 09:30:16.258635       1 log.go:194] Reconciling pki.network.operator.openshift.io openshift-network-node-identity/network-node-identity
+2025-11-17T09:30:16.294060448Z I1117 09:30:16.294011       1 ovn_kubernetes.go:896] For Label network.operator.openshift.io/dpu-host=, the list of nodes are []
+2025-11-17T09:30:16.296475272Z I1117 09:30:16.296442       1 ovn_kubernetes.go:896] For Label network.operator.openshift.io/dpu=, the list of nodes are []
+2025-11-17T09:30:16.298896129Z I1117 09:30:16.298859       1 ovn_kubernetes.go:896] For Label network.operator.openshift.io/smart-nic=, the list of nodes are []
+2025-11-17T09:30:16.298919574Z I1117 09:30:16.298876       1 ovn_kubernetes.go:985] OVN configuration is now &{GatewayMode: HyperShiftConfig:0xc0014e6d00 DisableUDPAggregation:false DpuHostModeLabel:network.operator.openshift.io/dpu-host DpuHostModeNodes:[] DpuModeLabel:network.operator.openshift.io/dpu DpuModeNodes:[] SmartNicModeLabel:network.operator.openshift.io/smart-nic SmartNicModeNodes:[] MgmtPortResourceName:}
+2025-11-17T09:30:16.359898517Z I1117 09:30:16.359846       1 log.go:194] successful reconciliation
+2025-11-17T09:30:16.458970164Z I1117 09:30:16.458840       1 log.go:194] Reconciling configmap from  openshift-ingress-operator/trusted-ca
+2025-11-17T09:30:16.461460749Z I1117 09:30:16.461427       1 log.go:194] ConfigMap openshift-ingress-operator/trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:16.491322983Z I1117 09:30:16.491275       1 log.go:194] configmap 'openshift-config/openshift-install-manifests' name differs from trustedCA of proxy 'cluster' or trustedCA not set; reconciliation will be skipped
+2025-11-17T09:30:16.491353807Z I1117 09:30:16.491326       1 log.go:194] Reconciling proxy 'cluster'
+2025-11-17T09:30:16.493471102Z I1117 09:30:16.493445       1 log.go:194] httpProxy, httpsProxy and noProxy not defined for proxy 'cluster'; validation will be skipped
+2025-11-17T09:30:16.616525192Z W1117 09:30:16.616470       1 reflector.go:533] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:30:16.616525192Z E1117 09:30:16.616507       1 reflector.go:148] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: Failed to watch *v1alpha1.PodNetworkConnectivityCheck: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:30:16.657742108Z I1117 09:30:16.657698       1 log.go:194] Reconciling pki.network.operator.openshift.io openshift-ovn-kubernetes/ovn
+2025-11-17T09:30:16.758418768Z I1117 09:30:16.758336       1 log.go:194] successful reconciliation
+2025-11-17T09:30:16.859933745Z I1117 09:30:16.859894       1 log.go:194] Reconciling configmap from  openshift-machine-api/cbo-trusted-ca
+2025-11-17T09:30:16.863215175Z I1117 09:30:16.863191       1 log.go:194] ConfigMap openshift-machine-api/cbo-trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:16.887213004Z I1117 09:30:16.887169       1 log.go:194] Reconciling proxy 'cluster' complete
+2025-11-17T09:30:17.258798619Z I1117 09:30:17.258755       1 log.go:194] Reconciling configmap from  openshift-machine-api/mao-trusted-ca
+2025-11-17T09:30:17.261111333Z I1117 09:30:17.261095       1 log.go:194] ConfigMap openshift-machine-api/mao-trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:17.659083713Z I1117 09:30:17.659036       1 log.go:194] Reconciling configmap from  openshift-apiserver-operator/trusted-ca-bundle
+2025-11-17T09:30:17.661505971Z I1117 09:30:17.661484       1 log.go:194] ConfigMap openshift-apiserver-operator/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:17.734879058Z I1117 09:30:17.734833       1 connectivity_check_controller.go:166] ConnectivityCheckController is waiting for transition to desired version (4.14.59) to be completed.
+2025-11-17T09:30:17.738535013Z I1117 09:30:17.738497       1 connectivity_check_controller.go:166] ConnectivityCheckController is waiting for transition to desired version (4.14.59) to be completed.
+2025-11-17T09:30:17.858761452Z I1117 09:30:17.858708       1 log.go:194] Reconciling configmap from  openshift-cluster-node-tuning-operator/trusted-ca
+2025-11-17T09:30:17.861216535Z I1117 09:30:17.861190       1 log.go:194] ConfigMap openshift-cluster-node-tuning-operator/trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:18.059587140Z I1117 09:30:18.059462       1 log.go:194] Reconciling configmap from  openshift-kube-controller-manager/trusted-ca-bundle
+2025-11-17T09:30:18.062110642Z I1117 09:30:18.062004       1 log.go:194] ConfigMap openshift-kube-controller-manager/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:18.257754182Z I1117 09:30:18.256864       1 log.go:194] Reconciling configmap from  openshift-kube-apiserver/trusted-ca-bundle
+2025-11-17T09:30:18.259500194Z I1117 09:30:18.259347       1 log.go:194] ConfigMap openshift-kube-apiserver/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:18.458617129Z I1117 09:30:18.458492       1 log.go:194] Reconciling configmap from  openshift-marketplace/marketplace-trusted-ca
+2025-11-17T09:30:18.461649691Z I1117 09:30:18.461539       1 log.go:194] ConfigMap openshift-marketplace/marketplace-trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:18.659102690Z I1117 09:30:18.658977       1 log.go:194] Reconciling configmap from  openshift-authentication/v4-0-config-system-trusted-ca-bundle
+2025-11-17T09:30:18.661182773Z I1117 09:30:18.661069       1 log.go:194] ConfigMap openshift-authentication/v4-0-config-system-trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:18.863902663Z I1117 09:30:18.863861       1 log.go:194] Reconciling configmap from  openshift-cloud-credential-operator/cco-trusted-ca
+2025-11-17T09:30:18.866913357Z I1117 09:30:18.866894       1 log.go:194] ConfigMap openshift-cloud-credential-operator/cco-trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:19.064061317Z I1117 09:30:19.064015       1 log.go:194] Reconciling configmap from  openshift-image-registry/trusted-ca
+2025-11-17T09:30:19.066645340Z I1117 09:30:19.066574       1 log.go:194] ConfigMap openshift-image-registry/trusted-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:19.260887749Z I1117 09:30:19.260817       1 log.go:194] Reconciling configmap from  openshift-insights/trusted-ca-bundle
+2025-11-17T09:30:19.260887749Z I1117 09:30:19.260871       1 connectivity_check_controller.go:166] ConnectivityCheckController is waiting for transition to desired version (4.14.59) to be completed.
+2025-11-17T09:30:19.260988119Z I1117 09:30:19.260966       1 connectivity_check_controller.go:166] ConnectivityCheckController is waiting for transition to desired version (4.14.59) to be completed.
+2025-11-17T09:30:19.262989164Z I1117 09:30:19.262945       1 log.go:194] ConfigMap openshift-insights/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:19.264510824Z W1117 09:30:19.264469       1 reflector.go:533] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:30:19.264510824Z E1117 09:30:19.264501       1 reflector.go:148] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: Failed to watch *v1alpha1.PodNetworkConnectivityCheck: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:30:19.460584847Z I1117 09:30:19.460538       1 log.go:194] Reconciling configmap from  openshift-authentication-operator/trusted-ca-bundle
+2025-11-17T09:30:19.463610961Z I1117 09:30:19.463575       1 log.go:194] ConfigMap openshift-authentication-operator/trusted-ca-bundle ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:19.685070872Z I1117 09:30:19.685015       1 log.go:194] Reconciling configmap from  openshift-controller-manager/openshift-global-ca
+2025-11-17T09:30:19.687891824Z I1117 09:30:19.687843       1 log.go:194] ConfigMap openshift-controller-manager/openshift-global-ca ca-bundle.crt unchanged, skipping
+2025-11-17T09:30:21.697591880Z I1117 09:30:21.697531       1 ovn_kubernetes.go:1263] Waiting to complete OVN bootstrap: found (2) XXXXXX nodes out of (3) expected: timing out in 235 seconds
+2025-11-17T09:30:23.050870476Z W1117 09:30:23.050821       1 reflector.go:533] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:30:23.050902705Z E1117 09:30:23.050872       1 reflector.go:148] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: Failed to watch *v1alpha1.PodNetworkConnectivityCheck: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:30:24.317039194Z I1117 09:30:24.316994       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:24.317039194Z I1117 09:30:24.317028       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:24.336090338Z I1117 09:30:24.336046       1 log.go:194]  /XXXXXX2 changed, triggering operconf reconciliation
+2025-11-17T09:30:24.336090338Z I1117 09:30:24.336073       1 log.go:194]  /XXXXXX2 changed, triggering operconf reconciliation
+2025-11-17T09:30:24.347133937Z I1117 09:30:24.346496       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:24.347133937Z I1117 09:30:24.346520       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:25.436289444Z I1117 09:30:25.436231       1 connectivity_check_controller.go:166] ConnectivityCheckController is waiting for transition to desired version (4.14.59) to be completed.
+2025-11-17T09:30:26.859677178Z I1117 09:30:26.859635       1 connectivity_check_controller.go:166] ConnectivityCheckController is waiting for transition to desired version (4.14.59) to be completed.
+2025-11-17T09:30:26.859813687Z I1117 09:30:26.859804       1 connectivity_check_controller.go:166] ConnectivityCheckController is waiting for transition to desired version (4.14.59) to be completed.
+2025-11-17T09:30:27.975958274Z I1117 09:30:27.975914       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:27.975958274Z I1117 09:30:27.975937       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:29.341348422Z I1117 09:30:29.341293       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:29.341348422Z I1117 09:30:29.341334       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:32.071784957Z W1117 09:30:32.071733       1 reflector.go:533] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:30:32.071784957Z E1117 09:30:32.071768       1 reflector.go:148] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: Failed to watch *v1alpha1.PodNetworkConnectivityCheck: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:30:36.697281644Z I1117 09:30:36.697226       1 ovn_kubernetes.go:1263] Waiting to complete OVN bootstrap: found (2) XXXXXX nodes out of (3) expected: timing out in 220 seconds
+2025-11-17T09:30:38.384124875Z I1117 09:30:38.384077       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:38.384124875Z I1117 09:30:38.384104       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:41.193108420Z I1117 09:30:41.192835       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:41.193108420Z I1117 09:30:41.192854       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:43.400855851Z I1117 09:30:43.400527       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:43.400855851Z I1117 09:30:43.400569       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:43.408152268Z I1117 09:30:43.408119       1 connectivity_check_controller.go:166] ConnectivityCheckController is waiting for transition to desired version (4.14.59) to be completed.
+2025-11-17T09:30:51.210928406Z I1117 09:30:51.210771       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:51.210928406Z I1117 09:30:51.210799       1 log.go:194]  /XXXXXX1 changed, triggering operconf reconciliation
+2025-11-17T09:30:51.699038809Z I1117 09:30:51.698982       1 ovn_kubernetes.go:1263] Waiting to complete OVN bootstrap: found (2) XXXXXX nodes out of (3) expected: timing out in 205 seconds
+2025-11-17T09:30:54.810962873Z W1117 09:30:54.810817       1 reflector.go:533] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:30:54.810962873Z E1117 09:30:54.810889       1 reflector.go:148] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: Failed to watch *v1alpha1.PodNetworkConnectivityCheck: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:31:15.116268523Z E1117 09:31:15.115604       1 allowlist_controller.go:142] Failed to verify ready status on allowlist daemonset pods: Get "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/apps/v1/namespaces/openshift-multus/daemonsets/cni-sysctl-allowlist-ds": context deadline exceeded
+2025-11-17T09:31:33.877949046Z W1117 09:31:33.877914       1 reflector.go:533] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:31:33.878001368Z E1117 09:31:33.877992       1 reflector.go:148] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: Failed to watch *v1alpha1.PodNetworkConnectivityCheck: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:31:56.695139745Z I1117 09:31:56.695076       1 log.go:194] Failed to reconcile platform networking resources: unable to bootstrap OVN, err: the server was unable to return a response in the time allotted, but may still be processing the request (get nodes)
+2025-11-17T09:32:06.947134332Z E1117 09:32:06.947024       1 leaderelection.go:327] error retrieving resource lock openshift-network-operator/network-operator-lock: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io network-operator-lock)
+2025-11-17T09:32:15.118123508Z E1117 09:32:15.118078       1 allowlist_controller.go:226] Error looking up allowlist daemonset : the server was unable to return a response in the time allotted, but may still be processing the request (get daemonsets.apps cni-sysctl-allowlist-ds)
+2025-11-17T09:32:33.046541432Z W1117 09:32:33.046471       1 reflector.go:533] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:32:33.046541432Z E1117 09:32:33.046500       1 reflector.go:148] k8s.io/client-go@v12.0.0+incompatible/tools/cache/reflector.go:231: Failed to watch *v1alpha1.PodNetworkConnectivityCheck: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2025-11-17T09:32:52.006886208Z I1117 09:32:52.006836       1 log.go:194] Failed to set operator status: Patch "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/operator.openshift.io/v1/networks/cluster?fieldManager=cluster-network-operator%2Fstatus-manager&force=true": EOF
+2025-11-17T09:32:54.478289462Z E1117 09:32:54.477946       1 leaderelection.go:364] Failed to update lock: client rate limiter Wait returned an error: context deadline exceeded
+2025-11-17T09:32:54.478289462Z I1117 09:32:54.477980       1 leaderelection.go:280] failed to renew lease openshift-network-operator/network-operator-lock: timed out waiting for the condition
+2025-11-17T09:32:54.479040444Z E1117 09:32:54.479012       1 leaderelection.go:303] Failed to release lock: Put "https://api-int.hlxcl51.XXXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-operator/leases/network-operator-lock?timeout=1m47s": EOF
+2025-11-17T09:32:54.479091228Z W1117 09:32:54.479075       1 leaderelection.go:85] leader election lost
