@@ -7,15 +7,51 @@ import (
 	"github.com/onsi/ginkgo/v2"
 )
 
+type Level int
+
+const (
+	LevelNone    Level = 0
+	LevelError   Level = 1
+	LevelWarning Level = 2
+	LevelInfo    Level = 3
+)
+
+var minLevel = LevelInfo
+
+// SetLevel sets the minimum log level
+func SetLevel(level Level) {
+	minLevel = level
+}
+
+// stringToLevel maps the hardcoded strings to levels
+func stringToLevel(levelStr string) Level {
+	switch levelStr {
+	case "[ERROR]":
+		return LevelError
+	case "[WARNING]":
+		return LevelWarning
+	case "[INFO]":
+		return LevelInfo
+	default:
+		return LevelInfo
+	}
+}
+
 func nowStamp() string {
 	return time.Now().Format(time.StampMilli)
 }
 
 func logf(level string, format string, args ...interface{}) {
+	if stringToLevel(level) > minLevel {
+		return
+	}
 	fmt.Fprintf(ginkgo.GinkgoWriter, nowStamp()+": "+level+": "+format+"\n", args...)
 }
 
 func log(level string, args ...interface{}) {
+	if stringToLevel(level) > minLevel {
+		return
+	}
 	fmt.Fprint(ginkgo.GinkgoWriter, nowStamp()+": "+level+": ")
 	fmt.Fprint(ginkgo.GinkgoWriter, args...)
 	fmt.Fprint(ginkgo.GinkgoWriter, "\n")
