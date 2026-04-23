@@ -7,13 +7,18 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"time"
 
+	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
+	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/utils/cpuset"
 	"sigs.k8s.io/controller-runtime/pkg/client"
+
+	"github.com/openshift/cluster-node-tuning-operator/test/e2e/performanceprofile/functests/utils/deployments"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
@@ -382,6 +387,82 @@ var _ = Describe("[performance] Checking IRQBalance settings", Ordered, func() {
 		)
 	})
 
+	// OCPBUGS-45112 - Race condition test (looped)
+	// Same as above but runs N iterations inside a single test to avoid BeforeSuite overhead.
+	// Skips iterations where no coalescing occurred (delta != 1).
+	It("[OMER] should detect irqbalance restart coalescing over multiple iterations", Label(string(label.Tier0)), func() {
+		const iterations = 2000
+		const deploymentName = "irqbalance-race-loop"
+		var replicas int32 = 3
+
+		// Safety cleanup in case test is interrupted mid-iteration
+		defer func() {
+			dp := &appsv1.Deployment{}
+			if err := testclient.DataPlaneClient.Get(context.TODO(),
+				client.ObjectKey{Name: deploymentName, Namespace: testutils.NamespaceTesting}, dp); err == nil {
+				testlog.Infof("defer cleanup: deleting leftover deployment %q", deploymentName)
+				_ = testclient.DataPlaneClient.Delete(context.TODO(), dp)
+			}
+		}()
+
+		coalescedCount := 0
+		noCoalesceCount := 0
+		mismatchCount := 0
+
+		for i := 1; i <= iterations; i++ {
+			By(fmt.Sprintf("========== iteration %d/%d ==========", i, iterations))
+
+			baseline := countIrqbalanceRestarts(context.TODO(), targetNode)
+
+			dp := createIrqTestDeployment(deploymentName, replicas, profile, targetNode)
+			err := deployments.WaitForPodsRunning(context.TODO(), testclient.DataPlaneClient, dp)
+			Expect(err).ToNot(HaveOccurred())
+
+			current := countIrqbalanceRestarts(context.TODO(), targetNode)
+			delta := current - baseline
+			testlog.Infof("[iter %d] %d restarts for %d pods (current %d baseline %d)", i, delta, replicas, current, baseline)
+
+			if delta < int(replicas) {
+				coalescedCount++
+
+				fileBanned, err := getIrqBalanceBannedCPUs(context.TODO(), targetNode)
+				Expect(err).ToNot(HaveOccurred())
+				socketMask, err := getIrqbalanceSocketBannedMask(context.TODO(), targetNode)
+				Expect(err).ToNot(HaveOccurred())
+				socketBanned, err := components.CPUMaskToCPUSet(socketMask)
+				Expect(err).ToNot(HaveOccurred(), "failed to parse socket mask %q", socketMask)
+				onlineCPUs, err := nodes.GetOnlineCPUsSet(context.TODO(), targetNode)
+				Expect(err).ToNot(HaveOccurred())
+				smpAff, err := getIrqDefaultSMPAffinity(context.TODO(), targetNode)
+				Expect(err).ToNot(HaveOccurred())
+				smpAllowed, err := components.CPUMaskToCPUSet(strings.TrimSpace(smpAff))
+				Expect(err).ToNot(HaveOccurred())
+				smpBanned := onlineCPUs.Difference(smpAllowed)
+
+				match := fileBanned.Equals(socketBanned)
+				if !match {
+					mismatchCount++
+				}
+
+				testlog.Infof("[iter %d] COALESCED (%d restarts for %d pods)", i, delta, replicas)
+				testlog.Infof("[iter %d]   file:   {%s} (%d CPUs)", i, fileBanned.String(), fileBanned.Size())
+				testlog.Infof("[iter %d]   socket: {%s} (%d CPUs)", i, socketBanned.String(), socketBanned.Size())
+				testlog.Infof("[iter %d]   smp:    {%s} (%d CPUs) (inverted)", i, smpBanned.String(), smpBanned.Size())
+				testlog.Infof("[iter %d]   result: match=%v", i, match)
+			} else {
+				noCoalesceCount++
+				testlog.Infof("[iter %d] no coalescing, skipping", i)
+			}
+
+			deleteDeploymentAndWait(context.TODO(), dp)
+			testlog.Infof("[iter %d] cleanup done | running: iter=%d/%d coalesced=%d/%d mismatches=%d/%d",
+				i, i, iterations, coalescedCount, i, mismatchCount, i)
+		}
+
+		testlog.Infof("========== FINAL SUMMARY ==========")
+		testlog.Infof("iterations=%d coalesced=%d no-coalesce=%d mismatches=%d", iterations, coalescedCount, noCoalesceCount, mismatchCount)
+	})
+
 })
 
 func createPodWithHouskeeping(numOfContainersInPod, cpusPerContainer int, perfProf *performancev2.PerformanceProfile, ctx context.Context, targetNode *corev1.Node) (*corev1.Pod, error) {
@@ -603,4 +684,63 @@ func unquote(s string) string {
 	s = strings.TrimPrefix(s, q)
 	s = strings.TrimSuffix(s, q)
 	return s
+}
+
+// getIrqbalanceSocketBannedMask queries irqbalance's UNIX socket and returns
+// the in-memory banned CPU hex mask.
+func getIrqbalanceSocketBannedMask(ctx context.Context, node *corev1.Node) (string, error) {
+	cmd := []string{"/bin/bash", "-c",
+		"chroot /rootfs bash -c 'echo setup | socat - UNIX-CONNECT:$(ls /run/irqbalance/irqbalance*.sock 2>/dev/null | head -1) 2>/dev/null' || true"}
+	out, err := nodes.ExecCommand(ctx, node, cmd)
+	if err != nil {
+		return "", err
+	}
+	return parseSocketBannedMask(testutils.ToString(out)), nil
+}
+
+// parseSocketBannedMask extracts the BANNED hex mask from irqbalance's socket
+// response. Input format: "SLEEP 10 BANNED 00000005,00000000,00000500"
+func parseSocketBannedMask(response string) string {
+	response = strings.TrimSpace(response)
+	if idx := strings.Index(response, "BANNED "); idx >= 0 {
+		return strings.TrimSpace(response[idx+len("BANNED "):])
+	}
+	return ""
+}
+
+func countIrqbalanceRestarts(ctx context.Context, node *corev1.Node) int {
+	cmd := []string{"/bin/bash", "-c", "chroot /rootfs journalctl -u irqbalance --no-pager | grep -c 'Started irqbalance daemon' || true"}
+	output, err := nodes.ExecCommand(ctx, node, cmd)
+	ExpectWithOffset(1, err).ToNot(HaveOccurred())
+	count, err := strconv.Atoi(strings.TrimSpace(testutils.ToString(output)))
+	ExpectWithOffset(1, err).ToNot(HaveOccurred())
+	return count
+}
+
+func createIrqTestDeployment(name string, replicas int32, profile *performancev2.PerformanceProfile, node *corev1.Node) *appsv1.Deployment {
+	annotations := map[string]string{irqLoadBalancingAnnotation: irqLoadBalancingDisable}
+	testpod := getTestPodWithProfileAndAnnotations(profile, annotations, 2)
+	testpod.Spec.NodeName = node.Name
+
+	dp := deployments.Make(name, testutils.NamespaceTesting, deployments.WithPodTemplate(testpod), deployments.WithReplicas(replicas))
+	dp.Spec.Template.Annotations = annotations
+
+	ExpectWithOffset(1, testclient.DataPlaneClient.Create(context.TODO(), dp)).ToNot(HaveOccurred())
+	return dp
+}
+
+func deleteDeploymentAndWait(ctx context.Context, dp *appsv1.Deployment) {
+	err := testclient.DataPlaneClient.Delete(ctx, dp)
+	ExpectWithOffset(1, err).ToNot(HaveOccurred())
+	EventuallyWithOffset(1, func() int {
+		podList := &corev1.PodList{}
+		listOpts := &client.ListOptions{
+			Namespace:     dp.Namespace,
+			LabelSelector: labels.SelectorFromSet(dp.Spec.Selector.MatchLabels),
+		}
+		if err := testclient.DataPlaneClient.List(ctx, podList, listOpts); err != nil {
+			return -1
+		}
+		return len(podList.Items)
+	}).WithTimeout(2 * time.Minute).WithPolling(time.Second).Should(Equal(0))
 }

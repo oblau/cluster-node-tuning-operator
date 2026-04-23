@@ -8,6 +8,7 @@ import (
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
+	"k8s.io/apimachinery/pkg/labels"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/wait"
@@ -93,6 +94,29 @@ func IsReady(ctx context.Context, cli client.Client, listOptions *client.ListOpt
 	}
 
 	return true, nil
+}
+
+// WaitForPodsRunning polls until all pods matching the deployment's selector are in Running phase.
+func WaitForPodsRunning(ctx context.Context, cli client.Client, dp *appsv1.Deployment) error {
+	return wait.PollUntilContextTimeout(ctx, time.Second, 5*time.Minute, true, func(ctx context.Context) (bool, error) {
+		podList := &corev1.PodList{}
+		listOpts := &client.ListOptions{
+			Namespace:     dp.Namespace,
+			LabelSelector: labels.SelectorFromSet(dp.Spec.Selector.MatchLabels),
+		}
+		if err := cli.List(ctx, podList, listOpts); err != nil {
+			return false, err
+		}
+		if len(podList.Items) == 0 {
+			return false, nil
+		}
+		for i := range podList.Items {
+			if podList.Items[i].Status.Phase != corev1.PodRunning {
+				return false, nil
+			}
+		}
+		return int32(len(podList.Items)) == *dp.Spec.Replicas, nil
+	})
 }
 
 // WaitForDesiredDeploymentStatus Wait for deployment comes to the desired status
